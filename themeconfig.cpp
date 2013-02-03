@@ -22,6 +22,7 @@
 #include "themesdelegate.h"
 
 #include <KDebug>
+#include <KMessageBox>
 
 ThemeConfig::ThemeConfig(QWidget *parent) :
     QWidget(parent)
@@ -72,7 +73,13 @@ void ThemeConfig::prepareInitialTheme()
     
     QModelIndex index = findThemeIndex(initialTheme);
     if (!index.isValid()) {
-        index = findThemeIndex("Default");
+        //index = findThemeIndex("Default");
+        configUi->nameLabel->setVisible(false);
+        configUi->descriptionLabel->setVisible(false);
+        configUi->authorLabel->setVisible(false);
+        configUi->preview->setVisible(false);
+        KMessageBox::error(this, i18n("Could not find any themes. \nPlease install SDDM themes."), i18n("No SDDM themes"));
+        return;
     }
     configUi->themesListView->setCurrentIndex(index);
     themeSelected(index);

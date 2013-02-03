@@ -46,7 +46,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0">
+    <layout class="QVBoxLayout" name="detailLayout" stretch="0,0,0,0,0,0">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -172,9 +172,6 @@ border: 1px solid #888;</string>
     </layout>
    </item>
   </layout>
-  <zorder>themesListView</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>verticalSpacer</zorder>
  </widget>
  <resources/>
  <connections/>
