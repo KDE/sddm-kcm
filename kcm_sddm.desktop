@@ -1,0 +1,15 @@
+[Desktop Entry]
+Exec=kcmshell4 kcm_sddm
+Icon=preferences-system-login
+Type=Service
+Categories=Qt;KDE;X-KDE-settings-system;
+
+X-KDE-ServiceTypes=KCModule
+X-KDE-Library=kcm_sddm
+X-KDE-ParentApp=kcontrol
+X-KDE-System-Settings-Parent-Category=system-administration
+X-KDE-Keywords=sddm,display manager,theme
+
+Name=Login Screen (SDDM)
+
+Comment=Select login theme
