@@ -69,16 +69,15 @@ QVariantMap ThemeConfig::save()
 
 void ThemeConfig::prepareInitialTheme()
 {
-    QString initialTheme = mConfig->group("General").readEntry("CurrentTheme", "Legacy");
+    QString initialTheme = mConfig->group("General").readEntry("CurrentTheme");
     
     QModelIndex index = findThemeIndex(initialTheme);
     if (!index.isValid()) {
-        //index = findThemeIndex("Default");
         configUi->nameLabel->setVisible(false);
         configUi->descriptionLabel->setVisible(false);
         configUi->authorLabel->setVisible(false);
         configUi->preview->setVisible(false);
-        KMessageBox::error(this, i18n("Could not find any themes. \nPlease install SDDM themes."), i18n("No SDDM themes"));
+        //KMessageBox::error(this, i18n("Could not find any themes. \nPlease install SDDM themes."), i18n("No SDDM themes"));
         return;
     }
     configUi->themesListView->setCurrentIndex(index);
@@ -101,6 +100,13 @@ QModelIndex ThemeConfig::findThemeIndex(const QString &id) const
 
 void ThemeConfig::themeSelected(const QModelIndex &index)
 {
+    if (configUi->nameLabel->isHidden()) {
+        configUi->nameLabel->setVisible(true);
+        configUi->descriptionLabel->setVisible(true);
+        configUi->authorLabel->setVisible(true);
+        configUi->preview->setVisible(true);
+    }
+    
     configUi->nameLabel->setText(index.data().toString());
     configUi->descriptionLabel->setText(index.data(ThemesModel::DescriptionRole).toString());
     configUi->authorLabel->setText(index.data(ThemesModel::AuthorRole).toString());
