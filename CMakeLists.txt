@@ -36,7 +36,7 @@ install(FILES kcm_sddm.desktop
     DESTINATION ${SERVICES_INSTALL_DIR}
 )
 
-install (FILES qml/main.qml qml/ThemePreview.qml
+install (FILES qml/main.qml
     DESTINATION ${DATA_INSTALL_DIR}/sddm-kcm)
 
 kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
