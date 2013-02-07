@@ -25,6 +25,7 @@ target_link_libraries(kcm_sddm
     ${KDE4_KDEUI_LIBS}
     ${QT_QTUITOOLS_LIBRARY}
     ${KDE4_PLASMA_LIBS}
+    ${QT_QTDECLARATIVE_LIBRARY}
 )
  
 install(TARGETS kcm_sddm
@@ -34,6 +35,9 @@ install(TARGETS kcm_sddm
 install(FILES kcm_sddm.desktop
     DESTINATION ${SERVICES_INSTALL_DIR}
 )
+
+install (FILES qml/main.qml qml/ThemePreview.qml
+    DESTINATION ${DATA_INSTALL_DIR}/sddm-kcm)
 
 kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
 target_link_libraries(kcmsddm_authhelper ${KDE4_KDECORE_LIBS})

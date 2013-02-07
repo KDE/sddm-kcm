@@ -19,8 +19,11 @@
 #include "themesmodel.h"
 #include "themesdelegate.h"
 
+#include <QtDeclarative/QDeclarativeView>
+#include <QtDeclarative/QDeclarativeContext>
 #include <KDebug>
 #include <KMessageBox>
+#include <KStandardDirs>
 
 ThemeConfig::ThemeConfig(QWidget *parent) :
     QWidget(parent)
@@ -67,14 +70,15 @@ QVariantMap ThemeConfig::save()
 
 void ThemeConfig::prepareInitialTheme()
 {
+    const QString mainQmlPath = KStandardDirs::locate("data", "sddm-kcm/main.qml");
+    //configUi->declarativeView->setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
+    //configUi->declarativeView->setResizeMode( QDeclarativeView::SizeRootObjectToView );
+    configUi->declarativeView->setSource(mainQmlPath);
+    
     QString initialTheme = mConfig->group("General").readEntry("CurrentTheme");
     
     QModelIndex index = findThemeIndex(initialTheme);
     if (!index.isValid()) {
-        configUi->nameLabel->setVisible(false);
-        configUi->descriptionLabel->setVisible(false);
-        configUi->authorLabel->setVisible(false);
-        configUi->preview->setVisible(false);
         //KMessageBox::error(this, i18n("Could not find any themes. \nPlease install SDDM themes."), i18n("No SDDM themes"));
         return;
     }
@@ -98,26 +102,32 @@ QModelIndex ThemeConfig::findThemeIndex(const QString &id) const
 
 void ThemeConfig::themeSelected(const QModelIndex &index)
 {
-    if (configUi->nameLabel->isHidden()) {
-        configUi->nameLabel->setVisible(true);
-        configUi->descriptionLabel->setVisible(true);
-        configUi->authorLabel->setVisible(true);
-        configUi->preview->setVisible(true);
-    }
+    QString previewFilename = index.model()->data(index, ThemesModel::PathRole).toString();
+    previewFilename += index.model()->data(index, ThemesModel::PreviewRole).toString();
     
-    configUi->nameLabel->setText(index.data().toString());
+    
+    configUi->declarativeView->rootContext()->setContextProperty("themeName", index.data().toString());
+    configUi->declarativeView->rootContext()->setContextProperty("previewPath", previewFilename);
+    configUi->declarativeView->rootContext()->setContextProperty("authorName", index.data(ThemesModel::AuthorRole).toString());
+    configUi->declarativeView->rootContext()->setContextProperty("description", index.data(ThemesModel::DescriptionRole).toString());
+    configUi->declarativeView->rootContext()->setContextProperty("license", index.data(ThemesModel::LicenseRole).toString());
+    configUi->declarativeView->rootContext()->setContextProperty("email", index.data(ThemesModel::EmailRole).toString());
+    configUi->declarativeView->rootContext()->setContextProperty("website", index.data(ThemesModel::WebsiteRole).toString());
+    configUi->declarativeView->rootContext()->setContextProperty("copyright", index.data(ThemesModel::CopyrightRole).toString());
+    configUi->declarativeView->rootContext()->setContextProperty("version", index.data(ThemesModel::VersionRole).toString());
+    
+    
+    /*configUi->nameLabel->setText(index.data().toString());
     configUi->descriptionLabel->setText(index.data(ThemesModel::DescriptionRole).toString());
     configUi->authorLabel->setText(index.data(ThemesModel::AuthorRole).toString());
 
-    QString previewFilename = index.model()->data(index, ThemesModel::PathRole).toString();
-    previewFilename += index.model()->data(index, ThemesModel::PreviewRole).toString();
     
     QPixmap preview(previewFilename);
     if (! preview.isNull()) {
         configUi->preview->setPixmap(preview.scaled(QSize(350, 350), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     } else {
         configUi->preview->setPixmap(QPixmap());
-    }
+    }*/
     
     emit changed(true);
 }
