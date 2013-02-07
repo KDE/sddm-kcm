@@ -70,10 +70,10 @@ QVariantMap ThemeConfig::save()
 
 void ThemeConfig::prepareInitialTheme()
 {
-    const QString mainQmlPath = KStandardDirs::locate("data", "sddm-kcm/main.qml");
+    //const QString mainQmlPath = KStandardDirs::locate("data", "sddm-kcm/main.qml");
     //configUi->declarativeView->setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
     //configUi->declarativeView->setResizeMode( QDeclarativeView::SizeRootObjectToView );
-    configUi->declarativeView->setSource(mainQmlPath);
+    //configUi->declarativeView->setSource(mainQmlPath);
     
     QString initialTheme = mConfig->group("General").readEntry("CurrentTheme");
     
@@ -102,6 +102,11 @@ QModelIndex ThemeConfig::findThemeIndex(const QString &id) const
 
 void ThemeConfig::themeSelected(const QModelIndex &index)
 {
+    if (!configUi->declarativeView->source().isValid()) {
+        const QString mainQmlPath = KStandardDirs::locate("data", "sddm-kcm/main.qml");
+        configUi->declarativeView->setSource(mainQmlPath);
+    }
+    
     QString previewFilename = index.model()->data(index, ThemesModel::PathRole).toString();
     previewFilename += index.model()->data(index, ThemesModel::PreviewRole).toString();
     
@@ -115,19 +120,6 @@ void ThemeConfig::themeSelected(const QModelIndex &index)
     configUi->declarativeView->rootContext()->setContextProperty("website", index.data(ThemesModel::WebsiteRole).toString());
     configUi->declarativeView->rootContext()->setContextProperty("copyright", index.data(ThemesModel::CopyrightRole).toString());
     configUi->declarativeView->rootContext()->setContextProperty("version", index.data(ThemesModel::VersionRole).toString());
-    
-    
-    /*configUi->nameLabel->setText(index.data().toString());
-    configUi->descriptionLabel->setText(index.data(ThemesModel::DescriptionRole).toString());
-    configUi->authorLabel->setText(index.data(ThemesModel::AuthorRole).toString());
-
-    
-    QPixmap preview(previewFilename);
-    if (! preview.isNull()) {
-        configUi->preview->setPixmap(preview.scaled(QSize(350, 350), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    } else {
-        configUi->preview->setPixmap(QPixmap());
-    }*/
     
     emit changed(true);
 }
