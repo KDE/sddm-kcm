@@ -34,7 +34,9 @@ public:
         PreviewRole,
         EmailRole,
         WebsiteRole,
-        LicenseRole
+        LicenseRole,
+        CopyrightRole,
+        ThemeApiRole
     };
                
     explicit ThemesModel(QObject *parent=0);

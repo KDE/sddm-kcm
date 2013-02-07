@@ -54,6 +54,20 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
             return metadata.themeid();
         case ThemesModel::AuthorRole:
             return metadata.author();
+        case ThemesModel::DescriptionRole:
+            return metadata.description();
+        case ThemesModel::LicenseRole:
+            return metadata.license();
+        case ThemesModel::EmailRole:
+            return metadata.email();
+        case ThemesModel::WebsiteRole:
+            return metadata.website();
+        case ThemesModel::CopyrightRole:
+            return metadata.copyright();
+        case ThemesModel::VersionRole:
+            return metadata.version();
+        case ThemesModel::ThemeApiRole:
+            return metadata.themeapi();
         case ThemesModel::PreviewRole:
             return metadata.screenshot();
         case ThemesModel::PathRole:
