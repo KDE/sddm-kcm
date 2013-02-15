@@ -25,10 +25,12 @@
 #include <KMessageBox>
 #include <KStandardDirs>
 
+#include "config.h"
+
 ThemeConfig::ThemeConfig(QWidget *parent) :
     QWidget(parent)
 {
-    mConfig = KSharedConfig::openConfig("/etc/sddm.conf", KConfig::SimpleConfig);
+    mConfig = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::SimpleConfig);
     
     configUi = new Ui::ThemeConfig();
     configUi->setupUi(this);
