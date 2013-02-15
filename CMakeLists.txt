@@ -13,18 +13,21 @@ set(SDDM_KCM_SRCS
     themesmodel.cpp
     thememetadata.cpp
     themesdelegate.cpp
+    advanceconfig.cpp
 )
 
 set(SDDM_KCM_UI
-    themeconfig.ui)
+    themeconfig.ui
+    advanceconfig.ui)
 
 kde4_add_ui_files(SDDM_KCM_SRCS ${SDDM_KCM_UI})
 kde4_add_plugin(kcm_sddm ${SDDM_KCM_SRCS})
  
 target_link_libraries(kcm_sddm
     ${KDE4_KDEUI_LIBS}
-    ${QT_QTUITOOLS_LIBRARY}
     ${KDE4_PLASMA_LIBS}
+    ${KDE4_KIO_LIBS}
+    ${QT_QTUITOOLS_LIBRARY}
     ${QT_QTDECLARATIVE_LIBRARY}
 )
  
@@ -35,9 +38,6 @@ install(TARGETS kcm_sddm
 install(FILES kcm_sddm.desktop
     DESTINATION ${SERVICES_INSTALL_DIR}
 )
-
-install (FILES qml/main.qml
-    DESTINATION ${DATA_INSTALL_DIR}/sddm-kcm)
 
 kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
 target_link_libraries(kcmsddm_authhelper ${KDE4_KDECORE_LIBS})

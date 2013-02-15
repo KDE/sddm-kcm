@@ -14,30 +14,35 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef SDDMKCM_H
-#define SDDMKCM_H
+#ifndef ADVANCECONFIG_H
+#define ADVANCECONFIG_H
 
-#include <KCModule>
+#include <QWidget>
 
-class ThemeConfig;
-class AdvanceConfig;
+#include <KSharedConfig>
 
-class SddmKcm : public KCModule
+namespace Ui {
+    class AdvanceConfig;
+}
+
+class AdvanceConfig : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SddmKcm(QWidget *parent, const QVariantList &args);
-    ~SddmKcm();
-
-public slots:
-    void save();
-
-private:
-    void prepareUi();
+    explicit AdvanceConfig(QWidget *parent = 0);
+    ~AdvanceConfig();
     
+    QVariantMap save();
+    
+signals:
+    void changed(bool changed=true);
+
 private:
-    ThemeConfig *mThemeConfig;
-    AdvanceConfig *mAdvanceConfig;
+    void load();
+
+private:
+    Ui::AdvanceConfig *configUi;
+    KSharedConfigPtr mConfig;
 };
 
-#endif // SDDMKCM_H
+#endif // ADVANCECONFIG_H

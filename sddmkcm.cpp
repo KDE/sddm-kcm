@@ -27,6 +27,7 @@
 #include <KDebug>
 
 #include "themeconfig.h"
+#include "advanceconfig.h"
 
 K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
 K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm", "kcm_sddm"))
@@ -61,6 +62,7 @@ void SddmKcm::save()
     QVariantMap args;
     
     args = mThemeConfig->save();
+    args.unite(mAdvanceConfig->save());
     
     KAuth::Action saveAction("org.kde.kcontrol.kcmsddm.save");
     saveAction.setHelperID("org.kde.kcontrol.kcmsddm");
@@ -87,4 +89,9 @@ void SddmKcm::prepareUi()
     connect(mThemeConfig, SIGNAL(changed(bool)), SIGNAL(changed(bool)));
     
     tabHolder->addTab(mThemeConfig, i18n("Theme"));
+    
+    mAdvanceConfig = new AdvanceConfig(this);
+    connect(mAdvanceConfig, SIGNAL(changed(bool)), SIGNAL(changed(bool)));
+    
+    tabHolder->addTab(mAdvanceConfig, i18n("Advance"));
 }

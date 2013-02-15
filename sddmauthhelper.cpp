@@ -21,12 +21,13 @@
 #include <KConfig>
 #include <KConfigGroup>
 
+#include "config.h"
+
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply;
     //Open config file
-    QString configName = "/etc/sddm.conf";
-    QFile configFile(configName);
+    QFile configFile(SDDM_CONFIG_FILE);
     if (!configFile.exists()) {
         return ActionReply::HelperErrorReply;
     }
