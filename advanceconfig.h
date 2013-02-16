@@ -25,7 +25,6 @@ namespace Ui {
     class AdvanceConfig;
 }
 
-class CursorThemeModel;
 class SortProxyModel;
 class CursorTheme;
 
@@ -47,7 +46,6 @@ private:
 private:
     Ui::AdvanceConfig *configUi;
     KSharedConfigPtr mConfig;
-    CursorThemeModel *cursorModel;
     SortProxyModel *proxyCursorModel;
 };
 

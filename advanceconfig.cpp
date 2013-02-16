@@ -50,13 +50,16 @@ AdvanceConfig::~AdvanceConfig()
 void AdvanceConfig::load()
 {
     //Cursor themes
-    cursorModel = new CursorThemeModel(this);
+    CursorThemeModel *cursorModel = new CursorThemeModel(this);
     proxyCursorModel = new SortProxyModel(this);
     proxyCursorModel->setSourceModel(cursorModel);
     proxyCursorModel->setFilterCaseSensitivity(Qt::CaseSensitive);
     proxyCursorModel->sort(NameColumn, Qt::AscendingOrder);
     
     configUi->cursorList->setModel(proxyCursorModel);
+    QString currentCursor = mConfig->group("General").readEntry("CursorTheme", "");
+    QModelIndex cursorIndex = proxyCursorModel->findIndex(currentCursor);
+    configUi->cursorList->setCurrentIndex(cursorIndex.row() < 0 ? 0 : cursorIndex.row());
 
     //User list
     UsersModel *userModel = new UsersModel(this);
@@ -77,7 +80,7 @@ QVariantMap AdvanceConfig::save()
 
     kDebug() << "idx:" << configUi->cursorList->currentIndex();
 
-    QModelIndex cursorIndex = cursorModel->index(configUi->cursorList->currentIndex(),0);
+    QModelIndex cursorIndex = configUi->cursorList->model()->index(configUi->cursorList->currentIndex(),0);
     if (cursorIndex.isValid()) {
         const CursorTheme *cursorTheme = proxyCursorModel->theme(cursorIndex);
         if (cursorTheme)
