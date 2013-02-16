@@ -44,7 +44,6 @@ int ThemesModel::rowCount(const QModelIndex &parent) const
 
 QVariant ThemesModel::data(const QModelIndex &index, int role) const
 {
-    int row = index.row();
     const ThemeMetadata metadata = mThemeList[index.row()];
 
     switch(role) {
@@ -104,6 +103,8 @@ void ThemesModel::add(const QString &id, const QString &path)
 
 void ThemesModel::dump(const QString &id, const QString &path)
 {
+    Q_UNUSED(id)
+
     ThemeMetadata metadata(path);
 
     kDebug() << "Theme Path:" << metadata.path();

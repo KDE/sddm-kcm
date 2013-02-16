@@ -2,17 +2,17 @@
     Copyright (c) 2007 Paolo Capriotti <p.capriotti@gmail.com>
     Copyright (c) 2010 Dario Andres Rodriguez  <andresbajotierra@gmail.com>
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
- 
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 2 of the License, or
     (at your option) any later version.
-   
+
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-   
+
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -50,7 +50,7 @@ void ThemesDelegate::paint(QPainter *painter,
 {
     QString previewFilename = index.model()->data(index, ThemesModel::PathRole).toString();
     previewFilename += index.model()->data(index, ThemesModel::PreviewRole).toString();
-    
+
     const QString title = index.model()->data(index, Qt::DisplayRole).toString();
     const QPixmap originalPix(previewFilename);
     const QPixmap pix = originalPix.scaled(QSize(ThemesDelegate::SCREENSHOT_SIZE, ThemesDelegate::SCREENSHOT_SIZE/1.6), Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -150,6 +150,8 @@ void ThemesDelegate::paint(QPainter *painter,
 QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
                                    const QModelIndex &index) const
 {
+    Q_UNUSED(option)
+
     const QString title = index.model()->data(index, Qt::DisplayRole).toString();
     const QString author = index.model()->data(index, ThemesModel::AuthorRole).toString();
     const int fontSize = KGlobalSettings::smallestReadableFont().pointSize();
@@ -165,7 +167,7 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
     document.setHtml(html);
     document.setTextWidth(m_maxWidth);
 
-    QSize s(m_maxWidth + MARGIN * 2, 
+    QSize s(m_maxWidth + MARGIN * 2,
             m_maxHeight + MARGIN * 3 + (int)(document.size().height()));
     return s;
 }
