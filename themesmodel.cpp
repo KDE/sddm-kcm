@@ -1,16 +1,16 @@
 /*
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
- 
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 2 of the License, or
     (at your option) any later version.
-   
+
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-   
+
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -38,7 +38,7 @@ ThemesModel::~ThemesModel()
 int ThemesModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-    
+
     return mThemeList.size();
 }
 
@@ -46,7 +46,7 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     const ThemeMetadata metadata = mThemeList[index.row()];
-    
+
     switch(role) {
         case Qt::DisplayRole:
             return metadata.name();
@@ -73,19 +73,22 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
         case ThemesModel::PathRole:
             return metadata.path();
     }
-    
+
     return QVariant();
 }
 
 void ThemesModel::populate()
 {
     QStringList themesBaseDirs = KGlobal::dirs()->findDirs("data", "sddm/themes");
-    
+
+    if (themesBaseDirs.isEmpty())
+        return;
+
     foreach (const QString &id, Plasma::Package::listInstalledPaths(themesBaseDirs.last())) {
         QString path = themesBaseDirs.last() + id;
-        
+
         dump(id, path);
-        
+
         add(id, path);
     }
 }
@@ -93,16 +96,16 @@ void ThemesModel::populate()
 void ThemesModel::add(const QString &id, const QString &path)
 {
     beginInsertRows(QModelIndex(), mThemeList.count(), mThemeList.count());
-    
+
     mThemeList.append( ThemeMetadata(id, path) );
-    
+
     endInsertRows();
 }
 
 void ThemesModel::dump(const QString &id, const QString &path)
 {
     ThemeMetadata metadata(path);
-    
+
     kDebug() << "Theme Path:" << metadata.path();
     kDebug() << "Name: " << metadata.name();
     kDebug() << "Version: " << metadata.version();
