@@ -1,5 +1,5 @@
 find_package(KDE4 REQUIRED)
- 
+
 include(KDE4Defaults)
 include(MacroLibrary)
 
@@ -14,6 +14,7 @@ set(SDDM_KCM_SRCS
     thememetadata.cpp
     themesdelegate.cpp
     advanceconfig.cpp
+    usersmodel.cpp
 )
 
 set(SDDM_KCM_UI

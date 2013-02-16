@@ -17,7 +17,12 @@
 #include "advanceconfig.h"
 #include "ui_advanceconfig.h"
 
+#include <KDebug>
+#include <KUser>
+
+#include "usersmodel.h"
 #include "config.h"
+
 
 AdvanceConfig::AdvanceConfig(QWidget *parent) :
     QWidget(parent)
@@ -27,10 +32,11 @@ AdvanceConfig::AdvanceConfig(QWidget *parent) :
     configUi = new Ui::AdvanceConfig();
     configUi->setupUi(this);
     
+    load();
+    
+    connect(configUi->userList, SIGNAL(activated(int)), SIGNAL(changed()));
     connect(configUi->haltCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->rebootCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
-    
-    load();
 }
 
 AdvanceConfig::~AdvanceConfig()
@@ -40,6 +46,10 @@ AdvanceConfig::~AdvanceConfig()
 
 void AdvanceConfig::load()
 {
+    UsersModel *model = new UsersModel(this);
+    configUi->userList->setModel(model);
+    model->populate(mConfig->group("General").readEntry("MinimumUid", 1000));
+    
     configUi->haltCommand->setUrl(mConfig->group("General").readEntry("HaltCommand"));
     configUi->rebootCommand->setUrl(mConfig->group("General").readEntry("RebootCommand"));
 }
@@ -48,6 +58,7 @@ QVariantMap AdvanceConfig::save()
 {
     QVariantMap args;
     
+    args["sddm.conf/General/AutoUser"] = (configUi->userList->currentIndex() == 0) ? "" : configUi->userList->currentText();
     args["sddm.conf/General/HaltCommand"] = configUi->haltCommand->url().path();
     args["sddm.conf/General/RebootCommand"] = configUi->rebootCommand->url().path();
     
