@@ -22,7 +22,9 @@
 
 #include "usersmodel.h"
 #include "config.h"
-
+#include "cursortheme/thememodel.h"
+#include "cursortheme/sortproxymodel.h"
+#include "cursortheme/cursortheme.h"
 
 AdvanceConfig::AdvanceConfig(QWidget *parent) :
     QWidget(parent)
@@ -37,6 +39,7 @@ AdvanceConfig::AdvanceConfig(QWidget *parent) :
     connect(configUi->userList, SIGNAL(activated(int)), SIGNAL(changed()));
     connect(configUi->haltCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->rebootCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
+    connect(configUi->cursorList, SIGNAL(activated(int)), SIGNAL(changed()));
 }
 
 AdvanceConfig::~AdvanceConfig()
@@ -46,9 +49,19 @@ AdvanceConfig::~AdvanceConfig()
 
 void AdvanceConfig::load()
 {
-    UsersModel *model = new UsersModel(this);
-    configUi->userList->setModel(model);
-    model->populate(mConfig->group("General").readEntry("MinimumUid", 1000));
+    //Cursor themes
+    cursorModel = new CursorThemeModel(this);
+    proxyCursorModel = new SortProxyModel(this);
+    proxyCursorModel->setSourceModel(cursorModel);
+    proxyCursorModel->setFilterCaseSensitivity(Qt::CaseSensitive);
+    proxyCursorModel->sort(NameColumn, Qt::AscendingOrder);
+    
+    configUi->cursorList->setModel(proxyCursorModel);
+    
+    //User list
+    UsersModel *userModel = new UsersModel(this);
+    configUi->userList->setModel(userModel);
+    userModel->populate(mConfig->group("General").readEntry("MinimumUid", 1000));
     
     configUi->haltCommand->setUrl(mConfig->group("General").readEntry("HaltCommand"));
     configUi->rebootCommand->setUrl(mConfig->group("General").readEntry("RebootCommand"));
@@ -57,7 +70,15 @@ void AdvanceConfig::load()
 QVariantMap AdvanceConfig::save()
 {
     QVariantMap args;
-    
+    kDebug() << "idx:" << configUi->cursorList->currentIndex();
+
+    QModelIndex cursorIndex = cursorModel->index(configUi->cursorList->currentIndex(),0);
+    if (cursorIndex.isValid()) {
+        const CursorTheme *cursorTheme = proxyCursorModel->theme(cursorIndex);
+        if (cursorTheme)
+            args["sddm.conf/General/CursorTheme"] = cursorTheme->name();
+    }
+
     args["sddm.conf/General/AutoUser"] = (configUi->userList->currentIndex() == 0) ? "" : configUi->userList->currentText();
     args["sddm.conf/General/HaltCommand"] = configUi->haltCommand->url().path();
     args["sddm.conf/General/RebootCommand"] = configUi->rebootCommand->url().path();

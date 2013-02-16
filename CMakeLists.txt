@@ -7,6 +7,8 @@ include_directories(
   ${KDE4_INCLUDES}
 )
 
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/cursortheme/ )
+
 set(SDDM_KCM_SRCS
     sddmkcm.cpp
     themeconfig.cpp
@@ -15,6 +17,11 @@ set(SDDM_KCM_SRCS
     themesdelegate.cpp
     advanceconfig.cpp
     usersmodel.cpp
+    cursortheme/thememodel.cpp
+    cursortheme/legacytheme.cpp
+    cursortheme/xcursortheme.cpp
+    cursortheme/cursortheme.cpp
+    cursortheme/sortproxymodel.cpp
 )
 
 set(SDDM_KCM_UI
@@ -30,8 +37,16 @@ target_link_libraries(kcm_sddm
     ${KDE4_KIO_LIBS}
     ${QT_QTUITOOLS_LIBRARY}
     ${QT_QTDECLARATIVE_LIBRARY}
+    ${X11_LIBRARIES}
 )
- 
+
+if (X11_Xcursor_FOUND)
+   target_link_libraries(kcm_sddm ${X11_Xcursor_LIB})
+endif (X11_Xcursor_FOUND)
+if (X11_Xfixes_FOUND)
+   target_link_libraries(kcm_sddm ${X11_Xfixes_LIB})
+endif (X11_Xfixes_FOUND)
+
 install(TARGETS kcm_sddm
     DESTINATION ${PLUGIN_INSTALL_DIR}
 )

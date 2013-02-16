@@ -25,6 +25,10 @@ namespace Ui {
     class AdvanceConfig;
 }
 
+class CursorThemeModel;
+class SortProxyModel;
+class CursorTheme;
+
 class AdvanceConfig : public QWidget
 {
     Q_OBJECT
@@ -43,6 +47,8 @@ private:
 private:
     Ui::AdvanceConfig *configUi;
     KSharedConfigPtr mConfig;
+    CursorThemeModel *cursorModel;
+    SortProxyModel *proxyCursorModel;
 };
 
 #endif // ADVANCECONFIG_H
