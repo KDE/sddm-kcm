@@ -47,6 +47,14 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_sddm ${X11_Xfixes_LIB})
 endif (X11_Xfixes_FOUND)
 
+# uninstall target
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+    IMMEDIATE @ONLY)
+
+add_custom_target(uninstall COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+
 install(TARGETS kcm_sddm
     DESTINATION ${PLUGIN_INSTALL_DIR}
 )
