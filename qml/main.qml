@@ -117,18 +117,21 @@ Rectangle {
         spacing: 4
 
         Text {
-            text: description
-            font.pointSize: 9
-            anchors {
-                left: parent.left
-            }
-        }
-
-        Text {
             text: version
             font.pointSize: 9
             anchors {
                 left: parent.left
+                right: parent.right
+            }
+        }
+
+        Text {
+            text: description
+            font.pointSize: 9
+            wrapMode: Text.WordWrap
+            anchors {
+                left: parent.left
+                right: parent.right
             }
         }
 
@@ -137,6 +140,7 @@ Rectangle {
             font.pointSize: 9
             anchors {
                 left: parent.left
+                right: parent.right
             }
         }
 
@@ -145,6 +149,7 @@ Rectangle {
             font.pointSize: 9
             anchors {
                 left: parent.left
+                right: parent.right
             }
         }
 
