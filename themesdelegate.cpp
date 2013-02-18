@@ -48,15 +48,16 @@ void ThemesDelegate::paint(QPainter *painter,
                                const QStyleOptionViewItem &option,
                                const QModelIndex &index) const
 {
-    QString previewFilename = index.model()->data(index, ThemesModel::PathRole).toString();
-    previewFilename += index.model()->data(index, ThemesModel::PreviewRole).toString();
+    const QAbstractItemModel *model = index.model();
+    QString previewFilename = model->data(index, ThemesModel::PathRole).toString();
+    previewFilename += model->data(index, ThemesModel::PreviewRole).toString();
 
-    const QString title = index.model()->data(index, Qt::DisplayRole).toString();
+    const QString title = model->data(index, Qt::DisplayRole).toString();
+    const QString author = model->data(index, ThemesModel::AuthorRole).toString();
+    const QString website = model->data(index, ThemesModel::WebsiteRole).toString();
+    
     const QPixmap originalPix(previewFilename);
     const QPixmap pix = originalPix.scaled(QSize(ThemesDelegate::SCREENSHOT_SIZE, ThemesDelegate::SCREENSHOT_SIZE/1.6), Qt::KeepAspectRatio, Qt::SmoothTransformation);
-
-    const QString author = index.model()->data(index, ThemesModel::AuthorRole).toString();
-    const QString resolution = index.model()->data(index, ThemesModel::WebsiteRole).toString();
 
     // Highlight selected item
     QStyleOptionViewItemV4 opt(option);
@@ -96,20 +97,16 @@ void ThemesDelegate::paint(QPainter *painter,
     //Use a QTextDocument to layout the text
     QTextDocument document;
     QString html = QString("<strong>%1</strong>").arg(title);
+    const int fontSize = KGlobalSettings::smallestReadableFont().pointSize();
 
     if (!author.isEmpty()) {
-        QString authorCaption = i18nc("Caption to wallpaper preview, %1 author name",
-                              "by %1", author);
+        QString authorCaption = i18nc("Caption to theme preview, %1 author name", "by %1", author);
 
-        html += QString("<br /><span style=\"font-size: %1pt;\">%2</span>")
-                .arg(KGlobalSettings::smallestReadableFont().pointSize())
-                .arg(authorCaption);
+        html += QString("<br /><span style=\"font-size: %1pt;\">%2</span>").arg(fontSize).arg(authorCaption);
     }
 
-    if (!resolution.isEmpty()) {
-        html += QString("<br /><span style=\"font-size: %1pt;\">%2</span>")
-                .arg(KGlobalSettings::smallestReadableFont().pointSize())
-                .arg(resolution);
+    if (!website.isEmpty()) {
+        html += QString("<br /><span style=\"font-size: %1pt;\">%2</span>").arg(fontSize).arg(website);
     }
 
     //Set the text color according to the item state
@@ -152,8 +149,10 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
 {
     Q_UNUSED(option)
 
-    const QString title = index.model()->data(index, Qt::DisplayRole).toString();
-    const QString author = index.model()->data(index, ThemesModel::AuthorRole).toString();
+    const QAbstractItemModel *model = index.model();
+    const QString title = model->data(index, Qt::DisplayRole).toString();
+    const QString author = model->data(index, ThemesModel::AuthorRole).toString();
+    const QString website = model->data(index, ThemesModel::WebsiteRole).toString();
     const int fontSize = KGlobalSettings::smallestReadableFont().pointSize();
 
     //Generate a sample complete entry (with the real title) to calculate sizes
@@ -162,7 +161,9 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
     if (!author.isEmpty()) {
         html += QString("<span style=\"font-size: %1pt;\">by %2</span><br />").arg(fontSize).arg(author);
     }
-    html += QString("<span style=\"font-size: %1pt;\">1600x1200</span>").arg(fontSize);
+    if (!author.isEmpty()) {
+        html += QString("<span style=\"font-size: %1pt;\">%2</span><br />").arg(fontSize).arg(website);
+    }
 
     document.setHtml(html);
     document.setTextWidth(m_maxWidth);
