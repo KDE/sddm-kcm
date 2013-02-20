@@ -28,6 +28,7 @@
 #include "thememodel.moc"
 #include "xcursortheme.h"
 #include "legacytheme.h"
+#include "dummytheme.h"
 
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
@@ -65,6 +66,14 @@ QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() < 0 || index.row() >= list.count())
         return QVariant();
+
+    if (index.row() == 0) {
+        if (role == Qt::DisplayRole) {
+            return "Default";
+        }
+
+        return QVariant();
+    }
 
     const CursorTheme *theme = list.at(index.row());
 
@@ -292,6 +301,9 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
 
 void CursorThemeModel::insertThemes()
 {
+    DummyTheme *dummyTheme = new DummyTheme();
+    list.append(dummyTheme);
+
     // Scan each base dir for Xcursor themes and add them to the list.
     foreach (const QString &baseDir, searchPaths())
     {

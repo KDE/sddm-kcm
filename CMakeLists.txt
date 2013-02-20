@@ -22,6 +22,7 @@ set(SDDM_KCM_SRCS
     cursortheme/xcursortheme.cpp
     cursortheme/cursortheme.cpp
     cursortheme/sortproxymodel.cpp
+    cursortheme/dummytheme.cpp
 )
 
 set(SDDM_KCM_UI
