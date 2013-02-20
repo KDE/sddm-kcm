@@ -1,6 +1,7 @@
 /*
  * Copyright © 2005-2007 Fredrik Höglund <fredrik@kde.org>
- *
+ * Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
+ * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
  * License version 2 as published by the Free Software Foundation.
@@ -40,7 +41,7 @@
 
 
 CursorThemeModel::CursorThemeModel(QObject *parent)
-    : QAbstractTableModel(parent)
+    : QAbstractListModel(parent)
 {
     insertThemes();
 }
@@ -60,32 +61,6 @@ void CursorThemeModel::refreshList()
     insertThemes();
 }
 
-QVariant CursorThemeModel::headerData(int section, Qt::Orientation orientation, int role) const
-{
-    // Only provide text for the headers
-    if (role != Qt::DisplayRole)
-        return QVariant();
-
-    // Horizontal header labels
-    if (orientation == Qt::Horizontal)
-    {
-        switch (section)
-        {
-            case NameColumn:
-                return i18n("Name");
-
-            case DescColumn:
-                return i18n("Description");
-
-            default: return QVariant();
-        }
-    }
-
-    // Numbered vertical header lables
-    return QString(section);
-}
-
-
 QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() < 0 || index.row() >= list.count())
@@ -93,40 +68,19 @@ QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
 
     const CursorTheme *theme = list.at(index.row());
 
-    // Text label
-    if (role == Qt::DisplayRole)
-    {
-        switch (index.column())
-        {
-            case NameColumn:
-                return theme->title();
-
-            case DescColumn:
-                return theme->description();
-
-            default: return QVariant();
-        }
+    switch(role) {
+        case Qt::DisplayRole:
+            return theme->title();
+        case Qt::DecorationRole:
+            return theme->icon();
     }
-
-    // Description for the first name column
-    if (role == CursorTheme::DisplayDetailRole && index.column() == NameColumn)
-        return theme->description();
-
-    // Icon for the name column
-    if (role == Qt::DecorationRole && index.column() == NameColumn)
-        return theme->icon();
 
     return QVariant();
 }
 
-
-void CursorThemeModel::sort(int column, Qt::SortOrder order)
+int CursorThemeModel::rowCount(const QModelIndex &) const
 {
-    Q_UNUSED(column);
-    Q_UNUSED(order);
-
-    // Sorting of the model isn't implemented, as the KCM currently uses
-    // a sorting proxy model.
+    return list.count();
 }
 
 

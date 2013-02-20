@@ -54,7 +54,7 @@ void AdvanceConfig::load()
     proxyCursorModel = new SortProxyModel(this);
     proxyCursorModel->setSourceModel(cursorModel);
     proxyCursorModel->setFilterCaseSensitivity(Qt::CaseSensitive);
-    proxyCursorModel->sort(NameColumn, Qt::AscendingOrder);
+    proxyCursorModel->sort(Qt::DisplayRole, Qt::AscendingOrder);
     
     configUi->cursorList->setModel(proxyCursorModel);
     QString currentCursor = mConfig->group("General").readEntry("CursorTheme", "");
