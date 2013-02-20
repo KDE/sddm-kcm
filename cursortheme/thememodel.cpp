@@ -170,7 +170,7 @@ const QStringList CursorThemeModel::searchPaths()
 
 #if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
     // These are the default paths Xcursor will scan for cursor themes
-    QString path("~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
+    QString path("/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
 
     // If XCURSOR_PATH is set, use that instead of the default path
     char *xcursorPath = std::getenv("XCURSOR_PATH");
@@ -195,8 +195,6 @@ const QStringList CursorThemeModel::searchPaths()
                 j.remove();
     }
 
-    // Expand all occurrences of ~/ to the home dir
-    baseDirs.replaceInStrings(QRegExp("^~\\/"), QDir::home().path() + '/');
     return baseDirs;
 }
 
