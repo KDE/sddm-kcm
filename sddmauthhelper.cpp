@@ -1,5 +1,6 @@
 /*
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
+    Copyright 2011, 2012 David Edmundson <kde@davidedmundson.co.uk>
  
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,22 +21,32 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KDebug>
 
-#include "config.h"
+static QSharedPointer<KConfig> openConfig(const QString &filePath)
+{
+    kDebug() << "Open config" << filePath;
+    QFile file(filePath);
+    if(!file.exists()) {
+        // If we are creating the config file, ensure it is world-readable: if
+        // we don't do that, KConfig will create a file which is only readable
+        // by root
+        file.open(QIODevice::WriteOnly);
+        file.close();
+        file.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadGroup | QFile::ReadOther);
+    }
+    return QSharedPointer<KConfig>(new KConfig(file.fileName(), KConfig::SimpleConfig));
+}
 
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
-    ActionReply reply;
-    //Open config file
-    QFile configFile(SDDM_CONFIG_FILE);
-    if (!configFile.exists()) {
-        return ActionReply::HelperErrorReply;
-    }
-    
-    QSharedPointer<KConfig> sddmConfig = QSharedPointer<KConfig>(new KConfig(configFile.fileName(), KConfig::SimpleConfig));
+    ActionReply reply = ActionReply::HelperErrorReply;
+    QSharedPointer<KConfig> sddmConfig = openConfig(args["sddm.conf"].toString());
     
     QMap<QString, QVariant>::const_iterator iterator;
-    for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
+    iterator = args.constBegin();
+    iterator++;
+    for ( ; iterator != args.constEnd() ; ++iterator) {
         QStringList configFields = iterator.key().split('/');
         
         QSharedPointer<KConfig> config;

@@ -26,6 +26,7 @@
 #include <KLocalizedString>
 #include <KDebug>
 
+#include "config.h"
 #include "themeconfig.h"
 #include "advanceconfig.h"
 
@@ -61,7 +62,9 @@ void SddmKcm::save()
 {
     QVariantMap args;
     
-    args = mThemeConfig->save();
+    args["sddm.conf"] = SDDM_CONFIG_FILE;
+
+    args.unite(mThemeConfig->save());
     args.unite(mAdvanceConfig->save());
     
     KAuth::Action saveAction("org.kde.kcontrol.kcmsddm.save");
