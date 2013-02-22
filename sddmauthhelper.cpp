@@ -25,7 +25,6 @@
 
 static QSharedPointer<KConfig> openConfig(const QString &filePath)
 {
-    kDebug() << "Open config" << filePath;
     QFile file(filePath);
     if(!file.exists()) {
         // If we are creating the config file, ensure it is world-readable: if
@@ -42,11 +41,14 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply = ActionReply::HelperErrorReply;
     QSharedPointer<KConfig> sddmConfig = openConfig(args["sddm.conf"].toString());
-    
+    QSharedPointer<KConfig> themeConfig = openConfig(args["theme.conf.ovr"].toString());;
+
     QMap<QString, QVariant>::const_iterator iterator;
-    iterator = args.constBegin();
-    iterator++;
-    for ( ; iterator != args.constEnd() ; ++iterator) {
+    
+    for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
+        if (iterator.key() == "sddm.conf" || iterator.key() == "theme.conf.ovr")
+            continue;
+
         QStringList configFields = iterator.key().split('/');
         
         QSharedPointer<KConfig> config;
@@ -56,11 +58,14 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 
         if (fileName == "sddm.conf") {
             config = sddmConfig;
+        } else if (fileName == "theme.conf.ovr") {
+            config = themeConfig;
         }
 
         config->group(groupName).writeEntry(keyName, iterator.value());
     }
     sddmConfig->sync();
+    themeConfig->sync();
     
     return ActionReply::SuccessReply;
 }

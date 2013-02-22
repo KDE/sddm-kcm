@@ -7,7 +7,11 @@ include_directories(
   ${KDE4_INCLUDES}
 )
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/cursortheme/ )
+include_directories( 
+    ${CMAKE_CURRENT_SOURCE_DIR}/cursortheme/
+    ${CMAKE_CURRENT_SOURCE_DIR}/configwidgets/)
+
+add_subdirectory(configwidgets)
 
 set(SDDM_KCM_SRCS
     sddmkcm.cpp
@@ -39,6 +43,7 @@ target_link_libraries(kcm_sddm
     ${QT_QTUITOOLS_LIBRARY}
     ${QT_QTDECLARATIVE_LIBRARY}
     ${X11_LIBRARIES}
+    sddm_config_widgets
 )
 
 if (X11_Xcursor_FOUND)

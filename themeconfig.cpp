@@ -19,6 +19,7 @@
 #include "themesmodel.h"
 #include "themesdelegate.h"
 
+#include <QFile>
 #include <QtDeclarative/QDeclarativeView>
 #include <QtDeclarative/QDeclarativeContext>
 #include <KDebug>
@@ -34,6 +35,7 @@ ThemeConfig::ThemeConfig(QWidget *parent) :
     
     configUi = new Ui::ThemeConfig();
     configUi->setupUi(this);
+    configUi->customizeBox->setVisible(false);
     
     ThemesModel *model = new ThemesModel(this);
     configUi->themesListView->setModel(model);
@@ -45,6 +47,7 @@ ThemeConfig::ThemeConfig(QWidget *parent) :
     
     connect(configUi->themesListView, SIGNAL(activated(QModelIndex)), SLOT(themeSelected(QModelIndex)));
     connect(configUi->themesListView, SIGNAL(clicked(QModelIndex)), SLOT(themeSelected(QModelIndex)));
+    connect(configUi->selectBackgroundButton, SIGNAL(imagePathChanged(QString)), SLOT(backgroundChanged(QString)));
    
     prepareInitialTheme();
     
@@ -67,7 +70,16 @@ QVariantMap ThemeConfig::save()
     
     args["sddm.conf/General/CurrentTheme"] = index.data(ThemesModel::IdRole);
     
+    if (!mThemeConfigPath.isEmpty()) {
+        args["theme.conf.ovr/General/background"] = mBackgroundPath;
+    }
+    
     return args;
+}
+
+QString ThemeConfig::themeConfigPath() const
+{
+    return mThemeConfigPath;
 }
 
 void ThemeConfig::prepareInitialTheme()
@@ -109,8 +121,8 @@ void ThemeConfig::themeSelected(const QModelIndex &index)
         configUi->declarativeView->setSource(mainQmlPath);
     }
     
-    QString previewFilename = index.model()->data(index, ThemesModel::PathRole).toString();
-    previewFilename += index.model()->data(index, ThemesModel::PreviewRole).toString();
+    QString themePath = index.model()->data(index, ThemesModel::PathRole).toString();
+    QString previewFilename = themePath + index.model()->data(index, ThemesModel::PreviewRole).toString();
     
     
     configUi->declarativeView->rootContext()->setContextProperty("themeName", index.data().toString());
@@ -123,7 +135,32 @@ void ThemeConfig::themeSelected(const QModelIndex &index)
     configUi->declarativeView->rootContext()->setContextProperty("copyright", index.data(ThemesModel::CopyrightRole).toString());
     configUi->declarativeView->rootContext()->setContextProperty("version", index.data(ThemesModel::VersionRole).toString());
     
+    //Check if we need to display configuration group
+    QString configPath = themePath + index.data(ThemesModel::ConfigFileRole).toString();
+    prepareConfigurationUi(configPath);
+
     emit changed(true);
+}
+
+void ThemeConfig::backgroundChanged(const QString &imagePath)
+{
+    mBackgroundPath = imagePath;
+    emit changed(true);
+}
+
+void ThemeConfig::prepareConfigurationUi(const QString &configPath)
+{
+    mThemeConfigPath = configPath;
+
+    QFile configFile(configPath + ".ovr");
+    
+    if (configFile.exists()) {
+        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName(), KConfig::SimpleConfig);
+        configUi->customizeBox->setVisible(true);
+        configUi->selectBackgroundButton->setImagePath(themeConfig->group("General").readEntry("background"));
+    } else {
+        configUi->customizeBox->setVisible(false);
+    }
 }
 
 void ThemeConfig::dump()

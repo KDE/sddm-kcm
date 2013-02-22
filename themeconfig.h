@@ -35,19 +35,24 @@ public:
     ~ThemeConfig();
     
     QVariantMap save();
-    
+    QString themeConfigPath() const;
+
 signals:
     void changed(bool);
     
 private slots:
     void themeSelected(const QModelIndex &index);
+    void backgroundChanged(const QString &imagePath);
     
 private:
     Ui::ThemeConfig *configUi;
     KSharedConfigPtr mConfig;
+    QString mBackgroundPath;
+    QString mThemeConfigPath;
     
     void prepareInitialTheme();
-    QModelIndex findThemeIndex(const QString& theme) const;
+    QModelIndex findThemeIndex(const QString &theme) const;
+    void prepareConfigurationUi(const QString &configPath);
     void dump();
 };
 

@@ -64,9 +64,14 @@ void SddmKcm::save()
     
     args["sddm.conf"] = SDDM_CONFIG_FILE;
 
+    if (!mThemeConfig->themeConfigPath().isEmpty()) {
+        args["theme.conf.ovr"] = mThemeConfig->themeConfigPath() + ".ovr";
+    }
+
+    kDebug() << "Ovr:" << args["theme.conf.ovr"].toString();
     args.unite(mThemeConfig->save());
     args.unite(mAdvanceConfig->save());
-    
+
     KAuth::Action saveAction("org.kde.kcontrol.kcmsddm.save");
     saveAction.setHelperID("org.kde.kcontrol.kcmsddm");
     saveAction.setArguments(args);
