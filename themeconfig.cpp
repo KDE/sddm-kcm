@@ -152,10 +152,10 @@ void ThemeConfig::prepareConfigurationUi(const QString &configPath)
 {
     mThemeConfigPath = configPath;
 
-    QFile configFile(configPath + ".ovr");
+    QFile configFile(configPath);
     
     if (configFile.exists()) {
-        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName(), KConfig::SimpleConfig);
+        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName() + ".ovr", KConfig::SimpleConfig);
         configUi->customizeBox->setVisible(true);
         configUi->selectBackgroundButton->setImagePath(themeConfig->group("General").readEntry("background"));
     } else {
