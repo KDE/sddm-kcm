@@ -41,7 +41,12 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply = ActionReply::HelperErrorReply;
     QSharedPointer<KConfig> sddmConfig = openConfig(args["sddm.conf"].toString());
-    QSharedPointer<KConfig> themeConfig = openConfig(args["theme.conf.ovr"].toString());;
+    QSharedPointer<KConfig> themeConfig;
+    QString themeConfigFile = args["theme.conf.ovr"].toString();
+
+    if (!themeConfigFile.isEmpty()) {
+        themeConfig = openConfig(themeConfigFile);
+    }
 
     QMap<QString, QVariant>::const_iterator iterator;
     
@@ -57,15 +62,16 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
         QString keyName = configFields[2];
 
         if (fileName == "sddm.conf") {
-            config = sddmConfig;
-        } else if (fileName == "theme.conf.ovr") {
-            config = themeConfig;
+            sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
+        } else if (fileName == "theme.conf.ovr" && !themeConfig.isNull()) {
+            themeConfig->group(groupName).writeEntry(keyName, iterator.value());
         }
-
-        config->group(groupName).writeEntry(keyName, iterator.value());
     }
+
     sddmConfig->sync();
-    themeConfig->sync();
+
+    if (!themeConfig.isNull())
+        themeConfig->sync();
     
     return ActionReply::SuccessReply;
 }
