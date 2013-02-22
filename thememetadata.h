@@ -42,6 +42,7 @@ public:
     QString mainscript() const;
     QString copyright() const;
     QString themeid() const;
+    QString configfile() const;
 
 private:
     void read(const QString &filename);

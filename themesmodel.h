@@ -36,7 +36,8 @@ public:
         WebsiteRole,
         LicenseRole,
         CopyrightRole,
-        ThemeApiRole
+        ThemeApiRole,
+        ConfigFileRole
     };
                
     explicit ThemesModel(QObject *parent=0);

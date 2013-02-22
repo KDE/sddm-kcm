@@ -35,6 +35,7 @@ public:
     QString screenshot;
     QString copyright;
     QString path;
+    QString configfile;
 };
 
 ThemeMetadata::ThemeMetadata(const QString &id, const QString &path)
@@ -77,6 +78,7 @@ void ThemeMetadata::read(const QString &filename)
     d->mainscript = config.readEntry("MainScript");
     d->screenshot = config.readEntry("Screenshot");
     d->copyright = config.readEntry("Copyright");
+    d->configfile = config.readEntry("ConfigFile");
 }
 
 QString ThemeMetadata::path() const
@@ -142,4 +144,9 @@ QString ThemeMetadata::screenshot() const
 QString ThemeMetadata::copyright() const
 {
     return d->copyright;
+}
+
+QString ThemeMetadata::configfile() const
+{
+    return d->configfile;
 }

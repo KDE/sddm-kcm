@@ -71,6 +71,8 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
             return metadata.screenshot();
         case ThemesModel::PathRole:
             return metadata.path();
+        case ThemesModel::ConfigFileRole:
+            return metadata.configfile();
     }
 
     return QVariant();
