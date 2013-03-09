@@ -1,7 +1,8 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-const QString SDDM_CONFIG_FILE = "/etc/sddm.conf";
+#define SDDM_CONFIG_FILE    "@SDDM_CONFIG_FILE@"
 const QString HALT_COMMAND = "/sbin/shutdown -h -P now";
 const QString REBOOT_COMMAND = "/sbin/shutdown -r now";
-#endif
+
+#endif //CONFIG_H

@@ -11,6 +11,9 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/cursortheme/
     ${CMAKE_CURRENT_SOURCE_DIR}/configwidgets/)
 
+set(SDDM_CONFIG_FILE         "/etc/sddm.conf"             CACHE PATH      "Path of the sddm config file")
+    
+configure_file(config.h.in config.h IMMEDIATE @ONLY)
 add_subdirectory(configwidgets)
 
 set(SDDM_KCM_SRCS
