@@ -140,7 +140,10 @@ QPixmap CursorTheme::createIcon(int size) const
 
 void CursorTheme::setCursorName(QCursor &cursor, const QString &name) const
 {
-#ifdef HAVE_XFIXES
+#ifndef HAVE_XFIXES
+    Q_UNUSED(cursor)
+    Q_UNUSED(name)
+#else
     static bool haveXfixes = ThemePage::haveXfixes();
 
     if (haveXfixes)
