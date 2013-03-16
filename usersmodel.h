@@ -37,7 +37,7 @@ public:
 
     int rowCount(const QModelIndex &parent) const;
     QVariant data(const QModelIndex &index, int role) const;
-    void populate(const int minimumUid);
+    void populate(const uint minimumUid);
     int indexOf(const QString &user);
 
 private:

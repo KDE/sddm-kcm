@@ -57,7 +57,7 @@ void UsersModel::add(const KUser &user)
     endInsertRows();
 }
 
-void UsersModel::populate(const int minimumUid) {
+void UsersModel::populate(const uint minimumUid) {
     KUser firstUser("No Autologin");
 
     QList< KUser > userList = KUser::allUsers();
@@ -66,10 +66,17 @@ void UsersModel::populate(const int minimumUid) {
     add(firstUser);
 
     foreach( user, userList ) {
-        if (user.uid() >= minimumUid) {
+        K_UID uuid = user.uid();
+
+        // invalid user
+        if (uuid == (uid_t) -1) {
+            continue;
+        }
+
+        if (uuid >= minimumUid) {
             add(user);
         }
-        /*kDebug() << user.loginName() << ",uid" << user.uid();
+        /*kDebug() << user.loginName() << ",uid" << uuid;
         kDebug() << " home:" << user.homeDir();
         kDebug() << " isSuperUser:" << user.isSuperUser() << ",isValid:" << user.isValid();
         kDebug() << " faceIconPath:" << user.faceIconPath();*/
