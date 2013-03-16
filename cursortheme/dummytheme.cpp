@@ -35,11 +35,15 @@ DummyTheme::~DummyTheme()
 
 QImage DummyTheme::loadImage(const QString &name, int) const
 {
+    Q_UNUSED(name)
+
     return QImage();
 }
 
 
 QCursor DummyTheme::loadCursor(const QString &name, int) const
 {
+    Q_UNUSED(name)
+
     return QCursor();
 }
