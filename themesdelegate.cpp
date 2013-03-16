@@ -161,7 +161,7 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
     if (!author.isEmpty()) {
         html += QString("<span style=\"font-size: %1pt;\">by %2</span><br />").arg(fontSize).arg(author);
     }
-    if (!author.isEmpty()) {
+    if (!website.isEmpty()) {
         html += QString("<span style=\"font-size: %1pt;\">%2</span><br />").arg(fontSize).arg(website);
     }
 
