@@ -27,6 +27,7 @@ namespace Ui {
 
 class SortProxyModel;
 class CursorTheme;
+class UsersModel;
 
 class AdvanceConfig : public QWidget
 {
@@ -40,13 +41,18 @@ public:
 signals:
     void changed(bool changed=true);
 
+private slots:
+    void slotUidRangeChanged();
+
 private:
     void load();
+    bool isUidRangeValid(int minUid, int maxUid) const;
 
 private:
     Ui::AdvanceConfig *configUi;
     KSharedConfigPtr mConfig;
     SortProxyModel *proxyCursorModel;
+    UsersModel *userModel;
 };
 
 #endif // ADVANCECONFIG_H

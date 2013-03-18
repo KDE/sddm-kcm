@@ -57,7 +57,9 @@ void UsersModel::add(const KUser &user)
     endInsertRows();
 }
 
-void UsersModel::populate(const uint minimumUid) {
+void UsersModel::populate(const uint minimumUid, const uint maximumUid) {
+    mUserList.clear();
+    
     KUser firstUser("No Autologin");
 
     QList< KUser > userList = KUser::allUsers();
@@ -73,7 +75,7 @@ void UsersModel::populate(const uint minimumUid) {
             continue;
         }
 
-        if (uuid >= minimumUid) {
+        if (uuid >= minimumUid && uuid <= maximumUid) {
             add(user);
         }
         /*kDebug() << user.loginName() << ",uid" << uuid;
