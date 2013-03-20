@@ -101,5 +101,5 @@ void SddmKcm::prepareUi()
     mAdvanceConfig = new AdvanceConfig(this);
     connect(mAdvanceConfig, SIGNAL(changed(bool)), SIGNAL(changed(bool)));
     
-    tabHolder->addTab(mAdvanceConfig, i18n("Advance"));
+    tabHolder->addTab(mAdvanceConfig, i18n("Advanced"));
 }
