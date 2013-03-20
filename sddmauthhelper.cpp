@@ -42,7 +42,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
     ActionReply reply = ActionReply::HelperErrorReply;
     QSharedPointer<KConfig> sddmConfig = openConfig(args["sddm.conf"].toString());
     QSharedPointer<KConfig> themeConfig;
-    QString themeConfigFile = args["theme.conf.ovr"].toString();
+    QString themeConfigFile = args["theme.conf.user"].toString();
 
     if (!themeConfigFile.isEmpty()) {
         themeConfig = openConfig(themeConfigFile);
@@ -51,7 +51,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
     QMap<QString, QVariant>::const_iterator iterator;
     
     for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
-        if (iterator.key() == "sddm.conf" || iterator.key() == "theme.conf.ovr")
+        if (iterator.key() == "sddm.conf" || iterator.key() == "theme.conf.user")
             continue;
 
         QStringList configFields = iterator.key().split('/');
@@ -63,7 +63,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 
         if (fileName == "sddm.conf") {
             sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
-        } else if (fileName == "theme.conf.ovr" && !themeConfig.isNull()) {
+        } else if (fileName == "theme.conf.user" && !themeConfig.isNull()) {
             themeConfig->group(groupName).writeEntry(keyName, iterator.value());
         }
     }

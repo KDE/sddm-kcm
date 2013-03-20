@@ -65,10 +65,10 @@ void SddmKcm::save()
     args["sddm.conf"] = SDDM_CONFIG_FILE;
 
     if (!mThemeConfig->themeConfigPath().isEmpty()) {
-        args["theme.conf.ovr"] = mThemeConfig->themeConfigPath() + ".ovr";
+        args["theme.conf.user"] = mThemeConfig->themeConfigPath() + ".user";
     }
 
-    kDebug() << "Ovr:" << args["theme.conf.ovr"].toString();
+    kDebug() << "Ovr:" << args["theme.conf.user"].toString();
     args.unite(mThemeConfig->save());
     args.unite(mAdvanceConfig->save());
 

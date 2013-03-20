@@ -71,7 +71,7 @@ QVariantMap ThemeConfig::save()
     args["sddm.conf/General/CurrentTheme"] = index.data(ThemesModel::IdRole);
     
     if (!mThemeConfigPath.isEmpty()) {
-        args["theme.conf.ovr/General/background"] = mBackgroundPath;
+        args["theme.conf.user/General/background"] = mBackgroundPath;
     }
     
     return args;
@@ -155,7 +155,7 @@ void ThemeConfig::prepareConfigurationUi(const QString &configPath)
     QFile configFile(configPath);
     
     if (configFile.exists()) {
-        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName() + ".ovr", KConfig::SimpleConfig);
+        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName() + ".user", KConfig::SimpleConfig);
         configUi->customizeBox->setVisible(true);
         configUi->selectBackgroundButton->setImagePath(themeConfig->group("General").readEntry("background"));
     } else {
