@@ -49,6 +49,8 @@ AdvanceConfig::AdvanceConfig(QWidget *parent) :
     connect(configUi->minimumUid, SIGNAL(textChanged(QString)), SLOT(slotUidRangeChanged()));
     connect(configUi->maximumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->maximumUid, SIGNAL(textChanged(QString)), SLOT(slotUidRangeChanged()));
+    connect(configUi->autoLogin, SIGNAL(clicked()), SIGNAL(changed()));
+    connect(configUi->reloginAfterQuit, SIGNAL(clicked()), SIGNAL(changed()));
 }
 
 AdvanceConfig::~AdvanceConfig()
@@ -81,6 +83,8 @@ void AdvanceConfig::load()
 
     QString currentUser = mConfig->group("General").readEntry("AutoUser", "");
     configUi->userList->setCurrentIndex(userModel->indexOf(currentUser));
+    configUi->autoLogin->setChecked(!currentUser.isEmpty());
+    configUi->reloginAfterQuit->setChecked(mConfig->group("General").readEntry("AutoRelogin", false));
     
     QValidator *uidValidator = new QIntValidator(MIN_UID, MAX_UID, configUi->minimumUid);
     configUi->minimumUid->setValidator(uidValidator);
@@ -108,7 +112,8 @@ QVariantMap AdvanceConfig::save()
             args["sddm.conf/General/CursorTheme"] = cursorTheme->name();
     }
 
-    args["sddm.conf/General/AutoUser"] = (configUi->userList->currentIndex() == 0) ? "" : configUi->userList->currentText();
+    args["sddm.conf/General/AutoUser"] = ( configUi->autoLogin->isChecked() ) ? configUi->userList->currentText() : "";
+    args["sddm.conf/General/AutoRelogin"] = configUi->reloginAfterQuit->isChecked();
 
     int minUid = configUi->minimumUid->text().toInt();
     int maxUid = configUi->maximumUid->text().toInt();

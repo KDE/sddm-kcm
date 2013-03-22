@@ -42,7 +42,7 @@ QVariant UsersModel::data(const QModelIndex &index, int role) const
 
     switch(role) {
         case Qt::DisplayRole:
-            return (index.row() == 0 ) ? "<No Autologin>" : user.loginName();
+            return user.loginName();
     }
 
     return QVariant();
@@ -60,13 +60,10 @@ void UsersModel::add(const KUser &user)
 void UsersModel::populate(const uint minimumUid, const uint maximumUid) {
     mUserList.clear();
     
-    KUser firstUser("No Autologin");
-
     QList< KUser > userList = KUser::allUsers();
 
     KUser user;
-    add(firstUser);
-
+    
     foreach( user, userList ) {
         K_UID uuid = user.uid();
 
