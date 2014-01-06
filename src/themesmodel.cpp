@@ -16,14 +16,17 @@
  */
 #include "themesmodel.h"
 
+#include <QDir>
 #include <QString>
 
-#include <KGlobal>
-#include <KStandardDirs>
+#include <KConfig>
+#include <KConfigGroup>
 #include <KDebug>
+#include <KGlobal>
+#include <KSharedConfig>
+#include <KStandardDirs>
 
-#include <Plasma/Package>
-
+#include "config.h"
 #include "thememetadata.h"
 
 ThemesModel::ThemesModel(QObject *parent)
@@ -80,17 +83,24 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
 
 void ThemesModel::populate()
 {
-    QStringList themesBaseDirs = KGlobal::dirs()->findDirs("data", "sddm/themes");
+    QString themesBaseDir = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::SimpleConfig)->group("General").readEntry("ThemesDir");
 
-    if (themesBaseDirs.isEmpty())
+    if (themesBaseDir.isEmpty())
         return;
 
-    foreach (const QString &id, Plasma::Package::listInstalledPaths(themesBaseDirs.last())) {
-        QString path = themesBaseDirs.last() + id;
+    QDir dir(themesBaseDir);
 
-        dump(id, path);
+    if (!dir.exists()) {
+        return;
+    }
 
-        add(id, path);
+    foreach (const QString &theme, dir.entryList(QDir::AllDirs | QDir::Readable)) {
+        QString path = themesBaseDir + '/' + theme;
+
+        if (QFile::exists(path + "/metadata.desktop" )) {
+            dump(theme, path);
+            add(theme, path);
+        }
     }
 }
 
