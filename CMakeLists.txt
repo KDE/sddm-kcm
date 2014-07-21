@@ -1,19 +1,32 @@
-cmake_minimum_required(VERSION 2.8.8)
+cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
+set(QT_MIN_VERSION "5.3.0")
+find_package(ECM 1.0.0 REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+include(ECMInstallIcons)
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings)
+include(FeatureSummary)
 
-find_package(KDE4 REQUIRED)
-include_directories( 
-    ${KDE4_INCLUDES}
-    ${CMAKE_CURRENT_BINARY_DIR}
+find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Designer)
+
+find_package(KF5 REQUIRED COMPONENTS
+    CoreAddons
+    I18n
+    XmlGui
+    KDELibs4Support
 )
 
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmsddm\")
+
+# install(FILES kcm_sddm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+
+# kde4_install_auth_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
+
+# kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
+# target_link_libraries(kcmsddm_authhelper KF5::KAuth)
+#
+# kde4_install_auth_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
+# install(TARGETS kcmsddm_authhelper DESTINATION ${LIBEXEC_INSTALL_DIR})
+
 add_subdirectory(src)
-
-install(FILES kcm_sddm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-
-kde4_install_auth_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
-
-kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
-target_link_libraries(kcmsddm_authhelper ${KDE4_KDECORE_LIBS})
-
-kde4_install_auth_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
-install(TARGETS kcmsddm_authhelper DESTINATION ${LIBEXEC_INSTALL_DIR})
