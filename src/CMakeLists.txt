@@ -1,7 +1,7 @@
 set(SDDM_CONFIG_FILE         "/etc/sddm.conf"             CACHE PATH      "Path of the sddm config file")
     
 configure_file(config.h.in config.h IMMEDIATE @ONLY)
-add_subdirectory(configwidgets)
+# add_subdirectory(configwidgets)
 
 set(SDDM_KCM_SRCS
     sddmkcm.cpp
