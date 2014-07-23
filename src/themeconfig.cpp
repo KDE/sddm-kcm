@@ -20,8 +20,8 @@
 #include "themesdelegate.h"
 
 #include <QFile>
-#include <QtDeclarative/QDeclarativeView>
-#include <QtDeclarative/QDeclarativeContext>
+#include <QDeclarativeView>
+#include <QDeclarativeContext>
 #include <KDebug>
 #include <KMessageBox>
 #include <KStandardDirs>

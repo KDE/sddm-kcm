@@ -27,7 +27,6 @@
 #include <KGlobalSettings>
 #include <KLocalizedString>
 
-#include <Plasma/PaintUtils>
 #include "themesmodel.h"
 
 static const int BLUR_PAD = 6;
@@ -80,8 +79,8 @@ void ThemesDelegate::paint(QPainter *painter,
         p.fillRect(blurRect, darkBaseColor ? Qt::white : Qt::black);
         p.end();
 
-        // apply blur with a radius of 2 as thumbnail shadow
-        Plasma::PaintUtils::shadowBlur(blur, 2, darkBaseColor ? Qt::white : Qt::black);
+//         // apply blur with a radius of 2 as thumbnail shadow
+//         Plasma::PaintUtils::shadowBlur(blur, 2, darkBaseColor ? Qt::white : Qt::black);
 
         // calculate point
         const int bx = (option.rect.width() - blur.width()) / 2;

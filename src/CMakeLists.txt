@@ -28,9 +28,10 @@ kde4_add_plugin(kcm_sddm ${SDDM_KCM_SRCS})
 
 target_link_libraries(kcm_sddm
     Qt5::Widgets
-    KF5::KCMUtils
+    Qt5::X11Extras
+    Qt5::Declarative
     KF5::KDELibs4Support
-    sddm_config_widgets
+#     sddm_config_widgets
 )
 
 if (X11_Xcursor_FOUND)

@@ -21,7 +21,7 @@
 #define SORTPROXYMODEL_H
 
 #include <QSortFilterProxyModel>
-#include <thememodel.h>
+#include "thememodel.h"
 
 /**
  * SortProxyModel is a sorting proxy model intended to be used in combination

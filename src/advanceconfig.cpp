@@ -20,6 +20,7 @@
 #include <QIntValidator>
 
 #include <KDebug>
+#include <KConfigGroup>
 #include <KUser>
 
 #include "usersmodel.h"
