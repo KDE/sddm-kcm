@@ -1,6 +1,7 @@
 /*
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
- 
+    Copyright 2014 by David Edmundson <davidedmundson@kde.org>
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 2 of the License, or
@@ -18,6 +19,7 @@
 #define THEMEMETADATA_H
 
 #include <QString>
+#include <QSharedDataPointer>
 
 class ThemeMetadataPrivate;
 
@@ -26,7 +28,8 @@ class ThemeMetadata
 public:
     explicit ThemeMetadata(const QString &id, const QString &path = QString());
     ThemeMetadata(const ThemeMetadata &other);
-    
+    ThemeMetadata& operator=(const ThemeMetadata& other);
+
     ~ThemeMetadata();
     
     QString path() const;
@@ -48,6 +51,6 @@ private:
     void read(const QString &filename);
     
 private:
-    ThemeMetadataPrivate * const d;
+    QSharedDataPointer<ThemeMetadataPrivate> d;
 };
 #endif //THEMEMETADATA_H
