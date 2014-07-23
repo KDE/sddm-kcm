@@ -21,7 +21,7 @@
 #include <KPluginFactory>
 #include <KAuth/Action>
 #include <KAuth/ActionReply>
-#include <KAboutData>
+#include <K4AboutData>
 #include <KTabWidget>
 #include <KLocalizedString>
 #include <KDebug>
@@ -34,20 +34,21 @@ K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
 K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm", "kcm_sddm"))
 
 SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
-    KCModule(SddmKcmFactory::componentData(), parent, args)
+    KCModule(parent, args)
 {
-    KAboutData* aboutData = new KAboutData("kcmsddm", 0, ki18n("SDDM KDE Config"), "0");
+    K4AboutData* aboutData = new K4AboutData("kcmsddm", 0, ki18n("SDDM KDE Config"), "0");
 
     aboutData->setVersion(0);
 
     aboutData->setShortDescription(ki18n("Login screen using the SDDM"));
-    aboutData->setLicense(KAboutData::License_GPL);
+    aboutData->setLicense(K4AboutData::License_GPL);
     aboutData->setCopyrightStatement(ki18n("(c) 2013 Reza Fatahilah Shah"));
     //aboutData->setHomepage("https://github.com/sddm/sddm");
 
     aboutData->addAuthor(ki18n("Reza Fatahilah Shah"), ki18n("Author"), "rshah0385@kireihana.com");
     
-    setAboutData(aboutData);
+    //FIXME
+//     setAboutData(aboutData);
     
     setNeedsAuthorization(true);
     
@@ -73,10 +74,13 @@ void SddmKcm::save()
     args.unite(mAdvanceConfig->save());
 
     KAuth::Action saveAction("org.kde.kcontrol.kcmsddm.save");
-    saveAction.setHelperID("org.kde.kcontrol.kcmsddm");
+
+    //FIXME
+//     saveAction.setHelperID("org.kde.kcontrol.kcmsddm");
     saveAction.setArguments(args);
     
-    KAuth::ActionReply reply = saveAction.execute();
+    //FIXME
+    KAuth::ActionReply reply;// = saveAction.execute();
     
     if (reply.failed()){
         kDebug() << "Failed";

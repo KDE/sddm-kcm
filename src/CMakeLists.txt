@@ -27,7 +27,9 @@ kde4_add_ui_files(SDDM_KCM_SRCS ${SDDM_KCM_UI})
 kde4_add_plugin(kcm_sddm ${SDDM_KCM_SRCS})
 
 target_link_libraries(kcm_sddm
+    Qt5::Widgets
     KF5::KCMUtils
+    KF5::KDELibs4Support
     sddm_config_widgets
 )
 
