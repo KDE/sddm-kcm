@@ -21,8 +21,9 @@
 
 #include "selectimagebutton.h"
 
-#include <QtGui/QWidgetAction>
+#include <QWidgetAction>
 
+#include <KUrl>
 #include <KFileDialog>
 #include <KMenu>
 #include <KLocalizedString>
@@ -37,8 +38,8 @@ SelectImageButton::SelectImageButton(QWidget *parent)
 
     setIconSize(QSize(64,64));
 
-    menu->addAction(KIcon(QLatin1String("document-open-folder")), i18n("Load from file..."), this, SLOT(onLoadImageFromFile()));
-    menu->addAction(KIcon(QLatin1String("edit-clear")), i18n("Clear Image"), this, SLOT(onClearImage()));
+    menu->addAction(QIcon::fromTheme(QLatin1String("document-open-folder")), i18n("Load from file..."), this, SLOT(onLoadImageFromFile()));
+    menu->addAction(QIcon::fromTheme(QLatin1String("edit-clear")), i18n("Clear Image"), this, SLOT(onClearImage()));
     setMenu(menu);
 
     onClearImage();
@@ -54,12 +55,12 @@ void SelectImageButton::setImagePath(const QString &imagePath) {
 
     QPixmap image(imagePath);
     if (! image.isNull()) {
-        KIcon imageIcon;
+        QIcon imageIcon;
         //scale oversized avatars to fit, but don't stretch smaller images
         imageIcon.addPixmap(image.scaled(iconSize().boundedTo(image.size()), Qt::KeepAspectRatio));
         setIcon(imageIcon);
     } else {
-        setIcon(KIcon(QLatin1String("image-x-generic")));
+        setIcon(QIcon::fromTheme(QLatin1String("image-x-generic")));
     }
     Q_EMIT imagePathChanged(m_imagePath);
 }
