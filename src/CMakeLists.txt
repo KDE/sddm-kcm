@@ -32,6 +32,9 @@ target_link_libraries(kcm_sddm
     Qt5::Declarative
     KF5::KDELibs4Support
 #     sddm_config_widgets
+
+    ${X11_LIBRARIES}
+    XCB::XCB # For mouse cursor themes
 )
 
 if (X11_Xcursor_FOUND)

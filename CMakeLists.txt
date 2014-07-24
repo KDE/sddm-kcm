@@ -17,6 +17,22 @@ find_package(KF5 REQUIRED COMPONENTS
     KDELibs4Support
 )
 
+
+find_package(X11)
+set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
+                        URL "http://www.x.org"
+                        TYPE REQUIRED
+                        PURPOSE "Required for building the X11 based workspace"
+                      )
+
+find_package(XCB
+    REQUIRED COMPONENTS
+        XCB SHM IMAGE
+    OPTIONAL_COMPONENTS
+        XKB
+)
+
+
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmsddm\")
 
 # install(FILES kcm_sddm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
