@@ -39,7 +39,7 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
 
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
-    ActionReply reply = ActionReply::HelperErrorReply;
+    ActionReply reply = ActionReply::HelperErrorReply();
     QSharedPointer<KConfig> sddmConfig = openConfig(args["sddm.conf"].toString());
     QSharedPointer<KConfig> themeConfig;
     QString themeConfigFile = args["theme.conf.user"].toString();
@@ -73,9 +73,9 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
     if (!themeConfig.isNull())
         themeConfig->sync();
     
-    return ActionReply::SuccessReply;
+    return ActionReply::SuccessReply();
 }
 
-KDE4_AUTH_HELPER_MAIN("org.kde.kcontrol.kcmsddm", SddmAuthHelper);
+KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmsddm", SddmAuthHelper);
 
 #include "moc_sddmauthhelper.cpp"

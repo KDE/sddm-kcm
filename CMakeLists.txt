@@ -14,6 +14,7 @@ find_package(KF5 REQUIRED COMPONENTS
     CoreAddons
     I18n
     XmlGui
+    Auth
     KDELibs4Support
 )
 
@@ -35,14 +36,14 @@ find_package(XCB
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmsddm\")
 
-# install(FILES kcm_sddm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES kcm_sddm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 
-# kde4_install_auth_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
+kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 
-# kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
-# target_link_libraries(kcmsddm_authhelper KF5::KAuth)
-#
-# kde4_install_auth_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
-# install(TARGETS kcmsddm_authhelper DESTINATION ${LIBEXEC_INSTALL_DIR})
+kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
+target_link_libraries(kcmsddm_authhelper KF5::Auth KF5::KDELibs4Support)
+
+kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
+install(TARGETS kcmsddm_authhelper DESTINATION ${LIBEXEC_INSTALL_DIR})
 
 add_subdirectory(src)

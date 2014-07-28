@@ -30,6 +30,10 @@
 #include "themeconfig.h"
 #include "advanceconfig.h"
 
+#include <kpluginfactory.h>
+#include <kpluginloader.h>
+#include <kdemacros.h>
+
 K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
 K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm", "kcm_sddm"))
 
@@ -107,3 +111,5 @@ void SddmKcm::prepareUi()
     
     tabHolder->addTab(mAdvanceConfig, i18n("Advanced"));
 }
+
+#include "sddmkcm.moc"

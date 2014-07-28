@@ -17,6 +17,9 @@ set(SDDM_KCM_SRCS
     cursortheme/cursortheme.cpp
     cursortheme/sortproxymodel.cpp
     cursortheme/dummytheme.cpp
+
+    #temporary until we rebuild configwidgets
+    configwidgets/selectimagebutton.cpp
 )
 
 set(SDDM_KCM_UI
