@@ -17,8 +17,7 @@
 #ifndef SDDMAUTHHELPER_H
 #define SDDMAUTHHELPER_H
 
-#include <KAuth/ActionReply>
-#include <KAuth/HelperSupport>
+#include <KAuth>
 
 using namespace KAuth;
 

@@ -21,7 +21,6 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KDebug>
 
 static QSharedPointer<KConfig> openConfig(const QString &filePath)
 {
