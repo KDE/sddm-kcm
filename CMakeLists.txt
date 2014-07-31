@@ -44,6 +44,6 @@ kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
 target_link_libraries(kcmsddm_authhelper KF5::Auth KF5::KDELibs4Support)
 
 kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
-install(TARGETS kcmsddm_authhelper DESTINATION ${LIBEXEC_INSTALL_DIR})
+install(TARGETS kcmsddm_authhelper DESTINATION ${LIBEXEC_INSTALL_DIR}/kauth)
 
 add_subdirectory(src)

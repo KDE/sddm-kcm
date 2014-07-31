@@ -33,6 +33,7 @@
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 #include <kdemacros.h>
+#include <kauthexecutejob.h>
 
 K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
 K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm", "kcm_sddm"))
@@ -79,15 +80,16 @@ void SddmKcm::save()
 
     KAuth::Action saveAction("org.kde.kcontrol.kcmsddm.save");
 
-    //FIXME
-//     saveAction.setHelperID("org.kde.kcontrol.kcmsddm");
+    saveAction.setHelperId("org.kde.kcontrol.kcmsddm");
     saveAction.setArguments(args);
     
-    //FIXME
-    KAuth::ActionReply reply;// = saveAction.execute();
-    
-    if (reply.failed()){
-        kDebug() << "Failed";
+    auto job = saveAction.execute();
+    job->exec();
+
+    if (job->error()){
+        kDebug() << "Save Failed";
+        qDebug() << job->errorString();
+        qDebug() << job->errorText();
     } else {
         changed(false);
         kDebug() << "Option saved";
