@@ -89,6 +89,8 @@ void ThemesModel::populate()
         themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm", QStandardPaths::LocateDirectory) + "/themes";
     }
 
+    qDebug() << themesBaseDir;
+
     QDir dir(themesBaseDir);
 
     if (!dir.exists()) {

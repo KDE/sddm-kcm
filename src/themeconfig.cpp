@@ -20,8 +20,8 @@
 #include "themesdelegate.h"
 
 #include <QFile>
-#include <QDeclarativeView>
-#include <QDeclarativeContext>
+#include <QQuickView>
+#include <QQmlContext>
 #include <KDebug>
 #include <KMessageBox>
 #include <KStandardDirs>
@@ -36,22 +36,22 @@ ThemeConfig::ThemeConfig(QWidget *parent) :
     
     configUi = new Ui::ThemeConfig();
     configUi->setupUi(this);
-    configUi->customizeBox->setVisible(false);
+//     configUi->customizeBox->setVisible(false);
     
     ThemesModel *model = new ThemesModel(this);
     configUi->themesListView->setModel(model);
-    
+
     ThemesDelegate *delegate = new ThemesDelegate(configUi->themesListView);
     delegate->setPreviewSize(QSize(128,128));
     configUi->themesListView->setItemDelegate(delegate);
     model->populate();
-    
+
     connect(configUi->themesListView, SIGNAL(activated(QModelIndex)), SLOT(themeSelected(QModelIndex)));
     connect(configUi->themesListView, SIGNAL(clicked(QModelIndex)), SLOT(themeSelected(QModelIndex)));
     connect(configUi->selectBackgroundButton, SIGNAL(imagePathChanged(QString)), SLOT(backgroundChanged(QString)));
-   
+
     prepareInitialTheme();
-    
+
     dump();
 }
 
@@ -86,9 +86,9 @@ QString ThemeConfig::themeConfigPath() const
 void ThemeConfig::prepareInitialTheme()
 {
     //const QString mainQmlPath = KStandardDirs::locate("data", "sddm-kcm/main.qml");
-    //configUi->declarativeView->setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
-    //configUi->declarativeView->setResizeMode( QDeclarativeView::SizeRootObjectToView );
-    //configUi->declarativeView->setSource(mainQmlPath);
+    //configUi->quickWidget->setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
+    //configUi->quickWidget->setResizeMode( QDeclarativeView::SizeRootObjectToView );
+    //configUi->quickWidget->setSource(mainQmlPath);
     
     QString initialTheme = mConfig->group("General").readEntry("CurrentTheme");
     
@@ -117,25 +117,24 @@ QModelIndex ThemeConfig::findThemeIndex(const QString &id) const
 
 void ThemeConfig::themeSelected(const QModelIndex &index)
 {
-    if (!configUi->declarativeView->source().isValid()) {
+    if (!configUi->quickWidget->source().isValid()) {
         const QString mainQmlPath = KStandardDirs::locate("data", "sddm-kcm/main.qml");
-        configUi->declarativeView->setSource(mainQmlPath);
+        configUi->quickWidget->setSource(mainQmlPath);
     }
-    
+
     QString themePath = index.model()->data(index, ThemesModel::PathRole).toString();
     QString previewFilename = themePath + index.model()->data(index, ThemesModel::PreviewRole).toString();
-    
-    
-    configUi->declarativeView->rootContext()->setContextProperty("themeName", index.data().toString());
-    configUi->declarativeView->rootContext()->setContextProperty("previewPath", previewFilename);
-    configUi->declarativeView->rootContext()->setContextProperty("authorName", index.data(ThemesModel::AuthorRole).toString());
-    configUi->declarativeView->rootContext()->setContextProperty("description", index.data(ThemesModel::DescriptionRole).toString());
-    configUi->declarativeView->rootContext()->setContextProperty("license", index.data(ThemesModel::LicenseRole).toString());
-    configUi->declarativeView->rootContext()->setContextProperty("email", index.data(ThemesModel::EmailRole).toString());
-    configUi->declarativeView->rootContext()->setContextProperty("website", index.data(ThemesModel::WebsiteRole).toString());
-    configUi->declarativeView->rootContext()->setContextProperty("copyright", index.data(ThemesModel::CopyrightRole).toString());
-    configUi->declarativeView->rootContext()->setContextProperty("version", index.data(ThemesModel::VersionRole).toString());
-    
+
+    configUi->quickWidget->rootContext()->setContextProperty("themeName", index.data().toString());
+    configUi->quickWidget->rootContext()->setContextProperty("previewPath", previewFilename);
+    configUi->quickWidget->rootContext()->setContextProperty("authorName", index.data(ThemesModel::AuthorRole).toString());
+    configUi->quickWidget->rootContext()->setContextProperty("description", index.data(ThemesModel::DescriptionRole).toString());
+    configUi->quickWidget->rootContext()->setContextProperty("license", index.data(ThemesModel::LicenseRole).toString());
+    configUi->quickWidget->rootContext()->setContextProperty("email", index.data(ThemesModel::EmailRole).toString());
+    configUi->quickWidget->rootContext()->setContextProperty("website", index.data(ThemesModel::WebsiteRole).toString());
+    configUi->quickWidget->rootContext()->setContextProperty("copyright", index.data(ThemesModel::CopyrightRole).toString());
+    configUi->quickWidget->rootContext()->setContextProperty("version", index.data(ThemesModel::VersionRole).toString());
+
     //Check if we need to display configuration group
     QString configPath = themePath + index.data(ThemesModel::ConfigFileRole).toString();
     prepareConfigurationUi(configPath);

@@ -28,13 +28,14 @@ set(SDDM_KCM_UI
     ui/themeconfig.ui
     ui/advanceconfig.ui)
 
-kde4_add_ui_files(SDDM_KCM_SRCS ${SDDM_KCM_UI})
+qt5_wrap_ui(SDDM_KCM_SRCS ${SDDM_KCM_UI})
 kde4_add_plugin(kcm_sddm ${SDDM_KCM_SRCS})
 
 target_link_libraries(kcm_sddm
     Qt5::Widgets
     Qt5::X11Extras
-    Qt5::Declarative
+    Qt5::Quick
+    Qt5::QuickWidgets
     KF5::KDELibs4Support
 #     sddm_config_widgets
 
