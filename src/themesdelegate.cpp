@@ -19,7 +19,6 @@
 #include "themesdelegate.h"
 
 #include <QApplication>
-#include <QFile>
 #include <QPainter>
 #include <QTextDocument>
 #include <QTime>
