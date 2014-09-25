@@ -55,8 +55,18 @@ void ThemesDelegate::paint(QPainter *painter,
     const QString title = model->data(index, Qt::DisplayRole).toString();
     const QString author = model->data(index, ThemesModel::AuthorRole).toString();
     const QString website = model->data(index, ThemesModel::WebsiteRole).toString();
-    
-    const QPixmap originalPix(previewFilename);
+
+    QPixmap originalPix(previewFilename);
+    QColor color = option.palette.color(QPalette::Base);
+
+    if (originalPix.isNull()) {
+        // paint a placeholder pixmap
+        originalPix = QPixmap(m_maxWidth, m_maxHeight);
+        originalPix.fill(color);
+        QPainter p_pix(&originalPix);
+        p_pix.drawText(originalPix.rect(), Qt::AlignCenter | Qt::TextWordWrap, i18n("No preview available"));
+    }
+
     const QPixmap pix = originalPix.scaled(QSize(ThemesDelegate::SCREENSHOT_SIZE, ThemesDelegate::SCREENSHOT_SIZE/1.6), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
     // Highlight selected item
@@ -66,33 +76,28 @@ void ThemesDelegate::paint(QPainter *painter,
     style->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter, opt.widget);
 
     // Draw wallpaper thumbnail
-    if (pix.isNull()) {
-        painter->fillRect(option.rect, option.palette.brush(QPalette::Base));
-    } else {
-        // blur calculation
-        QImage blur(pix.size() + QSize(BLUR_INCREMENT + BLUR_PAD, BLUR_INCREMENT + BLUR_PAD), QImage::Format_ARGB32);
-        QRect blurRect = QRect(QPoint((blur.width() - pix.width()) / 2, (blur.height() - pix.height()) / 2), pix.size());
-        blur.fill(Qt::transparent);
-        QPainter p(&blur);
+    // blur calculation
+    QImage blur(pix.size() + QSize(BLUR_INCREMENT + BLUR_PAD, BLUR_INCREMENT + BLUR_PAD), QImage::Format_ARGB32);
+    QRect blurRect = QRect(QPoint((blur.width() - pix.width()) / 2, (blur.height() - pix.height()) / 2), pix.size());
+    blur.fill(Qt::transparent);
+    QPainter p(&blur);
 
-        QColor color = option.palette.color(QPalette::Base);
-        bool darkBaseColor = qGray(color.rgb()) < 192;
-        p.fillRect(blurRect, darkBaseColor ? Qt::white : Qt::black);
-        p.end();
+    bool darkBaseColor = qGray(color.rgb()) < 192;
+    p.fillRect(blurRect, darkBaseColor ? Qt::white : Qt::black);
+    p.end();
 
-        // apply blur with a radius of 2 as thumbnail shadow
-        Plasma::PaintUtils::shadowBlur(blur, 2, darkBaseColor ? Qt::white : Qt::black);
+    // apply blur with a radius of 2 as thumbnail shadow
+    Plasma::PaintUtils::shadowBlur(blur, 2, darkBaseColor ? Qt::white : Qt::black);
 
-        // calculate point
-        const int bx = (option.rect.width() - blur.width()) / 2;
-        const int by = MARGIN + qMax(0, m_maxHeight - blur.height());
-        QRect shadowRect = QRect(option.rect.topLeft(), blur.size()).translated(bx, by);
-        // draw the blur
-        painter->drawImage(shadowRect.topLeft(), blur);
-        // draw the actual thumbnail
-        painter->drawPixmap(QRect(shadowRect.topLeft() + QPoint((shadowRect.width() - pix.width()) / 2, (shadowRect.height() - pix.height()) / 2),
-                                  pix.size()), pix);
-    }
+    // calculate point
+    const int bx = (option.rect.width() - blur.width()) / 2;
+    const int by = MARGIN + qMax(0, m_maxHeight - blur.height());
+    QRect shadowRect = QRect(option.rect.topLeft(), blur.size()).translated(bx, by);
+    // draw the blur
+    painter->drawImage(shadowRect.topLeft(), blur);
+    // draw the actual thumbnail
+    painter->drawPixmap(QRect(shadowRect.topLeft() + QPoint((shadowRect.width() - pix.width()) / 2, (shadowRect.height() - pix.height()) / 2),
+                                pix.size()), pix);
 
     //Use a QTextDocument to layout the text
     QTextDocument document;
@@ -117,7 +122,6 @@ void ThemesDelegate::paint(QPainter *painter,
         cg = QPalette::Inactive;
     }
 
-    QColor color;
     if (option.state & QStyle::State_Selected) {
         color = QApplication::palette().brush(cg, QPalette::HighlightedText).color();
     } else {
