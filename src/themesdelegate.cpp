@@ -57,11 +57,12 @@ void ThemesDelegate::paint(QPainter *painter,
     const QString website = model->data(index, ThemesModel::WebsiteRole).toString();
 
     QPixmap originalPix(previewFilename);
+    QColor color = option.palette.color(QPalette::Base);
 
     if (originalPix.isNull()) {
         // paint a placeholder pixmap
         originalPix = QPixmap(m_maxWidth, m_maxHeight);
-        originalPix.fill(option.palette.color(QPalette::Base));
+        originalPix.fill(color);
         QPainter p_pix(&originalPix);
         p_pix.drawText(originalPix.rect(), Qt::AlignCenter | Qt::TextWordWrap, i18n("No preview available"));
     }
@@ -81,7 +82,6 @@ void ThemesDelegate::paint(QPainter *painter,
     blur.fill(Qt::transparent);
     QPainter p(&blur);
 
-    QColor color = option.palette.color(QPalette::Base);
     bool darkBaseColor = qGray(color.rgb()) < 192;
     p.fillRect(blurRect, darkBaseColor ? Qt::white : Qt::black);
     p.end();
@@ -122,7 +122,6 @@ void ThemesDelegate::paint(QPainter *painter,
         cg = QPalette::Inactive;
     }
 
-//     QColor color;
     if (option.state & QStyle::State_Selected) {
         color = QApplication::palette().brush(cg, QPalette::HighlightedText).color();
     } else {
