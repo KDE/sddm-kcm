@@ -197,7 +197,10 @@ QCursor XCursorTheme::loadCursor(const QString &name, int size) const
 
     // Create the cursor
     Cursor handle = XcursorImagesLoadCursor(QX11Info::display(), images);
-    QCursor cursor = QCursor(Qt::HANDLE(handle)); // QCursor takes ownership of the handle
+
+    //FIXME
+
+    QCursor cursor;// = QCursor(Qt::HANDLE(handle)); // QCursor takes ownership of the handle
     XcursorImagesDestroy(images);
 
     setCursorName(cursor, name);

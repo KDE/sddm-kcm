@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>814</width>
-    <height>562</height>
+    <width>976</width>
+    <height>752</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,29 +46,32 @@
     </widget>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="detailLayout" stretch="0,0,0">
-     <item alignment="Qt::AlignHCenter">
-      <widget class="QDeclarativeView" name="declarativeView">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>450</width>
-         <height>350</height>
-        </size>
-       </property>
-      </widget>
-     </item>
+    <layout class="QVBoxLayout" name="detailLayout" stretch="0,0">
      <item>
       <widget class="QGroupBox" name="customizeBox">
        <property name="title">
         <string>Customize theme</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QQuickWidget" name="quickWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="resizeMode">
+           <enum>QQuickWidget::SizeRootObjectToView</enum>
+          </property>
+         </widget>
+        </item>
         <item>
          <layout class="QGridLayout" name="gridLayout">
           <item row="0" column="1">
@@ -112,9 +115,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QDeclarativeView</class>
-   <extends>QGraphicsView</extends>
-   <header>QtDeclarative/QDeclarativeView</header>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header>QQuickWidget</header>
   </customwidget>
   <customwidget>
    <class>SelectImageButton</class>

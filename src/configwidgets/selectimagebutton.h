@@ -22,7 +22,7 @@
 #ifndef SELECTIMAGEBUTTON_H
 #define SELECTIMAGEBUTTON_H
 
-#include <QtGui/QToolButton>
+#include <QToolButton>
 
 class SelectImageButton : public QToolButton
 {

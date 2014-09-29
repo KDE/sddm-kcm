@@ -17,8 +17,8 @@ kde4_add_plugin(sddm_config_widgets STATIC
 
 # Link against the needed libraries
 target_link_libraries(sddm_config_widgets
-  ${KDE4_KDEUI_LIBS}
-  ${KDE4_KIO_LIBS}
+  Qt5::Designer
+  KF5::KDELibs4Support
 )
 
 #uncomment this if building a non-static version of this lib.

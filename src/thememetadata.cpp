@@ -1,5 +1,6 @@
 /*
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
+    Copyright 2014 by David Edmundson <davidedmundson@kde.org>
  
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,10 +17,12 @@
  */
 #include "thememetadata.h"
 
+#include <QSharedData>
+
 #include <KDesktopFile>
 #include <KConfigGroup>
 
-class ThemeMetadataPrivate
+class ThemeMetadataPrivate : public QSharedData
 {
 public:
     QString themeid;
@@ -47,13 +50,20 @@ ThemeMetadata::ThemeMetadata(const QString &id, const QString &path)
 }
 
 ThemeMetadata::ThemeMetadata(const ThemeMetadata &other)
-    : d(new ThemeMetadataPrivate(*other.d))
+    : d(other.d)
 {
+}
+
+ThemeMetadata& ThemeMetadata::operator=( const ThemeMetadata &other )
+{
+  if ( this != &other )
+    d = other.d;
+
+  return *this;
 }
 
 ThemeMetadata::~ThemeMetadata()
 {
-    delete d;
 }
 
 void ThemeMetadata::read(const QString &filename)

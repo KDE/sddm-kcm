@@ -27,7 +27,6 @@
 #include <KGlobalSettings>
 #include <KLocalizedString>
 
-#include <Plasma/PaintUtils>
 #include "themesmodel.h"
 
 static const int BLUR_PAD = 6;
@@ -76,7 +75,6 @@ void ThemesDelegate::paint(QPainter *painter,
     style->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter, opt.widget);
 
     // Draw wallpaper thumbnail
-    // blur calculation
     QImage blur(pix.size() + QSize(BLUR_INCREMENT + BLUR_PAD, BLUR_INCREMENT + BLUR_PAD), QImage::Format_ARGB32);
     QRect blurRect = QRect(QPoint((blur.width() - pix.width()) / 2, (blur.height() - pix.height()) / 2), pix.size());
     blur.fill(Qt::transparent);
@@ -87,7 +85,7 @@ void ThemesDelegate::paint(QPainter *painter,
     p.end();
 
     // apply blur with a radius of 2 as thumbnail shadow
-    Plasma::PaintUtils::shadowBlur(blur, 2, darkBaseColor ? Qt::white : Qt::black);
+//     Plasma::PaintUtils::shadowBlur(blur, 2, darkBaseColor ? Qt::white : Qt::black);
 
     // calculate point
     const int bx = (option.rect.width() - blur.width()) / 2;

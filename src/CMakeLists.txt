@@ -1,16 +1,9 @@
-include(KDE4Defaults)
-include(MacroLibrary)
-
-include_directories( 
-    ${KDE4_INCLUDES}
-    ${CMAKE_CURRENT_SOURCE_DIR}/cursortheme/
-    ${CMAKE_CURRENT_SOURCE_DIR}/configwidgets/
-)
-
 set(SDDM_CONFIG_FILE         "/etc/sddm.conf"             CACHE PATH      "Path of the sddm config file")
     
 configure_file(config.h.in config.h IMMEDIATE @ONLY)
-add_subdirectory(configwidgets)
+# add_subdirectory(configwidgets)
+
+include_directories(configwidgets)
 
 set(SDDM_KCM_SRCS
     sddmkcm.cpp
@@ -26,23 +19,28 @@ set(SDDM_KCM_SRCS
     cursortheme/cursortheme.cpp
     cursortheme/sortproxymodel.cpp
     cursortheme/dummytheme.cpp
+
+    #temporary until we rebuild configwidgets
+    configwidgets/selectimagebutton.cpp
 )
 
 set(SDDM_KCM_UI
     ui/themeconfig.ui
     ui/advanceconfig.ui)
 
-kde4_add_ui_files(SDDM_KCM_SRCS ${SDDM_KCM_UI})
+qt5_wrap_ui(SDDM_KCM_SRCS ${SDDM_KCM_UI})
 kde4_add_plugin(kcm_sddm ${SDDM_KCM_SRCS})
 
 target_link_libraries(kcm_sddm
-    ${KDE4_KDEUI_LIBS}
-    ${KDE4_PLASMA_LIBS}
-    ${KDE4_KIO_LIBS}
-    ${QT_QTUITOOLS_LIBRARY}
-    ${QT_QTDECLARATIVE_LIBRARY}
+    Qt5::Widgets
+    Qt5::X11Extras
+    Qt5::Quick
+    Qt5::QuickWidgets
+    KF5::KDELibs4Support
+#     sddm_config_widgets
+
     ${X11_LIBRARIES}
-    sddm_config_widgets
+    XCB::XCB # For mouse cursor themes
 )
 
 if (X11_Xcursor_FOUND)
