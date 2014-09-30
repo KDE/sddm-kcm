@@ -18,8 +18,6 @@ set(SDDM_KCM_SRCS
     cursortheme/cursortheme.cpp
     cursortheme/sortproxymodel.cpp
     cursortheme/dummytheme.cpp
-
-    #temporary until we rebuild configwidgets
     configwidgets/selectimagebutton.cpp
 )
 
@@ -36,7 +34,6 @@ target_link_libraries(kcm_sddm
     Qt5::Quick
     Qt5::QuickWidgets
     KF5::KDELibs4Support
-#     sddm_config_widgets
 
     ${X11_LIBRARIES}
     XCB::XCB # For mouse cursor themes
