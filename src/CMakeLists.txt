@@ -34,6 +34,8 @@ target_link_libraries(kcm_sddm
     Qt5::Quick
     Qt5::QuickWidgets
     KF5::KDELibs4Support
+    KF5::ConfigWidgets
+    KF5::Auth
 
     ${X11_LIBRARIES}
     XCB::XCB # For mouse cursor themes
