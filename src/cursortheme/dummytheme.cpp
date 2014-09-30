@@ -41,9 +41,9 @@ QImage DummyTheme::loadImage(const QString &name, int) const
 }
 
 
-QCursor DummyTheme::loadCursor(const QString &name, int) const
+qulonglong DummyTheme::loadCursor(const QString &name, int) const
 {
     Q_UNUSED(name)
 
-    return QCursor();
+    return 0;
 }

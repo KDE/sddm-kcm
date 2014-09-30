@@ -1,6 +1,5 @@
 /*
  * Copyright © 2005-2007 Fredrik Höglund <fredrik@kde.org>
- * Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -21,11 +20,15 @@
 #ifndef THEMEMODEL_H
 #define THEMEMODEL_H
 
-#include <QAbstractListModel>
+#include <QAbstractTableModel>
 #include <QStringList>
 
 class QDir;
 class CursorTheme;
+
+// The two TableView/TreeView columns provided by the model
+enum Columns { NameColumn = 0, DescColumn };
+
 
 /**
  * The CursorThemeModel class provides a model for all locally installed
@@ -52,16 +55,18 @@ class CursorTheme;
  * Calling defaultIndex() will return the index of the theme Xcursor
  * will use if the user hasn't explicitly configured a cursor theme.
  */
-class CursorThemeModel : public QAbstractListModel
+class CursorThemeModel : public QAbstractTableModel
 {
     Q_OBJECT
 
     public:
         CursorThemeModel(QObject *parent = 0);
         ~CursorThemeModel();
-        
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+       inline int columnCount(const QModelIndex &parent = QModelIndex()) const;
+        inline int rowCount(const QModelIndex &parent = QModelIndex()) const;
+        QVariant headerData(int section, Qt::Orientation orientation, int role) const;
         QVariant data(const QModelIndex &index, int role) const;
+        void sort(int column, Qt::SortOrder order = Qt::AscendingOrder);
 
         /// Returns the CursorTheme at @p index.
         const CursorTheme *theme(const QModelIndex &index);
@@ -95,5 +100,15 @@ class CursorThemeModel : public QAbstractListModel
         QStringList baseDirs;
         QString defaultName;
 };
+
+int CursorThemeModel::rowCount(const QModelIndex &) const
+{
+    return list.count();
+}
+
+int CursorThemeModel::columnCount(const QModelIndex &) const
+{
+    return 2;
+}
 
 #endif // THEMEMODEL_H

@@ -1,7 +1,6 @@
 /*
  * Copyright © 2005-2007 Fredrik Höglund <fredrik@kde.org>
- * Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
  * License version 2 as published by the Free Software Foundation.
@@ -18,17 +17,16 @@
  */
 
 
-#include <KLocale>
+#include <KLocalizedString>
 #include <KConfig>
 #include <KConfigGroup>
 #include <QStringList>
 #include <QDir>
+#include <QX11Info>
 
 #include "thememodel.h"
 #include "thememodel.moc"
 #include "xcursortheme.h"
-#include "legacytheme.h"
-#include "dummytheme.h"
 
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
@@ -42,7 +40,7 @@
 
 
 CursorThemeModel::CursorThemeModel(QObject *parent)
-    : QAbstractListModel(parent)
+    : QAbstractTableModel(parent)
 {
     insertThemes();
 }
@@ -62,34 +60,73 @@ void CursorThemeModel::refreshList()
     insertThemes();
 }
 
+QVariant CursorThemeModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    // Only provide text for the headers
+    if (role != Qt::DisplayRole)
+        return QVariant();
+
+    // Horizontal header labels
+    if (orientation == Qt::Horizontal)
+    {
+        switch (section)
+        {
+            case NameColumn:
+                return i18n("Name");
+
+            case DescColumn:
+                return i18n("Description");
+
+            default: return QVariant();
+        }
+    }
+
+    // Numbered vertical header lables
+    return QString(section);
+}
+
+
 QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() < 0 || index.row() >= list.count())
         return QVariant();
 
-    if (index.row() == 0) {
-        if (role == Qt::DisplayRole) {
-            return "Default";
-        }
-
-        return QVariant();
-    }
-
     const CursorTheme *theme = list.at(index.row());
 
-    switch(role) {
-        case Qt::DisplayRole:
-            return theme->title();
-        case Qt::DecorationRole:
-            return theme->icon();
+    // Text label
+    if (role == Qt::DisplayRole)
+    {
+        switch (index.column())
+        {
+            case NameColumn:
+                return theme->title();
+
+            case DescColumn:
+                return theme->description();
+
+            default: return QVariant();
+        }
     }
+
+    // Description for the first name column
+    if (role == CursorTheme::DisplayDetailRole && index.column() == NameColumn)
+        return theme->description();
+
+    // Icon for the name column
+    if (role == Qt::DecorationRole && index.column() == NameColumn)
+        return theme->icon();
 
     return QVariant();
 }
 
-int CursorThemeModel::rowCount(const QModelIndex &) const
+
+void CursorThemeModel::sort(int column, Qt::SortOrder order)
 {
-    return list.count();
+    Q_UNUSED(column);
+    Q_UNUSED(order);
+
+    // Sorting of the model isn't implemented, as the KCM currently uses
+    // a sorting proxy model.
 }
 
 
@@ -133,7 +170,7 @@ const QStringList CursorThemeModel::searchPaths()
 
 #if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
     // These are the default paths Xcursor will scan for cursor themes
-    QString path("/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
+    QString path("~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
 
     // If XCURSOR_PATH is set, use that instead of the default path
     char *xcursorPath = std::getenv("XCURSOR_PATH");
@@ -158,6 +195,8 @@ const QStringList CursorThemeModel::searchPaths()
                 j.remove();
     }
 
+    // Expand all occurrences of ~/ to the home dir
+    baseDirs.replaceInStrings(QRegExp("^~\\/"), QDir::home().path() + '/');
     return baseDirs;
 }
 
@@ -267,6 +306,11 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
     if (!themeDir.exists("index.theme") && !haveCursors)
         return;
 
+    static bool isX11 = QX11Info::isPlatformX11();
+    if (!isX11) {
+        // TODO: implement Wayland Cursor Theme support
+        return;
+    }
     // Create a cursor theme object for the theme dir
     XCursorTheme *theme = new XCursorTheme(themeDir);
 
@@ -301,9 +345,6 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
 
 void CursorThemeModel::insertThemes()
 {
-    DummyTheme *dummyTheme = new DummyTheme();
-    list.append(dummyTheme);
-
     // Scan each base dir for Xcursor themes and add them to the list.
     foreach (const QString &baseDir, searchPaths())
     {
@@ -326,13 +367,9 @@ void CursorThemeModel::insertThemes()
         }
     }
 
-    // Insert 'special' themes here
-    CursorTheme *legacy = new LegacyTheme();
-    list.append(legacy);
-
     // The theme Xcursor will end up using if no theme is configured
     if (defaultName.isNull() || !hasTheme(defaultName))
-        defaultName = legacy->name();
+        defaultName = QLatin1String("KDE_Classic");
 }
 
 

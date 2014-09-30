@@ -22,7 +22,7 @@
 
 #include <QHash>
 
-#include "legacytheme.h"
+#include "cursortheme.h"
 
 class QDir;
 
@@ -35,7 +35,7 @@ typedef _XcursorImages XcursorImages;
 /**
  * The XCursorTheme class is a CursorTheme implementation for Xcursor themes.
  */
-class XCursorTheme : public LegacyTheme
+class XCursorTheme : public CursorTheme
 {
     public:
        /**
@@ -47,11 +47,11 @@ class XCursorTheme : public LegacyTheme
 
         const QStringList inherits() const { return m_inherits; }
         QImage loadImage(const QString &name, int size = 0) const;
-        QCursor loadCursor(const QString &name, int size = 0) const;
+        qulonglong loadCursor(const QString &name, int size = 0) const;
 
     protected:
         XCursorTheme(const QString &title, const QString &desc)
-            : LegacyTheme(title, desc) {}
+            : CursorTheme(title, desc) {}
         void setInherits(const QStringList &val) { m_inherits = val; }
 
     private:

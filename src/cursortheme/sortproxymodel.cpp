@@ -41,11 +41,6 @@ int SortProxyModel::compare(const QModelIndex &left, const QModelIndex &right, i
 
 bool SortProxyModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
-    const QAbstractItemModel *model = sourceModel();
-    QString first  = model->data(right,  Qt::DisplayRole).toString();
-    if (first == "Default")
-        return false;
-    
     const int result = compare(left, right, Qt::DisplayRole);
 
     if (result != 0)

@@ -86,7 +86,7 @@ class CursorTheme
         /// Loads the cursor @p name, with the nominal size @p size.
         /// If the theme doesn't have the cursor @p name, it should return
         /// the default cursor from the active theme instead.
-        virtual QCursor loadCursor(const QString &name, int size = 0) const = 0;
+        virtual qulonglong loadCursor(const QString &name, int size = 0) const = 0;
 
         /** Creates the icon returned by @ref icon(). Don't use this function
             directly but use @ref icon() instead, because @ref icon() caches
@@ -98,6 +98,8 @@ class CursorTheme
         /** @returns A pixmap with a cursor (usually left_ptr) that can
             be used as icon for this theme. */
         virtual QPixmap createIcon(int size) const;
+
+        static bool haveXfixes();
 
     protected:
         void setTitle( const QString &title )      { m_title       = title; }
@@ -115,7 +117,7 @@ class CursorTheme
         QImage autoCropImage( const QImage &image ) const;
 
         // Convenience function that uses Xfixes to tag a cursor with a name
-        void setCursorName(QCursor &cursor, const QString &name) const;
+        void setCursorName(qulonglong cursor, const QString &name) const;
 
         QString m_title;
         QString m_description;

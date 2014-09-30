@@ -14,7 +14,6 @@ set(SDDM_KCM_SRCS
     advanceconfig.cpp
     usersmodel.cpp
     cursortheme/thememodel.cpp
-    cursortheme/legacytheme.cpp
     cursortheme/xcursortheme.cpp
     cursortheme/cursortheme.cpp
     cursortheme/sortproxymodel.cpp
