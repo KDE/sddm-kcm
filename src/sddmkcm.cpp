@@ -17,6 +17,7 @@
 #include "sddmkcm.h"
 
 #include <QHBoxLayout>
+#include <QTabWidget>
 
 #include <KPluginFactory>
 
@@ -25,7 +26,6 @@
 
 #include <KAboutData>
 
-#include <KTabWidget>
 #include <KLocalizedString>
 #include <QDebug>
 
@@ -104,7 +104,7 @@ void SddmKcm::save()
 void SddmKcm::prepareUi()
 {
     QHBoxLayout* layout = new QHBoxLayout(this);
-    KTabWidget* tabHolder = new KTabWidget(this);
+    QTabWidget* tabHolder = new QTabWidget(this);
     layout->addWidget(tabHolder);
     
     mThemeConfig = new ThemeConfig(this);
