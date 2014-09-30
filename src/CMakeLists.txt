@@ -27,7 +27,7 @@ set(SDDM_KCM_UI
     ui/themeconfig.ui
     ui/advanceconfig.ui)
 
-qt5_wrap_ui(SDDM_KCM_SRCS ${SDDM_KCM_UI})
+ki18n_wrap_ui(SDDM_KCM_SRCS ${SDDM_KCM_UI})
 kde4_add_plugin(kcm_sddm ${SDDM_KCM_SRCS})
 
 target_link_libraries(kcm_sddm
