@@ -23,7 +23,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KDebug>
+#include <QDebug>
 #include <KGlobal>
 #include <KSharedConfig>
 #include <KStandardDirs>
@@ -124,13 +124,13 @@ void ThemesModel::dump(const QString &id, const QString &path)
 
     ThemeMetadata metadata(path);
 
-    kDebug() << "Theme Path:" << metadata.path();
-    kDebug() << "Name: " << metadata.name();
-    kDebug() << "Version: " << metadata.version();
-    kDebug() << "Author: " << metadata.author();
-    kDebug() << "Description: " << metadata.description();
-    kDebug() << "Email: " << metadata.email();
-    kDebug() << "License: " << metadata.license();
-    kDebug() << "Copyright: " << metadata.copyright();
-    kDebug() << "Screenshot: " << metadata.screenshot();
+    qDebug() << "Theme Path:" << metadata.path();
+    qDebug() << "Name: " << metadata.name();
+    qDebug() << "Version: " << metadata.version();
+    qDebug() << "Author: " << metadata.author();
+    qDebug() << "Description: " << metadata.description();
+    qDebug() << "Email: " << metadata.email();
+    qDebug() << "License: " << metadata.license();
+    qDebug() << "Copyright: " << metadata.copyright();
+    qDebug() << "Screenshot: " << metadata.screenshot();
 }

@@ -22,7 +22,7 @@
 #include <QFile>
 #include <QQuickView>
 #include <QQmlContext>
-#include <KDebug>
+#include <QDebug>
 #include <KMessageBox>
 #include <KStandardDirs>
 #include <KConfigGroup>
@@ -168,5 +168,5 @@ void ThemeConfig::dump()
     //dump sddm conf
      KConfigGroup config = mConfig->group("General");
      
-     kDebug() << "Current theme:" << config.readEntry("CurrentTheme");
+     qDebug() << "Current theme:" << config.readEntry("CurrentTheme");
 }

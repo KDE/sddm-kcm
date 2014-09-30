@@ -75,10 +75,10 @@ void UsersModel::populate(const uint minimumUid, const uint maximumUid) {
         if (uuid >= minimumUid && uuid <= maximumUid) {
             add(user);
         }
-        /*kDebug() << user.loginName() << ",uid" << uuid;
-        kDebug() << " home:" << user.homeDir();
-        kDebug() << " isSuperUser:" << user.isSuperUser() << ",isValid:" << user.isValid();
-        kDebug() << " faceIconPath:" << user.faceIconPath();*/
+        /*qDebug() << user.loginName() << ",uid" << uuid;
+        qDebug() << " home:" << user.homeDir();
+        qDebug() << " isSuperUser:" << user.isSuperUser() << ",isValid:" << user.isValid();
+        qDebug() << " faceIconPath:" << user.faceIconPath();*/
     }
 
 }

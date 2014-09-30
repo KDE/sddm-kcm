@@ -26,7 +26,7 @@
 #include <K4AboutData>
 #include <KTabWidget>
 #include <KLocalizedString>
-#include <KDebug>
+#include <QDebug>
 
 #include "config.h"
 #include "themeconfig.h"
@@ -76,7 +76,7 @@ void SddmKcm::save()
         args["theme.conf.user"] = mThemeConfig->themeConfigPath() + ".user";
     }
 
-    kDebug() << "Ovr:" << args["theme.conf.user"].toString();
+    qDebug() << "Ovr:" << args["theme.conf.user"].toString();
     args.unite(mThemeConfig->save());
     args.unite(mAdvanceConfig->save());
 
@@ -89,12 +89,12 @@ void SddmKcm::save()
     job->exec();
 
     if (job->error()){
-        kDebug() << "Save Failed";
+        qDebug() << "Save Failed";
         qDebug() << job->errorString();
         qDebug() << job->errorText();
     } else {
         changed(false);
-        kDebug() << "Option saved";
+        qDebug() << "Option saved";
     }
     
 }

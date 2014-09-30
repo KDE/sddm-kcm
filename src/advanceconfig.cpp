@@ -19,7 +19,7 @@
 
 #include <QIntValidator>
 
-#include <KDebug>
+#include <QDebug>
 #include <KConfigGroup>
 #include <KUser>
 
@@ -104,7 +104,7 @@ QVariantMap AdvanceConfig::save()
 {
     QVariantMap args;
 
-    kDebug() << "idx:" << configUi->cursorList->currentIndex();
+    qDebug() << "idx:" << configUi->cursorList->currentIndex();
 
     QModelIndex cursorIndex = configUi->cursorList->model()->index(configUi->cursorList->currentIndex(),0);
     if (cursorIndex.isValid()) {

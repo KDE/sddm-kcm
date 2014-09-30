@@ -23,7 +23,7 @@
 #include <QTextDocument>
 #include <QTime>
 
-#include <KDebug>
+#include <QDebug>
 #include <KGlobalSettings>
 #include <KLocalizedString>
 
