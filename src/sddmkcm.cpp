@@ -19,8 +19,10 @@
 #include <QHBoxLayout>
 
 #include <KPluginFactory>
-#include <KAuth/Action>
-#include <KAuth/ActionReply>
+
+#include <KAuth/KAuthActionReply>
+#include <KAuth/KAuthActionReply>
+
 #include <K4AboutData>
 #include <KTabWidget>
 #include <KLocalizedString>
