@@ -23,7 +23,8 @@
 #include <KAuth/KAuthActionReply>
 #include <KAuth/KAuthActionReply>
 
-#include <K4AboutData>
+#include <KAboutData>
+
 #include <KTabWidget>
 #include <KLocalizedString>
 #include <QDebug>
@@ -43,16 +44,17 @@ K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm", "kcm_sddm"))
 SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     KCModule(parent, args)
 {
-    K4AboutData* aboutData = new K4AboutData("kcmsddm", 0, ki18n("SDDM KDE Config"), "0");
+    KAboutData* aboutData = new KAboutData("kcmsddm", i18n("SDDM KDE Config"), "0.1");
 
     aboutData->setVersion(0);
 
-    aboutData->setShortDescription(ki18n("Login screen using the SDDM"));
-    aboutData->setLicense(K4AboutData::License_GPL);
-    aboutData->setCopyrightStatement(ki18n("(c) 2013 Reza Fatahilah Shah"));
+    aboutData->setShortDescription(i18n("Login screen using the SDDM"));
+    aboutData->setLicense(KAboutLicense::GPL_V2);
     //aboutData->setHomepage("https://github.com/sddm/sddm");
 
-    aboutData->addAuthor(ki18n("Reza Fatahilah Shah"), ki18n("Author"), "rshah0385@kireihana.com");
+    aboutData->addAuthor("Reza Fatahilah Shah", i18n("Author"), "rshah0385@kireihana.com");
+    aboutData->addAuthor("David Edmundson", i18n("Author"), "davidedmundson@kde.org");
+;
     
     //FIXME
 //     setAboutData(aboutData);
