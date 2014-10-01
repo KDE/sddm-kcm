@@ -8,6 +8,8 @@ include(KDECMakeSettings)
 include(KDECompilerSettings)
 include(FeatureSummary)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmsddm\")
+
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Designer X11Extras Quick QuickWidgets)
 
 find_package(KF5 REQUIRED COMPONENTS
