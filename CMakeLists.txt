@@ -36,7 +36,7 @@ find_package(XCB
 )
 
 
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmsddm\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_sddm\")
 
 install(FILES kcm_sddm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 
