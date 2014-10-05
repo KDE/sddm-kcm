@@ -1,10 +1,31 @@
 [Domain]
 Name=SDDM
+Name[es]=SDDM
+Name[nl]=SDDM
+Name[pl]=SDDM
+Name[pt_BR]=SDDM
+Name[sv]=SDDM
+Name[uk]=SDDM
+Name[x-test]=xxSDDMxx
 Icon=kauth-example
 URL=https://github.com/sddm/sddm
 
 [org.kde.kcontrol.kcmsddm.save]
 Name=Save Settings
+Name[es]=Guardar preferencias
+Name[nl]=Instellingen opslaan
+Name[pl]=Zapisz ustawienia
+Name[pt_BR]=Salvar configurações
+Name[sv]=Spara inställningar
+Name[uk]=Зберегти параметри
+Name[x-test]=xxSave Settingsxx
 Description=Save Settings in SDDM
+Description[es]=Guardar preferencias en SDDM
+Description[nl]=Instellingen opslaan in SDDM
+Description[pl]=Zapisz ustawienia w SDDM
+Description[pt_BR]=Salvar configurações no SDDM
+Description[sv]=Spara inställningar i SDDM
+Description[uk]=Зберегти параметри у SDDM
+Description[x-test]=xxSave Settings in SDDMxx
 Policy=auth_admin
 Persistence=session
