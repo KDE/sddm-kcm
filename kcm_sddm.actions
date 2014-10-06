@@ -1,8 +1,11 @@
 [Domain]
 Name=SDDM
+Name[de]=SDDM
+Name[en_GB]=SDDM
 Name[es]=SDDM
 Name[nl]=SDDM
 Name[pl]=SDDM
+Name[pt]=SDDM
 Name[pt_BR]=SDDM
 Name[sv]=SDDM
 Name[uk]=SDDM
@@ -12,17 +15,23 @@ URL=https://github.com/sddm/sddm
 
 [org.kde.kcontrol.kcmsddm.save]
 Name=Save Settings
+Name[de]=Einstellungen speichern
+Name[en_GB]=Save Settings
 Name[es]=Guardar preferencias
 Name[nl]=Instellingen opslaan
 Name[pl]=Zapisz ustawienia
+Name[pt]=Gravar a Configuração
 Name[pt_BR]=Salvar configurações
 Name[sv]=Spara inställningar
 Name[uk]=Зберегти параметри
 Name[x-test]=xxSave Settingsxx
 Description=Save Settings in SDDM
+Description[de]=Einstellungen in SDDM speichern
+Description[en_GB]=Save Settings in SDDM
 Description[es]=Guardar preferencias en SDDM
 Description[nl]=Instellingen opslaan in SDDM
 Description[pl]=Zapisz ustawienia w SDDM
+Description[pt]=Gravar a Configuração no SDDM
 Description[pt_BR]=Salvar configurações no SDDM
 Description[sv]=Spara inställningar i SDDM
 Description[uk]=Зберегти параметри у SDDM
