@@ -9,6 +9,7 @@ X-KDE-Library=kcm_sddm
 X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=session
 X-KDE-Keywords=sddm,display manager,theme
+X-KDE-Keywords[cs]=sddm,správce obrazovky,motiv
 X-KDE-Keywords[de]=SDDM,Display-manager,Design
 X-KDE-Keywords[en_GB]=sddm,display manager,theme
 X-KDE-Keywords[es]=sddm,gestor de pantallas,tema
@@ -21,6 +22,7 @@ X-KDE-Keywords[uk]=sddm,display manager,theme,керування входом,с
 X-KDE-Keywords[x-test]=xxsddm,display manager,themexx
 
 Name=Login Screen (SDDM)
+Name[cs]=Přihlašovací obrazovka (SDDM)
 Name[de]=Anmeldebildschirm (SDDM)
 Name[en_GB]=Login Screen (SDDM)
 Name[es]=Pantalla de inicio de sesión (SDDM)
@@ -33,6 +35,7 @@ Name[uk]=Вікно входу (SDDM)
 Name[x-test]=xxLogin Screen (SDDM)xx
 
 Comment=Select login theme
+Comment[cs]=Vyberte přihlašovací motiv
 Comment[de]=Anmelde-Design auswählen
 Comment[en_GB]=Select login theme
 Comment[es]=Seleccionar el tema de inicio de sesión
