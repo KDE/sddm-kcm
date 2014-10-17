@@ -110,17 +110,18 @@ QVariantMap AdvanceConfig::save()
     if (cursorIndex.isValid()) {
         const CursorTheme *cursorTheme = proxyCursorModel->theme(cursorIndex);
         if (cursorTheme)
-            args["sddm.conf/General/CursorTheme"] = cursorTheme->name();
+            args["sddm.conf/Theme/CursorTheme"] = cursorTheme->name();
     }
 
-    args["sddm.conf/General/AutoUser"] = ( configUi->autoLogin->isChecked() ) ? configUi->userList->currentText() : "";
-    args["sddm.conf/General/AutoRelogin"] = configUi->reloginAfterQuit->isChecked();
+    args["sddm.conf/Autologin/User"] = ( configUi->autoLogin->isChecked() ) ? configUi->userList->currentText() : "";
+    args["sddm.conf/Autologin/Relogin"] = configUi->reloginAfterQuit->isChecked();
+    //TODO session
 
     int minUid = configUi->minimumUid->text().toInt();
     int maxUid = configUi->maximumUid->text().toInt();
     if (isUidRangeValid(minUid, maxUid)) {
-        args["sddm.conf/General/MinimumUid"] = configUi->minimumUid->text();
-        args["sddm.conf/General/MaximumUid"] = configUi->maximumUid->text();    
+        args["sddm.conf/Users/MinimumUid"] = configUi->minimumUid->text();
+        args["sddm.conf/Users/MaximumUid"] = configUi->maximumUid->text();
     }
 
     args["sddm.conf/General/HaltCommand"] = configUi->haltCommand->url().path();
