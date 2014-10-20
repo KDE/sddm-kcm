@@ -90,7 +90,7 @@ void ThemeConfig::prepareInitialTheme()
     //configUi->quickWidget->setResizeMode( QDeclarativeView::SizeRootObjectToView );
     //configUi->quickWidget->setSource(mainQmlPath);
     
-    QString initialTheme = mConfig->group("General").readEntry("CurrentTheme");
+    QString initialTheme = mConfig->group("Theme").readEntry("Current");
     
     QModelIndex index = findThemeIndex(initialTheme);
     if (!index.isValid()) {
