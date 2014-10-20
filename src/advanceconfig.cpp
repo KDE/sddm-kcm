@@ -75,17 +75,17 @@ void AdvanceConfig::load()
 
     //User list
     int minUid, maxUid;
-    minUid = mConfig->group("General").readEntry("MinimumUid", MIN_UID);
-    maxUid = mConfig->group("General").readEntry("MaximumUid", MAX_UID);
+    minUid = mConfig->group("Users").readEntry("MinimumUid", MIN_UID);
+    maxUid = mConfig->group("Users").readEntry("MaximumUid", MAX_UID);
     
     userModel = new UsersModel(this);
     configUi->userList->setModel(userModel);
     userModel->populate( minUid, maxUid );
 
-    QString currentUser = mConfig->group("General").readEntry("AutoUser", "");
+    QString currentUser = mConfig->group("Autologin").readEntry("User", "");
     configUi->userList->setCurrentIndex(userModel->indexOf(currentUser));
     configUi->autoLogin->setChecked(!currentUser.isEmpty());
-    configUi->reloginAfterQuit->setChecked(mConfig->group("General").readEntry("AutoRelogin", false));
+    configUi->reloginAfterQuit->setChecked(mConfig->group("Autologin").readEntry("Relogin", false));
     
     QValidator *uidValidator = new QIntValidator(MIN_UID, MAX_UID, configUi->minimumUid);
     configUi->minimumUid->setValidator(uidValidator);
