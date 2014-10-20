@@ -54,11 +54,8 @@ SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
 
     aboutData->addAuthor("Reza Fatahilah Shah", i18n("Author"), "rshah0385@kireihana.com");
     aboutData->addAuthor("David Edmundson", i18n("Author"), "davidedmundson@kde.org");
-;
     
-    //FIXME
-//     setAboutData(aboutData);
-    
+    setAboutData(aboutData);
     setNeedsAuthorization(true);
     
     prepareUi();
