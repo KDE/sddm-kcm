@@ -69,7 +69,7 @@ QVariantMap ThemeConfig::save()
     
     QVariantMap args;
     
-    args["sddm.conf/Theme/CurrentTheme"] = index.data(ThemesModel::IdRole);
+    args["sddm.conf/Theme/Current"] = index.data(ThemesModel::IdRole);
     
     if (!mThemeConfigPath.isEmpty()) {
         args["theme.conf.user/General/background"] = mBackgroundPath;
