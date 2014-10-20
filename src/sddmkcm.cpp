@@ -79,7 +79,7 @@ void SddmKcm::save()
     args.unite(mThemeConfig->save());
     args.unite(mAdvanceConfig->save());
 
-    KAuth::Action saveAction("org.kde.kcontrol.kcmsddm.save");
+    KAuth::Action saveAction = authAction();
 
     saveAction.setHelperId("org.kde.kcontrol.kcmsddm");
     saveAction.setArguments(args);
