@@ -24,6 +24,7 @@
 #include <KUser>
 
 #include "usersmodel.h"
+#include "sessionmodel.h"
 #include "config.h"
 #include "cursortheme/thememodel.h"
 #include "cursortheme/sortproxymodel.h"
@@ -43,6 +44,7 @@ AdvanceConfig::AdvanceConfig(QWidget *parent) :
     load();
 
     connect(configUi->userList, SIGNAL(activated(int)), SIGNAL(changed()));
+    connect(configUi->sessionList, SIGNAL(activated(int)), SIGNAL(changed()));
     connect(configUi->haltCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->rebootCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->cursorList, SIGNAL(activated(int)), SIGNAL(changed()));
@@ -82,8 +84,15 @@ void AdvanceConfig::load()
     configUi->userList->setModel(userModel);
     userModel->populate( minUid, maxUid );
 
-    QString currentUser = mConfig->group("Autologin").readEntry("User", "");
+    sessionModel = new SessionModel(this);
+    configUi->sessionList->setModel(sessionModel);
+
+    const QString currentUser = mConfig->group("Autologin").readEntry("User", "");
     configUi->userList->setCurrentIndex(userModel->indexOf(currentUser));
+
+    const QString autologinSession = mConfig->group("Autologin").readEntry("Session", "");
+    configUi->sessionList->setCurrentIndex(sessionModel->indexOf(autologinSession));
+
     configUi->autoLogin->setChecked(!currentUser.isEmpty());
     configUi->reloginAfterQuit->setChecked(mConfig->group("Autologin").readEntry("Relogin", false));
     
@@ -114,6 +123,8 @@ QVariantMap AdvanceConfig::save()
     }
 
     args["sddm.conf/Autologin/User"] = ( configUi->autoLogin->isChecked() ) ? configUi->userList->currentText() : "";
+    args["sddm.conf/Autologin/Session"] = ( configUi->autoLogin->isChecked() ) ? configUi->sessionList->currentData() : "";
+
     args["sddm.conf/Autologin/Relogin"] = configUi->reloginAfterQuit->isChecked();
     //TODO session
 

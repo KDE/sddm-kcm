@@ -13,6 +13,7 @@ set(SDDM_KCM_SRCS
     themesdelegate.cpp
     advanceconfig.cpp
     usersmodel.cpp
+    sessionmodel.cpp
     cursortheme/thememodel.cpp
     cursortheme/xcursortheme.cpp
     cursortheme/cursortheme.cpp
