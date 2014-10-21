@@ -18,6 +18,7 @@
 #include "sddmauthhelper.h"
 
 #include <QFile>
+#include <QSharedPointer>
 
 #include <KConfig>
 #include <KConfigGroup>

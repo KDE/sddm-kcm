@@ -18,6 +18,7 @@
 #include "thememetadata.h"
 
 #include <QSharedData>
+#include <QSharedPointer>
 
 #include <KDesktopFile>
 #include <KConfigGroup>
