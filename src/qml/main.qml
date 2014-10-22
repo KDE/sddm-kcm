@@ -22,6 +22,16 @@ Rectangle {
     width: 450
     height:450
 
+    property string themeName: ""
+    property string previewPath: ""
+    property string authorName: ""
+    property string description: ""
+    property string license: ""
+    property string email: ""
+    property string website: ""
+    property string copyright: ""
+    property string version: ""
+
     Image {
         id: previewImage
         clip: true
@@ -127,7 +137,6 @@ Rectangle {
 
         Text {
             text: version
-            font.pointSize: 9
             anchors {
                 left: parent.left
                 right: parent.right
@@ -136,7 +145,6 @@ Rectangle {
 
         Text {
             text: description
-            font.pointSize: 9
             wrapMode: Text.WordWrap
             anchors {
                 left: parent.left
@@ -146,7 +154,6 @@ Rectangle {
 
         Text {
             text: email
-            font.pointSize: 9
             anchors {
                 left: parent.left
                 right: parent.right
@@ -155,17 +162,10 @@ Rectangle {
 
         Text {
             text: website
-            font.pointSize: 9
             anchors {
                 left: parent.left
                 right: parent.right
             }
         }
-
-
     }
-
-
-
-
 }

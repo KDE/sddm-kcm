@@ -21,6 +21,7 @@
 
 #include <QFile>
 #include <QQuickView>
+#include <QQuickItem>
 #include <QQmlContext>
 #include <QDebug>
 #include <KMessageBox>
@@ -118,15 +119,15 @@ void ThemeConfig::themeSelected(const QModelIndex &index)
     QString themePath = index.model()->data(index, ThemesModel::PathRole).toString();
     QString previewFilename = themePath + index.model()->data(index, ThemesModel::PreviewRole).toString();
 
-    configUi->quickWidget->rootContext()->setContextProperty("themeName", index.data().toString());
-    configUi->quickWidget->rootContext()->setContextProperty("previewPath", previewFilename);
-    configUi->quickWidget->rootContext()->setContextProperty("authorName", index.data(ThemesModel::AuthorRole).toString());
-    configUi->quickWidget->rootContext()->setContextProperty("description", index.data(ThemesModel::DescriptionRole).toString());
-    configUi->quickWidget->rootContext()->setContextProperty("license", index.data(ThemesModel::LicenseRole).toString());
-    configUi->quickWidget->rootContext()->setContextProperty("email", index.data(ThemesModel::EmailRole).toString());
-    configUi->quickWidget->rootContext()->setContextProperty("website", index.data(ThemesModel::WebsiteRole).toString());
-    configUi->quickWidget->rootContext()->setContextProperty("copyright", index.data(ThemesModel::CopyrightRole).toString());
-    configUi->quickWidget->rootContext()->setContextProperty("version", index.data(ThemesModel::VersionRole).toString());
+    configUi->quickWidget->rootObject()->setProperty("themeName", index.data().toString());
+    configUi->quickWidget->rootObject()->setProperty("previewPath", previewFilename);
+    configUi->quickWidget->rootObject()->setProperty("authorName", index.data(ThemesModel::AuthorRole).toString());
+    configUi->quickWidget->rootObject()->setProperty("description", index.data(ThemesModel::DescriptionRole).toString());
+    configUi->quickWidget->rootObject()->setProperty("license", index.data(ThemesModel::LicenseRole).toString());
+    configUi->quickWidget->rootObject()->setProperty("email", index.data(ThemesModel::EmailRole).toString());
+    configUi->quickWidget->rootObject()->setProperty("website", index.data(ThemesModel::WebsiteRole).toString());
+    configUi->quickWidget->rootObject()->setProperty("copyright", index.data(ThemesModel::CopyrightRole).toString());
+    configUi->quickWidget->rootObject()->setProperty("version", index.data(ThemesModel::VersionRole).toString());
 
     //Check if we need to display configuration group
     QString configPath = themePath + index.data(ThemesModel::ConfigFileRole).toString();
