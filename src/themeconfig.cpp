@@ -83,14 +83,9 @@ QString ThemeConfig::themeConfigPath() const
 
 void ThemeConfig::prepareInitialTheme()
 {
-    //const QString mainQmlPath = KStandardDirs::locate("data", "sddm-kcm/main.qml");
-    //configUi->quickWidget->setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
-    //configUi->quickWidget->setResizeMode( QDeclarativeView::SizeRootObjectToView );
-    //configUi->quickWidget->setSource(mainQmlPath);
+    const QString initialTheme = mConfig->group("Theme").readEntry("Current");
     
-    QString initialTheme = mConfig->group("Theme").readEntry("Current");
-    
-    QModelIndex index = findThemeIndex(initialTheme);
+    const QModelIndex index = findThemeIndex(initialTheme);
     if (!index.isValid()) {
         //KMessageBox::error(this, i18n("Could not find any themes. \nPlease install SDDM themes."), i18n("No SDDM themes"));
         return;
