@@ -91,8 +91,6 @@ void ThemesModel::populate()
         themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm", QStandardPaths::LocateDirectory) + "/themes";
     }
 
-    qDebug() << themesBaseDir;
-
     QDir dir(themesBaseDir);
 
     if (!dir.exists()) {
@@ -103,7 +101,6 @@ void ThemesModel::populate()
         QString path = themesBaseDir + '/' + theme;
 
         if (QFile::exists(path + "/metadata.desktop" )) {
-            dump(theme, path);
             add(theme, path);
         }
     }
