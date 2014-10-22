@@ -51,8 +51,6 @@ ThemeConfig::ThemeConfig(QWidget *parent) :
     connect(configUi->selectBackgroundButton, SIGNAL(imagePathChanged(QString)), SLOT(backgroundChanged(QString)));
 
     prepareInitialTheme();
-
-    dump();
 }
 
 ThemeConfig::~ThemeConfig()
@@ -166,7 +164,7 @@ void ThemeConfig::prepareConfigurationUi(const QString &configPath)
 void ThemeConfig::dump()
 {
     //dump sddm conf
-     KConfigGroup config = mConfig->group("General");
-     
-     qDebug() << "Current theme:" << config.readEntry("CurrentTheme");
+    KConfigGroup config = mConfig->group("General");
+
+    qDebug() << "Current theme:" << config.readEntry("CurrentTheme");
 }
