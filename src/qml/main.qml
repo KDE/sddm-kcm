@@ -21,12 +21,6 @@ Rectangle {
     color: "#b7bdc0"
     width: 450
     height:450
-    /*anchors {
-        fill: parent
-    }*/
-
-    /*border.width: 3
-    border.color: "#aaff00ff"*/
 
     Image {
         id: previewImage
@@ -35,7 +29,6 @@ Rectangle {
         width: 350
         height: 200
         source: previewPath
-        //source: "../../sddm-themes/elarun/screenshot.png"
         anchors {
             top: parent.top
             topMargin: 10
