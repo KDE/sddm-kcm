@@ -35,7 +35,6 @@
 
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <kdemacros.h>
 #include <kauthexecutejob.h>
 
 K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
