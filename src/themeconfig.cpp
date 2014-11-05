@@ -24,8 +24,9 @@
 #include <QQuickItem>
 #include <QQmlContext>
 #include <QDebug>
+#include <QStandardPaths>
+
 #include <KMessageBox>
-#include <KStandardDirs>
 #include <KConfigGroup>
 
 #include "config.h"
@@ -112,7 +113,7 @@ QModelIndex ThemeConfig::findThemeIndex(const QString &id) const
 void ThemeConfig::themeSelected(const QModelIndex &index)
 {
     if (!configUi->quickWidget->source().isValid()) {
-        const QString mainQmlPath = KStandardDirs::locate("data", "sddm-kcm/main.qml");
+        const QString mainQmlPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, "sddm-kcm/main.qml");
         configUi->quickWidget->setSource(mainQmlPath);
     }
 

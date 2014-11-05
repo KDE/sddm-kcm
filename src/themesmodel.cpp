@@ -24,9 +24,8 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <QDebug>
-#include <KGlobal>
 #include <KSharedConfig>
-#include <KStandardDirs>
+#include <QStandardPaths>
 
 #include "config.h"
 #include "thememetadata.h"
