@@ -39,7 +39,8 @@
 #include <kauthexecutejob.h>
 
 K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
-K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm", "kcm_sddm"))
+K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm"))
+
 
 SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     KCModule(parent, args)
