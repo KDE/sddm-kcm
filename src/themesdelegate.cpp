@@ -22,9 +22,9 @@
 #include <QPainter>
 #include <QTextDocument>
 #include <QTime>
-
 #include <QDebug>
-#include <KGlobalSettings>
+#include <QFontDatabase>
+
 #include <KLocalizedString>
 
 #include "themesmodel.h"
@@ -100,7 +100,7 @@ void ThemesDelegate::paint(QPainter *painter,
     //Use a QTextDocument to layout the text
     QTextDocument document;
     QString html = QString("<strong>%1</strong>").arg(title);
-    const int fontSize = KGlobalSettings::smallestReadableFont().pointSize();
+    const int fontSize = QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont).pointSize();
 
     if (!author.isEmpty()) {
         QString authorCaption = i18nc("Caption to theme preview, %1 author name", "by %1", author);
@@ -155,7 +155,7 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
     const QString title = model->data(index, Qt::DisplayRole).toString();
     const QString author = model->data(index, ThemesModel::AuthorRole).toString();
     const QString website = model->data(index, ThemesModel::WebsiteRole).toString();
-    const int fontSize = KGlobalSettings::smallestReadableFont().pointSize();
+    const int fontSize = QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont).pointSize();
 
     //Generate a sample complete entry (with the real title) to calculate sizes
     QTextDocument document;
