@@ -2,7 +2,7 @@
  * Button for selecting an image.
  *
  * Copyright (C) 2011  Martin Klapetek <martin.klapetek@gmail.com>
- * Copyright (C) 2011, 2012 David Edmundson <kde@davidedmundson.co.uk>
+ * Copyright (C) 2011, 2012, 2014 David Edmundson <kde@davidedmundson.co.uk>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -23,16 +23,17 @@
 
 #include <QWidgetAction>
 
-#include <KUrl>
-#include <KFileDialog>
-#include <KMenu>
+#include <QUrl>
+#include <QFileDialog>
+#include <QMenu>
+
 #include <KLocalizedString>
 #include <KMessageBox>
 
 SelectImageButton::SelectImageButton(QWidget *parent)
     : QToolButton(parent)
 {
-    KMenu *menu = new KMenu(this);
+    QMenu *menu = new QMenu(this);
 
     setPopupMode(QToolButton::InstantPopup);
 
@@ -72,8 +73,7 @@ QString SelectImageButton::imagePath() const {
 
 void SelectImageButton::onLoadImageFromFile()
 {
-    KUrl fileUrl = KFileDialog::getImageOpenUrl(KUrl(), this,
-                                                i18n("Select image"));
+    QUrl fileUrl = QFileDialog::getOpenFileUrl(this, i18n("Select image"), QUrl(), "image/*", 0, 0, QStringList() << "file");
 
     if (!fileUrl.isEmpty()) {
         setImagePath(fileUrl.path());
