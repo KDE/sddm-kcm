@@ -17,7 +17,8 @@ find_package(KF5 REQUIRED COMPONENTS
     I18n
     XmlGui
     Auth
-    KDELibs4Support
+    ConfigWidgets
+    KIO
 )
 
 
@@ -42,7 +43,7 @@ install(FILES kcm_sddm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 
-kde4_add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
+add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
 target_link_libraries(kcmsddm_authhelper KF5::Auth KF5::ConfigCore)
 
 kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)

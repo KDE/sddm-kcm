@@ -27,16 +27,17 @@ set(SDDM_KCM_UI
     ui/advanceconfig.ui)
 
 ki18n_wrap_ui(SDDM_KCM_SRCS ${SDDM_KCM_UI})
-kde4_add_plugin(kcm_sddm ${SDDM_KCM_SRCS})
+add_library(kcm_sddm ${SDDM_KCM_SRCS})
 
 target_link_libraries(kcm_sddm
     Qt5::Widgets
     Qt5::X11Extras
     Qt5::Quick
     Qt5::QuickWidgets
-    KF5::KDELibs4Support
+    KF5::I18n
     KF5::ConfigWidgets
     KF5::Auth
+    KF5::KIOWidgets
 
     ${X11_LIBRARIES}
     XCB::XCB # For mouse cursor themes
