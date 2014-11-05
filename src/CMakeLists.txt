@@ -27,7 +27,7 @@ set(SDDM_KCM_UI
     ui/advanceconfig.ui)
 
 ki18n_wrap_ui(SDDM_KCM_SRCS ${SDDM_KCM_UI})
-add_library(kcm_sddm ${SDDM_KCM_SRCS})
+add_library(kcm_sddm MODULE ${SDDM_KCM_SRCS})
 
 target_link_libraries(kcm_sddm
     Qt5::Widgets
