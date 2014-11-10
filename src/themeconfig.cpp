@@ -113,7 +113,7 @@ QModelIndex ThemeConfig::findThemeIndex(const QString &id) const
 void ThemeConfig::themeSelected(const QModelIndex &index)
 {
     if (!configUi->quickWidget->source().isValid()) {
-        const QString mainQmlPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, "sddm-kcm/main.qml");
+        const QString mainQmlPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm-kcm/main.qml");
         configUi->quickWidget->setSource(mainQmlPath);
     }
 
