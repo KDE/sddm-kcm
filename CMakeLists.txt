@@ -37,7 +37,7 @@ find_package(XCB
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_sddm\")
 
-install(FILES kcm_sddm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES kcm_sddm.desktop DESTINATION ${CMAKE_INSTALL_KSERVICES5DIR})
 
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 

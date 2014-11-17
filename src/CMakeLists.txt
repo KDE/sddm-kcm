@@ -50,8 +50,8 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_sddm ${X11_Xfixes_LIB})
 endif (X11_Xfixes_FOUND)
 
-install(TARGETS kcm_sddm DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_sddm DESTINATION ${CMAKE_INSTALL_PLUGINDIR})
 
-install(FILES qml/main.qml DESTINATION ${DATA_INSTALL_DIR}/sddm-kcm)
+install(FILES qml/main.qml DESTINATION ${CMAKE_INSTALL_DATADIR}/sddm-kcm)
 
 
