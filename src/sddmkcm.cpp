@@ -44,7 +44,7 @@ K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm"))
 SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     KCModule(parent, args)
 {
-    KAboutData* aboutData = new KAboutData("kcmsddm", i18n("SDDM KDE Config"), "0.1");
+    KAboutData* aboutData = new KAboutData("kcmsddm", i18n("SDDM KDE Config"), PROJECT_VERSION);
 
     aboutData->setVersion(0);
 

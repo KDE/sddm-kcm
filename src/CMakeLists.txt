@@ -28,6 +28,7 @@ set(SDDM_KCM_UI
 
 ki18n_wrap_ui(SDDM_KCM_SRCS ${SDDM_KCM_UI})
 add_library(kcm_sddm MODULE ${SDDM_KCM_SRCS})
+target_compile_definitions(kcm_sddm PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
 target_link_libraries(kcm_sddm
     Qt5::Widgets
