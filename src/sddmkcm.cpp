@@ -46,11 +46,9 @@ SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
 {
     KAboutData* aboutData = new KAboutData("kcmsddm", i18n("SDDM KDE Config"), PROJECT_VERSION);
 
-    aboutData->setVersion(0);
-
     aboutData->setShortDescription(i18n("Login screen using the SDDM"));
     aboutData->setLicense(KAboutLicense::GPL_V2);
-    //aboutData->setHomepage("https://github.com/sddm/sddm");
+    aboutData->setHomepage("https://projects.kde.org/projects/kde/workspace/sddm-kcm");
 
     aboutData->addAuthor("Reza Fatahilah Shah", i18n("Author"), "rshah0385@kireihana.com");
     aboutData->addAuthor("David Edmundson", i18n("Author"), "davidedmundson@kde.org");
