@@ -9,6 +9,7 @@ X-KDE-Library=kcm_sddm
 X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=session
 X-KDE-Keywords=sddm,display manager,theme
+X-KDE-Keywords[ar]=sddm,مدير عرض,سمة
 X-KDE-Keywords[ca]=sddm,gestor de sessions,tema
 X-KDE-Keywords[cs]=sddm,správce obrazovky,motiv
 X-KDE-Keywords[de]=SDDM,Display-manager,Design
@@ -37,6 +38,7 @@ X-KDE-Keywords[x-test]=xxsddm,display manager,themexx
 X-KDE-Keywords[zh_CN]=sddm,display manager,theme，显示管理器，主题
 
 Name=Login Screen (SDDM)
+Name[ar]=مدير الولوج (SDDM)
 Name[ca]=Pantalla d'inici de sessió (SDDM)
 Name[cs]=Přihlašovací obrazovka (SDDM)
 Name[de]=Anmeldebildschirm (SDDM)
@@ -65,6 +67,7 @@ Name[x-test]=xxLogin Screen (SDDM)xx
 Name[zh_CN]=登录屏幕 (SDDM)
 
 Comment=Select login theme
+Comment[ar]=اختر سمة الولوج
 Comment[ca]=Seleccioneu el tema per a l'inici de la sessió
 Comment[cs]=Vyberte přihlašovací motiv
 Comment[de]=Anmelde-Design auswählen
