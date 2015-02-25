@@ -37,6 +37,7 @@ X-KDE-Keywords[tr]=sddm, görüntü yöneticisi, tema
 X-KDE-Keywords[uk]=sddm,display manager,theme,керування входом,сддм,тема
 X-KDE-Keywords[x-test]=xxsddmxx,xxdisplay managerxx,xxthemexx
 X-KDE-Keywords[zh_CN]=sddm,display manager,theme，显示管理器，主题
+X-KDE-Keywords[zh_TW]=sddm,display manager,theme
 
 Name=Login Screen (SDDM)
 Name[ar]=مدير الولوج (SDDM)
@@ -67,6 +68,7 @@ Name[tr]=Oturum Ekranı (SDDM)
 Name[uk]=Вікно входу (SDDM)
 Name[x-test]=xxLogin Screen (SDDM)xx
 Name[zh_CN]=登录屏幕 (SDDM)
+Name[zh_TW]=登入畫面 (SDDM)
 
 Comment=Select login theme
 Comment[ar]=اختر سمة الولوج
@@ -97,3 +99,4 @@ Comment[tr]=Oturum açma temasını seçin
 Comment[uk]=Вибрати тему вікна входу
 Comment[x-test]=xxSelect login themexx
 Comment[zh_CN]=选择登录主题
+Comment[zh_TW]=選擇登入主題
