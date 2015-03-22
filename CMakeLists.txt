@@ -50,3 +50,6 @@ kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
 install(TARGETS kcmsddm_authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
 add_subdirectory(src)
+
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
