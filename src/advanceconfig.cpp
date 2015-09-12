@@ -155,7 +155,7 @@ void AdvanceConfig::slotUidRangeChanged()
 
 bool AdvanceConfig::isUidRangeValid(int minUid, int maxUid) const
 {
-    if (minUid < MIN_UID || minUid > maxUid)
+    if (minUid < 0 || minUid > maxUid)
         return false;
     
     return true;
