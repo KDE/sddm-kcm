@@ -71,7 +71,7 @@ void AdvanceConfig::load()
     proxyCursorModel->sort(Qt::DisplayRole, Qt::AscendingOrder);
     
     configUi->cursorList->setModel(proxyCursorModel);
-    QString currentCursor = mConfig->group("General").readEntry("CursorTheme", "");
+    QString currentCursor = mConfig->group("Theme").readEntry("CursorTheme", "");
     QModelIndex cursorIndex = proxyCursorModel->findIndex(currentCursor);
     configUi->cursorList->setCurrentIndex(cursorIndex.row() < 0 ? 0 : cursorIndex.row());
 
