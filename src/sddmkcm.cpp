@@ -83,17 +83,20 @@ void SddmKcm::save()
     saveAction.setArguments(args);
     
     auto job = saveAction.execute();
-    job->exec();
-
-    if (job->error()){
-        qDebug() << "Save Failed";
-        qDebug() << job->errorString();
-        qDebug() << job->errorText();
-    } else {
-        changed(false);
-        qDebug() << "Option saved";
-    }
-    
+    // KJob synchronous exec() can be dangerous and can have unintended side 
+    // effects, you should avoid calling exec() whenever you can and use the
+    // asynchronous interface of KJob instead.
+    connect(job, &KJob::result, [this](KJob *job){
+                if (job->error()) {
+                    qDebug() << "Save Failed";
+                    qDebug() << job->errorString();
+                    qDebug() << job->errorText();
+                } else {
+                    changed(false);
+                    qDebug() << "Option saved";
+                }
+            });
+    job->start();
 }
 
 void SddmKcm::prepareUi()
