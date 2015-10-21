@@ -51,7 +51,7 @@
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QQuickWidget" name="quickWidget">
+         <widget class="QLabel" name="previewWidget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
@@ -63,9 +63,6 @@
             <width>500</width>
             <height>300</height>
            </size>
-          </property>
-          <property name="resizeMode">
-           <enum>QQuickWidget::SizeRootObjectToView</enum>
           </property>
          </widget>
         </item>
@@ -111,11 +108,6 @@
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>QQuickWidget</class>
-   <extends>QWidget</extends>
-   <header>QQuickWidget</header>
-  </customwidget>
   <customwidget>
    <class>SelectImageButton</class>
    <extends>QToolButton</extends>

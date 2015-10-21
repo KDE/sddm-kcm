@@ -112,23 +112,11 @@ QModelIndex ThemeConfig::findThemeIndex(const QString &id) const
 
 void ThemeConfig::themeSelected(const QModelIndex &index)
 {
-    if (!configUi->quickWidget->source().isValid()) {
-        const QString mainQmlPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm-kcm/main.qml");
-        configUi->quickWidget->setSource(mainQmlPath);
-    }
-
     QString themePath = index.model()->data(index, ThemesModel::PathRole).toString();
     QString previewFilename = themePath + index.model()->data(index, ThemesModel::PreviewRole).toString();
-
-    configUi->quickWidget->rootObject()->setProperty("themeName", index.data().toString());
-    configUi->quickWidget->rootObject()->setProperty("previewPath", previewFilename);
-    configUi->quickWidget->rootObject()->setProperty("authorName", index.data(ThemesModel::AuthorRole).toString());
-    configUi->quickWidget->rootObject()->setProperty("description", index.data(ThemesModel::DescriptionRole).toString());
-    configUi->quickWidget->rootObject()->setProperty("license", index.data(ThemesModel::LicenseRole).toString());
-    configUi->quickWidget->rootObject()->setProperty("email", index.data(ThemesModel::EmailRole).toString());
-    configUi->quickWidget->rootObject()->setProperty("website", index.data(ThemesModel::WebsiteRole).toString());
-    configUi->quickWidget->rootObject()->setProperty("copyright", index.data(ThemesModel::CopyrightRole).toString());
-    configUi->quickWidget->rootObject()->setProperty("version", index.data(ThemesModel::VersionRole).toString());
+    configUi->previewWidget->setPixmap(QPixmap(previewFilename));
+    configUi->previewWidget->setScaledContents(true);
+    configUi->previewWidget->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
 
     //Check if we need to display configuration group
     QString configPath = themePath + index.data(ThemesModel::ConfigFileRole).toString();
