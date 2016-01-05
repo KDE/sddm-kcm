@@ -25,7 +25,7 @@
 #include <QImage>
 #include <QDir>
 #include <QX11Info>
-
+#include <QTextStream>
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 
