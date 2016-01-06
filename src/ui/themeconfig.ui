@@ -15,7 +15,7 @@
     <widget class="QListView" name="themesListView">
      <property name="minimumSize">
       <size>
-       <width>350</width>
+       <width>175</width>
        <height>0</height>
       </size>
      </property>
@@ -60,7 +60,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>500</width>
+            <width>400</width>
             <height>300</height>
            </size>
           </property>

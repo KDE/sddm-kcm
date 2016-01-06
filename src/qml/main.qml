@@ -15,12 +15,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.1
+import QtQuick.Layouts 1.1
 
 Rectangle {
     id: root
     color: "#b7bdc0"
-    width: 450
-    height:450
+    width: 360
+    height:300
 
     property string themeName: ""
     property string previewPath: ""
@@ -34,10 +35,8 @@ Rectangle {
 
     Image {
         id: previewImage
-        clip: true
-        smooth: true
-        width: 350
-        height: 200
+        width: root.paintedWidth
+        height: 210
         source: previewPath
         anchors {
             top: parent.top
@@ -53,119 +52,50 @@ Rectangle {
         width: previewImage.paintedWidth + 2
         height: previewImage.paintedHeight + 2
         color: "transparent"
-        border.color: "#aa000000" // color of background
+        border.color: "#bb000000" // color of background
         border.width: 2
-        radius: 4
+        radius: 2
         anchors.centerIn: previewImage
     }
 
-    Rectangle {
-        id: rectangle1
-        width: 430
-        height: 80
-        anchors {
-            topMargin: -20
-            top: previewImage.bottom
-            left: root.left
-            right: root.right
-        }
-
-        color: "#bb000000"
-        border.color: "#000000"
-        Column {
-            anchors {
-                margins: 10
-                fill:parent
-            }
-
-            spacing: 4
+        GridLayout {
+            id: texttable
+            width: previewImage.paintedWidth
+                anchors {
+                    top: previewImage.bottom
+                    left: previewImage.left
+                    right: previewImage.right
+                }
+                columns: 2
 
             Text {
-                id: name
-                text: themeName
-                color: "white"
+                text: description
                 font.bold: true
                 font.pointSize: 13
-                anchors {
-                    //horizontalCenter: parent.horizontalCenter
-                    right: parent.right
-                }
+            }
+            Text {
+                text: version
+                font.bold: true
+                font.pointSize: 10
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             }
             Text {
                 text: authorName
-                color: "white"
                 font.pointSize: 10
-                anchors {
-                    //horizontalCenter: parent.horizontalCenter
-                    right: parent.right
-                }
-            }
-            Text {
-                text: copyright
-                color: "white"
-                font.bold: true
-                font.pointSize: 7
-                anchors {
-                    //horizontalCenter: parent.horizontalCenter
-                    right: parent.right
-                }
             }
             Text {
                 text: license
-                color: "white"
-                font.bold: true
                 font.pointSize: 7
-                anchors {
-                    //horizontalCenter: parent.horizontalCenter
-                    right: parent.right
-                }
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+            }
+            Text {
+                text: website
+                font.pointSize: 7
+            }
+            Text {
+                text: email
+                font.pointSize: 7
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             }
         }
-
-    }
-
-    Column {
-        anchors {
-            margins: 10
-            top: rectangle1.bottom
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-        }
-
-        spacing: 4
-
-        Text {
-            text: version
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-        }
-
-        Text {
-            text: description
-            wrapMode: Text.WordWrap
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-        }
-
-        Text {
-            text: email
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-        }
-
-        Text {
-            text: website
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-        }
-    }
 }
