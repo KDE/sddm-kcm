@@ -100,17 +100,6 @@ void ThemesDelegate::paint(QPainter *painter,
     //Use a QTextDocument to layout the text
     QTextDocument document;
     QString html = QString("<strong>%1</strong>").arg(title);
-    const int fontSize = QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont).pointSize();
-
-    if (!author.isEmpty()) {
-        QString authorCaption = i18nc("Caption to theme preview, %1 author name", "by %1", author);
-
-        html += QString("<br /><span style=\"font-size: %1pt;\">%2</span>").arg(fontSize).arg(authorCaption);
-    }
-
-    if (!website.isEmpty()) {
-        html += QString("<br /><span style=\"font-size: %1pt;\">%2</span>").arg(fontSize).arg(website);
-    }
 
     //Set the text color according to the item state
     QPalette::ColorGroup cg = QPalette::Active;
@@ -137,12 +126,12 @@ void ThemesDelegate::paint(QPainter *painter,
     document.setTextWidth(m_maxWidth);
 
     //Center text on the row
-    int y = option.rect.top() + m_maxHeight + MARGIN * 2; //qMax(0 ,(int)((option.rect.height() - document.size().height()) / 2));
+    int y = option.rect.top() + m_maxHeight + MARGIN * 1; //qMax(0 ,(int)((option.rect.height() - document.size().height()) / 2));
 
     //Draw text
     painter->save();
     painter->translate(x, y);
-    document.drawContents(painter, QRect(QPoint(0, 0), option.rect.size() - QSize(0, m_maxHeight + MARGIN * 2)));
+    document.drawContents(painter, QRect(QPoint(0, 0), option.rect.size() - QSize(0, m_maxHeight + MARGIN * 1)));
     painter->restore();
 }
 
@@ -155,22 +144,15 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
     const QString title = model->data(index, Qt::DisplayRole).toString();
     const QString author = model->data(index, ThemesModel::AuthorRole).toString();
     const QString website = model->data(index, ThemesModel::WebsiteRole).toString();
-    const int fontSize = QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont).pointSize();
 
     //Generate a sample complete entry (with the real title) to calculate sizes
     QTextDocument document;
     QString html = QString("<strong>%1</strong><br />").arg(title);
-    if (!author.isEmpty()) {
-        html += QString("<span style=\"font-size: %1pt;\">by %2</span><br />").arg(fontSize).arg(author);
-    }
-    if (!website.isEmpty()) {
-        html += QString("<span style=\"font-size: %1pt;\">%2</span><br />").arg(fontSize).arg(website);
-    }
 
     document.setHtml(html);
     document.setTextWidth(m_maxWidth);
 
     QSize s(m_maxWidth + MARGIN * 2,
-            m_maxHeight + MARGIN * 3 + (int)(document.size().height()));
+            m_maxHeight + MARGIN * 1 + (int)(document.size().height()));
     return s;
 }
