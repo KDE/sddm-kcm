@@ -126,12 +126,12 @@ void ThemesDelegate::paint(QPainter *painter,
     document.setTextWidth(m_maxWidth);
 
     //Center text on the row
-    int y = option.rect.top() + m_maxHeight + MARGIN * 1; //qMax(0 ,(int)((option.rect.height() - document.size().height()) / 2));
+    int y = option.rect.top() + m_maxHeight + MARGIN; //qMax(0 ,(int)((option.rect.height() - document.size().height()) / 2));
 
     //Draw text
     painter->save();
     painter->translate(x, y);
-    document.drawContents(painter, QRect(QPoint(0, 0), option.rect.size() - QSize(0, m_maxHeight + MARGIN * 1)));
+    document.drawContents(painter, QRect(QPoint(0, 0), option.rect.size() - QSize(0, m_maxHeight + MARGIN)));
     painter->restore();
 }
 
@@ -153,6 +153,6 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
     document.setTextWidth(m_maxWidth);
 
     QSize s(m_maxWidth + MARGIN * 2,
-            m_maxHeight + MARGIN * 1 + (int)(document.size().height()));
+            m_maxHeight + MARGIN + (int)(document.size().height()));
     return s;
 }
