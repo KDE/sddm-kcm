@@ -38,6 +38,7 @@ find_package(XCB
 
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_sddm\")
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 install(FILES kcm_sddm.desktop DESTINATION ${CMAKE_INSTALL_KSERVICES5DIR})
 

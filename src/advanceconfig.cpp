@@ -105,8 +105,8 @@ void AdvanceConfig::load()
     
 
     //Commands
-    configUi->haltCommand->setUrl(mConfig->group("General").readEntry("HaltCommand"));
-    configUi->rebootCommand->setUrl(mConfig->group("General").readEntry("RebootCommand"));
+    configUi->haltCommand->setUrl(QUrl::fromLocalFile(mConfig->group("General").readEntry("HaltCommand")));
+    configUi->rebootCommand->setUrl(QUrl::fromLocalFile(mConfig->group("General").readEntry("RebootCommand")));
 }
 
 QVariantMap AdvanceConfig::save()
@@ -135,8 +135,8 @@ QVariantMap AdvanceConfig::save()
         args["sddm.conf/Users/MaximumUid"] = configUi->maximumUid->text();
     }
 
-    args["sddm.conf/General/HaltCommand"] = configUi->haltCommand->url().path();
-    args["sddm.conf/General/RebootCommand"] = configUi->rebootCommand->url().path();
+    args["sddm.conf/General/HaltCommand"] = configUi->haltCommand->url().toLocalFile();
+    args["sddm.conf/General/RebootCommand"] = configUi->rebootCommand->url().toLocalFile();
 
     return args;
 }
