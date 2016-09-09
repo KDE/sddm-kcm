@@ -84,10 +84,10 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
 
 void ThemesModel::populate()
 {
-    QString themesBaseDir = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::SimpleConfig)->group("General").readEntry("ThemesDir");
+    QString themesBaseDir = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::SimpleConfig)->group("Theme").readEntry("ThemeDir");
 
     if (themesBaseDir.isEmpty()) {
-        themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm", QStandardPaths::LocateDirectory) + "/themes";
+        themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm/themes", QStandardPaths::LocateDirectory);
     }
 
     QDir dir(themesBaseDir);
