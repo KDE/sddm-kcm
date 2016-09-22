@@ -18,7 +18,10 @@
 #include "sddmauthhelper.h"
 
 #include <QFile>
+#include <QFileInfo>
+#include <QDir>
 #include <QSharedPointer>
+#include <QDebug>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -64,7 +67,36 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
         if (fileName == "sddm.conf") {
             sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
         } else if (fileName == "theme.conf.user" && !themeConfig.isNull()) {
-            themeConfig->group(groupName).writeEntry(keyName, iterator.value());
+            QFileInfo themeConfigFileInfo(themeConfigFile);
+            QDir configRootDirectory = themeConfigFileInfo.absoluteDir();
+
+            if (keyName == "background") {
+                QFileInfo newBackgroundFileInfo(iterator.value().toString());
+                QString previousBackground = themeConfig->group(groupName).readEntry(keyName);
+
+                bool backgroundChanged = newBackgroundFileInfo.fileName() != previousBackground;
+                if (backgroundChanged) {
+                    if (!previousBackground.isEmpty()) {
+                        QString previousBackgroundPath = configRootDirectory.filePath(previousBackground);
+                        if (QFile::remove(previousBackgroundPath)) {
+                            qDebug() << "Removed previous background " << previousBackgroundPath;
+                        }
+                    }
+
+                    if (newBackgroundFileInfo.exists()) {
+                        QString newBackgroundPath = configRootDirectory.filePath(newBackgroundFileInfo.fileName());
+                        qDebug() << "Copying background from "  << newBackgroundFileInfo.absoluteFilePath() << " to " << newBackgroundPath;
+                        if (QFile::copy(newBackgroundFileInfo.absoluteFilePath(), newBackgroundPath)) {
+                            QFile::setPermissions(newBackgroundPath, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadGroup | QFile::ReadOther);
+                            themeConfig->group(groupName).writeEntry(keyName, newBackgroundFileInfo.fileName());
+                        }
+                    } else {
+                        themeConfig->group(groupName).deleteEntry(keyName);
+                    }
+                }
+            } else {
+                themeConfig->group(groupName).writeEntry(keyName, iterator.value());
+            }
         }
     }
 
