@@ -117,8 +117,8 @@ void ThemeConfig::themeSelected(const QModelIndex &index)
         configUi->quickWidget->setSource(QUrl::fromLocalFile(mainQmlPath));
     }
 
-    QString themePath = index.model()->data(index, ThemesModel::PathRole).toString();
-    QString previewFilename = themePath + index.model()->data(index, ThemesModel::PreviewRole).toString();
+    QString themePath = index.data(ThemesModel::PathRole).toString();
+    QString previewFilename = themePath + index.data(ThemesModel::PreviewRole).toString();
 
     configUi->quickWidget->rootObject()->setProperty("themeName", index.data().toString());
     configUi->quickWidget->rootObject()->setProperty("previewPath", previewFilename);
