@@ -8,6 +8,7 @@ X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_sddm
 X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=session
+X-KDE-Weight=10
 X-KDE-Keywords=sddm,display manager,theme
 X-KDE-Keywords[ar]=sddm,مدير عرض,سمة
 X-KDE-Keywords[ast]=sddm,pantalla,xestor,tema
