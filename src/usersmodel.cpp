@@ -38,7 +38,11 @@ int UsersModel::rowCount(const QModelIndex &parent) const
 
 QVariant UsersModel::data(const QModelIndex &index, int role) const
 {
-    const KUser user = mUserList[index.row()];
+    auto row = index.row();
+    if (row < 0 || row >= mUserList.count()) {
+        return QVariant();
+    }
+    const KUser &user = mUserList[row];
 
     switch(role) {
         case Qt::DisplayRole:
