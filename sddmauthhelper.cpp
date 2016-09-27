@@ -58,7 +58,10 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
             continue;
 
         QStringList configFields = iterator.key().split('/');
-        
+        if (configFields.size() != 3) {
+            continue;
+        }
+
         QSharedPointer<KConfig> config;
         QString fileName = configFields[0];
         QString groupName = configFields[1];

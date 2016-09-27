@@ -38,7 +38,11 @@ int UsersModel::rowCount(const QModelIndex &parent) const
 
 QVariant UsersModel::data(const QModelIndex &index, int role) const
 {
-    const KUser user = mUserList[index.row()];
+    auto row = index.row();
+    if (row < 0 || row >= mUserList.count()) {
+        return QVariant();
+    }
+    const KUser &user = mUserList[row];
 
     switch(role) {
         case Qt::DisplayRole:
@@ -59,13 +63,13 @@ void UsersModel::add(const KUser &user)
 
 void UsersModel::populate(const uint minimumUid, const uint maximumUid) {
     mUserList.clear();
-    
+
     QList< KUser > userList = KUser::allUsers();
 
     KUser user;
-    
+
     foreach( user, userList ) {
-        K_UID uuid = user.uid();
+        K_UID uuid = user.userId().nativeId();
 
         // invalid user
         if (uuid == (uid_t) -1) {
