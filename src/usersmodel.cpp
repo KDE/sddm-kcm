@@ -63,13 +63,13 @@ void UsersModel::add(const KUser &user)
 
 void UsersModel::populate(const uint minimumUid, const uint maximumUid) {
     mUserList.clear();
-    
+
     QList< KUser > userList = KUser::allUsers();
 
     KUser user;
-    
+
     foreach( user, userList ) {
-        K_UID uuid = user.uid();
+        K_UID uuid = user.userId().nativeId();
 
         // invalid user
         if (uuid == (uid_t) -1) {
