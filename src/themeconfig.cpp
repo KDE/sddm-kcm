@@ -86,11 +86,11 @@ QString ThemeConfig::themeConfigPath() const
 void ThemeConfig::prepareInitialTheme()
 {
     const QString initialTheme = mConfig->group("Theme").readEntry("Current");
-    
-    const QModelIndex index = findThemeIndex(initialTheme);
-    if (!index.isValid()) {
-        //KMessageBox::error(this, i18n("Could not find any themes. \nPlease install SDDM themes."), i18n("No SDDM themes"));
-        return;
+
+    QModelIndex index = findThemeIndex(initialTheme);
+    if (!index.isValid() && configUi->themesListView->model()->rowCount() > 0) {
+        //if we can't find the currently configured theme from the config, just select the first theme in the UI
+        index = configUi->themesListView->model()->index(0,0);
     }
     configUi->themesListView->setCurrentIndex(index);
     themeSelected(index);
