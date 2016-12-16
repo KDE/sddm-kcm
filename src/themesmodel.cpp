@@ -84,6 +84,12 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
 
 void ThemesModel::populate()
 {
+    if (!mThemeList.isEmpty()) {
+        beginResetModel();
+        mThemeList.clear();
+        endResetModel();
+    }
+
     QString themesBaseDir = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::SimpleConfig)->group("Theme").readEntry("ThemeDir");
 
     if (themesBaseDir.isEmpty()) {

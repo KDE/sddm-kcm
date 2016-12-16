@@ -22,7 +22,6 @@
 #include <KPluginFactory>
 
 #include <KAuth/KAuthActionReply>
-#include <KAuth/KAuthActionReply>
 
 #include <KAboutData>
 

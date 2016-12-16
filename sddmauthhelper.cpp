@@ -22,7 +22,13 @@
 #include <QDir>
 #include <QSharedPointer>
 #include <QDebug>
+#include <QMimeType>
+#include <QMimeDatabase>
 
+#include <KLocalizedString>
+#include <KZip>
+#include <KTar>
+#include <KArchive>
 #include <KConfig>
 #include <KConfigGroup>
 
@@ -111,6 +117,115 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
     return ActionReply::SuccessReply();
 }
 
+ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
+{
+    const QString filePath = args["filePath"].toString();
+    if (filePath.isEmpty()) {
+        return ActionReply::HelperErrorReply();
+    }
+
+    const QString themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm/themes", QStandardPaths::LocateDirectory);
+    QDir dir(themesBaseDir);
+    if (!dir.exists()) {
+        return ActionReply::HelperErrorReply();
+    }
+
+    qDebug() << "Installing " << filePath << " into " << themesBaseDir;
+
+    if (!QFile::exists(filePath)) {
+        return ActionReply::HelperErrorReply();
+    }
+
+    QMimeDatabase db;
+    QMimeType mimeType = db.mimeTypeForFile(filePath);
+    qWarning() << "Postinstallation: uncompress the file";
+
+    QScopedPointer<KArchive> archive;
+
+    //there must be a better way to do this? If not, make a static bool KZip::supportsMimeType(const QMimeType &type); ?
+    //or even a factory class in KArchive
+
+    if (mimeType.inherits(QStringLiteral("application/zip"))) {
+        archive.reset(new KZip(filePath));
+    } else if (mimeType.inherits(QStringLiteral("application/tar"))
+                || mimeType.inherits(QStringLiteral("application/x-gzip"))
+                || mimeType.inherits(QStringLiteral("application/x-bzip"))
+                || mimeType.inherits(QStringLiteral("application/x-lzma"))
+                || mimeType.inherits(QStringLiteral("application/x-xz"))
+                || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
+                || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
+        archive.reset(new KTar(filePath));
+    } else {
+        auto e = ActionReply::HelperErrorReply();
+        e.setErrorDescription(i18n("Invalid theme package"));
+        return e;    }
+
+    if (!archive->open(QIODevice::ReadOnly)) {
+        auto e = ActionReply::HelperErrorReply();
+        e.setErrorDescription("Could not open file");
+        return e;
+    }
+
+    auto directory = archive->directory();
+
+    QStringList installedPaths;
+
+    //some basic validation
+    //the top level should only have folders, and those folders should contain a valid metadata.desktop file
+    //if we get anything else, abort everything before copying
+    for(const QString &name: directory->entries()) {
+        auto entry = directory->entry(name);
+        if (!entry->isDirectory()) {
+            auto e = ActionReply::HelperErrorReply();
+            e.setErrorDescription(i18n("Invalid theme package"));
+            return e;
+        }
+        auto subDirectory = static_cast<const KArchiveDirectory*>(entry);
+        auto metadataFile = subDirectory->file("metadata.desktop");
+        if(!metadataFile || !metadataFile->data().contains("[SddmGreeterTheme]")) {
+            auto e = ActionReply::HelperErrorReply();
+            e.setErrorDescription(i18n("Invalid theme package"));
+            return e;
+        }
+        installedPaths.append(themesBaseDir + '/' + name);
+    }
+
+    if (!directory->copyTo(themesBaseDir)) {
+        auto e = ActionReply::HelperErrorReply();
+        e.setErrorDescription(i18n("Could not decompress archive"));
+        return e;
+    }
+
+    auto rc = ActionReply::SuccessReply();
+    rc.addData(QStringLiteral("installedPaths"), installedPaths);
+    return rc;
+}
+
+ActionReply SddmAuthHelper::uninstalltheme(const QVariantMap &args)
+{
+    const QString themePath = args["filePath"].toString();
+    const QString themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm/themes", QStandardPaths::LocateDirectory);
+
+    QDir dir(themePath);
+    if (!dir.exists()) {
+        return ActionReply::HelperErrorReply();
+    }
+
+    //validate the themePath is directly inside the themesBaseDir
+    QDir baseDir(themesBaseDir);
+    if(baseDir.absoluteFilePath(dir.dirName()) != dir.absolutePath()) {
+        return ActionReply::HelperErrorReply();
+    }
+
+    if (!dir.removeRecursively()) {
+        return ActionReply::HelperErrorReply();
+    }
+
+    return ActionReply::SuccessReply();
+}
+
+
 KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmsddm", SddmAuthHelper);
 
 #include "moc_sddmauthhelper.cpp"
+

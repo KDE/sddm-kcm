@@ -19,6 +19,8 @@ find_package(KF5 REQUIRED COMPONENTS
     Auth
     ConfigWidgets
     KIO
+    Archive
+    NewStuff
 )
 
 
@@ -45,12 +47,26 @@ install(FILES kcm_sddm.desktop DESTINATION ${CMAKE_INSTALL_KSERVICES5DIR})
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 
 add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
-target_link_libraries(kcmsddm_authhelper KF5::Auth KF5::ConfigCore)
+target_link_libraries(kcmsddm_authhelper KF5::Auth KF5::ConfigCore KF5::Archive KF5::I18n)
 
 kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
 install(TARGETS kcmsddm_authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
+#installer tool for knewstuff
+add_executable(sddmthemeinstaller
+    sddmthemeinstaller.cpp
+)
+
+target_link_libraries(sddmthemeinstaller
+    KF5::I18n
+    KF5::Auth
+    KF5::CoreAddons
+    KF5::ConfigCore
+    KF5::WidgetsAddons)
+install(TARGETS sddmthemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+
 add_subdirectory(src)
+install(FILES sddmtheme.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 

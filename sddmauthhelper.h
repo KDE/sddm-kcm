@@ -26,6 +26,8 @@ class SddmAuthHelper: public QObject
     Q_OBJECT
 public slots:
     ActionReply save(const QVariantMap &args);
+    ActionReply installtheme(const QVariantMap &args);
+    ActionReply uninstalltheme(const QVariantMap &args);
 };
 
 #endif //SDDMAUTHHELPER_H

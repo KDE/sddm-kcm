@@ -130,3 +130,15 @@ Description[zh_CN]=保存 SDDM 设置
 Description[zh_TW]=儲存 SDDM 設定
 Policy=auth_admin
 Persistence=session
+
+[org.kde.kcontrol.kcmsddm.installtheme]
+Name=Install an SDDM theme
+Description=Extracts a zip file containing an SDDM theme to the SDDM theme location
+Policy=auth_admin
+Persistence=session
+
+[org.kde.kcontrol.kcmsddm.uninstalltheme]
+Name=Uninstall an SDDM theme
+Description=Removes a previously installed SDDM theme
+Policy=auth_admin
+Persistence=session

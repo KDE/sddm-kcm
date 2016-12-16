@@ -1,5 +1,5 @@
 set(SDDM_CONFIG_FILE         "/etc/sddm.conf"             CACHE PATH      "Path of the sddm config file")
-    
+
 configure_file(config.h.in config.h IMMEDIATE @ONLY)
 # add_subdirectory(configwidgets)
 
@@ -39,6 +39,7 @@ target_link_libraries(kcm_sddm
     KF5::ConfigWidgets
     KF5::Auth
     KF5::KIOWidgets
+    KF5::NewStuff
 
     ${X11_LIBRARIES}
     XCB::XCB # For mouse cursor themes

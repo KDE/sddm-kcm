@@ -39,11 +39,15 @@ public:
 
 signals:
     void changed(bool);
+    void themesChanged();
     
 private slots:
     void themeSelected(const QModelIndex &index);
     void backgroundChanged(const QString &imagePath);
-    
+    void getNewStuffClicked();
+    void installFromFileClicked();
+    void removeThemeClicked();
+
 private:
     Ui::ThemeConfig *configUi;
     KSharedConfigPtr mConfig;

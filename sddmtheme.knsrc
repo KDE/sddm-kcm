@@ -1,0 +1,6 @@
+[KNewStuff3]
+ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
+Categories=SDDM Theme
+StandardResource=tmp
+InstallationCommand=sddmthemeinstaller -i %f
+UninstallCommand=sddmthemeinstaller -u %f

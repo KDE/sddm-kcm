@@ -25,9 +25,15 @@
 #include <QQmlContext>
 #include <QDebug>
 #include <QStandardPaths>
+#include <QPointer>
+#include <QFileDialog>
 
 #include <KMessageBox>
 #include <KConfigGroup>
+#include <KNewStuff3/KNS3/DownloadDialog>
+#include <KAuthAction>
+#include <KAuthActionReply>
+#include <KAuthExecuteJob>
 
 #include "config.h"
 
@@ -38,8 +44,8 @@ ThemeConfig::ThemeConfig(QWidget *parent) :
     
     configUi = new Ui::ThemeConfig();
     configUi->setupUi(this);
-//     configUi->customizeBox->setVisible(false);
-    
+    configUi->messageWidget->setVisible(false);
+
     ThemesModel *model = new ThemesModel(this);
     configUi->themesListView->setModel(model);
 
@@ -47,10 +53,16 @@ ThemeConfig::ThemeConfig(QWidget *parent) :
     delegate->setPreviewSize(QSize(128,128));
     configUi->themesListView->setItemDelegate(delegate);
     model->populate();
+    connect(this, &ThemeConfig::themesChanged, model, &ThemesModel::populate);
 
     connect(configUi->themesListView, SIGNAL(activated(QModelIndex)), SLOT(themeSelected(QModelIndex)));
     connect(configUi->themesListView, SIGNAL(clicked(QModelIndex)), SLOT(themeSelected(QModelIndex)));
     connect(configUi->selectBackgroundButton, SIGNAL(imagePathChanged(QString)), SLOT(backgroundChanged(QString)));
+
+    connect(configUi->getNewButton, &QPushButton::clicked, this, &ThemeConfig::getNewStuffClicked);
+    connect(configUi->installFromFileButton, &QPushButton::clicked, this, &ThemeConfig::installFromFileClicked);
+    connect(configUi->removeThemeButton, &QPushButton::clicked, this, &ThemeConfig::removeThemeClicked);
+
 
     prepareInitialTheme();
 }
@@ -165,3 +177,58 @@ void ThemeConfig::dump()
 
     qDebug() << "Current theme:" << config.readEntry("CurrentTheme");
 }
+
+void ThemeConfig::getNewStuffClicked()
+{
+    QPointer<KNS3::DownloadDialog> dialog(new KNS3::DownloadDialog(QStringLiteral("sddmtheme.knsrc"), this));
+
+    dialog->setWindowTitle(i18n("Download New SDDM Themes"));
+    if (dialog->exec()) {
+        emit themesChanged();
+    }
+    delete dialog.data();
+}
+
+void ThemeConfig::installFromFileClicked()
+{
+    QPointer<QFileDialog> dialog(new QFileDialog(this));
+    dialog->exec();
+    QStringList files = dialog->selectedFiles();
+    if (files.count() == 1) {
+        QString file = files.first();
+        KAuth::Action saveAction(QStringLiteral("org.kde.kcontrol.kcmsddm.installtheme"));
+        saveAction.setHelperId("org.kde.kcontrol.kcmsddm");
+        saveAction.addArgument(QStringLiteral("filePath"), file);
+        auto job = saveAction.execute();
+        if (!job->exec()) {
+            configUi->messageWidget->setMessageType(KMessageWidget::Warning);
+            configUi->messageWidget->setText(job->errorString());
+            configUi->messageWidget->animatedShow();
+        } else {
+            emit themesChanged();
+        }
+    }
+
+    delete dialog.data();
+}
+
+void ThemeConfig::removeThemeClicked()
+{
+    if (!configUi->themesListView->currentIndex().isValid()) {
+        return;
+    }
+
+    const QString path = configUi->themesListView->currentIndex().data(ThemesModel::PathRole).toString();
+     KAuth::Action saveAction(QStringLiteral("org.kde.kcontrol.kcmsddm.uninstalltheme"));
+    saveAction.setHelperId("org.kde.kcontrol.kcmsddm");
+    saveAction.addArgument(QStringLiteral("filePath"), path);
+    auto job = saveAction.execute();
+    if (!job->exec()) {
+        configUi->messageWidget->setMessageType(KMessageWidget::Warning);
+        configUi->messageWidget->setText(job->errorString());
+        configUi->messageWidget->animatedShow();
+    } else {
+        emit themesChanged();
+    }
+}
+
