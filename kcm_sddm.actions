@@ -133,12 +133,40 @@ Persistence=session
 
 [org.kde.kcontrol.kcmsddm.installtheme]
 Name=Install an SDDM theme
+Name[ca]=Instal·la un tema de l'SDDM
+Name[ca@valencia]=Instal·la un tema de l'SDDM
+Name[en_GB]=Install an SDDM theme
+Name[pt]=Instalar um tema do SDDM
+Name[sv]=Installera ett SDDM-tema
+Name[uk]=Встановити тему SDDM
+Name[x-test]=xxInstall an SDDM themexx
 Description=Extracts a zip file containing an SDDM theme to the SDDM theme location
+Description[ca]=Extreu un fitxer ZIP que contingui un tema de l'SDDM a la ubicació de temes de l'SDDM
+Description[ca@valencia]=Extreu un fitxer ZIP que continga un tema de l'SDDM a la ubicació de temes de l'SDDM
+Description[en_GB]=Extracts a zip file containing an SDDM theme to the SDDM theme location
+Description[pt]=Extrai um ficheiro ZIP que contém um tema do SDDM para o local dos temas do SDDM
+Description[sv]=Packar upp en zip-fil som innehåller ett SDDM-tema på platsen för SDDM-teman
+Description[uk]=Видобуває дані з архіву zip, що містить тему SDDM, до каталогу тем SDDM
+Description[x-test]=xxExtracts a zip file containing an SDDM theme to the SDDM theme locationxx
 Policy=auth_admin
 Persistence=session
 
 [org.kde.kcontrol.kcmsddm.uninstalltheme]
 Name=Uninstall an SDDM theme
+Name[ca]=Desinstal·la un tema de l'SDDM
+Name[ca@valencia]=Desinstal·la un tema de l'SDDM
+Name[en_GB]=Uninstall an SDDM theme
+Name[pt]=Desinstalar um tema do SDDM
+Name[sv]=Avinstallerar ett SDDM-tema
+Name[uk]=Вилучити тему SDDM
+Name[x-test]=xxUninstall an SDDM themexx
 Description=Removes a previously installed SDDM theme
+Description[ca]=Elimina un tema de l'SDDM instal·lat anteriorment
+Description[ca@valencia]=Elimina un tema de l'SDDM instal·lat anteriorment
+Description[en_GB]=Removes a previously installed SDDM theme
+Description[pt]=Remove um tema do SDDM instalado anteriormente
+Description[sv]=Tar bort ett tidigare installerat SDDM-tema
+Description[uk]=Вилучає раніше встановлену тему SDDM
+Description[x-test]=xxRemoves a previously installed SDDM themexx
 Policy=auth_admin
 Persistence=session
