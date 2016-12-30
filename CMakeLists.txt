@@ -10,7 +10,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Designer X11Extras Quick QuickWidgets)
+find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets X11Extras Quick QuickWidgets)
 
 find_package(KF5 REQUIRED COMPONENTS
     CoreAddons
