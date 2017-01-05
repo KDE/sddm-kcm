@@ -93,6 +93,7 @@ Name[x-test]=xxLogin Screen (SDDM)xx
 Name[zh_CN]=登录屏幕 (SDDM)
 Name[zh_TW]=登入畫面（SDDM）
 
+Comment=Select Login Theme
 Comment=Select login theme
 Comment[ar]=اختر سمة الولوج
 Comment[bs]=Izaberi temu prijave
