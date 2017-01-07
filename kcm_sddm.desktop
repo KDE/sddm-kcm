@@ -94,3 +94,14 @@ Name[zh_CN]=登录屏幕 (SDDM)
 Name[zh_TW]=登入畫面（SDDM）
 
 Comment=Select Login Theme
+Comment[ca]=Seleccioneu el tema per a l'inici de la sessió
+Comment[es]=Seleccionar el tema de inicio de sesión
+Comment[nl]=Aanmeldthema selecteren
+Comment[pt]=Seleccionar o Tema de Autenticação
+Comment[sk]=Vyberte tému prihlásenia
+Comment[sr]=Изаберите пријавну тему
+Comment[sr@ijekavian]=Изаберите пријавну тему
+Comment[sr@ijekavianlatin]=Izaberite prijavnu temu
+Comment[sr@latin]=Izaberite prijavnu temu
+Comment[uk]=Вибрати тему вікна входу
+Comment[x-test]=xxSelect Login Themexx
