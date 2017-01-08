@@ -95,7 +95,10 @@ Name[zh_TW]=登入畫面（SDDM）
 
 Comment=Select Login Theme
 Comment[ca]=Seleccioneu el tema per a l'inici de la sessió
+Comment[ca@valencia]=Seleccioneu el tema per a l'inici de la sessió
+Comment[en_GB]=Select Login Theme
 Comment[es]=Seleccionar el tema de inicio de sesión
+Comment[it]=Seleziona tema di accesso
 Comment[nl]=Aanmeldthema selecteren
 Comment[pt]=Seleccionar o Tema de Autenticação
 Comment[sk]=Vyberte tému prihlásenia
@@ -103,5 +106,6 @@ Comment[sr]=Изаберите пријавну тему
 Comment[sr@ijekavian]=Изаберите пријавну тему
 Comment[sr@ijekavianlatin]=Izaberite prijavnu temu
 Comment[sr@latin]=Izaberite prijavnu temu
+Comment[sv]=Välj inloggningstema
 Comment[uk]=Вибрати тему вікна входу
 Comment[x-test]=xxSelect Login Themexx
