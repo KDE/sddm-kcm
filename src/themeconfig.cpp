@@ -85,8 +85,10 @@ QVariantMap ThemeConfig::save()
     
     if (!mThemeConfigPath.isEmpty()) {
         args["theme.conf.user/General/background"] = mBackgroundPath;
+        args["theme.conf.user/General/type"] = QStringLiteral("image");
+    } else {
+        args["theme.conf.user/General/type"] = QStringLiteral("color");
     }
-    
     return args;
 }
 
