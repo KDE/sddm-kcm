@@ -46,6 +46,7 @@ URL=https://github.com/sddm/sddm
 [org.kde.kcontrol.kcmsddm.save]
 Name=Save Settings
 Name[ar]=احفظ اﻹعدادات
+Name[ast]=Guardar axustes
 Name[bs]=Sačuvaj postavke
 Name[ca]=Desa l'arranjament
 Name[ca@valencia]=Guarda l'arranjament
@@ -88,6 +89,7 @@ Name[zh_CN]=保存设置
 Name[zh_TW]=儲存設定
 Description=Save Settings in SDDM
 Description[ar]=احفظ الإعدادات في SDDM
+Description[ast]=Guarda los axustes en SDDM
 Description[bs]=Snimi postavke u SDDM
 Description[ca]=Desa l'arranjament a l'SDDM
 Description[ca@valencia]=Guarda l'arranjament a l'SDDM
@@ -132,6 +134,7 @@ Persistence=session
 
 [org.kde.kcontrol.kcmsddm.installtheme]
 Name=Install an SDDM theme
+Name[ast]=Instalar un tema de SDDM
 Name[ca]=Instal·la un tema de l'SDDM
 Name[ca@valencia]=Instal·la un tema de l'SDDM
 Name[de]=SDDM-Design installieren
@@ -157,6 +160,7 @@ Name[x-test]=xxInstall an SDDM themexx
 Name[zh_CN]=安装 SDDM 主题
 Name[zh_TW]=安裝 SDDM 主題
 Description=Extracts a zip file containing an SDDM theme to the SDDM theme location
+Description[ast]=Estrái nel allugamientu de temes de SDDM un ficheru ZIP que contenga un tema
 Description[ca]=Extreu un fitxer ZIP que contingui un tema de l'SDDM a la ubicació de temes de l'SDDM
 Description[ca@valencia]=Extreu un fitxer ZIP que continga un tema de l'SDDM a la ubicació de temes de l'SDDM
 Description[de]=Entpackt eine zip-Datei mit einem SDDM-Design an den Speicherplatz für SDDM-Designs
@@ -186,6 +190,7 @@ Persistence=session
 
 [org.kde.kcontrol.kcmsddm.uninstalltheme]
 Name=Uninstall an SDDM theme
+Name[ast]=Desinstalar un tema SDDM
 Name[ca]=Desinstal·la un tema de l'SDDM
 Name[ca@valencia]=Desinstal·la un tema de l'SDDM
 Name[de]=SDDM-Design deinstallieren
@@ -211,6 +216,7 @@ Name[x-test]=xxUninstall an SDDM themexx
 Name[zh_CN]=卸载 SDDM 主题
 Name[zh_TW]=解除安裝 SDDM 主題
 Description=Removes a previously installed SDDM theme
+Description[ast]=Desaniciar un tema SDDM instaláu d'enantes
 Description[ca]=Elimina un tema de l'SDDM instal·lat anteriorment
 Description[ca@valencia]=Elimina un tema de l'SDDM instal·lat anteriorment
 Description[de]=Entfernt ein vorher installiertes SDDM-Design

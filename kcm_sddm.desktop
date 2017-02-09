@@ -11,6 +11,7 @@ X-KDE-System-Settings-Parent-Category=session
 X-KDE-Weight=10
 X-KDE-Keywords=sddm,display manager,theme
 X-KDE-Keywords[ar]=sddm,مدير عرض,سمة
+X-KDE-Keywords[ast]=sddm,pantalla,xestor,tema
 X-KDE-Keywords[bs]=sddm,menadžer ekrana,teme
 X-KDE-Keywords[ca]=sddm,gestor de sessions,tema
 X-KDE-Keywords[ca@valencia]=sddm,gestor de sessions,tema
@@ -53,6 +54,7 @@ X-KDE-Keywords[zh_TW]=sddm,display manager,theme
 
 Name=Login Screen (SDDM)
 Name[ar]=مدير الولوج (SDDM)
+Name[ast]=Pantalla d'aniciu de sesión (SDDM)
 Name[bs]=Prijavni ekran (SDDM)
 Name[ca]=Pantalla d'inici de sessió (SDDM)
 Name[ca@valencia]=Pantalla d'inici de sessió (SDDM)
@@ -94,6 +96,7 @@ Name[zh_CN]=登录屏幕 (SDDM)
 Name[zh_TW]=登入畫面（SDDM）
 
 Comment=Select Login Theme
+Comment[ast]=Esbilla'l temá d'aniciu de sesión
 Comment[ca]=Seleccioneu el tema per a l'inici de la sessió
 Comment[ca@valencia]=Seleccioneu el tema per a l'inici de la sessió
 Comment[de]=Anmeldungs-Design auswählen
