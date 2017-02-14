@@ -78,15 +78,17 @@ QVariantMap ThemeConfig::save()
     if (!index.isValid()) {
         return QVariantMap();
     }
-    
+
     QVariantMap args;
-    
+
     args["sddm.conf/Theme/Current"] = index.data(ThemesModel::IdRole);
-    
+
     if (!mThemeConfigPath.isEmpty()) {
         args["theme.conf.user/General/background"] = mBackgroundPath;
+        args["theme.conf.user/General/type"] = QStringLiteral("image");
+    } else {
+        args["theme.conf.user/General/type"] = QStringLiteral("color");
     }
-    
     return args;
 }
 
