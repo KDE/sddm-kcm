@@ -26,6 +26,9 @@
 
 #include <memory>
 
+#include <KLocalizedString>
+
+
 class Session {
 public:
     QString file;
@@ -43,8 +46,17 @@ public:
 };
 
 SessionModel::SessionModel(QObject *parent) : QAbstractListModel(parent), d(new SessionModelPrivate()) {
-    // read session files
-    QDir dir("/usr/share/xsessions");
+    loadDir("/usr/share/xsessions", SessionTypeX);
+    loadDir("/usr/share/wayland-sessions", SessionTypeWayland);
+}
+
+SessionModel::~SessionModel() {
+    delete d;
+}
+
+void SessionModel::loadDir(const QString &path, SessionType type)
+{
+    QDir dir(path);
     dir.setNameFilters(QStringList() << "*.desktop");
     dir.setFilter(QDir::Files);
     // read session
@@ -56,8 +68,13 @@ SessionModel::SessionModel(QObject *parent) : QAbstractListModel(parent), d(new 
         QTextStream in(&inputFile);
         while (!in.atEnd()) {
             QString line = in.readLine();
-            if (line.startsWith("Name="))
+            if (line.startsWith("Name=")) {
                 si->name = line.mid(5);
+                if (type == SessionTypeWayland) {
+                    //we want to exactly match the SDDM prompt which is formatted in this way
+                    si->name += ' ' + i18nc("suffix listed in autologin combo box", "(wayland)");
+                }
+            }
             if (line.startsWith("Exec="))
                 si->exec = line.mid(5);
             if (line.startsWith("Comment="))
@@ -68,10 +85,6 @@ SessionModel::SessionModel(QObject *parent) : QAbstractListModel(parent), d(new 
         // close file
         inputFile.close();
     }
-}
-
-SessionModel::~SessionModel() {
-    delete d;
 }
 
 QHash<int, QByteArray> SessionModel::roleNames() const {

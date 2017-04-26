@@ -29,6 +29,12 @@ class SessionModelPrivate;
 class SessionModel : public QAbstractListModel {
     Q_OBJECT
     Q_DISABLE_COPY(SessionModel)
+
+    enum SessionType {
+        SessionTypeX,
+        SessionTypeWayland
+    };
+
 public:
     enum SessionRole {
         NameRole = Qt::DisplayRole,
@@ -39,6 +45,8 @@ public:
 
     SessionModel(QObject *parent = 0);
     ~SessionModel();
+
+    void loadDir(const QString &path, SessionType type);
 
     QHash<int, QByteArray> roleNames() const override;
 
