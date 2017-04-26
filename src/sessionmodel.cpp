@@ -72,7 +72,7 @@ void SessionModel::loadDir(const QString &path, SessionType type)
                 si->name = line.mid(5);
                 if (type == SessionTypeWayland) {
                     //we want to exactly match the SDDM prompt which is formatted in this way
-                    si->name += ' ' + i18nc("suffix listed in autologin combo box", "(wayland)");
+                    si->name = i18nc("%1 is the name of a session", "%1 (Wayland)", si->name);
                 }
             }
             if (line.startsWith("Exec="))
