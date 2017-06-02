@@ -30,7 +30,7 @@ public:
     ~SddmKcm();
 
 public slots:
-    void save();
+    void save() Q_DECL_OVERRIDE;
 
 private:
     void prepareUi();

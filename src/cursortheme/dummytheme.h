@@ -25,8 +25,8 @@ class DummyTheme : public CursorTheme
         DummyTheme();
         virtual ~DummyTheme();
 
-        QImage loadImage(const QString &name, int size = 0) const;
-        qulonglong loadCursor(const QString &name, int size = 0) const;
+        QImage loadImage(const QString &name, int size = 0) const Q_DECL_OVERRIDE;
+        qulonglong loadCursor(const QString &name, int size = 0) const Q_DECL_OVERRIDE;
 
     protected:
         DummyTheme(const QString &title, const QString &description = QString())

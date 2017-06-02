@@ -44,8 +44,8 @@ public:
     explicit ThemesModel(QObject *parent=0);
     virtual ~ThemesModel();
     
-    int rowCount(const QModelIndex &parent) const;
-    QVariant data(const QModelIndex &index, int role) const;
+    int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
     
 public Q_SLOTS:
     void populate();

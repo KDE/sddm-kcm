@@ -25,11 +25,11 @@ class ThemesDelegate : public QAbstractItemDelegate
 public:
     explicit ThemesDelegate(QObject *parent = 0);
     
-    virtual void paint(QPainter *painter,
+    void paint(QPainter *painter,
                        const QStyleOptionViewItem &option,
-                       const QModelIndex &index) const;
-    virtual QSize sizeHint(const QStyleOptionViewItem &option,
-                           const QModelIndex &index) const;
+                       const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QSize sizeHint(const QStyleOptionViewItem &option,
+                           const QModelIndex &index) const Q_DECL_OVERRIDE;
     void setPreviewSize(const QSize &size);
     
     static const int SCREENSHOT_SIZE = 128;

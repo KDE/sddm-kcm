@@ -35,8 +35,8 @@ public:
     explicit UsersModel(QObject *parent=0);
     virtual ~UsersModel();
 
-    int rowCount(const QModelIndex &parent) const;
-    QVariant data(const QModelIndex &index, int role) const;
+    int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
     void populate(const uint minimumUid, const uint maximumUid);
     int indexOf(const QString &user);
 
