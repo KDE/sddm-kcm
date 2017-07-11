@@ -53,18 +53,36 @@ SessionModel::SessionModel(QObject *parent) : QAbstractListModel(parent), d(new 
         if (!inputFile.open(QIODevice::ReadOnly))
             continue;
         SessionPtr si { new Session { session, "", "", "" } };
+        bool isHidden = false;
+        QString current_section;
         QTextStream in(&inputFile);
         while (!in.atEnd()) {
             QString line = in.readLine();
+
+            if (line.startsWith(QLatin1String("["))) {
+                // The section name ends before the last ] before the start of a comment
+                int end = line.lastIndexOf(QLatin1Char(']'), line.indexOf(QLatin1Char('#')));
+                if (end != -1)
+                    current_section = line.mid(1, end - 1);
+            }
+
+            if (current_section != QLatin1String("Desktop Entry"))
+                continue; // We are only interested in the "Desktop Entry" section
+
             if (line.startsWith("Name="))
                 si->name = line.mid(5);
             if (line.startsWith("Exec="))
                 si->exec = line.mid(5);
             if (line.startsWith("Comment="))
                 si->comment = line.mid(8);
+            if (line.startsWith(QLatin1String("Hidden=")))
+                isHidden = line.mid(7).toLower() == QLatin1String("true");
         }
-        // add to sessions list
-        d->sessions.push_back(si);
+        if (!isHidden) {
+            // add to sessions list
+            d->sessions.push_back(si);
+        }
+
         // close file
         inputFile.close();
     }
