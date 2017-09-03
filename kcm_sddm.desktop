@@ -98,6 +98,7 @@ Name[zh_CN]=登录屏幕 (SDDM)
 Name[zh_TW]=登入畫面（SDDM）
 
 Comment=Select Login Theme
+Comment[ar]=اختر سمة الولوج
 Comment[ast]=Esbilla'l temá d'aniciu de sesión
 Comment[ca]=Seleccioneu el tema per a l'inici de la sessió
 Comment[ca@valencia]=Seleccioneu el tema per a l'inici de la sessió
