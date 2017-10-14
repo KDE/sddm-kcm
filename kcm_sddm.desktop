@@ -100,3 +100,9 @@ Name[zh_CN]=登录屏幕 (SDDM)
 Name[zh_TW]=登入畫面（SDDM）
 
 Comment=Configure Login Manager
+Comment[ca]=Configura el gestor d'accés
+Comment[ca@valencia]=Configura el gestor d'accés
+Comment[pt]=Configurar o Gestor de Autenticação
+Comment[sv]=Anpassa inloggningshanterare
+Comment[uk]=Налаштування керування входом до системи
+Comment[x-test]=xxConfigure Login Managerxx
