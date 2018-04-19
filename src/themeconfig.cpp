@@ -166,7 +166,9 @@ void ThemeConfig::prepareConfigurationUi(const QString &configPath)
     QFile configFile(configPath);
     
     if (configFile.exists()) {
-        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName() + ".user", KConfig::SimpleConfig);
+        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName() + ".user", KConfig::CascadeConfig);
+        themeConfig->addConfigSources({configFile.fileName()});
+
         configUi->customizeBox->setVisible(true);
         configUi->selectBackgroundButton->setImagePath(themeConfig->group("General").readEntry("background"));
     } else {
