@@ -158,6 +158,9 @@ int XCursorTheme::autodetectCursorSize() const
     int size = 0;
     int dpi = 0;
     Display *dpy = QX11Info::display();
+    // Fallback on wayland
+    if (!dpy)
+        return 24;
     // The string "v" is owned and will be destroyed by Xlib
     char *v = XGetDefault(dpy, "Xft", "dpi");
     if (v)
