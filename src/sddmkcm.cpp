@@ -16,6 +16,9 @@
  */
 #include "sddmkcm.h"
 
+#include <algorithm>
+
+#include <QDir>
 #include <QHBoxLayout>
 #include <QTabWidget>
 
@@ -54,7 +57,19 @@ SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
 
     setAboutData(aboutData);
     setNeedsAuthorization(true);
-    
+
+    mSddmConfig = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::CascadeConfig);
+
+    // This does not listen for new config files in the directory.
+    QStringList configFiles = QDir(SDDM_CONFIG_DIR).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
+                systemConfigFiles = QDir(SDDM_SYSTEM_CONFIG_DIR).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
+    std::transform(systemConfigFiles.begin(), systemConfigFiles.end(), systemConfigFiles.begin(),
+                    [](const QString &filename) { return QStringLiteral(SDDM_SYSTEM_CONFIG_DIR "/") + filename; });
+    std::transform(configFiles.begin(), configFiles.end(), configFiles.begin(),
+                    [](const QString &filename) { return QStringLiteral(SDDM_CONFIG_DIR "/") + filename; });
+
+    mSddmConfig->addConfigSources(systemConfigFiles + configFiles);
+
     prepareUi();
 }
 
@@ -101,12 +116,12 @@ void SddmKcm::prepareUi()
     QTabWidget* tabHolder = new QTabWidget(this);
     layout->addWidget(tabHolder);
     
-    mThemeConfig = new ThemeConfig(this);
+    mThemeConfig = new ThemeConfig(mSddmConfig, this);
     connect(mThemeConfig, SIGNAL(changed(bool)), SIGNAL(changed(bool)));
     
     tabHolder->addTab(mThemeConfig, i18n("Theme"));
     
-    mAdvanceConfig = new AdvanceConfig(this);
+    mAdvanceConfig = new AdvanceConfig(mSddmConfig, this);
     connect(mAdvanceConfig, SIGNAL(changed(bool)), SIGNAL(changed(bool)));
     
     tabHolder->addTab(mAdvanceConfig, i18n("Advanced"));

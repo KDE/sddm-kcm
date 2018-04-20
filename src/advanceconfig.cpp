@@ -33,11 +33,10 @@
 const int MIN_UID = 1000;
 const int MAX_UID = 65000;
 
-AdvanceConfig::AdvanceConfig(QWidget *parent) :
-    QWidget(parent)
+AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
+    QWidget(parent),
+    mConfig(config)
 {
-    mConfig = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::SimpleConfig);
-
     configUi = new Ui::AdvanceConfig();
     configUi->setupUi(this);
 

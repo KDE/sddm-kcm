@@ -37,11 +37,10 @@
 
 #include "config.h"
 
-ThemeConfig::ThemeConfig(QWidget *parent) :
-    QWidget(parent)
+ThemeConfig::ThemeConfig(const KSharedConfigPtr &config, QWidget *parent) :
+    QWidget(parent),
+    mConfig(config)
 {
-    mConfig = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::SimpleConfig);
-    
     configUi = new Ui::ThemeConfig();
     configUi->setupUi(this);
     configUi->messageWidget->setVisible(false);

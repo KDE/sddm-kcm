@@ -18,6 +18,7 @@
 #define SDDMKCM_H
 
 #include <KCModule>
+#include <KSharedConfig>
 
 class ThemeConfig;
 class AdvanceConfig;
@@ -36,6 +37,7 @@ private:
     void prepareUi();
     
 private:
+    KSharedConfigPtr mSddmConfig;
     ThemeConfig *mThemeConfig;
     AdvanceConfig *mAdvanceConfig;
 };
