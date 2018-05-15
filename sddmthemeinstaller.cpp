@@ -87,7 +87,7 @@ int main(int argc, char **argv)
         for (const QString &installedTheme: installed) {
             KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmsddm.uninstalltheme"));
             action.setHelperId("org.kde.kcontrol.kcmsddm");
-            action.addArgument(QStringLiteral("filePath"), installed);
+            action.addArgument(QStringLiteral("filePath"), installedTheme);
             KAuth::ExecuteJob *job = action.execute();
             job->exec();
         }
