@@ -23,7 +23,7 @@ class DummyTheme : public CursorTheme
 {
     public:
         DummyTheme();
-        virtual ~DummyTheme();
+        ~DummyTheme() Q_DECL_OVERRIDE;
 
         QImage loadImage(const QString &name, int size = 0) const Q_DECL_OVERRIDE;
         qulonglong loadCursor(const QString &name, int size = 0) const Q_DECL_OVERRIDE;

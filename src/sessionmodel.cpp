@@ -117,6 +117,7 @@ QHash<int, QByteArray> SessionModel::roleNames() const {
 }
 
 int SessionModel::rowCount(const QModelIndex &parent) const {
+    Q_UNUSED(parent);
     return d->sessions.length();
 }
 

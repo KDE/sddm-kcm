@@ -43,8 +43,8 @@ public:
         CommentRole
     };
 
-    SessionModel(QObject *parent = 0);
-    ~SessionModel();
+    explicit SessionModel(QObject *parent = nullptr);
+    ~SessionModel() Q_DECL_OVERRIDE;
 
     void loadDir(const QString &path, SessionType type);
 

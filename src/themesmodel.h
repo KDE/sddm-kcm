@@ -41,8 +41,8 @@ public:
         ConfigFileRole
     };
                
-    explicit ThemesModel(QObject *parent=0);
-    virtual ~ThemesModel();
+    explicit ThemesModel(QObject *parent=nullptr);
+    ~ThemesModel() Q_DECL_OVERRIDE;
     
     int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
     QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;

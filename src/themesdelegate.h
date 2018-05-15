@@ -23,7 +23,7 @@
 class ThemesDelegate : public QAbstractItemDelegate
 {
 public:
-    explicit ThemesDelegate(QObject *parent = 0);
+    explicit ThemesDelegate(QObject *parent = nullptr);
     
     void paint(QPainter *painter,
                        const QStyleOptionViewItem &option,

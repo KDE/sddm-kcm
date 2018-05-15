@@ -32,8 +32,8 @@ public:
         IconRole
     };
 
-    explicit UsersModel(QObject *parent=0);
-    virtual ~UsersModel();
+    explicit UsersModel(QObject *parent=nullptr);
+    ~UsersModel() Q_DECL_OVERRIDE;
 
     int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
     QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;

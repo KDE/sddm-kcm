@@ -28,7 +28,7 @@ class SddmKcm : public KCModule
     Q_OBJECT
 public:
     explicit SddmKcm(QWidget *parent, const QVariantList &args);
-    ~SddmKcm();
+    ~SddmKcm() Q_DECL_OVERRIDE;
 
 public slots:
     void save() Q_DECL_OVERRIDE;

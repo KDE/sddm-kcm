@@ -72,7 +72,7 @@ int main(int argc, char **argv)
         KAuth::ExecuteJob *job = action.execute();
         bool rc = job->exec();
         if (!rc) {
-            KMessageBox::sorry(0, i18n("Unable to install theme"), job->errorString());
+            KMessageBox::sorry(nullptr, i18n("Unable to install theme"), job->errorString());
             qWarning() << job->error() << job->errorString();
             return -1;
         }
@@ -83,7 +83,7 @@ int main(int argc, char **argv)
     }
     if (parser.isSet(QLatin1String("uninstall"))) {
         KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"), KConfig::SimpleConfig), "DownloadedThemes");
-        QStringList installed = cg.readEntry(args.first(), QStringList());
+        const QStringList installed = cg.readEntry(args.first(), QStringList());
         for (const QString &installedTheme: installed) {
             KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmsddm.uninstalltheme"));
             action.setHelperId("org.kde.kcontrol.kcmsddm");

@@ -60,8 +60,8 @@ class CursorThemeModel : public QAbstractTableModel
     Q_OBJECT
 
     public:
-        CursorThemeModel(QObject *parent = 0);
-        ~CursorThemeModel();
+        explicit CursorThemeModel(QObject *parent = nullptr);
+        ~CursorThemeModel() Q_DECL_OVERRIDE;
        inline int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
         inline int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
         QVariant headerData(int section, Qt::Orientation orientation, int role) const Q_DECL_OVERRIDE;

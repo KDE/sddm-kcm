@@ -34,7 +34,7 @@ class AdvanceConfig : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent = 0);
+    explicit AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent = nullptr);
     ~AdvanceConfig();
     
     QVariantMap save();

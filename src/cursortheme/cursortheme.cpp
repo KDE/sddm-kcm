@@ -148,6 +148,9 @@ void CursorTheme::setCursorName(qulonglong cursor, const QString &name) const
         XFixesSetCursorName(QX11Info::display(), cursor,
                             QFile::encodeName(name));
     }
+#else
+    Q_UNUSED(name);
+    Q_UNUSED(cursor);
 #endif
 }
 

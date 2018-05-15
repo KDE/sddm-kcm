@@ -31,7 +31,7 @@ class ThemeConfig : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ThemeConfig(const KSharedConfigPtr &config, QWidget *parent = 0);
+    explicit ThemeConfig(const KSharedConfigPtr &config, QWidget *parent = nullptr);
     ~ThemeConfig();
     
     QVariantMap save();

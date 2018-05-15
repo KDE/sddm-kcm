@@ -43,7 +43,7 @@ class XCursorTheme : public CursorTheme
         * index.theme file if the dir has one.
         */
         XCursorTheme(const QDir &dir);
-        virtual ~XCursorTheme() {}
+        ~XCursorTheme() Q_DECL_OVERRIDE {}
 
         const QStringList inherits() const { return m_inherits; }
         QImage loadImage(const QString &name, int size = 0) const Q_DECL_OVERRIDE;
