@@ -40,29 +40,28 @@
 #include <kauthexecutejob.h>
 
 K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
-K_EXPORT_PLUGIN(SddmKcmFactory("kcm_sddm"))
 
 
 SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     KCModule(parent, args)
 {
-    KAboutData* aboutData = new KAboutData("kcmsddm", i18n("SDDM KDE Config"), PROJECT_VERSION);
+    KAboutData* aboutData = new KAboutData(QStringLiteral("kcmsddm"), i18n("SDDM KDE Config"), QString::fromLatin1(PROJECT_VERSION));
 
     aboutData->setShortDescription(i18n("Login screen using the SDDM"));
     aboutData->setLicense(KAboutLicense::GPL_V2);
-    aboutData->setHomepage("https://projects.kde.org/projects/kde/workspace/sddm-kcm");
+    aboutData->setHomepage(QStringLiteral("https://projects.kde.org/projects/kde/workspace/sddm-kcm"));
 
-    aboutData->addAuthor("Reza Fatahilah Shah", i18n("Author"), "rshah0385@kireihana.com");
-    aboutData->addAuthor("David Edmundson", i18n("Author"), "davidedmundson@kde.org");
+    aboutData->addAuthor(QStringLiteral("Reza Fatahilah Shah"), i18n("Author"), QStringLiteral("rshah0385@kireihana.com"));
+    aboutData->addAuthor(QStringLiteral("David Edmundson"), i18n("Author"), QStringLiteral("davidedmundson@kde.org"));
 
     setAboutData(aboutData);
     setNeedsAuthorization(true);
 
-    mSddmConfig = KSharedConfig::openConfig(SDDM_CONFIG_FILE, KConfig::CascadeConfig);
+    mSddmConfig = KSharedConfig::openConfig(QString::fromLatin1(SDDM_CONFIG_FILE), KConfig::CascadeConfig);
 
     // This does not listen for new config files in the directory.
-    QStringList configFiles = QDir(SDDM_CONFIG_DIR).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
-                systemConfigFiles = QDir(SDDM_SYSTEM_CONFIG_DIR).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
+    QStringList configFiles = QDir(QString::fromLatin1(SDDM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
+                systemConfigFiles = QDir(QString::fromLatin1(SDDM_SYSTEM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
     std::transform(systemConfigFiles.begin(), systemConfigFiles.end(), systemConfigFiles.begin(),
                     [](const QString &filename) { return QStringLiteral(SDDM_SYSTEM_CONFIG_DIR "/") + filename; });
     std::transform(configFiles.begin(), configFiles.end(), configFiles.begin(),
@@ -81,19 +80,19 @@ void SddmKcm::save()
 {
     QVariantMap args;
     
-    args["sddm.conf"] = SDDM_CONFIG_FILE;
+    args[QStringLiteral("sddm.conf")] = QString::fromLatin1(SDDM_CONFIG_FILE);
 
     if (!mThemeConfig->themeConfigPath().isEmpty()) {
-        args["theme.conf.user"] = mThemeConfig->themeConfigPath() + ".user";
+        args[QStringLiteral("theme.conf.user")] = QString(mThemeConfig->themeConfigPath() + QLatin1String(".user"));
     }
 
-    qDebug() << "Ovr:" << args["theme.conf.user"].toString();
+    qDebug() << "Ovr:" << args[QStringLiteral("theme.conf.user")].toString();
     args.unite(mThemeConfig->save());
     args.unite(mAdvanceConfig->save());
 
     KAuth::Action saveAction = authAction();
 
-    saveAction.setHelperId("org.kde.kcontrol.kcmsddm");
+    saveAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
     saveAction.setArguments(args);
     
     auto job = saveAction.execute();

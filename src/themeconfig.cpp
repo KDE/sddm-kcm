@@ -80,14 +80,14 @@ QVariantMap ThemeConfig::save()
 
     QVariantMap args;
 
-    args["sddm.conf/Theme/Current"] = index.data(ThemesModel::IdRole);
+    args[QStringLiteral("sddm.conf/Theme/Current")] = index.data(ThemesModel::IdRole);
 
     if (!mThemeConfigPath.isEmpty()) {
         if (!mBackgroundPath.isEmpty()) {
-            args["theme.conf.user/General/background"] = mBackgroundPath;
-            args["theme.conf.user/General/type"] = QStringLiteral("image");
+            args[QStringLiteral("theme.conf.user/General/background")] = mBackgroundPath;
+            args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("image");
         } else {
-            args["theme.conf.user/General/type"] = QStringLiteral("color");
+            args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("color");
         }
     }
     return args;
@@ -128,7 +128,7 @@ QModelIndex ThemeConfig::findThemeIndex(const QString &id) const
 void ThemeConfig::themeSelected(const QModelIndex &index)
 {
     if (!configUi->quickWidget->source().isValid()) {
-        const QString mainQmlPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm-kcm/main.qml");
+        const QString mainQmlPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sddm-kcm/main.qml"));
         configUi->quickWidget->setSource(QUrl::fromLocalFile(mainQmlPath));
     }
 
@@ -165,7 +165,7 @@ void ThemeConfig::prepareConfigurationUi(const QString &configPath)
     QFile configFile(configPath);
     
     if (configFile.exists()) {
-        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName() + ".user", KConfig::CascadeConfig);
+        KSharedConfigPtr themeConfig = KSharedConfig::openConfig(configFile.fileName() + QStringLiteral(".user"), KConfig::CascadeConfig);
         themeConfig->addConfigSources({configFile.fileName()});
 
         configUi->customizeBox->setVisible(true);
@@ -202,7 +202,7 @@ void ThemeConfig::installFromFileClicked()
     if (files.count() == 1) {
         QString file = files.first();
         KAuth::Action saveAction(QStringLiteral("org.kde.kcontrol.kcmsddm.installtheme"));
-        saveAction.setHelperId("org.kde.kcontrol.kcmsddm");
+        saveAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
         saveAction.addArgument(QStringLiteral("filePath"), file);
         auto job = saveAction.execute();
         if (!job->exec()) {
@@ -225,7 +225,7 @@ void ThemeConfig::removeThemeClicked()
 
     const QString path = configUi->themesListView->currentIndex().data(ThemesModel::PathRole).toString();
      KAuth::Action saveAction(QStringLiteral("org.kde.kcontrol.kcmsddm.uninstalltheme"));
-    saveAction.setHelperId("org.kde.kcontrol.kcmsddm");
+    saveAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
     saveAction.addArgument(QStringLiteral("filePath"), path);
     auto job = saveAction.execute();
     if (!job->exec()) {

@@ -49,9 +49,9 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply = ActionReply::HelperErrorReply();
-    QSharedPointer<KConfig> sddmConfig = openConfig(args["sddm.conf"].toString());
+    QSharedPointer<KConfig> sddmConfig = openConfig(args[QLatin1String("sddm.conf")].toString());
     QSharedPointer<KConfig> themeConfig;
-    QString themeConfigFile = args["theme.conf.user"].toString();
+    QString themeConfigFile = args[QLatin1String("theme.conf.user")].toString();
 
     if (!themeConfigFile.isEmpty()) {
         themeConfig = openConfig(themeConfigFile);
@@ -60,10 +60,10 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
     QMap<QString, QVariant>::const_iterator iterator;
     
     for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
-        if (iterator.key() == "sddm.conf" || iterator.key() == "theme.conf.user")
+        if (iterator.key() == QLatin1String("sddm.conf") || iterator.key() == QLatin1String("theme.conf.user"))
             continue;
 
-        QStringList configFields = iterator.key().split('/');
+        QStringList configFields = iterator.key().split(QLatin1Char('/'));
         if (configFields.size() != 3) {
             continue;
         }
@@ -73,13 +73,13 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
         QString groupName = configFields[1];
         QString keyName = configFields[2];
 
-        if (fileName == "sddm.conf") {
+        if (fileName == QLatin1String("sddm.conf")) {
             sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
-        } else if (fileName == "theme.conf.user" && !themeConfig.isNull()) {
+        } else if (fileName == QLatin1String("theme.conf.user") && !themeConfig.isNull()) {
             QFileInfo themeConfigFileInfo(themeConfigFile);
             QDir configRootDirectory = themeConfigFileInfo.absoluteDir();
 
-            if (keyName == "background") {
+            if (keyName == QLatin1String("background")) {
                 QFileInfo newBackgroundFileInfo(iterator.value().toString());
                 QString previousBackground = themeConfig->group(groupName).readEntry(keyName);
 
@@ -119,12 +119,12 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 
 ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
 {
-    const QString filePath = args["filePath"].toString();
+    const QString filePath = args[QStringLiteral("filePath")].toString();
     if (filePath.isEmpty()) {
         return ActionReply::HelperErrorReply();
     }
 
-    const QString themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm/themes", QStandardPaths::LocateDirectory);
+    const QString themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sddm/themes"), QStandardPaths::LocateDirectory);
     QDir dir(themesBaseDir);
     if (!dir.exists()) {
         return ActionReply::HelperErrorReply();
@@ -162,7 +162,7 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
 
     if (!archive->open(QIODevice::ReadOnly)) {
         auto e = ActionReply::HelperErrorReply();
-        e.setErrorDescription("Could not open file");
+        e.setErrorDescription(i18n("Could not open file"));
         return e;
     }
 
@@ -181,13 +181,13 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
             return e;
         }
         auto subDirectory = static_cast<const KArchiveDirectory*>(entry);
-        auto metadataFile = subDirectory->file("metadata.desktop");
+        auto metadataFile = subDirectory->file(QStringLiteral("metadata.desktop"));
         if(!metadataFile || !metadataFile->data().contains("[SddmGreeterTheme]")) {
             auto e = ActionReply::HelperErrorReply();
             e.setErrorDescription(i18n("Invalid theme package"));
             return e;
         }
-        installedPaths.append(themesBaseDir + '/' + name);
+        installedPaths.append(themesBaseDir + QLatin1Char('/') + name);
     }
 
     if (!directory->copyTo(themesBaseDir)) {
@@ -203,8 +203,8 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
 
 ActionReply SddmAuthHelper::uninstalltheme(const QVariantMap &args)
 {
-    const QString themePath = args["filePath"].toString();
-    const QString themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "sddm/themes", QStandardPaths::LocateDirectory);
+    const QString themePath = args[QStringLiteral("filePath")].toString();
+    const QString themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sddm/themes"), QStandardPaths::LocateDirectory);
 
     QDir dir(themePath);
     if (!dir.exists()) {

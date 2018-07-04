@@ -73,7 +73,7 @@ QString SelectImageButton::imagePath() const {
 
 void SelectImageButton::onLoadImageFromFile()
 {
-    QUrl fileUrl = QFileDialog::getOpenFileUrl(this, i18nc("@title:window", "Select Image"), QUrl(), "image/*", nullptr, 0, QStringList() << "file");
+    QUrl fileUrl = QFileDialog::getOpenFileUrl(this, i18nc("@title:window", "Select Image"), QUrl(), QStringLiteral("image/*"), nullptr, nullptr, QStringList() << QStringLiteral("file"));
 
     if (!fileUrl.isEmpty()) {
         setImagePath(fileUrl.path());

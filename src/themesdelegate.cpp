@@ -99,7 +99,7 @@ void ThemesDelegate::paint(QPainter *painter,
 
     //Use a QTextDocument to layout the text
     QTextDocument document;
-    QString html = QString("<strong>%1</strong>").arg(title);
+    QString html = QStringLiteral("<strong>%1</strong>").arg(title);
 
     //Set the text color according to the item state
     QPalette::ColorGroup cg = QPalette::Active;
@@ -115,7 +115,7 @@ void ThemesDelegate::paint(QPainter *painter,
         color = QApplication::palette().brush(cg, QPalette::Text).color();
     }
 
-    html = QString("<div style=\"color: %1\" align=\"center\">%2</div>").arg(color.name()).arg(html);
+    html = QStringLiteral("<div style=\"color: %1\" align=\"center\">%2</div>").arg(color.name()).arg(html);
 
     document.setHtml(html);
 
@@ -147,7 +147,7 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
 
     //Generate a sample complete entry (with the real title) to calculate sizes
     QTextDocument document;
-    QString html = QString("<strong>%1</strong><br />").arg(title);
+    const QString html = QStringLiteral("<strong>%1</strong><br />").arg(title);
 
     document.setHtml(html);
     document.setTextWidth(m_maxWidth);

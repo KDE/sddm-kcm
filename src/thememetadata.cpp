@@ -45,8 +45,8 @@ public:
 ThemeMetadata::ThemeMetadata(const QString &id, const QString &path)
     : d(new ThemeMetadataPrivate)
 {
-    d->path = path + "/";
-    read(d->path + "metadata.desktop");
+    d->path = path + QLatin1Char('/');
+    read(d->path + QStringLiteral("metadata.desktop"));
     d->themeid = id;
 }
 

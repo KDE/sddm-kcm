@@ -46,8 +46,8 @@ public:
 };
 
 SessionModel::SessionModel(QObject *parent) : QAbstractListModel(parent), d(new SessionModelPrivate()) {
-    loadDir("/usr/share/xsessions", SessionTypeX);
-    loadDir("/usr/share/wayland-sessions", SessionTypeWayland);
+    loadDir(QStringLiteral("/usr/share/xsessions"), SessionTypeX);
+    loadDir(QStringLiteral("/usr/share/wayland-sessions"), SessionTypeWayland);
 }
 
 SessionModel::~SessionModel() {
@@ -57,14 +57,14 @@ SessionModel::~SessionModel() {
 void SessionModel::loadDir(const QString &path, SessionType type)
 {
     QDir dir(path);
-    dir.setNameFilters(QStringList() << "*.desktop");
+    dir.setNameFilters(QStringList() << QLatin1String("*.desktop"));
     dir.setFilter(QDir::Files);
     // read session
     foreach(const QString &session, dir.entryList()) {
         QFile inputFile(dir.absoluteFilePath(session));
         if (!inputFile.open(QIODevice::ReadOnly))
             continue;
-        SessionPtr si { new Session { session, "", "", "" } };
+        SessionPtr si { new Session { session, QString(), QString(), QString() } };
         bool isHidden = false;
         QString current_section;
         QTextStream in(&inputFile);
@@ -81,16 +81,16 @@ void SessionModel::loadDir(const QString &path, SessionType type)
             if (current_section != QLatin1String("Desktop Entry"))
                 continue; // We are only interested in the "Desktop Entry" section
 
-            if (line.startsWith("Name=")) {
+            if (line.startsWith(QLatin1String("Name="))) {
                 si->name = line.mid(5);
                 if (type == SessionTypeWayland) {
                     //we want to exactly match the SDDM prompt which is formatted in this way
                     si->name = i18nc("%1 is the name of a session", "%1 (Wayland)", si->name);
                 }
             }
-            if (line.startsWith("Exec="))
+            if (line.startsWith(QLatin1String("Exec=")))
                 si->exec = line.mid(5);
-            if (line.startsWith("Comment="))
+            if (line.startsWith(QLatin1String("Comment=")))
                 si->comment = line.mid(8);
             if (line.startsWith(QLatin1String("Hidden=")))
                 isHidden = line.mid(7).toLower() == QLatin1String("true");

@@ -41,14 +41,14 @@ int main(int argc, char **argv)
     const QString description = i18n("SDDM theme installer");
     const char version[] = "1.0";
 
-    app.setApplicationVersion(version);
+    app.setApplicationVersion(QString::fromLatin1(version));
     parser.addVersionOption();
     parser.addHelpOption();
     parser.setApplicationDescription(description);
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("i") << QStringLiteral("install"), i18n("Install a theme.")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("u") << QStringLiteral("uninstall"), i18n("Uninstall a theme.")));
 
-    parser.addPositionalArgument("themefile", i18n("The theme to install, must be an existing archive file."));
+    parser.addPositionalArgument(QStringLiteral("themefile"), i18n("The theme to install, must be an existing archive file."));
 
     parser.process(app);
 
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
         }
 
         KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmsddm.installtheme"));
-        action.setHelperId("org.kde.kcontrol.kcmsddm");
+        action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
         action.addArgument(QStringLiteral("filePath"), themefile.absoluteFilePath());
 
         KAuth::ExecuteJob *job = action.execute();
@@ -78,7 +78,7 @@ int main(int argc, char **argv)
         }
 
         KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"), KConfig::SimpleConfig), "DownloadedThemes");
-        cg.writeEntry(themefile.absoluteFilePath(), job->data().value("installedPaths").toStringList());
+        cg.writeEntry(themefile.absoluteFilePath(), job->data().value(QStringLiteral("installedPaths")).toStringList());
         return 0;
     }
     if (parser.isSet(QLatin1String("uninstall"))) {
@@ -86,7 +86,7 @@ int main(int argc, char **argv)
         const QStringList installed = cg.readEntry(args.first(), QStringList());
         for (const QString &installedTheme: installed) {
             KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmsddm.uninstalltheme"));
-            action.setHelperId("org.kde.kcontrol.kcmsddm");
+            action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
             action.addArgument(QStringLiteral("filePath"), installedTheme);
             KAuth::ExecuteJob *job = action.execute();
             job->exec();
