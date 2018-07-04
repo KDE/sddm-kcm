@@ -29,7 +29,7 @@ class SelectImageButton : public QToolButton
     Q_OBJECT
     Q_PROPERTY(QString imagePath READ imagePath WRITE setImagePath NOTIFY imagePathChanged USER true)
 public:
-    SelectImageButton(QWidget* parent = 0);
+    explicit SelectImageButton(QWidget* parent = nullptr);
     virtual ~SelectImageButton();
 
     //we use QString rather that KUrl because it seems to work better with KConfigXT
@@ -37,7 +37,7 @@ public:
     QString imagePath() const;
 
 Q_SIGNALS:
-    void imagePathChanged(QString);
+    void imagePathChanged(const QString&);
 
 private Q_SLOTS:
     void onLoadImageFromFile();
