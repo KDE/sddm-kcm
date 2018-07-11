@@ -69,7 +69,7 @@ void ThemesDelegate::paint(QPainter *painter,
     const QPixmap pix = originalPix.scaled(QSize(ThemesDelegate::SCREENSHOT_SIZE, ThemesDelegate::SCREENSHOT_SIZE/1.6), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
     // Highlight selected item
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
     opt.showDecorationSelected = true;
     QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
     style->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter, opt.widget);
