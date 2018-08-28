@@ -31,7 +31,7 @@
 #include "cursortheme/cursortheme.h"
 
 const int MIN_UID = 1000;
-const int MAX_UID = 65000;
+const int MAX_UID = 60000;
 
 AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
     QWidget(parent),
