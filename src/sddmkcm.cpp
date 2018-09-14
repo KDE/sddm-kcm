@@ -63,10 +63,12 @@ SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     // This does not listen for new config files in the directory.
     QStringList configFiles = QDir(SDDM_CONFIG_DIR).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
                 systemConfigFiles = QDir(SDDM_SYSTEM_CONFIG_DIR).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
+
+    // QStringBuilder keeps dangling references, so force return of QString (QTBUG-47066)
     std::transform(systemConfigFiles.begin(), systemConfigFiles.end(), systemConfigFiles.begin(),
-                    [](const QString &filename) { return QStringLiteral(SDDM_SYSTEM_CONFIG_DIR "/") + filename; });
+                    [](const QString &filename) -> QString { return QStringLiteral(SDDM_SYSTEM_CONFIG_DIR "/") + filename; });
     std::transform(configFiles.begin(), configFiles.end(), configFiles.begin(),
-                    [](const QString &filename) { return QStringLiteral(SDDM_CONFIG_DIR "/") + filename; });
+                    [](const QString &filename) -> QString { return QStringLiteral(SDDM_CONFIG_DIR "/") + filename; });
 
     mSddmConfig->addConfigSources(systemConfigFiles + configFiles);
 
