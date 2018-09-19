@@ -30,7 +30,7 @@ public:
     explicit SddmKcm(QWidget *parent, const QVariantList &args);
     ~SddmKcm() Q_DECL_OVERRIDE;
 
-public slots:
+public Q_SLOTS:
     void save() Q_DECL_OVERRIDE;
 
 private:

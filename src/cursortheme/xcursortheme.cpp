@@ -133,19 +133,19 @@ QString XCursorTheme::findAlternative(const QString &name) const
 
 XcursorImage *XCursorTheme::xcLoadImage(const QString &image, int size) const
 {
-    QByteArray cursorName = QFile::encodeName(image);
-    QByteArray themeName  = QFile::encodeName(name());
+    const QByteArray cursorName = QFile::encodeName(image);
+    const QByteArray themeName  = QFile::encodeName(name());
 
-    return XcursorLibraryLoadImage(cursorName, themeName, size);
+    return XcursorLibraryLoadImage(cursorName.constData(), themeName.constData(), size);
 }
 
 
 XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
 {
-    QByteArray cursorName = QFile::encodeName(image);
-    QByteArray themeName  = QFile::encodeName(name());
+    const QByteArray cursorName = QFile::encodeName(image);
+    const QByteArray themeName  = QFile::encodeName(name());
 
-    return XcursorLibraryLoadImages(cursorName, themeName, size);
+    return XcursorLibraryLoadImages(cursorName.constData(), themeName.constData(), size);
 }
 
 

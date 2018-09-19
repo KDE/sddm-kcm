@@ -24,7 +24,7 @@ using namespace KAuth;
 class SddmAuthHelper: public QObject
 {
     Q_OBJECT
-public slots:
+public Q_SLOTS:
     ActionReply save(const QVariantMap &args);
     ActionReply installtheme(const QVariantMap &args);
     ActionReply uninstalltheme(const QVariantMap &args);

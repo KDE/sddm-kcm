@@ -37,11 +37,11 @@ public:
     QVariantMap save();
     QString themeConfigPath() const;
 
-signals:
+Q_SIGNALS:
     void changed(bool);
     void themesChanged();
     
-private slots:
+private Q_SLOTS:
     void themeSelected(const QModelIndex &index);
     void backgroundChanged(const QString &imagePath);
     void getNewStuffClicked();

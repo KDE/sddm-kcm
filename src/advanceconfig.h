@@ -39,10 +39,10 @@ public:
     
     QVariantMap save();
     
-signals:
+Q_SIGNALS:
     void changed(bool changed=true);
 
-private slots:
+private Q_SLOTS:
     void slotUidRangeChanged();
 
 private:
