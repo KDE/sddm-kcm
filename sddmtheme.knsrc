@@ -1,5 +1,9 @@
 [KNewStuff3]
 Name=Login Screen
+Name[ca]=Pantalla d'inici de sessió
+Name[sv]=Inloggningsfönster
+Name[uk]=Вікно входу
+Name[x-test]=xxLogin Screenxx
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=SDDM Theme
 StandardResource=tmp
