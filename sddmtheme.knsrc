@@ -1,6 +1,9 @@
 [KNewStuff3]
 Name=Login Screen
 Name[ca]=Pantalla d'inici de sessió
+Name[fr]=Écran de connexion
+Name[nl]=Aanmeldscherm
+Name[pt]=Ecrã de Autenticação
 Name[sv]=Inloggningsfönster
 Name[uk]=Вікно входу
 Name[x-test]=xxLogin Screenxx
