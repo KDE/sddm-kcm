@@ -17,6 +17,7 @@
 * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ***************************************************************************/
 
+#include "config.h"
 #include "sessionmodel.h"
 
 #include <QDir>
@@ -46,8 +47,8 @@ public:
 };
 
 SessionModel::SessionModel(QObject *parent) : QAbstractListModel(parent), d(new SessionModelPrivate()) {
-    loadDir(QStringLiteral("/usr/share/xsessions"), SessionTypeX);
-    loadDir(QStringLiteral("/usr/share/wayland-sessions"), SessionTypeWayland);
+    loadDir(QStringLiteral(XSESSIONS_DIR), SessionTypeX);
+    loadDir(QStringLiteral(WAYLAND_SESSIONS_DIR), SessionTypeWayland);
 }
 
 SessionModel::~SessionModel() {
