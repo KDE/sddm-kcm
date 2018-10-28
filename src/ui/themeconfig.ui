@@ -116,9 +116,12 @@
      <item>
       <widget class="QPushButton" name="getNewButton">
        <property name="text">
-        <string>Get New Theme</string>
+        <string>Get New Themes...</string>
        </property>
        <property name="icon">
+        <iconset theme="get-hot-new-stuff">
+          <normaloff/>
+         </iconset>
        </property>
       </widget>
      </item>
