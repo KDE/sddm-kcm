@@ -114,21 +114,14 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="getNewButton">
+      <widget class="QPushButton" name="removeThemeButton">
        <property name="text">
-        <string>Get New Login Screens...</string>
+        <string>Remove</string>
        </property>
        <property name="icon">
-        <iconset theme="get-hot-new-stuff">
+        <iconset theme="delete">
          <normaloff/>
         </iconset>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="installFromFileButton">
-       <property name="text">
-        <string>Install From File</string>
        </property>
       </widget>
      </item>
@@ -146,9 +139,26 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="removeThemeButton">
+      <widget class="QPushButton" name="installFromFileButton">
        <property name="text">
-        <string>Remove Theme</string>
+        <string>Install From File...</string>
+       </property>
+       <property name="icon">
+        <iconset theme="document-import">
+         <normaloff/>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="getNewButton">
+       <property name="text">
+        <string>Get New Login Screens...</string>
+       </property>
+       <property name="icon">
+        <iconset theme="get-hot-new-stuff">
+         <normaloff/>
+        </iconset>
        </property>
       </widget>
      </item>
