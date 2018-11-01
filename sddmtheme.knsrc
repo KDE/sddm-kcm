@@ -19,6 +19,7 @@ Name[ru]=Вход в систему
 Name[sv]=Inloggningsfönster
 Name[uk]=Вікно входу
 Name[x-test]=xxLogin Screenxx
+Name[zh_TW]=登入畫面
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=SDDM Theme
 StandardResource=tmp
