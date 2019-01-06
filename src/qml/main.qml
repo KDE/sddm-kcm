@@ -22,7 +22,7 @@ Rectangle {
     SystemPalette { id: palette; colorGroup: SystemPalette.Active }
     color: palette.base
     width: 360
-    height:300
+    height:320
 
     property string themeName: ""
     property string previewPath: ""
@@ -41,7 +41,7 @@ Rectangle {
         source: previewPath
         anchors {
             top: parent.top
-            topMargin: 10
+            topMargin: 25
             horizontalCenter: parent.horizontalCenter
         }
 
