@@ -19,7 +19,8 @@ import QtQuick.Layouts 1.1
 
 Rectangle {
     id: root
-    color: "#b7bdc0"
+    SystemPalette { id: palette; colorGroup: SystemPalette.Active }
+    color: palette.base
     width: 360
     height:300
 
@@ -69,30 +70,36 @@ Rectangle {
                 columns: 2
 
             Text {
+                color: palette.text
                 text: description
                 font.bold: true
                 font.pointSize: 13
             }
             Text {
+                color: palette.text
                 text: version
                 font.bold: true
                 font.pointSize: 10
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             }
             Text {
+                color: palette.text
                 text: authorName
                 font.pointSize: 10
             }
             Text {
+                color: palette.text
                 text: license
                 font.pointSize: 7
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             }
             Text {
+                color: palette.text
                 text: website
                 font.pointSize: 7
             }
             Text {
+                color: palette.text
                 text: email
                 font.pointSize: 7
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
