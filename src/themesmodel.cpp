@@ -90,7 +90,7 @@ void ThemesModel::populate()
         endResetModel();
     }
 
-    QString themesBaseDir = KSharedConfig::openConfig(QString::fromLatin1(SDDM_CONFIG_FILE), KConfig::SimpleConfig)->group("Theme").readEntry("ThemeDir");
+    QString themesBaseDir = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::SimpleConfig)->group("Theme").readEntry("ThemeDir");
 
     if (themesBaseDir.isEmpty()) {
         themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sddm/themes"), QStandardPaths::LocateDirectory);

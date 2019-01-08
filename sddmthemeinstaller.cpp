@@ -58,7 +58,7 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    if (parser.isSet(QLatin1String("install"))) {
+    if (parser.isSet(QStringLiteral("install"))) {
         const QFileInfo themefile(args.first());
         if (!themefile.exists()) {
             qWarning() << "Specified theme file does not exists";
@@ -81,7 +81,7 @@ int main(int argc, char **argv)
         cg.writeEntry(themefile.absoluteFilePath(), job->data().value(QStringLiteral("installedPaths")).toStringList());
         return 0;
     }
-    if (parser.isSet(QLatin1String("uninstall"))) {
+    if (parser.isSet(QStringLiteral("uninstall"))) {
         KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"), KConfig::SimpleConfig), "DownloadedThemes");
         const QStringList installed = cg.readEntry(args.first(), QStringList());
         for (const QString &installedTheme: installed) {

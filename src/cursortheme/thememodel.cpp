@@ -282,7 +282,7 @@ bool CursorThemeModel::handleDefault(const QDir &themeDir)
         return true;
     }
 
-    defaultName = QLatin1String("default");
+    defaultName = QStringLiteral("default");
     return false;
 }
 
@@ -363,7 +363,7 @@ void CursorThemeModel::insertThemes()
 
     // The theme Xcursor will end up using if no theme is configured
     if (defaultName.isNull() || !hasTheme(defaultName))
-        defaultName = QLatin1String("KDE_Classic");
+        defaultName = QStringLiteral("KDE_Classic");
 }
 
 

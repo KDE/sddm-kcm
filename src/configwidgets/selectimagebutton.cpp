@@ -39,8 +39,8 @@ SelectImageButton::SelectImageButton(QWidget *parent)
 
     setIconSize(QSize(64,64));
 
-    menu->addAction(QIcon::fromTheme(QLatin1String("document-open-folder")), i18n("Load from file..."), this, SLOT(onLoadImageFromFile()));
-    menu->addAction(QIcon::fromTheme(QLatin1String("edit-clear")), i18n("Clear Image"), this, SLOT(onClearImage()));
+    menu->addAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Load from file..."), this, &SelectImageButton::onLoadImageFromFile);
+    menu->addAction(QIcon::fromTheme(QStringLiteral("edit-clear")), i18n("Clear Image"), this, &SelectImageButton::onClearImage);
     setMenu(menu);
 
     onClearImage();
@@ -61,7 +61,7 @@ void SelectImageButton::setImagePath(const QString &imagePath) {
         imageIcon.addPixmap(image.scaled(iconSize().boundedTo(image.size()), Qt::KeepAspectRatio));
         setIcon(imageIcon);
     } else {
-        setIcon(QIcon::fromTheme(QLatin1String("image-x-generic")));
+        setIcon(QIcon::fromTheme(QStringLiteral("image-x-generic")));
     }
     Q_EMIT imagePathChanged(m_imagePath);
 }

@@ -49,9 +49,9 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply = ActionReply::HelperErrorReply();
-    QSharedPointer<KConfig> sddmConfig = openConfig(args[QLatin1String("sddm.conf")].toString());
+    QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
     QSharedPointer<KConfig> themeConfig;
-    QString themeConfigFile = args[QLatin1String("theme.conf.user")].toString();
+    QString themeConfigFile = args[QStringLiteral("theme.conf.user")].toString();
 
     if (!themeConfigFile.isEmpty()) {
         themeConfig = openConfig(themeConfigFile);

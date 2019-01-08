@@ -54,9 +54,9 @@ ThemeConfig::ThemeConfig(const KSharedConfigPtr &config, QWidget *parent) :
     model->populate();
     connect(this, &ThemeConfig::themesChanged, model, &ThemesModel::populate);
 
-    connect(configUi->themesListView, SIGNAL(activated(QModelIndex)), SLOT(themeSelected(QModelIndex)));
-    connect(configUi->themesListView, SIGNAL(clicked(QModelIndex)), SLOT(themeSelected(QModelIndex)));
-    connect(configUi->selectBackgroundButton, SIGNAL(imagePathChanged(QString)), SLOT(backgroundChanged(QString)));
+    connect(configUi->themesListView, &QAbstractItemView::activated, this, &ThemeConfig::themeSelected);
+    connect(configUi->themesListView, &QAbstractItemView::clicked, this, &ThemeConfig::themeSelected);
+    connect(configUi->selectBackgroundButton, &SelectImageButton::imagePathChanged, this, &ThemeConfig::backgroundChanged);
 
     connect(configUi->getNewButton, &QPushButton::clicked, this, &ThemeConfig::getNewStuffClicked);
     connect(configUi->installFromFileButton, &QPushButton::clicked, this, &ThemeConfig::installFromFileClicked);

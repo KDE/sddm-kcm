@@ -45,7 +45,7 @@ K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
 SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     KCModule(parent, args)
 {
-    KAboutData* aboutData = new KAboutData(QStringLiteral("kcmsddm"), i18n("SDDM KDE Config"), QString::fromLatin1(PROJECT_VERSION));
+    KAboutData* aboutData = new KAboutData(QStringLiteral("kcmsddm"), i18n("SDDM KDE Config"), QLatin1String(PROJECT_VERSION));
 
     aboutData->setShortDescription(i18n("Login screen using the SDDM"));
     aboutData->setLicense(KAboutLicense::GPL_V2);
@@ -57,11 +57,11 @@ SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     setAboutData(aboutData);
     setNeedsAuthorization(true);
 
-    mSddmConfig = KSharedConfig::openConfig(QString::fromLatin1(SDDM_CONFIG_FILE), KConfig::CascadeConfig);
+    mSddmConfig = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::CascadeConfig);
 
     // This does not listen for new config files in the directory.
-    QStringList configFiles = QDir(QString::fromLatin1(SDDM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
-                systemConfigFiles = QDir(QString::fromLatin1(SDDM_SYSTEM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
+    QStringList configFiles = QDir(QLatin1String(SDDM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
+                systemConfigFiles = QDir(QLatin1String(SDDM_SYSTEM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
 
     // QStringBuilder keeps dangling references, so force return of QString (QTBUG-47066)
     std::transform(systemConfigFiles.begin(), systemConfigFiles.end(), systemConfigFiles.begin(),
@@ -82,7 +82,7 @@ void SddmKcm::save()
 {
     QVariantMap args;
     
-    args[QStringLiteral("sddm.conf")] = QString::fromLatin1(SDDM_CONFIG_FILE);
+    args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
 
     if (!mThemeConfig->themeConfigPath().isEmpty()) {
         args[QStringLiteral("theme.conf.user")] = QString(mThemeConfig->themeConfigPath() + QLatin1String(".user"));

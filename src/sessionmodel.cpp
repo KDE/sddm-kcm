@@ -58,7 +58,7 @@ SessionModel::~SessionModel() {
 void SessionModel::loadDir(const QString &path, SessionType type)
 {
     QDir dir(path);
-    dir.setNameFilters(QStringList() << QLatin1String("*.desktop"));
+    dir.setNameFilters(QStringList() << QStringLiteral("*.desktop"));
     dir.setFilter(QDir::Files);
     // read session
     foreach(const QString &session, dir.entryList()) {

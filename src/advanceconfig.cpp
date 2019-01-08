@@ -48,11 +48,11 @@ AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
     connect(configUi->rebootCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->cursorList, SIGNAL(activated(int)), SIGNAL(changed()));
     connect(configUi->minimumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
-    connect(configUi->minimumUid, SIGNAL(textChanged(QString)), SLOT(slotUidRangeChanged()));
+    connect(configUi->minimumUid, &QLineEdit::textChanged, this, &AdvanceConfig::slotUidRangeChanged);
     connect(configUi->maximumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
-    connect(configUi->maximumUid, SIGNAL(textChanged(QString)), SLOT(slotUidRangeChanged()));
-    connect(configUi->autoLogin, SIGNAL(clicked()), SIGNAL(changed()));
-    connect(configUi->reloginAfterQuit, SIGNAL(clicked()), SIGNAL(changed()));
+    connect(configUi->maximumUid, &QLineEdit::textChanged, this, &AdvanceConfig::slotUidRangeChanged);
+    connect(configUi->autoLogin, &QGroupBox::clicked, this, &AdvanceConfig::changed);
+    connect(configUi->reloginAfterQuit, &QAbstractButton::clicked, this, &AdvanceConfig::changed);
 }
 
 AdvanceConfig::~AdvanceConfig()
