@@ -146,8 +146,7 @@ void ThemeConfig::themeSelected(const QModelIndex &index)
     configUi->quickWidget->rootObject()->setProperty("version", index.data(ThemesModel::VersionRole).toString());
 
     //Check if we need to display configuration group
-    QString configPath = themePath + index.data(ThemesModel::ConfigFileRole).toString();
-    prepareConfigurationUi(configPath);
+    prepareConfigurationUi(index);
 
     emit changed(true);
 }
@@ -158,8 +157,11 @@ void ThemeConfig::backgroundChanged(const QString &imagePath)
     emit changed(true);
 }
 
-void ThemeConfig::prepareConfigurationUi(const QString &configPath)
+void ThemeConfig::prepareConfigurationUi(const QModelIndex &index)
 {
+    const QString themePath = index.data(ThemesModel::PathRole).toString();
+    const QString configPath = themePath + index.data(ThemesModel::ConfigFileRole).toString();
+
     mThemeConfigPath = configPath;
 
     QFile configFile(configPath);
@@ -169,7 +171,7 @@ void ThemeConfig::prepareConfigurationUi(const QString &configPath)
         themeConfig->addConfigSources({configFile.fileName()});
 
         configUi->customizeBox->setVisible(true);
-        configUi->selectBackgroundButton->setImagePath(themeConfig->group("General").readEntry("background"));
+        configUi->selectBackgroundButton->setImagePath(themePath + themeConfig->group("General").readEntry("background"));
     } else {
         configUi->customizeBox->setVisible(false);
     }
