@@ -25,6 +25,7 @@
 
 #include <QUrl>
 #include <QFileDialog>
+#include <QImageReader>
 #include <QMenu>
 
 #include <KLocalizedString>
@@ -73,13 +74,23 @@ QString SelectImageButton::imagePath() const {
 
 void SelectImageButton::onLoadImageFromFile()
 {
-    QUrl fileUrl = QFileDialog::getOpenFileUrl(this, i18nc("@title:window", "Select Image"), QUrl(), QStringLiteral("image/*"), nullptr, nullptr, QStringList() << QStringLiteral("file"));
+    QPointer<QFileDialog> dialog = new QFileDialog(this, i18nc("@title:window", "Select Image"));
+    dialog->setAcceptMode(QFileDialog::AcceptOpen);
+    dialog->setFileMode(QFileDialog::ExistingFile);
 
-    if (!fileUrl.isEmpty()) {
-        setImagePath(fileUrl.path());
-    } else {
-        return;
+    const QList<QByteArray> supportedMimeTypes = QImageReader::supportedMimeTypes();
+    QStringList mimeTypeFilter;
+    mimeTypeFilter.reserve(supportedMimeTypes.count());
+    for(const QByteArray &b: supportedMimeTypes) {
+        mimeTypeFilter.append(QString::fromLatin1(b));
     }
+    dialog->setMimeTypeFilters(mimeTypeFilter);
+
+    int rc = dialog->exec();
+    if (rc == QDialog::Accepted && dialog->selectedFiles().count() > 0) {
+        setImagePath(dialog->selectedFiles().first());
+    }
+    delete dialog;
 }
 
 void SelectImageButton::onClearImage()
