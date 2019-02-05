@@ -56,7 +56,7 @@ private:
     
     void prepareInitialTheme();
     QModelIndex findThemeIndex(const QString &theme) const;
-    void prepareConfigurationUi(const QString &configPath);
+    void prepareConfigurationUi(const QModelIndex &index);
     void dump();
 };
 
