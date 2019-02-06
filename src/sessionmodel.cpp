@@ -65,7 +65,7 @@ void SessionModel::loadDir(const QString &path, SessionType type)
         QFile inputFile(dir.absoluteFilePath(session));
         if (!inputFile.open(QIODevice::ReadOnly))
             continue;
-        SessionPtr si { new Session { session, QString(), QString(), QString() } };
+        SessionPtr si { new Session { session.chopped(strlen(".desktop")), QString(), QString(), QString() } };
         bool isHidden = false;
         QString current_section;
         QTextStream in(&inputFile);
