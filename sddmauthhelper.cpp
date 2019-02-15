@@ -225,7 +225,7 @@ ActionReply SddmAuthHelper::uninstalltheme(const QVariantMap &args)
 }
 
 
-KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmsddm", SddmAuthHelper);
+KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmsddm", SddmAuthHelper)
 
 #include "moc_sddmauthhelper.cpp"
 
