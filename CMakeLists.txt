@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 set(PROJECT_VERSION "5.15.80")
 
 set(QT_MIN_VERSION "5.11.0")
-set(KF5_MIN_VERSION "5.54.0")
+set(KF5_MIN_VERSION "5.56.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
@@ -50,7 +50,7 @@ install(FILES kcm_sddm.desktop DESTINATION ${CMAKE_INSTALL_KSERVICES5DIR})
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 
 add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
-target_link_libraries(kcmsddm_authhelper KF5::Auth KF5::ConfigCore KF5::Archive KF5::I18n)
+target_link_libraries(kcmsddm_authhelper KF5::AuthCore KF5::ConfigCore KF5::Archive KF5::I18n)
 
 kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
 install(TARGETS kcmsddm_authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
@@ -62,7 +62,7 @@ add_executable(sddmthemeinstaller
 
 target_link_libraries(sddmthemeinstaller
     KF5::I18n
-    KF5::Auth
+    KF5::AuthCore
     KF5::CoreAddons
     KF5::ConfigCore
     KF5::WidgetsAddons)

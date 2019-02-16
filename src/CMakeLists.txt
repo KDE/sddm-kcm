@@ -41,7 +41,7 @@ target_link_libraries(kcm_sddm
     Qt5::QuickWidgets
     KF5::I18n
     KF5::ConfigWidgets
-    KF5::Auth
+    KF5::AuthCore
     KF5::KIOWidgets
     KF5::NewStuff
 
