@@ -1,5 +1,6 @@
 /*
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
+    Copyright 2019 by Filip Fila <filipfila.kde@gmail.com>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -14,15 +15,17 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-import QtQuick 2.1
-import QtQuick.Layouts 1.1
+import QtQuick 2.4
+import QtQuick.Layouts 1.12
+import QtQuick.Controls 2.4
+import org.kde.kirigami 2.4 as Kirigami
+import QtGraphicalEffects 1.0
 
 Rectangle {
     id: root
-    SystemPalette { id: palette; colorGroup: SystemPalette.Active }
-    color: palette.base
-    width: 360
-    height:320
+    //WORKAROUND: makes the rectangle's color match the background color
+    color: Qt.tint(palette.window, Qt.rgba(palette.base.r, palette.base.g, palette.base.b, 0.3))
+    height: Kirigami.Units.gridUnit * 24
 
     property string themeName: ""
     property string previewPath: ""
@@ -34,75 +37,110 @@ Rectangle {
     property string copyright: ""
     property string version: ""
 
+    DropShadow {
+        source: previewImage.available ? previewImage : noPreviewFrame
+        anchors.fill: previewImage.available ? previewImage : noPreviewFrame
+        verticalOffset: 2
+        radius: 10
+        samples: 32
+        color: Qt.rgba(0, 0, 0, 0.3)
+    }
+
     Image {
         id: previewImage
-        width: root.paintedWidth
-        height: 210
+        readonly property bool available: status === Image.Ready || status === Image.Loading
+        visible: available
         source: previewPath
+        sourceSize.width: width
+        sourceSize.height: height
         anchors {
-            top: parent.top
-            topMargin: 25
-            horizontalCenter: parent.horizontalCenter
+            top: root.top
+            left: root.left
+            right: root.right
+            margins: Math.round(units.smallSpacing * 1.5)
         }
-
         fillMode: Image.PreserveAspectFit
     }
 
-    Rectangle { // rounded corners for img
-        id: border
-        width: previewImage.paintedWidth + 2
-        height: previewImage.paintedHeight + 2
-        color: "transparent"
-        border.color: "#bb000000" // color of background
-        border.width: 2
-        radius: 2
-        anchors.centerIn: previewImage
-    }
+    Rectangle {
+        id: noPreviewFrame
+        visible: !previewImage.available
+        radius: units.smallSpacing
+        anchors {
+            top: root.top
+            left: root.left
+            right: root.right
+            margins: Math.round(units.smallSpacing * 1.5)
+        }
+        height: Math.round(width * 0.5625) // 16:9 aspect ratio
+        color: Kirigami.Theme.backgroundColor
 
-        GridLayout {
-            id: texttable
-            width: previewImage.paintedWidth
-                anchors {
-                    top: previewImage.bottom
-                    left: previewImage.left
-                    right: previewImage.right
-                }
-                columns: 2
+        ColumnLayout{
+            anchors.centerIn: parent
 
-            Text {
-                color: palette.text
-                text: description
-                font.bold: true
-                font.pointSize: 13
+            Kirigami.Icon {
+                Layout.alignment : Qt.AlignHCenter
+                width: units.iconSizes.huge
+                height: width
+                source: "view-preview"
             }
-            Text {
-                color: palette.text
-                text: version
-                font.bold: true
-                font.pointSize: 10
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-            }
-            Text {
-                color: palette.text
-                text: authorName
-                font.pointSize: 10
-            }
-            Text {
-                color: palette.text
-                text: license
-                font.pointSize: 7
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-            }
-            Text {
-                color: palette.text
-                text: website
-                font.pointSize: 7
-            }
-            Text {
-                color: palette.text
-                text: email
-                font.pointSize: 7
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+
+            Kirigami.Heading {
+                id: noPreviewText
+                text: i18n("No preview available")
             }
         }
+    }
+
+    ColumnLayout {
+        id: column
+        width: previewImage.paintedWidth
+        anchors {
+            top: previewImage.available ? previewImage.bottom : noPreviewFrame.bottom
+            left: previewImage.available ? previewImage.left : noPreviewFrame.left
+            right: previewImage.available ? previewImage.right : noPreviewFrame.right
+            topMargin: Math.round(units.smallSpacing * 1.5)
+        }
+
+        Kirigami.Heading {
+            text: themeName + " (" + version + ")"
+            level: 2
+            font.bold: true
+            font.weight: Font.Bold
+            Layout.fillWidth: true
+            wrapMode: Text.Wrap
+        }
+
+        Label {
+            text: description + i18n(", by ") + authorName + " (" + license + ")"
+            Layout.fillWidth: true
+            wrapMode: Text.Wrap
+        }
+
+        Label {
+            id: url
+            visible: website !== ""
+            text:("<a href='"+website+"'>"+website+"</a>")
+            onLinkActivated: Qt.openUrlExternally(link)
+            font.pointSize: theme.smallestFont.pointSize
+            Layout.fillWidth: true
+            wrapMode: Text.Wrap
+        }
+
+        Label {
+            id: mail
+            visible: email !== ""
+            text: ("<a href='"+email+"'>"+email+"</a>")
+            onLinkActivated: Qt.openUrlExternally("mailto:"+email+"")
+            font.pointSize: theme.smallestFont.pointSize
+            Layout.fillWidth: true
+            Layout.bottomMargin: Math.round(units.smallSpacing * 1.5)
+            wrapMode: Text.Wrap
+        }
+    }
+
+    SystemPalette {
+        id: palette
+        colorGroup: SystemPalette.Active
+    }
 }
