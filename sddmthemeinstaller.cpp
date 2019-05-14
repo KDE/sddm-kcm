@@ -72,8 +72,9 @@ int main(int argc, char **argv)
         KAuth::ExecuteJob *job = action.execute();
         bool rc = job->exec();
         if (!rc) {
-            KMessageBox::sorry(nullptr, i18n("Unable to install theme"), job->errorString());
-            qWarning() << job->error() << job->errorString();
+            QString errorString = job->errorString();
+            qWarning() << job->error() << errorString;
+            KMessageBox::sorry(nullptr, errorString, i18n("Unable to install theme"));
             return -1;
         }
 
