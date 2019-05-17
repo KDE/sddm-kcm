@@ -69,7 +69,7 @@ target_link_libraries(sddmthemeinstaller
 install(TARGETS sddmthemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(src)
-install(FILES sddmtheme.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
+install(FILES sddmtheme.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
