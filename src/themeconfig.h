@@ -5,12 +5,12 @@
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 2 of the License, or
     (at your option) any later version.
-   
+
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-   
+
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -33,14 +33,14 @@ class ThemeConfig : public QWidget
 public:
     explicit ThemeConfig(const KSharedConfigPtr &config, QWidget *parent = nullptr);
     ~ThemeConfig();
-    
+
     QVariantMap save();
     QString themeConfigPath() const;
 
 Q_SIGNALS:
     void changed(bool);
     void themesChanged();
-    
+
 private Q_SLOTS:
     void themeSelected(const QModelIndex &index);
     void backgroundChanged(const QString &imagePath);
@@ -53,7 +53,7 @@ private:
     KSharedConfigPtr mConfig;
     QString mBackgroundPath;
     QString mThemeConfigPath;
-    
+
     void prepareInitialTheme();
     QModelIndex findThemeIndex(const QString &theme) const;
     void prepareConfigurationUi(const QModelIndex &index);

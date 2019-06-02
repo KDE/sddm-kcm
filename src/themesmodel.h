@@ -40,20 +40,20 @@ public:
         ThemeApiRole,
         ConfigFileRole
     };
-               
+
     explicit ThemesModel(QObject *parent=nullptr);
     ~ThemesModel() Q_DECL_OVERRIDE;
-    
+
     int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
     QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
-    
+
 public Q_SLOTS:
     void populate();
-    
+
 private:
     void add(const QString &name, const QString &path);
     void dump(const QString &id, const QString &path);
-    
+
     QList<ThemeMetadata> mThemeList;
 };
 

@@ -70,7 +70,7 @@ void AdvanceConfig::load()
     proxyCursorModel->setSourceModel(cursorModel);
     proxyCursorModel->setFilterCaseSensitivity(Qt::CaseSensitive);
     proxyCursorModel->sort(Qt::DisplayRole, Qt::AscendingOrder);
-    
+
     configUi->cursorList->setModel(proxyCursorModel);
     QString currentCursor = mConfig->group("Theme").readEntry("CursorTheme", "");
     QModelIndex cursorIndex = proxyCursorModel->findIndex(currentCursor);
@@ -80,7 +80,7 @@ void AdvanceConfig::load()
     int minUid, maxUid;
     minUid = mConfig->group("Users").readEntry("MinimumUid", MIN_UID);
     maxUid = mConfig->group("Users").readEntry("MaximumUid", MAX_UID);
-    
+
     userModel = new UsersModel(this);
     configUi->userList->setModel(userModel);
     userModel->populate( minUid, maxUid );
@@ -96,14 +96,14 @@ void AdvanceConfig::load()
 
     configUi->autoLogin->setChecked(!currentUser.isEmpty());
     configUi->reloginAfterQuit->setChecked(mConfig->group("Autologin").readEntry("Relogin", false));
-    
+
     QValidator *uidValidator = new QIntValidator(MIN_UID, MAX_UID, configUi->minimumUid);
     configUi->minimumUid->setValidator(uidValidator);
     configUi->minimumUid->setText(QString::number(minUid));
-    
+
     configUi->maximumUid->setValidator(uidValidator);
     configUi->maximumUid->setText(QString::number(maxUid));
-    
+
 
     //Commands
     configUi->haltCommand->setUrl(QUrl::fromLocalFile(mConfig->group("General").readEntry("HaltCommand")));
@@ -158,6 +158,6 @@ bool AdvanceConfig::isUidRangeValid(int minUid, int maxUid) const
 {
     if (minUid < 0 || minUid > maxUid)
         return false;
-    
+
     return true;
 }
