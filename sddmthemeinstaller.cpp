@@ -61,7 +61,7 @@ int main(int argc, char **argv)
     if (parser.isSet(QStringLiteral("install"))) {
         const QFileInfo themefile(args.first());
         if (!themefile.exists()) {
-            qWarning() << "Specified theme file does not exists";
+            qWarning() << "Specified theme file does not exist";
             return 0;
         }
 
