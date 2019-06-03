@@ -26,7 +26,6 @@ namespace Ui {
 }
 
 class SortProxyModel;
-class CursorTheme;
 class UsersModel;
 class SessionModel;
 
