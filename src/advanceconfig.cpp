@@ -52,8 +52,8 @@ AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
     connect(configUi->maximumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->maximumUid, &QLineEdit::textChanged, this, &AdvanceConfig::slotUidRangeChanged);
 
-    // manually emit changed signal since QGroupBox::clicked will pass false to changed() when unchecked
-    connect(configUi->autoLogin, &QGroupBox::clicked, this, [this] { emit changed(); });
+    // manually emit changed signal since QCheckBox::clicked will pass false to changed() when unchecked
+    connect(configUi->autoLogin, &QCheckBox::clicked, this, [this] { emit changed(); });
     connect(configUi->reloginAfterQuit, &QAbstractButton::clicked, this, [this] { emit changed(); });
 }
 
