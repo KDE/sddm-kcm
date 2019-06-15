@@ -120,24 +120,24 @@ QVariantMap AdvanceConfig::save()
     if (cursorIndex.isValid()) {
         const CursorTheme *cursorTheme = proxyCursorModel->theme(cursorIndex);
         if (cursorTheme)
-            args[QStringLiteral("sddm.conf/Theme/CursorTheme")] = cursorTheme->name();
+            args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme->name();
     }
 
-    args[QStringLiteral("sddm.conf/Autologin/User")] = ( configUi->autoLogin->isChecked() ) ? configUi->userList->currentText() : QString();
-    args[QStringLiteral("sddm.conf/Autologin/Session")] = ( configUi->autoLogin->isChecked() ) ? configUi->sessionList->currentData() : QString();
+    args[QStringLiteral("kde_settings.conf/Autologin/User")] = ( configUi->autoLogin->isChecked() ) ? configUi->userList->currentText() : QString();
+    args[QStringLiteral("kde_settings.conf/Autologin/Session")] = ( configUi->autoLogin->isChecked() ) ? configUi->sessionList->currentData() : QString();
 
-    args[QStringLiteral("sddm.conf/Autologin/Relogin")] = configUi->reloginAfterQuit->isChecked();
+    args[QStringLiteral("kde_settings.conf/Autologin/Relogin")] = configUi->reloginAfterQuit->isChecked();
     //TODO session
 
     int minUid = configUi->minimumUid->text().toInt();
     int maxUid = configUi->maximumUid->text().toInt();
     if (isUidRangeValid(minUid, maxUid)) {
-        args[QStringLiteral("sddm.conf/Users/MinimumUid")] = configUi->minimumUid->text();
-        args[QStringLiteral("sddm.conf/Users/MaximumUid")] = configUi->maximumUid->text();
+        args[QStringLiteral("kde_settings.conf/Users/MinimumUid")] = configUi->minimumUid->text();
+        args[QStringLiteral("kde_settings.conf/Users/MaximumUid")] = configUi->maximumUid->text();
     }
 
-    args[QStringLiteral("sddm.conf/General/HaltCommand")] = configUi->haltCommand->url().toLocalFile();
-    args[QStringLiteral("sddm.conf/General/RebootCommand")] = configUi->rebootCommand->url().toLocalFile();
+    args[QStringLiteral("kde_settings.conf/General/HaltCommand")] = configUi->haltCommand->url().toLocalFile();
+    args[QStringLiteral("kde_settings.conf/General/RebootCommand")] = configUi->rebootCommand->url().toLocalFile();
 
     return args;
 }

@@ -38,6 +38,7 @@ private:
 
 private:
     KSharedConfigPtr mSddmConfig;
+    KSharedConfigPtr mSddmOldConfig;
     ThemeConfig *mThemeConfig;
     AdvanceConfig *mAdvanceConfig;
 };

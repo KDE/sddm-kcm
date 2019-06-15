@@ -80,7 +80,7 @@ QVariantMap ThemeConfig::save()
 
     QVariantMap args;
 
-    args[QStringLiteral("sddm.conf/Theme/Current")] = index.data(ThemesModel::IdRole);
+    args[QStringLiteral("kde_settings.conf/Theme/Current")] = index.data(ThemesModel::IdRole);
 
     if (!mThemeConfigPath.isEmpty()) {
         if (!mBackgroundPath.isEmpty()) {

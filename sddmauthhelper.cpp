@@ -49,7 +49,8 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply = ActionReply::HelperErrorReply();
-    QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
+    QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
+    QSharedPointer<KConfig> sddmOldConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
     QSharedPointer<KConfig> themeConfig;
     QString themeConfigFile = args[QStringLiteral("theme.conf.user")].toString();
 
@@ -60,7 +61,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
     QMap<QString, QVariant>::const_iterator iterator;
 
     for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
-        if (iterator.key() == QLatin1String("sddm.conf") || iterator.key() == QLatin1String("theme.conf.user"))
+        if (iterator.key() == QLatin1String("kde_settings.conf") || iterator.key() == QLatin1String("theme.conf.user"))
             continue;
 
         QStringList configFields = iterator.key().split(QLatin1Char('/'));
@@ -73,8 +74,12 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
         QString groupName = configFields[1];
         QString keyName = configFields[2];
 
-        if (fileName == QLatin1String("sddm.conf")) {
+        // if there is an identical keyName in "sddm.conf" we want to delete it so SDDM doesn't read from the old file
+        // hierarchically SDDM prefers "etc/sddm.conf" to "/etc/sddm.conf.d/some_file.conf"
+        
+        if (fileName == QLatin1String("kde_settings.conf")) {
             sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
+            sddmOldConfig->group(groupName).deleteEntry(keyName);
         } else if (fileName == QLatin1String("theme.conf.user") && !themeConfig.isNull()) {
             QFileInfo themeConfigFileInfo(themeConfigFile);
             QDir configRootDirectory = themeConfigFileInfo.absoluteDir();
@@ -109,6 +114,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
         }
     }
 
+    sddmOldConfig->sync();
     sddmConfig->sync();
 
     if (!themeConfig.isNull())
