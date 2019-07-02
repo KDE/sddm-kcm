@@ -17,20 +17,20 @@
  */
 #include "sddmauthhelper.h"
 
+#include <QDebug>
+#include <QDir>
 #include <QFile>
 #include <QFileInfo>
-#include <QDir>
-#include <QSharedPointer>
-#include <QDebug>
-#include <QMimeType>
 #include <QMimeDatabase>
+#include <QMimeType>
+#include <QSharedPointer>
 
-#include <KLocalizedString>
-#include <KZip>
-#include <KTar>
 #include <KArchive>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
+#include <KTar>
+#include <KZip>
 
 static QSharedPointer<KConfig> openConfig(const QString &filePath)
 {

@@ -18,8 +18,8 @@
 #ifndef THEMEMETADATA_H
 #define THEMEMETADATA_H
 
-#include <QString>
 #include <QSharedDataPointer>
+#include <QString>
 
 class ThemeMetadataPrivate;
 

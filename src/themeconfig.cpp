@@ -14,28 +14,27 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include "config.h"
 #include "themeconfig.h"
 #include "ui_themeconfig.h"
 #include "themesmodel.h"
 #include "themesdelegate.h"
 
+#include <QDebug>
 #include <QFile>
+#include <QFileDialog>
+#include <QPointer>
 #include <QQuickView>
 #include <QQuickItem>
 #include <QQmlContext>
-#include <QDebug>
 #include <QStandardPaths>
-#include <QPointer>
-#include <QFileDialog>
 
-#include <KMessageBox>
-#include <KConfigGroup>
-#include <KNewStuff3/KNS3/DownloadDialog>
 #include <KAuthAction>
 #include <KAuthActionReply>
 #include <KAuthExecuteJob>
-
-#include "config.h"
+#include <KConfigGroup>
+#include <KMessageBox>
+#include <KNewStuff3/KNS3/DownloadDialog>
 
 ThemeConfig::ThemeConfig(const KSharedConfigPtr &config, QWidget *parent) :
     QWidget(parent),

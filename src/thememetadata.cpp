@@ -20,8 +20,8 @@
 #include <QSharedData>
 #include <QSharedPointer>
 
-#include <KDesktopFile>
 #include <KConfigGroup>
+#include <KDesktopFile>
 
 class ThemeMetadataPrivate : public QSharedData
 {

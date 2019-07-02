@@ -14,30 +14,25 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include "advanceconfig.h"
+#include "config.h"
 #include "sddmkcm.h"
+#include "themeconfig.h"
 
 #include <algorithm>
 
+#include <QDebug>
 #include <QDir>
 #include <QHBoxLayout>
 #include <QTabWidget>
 
-#include <KPluginFactory>
-
-#include <KAuth/KAuthActionReply>
-
 #include <KAboutData>
-
+#include <KAuth/KAuthActionReply>
+#include <kauthexecutejob.h>
 #include <KLocalizedString>
-#include <QDebug>
-
-#include "config.h"
-#include "themeconfig.h"
-#include "advanceconfig.h"
-
+#include <KPluginFactory>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <kauthexecutejob.h>
 
 K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
 

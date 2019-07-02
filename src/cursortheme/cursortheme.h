@@ -16,12 +16,11 @@
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
-
 #ifndef CURSORTHEME_H
 #define CURSORTHEME_H
 
-#include <QPixmap>
 #include <QHash>
+#include <QPixmap>
 
 /**
  * This is the abstract base class for all cursor themes stored in a

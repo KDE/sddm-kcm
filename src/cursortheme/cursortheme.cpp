@@ -16,23 +16,20 @@
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
+#include "cursortheme.h"
+// #include <config-X11.h>
 
 #include <QApplication>
-#include <QStyle>
 #include <QCursor>
-#include <QImage>
 #include <QFile>
+#include <QImage>
+#include <QStyle>
 #include <QX11Info>
-
-#include "cursortheme.h"
-
-// #include <config-X11.h>
 
 #ifdef HAVE_XFIXES
 #  include <X11/Xlib.h>
 #  include <X11/extensions/Xfixes.h>
 #endif
-
 
 CursorTheme::CursorTheme(const QString &title, const QString &description)
 {

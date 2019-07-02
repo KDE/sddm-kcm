@@ -16,19 +16,17 @@
 * Free Software Foundation, Inc.,
 * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ***************************************************************************/
-
 #include "config.h"
 #include "sessionmodel.h"
+
+#include <memory>
 
 #include <QDir>
 #include <QFile>
 #include <QList>
 #include <QTextStream>
 
-#include <memory>
-
 #include <KLocalizedString>
-
 
 class Session {
 public:

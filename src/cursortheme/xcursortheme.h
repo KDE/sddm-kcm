@@ -16,13 +16,12 @@
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
-
 #ifndef XCURSORTHEME_H
 #define XCURSORTHEME_H
 
-#include <QHash>
-
 #include "cursortheme.h"
+
+#include <QHash>
 
 class QDir;
 

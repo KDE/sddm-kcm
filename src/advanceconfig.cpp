@@ -16,19 +16,18 @@
  */
 #include "advanceconfig.h"
 #include "ui_advanceconfig.h"
-
-#include <QIntValidator>
-
-#include <QDebug>
-#include <KConfigGroup>
-#include <KUser>
-
-#include "usersmodel.h"
-#include "sessionmodel.h"
 #include "config.h"
 #include "cursortheme/thememodel.h"
 #include "cursortheme/sortproxymodel.h"
 #include "cursortheme/cursortheme.h"
+#include "sessionmodel.h"
+#include "usersmodel.h"
+
+#include <QDebug>
+#include <QIntValidator>
+
+#include <KConfigGroup>
+#include <KUser>
 
 const int MIN_UID = 1000;
 const int MAX_UID = 60000;

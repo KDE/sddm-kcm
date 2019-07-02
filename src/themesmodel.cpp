@@ -14,21 +14,18 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
+#include "config.h"
+#include "thememetadata.h"
 #include "themesmodel.h"
 
 #include <QDir>
+#include <QStandardPaths>
 #include <QString>
 
 #include <KConfig>
 #include <KConfigGroup>
 #include <QDebug>
 #include <KSharedConfig>
-#include <QStandardPaths>
-
-#include "config.h"
-#include "thememetadata.h"
 
 ThemesModel::ThemesModel(QObject *parent)
     : QAbstractListModel(parent)

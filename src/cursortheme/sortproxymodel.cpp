@@ -16,11 +16,10 @@
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
+#include "cursortheme.h"
+#include "sortproxymodel.h"
 
 #include <QString>
-#include "sortproxymodel.h"
-#include "cursortheme.h"
-
 
 int SortProxyModel::compare(const QModelIndex &left, const QModelIndex &right, int role) const
 {

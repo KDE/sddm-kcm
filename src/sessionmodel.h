@@ -16,12 +16,10 @@
 * Free Software Foundation, Inc.,
 * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ***************************************************************************/
-
 #ifndef SDDM_SESSIONMODEL_H
 #define SDDM_SESSIONMODEL_H
 
 #include <QAbstractListModel>
-
 #include <QHash>
 
 class SessionModelPrivate;

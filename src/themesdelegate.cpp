@@ -17,17 +17,16 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "themesdelegate.h"
+#include "themesmodel.h"
 
 #include <QApplication>
+#include <QDebug>
+#include <QFontDatabase>
 #include <QPainter>
 #include <QTextDocument>
 #include <QTime>
-#include <QDebug>
-#include <QFontDatabase>
 
 #include <KLocalizedString>
-
-#include "themesmodel.h"
 
 static const int BLUR_PAD = 6;
 

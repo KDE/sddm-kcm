@@ -17,21 +17,20 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  */
-
 #include <QApplication>
-#include <QDir>
-#include <QFile>
-#include <QDebug>
-#include <QProcess>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
+#include <QDir>
+#include <QDebug>
+#include <QFile>
+#include <QProcess>
 
-#include <KLocalizedString>
 #include <KAuthAction>
 #include <KAuthExecuteJob>
+#include <KConfigGroup>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
-#include <KConfigGroup>
 
 int main(int argc, char **argv)
 {

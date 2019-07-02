@@ -16,12 +16,12 @@
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
-
 #ifndef SORTPROXYMODEL_H
 #define SORTPROXYMODEL_H
 
-#include <QSortFilterProxyModel>
 #include "thememodel.h"
+
+#include <QSortFilterProxyModel>
 
 /**
  * SortProxyModel is a sorting proxy model intended to be used in combination
