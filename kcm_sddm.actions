@@ -295,3 +295,15 @@ Description[zh_CN]=移除已经安装的 SDDM 主题
 Description[zh_TW]=移除先前安裝的 SDDM 主題
 Policy=auth_admin
 Persistence=session
+
+[org.kde.kcontrol.kcmsddm.sync]
+Name=Synchronize Settings
+Description=Synchronizes user settings with SDDM settings
+Policy=auth_admin
+Persistence=session
+
+[org.kde.kcontrol.kcmsddm.reset]
+Name=Reset Settings
+Description=Resets SDDM settings so there are not user settings
+Policy=auth_admin
+Persistence=session

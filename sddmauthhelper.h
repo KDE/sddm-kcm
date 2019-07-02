@@ -24,10 +24,16 @@ using namespace KAuth;
 class SddmAuthHelper: public QObject
 {
     Q_OBJECT
+
 public Q_SLOTS:
+    ActionReply sync(const QVariantMap &args);
+    ActionReply reset(const QVariantMap &args);
     ActionReply save(const QVariantMap &args);
     ActionReply installtheme(const QVariantMap &args);
     ActionReply uninstalltheme(const QVariantMap &args);
+
+public:
+    void copyFile (const QString &source, const QString &destination);
 };
 
 #endif //SDDMAUTHHELPER_H

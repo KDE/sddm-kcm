@@ -17,6 +17,8 @@
  */
 #include "sddmauthhelper.h"
 
+#include <unistd.h>
+
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -30,6 +32,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KTar>
+#include <KUser>
 #include <KZip>
 
 static QSharedPointer<KConfig> openConfig(const QString &filePath)
@@ -44,6 +47,86 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
         file.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadGroup | QFile::ReadOther);
     }
     return QSharedPointer<KConfig>(new KConfig(file.fileName(), KConfig::SimpleConfig));
+}
+
+void SddmAuthHelper::copyFile(const QString &source, const QString &destination)
+{
+    KUser sddmUser(QStringLiteral("sddm"));
+
+    if (QFile::exists(destination)) {
+        QFile::remove(destination);
+    }
+
+    QFile::copy(source, destination);
+    const char* destinationConverted = destination.toLocal8Bit().data();
+    if (chown(destinationConverted, sddmUser.userId().nativeId(), sddmUser.groupId().nativeId())) {
+        return;
+    }
+}
+
+ActionReply SddmAuthHelper::sync(const QVariantMap &args)
+{
+    QDir sddmConfigLocation(args[QStringLiteral("sddmUserConfig")].toString());
+    if (!sddmConfigLocation.exists()) {
+        QDir().mkpath(sddmConfigLocation.path());
+    }
+
+    // copy fontconfig (font, font rendering)
+    if (!args[QStringLiteral("fontconfig")].isNull()) {
+        QDir fontconfigSource(args[QStringLiteral("fontconfig")].toString());
+        QStringList sourceFileEntries = fontconfigSource.entryList (QDir::Files);
+        QStringList sourceDirEntries = fontconfigSource.entryList (QDir::AllDirs);
+        QDir fontconfigDestination(sddmConfigLocation.path() + QStringLiteral("/fontconfig"));
+
+        if (!fontconfigDestination.exists()) {
+            QDir().mkpath(fontconfigDestination.path());
+        }
+
+        if (sourceDirEntries.count() != 0) {
+            for (int i = 0; i<sourceDirEntries.count(); i++) {
+                QString directoriesSource = fontconfigSource.path() + QDir::separator() + sourceDirEntries[i];
+                QString directoriesDestination = fontconfigDestination.path() + QDir::separator() + sourceDirEntries[i];
+                fontconfigSource.mkpath(directoriesDestination);
+                copyFile(directoriesSource, directoriesDestination);
+            }
+        }
+
+        if (sourceFileEntries.count() != 0) {
+            for (int i = 0; i<sourceFileEntries.count(); i++) {
+                QString filesSource = fontconfigSource.path() + QDir::separator() + sourceFileEntries[i];
+                QString filesDestination = fontconfigDestination.path() + QDir::separator() + sourceFileEntries[i];
+                copyFile(filesSource, filesDestination);
+            }
+        }
+    }
+
+    // copy kdeglobals (color scheme)
+    if (!args[QStringLiteral("kdeglobals")].isNull()) {
+        QDir kdeglobalsSource(args[QStringLiteral("kdeglobals")].toString());
+        QDir kdeglobalsDestination(sddmConfigLocation.path() + QStringLiteral("/kdeglobals"));
+        copyFile(kdeglobalsSource.path(), kdeglobalsDestination.path());
+    }
+
+    // copy plasmarc (icons, UI style)
+    if (!args[QStringLiteral("plasmarc")].isNull()) {
+        QDir plasmarcSource(args[QStringLiteral("plasmarc")].toString());
+        QDir plasmarcDestination(sddmConfigLocation.path() + QStringLiteral("/plasmarc"));
+        copyFile(plasmarcSource.path(), plasmarcDestination.path());
+    }
+
+    return ActionReply::SuccessReply();
+}
+
+ActionReply SddmAuthHelper::reset(const QVariantMap &args)
+{
+    QDir sddmConfigLocation(args[QStringLiteral("sddmUserConfig")].toString());
+    QDir fontconfigDir(args[QStringLiteral("sddmUserConfig")].toString() + QStringLiteral("/fontconfig"));
+
+    fontconfigDir.removeRecursively();
+    QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kdeglobals"));
+    QFile::remove(sddmConfigLocation.path() + QStringLiteral("/plasmarc"));
+
+    return ActionReply::SuccessReply();
 }
 
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
@@ -76,7 +159,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 
         // if there is an identical keyName in "sddm.conf" we want to delete it so SDDM doesn't read from the old file
         // hierarchically SDDM prefers "etc/sddm.conf" to "/etc/sddm.conf.d/some_file.conf"
-        
+
         if (fileName == QLatin1String("kde_settings.conf")) {
             sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
             sddmOldConfig->group(groupName).deleteEntry(keyName);
@@ -230,8 +313,6 @@ ActionReply SddmAuthHelper::uninstalltheme(const QVariantMap &args)
     return ActionReply::SuccessReply();
 }
 
-
 KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmsddm", SddmAuthHelper)
 
 #include "moc_sddmauthhelper.cpp"
-

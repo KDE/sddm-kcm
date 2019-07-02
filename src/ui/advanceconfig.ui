@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>326</height>
+    <width>547</width>
+    <height>435</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -19,20 +19,15 @@
      <property name="formAlignment">
       <set>Qt::AlignHCenter|Qt::AlignTop</set>
      </property>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Automatically log in:</string>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="1">
       <layout class="QHBoxLayout" name="horizontalLayout">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
        <item>
         <widget class="QCheckBox" name="autoLogin">
          <property name="text">
@@ -82,6 +77,42 @@
        </property>
       </widget>
      </item>
+     <item row="3" column="0">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>8</width>
+         <height>8</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Cursor theme:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="cursorList"/>
+     </item>
+     <item row="5" column="0">
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>8</width>
+         <height>8</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
      <item row="6" column="0">
       <widget class="QLabel" name="label_6">
        <property name="text">
@@ -122,6 +153,19 @@
        </property>
       </widget>
      </item>
+     <item row="8" column="0">
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>8</width>
+         <height>8</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
      <item row="9" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
@@ -130,7 +174,7 @@
       </widget>
      </item>
      <item row="9" column="1">
-      <widget class="KUrlRequester" name="haltCommand">
+      <widget class="KUrlRequester" name="haltCommand" native="true">
        <property name="minimumSize">
         <size>
          <width>250</width>
@@ -147,7 +191,7 @@
       </widget>
      </item>
      <item row="10" column="1">
-      <widget class="KUrlRequester" name="rebootCommand">
+      <widget class="KUrlRequester" name="rebootCommand" native="true">
        <property name="minimumSize">
         <size>
          <width>250</width>
@@ -156,61 +200,74 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_3">
+     <item row="12" column="0">
+      <widget class="QLabel" name="label_8">
        <property name="text">
-        <string>Automatically log in:</string>
+        <string>Settings synchronization:</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
-      <widget class="QComboBox" name="cursorList"/>
+     <item row="11" column="0">
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>8</width>
+         <height>8</height>
+        </size>
+       </property>
+      </spacer>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_7">
+     <item row="12" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="syncSettings">
+         <property name="text">
+          <string>Sync</string>
+         </property>
+         <property name="icon">
+          <iconset theme="view-refresh"/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="resetSettings">
+         <property name="text">
+          <string>Reset</string>
+         </property>
+         <property name="icon">
+          <iconset theme="edit-undo"/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLabel" name="syncExplanation">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>320</width>
+         <height>70</height>
+        </size>
+       </property>
        <property name="text">
-        <string>Cursor theme:</string>
+        <string>Settings synchronization allows you to transfer your theme customization (color scheme, font, font rendering, icon and Plasma theme) to SDDM.</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
-     </item>
-     <item row="3" column="0">
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>8</width>
-         <height>8</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="5" column="0">
-      <spacer name="verticalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>8</width>
-         <height>8</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="8" column="0">
-      <spacer name="verticalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>8</width>
-         <height>8</height>
-        </size>
-       </property>
-      </spacer>
      </item>
     </layout>
    </item>

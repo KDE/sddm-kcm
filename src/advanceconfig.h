@@ -41,6 +41,10 @@ public:
 Q_SIGNALS:
     void changed(bool changed=true);
 
+public Q_SLOTS:
+    void syncSettingsChanged();
+    void resetSettingsChanged();
+
 private Q_SLOTS:
     void slotUidRangeChanged();
 

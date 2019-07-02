@@ -24,9 +24,14 @@
 #include "usersmodel.h"
 
 #include <QDebug>
+#include <QFontDatabase>
 #include <QIntValidator>
+#include <QStandardPaths>
 
+#include <KAuth/KAuthActionReply>
+#include <kauthexecutejob.h>
 #include <KConfigGroup>
+#include <KMessageBox>
 #include <KUser>
 
 const int MIN_UID = 1000;
@@ -38,6 +43,7 @@ AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
 {
     configUi = new Ui::AdvanceConfig();
     configUi->setupUi(this);
+    configUi->syncExplanation->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
 
     load();
 
@@ -54,6 +60,9 @@ AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
     // manually emit changed signal since QCheckBox::clicked will pass false to changed() when unchecked
     connect(configUi->autoLogin, &QCheckBox::clicked, this, [this] { emit changed(); });
     connect(configUi->reloginAfterQuit, &QAbstractButton::clicked, this, [this] { emit changed(); });
+
+    connect(configUi->syncSettings, &QPushButton::clicked, this, &AdvanceConfig::syncSettingsChanged);
+    connect(configUi->resetSettings, &QPushButton::clicked, this, &AdvanceConfig::resetSettingsChanged);
 }
 
 AdvanceConfig::~AdvanceConfig()
@@ -159,4 +168,70 @@ bool AdvanceConfig::isUidRangeValid(int minUid, int maxUid) const
         return false;
 
     return true;
+}
+
+void AdvanceConfig::syncSettingsChanged()
+{
+    const QString fontconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("fontconfig"), QStandardPaths::LocateDirectory);
+    const QString kdeglobalsPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kdeglobals"));
+    const QString plasmarcPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("plasmarc"));
+    const QString sddmUserConfigPath = KUser("sddm").homeDir() + QStringLiteral("/.config");
+
+    if (fontconfigPath.isEmpty()) {
+        qDebug() << "fontconfig folder not found";
+    }
+    if (kdeglobalsPath.isEmpty()) {
+        qDebug() << "kdeglobals file not found";
+    }
+    if (plasmarcPath.isEmpty()) {
+        qDebug() << "plasmarc file not found";
+    }
+
+    QVariantMap args;
+    args[QStringLiteral("fontconfig")] = fontconfigPath;
+    args[QStringLiteral("kdeglobals")] = kdeglobalsPath;
+    args[QStringLiteral("plasmarc")] = plasmarcPath;
+    args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
+
+    KAuth::Action syncAction(QStringLiteral("org.kde.kcontrol.kcmsddm.sync"));
+    syncAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
+    syncAction.setArguments(args);
+
+    auto job = syncAction.execute();
+    job->exec();
+
+    if (job->error()){
+        qDebug() << "Synchronization failed";
+        qDebug() << job->errorString();
+        qDebug() << job->errorText();
+        KMessageBox::error(this, job->errorText());
+    } else {
+        changed(false);
+        qDebug() << "Synchronization successful";
+    }
+}
+
+void AdvanceConfig::resetSettingsChanged()
+{
+    const QString sddmUserConfigPath = KUser("sddm").homeDir() + QStringLiteral("/.config");
+
+    QVariantMap args;
+    args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
+
+    KAuth::Action resetAction(QStringLiteral("org.kde.kcontrol.kcmsddm.reset"));
+    resetAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
+    resetAction.setArguments(args); 
+
+    auto job = resetAction.execute();
+    job->exec();
+
+    if (job->error()){
+        qDebug() << "Reset failed";
+        qDebug() << job->errorString();
+        qDebug() << job->errorText();
+        KMessageBox::error(this, job->errorText());
+    } else {
+        changed(false);
+        qDebug() << "Reset successful";
+    }
 }
