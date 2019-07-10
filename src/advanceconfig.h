@@ -55,7 +55,6 @@ private:
 private:
     Ui::AdvanceConfig *configUi;
     KSharedConfigPtr mConfig;
-    SortProxyModel *proxyCursorModel;
     UsersModel *userModel;
     SessionModel *sessionModel;
 };

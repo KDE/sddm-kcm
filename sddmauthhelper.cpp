@@ -114,6 +114,36 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         copyFile(plasmarcSource.path(), plasmarcDestination.path());
     }
 
+    // write cursor theme to config file
+    ActionReply reply = ActionReply::HelperErrorReply();
+    QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
+    QSharedPointer<KConfig> sddmOldConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
+
+    QMap<QString, QVariant>::const_iterator iterator;
+
+    for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
+        if (iterator.key() == QLatin1String("kde_settings.conf"))
+            continue;
+
+        QStringList configFields = iterator.key().split(QLatin1Char('/'));
+        if (configFields.size() != 3) {
+            continue;
+        }
+
+        QSharedPointer<KConfig> config;
+        QString fileName = configFields[0];
+        QString groupName = configFields[1];
+        QString keyName = configFields[2];
+
+        if (fileName == QLatin1String("kde_settings.conf") && iterator.value().isValid()) {
+            sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
+            sddmOldConfig->group(groupName).deleteEntry(keyName);
+        }
+    }
+
+    sddmOldConfig->sync();
+    sddmConfig->sync();
+
     return ActionReply::SuccessReply();
 }
 
@@ -125,6 +155,36 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
     fontconfigDir.removeRecursively();
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kdeglobals"));
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/plasmarc"));
+
+    // remove cursor theme from config file
+    ActionReply reply = ActionReply::HelperErrorReply();
+    QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
+    QSharedPointer<KConfig> sddmOldConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
+
+    QMap<QString, QVariant>::const_iterator iterator;
+
+    for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
+        if (iterator.key() == QLatin1String("kde_settings.conf"))
+            continue;
+
+        QStringList configFields = iterator.key().split(QLatin1Char('/'));
+        if (configFields.size() != 3) {
+            continue;
+        }
+
+        QSharedPointer<KConfig> config;
+        QString fileName = configFields[0];
+        QString groupName = configFields[1];
+        QString keyName = configFields[2];
+
+        if (fileName == QLatin1String("kde_settings.conf")) {
+            sddmConfig->group(groupName).deleteEntry(keyName);
+            sddmOldConfig->group(groupName).deleteEntry(keyName);
+        }
+    }
+
+    sddmOldConfig->sync();
+    sddmConfig->sync();
 
     return ActionReply::SuccessReply();
 }

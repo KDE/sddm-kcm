@@ -17,9 +17,6 @@
 #include "advanceconfig.h"
 #include "ui_advanceconfig.h"
 #include "config.h"
-#include "cursortheme/thememodel.h"
-#include "cursortheme/sortproxymodel.h"
-#include "cursortheme/cursortheme.h"
 #include "sessionmodel.h"
 #include "usersmodel.h"
 
@@ -51,7 +48,6 @@ AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
     connect(configUi->sessionList, SIGNAL(activated(int)), SIGNAL(changed()));
     connect(configUi->haltCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->rebootCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
-    connect(configUi->cursorList, SIGNAL(activated(int)), SIGNAL(changed()));
     connect(configUi->minimumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->minimumUid, &QLineEdit::textChanged, this, &AdvanceConfig::slotUidRangeChanged);
     connect(configUi->maximumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
@@ -72,18 +68,6 @@ AdvanceConfig::~AdvanceConfig()
 
 void AdvanceConfig::load()
 {
-    //Cursor themes
-    CursorThemeModel *cursorModel = new CursorThemeModel(this);
-    proxyCursorModel = new SortProxyModel(this);
-    proxyCursorModel->setSourceModel(cursorModel);
-    proxyCursorModel->setFilterCaseSensitivity(Qt::CaseSensitive);
-    proxyCursorModel->sort(Qt::DisplayRole, Qt::AscendingOrder);
-
-    configUi->cursorList->setModel(proxyCursorModel);
-    QString currentCursor = mConfig->group("Theme").readEntry("CursorTheme", "");
-    QModelIndex cursorIndex = proxyCursorModel->findIndex(currentCursor);
-    configUi->cursorList->setCurrentIndex(cursorIndex.row() < 0 ? 0 : cursorIndex.row());
-
     //User list
     int minUid, maxUid;
     minUid = mConfig->group("Users").readEntry("MinimumUid", MIN_UID);
@@ -121,15 +105,6 @@ void AdvanceConfig::load()
 QVariantMap AdvanceConfig::save()
 {
     QVariantMap args;
-
-    qDebug() << "idx:" << configUi->cursorList->currentIndex();
-
-    QModelIndex cursorIndex = configUi->cursorList->model()->index(configUi->cursorList->currentIndex(),0);
-    if (cursorIndex.isValid()) {
-        const CursorTheme *cursorTheme = proxyCursorModel->theme(cursorIndex);
-        if (cursorTheme)
-            args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme->name();
-    }
 
     args[QStringLiteral("kde_settings.conf/Autologin/User")] = ( configUi->autoLogin->isChecked() ) ? configUi->userList->currentText() : QString();
     args[QStringLiteral("kde_settings.conf/Autologin/Session")] = ( configUi->autoLogin->isChecked() ) ? configUi->sessionList->currentData() : QString();
@@ -172,6 +147,10 @@ bool AdvanceConfig::isUidRangeValid(int minUid, int maxUid) const
 
 void AdvanceConfig::syncSettingsChanged()
 {
+    KConfig config(QStringLiteral("kcminputrc"));
+    KConfigGroup configGroup(&config, "Mouse");
+    QVariant cursorTheme = configGroup.readEntry("cursorTheme", QString());
+
     const QString fontconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("fontconfig"), QStandardPaths::LocateDirectory);
     const QString kdeglobalsPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kdeglobals"));
     const QString plasmarcPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("plasmarc"));
@@ -188,6 +167,9 @@ void AdvanceConfig::syncSettingsChanged()
     }
 
     QVariantMap args;
+    args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
+    args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
+    args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme;
     args[QStringLiteral("fontconfig")] = fontconfigPath;
     args[QStringLiteral("kdeglobals")] = kdeglobalsPath;
     args[QStringLiteral("plasmarc")] = plasmarcPath;
@@ -217,6 +199,10 @@ void AdvanceConfig::resetSettingsChanged()
 
     QVariantMap args;
     args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
+    args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
+    args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
+    args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
+    args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = QVariant();
 
     KAuth::Action resetAction(QStringLiteral("org.kde.kcontrol.kcmsddm.reset"));
     resetAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
