@@ -147,9 +147,13 @@ bool AdvanceConfig::isUidRangeValid(int minUid, int maxUid) const
 
 void AdvanceConfig::syncSettingsChanged()
 {
-    KConfig config(QStringLiteral("kcminputrc"));
-    KConfigGroup configGroup(&config, "Mouse");
-    QVariant cursorTheme = configGroup.readEntry("cursorTheme", QString());
+    KConfig cursorConfig(QStringLiteral("kcminputrc"));
+    KConfigGroup cursorConfigGroup(&cursorConfig, "Mouse");
+    QVariant cursorTheme = cursorConfigGroup.readEntry("cursorTheme", QString());
+
+    KConfig numLockConfig(QStringLiteral("kcminputrc"));
+    KConfigGroup numLockConfigGroup(&numLockConfig, "Keyboard");
+    QString numLock = numLockConfigGroup.readEntry("NumLock");
 
     const QString fontconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("fontconfig"), QStandardPaths::LocateDirectory);
     const QString kdeglobalsPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kdeglobals"));
@@ -170,6 +174,17 @@ void AdvanceConfig::syncSettingsChanged()
     args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
     args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme;
+    if (!numLock.isEmpty()) {
+        if (numLock == QStringLiteral("0")) {
+            args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("on");
+        }
+        else if (numLock == QStringLiteral("1")) {
+            args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("off");
+        }
+        else {
+            args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("none");
+        }
+    }
     args[QStringLiteral("fontconfig")] = fontconfigPath;
     args[QStringLiteral("kdeglobals")] = kdeglobalsPath;
     args[QStringLiteral("plasmarc")] = plasmarcPath;
@@ -203,6 +218,7 @@ void AdvanceConfig::resetSettingsChanged()
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
     args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
     args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = QVariant();
+    args[QStringLiteral("kde_settings.conf/General/Numlock")] = QVariant();
 
     KAuth::Action resetAction(QStringLiteral("org.kde.kcontrol.kcmsddm.reset"));
     resetAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));

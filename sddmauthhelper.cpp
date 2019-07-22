@@ -114,7 +114,7 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         copyFile(plasmarcSource.path(), plasmarcDestination.path());
     }
 
-    // write cursor theme to config file
+    // write cursor theme and NumLock preference to config file
     ActionReply reply = ActionReply::HelperErrorReply();
     QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
     QSharedPointer<KConfig> sddmOldConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
@@ -156,7 +156,7 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kdeglobals"));
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/plasmarc"));
 
-    // remove cursor theme from config file
+    // remove cursor theme and NumLock preference from config file
     ActionReply reply = ActionReply::HelperErrorReply();
     QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
     QSharedPointer<KConfig> sddmOldConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
