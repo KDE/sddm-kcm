@@ -151,6 +151,10 @@ void AdvanceConfig::syncSettingsChanged()
     KConfigGroup cursorConfigGroup(&cursorConfig, "Mouse");
     QVariant cursorTheme = cursorConfigGroup.readEntry("cursorTheme", QString());
 
+    KConfig dpiConfig(QStringLiteral("kcmfonts"));
+    KConfigGroup dpiConfigGroup(&dpiConfig, "General");
+    QString dpiValue = QStringLiteral("-dpi ") + dpiConfigGroup.readEntry("forceFontDPI");
+
     KConfig numLockConfig(QStringLiteral("kcminputrc"));
     KConfigGroup numLockConfigGroup(&numLockConfig, "Keyboard");
     QString numLock = numLockConfigGroup.readEntry("NumLock");
@@ -174,6 +178,7 @@ void AdvanceConfig::syncSettingsChanged()
     args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
     args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme;
+    args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = dpiValue;
     if (!numLock.isEmpty()) {
         if (numLock == QStringLiteral("0")) {
             args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("on");
@@ -218,6 +223,7 @@ void AdvanceConfig::resetSettingsChanged()
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
     args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
     args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = QVariant();
+    args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = QVariant();
     args[QStringLiteral("kde_settings.conf/General/Numlock")] = QVariant();
 
     KAuth::Action resetAction(QStringLiteral("org.kde.kcontrol.kcmsddm.reset"));
