@@ -1,4 +1,5 @@
 /*
+    Copyright 2019 Filip Fila <filipfila.kde@gmail.com>
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
     Copyright 2011, 2012 David Edmundson <kde@davidedmundson.co.uk>
 
@@ -66,6 +67,7 @@ void SddmAuthHelper::copyFile(const QString &source, const QString &destination)
 
 ActionReply SddmAuthHelper::sync(const QVariantMap &args)
 {
+    // create SDDM config directory if it does not exist
     QDir sddmConfigLocation(args[QStringLiteral("sddmUserConfig")].toString());
     if (!sddmConfigLocation.exists()) {
         QDir().mkpath(sddmConfigLocation.path());
@@ -114,7 +116,7 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         copyFile(plasmarcSource.path(), plasmarcDestination.path());
     }
 
-    // write cursor theme, scaling DPI, and NumLock preference to config file
+    // write cursor theme, NumLock preference, and scaling DPI to config file
     ActionReply reply = ActionReply::HelperErrorReply();
     QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
     QSharedPointer<KConfig> sddmOldConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
@@ -156,7 +158,7 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kdeglobals"));
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/plasmarc"));
 
-    // remove cursor theme, scaling DPI, and NumLock preference from config file
+    // remove cursor theme, NumLock preference, and scaling DPI from config file
     ActionReply reply = ActionReply::HelperErrorReply();
     QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
     QSharedPointer<KConfig> sddmOldConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());

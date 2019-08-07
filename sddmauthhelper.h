@@ -1,4 +1,5 @@
 /*
+    Copyright 2019 Filip Fila <filipfila.kde@gmail.com>
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
 
     This program is free software: you can redistribute it and/or modify

@@ -1,4 +1,5 @@
 /*
+    Copyright 2019 Filip Fila <filipfila.kde@gmail.com>
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
 
     This program is free software: you can redistribute it and/or modify
@@ -53,9 +54,8 @@ AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
     connect(configUi->maximumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->maximumUid, &QLineEdit::textChanged, this, &AdvanceConfig::slotUidRangeChanged);
 
-    // manually emit changed signal since QCheckBox::clicked will pass false to changed() when unchecked
-    connect(configUi->autoLogin, &QCheckBox::clicked, this, [this] { emit changed(); });
-    connect(configUi->reloginAfterQuit, &QAbstractButton::clicked, this, [this] { emit changed(); });
+    connect(configUi->autoLogin, &QCheckBox::toggled, this, [this] { emit changed(); });
+    connect(configUi->reloginAfterQuit, &QAbstractButton::toggled, this, [this] { emit changed(); });
 
     connect(configUi->syncSettings, &QPushButton::clicked, this, &AdvanceConfig::syncSettingsChanged);
     connect(configUi->resetSettings, &QPushButton::clicked, this, &AdvanceConfig::resetSettingsChanged);
@@ -147,6 +147,7 @@ bool AdvanceConfig::isUidRangeValid(int minUid, int maxUid) const
 
 void AdvanceConfig::syncSettingsChanged()
 {
+    // read Plasma values
     KConfig cursorConfig(QStringLiteral("kcminputrc"));
     KConfigGroup cursorConfigGroup(&cursorConfig, "Mouse");
     QVariant cursorTheme = cursorConfigGroup.readEntry("cursorTheme", QString());
@@ -160,28 +161,33 @@ void AdvanceConfig::syncSettingsChanged()
     KConfigGroup numLockConfigGroup(&numLockConfig, "Keyboard");
     QString numLock = numLockConfigGroup.readEntry("NumLock");
 
+    // define paths
     const QString fontconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("fontconfig"), QStandardPaths::LocateDirectory);
     const QString kdeglobalsPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kdeglobals"));
     const QString plasmarcPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("plasmarc"));
     const QString sddmUserConfigPath = KUser("sddm").homeDir() + QStringLiteral("/.config");
 
-    if (fontconfigPath.isEmpty()) {
-        qDebug() << "fontconfig folder not found";
+    // send values and paths to helper, debug if it fails
+    QVariantMap args;
+
+    args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
+
+    args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
+
+    if (!cursorTheme.isNull()) {
+        args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme;
     }
-    if (kdeglobalsPath.isEmpty()) {
-        qDebug() << "kdeglobals file not found";
-    }
-    if (plasmarcPath.isEmpty()) {
-        qDebug() << "plasmarc file not found";
+    else {
+        qDebug() << "Cannot find cursor theme value.";
     }
 
-    QVariantMap args;
-    args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
-    args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
-    args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme;
     if (!dpiValue.isEmpty()) {
         args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = dpiArgument;
     }
+    else {
+        qDebug() << "Cannot find scaling DPI value.";
+    }
+
     if (!numLock.isEmpty()) {
         if (numLock == QStringLiteral("0")) {
             args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("on");
@@ -189,14 +195,41 @@ void AdvanceConfig::syncSettingsChanged()
         else if (numLock == QStringLiteral("1")) {
             args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("off");
         }
-        else {
+        else if (numLock == QStringLiteral("2")) {
             args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("none");
         }
     }
-    args[QStringLiteral("fontconfig")] = fontconfigPath;
-    args[QStringLiteral("kdeglobals")] = kdeglobalsPath;
-    args[QStringLiteral("plasmarc")] = plasmarcPath;
-    args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
+    else {
+        qDebug() << "Cannot find NumLock value.";
+    }
+
+    if (!fontconfigPath.isEmpty()) {
+        args[QStringLiteral("fontconfig")] = fontconfigPath;
+    }
+    else {
+        qDebug() << "Cannot find fontconfig folder.";
+    }
+
+    if (!kdeglobalsPath.isEmpty()) {
+        args[QStringLiteral("kdeglobals")] = kdeglobalsPath;
+    }
+    else {
+        qDebug() << "Cannot find kdeglobals file.";
+    }
+
+    if (!plasmarcPath.isEmpty()) {
+        args[QStringLiteral("plasmarc")] = plasmarcPath;
+    }
+    else {
+        qDebug() << "Cannot find plasmarc file.";
+    }
+
+    if (!sddmUserConfigPath.isEmpty()) {
+        args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
+    }
+    else {
+        qDebug() << "Cannot find SDDM user directory.";
+    }
 
     KAuth::Action syncAction(QStringLiteral("org.kde.kcontrol.kcmsddm.sync"));
     syncAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
@@ -218,15 +251,24 @@ void AdvanceConfig::syncSettingsChanged()
 
 void AdvanceConfig::resetSettingsChanged()
 {
+    // define paths
     const QString sddmUserConfigPath = KUser("sddm").homeDir() + QStringLiteral("/.config");
 
+    // send paths to helper
     QVariantMap args;
+
     args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
+
     args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
+
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
+
     args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
+
     args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = QVariant();
+
     args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = QVariant();
+
     args[QStringLiteral("kde_settings.conf/General/Numlock")] = QVariant();
 
     KAuth::Action resetAction(QStringLiteral("org.kde.kcontrol.kcmsddm.reset"));
