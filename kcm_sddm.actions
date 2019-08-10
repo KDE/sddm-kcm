@@ -134,7 +134,6 @@ Description[x-test]=xxSave Settings in SDDMxx
 Description[zh_CN]=保存 SDDM 设置
 Description[zh_TW]=儲存 SDDM 設定
 Policy=auth_admin
-Persistence=session
 
 [org.kde.kcontrol.kcmsddm.installtheme]
 Name=Install an SDDM theme
@@ -214,7 +213,6 @@ Description[x-test]=xxExtracts a zip file containing an SDDM theme to the SDDM t
 Description[zh_CN]=解压缩包含 SDDM 主题的 ZIP 文件，保存到 SDDM 主题路径
 Description[zh_TW]=解壓縮包含 SDDM 主題的 zip 檔案到 SDDM 主題位置
 Policy=auth_admin
-Persistence=session
 
 [org.kde.kcontrol.kcmsddm.uninstalltheme]
 Name=Uninstall an SDDM theme
@@ -294,7 +292,6 @@ Description[x-test]=xxRemoves a previously installed SDDM themexx
 Description[zh_CN]=移除已经安装的 SDDM 主题
 Description[zh_TW]=移除先前安裝的 SDDM 主題
 Policy=auth_admin
-Persistence=session
 
 [org.kde.kcontrol.kcmsddm.sync]
 Name=Synchronize Settings
@@ -341,7 +338,6 @@ Description[sv]=Synkroniserar användarinställningar med SDDM-inställningar
 Description[uk]=Синхронізація параметрів користувача із параметрами SDDM
 Description[x-test]=xxSynchronizes user settings with SDDM settingsxx
 Policy=auth_admin
-Persistence=session
 
 [org.kde.kcontrol.kcmsddm.reset]
 Name=Reset Settings
@@ -389,4 +385,3 @@ Description[uk]=Скидання параметрів SDDM до типових
 Description[x-test]=xxResets SDDM settings so there are not user settingsxx
 Description[zh_TW]=重設 SDDM 設定（不再是使用者設定）
 Policy=auth_admin
-Persistence=session
