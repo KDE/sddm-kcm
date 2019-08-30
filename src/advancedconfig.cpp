@@ -15,8 +15,8 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "advanceconfig.h"
-#include "ui_advanceconfig.h"
+#include "advancedconfig.h"
+#include "ui_advancedconfig.h"
 #include "config.h"
 #include "sessionmodel.h"
 #include "usersmodel.h"
@@ -35,11 +35,11 @@
 const int MIN_UID = 1000;
 const int MAX_UID = 60000;
 
-AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
+AdvancedConfig::AdvancedConfig(const KSharedConfigPtr &config, QWidget *parent) :
     QWidget(parent),
     mConfig(config)
 {
-    configUi = new Ui::AdvanceConfig();
+    configUi = new Ui::AdvancedConfig();
     configUi->setupUi(this);
     configUi->syncExplanation->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
 
@@ -50,23 +50,23 @@ AdvanceConfig::AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent) :
     connect(configUi->haltCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->rebootCommand, SIGNAL(textChanged(QString)), SIGNAL(changed()));
     connect(configUi->minimumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
-    connect(configUi->minimumUid, &QLineEdit::textChanged, this, &AdvanceConfig::slotUidRangeChanged);
+    connect(configUi->minimumUid, &QLineEdit::textChanged, this, &AdvancedConfig::slotUidRangeChanged);
     connect(configUi->maximumUid, SIGNAL(textChanged(QString)), SIGNAL(changed()));
-    connect(configUi->maximumUid, &QLineEdit::textChanged, this, &AdvanceConfig::slotUidRangeChanged);
+    connect(configUi->maximumUid, &QLineEdit::textChanged, this, &AdvancedConfig::slotUidRangeChanged);
 
     connect(configUi->autoLogin, &QCheckBox::toggled, this, [this] { emit changed(); });
     connect(configUi->reloginAfterQuit, &QAbstractButton::toggled, this, [this] { emit changed(); });
 
-    connect(configUi->syncSettings, &QPushButton::clicked, this, &AdvanceConfig::syncSettingsChanged);
-    connect(configUi->resetSettings, &QPushButton::clicked, this, &AdvanceConfig::resetSettingsChanged);
+    connect(configUi->syncSettings, &QPushButton::clicked, this, &AdvancedConfig::syncSettingsChanged);
+    connect(configUi->resetSettings, &QPushButton::clicked, this, &AdvancedConfig::resetSettingsChanged);
 }
 
-AdvanceConfig::~AdvanceConfig()
+AdvancedConfig::~AdvancedConfig()
 {
     delete configUi;
 }
 
-void AdvanceConfig::load()
+void AdvancedConfig::load()
 {
     //User list
     int minUid, maxUid;
@@ -102,7 +102,7 @@ void AdvanceConfig::load()
     configUi->rebootCommand->setUrl(QUrl::fromLocalFile(mConfig->group("General").readEntry("RebootCommand")));
 }
 
-QVariantMap AdvanceConfig::save()
+QVariantMap AdvancedConfig::save()
 {
     QVariantMap args;
 
@@ -125,7 +125,7 @@ QVariantMap AdvanceConfig::save()
     return args;
 }
 
-void AdvanceConfig::slotUidRangeChanged()
+void AdvancedConfig::slotUidRangeChanged()
 {
     int minUid = configUi->minimumUid->text().toInt();
     int maxUid = configUi->maximumUid->text().toInt();
@@ -137,7 +137,7 @@ void AdvanceConfig::slotUidRangeChanged()
     userModel->populate(minUid, maxUid);
 }
 
-bool AdvanceConfig::isUidRangeValid(int minUid, int maxUid) const
+bool AdvancedConfig::isUidRangeValid(int minUid, int maxUid) const
 {
     if (minUid < 0 || minUid > maxUid)
         return false;
@@ -145,7 +145,7 @@ bool AdvanceConfig::isUidRangeValid(int minUid, int maxUid) const
     return true;
 }
 
-void AdvanceConfig::syncSettingsChanged()
+void AdvancedConfig::syncSettingsChanged()
 {
     // read Plasma values
     KConfig cursorConfig(QStringLiteral("kcminputrc"));
@@ -249,7 +249,7 @@ void AdvanceConfig::syncSettingsChanged()
     }
 }
 
-void AdvanceConfig::resetSettingsChanged()
+void AdvancedConfig::resetSettingsChanged()
 {
     // define paths
     const QString sddmUserConfigPath = KUser("sddm").homeDir() + QStringLiteral("/.config");

@@ -14,7 +14,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "advanceconfig.h"
+#include "advancedconfig.h"
 #include "config.h"
 #include "sddmkcm.h"
 #include "themeconfig.h"
@@ -89,7 +89,7 @@ void SddmKcm::save()
 
     qDebug() << "Ovr:" << args[QStringLiteral("theme.conf.user")].toString();
     args.unite(mThemeConfig->save());
-    args.unite(mAdvanceConfig->save());
+    args.unite(mAdvancedConfig->save());
 
     KAuth::Action saveAction = authAction();
 
@@ -121,10 +121,10 @@ void SddmKcm::prepareUi()
 
     tabHolder->addTab(mThemeConfig, i18n("Theme"));
 
-    mAdvanceConfig = new AdvanceConfig(mSddmConfig, this);
-    connect(mAdvanceConfig, SIGNAL(changed(bool)), SIGNAL(changed(bool)));
+    mAdvancedConfig = new AdvancedConfig(mSddmConfig, this);
+    connect(mAdvancedConfig, SIGNAL(changed(bool)), SIGNAL(changed(bool)));
 
-    tabHolder->addTab(mAdvanceConfig, i18n("Advanced"));
+    tabHolder->addTab(mAdvancedConfig, i18n("Advanced"));
 }
 
 #include "sddmkcm.moc"

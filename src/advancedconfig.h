@@ -23,19 +23,19 @@
 #include <KSharedConfig>
 
 namespace Ui {
-    class AdvanceConfig;
+    class AdvancedConfig;
 }
 
 class SortProxyModel;
 class UsersModel;
 class SessionModel;
 
-class AdvanceConfig : public QWidget
+class AdvancedConfig : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AdvanceConfig(const KSharedConfigPtr &config, QWidget *parent = nullptr);
-    ~AdvanceConfig();
+    explicit AdvancedConfig(const KSharedConfigPtr &config, QWidget *parent = nullptr);
+    ~AdvancedConfig();
 
     QVariantMap save();
 
@@ -54,7 +54,7 @@ private:
     bool isUidRangeValid(int minUid, int maxUid) const;
 
 private:
-    Ui::AdvanceConfig *configUi;
+    Ui::AdvancedConfig *configUi;
     KSharedConfigPtr mConfig;
     UsersModel *userModel;
     SessionModel *sessionModel;

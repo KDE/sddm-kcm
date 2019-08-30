@@ -15,7 +15,7 @@ set(SDDM_KCM_SRCS
     themesmodel.cpp
     thememetadata.cpp
     themesdelegate.cpp
-    advanceconfig.cpp
+    advancedconfig.cpp
     usersmodel.cpp
     sessionmodel.cpp
     configwidgets/selectimagebutton.cpp
@@ -23,7 +23,7 @@ set(SDDM_KCM_SRCS
 
 set(SDDM_KCM_UI
     ui/themeconfig.ui
-    ui/advanceconfig.ui)
+    ui/advancedconfig.ui)
 
 ki18n_wrap_ui(SDDM_KCM_SRCS ${SDDM_KCM_UI})
 add_library(kcm_sddm MODULE ${SDDM_KCM_SRCS})

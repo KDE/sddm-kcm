@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AdvanceConfig</class>
- <widget class="QWidget" name="AdvanceConfig">
+ <class>AdvancedConfig</class>
+ <widget class="QWidget" name="AdvancedConfig">
   <property name="geometry">
    <rect>
     <x>0</x>

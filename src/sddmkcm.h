@@ -21,7 +21,7 @@
 #include <KSharedConfig>
 
 class ThemeConfig;
-class AdvanceConfig;
+class AdvancedConfig;
 
 class SddmKcm : public KCModule
 {
@@ -40,7 +40,7 @@ private:
     KSharedConfigPtr mSddmConfig;
     KSharedConfigPtr mSddmOldConfig;
     ThemeConfig *mThemeConfig;
-    AdvanceConfig *mAdvanceConfig;
+    AdvancedConfig *mAdvancedConfig;
 };
 
 #endif // SDDMKCM_H
