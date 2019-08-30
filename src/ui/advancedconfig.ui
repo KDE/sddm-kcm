@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>547</width>
-    <height>409</height>
+    <width>515</width>
+    <height>477</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -151,7 +151,7 @@
       </widget>
      </item>
      <item row="7" column="1">
-      <widget class="KUrlRequester" name="haltCommand" native="true">
+      <widget class="KUrlRequester" name="haltCommand">
        <property name="minimumSize">
         <size>
          <width>250</width>
@@ -168,7 +168,7 @@
       </widget>
      </item>
      <item row="8" column="1">
-      <widget class="KUrlRequester" name="rebootCommand" native="true">
+      <widget class="KUrlRequester" name="rebootCommand">
        <property name="minimumSize">
         <size>
          <width>250</width>
@@ -229,12 +229,6 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="minimumSize">
-        <size>
-         <width>320</width>
-         <height>90</height>
-        </size>
-       </property>
        <property name="text">
         <string>Settings synchronization allows you to transfer the following Plasma settings to SDDM: color scheme, cursor theme, font, font rendering, NumLock preference, Plasma theme, and scaling DPI.</string>
        </property>
@@ -243,6 +237,26 @@
        </property>
        <property name="wordWrap">
         <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLabel" name="syncWarning">
+       <property name="text">
+        <string>Please note that theme files must be installed globally for settings synchronization to work.</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="1">
+      <widget class="KSeparator" name="kseparator">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>2</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -256,6 +270,11 @@
    <extends>QWidget</extends>
    <header>kurlrequester.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KSeparator</class>
+   <extends>QFrame</extends>
+   <header>kseparator.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

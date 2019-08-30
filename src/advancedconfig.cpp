@@ -42,6 +42,7 @@ AdvancedConfig::AdvancedConfig(const KSharedConfigPtr &config, QWidget *parent) 
     configUi = new Ui::AdvancedConfig();
     configUi->setupUi(this);
     configUi->syncExplanation->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
+    configUi->syncWarning->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
 
     load();
 
