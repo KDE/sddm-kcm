@@ -15,8 +15,8 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef ADVANCECONFIG_H
-#define ADVANCECONFIG_H
+#ifndef ADVANCEDCONFIG_H
+#define ADVANCEDCONFIG_H
 
 #include <QWidget>
 
@@ -60,4 +60,4 @@ private:
     SessionModel *sessionModel;
 };
 
-#endif // ADVANCECONFIG_H
+#endif // ADVANCEDCONFIG_H
