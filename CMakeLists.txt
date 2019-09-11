@@ -26,13 +26,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     NewStuff
 )
 
-
-find_package(XCB
-    REQUIRED COMPONENTS
-        XCB SHM IMAGE
-    OPTIONAL_COMPONENTS
-        XKB
-)
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
    add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 endif()
