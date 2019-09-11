@@ -31,7 +31,6 @@ target_compile_definitions(kcm_sddm PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION
 
 target_link_libraries(kcm_sddm
     Qt5::Widgets
-    Qt5::X11Extras
     Qt5::Quick
     Qt5::QuickWidgets
     KF5::I18n

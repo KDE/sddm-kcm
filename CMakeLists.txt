@@ -13,7 +13,7 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets X11Extras Quick QuickWidgets)
+find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Quick QuickWidgets)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
@@ -26,13 +26,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     NewStuff
 )
 
-
-find_package(X11)
-set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
-                        URL "http://www.x.org"
-                        TYPE REQUIRED
-                        PURPOSE "Required for building the X11 based workspace"
-                      )
 
 find_package(XCB
     REQUIRED COMPONENTS
