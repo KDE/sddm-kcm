@@ -40,6 +40,9 @@ find_package(XCB
     OPTIONAL_COMPONENTS
         XKB
 )
+if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
+   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+endif()
 
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_sddm\")
