@@ -1,6 +1,7 @@
 [Domain]
 Name=SDDM
 Name[ar]=SDDM
+Name[ast]=SDDM
 Name[bs]=SDDM
 Name[ca]=SDDM
 Name[ca@valencia]=SDDM
@@ -48,6 +49,7 @@ URL=https://github.com/sddm/sddm
 [org.kde.kcontrol.kcmsddm.save]
 Name=Save Settings
 Name[ar]=احفظ اﻹعدادات
+Name[ast]=Guardáu d'axustes
 Name[bs]=Sačuvaj postavke
 Name[ca]=Desa l'arranjament
 Name[ca@valencia]=Guarda la configuració
@@ -92,6 +94,7 @@ Name[zh_CN]=保存设置
 Name[zh_TW]=儲存設定
 Description=Save Settings in SDDM
 Description[ar]=احفظ الإعدادات في SDDM
+Description[ast]=Guardáu de los axustes en SDDM
 Description[bs]=Snimi postavke u SDDM
 Description[ca]=Desa l'arranjament a l'SDDM
 Description[ca@valencia]=Guarda la configuració en SDDM
@@ -138,6 +141,7 @@ Policy=auth_admin
 [org.kde.kcontrol.kcmsddm.installtheme]
 Name=Install an SDDM theme
 Name[ar]=ثبّت سمة SDDM
+Name[ast]=Instalación d'un estilu pa SDDM
 Name[ca]=Instal·la un tema de l'SDDM
 Name[ca@valencia]=Instal·la un tema d'SDDM
 Name[cs]=Nainstalovat motiv SDDM
@@ -176,6 +180,7 @@ Name[zh_CN]=安装 SDDM 主题
 Name[zh_TW]=安裝 SDDM 主題
 Description=Extracts a zip file containing an SDDM theme to the SDDM theme location
 Description[ar]=يستخرج ملفّ ZIP يحتوي سمة SDDM في مكان سمات SDDM
+Description[ast]=Estraición d'un estilu pa SDDM nel allugamientu de los estilos pa SDDM
 Description[ca]=Extreu un fitxer ZIP que contingui un tema de l'SDDM a la ubicació de temes de l'SDDM
 Description[ca@valencia]=Extreu un fitxer ZIP que continga un tema d'SDDM en la ubicació de temes d'SDDM
 Description[cs]=Rozbalí soubor zip obsahující motiv SDDM do umístění motivů SDDM
@@ -217,6 +222,7 @@ Policy=auth_admin
 [org.kde.kcontrol.kcmsddm.uninstalltheme]
 Name=Uninstall an SDDM theme
 Name[ar]=أزل تثبيت سمة SDDM
+Name[ast]=Desinstalación d'un estilu pa SDDM
 Name[ca]=Desinstal·la un tema de l'SDDM
 Name[ca@valencia]=Desinstal·la un tema d'SDDM
 Name[cs]=Odinstalovat motiv SDDM
@@ -255,6 +261,7 @@ Name[zh_CN]=卸载 SDDM 主题
 Name[zh_TW]=解除安裝 SDDM 主題
 Description=Removes a previously installed SDDM theme
 Description[ar]=يزيل تثبيت سمة SDDM مثبّتة بالفعل
+Description[ast]=Desaniciu d'un tema pa SDDM instaláu enantes
 Description[ca]=Elimina un tema de l'SDDM instal·lat anteriorment
 Description[ca@valencia]=Elimina un tema d'SDDM instal·lat anteriorment
 Description[cs]=Odstraní dříve nainstalovaný motiv SDDM
@@ -295,6 +302,7 @@ Policy=auth_admin
 
 [org.kde.kcontrol.kcmsddm.sync]
 Name=Synchronize Settings
+Name[ast]=Sincronización d'axustes
 Name[ca]=Paràmetres de sincronització
 Name[cs]=Synchronizovat nastavení
 Name[de]=Einstellungen abgleichen
@@ -321,6 +329,7 @@ Name[x-test]=xxSynchronize Settingsxx
 Name[zh_CN]=同步设置
 Name[zh_TW]=同步設定
 Description=Synchronizes user settings with SDDM settings
+Description[ast]=Sincronización de los axustes del usuariu colos de SDDM
 Description[ca]=Sincronitza els paràmetres de l'usuari amb els paràmetres del SDDM
 Description[cs]=Synchronizuje uživatelské nastavení s nastavením SDDM 
 Description[de]=Benutzereinstellungen mit den SDDM-Einstellungen abgleichen
@@ -349,6 +358,7 @@ Policy=auth_admin
 
 [org.kde.kcontrol.kcmsddm.reset]
 Name=Reset Settings
+Name[ast]=Reafitamientu d'axustes
 Name[ca]=Reinicia els paràmetres
 Name[cs]=Obnovit nastavení
 Name[de]=Einstellungen zurücksetzen
@@ -375,6 +385,7 @@ Name[x-test]=xxReset Settingsxx
 Name[zh_CN]=重置设置
 Name[zh_TW]=重設設定
 Description=Resets SDDM settings so there are not user settings
+Description[ast]=Reafitamientu de los axustes de SDDM
 Description[ca]=Reinicia els paràmetres del SDDM de manera que no hi hagin paràmetres d'usuari
 Description[cs]=Obnovit nastavení SDDM, takže uživatelská nastavení jsou odstraněna
 Description[de]=SDDM-Einstellungen zurücksetzen und Benutzereinstellungen verwerfen
