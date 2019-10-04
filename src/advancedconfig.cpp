@@ -148,6 +148,15 @@ bool AdvancedConfig::isUidRangeValid(int minUid, int maxUid) const
 
 void AdvancedConfig::syncSettingsChanged()
 {
+    // initial check for sddm user; abort if user not present
+    // we have to check with QString and isEmpty() instead of QDir and exists() because
+    // QDir returns "." and true for exists() in the case of a non-existent user;
+    QString sddmHomeDirPath = KUser("sddm").homeDir();
+    if (sddmHomeDirPath.isEmpty()) {
+        KMessageBox::error(this, QStringLiteral("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."));
+        return;
+    }
+
     // read Plasma values
     KConfig cursorConfig(QStringLiteral("kcminputrc"));
     KConfigGroup cursorConfigGroup(&cursorConfig, "Mouse");
@@ -166,7 +175,6 @@ void AdvancedConfig::syncSettingsChanged()
     const QString fontconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("fontconfig"), QStandardPaths::LocateDirectory);
     const QString kdeglobalsPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kdeglobals"));
     const QString plasmarcPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("plasmarc"));
-    const QString sddmUserConfigPath = KUser("sddm").homeDir() + QStringLiteral("/.config");
 
     // send values and paths to helper, debug if it fails
     QVariantMap args;
@@ -225,13 +233,6 @@ void AdvancedConfig::syncSettingsChanged()
         qDebug() << "Cannot find plasmarc file.";
     }
 
-    if (!sddmUserConfigPath.isEmpty()) {
-        args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
-    }
-    else {
-        qDebug() << "Cannot find SDDM user directory.";
-    }
-
     KAuth::Action syncAction(QStringLiteral("org.kde.kcontrol.kcmsddm.sync"));
     syncAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
     syncAction.setArguments(args);
@@ -252,19 +253,21 @@ void AdvancedConfig::syncSettingsChanged()
 
 void AdvancedConfig::resetSettingsChanged()
 {
-    // define paths
-    const QString sddmUserConfigPath = KUser("sddm").homeDir() + QStringLiteral("/.config");
+    // initial check for sddm user; abort if user not present
+    // we have to check with QString and isEmpty() instead of QDir and exists() because
+    // QDir returns "." and true for exists() in the case of a non-existent user
+    QString sddmHomeDirPath = KUser("sddm").homeDir();
+    if (sddmHomeDirPath.isEmpty()) {
+        KMessageBox::error(this, QStringLiteral("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."));
+        return;
+    }
 
     // send paths to helper
     QVariantMap args;
 
-    args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
-
     args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
 
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
-
-    args[QStringLiteral("sddmUserConfig")] = sddmUserConfigPath;
 
     args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = QVariant();
 

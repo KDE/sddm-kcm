@@ -67,8 +67,17 @@ void SddmAuthHelper::copyFile(const QString &source, const QString &destination)
 
 ActionReply SddmAuthHelper::sync(const QVariantMap &args)
 {
+    // initial check for sddm user; abort if user not present
+    // we have to check with QString and isEmpty() instead of QDir and exists() because
+    // QDir returns "." and true for exists() in the case of a non-existent user;
+    QString sddmHomeDirPath = KUser("sddm").homeDir();
+    if (sddmHomeDirPath.isEmpty()) {
+        qDebug() << "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.";
+        return ActionReply::HelperErrorReply();
+    }
+
     // create SDDM config directory if it does not exist
-    QDir sddmConfigLocation(args[QStringLiteral("sddmUserConfig")].toString());
+    QDir sddmConfigLocation(sddmHomeDirPath + QStringLiteral("/.config"));
     if (!sddmConfigLocation.exists()) {
         QDir().mkpath(sddmConfigLocation.path());
     }
@@ -151,7 +160,16 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
 
 ActionReply SddmAuthHelper::reset(const QVariantMap &args)
 {
-    QDir sddmConfigLocation(args[QStringLiteral("sddmUserConfig")].toString());
+    // initial check for sddm user; abort if user not present
+    // we have to check with QString and isEmpty() instead of QDir and exists() because
+    // QDir returns "." and true for exists() in the case of a non-existent user;
+    QString sddmHomeDirPath = KUser("sddm").homeDir();
+    if (sddmHomeDirPath.isEmpty()) {
+        qDebug() << "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.";
+        return ActionReply::HelperErrorReply();
+    }
+
+    QDir sddmConfigLocation(sddmHomeDirPath + QStringLiteral("/.config"));
     QDir fontconfigDir(args[QStringLiteral("sddmUserConfig")].toString() + QStringLiteral("/fontconfig"));
 
     fontconfigDir.removeRecursively();
