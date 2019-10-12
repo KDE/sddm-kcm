@@ -354,6 +354,7 @@ Description[sv]=Synkroniserar användarinställningar med SDDM-inställningar
 Description[uk]=Синхронізація параметрів користувача із параметрами SDDM
 Description[x-test]=xxSynchronizes user settings with SDDM settingsxx
 Description[zh_CN]=同步用户设置和 SDDM 设置
+Description[zh_TW]=將使用者設定與 SDDM 設定同步
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmsddm.reset]
