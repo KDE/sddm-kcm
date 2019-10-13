@@ -16,6 +16,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.4
+import QtQuick.Window 2.2
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.4
 import org.kde.kirigami 2.4 as Kirigami
@@ -51,8 +52,8 @@ Rectangle {
         readonly property bool available: status === Image.Ready || status === Image.Loading
         visible: available
         source: previewPath
-        sourceSize.width: width
-        sourceSize.height: height
+        sourceSize.width: width  * Screen.devicePixelRatio
+        sourceSize.height: height * Screen.devicePixelRatio
         anchors {
             top: root.top
             left: root.left
