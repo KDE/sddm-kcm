@@ -11,6 +11,7 @@ include(ECMInstallIcons)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+include(KDEClangFormat)
 include(FeatureSummary)
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Quick QuickWidgets)
@@ -60,5 +61,8 @@ install(TARGETS sddmthemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 add_subdirectory(src)
 install(FILES sddmtheme.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
-feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+# add clang-format target for all our real source files
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
