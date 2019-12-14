@@ -56,12 +56,14 @@ void ThemesDelegate::paint(QPainter *painter,
 
     QPixmap originalPix(previewFilename);
     QColor color = option.palette.color(QPalette::Base);
+    QColor textColor = option.palette.color(QPalette::Text);
 
     if (originalPix.isNull()) {
         // paint a placeholder pixmap
         originalPix = QPixmap(m_maxWidth, m_maxHeight);
         originalPix.fill(color);
         QPainter p_pix(&originalPix);
+        p_pix.setPen(textColor);
         p_pix.drawText(originalPix.rect(), Qt::AlignCenter | Qt::TextWordWrap, i18n("No preview available"));
     }
 
