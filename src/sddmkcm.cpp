@@ -54,8 +54,6 @@ SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
 
     mSddmConfig = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::CascadeConfig);
 
-    mSddmOldConfig = KSharedConfig::openConfig(QStringLiteral("sddm.conf"), KConfig::CascadeConfig);
-
     // This does not listen for new config files in the directory.
     QStringList configFiles = QDir(QLatin1String(SDDM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
                 systemConfigFiles = QDir(QLatin1String(SDDM_SYSTEM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
@@ -67,7 +65,6 @@ SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
                     [](const QString &filename) -> QString { return QStringLiteral(SDDM_CONFIG_DIR "/") + filename; });
 
     mSddmConfig->addConfigSources(systemConfigFiles + configFiles);
-    mSddmOldConfig->addConfigSources(systemConfigFiles + configFiles);
 
     prepareUi();
 }
@@ -79,9 +76,6 @@ SddmKcm::~SddmKcm()
 void SddmKcm::save()
 {
     QVariantMap args;
-
-    args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
-    args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
 
     if (!mThemeConfig->themeConfigPath().isEmpty()) {
         args[QStringLiteral("theme.conf.user")] = QString(mThemeConfig->themeConfigPath() + QLatin1String(".user"));

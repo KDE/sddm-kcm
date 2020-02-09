@@ -17,6 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "sddmauthhelper.h"
+#include "src/config.h"
 
 #include <unistd.h>
 
@@ -212,8 +213,8 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply = ActionReply::HelperErrorReply();
-    QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
-    QSharedPointer<KConfig> sddmOldConfig = openConfig(args[QStringLiteral("sddm.conf")].toString());
+    QSharedPointer<KConfig> sddmConfig = openConfig(QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")});
+    QSharedPointer<KConfig> sddmOldConfig = openConfig(QLatin1String(SDDM_CONFIG_FILE));
     QSharedPointer<KConfig> themeConfig;
     QString themeConfigFile = args[QStringLiteral("theme.conf.user")].toString();
 
