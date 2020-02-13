@@ -39,6 +39,12 @@
 
 static QSharedPointer<KConfig> openConfig(const QString &filePath)
 {
+    // if the sddm.conf.d folder doesn't exist we fail to set the right permissions for kde_settings.conf
+    QFileInfo fileLocation(filePath);
+    QDir dir(fileLocation.absolutePath());
+    if (!dir.exists()) {
+        QDir().mkpath(dir.path());
+    }
     QFile file(filePath);
     if(!file.exists()) {
         // If we are creating the config file, ensure it is world-readable: if
@@ -48,6 +54,11 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
         file.close();
         file.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadGroup | QFile::ReadOther);
     }
+    // in case the file has already been created with wrong permissions
+    else if (!(file.permissions() & QFile::ReadOwner & QFile::WriteOwner & QFile::ReadGroup & QFile::ReadOther)) {
+        file.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadGroup | QFile::ReadOther);
+    }
+
     return QSharedPointer<KConfig>(new KConfig(file.fileName(), KConfig::SimpleConfig));
 }
 
