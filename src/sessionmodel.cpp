@@ -83,8 +83,11 @@ void SessionModel::loadDir(const QString &path, SessionType type)
             if (line.startsWith(QLatin1String("Name="))) {
                 si->name = line.mid(5);
                 if (type == SessionTypeWayland) {
-                    //we want to exactly match the SDDM prompt which is formatted in this way
-                    si->name = i18nc("%1 is the name of a session", "%1 (Wayland)", si->name);
+                    // we want to exactly match the SDDM prompt which is formatted in this way
+                    // with the exact same check
+                    if (!si->name.endsWith(QLatin1String(" (Wayland)"))) {
+                        si->name = i18nc("%1 is the name of a session", "%1 (Wayland)", si->name);
+                    }
                 }
             }
             if (line.startsWith(QLatin1String("Exec=")))
