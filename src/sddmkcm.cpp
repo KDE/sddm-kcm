@@ -82,8 +82,8 @@ void SddmKcm::save()
     }
 
     qDebug() << "Ovr:" << args[QStringLiteral("theme.conf.user")].toString();
-    args.unite(mThemeConfig->save());
-    args.unite(mAdvancedConfig->save());
+    mThemeConfig->save(args);
+    mAdvancedConfig->save(args);
 
     KAuth::Action saveAction = authAction();
 

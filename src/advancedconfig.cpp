@@ -103,10 +103,8 @@ void AdvancedConfig::load()
     configUi->rebootCommand->setUrl(QUrl::fromLocalFile(mConfig->group("General").readEntry("RebootCommand")));
 }
 
-QVariantMap AdvancedConfig::save()
+void AdvancedConfig::save(QVariantMap &args)
 {
-    QVariantMap args;
-
     args[QStringLiteral("kde_settings.conf/Autologin/User")] = ( configUi->autoLogin->isChecked() ) ? configUi->userList->currentText() : QString();
     args[QStringLiteral("kde_settings.conf/Autologin/Session")] = ( configUi->autoLogin->isChecked() ) ? configUi->sessionList->currentData() : QString();
 
@@ -122,8 +120,6 @@ QVariantMap AdvancedConfig::save()
 
     args[QStringLiteral("kde_settings.conf/General/HaltCommand")] = configUi->haltCommand->url().toLocalFile();
     args[QStringLiteral("kde_settings.conf/General/RebootCommand")] = configUi->rebootCommand->url().toLocalFile();
-
-    return args;
 }
 
 void AdvancedConfig::slotUidRangeChanged()

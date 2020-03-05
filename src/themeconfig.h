@@ -34,7 +34,7 @@ public:
     explicit ThemeConfig(const KSharedConfigPtr &config, QWidget *parent = nullptr);
     ~ThemeConfig();
 
-    QVariantMap save();
+    void save(QVariantMap &args);
     QString themeConfigPath() const;
 
 Q_SIGNALS:

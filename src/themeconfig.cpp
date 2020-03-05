@@ -70,14 +70,12 @@ ThemeConfig::~ThemeConfig()
     delete configUi;
 }
 
-QVariantMap ThemeConfig::save()
+void ThemeConfig::save(QVariantMap &args)
 {
     QModelIndex index = configUi->themesListView->currentIndex();
     if (!index.isValid()) {
-        return QVariantMap();
+        return;
     }
-
-    QVariantMap args;
 
     args[QStringLiteral("kde_settings.conf/Theme/Current")] = index.data(ThemesModel::IdRole);
 
@@ -89,7 +87,6 @@ QVariantMap ThemeConfig::save()
             args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("color");
         }
     }
-    return args;
 }
 
 QString ThemeConfig::themeConfigPath() const

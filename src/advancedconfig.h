@@ -37,7 +37,7 @@ public:
     explicit AdvancedConfig(const KSharedConfigPtr &config, QWidget *parent = nullptr);
     ~AdvancedConfig();
 
-    QVariantMap save();
+    void save(QVariantMap &args);
 
 Q_SIGNALS:
     void changed(bool changed=true);
