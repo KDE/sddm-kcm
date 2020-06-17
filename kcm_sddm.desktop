@@ -52,7 +52,6 @@ X-KDE-Keywords[sr@latin]=sddm,display manager,theme,SDDM,menadžer prijavljivanj
 X-KDE-Keywords[sv]=sddm,skärmhanterare,tema
 X-KDE-Keywords[tr]=sddm, görüntü yöneticisi, tema
 X-KDE-Keywords[uk]=sddm,display manager,theme,керування входом,сддм,тема
-X-KDE-Keywords[x-test]=xxsddmxx,xxdisplay managerxx,xxthemexx
 X-KDE-Keywords[zh_CN]=sddm,display manager,theme，显示管理器，主题
 X-KDE-Keywords[zh_TW]=sddm,display manager,theme
 
@@ -99,7 +98,6 @@ Name[sr@latin]=Prijavni ekran (SDDM)
 Name[sv]=Inloggningsfönster (SDDM)
 Name[tr]=Oturum Ekranı (SDDM)
 Name[uk]=Вікно входу (SDDM)
-Name[x-test]=xxLogin Screen (SDDM)xx
 Name[zh_CN]=登录屏幕 (SDDM)
 Name[zh_TW]=登入畫面（SDDM）
 
@@ -140,6 +138,5 @@ Comment[sr@latin]=Podesite menadžer prijavljivanja
 Comment[sv]=Anpassa inloggningshanterare
 Comment[tr]=Giriş Yöneticisini Yapılandır
 Comment[uk]=Налаштування керування входом до системи
-Comment[x-test]=xxConfigure Login Managerxx
 Comment[zh_CN]=配置登录管理器
 Comment[zh_TW]=配置登入管理器
