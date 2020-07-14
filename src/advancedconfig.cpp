@@ -27,7 +27,7 @@
 #include <QStandardPaths>
 
 #include <KAuth/KAuthActionReply>
-#include <kauthexecutejob.h>
+#include <KAuthExecuteJob>
 #include <KConfigGroup>
 #include <KMessageBox>
 #include <KUser>

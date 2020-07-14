@@ -28,11 +28,11 @@
 
 #include <KAboutData>
 #include <KAuth/KAuthActionReply>
-#include <kauthexecutejob.h>
+#include <KAuthExecuteJob>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <kpluginfactory.h>
-#include <kpluginloader.h>
+#include <KPluginFactory>
+#include <KPluginLoader>
 
 K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
 
