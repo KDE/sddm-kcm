@@ -72,8 +72,9 @@ int main(int argc, char **argv)
         bool rc = job->exec();
         if (!rc) {
             QString errorString = job->errorString();
-            qWarning() << job->error() << errorString;
-            KMessageBox::sorry(nullptr, errorString, i18n("Unable to install theme"));
+            if (!errorString.isEmpty()) {
+                KMessageBox::sorry(nullptr, errorString, i18n("Unable to install theme"));
+            }
             return -1;
         }
 

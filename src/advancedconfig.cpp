@@ -240,9 +240,11 @@ void AdvancedConfig::syncSettingsChanged()
         qDebug() << "Synchronization failed";
         qDebug() << job->errorString();
         qDebug() << job->errorText();
-        KMessageBox::error(this, job->errorText());
+        if (!job->errorText().isEmpty()) {
+            KMessageBox::error(this, job->errorText());
+        }
     } else {
-        changed(false);
+        Q_EMIT changed(false);
         qDebug() << "Synchronization successful";
     }
 }
@@ -282,9 +284,11 @@ void AdvancedConfig::resetSettingsChanged()
         qDebug() << "Reset failed";
         qDebug() << job->errorString();
         qDebug() << job->errorText();
-        KMessageBox::error(this, job->errorText());
+        if (!job->errorText().isEmpty()) {
+            KMessageBox::error(this, job->errorText());
+        }
     } else {
-        changed(false);
+        Q_EMIT changed(false);
         qDebug() << "Reset successful";
     }
 }

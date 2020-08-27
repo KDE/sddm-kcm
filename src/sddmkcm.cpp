@@ -40,7 +40,7 @@ K_PLUGIN_FACTORY(SddmKcmFactory, registerPlugin<SddmKcm>();)
 SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     KCModule(parent, args)
 {
-    KAboutData* aboutData = new KAboutData(QStringLiteral("kcmsddm"), i18n("SDDM KDE Config"), QLatin1String(PROJECT_VERSION));
+    KAboutData* aboutData = new KAboutData(QStringLiteral("kcmsddm"), i18n("SDDM KDE Config"), QStringLiteral(PROJECT_VERSION));
 
     aboutData->setShortDescription(i18n("Login screen using the SDDM"));
     aboutData->setLicense(KAboutLicense::GPL_V2);
@@ -55,8 +55,8 @@ SddmKcm::SddmKcm(QWidget *parent, const QVariantList &args) :
     mSddmConfig = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::CascadeConfig);
 
     // This does not listen for new config files in the directory.
-    QStringList configFiles = QDir(QLatin1String(SDDM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
-                systemConfigFiles = QDir(QLatin1String(SDDM_SYSTEM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
+    QStringList configFiles = QDir(QStringLiteral(SDDM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware),
+                systemConfigFiles = QDir(QStringLiteral(SDDM_SYSTEM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
 
     // QStringBuilder keeps dangling references, so force return of QString (QTBUG-47066)
     std::transform(systemConfigFiles.begin(), systemConfigFiles.end(), systemConfigFiles.begin(),
@@ -98,7 +98,7 @@ void SddmKcm::save()
         qDebug() << job->errorString();
         qDebug() << job->errorText();
     } else {
-        changed(false);
+        Q_EMIT changed(false);
         qDebug() << "Option saved";
     }
 

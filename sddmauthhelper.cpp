@@ -225,7 +225,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply = ActionReply::HelperErrorReply();
     QSharedPointer<KConfig> sddmConfig = openConfig(QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")});
-    QSharedPointer<KConfig> sddmOldConfig = openConfig(QLatin1String(SDDM_CONFIG_FILE));
+    QSharedPointer<KConfig> sddmOldConfig = openConfig(QStringLiteral(SDDM_CONFIG_FILE));
     QSharedPointer<KConfig> themeConfig;
     QString themeConfigFile = args[QStringLiteral("theme.conf.user")].toString();
 
@@ -354,7 +354,8 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
     //some basic validation
     //the top level should only have folders, and those folders should contain a valid metadata.desktop file
     //if we get anything else, abort everything before copying
-    for(const QString &name: directory->entries()) {
+    const auto entries = directory->entries();
+    for (const QString &name: entries) {
         auto entry = directory->entry(name);
         if (!entry->isDirectory()) {
             auto e = ActionReply::HelperErrorReply();

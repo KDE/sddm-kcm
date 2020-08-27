@@ -51,8 +51,6 @@ void ThemesDelegate::paint(QPainter *painter,
     previewFilename += model->data(index, ThemesModel::PreviewRole).toString();
 
     const QString title = model->data(index, Qt::DisplayRole).toString();
-    const QString author = model->data(index, ThemesModel::AuthorRole).toString();
-    const QString website = model->data(index, ThemesModel::WebsiteRole).toString();
 
     QPixmap originalPix(previewFilename);
     QColor color = option.palette.color(QPalette::Base);
@@ -116,7 +114,7 @@ void ThemesDelegate::paint(QPainter *painter,
         color = QApplication::palette().brush(cg, QPalette::Text).color();
     }
 
-    html = QStringLiteral("<div style=\"color: %1\" align=\"center\">%2</div>").arg(color.name()).arg(html);
+    html = QStringLiteral("<div style=\"color: %1\" align=\"center\">%2</div>").arg(color.name(), html);
 
     document.setHtml(html);
 
@@ -143,8 +141,6 @@ QSize ThemesDelegate::sizeHint(const QStyleOptionViewItem &option,
 
     const QAbstractItemModel *model = index.model();
     const QString title = model->data(index, Qt::DisplayRole).toString();
-    const QString author = model->data(index, ThemesModel::AuthorRole).toString();
-    const QString website = model->data(index, ThemesModel::WebsiteRole).toString();
 
     //Generate a sample complete entry (with the real title) to calculate sizes
     QTextDocument document;
