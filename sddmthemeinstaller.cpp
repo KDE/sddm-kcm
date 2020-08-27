@@ -89,7 +89,11 @@ int main(int argc, char **argv)
             action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
             action.addArgument(QStringLiteral("filePath"), installedTheme);
             KAuth::ExecuteJob *job = action.execute();
-            job->exec();
+            // We want KNS to be able to tell if the entry was manually deleted, see BUG: 416255
+            if (job->exec()) {
+                QFile::remove(args.first());
+                cg.deleteEntry(args.first());
+            }
         }
         return 0;
     }

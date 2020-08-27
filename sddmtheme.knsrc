@@ -36,6 +36,7 @@ Name[zh_TW]=登入畫面
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=SDDM Theme
 StandardResource=tmp
+RemoveDeadEntries=true
 InstallationCommand=sddmthemeinstaller -i %f
 UninstallCommand=sddmthemeinstaller -u %f
 
