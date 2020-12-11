@@ -87,23 +87,29 @@ void ThemesModel::populate()
         endResetModel();
     }
 
-    QString themesBaseDir = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::SimpleConfig)->group("Theme").readEntry("ThemeDir");
-
-    if (themesBaseDir.isEmpty()) {
-        themesBaseDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sddm/themes"), QStandardPaths::LocateDirectory);
+    const QString themesBaseDir = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::SimpleConfig)->group("Theme").readEntry("ThemeDir");
+    QStringList themesBaseDirs;
+    if (!themesBaseDir.isEmpty()) {
+        themesBaseDirs.append(themesBaseDir);
+    } else {
+        themesBaseDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sddm/themes"), QStandardPaths::LocateDirectory);
     }
 
-    QDir dir(themesBaseDir);
-
-    if (!dir.exists()) {
-        return;
-    }
-
-    foreach (const QString &theme, dir.entryList(QDir::AllDirs | QDir::Readable)) {
-        QString path = themesBaseDir + QLatin1Char('/') + theme;
-
-        if (QFile::exists(path + QStringLiteral("/metadata.desktop") )) {
-            add(theme, path);
+    auto alreadyHave = [this] (const QString &theme) {
+        return std::any_of(mThemeList.cbegin(), mThemeList.cend(), [&theme] (const ThemeMetadata &data) {
+            return data.themeid() == theme;
+        });
+    };
+    for (const auto &folder : themesBaseDirs) {
+        QDir dir(folder);
+        if (!dir.exists()) {
+            return;
+        }
+        for (const QString &theme : dir.entryList(QDir::AllDirs | QDir::Readable | QDir::NoDotAndDotDot)) {
+            QString path = folder + QLatin1Char('/') + theme;
+            if (!alreadyHave(theme) && QFile::exists(path + QStringLiteral("/metadata.desktop"))) {
+                add(theme, path);
+            }
         }
     }
 }
