@@ -22,6 +22,7 @@
 UsersModel::UsersModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+    populate();
 }
 
 UsersModel::~UsersModel()
@@ -46,6 +47,8 @@ QVariant UsersModel::data(const QModelIndex &index, int role) const
     switch(role) {
         case Qt::DisplayRole:
             return user.loginName();
+        case UidRole:
+            return user.userId().nativeId();
     }
 
     return QVariant();
@@ -60,7 +63,7 @@ void UsersModel::add(const KUser &user)
     endInsertRows();
 }
 
-void UsersModel::populate(const uint minimumUid, const uint maximumUid) {
+void UsersModel::populate() {
     mUserList.clear();
 
     QList< KUser > userList = KUser::allUsers();
@@ -75,9 +78,7 @@ void UsersModel::populate(const uint minimumUid, const uint maximumUid) {
             continue;
         }
 
-        if (uuid >= minimumUid && uuid <= maximumUid) {
-            add(user);
-        }
+        add(user);
         /*qDebug() << user.loginName() << ",uid" << uuid;
         qDebug() << " home:" << user.homeDir();
         qDebug() << " isSuperUser:" << user.isSuperUser() << ",isValid:" << user.isValid();

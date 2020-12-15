@@ -1,5 +1,6 @@
 /*
     Copyright 2013 by Reza Fatahilah Shah <rshah0385@kireihana.com>
+    Copyright 2020 David Redondo <kde@david-redondo.de>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,6 +22,7 @@
 #include <QDir>
 #include <QStandardPaths>
 #include <QString>
+#include <QUrl>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -30,6 +32,7 @@
 ThemesModel::ThemesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+    populate();
 }
 
 ThemesModel::~ThemesModel()
@@ -43,8 +46,32 @@ int ThemesModel::rowCount(const QModelIndex &parent) const
     return mThemeList.size();
 }
 
+QHash<int, QByteArray> ThemesModel::roleNames() const
+{
+    return {
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        {IdRole, QByteArrayLiteral("id")},
+        {AuthorRole, QByteArrayLiteral("author")},
+        {DescriptionRole, QByteArrayLiteral("description")},
+        {LicenseRole, QByteArrayLiteral("license")},
+        {EmailRole, QByteArrayLiteral("email")},
+        {WebsiteRole, QByteArrayLiteral("website")},
+        {CopyrightRole, QByteArrayLiteral("copyright")},
+        {VersionRole, QByteArrayLiteral("version")},
+        {ThemeApiRole, QByteArrayLiteral("themeApi")},
+        {PreviewRole, QByteArrayLiteral("preview")},
+        {PathRole, QByteArrayLiteral("path")},
+        {ConfigFileRole, QByteArrayLiteral("configFile")},
+        {CurrentBackgroundRole, QByteArrayLiteral("currentBackground")},
+    };
+}
+
 QVariant ThemesModel::data(const QModelIndex &index, int role) const
 {
+    if (!checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid)) {
+        return QVariant();
+    }
+
     const ThemeMetadata metadata = mThemeList[index.row()];
 
     switch(role) {
@@ -74,9 +101,26 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
             return metadata.path();
         case ThemesModel::ConfigFileRole:
             return metadata.configfile();
+        case ThemesModel::CurrentBackgroundRole:
+            if (metadata.supportsBackground()) {
+                return m_currentWallpapers[metadata.themeid()];
+            }
     }
 
     return QVariant();
+}
+
+bool ThemesModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid)) {
+        return false;
+    }
+    if (role != ThemesModel::CurrentBackgroundRole) {
+        return false;
+    }
+    m_currentWallpapers[mThemeList[index.row()].themeid()] = value.toString();
+    Q_EMIT dataChanged(index, index, {ThemesModel::CurrentBackgroundRole});
+    return true;
 }
 
 void ThemesModel::populate()
@@ -118,8 +162,19 @@ void ThemesModel::add(const QString &id, const QString &path)
 {
     beginInsertRows(QModelIndex(), mThemeList.count(), mThemeList.count());
 
-    mThemeList.append( ThemeMetadata(id, path) );
-
+    const auto data = ThemeMetadata(id, path);
+    mThemeList.append(data);
+    if (data.supportsBackground()) {
+        const QString themeConfigPath = data.path() + data.configfile();
+        auto themeConfig = KSharedConfig::openConfig(themeConfigPath + QStringLiteral("user"), KConfig::CascadeConfig);
+        themeConfig->addConfigSources({themeConfigPath});
+        const QString backgroundPath = themeConfig->group("General").readEntry("background");
+        if(backgroundPath.startsWith(QStringLiteral("/"))) {
+            m_currentWallpapers.insert(data.themeid(), backgroundPath);
+        } else {
+            m_currentWallpapers.insert(data.themeid(), data.path() + backgroundPath);
+        }
+    }
     endInsertRows();
 }
 
@@ -138,4 +193,27 @@ void ThemesModel::dump(const QString &id, const QString &path)
     qDebug() << "License: " << metadata.license();
     qDebug() << "Copyright: " << metadata.copyright();
     qDebug() << "Screenshot: " << metadata.screenshot();
+}
+
+int ThemesModel::currentIndex() const
+{
+    return m_currentIndex;
+}
+
+QString ThemesModel::currentTheme() const
+{
+    return mThemeList[m_currentIndex].themeid();
+}
+
+void ThemesModel::setCurrentTheme(const QString &theme)
+{
+    auto it = std::find_if(mThemeList.cbegin(), mThemeList.cend(), [&theme] (const ThemeMetadata &themeData) {
+        return themeData.themeid() == theme;
+    });
+    const int index =  it - mThemeList.cbegin();
+    if (it == mThemeList.cend() || index == m_currentIndex) {
+        return;
+    }
+    m_currentIndex = index;
+    Q_EMIT currentIndexChanged();
 }

@@ -46,6 +46,7 @@ public:
     QString copyright() const;
     QString themeid() const;
     QString configfile() const;
+    bool supportsBackground() const;
 
 private:
     void read(const QString &filename);

@@ -29,15 +29,17 @@ public:
         UserNameRole = Qt::UserRole + 1,
         RealNameRole,
         HomeDirRole,
-        IconRole
+        IconRole,
+        UidRole
     };
+    Q_ENUM(Roles)
 
     explicit UsersModel(QObject *parent=nullptr);
     ~UsersModel() Q_DECL_OVERRIDE;
 
     int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
     QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
-    void populate(const uint minimumUid, const uint maximumUid);
+    void populate();
     int indexOf(const QString &user);
 
 private:

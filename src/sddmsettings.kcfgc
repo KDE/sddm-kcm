@@ -1,0 +1,8 @@
+File=sddmsettings.kcfg
+ClassName=SddmSettings
+Inherits=SddmSettingsBase
+IncludeFiles=sddmsettingsbase.h
+DefaultValueGetters=true
+GenerateProperties=true
+ParentInConstructor=true
+Mutators=true

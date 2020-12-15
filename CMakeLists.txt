@@ -25,6 +25,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     KIO
     Archive
     NewStuff
+    Declarative
+    KCMUtils
 )
 
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")

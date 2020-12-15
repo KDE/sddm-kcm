@@ -17,29 +17,39 @@
 #ifndef SDDMKCM_H
 #define SDDMKCM_H
 
-#include <KCModule>
-#include <KSharedConfig>
+#include <KQuickAddons/ManagedConfigModule>
 
 class ThemeConfig;
 class AdvancedConfig;
+class SddmData;
+class SddmSettings;
+class ThemesModel;
 
-class SddmKcm : public KCModule
+class SddmKcm : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(SddmSettings *sddmSettings READ sddmSettings CONSTANT)
+    Q_PROPERTY(ThemesModel *themesModel READ themesModel CONSTANT)
 public:
-    explicit SddmKcm(QWidget *parent, const QVariantList &args);
-    ~SddmKcm() Q_DECL_OVERRIDE;
+    explicit SddmKcm(QObject *parent, const QVariantList &args);
+    ~SddmKcm() override;
 
+    Q_INVOKABLE static QString toLocalFile(const QUrl &url);
+    Q_INVOKABLE void removeTheme(const QModelIndex &index);
+    Q_INVOKABLE void installTheme(const QUrl &url);
+    Q_INVOKABLE void synchronizeSettings();
+    Q_INVOKABLE void resetSyncronizedSettings();
+
+    SddmSettings* sddmSettings() const;
+    ThemesModel* themesModel() const;
 public Q_SLOTS:
-    void save() Q_DECL_OVERRIDE;
+    void save() override;
+Q_SIGNALS:
+    void errorOccured(const QString &message);
 
 private:
-    void prepareUi();
-
-private:
-    KSharedConfigPtr mSddmConfig;
-    ThemeConfig *mThemeConfig;
-    AdvancedConfig *mAdvancedConfig;
+    SddmData *m_data;
+    ThemesModel *m_themesModel;
 };
 
 #endif // SDDMKCM_H

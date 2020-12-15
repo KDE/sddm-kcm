@@ -17,6 +17,7 @@
  */
 #include "thememetadata.h"
 
+#include <QFile>
 #include <QSharedData>
 #include <QSharedPointer>
 
@@ -40,6 +41,7 @@ public:
     QString copyright;
     QString path;
     QString configfile;
+    bool supportsBackground;
 };
 
 ThemeMetadata::ThemeMetadata(const QString &id, const QString &path)
@@ -90,6 +92,8 @@ void ThemeMetadata::read(const QString &filename)
     d->screenshot = config.readEntry("Screenshot");
     d->copyright = config.readEntry("Copyright");
     d->configfile = config.readEntry("ConfigFile");
+
+    d->supportsBackground = QFile::exists(d->path + d->configfile);
 }
 
 QString ThemeMetadata::path() const
@@ -160,4 +164,9 @@ QString ThemeMetadata::copyright() const
 QString ThemeMetadata::configfile() const
 {
     return d->configfile;
+}
+
+bool ThemeMetadata::supportsBackground() const
+{
+    return d->supportsBackground;
 }

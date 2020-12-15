@@ -1,0 +1,16 @@
+[Desktop Entry]
+Icon=preferences-system-login
+Type=Service
+X-KDE-PluginInfo-Author=David Redondo
+X-KDE-PluginInfo-Email=kde@david-redondo.de
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_sddm
+X-KDE-ServiceTypes=Plasma/Generic
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+
+Name=Login Screen (SDDM)
+
+Comment=Configure Login Manager
+
+
