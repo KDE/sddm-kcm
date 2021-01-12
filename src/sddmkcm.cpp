@@ -42,7 +42,7 @@ SddmKcm::SddmKcm(QObject *parent, const QVariantList &args)
     , m_data(new SddmData(this))
     , m_themesModel(new ThemesModel(this))
 {
-    KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_sddm"), i18n("SDDM KDE Config"), QStringLiteral(PROJECT_VERSION));
+    KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_sddm"), i18n("Login Screen (SDDM)"), QStringLiteral(PROJECT_VERSION));
 
     aboutData->setShortDescription(i18n("Login screen using the SDDM"));
     aboutData->setLicense(KAboutLicense::GPL_V2);
