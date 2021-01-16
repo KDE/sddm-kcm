@@ -67,8 +67,9 @@ void SessionModel::loadDir(const QString &path, SessionType type)
     // read session
     foreach (const QString &session, dir.entryList()) {
         QFile inputFile(dir.absoluteFilePath(session));
-        if (!inputFile.open(QIODevice::ReadOnly))
+        if (!inputFile.open(QIODevice::ReadOnly)) {
             continue;
+        }
         SessionPtr si{new Session{session.chopped(strlen(".desktop")), QString(), QString(), QString()}};
         bool isHidden = false;
         QString current_section;
@@ -79,12 +80,14 @@ void SessionModel::loadDir(const QString &path, SessionType type)
             if (line.startsWith(QLatin1String("["))) {
                 // The section name ends before the last ] before the start of a comment
                 int end = line.lastIndexOf(QLatin1Char(']'), line.indexOf(QLatin1Char('#')));
-                if (end != -1)
+                if (end != -1) {
                     current_section = line.mid(1, end - 1);
+                }
             }
 
-            if (current_section != QLatin1String("Desktop Entry"))
+            if (current_section != QLatin1String("Desktop Entry")) {
                 continue; // We are only interested in the "Desktop Entry" section
+            }
 
             if (line.startsWith(QLatin1String("Name="))) {
                 si->name = line.mid(5);
@@ -96,12 +99,15 @@ void SessionModel::loadDir(const QString &path, SessionType type)
                     }
                 }
             }
-            if (line.startsWith(QLatin1String("Exec=")))
+            if (line.startsWith(QLatin1String("Exec="))) {
                 si->exec = line.mid(5);
-            if (line.startsWith(QLatin1String("Comment=")))
+            }
+            if (line.startsWith(QLatin1String("Comment="))) {
                 si->comment = line.mid(8);
-            if (line.startsWith(QLatin1String("Hidden=")))
+            }
+            if (line.startsWith(QLatin1String("Hidden="))) {
                 isHidden = line.mid(7).toLower() == QLatin1String("true");
+            }
         }
         if (!isHidden) {
             // add to sessions list
@@ -133,21 +139,23 @@ int SessionModel::rowCount(const QModelIndex &parent) const
 
 QVariant SessionModel::data(const QModelIndex &index, int role) const
 {
-    if (index.row() < 0 || index.row() >= d->sessions.count())
+    if (index.row() < 0 || index.row() >= d->sessions.count()) {
         return QVariant();
+    }
 
     // get session
     SessionPtr session = d->sessions[index.row()];
 
     // return correct value
-    if (role == FileRole)
+    if (role == FileRole) {
         return session->file;
-    else if (role == NameRole)
+    } else if (role == NameRole) {
         return session->name;
-    else if (role == ExecRole)
+    } else if (role == ExecRole) {
         return session->exec;
-    else if (role == CommentRole)
+    } else if (role == CommentRole) {
         return session->comment;
+    }
 
     // return empty value
     return QVariant();

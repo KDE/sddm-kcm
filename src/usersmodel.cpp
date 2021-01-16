@@ -89,12 +89,15 @@ void UsersModel::populate()
 
 int UsersModel::indexOf(const QString &user)
 {
-    if (user.isEmpty())
+    if (user.isEmpty()) {
         return 0;
+    }
     // find user index
-    for (int i = 0; i < mUserList.size(); ++i)
-        if (mUserList.at(i).loginName() == user)
+    for (int i = 0; i < mUserList.size(); ++i) {
+        if (mUserList.at(i).loginName() == user) {
             return i;
+        }
+    }
     // user not found
     return 0;
 }

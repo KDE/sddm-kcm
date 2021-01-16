@@ -59,8 +59,9 @@ ThemeMetadata::ThemeMetadata(const ThemeMetadata &other)
 
 ThemeMetadata &ThemeMetadata::operator=(const ThemeMetadata &other)
 {
-    if (this != &other)
+    if (this != &other) {
         d = other.d;
+    }
 
     return *this;
 }

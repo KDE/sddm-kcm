@@ -145,8 +145,9 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
     QMap<QString, QVariant>::const_iterator iterator;
 
     for (iterator = args.constBegin(); iterator != args.constEnd(); ++iterator) {
-        if (iterator.key() == QLatin1String("kde_settings.conf"))
+        if (iterator.key() == QLatin1String("kde_settings.conf")) {
             continue;
+        }
 
         QStringList configFields = iterator.key().split(QLatin1Char('/'));
         if (configFields.size() != 3) {
@@ -196,8 +197,9 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
     QMap<QString, QVariant>::const_iterator iterator;
 
     for (iterator = args.constBegin(); iterator != args.constEnd(); ++iterator) {
-        if (iterator.key() == QLatin1String("kde_settings.conf"))
+        if (iterator.key() == QLatin1String("kde_settings.conf")) {
             continue;
+        }
 
         QStringList configFields = iterator.key().split(QLatin1Char('/'));
         if (configFields.size() != 3) {
@@ -236,8 +238,9 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
     QMap<QString, QVariant>::const_iterator iterator;
 
     for (iterator = args.constBegin(); iterator != args.constEnd(); ++iterator) {
-        if (iterator.key() == QLatin1String("kde_settings.conf") || iterator.key() == QLatin1String("theme.conf.user"))
+        if (iterator.key() == QLatin1String("kde_settings.conf") || iterator.key() == QLatin1String("theme.conf.user")) {
             continue;
+        }
 
         QStringList configFields = iterator.key().split(QLatin1Char('/'));
         if (configFields.size() != 3) {
@@ -292,8 +295,9 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
     sddmOldConfig->sync();
     sddmConfig->sync();
 
-    if (!themeConfig.isNull())
+    if (!themeConfig.isNull()) {
         themeConfig->sync();
+    }
 
     return ActionReply::SuccessReply();
 }
