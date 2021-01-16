@@ -28,7 +28,7 @@ SddmData::SddmData(QObject *parent, const QVariantList &args)
 {
     auto config = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::CascadeConfig);
     QStringList configFiles = QDir(QStringLiteral(SDDM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
-    std::transform(configFiles.begin(), configFiles.end(), configFiles.begin(), [] (const QString &filename) -> QString {
+    std::transform(configFiles.begin(), configFiles.end(), configFiles.begin(), [](const QString &filename) -> QString {
         return QStringLiteral(SDDM_CONFIG_DIR "/") + filename;
     });
     config->addConfigSources(configFiles);

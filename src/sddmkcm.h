@@ -40,8 +40,8 @@ public:
     Q_INVOKABLE void synchronizeSettings();
     Q_INVOKABLE void resetSyncronizedSettings();
 
-    SddmSettings* sddmSettings() const;
-    ThemesModel* themesModel() const;
+    SddmSettings *sddmSettings() const;
+    ThemesModel *themesModel() const;
 public Q_SLOTS:
     void save() override;
 Q_SIGNALS:

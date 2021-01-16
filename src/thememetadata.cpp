@@ -57,12 +57,12 @@ ThemeMetadata::ThemeMetadata(const ThemeMetadata &other)
 {
 }
 
-ThemeMetadata& ThemeMetadata::operator=( const ThemeMetadata &other )
+ThemeMetadata &ThemeMetadata::operator=(const ThemeMetadata &other)
 {
-  if ( this != &other )
-    d = other.d;
+    if (this != &other)
+        d = other.d;
 
-  return *this;
+    return *this;
 }
 
 ThemeMetadata::~ThemeMetadata()
@@ -79,7 +79,7 @@ void ThemeMetadata::read(const QString &filename)
 
     KConfigGroup config = configFile->group("SddmGreeterTheme");
 
-    //d->themeid = config.readEntry("Theme-Id");
+    // d->themeid = config.readEntry("Theme-Id");
     d->name = config.readEntry("Name");
     d->description = config.readEntry("Description");
     d->author = config.readEntry("Author");

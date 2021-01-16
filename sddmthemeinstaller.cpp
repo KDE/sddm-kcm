@@ -20,8 +20,8 @@
 #include <QApplication>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
-#include <QDir>
 #include <QDebug>
+#include <QDir>
 #include <QFile>
 #include <QProcess>
 
@@ -35,7 +35,7 @@
 int main(int argc, char **argv)
 {
     QCommandLineParser parser;
-    QApplication app(argc, argv); //because GHNS doesn't do it's own error reporting on installation failing..
+    QApplication app(argc, argv); // because GHNS doesn't do it's own error reporting on installation failing..
 
     const QString description = i18n("SDDM theme installer");
     const char version[] = "1.0";
@@ -85,7 +85,7 @@ int main(int argc, char **argv)
     if (parser.isSet(QStringLiteral("uninstall"))) {
         KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"), KConfig::SimpleConfig), "DownloadedThemes");
         const QStringList installed = cg.readEntry(args.first(), QStringList());
-        for (const QString &installedTheme: installed) {
+        for (const QString &installedTheme : installed) {
             KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmsddm.uninstalltheme"));
             action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
             action.addArgument(QStringLiteral("filePath"), installedTheme);

@@ -22,7 +22,7 @@
 
 class ThemeMetadata;
 
-class ThemesModel: public QAbstractListModel
+class ThemesModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(QString currentTheme READ currentTheme WRITE setCurrentTheme NOTIFY currentIndexChanged)
@@ -41,11 +41,11 @@ public:
         CopyrightRole,
         ThemeApiRole,
         ConfigFileRole,
-        CurrentBackgroundRole
+        CurrentBackgroundRole,
     };
     Q_ENUM(Roles)
 
-    explicit ThemesModel(QObject *parent=nullptr);
+    explicit ThemesModel(QObject *parent = nullptr);
     ~ThemesModel() Q_DECL_OVERRIDE;
 
     int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
@@ -61,13 +61,14 @@ public Q_SLOTS:
     void populate();
 Q_SIGNALS:
     void currentIndexChanged();
+
 private:
     void add(const QString &name, const QString &path);
     void dump(const QString &id, const QString &path);
-    
+
     int m_currentIndex;
     QList<ThemeMetadata> mThemeList;
     QHash<QString, QString> m_currentWallpapers;
 };
 
-#endif //THEMESMODEL_H
+#endif // THEMESMODEL_H

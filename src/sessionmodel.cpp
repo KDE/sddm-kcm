@@ -1,23 +1,23 @@
 /***************************************************************************
-* Copyright (c) 2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
-*
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; either version 2 of the License, or
-* (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program; if not, write to the
-* Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-***************************************************************************/
-#include "config.h"
+ * Copyright (c) 2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the
+ * Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ ***************************************************************************/
 #include "sessionmodel.h"
+#include "config.h"
 
 #include <memory>
 
@@ -28,7 +28,8 @@
 
 #include <KLocalizedString>
 
-class Session {
+class Session
+{
 public:
     QString file;
     QString name;
@@ -38,18 +39,23 @@ public:
 
 typedef std::shared_ptr<Session> SessionPtr;
 
-class SessionModelPrivate {
+class SessionModelPrivate
+{
 public:
-    int lastIndex { 0 };
+    int lastIndex{0};
     QList<SessionPtr> sessions;
 };
 
-SessionModel::SessionModel(QObject *parent) : QAbstractListModel(parent), d(new SessionModelPrivate()) {
+SessionModel::SessionModel(QObject *parent)
+    : QAbstractListModel(parent)
+    , d(new SessionModelPrivate())
+{
     loadDir(QStringLiteral(XSESSIONS_DIR), SessionTypeX);
     loadDir(QStringLiteral(WAYLAND_SESSIONS_DIR), SessionTypeWayland);
 }
 
-SessionModel::~SessionModel() {
+SessionModel::~SessionModel()
+{
     delete d;
 }
 
@@ -59,11 +65,11 @@ void SessionModel::loadDir(const QString &path, SessionType type)
     dir.setNameFilters(QStringList() << QStringLiteral("*.desktop"));
     dir.setFilter(QDir::Files);
     // read session
-    foreach(const QString &session, dir.entryList()) {
+    foreach (const QString &session, dir.entryList()) {
         QFile inputFile(dir.absoluteFilePath(session));
         if (!inputFile.open(QIODevice::ReadOnly))
             continue;
-        SessionPtr si { new Session { session.chopped(strlen(".desktop")), QString(), QString(), QString() } };
+        SessionPtr si{new Session{session.chopped(strlen(".desktop")), QString(), QString(), QString()}};
         bool isHidden = false;
         QString current_section;
         QTextStream in(&inputFile);
@@ -107,7 +113,8 @@ void SessionModel::loadDir(const QString &path, SessionType type)
     }
 }
 
-QHash<int, QByteArray> SessionModel::roleNames() const {
+QHash<int, QByteArray> SessionModel::roleNames() const
+{
     // set role names
     QHash<int, QByteArray> roleNames;
     roleNames[FileRole] = "file";
@@ -118,12 +125,14 @@ QHash<int, QByteArray> SessionModel::roleNames() const {
     return roleNames;
 }
 
-int SessionModel::rowCount(const QModelIndex &parent) const {
+int SessionModel::rowCount(const QModelIndex &parent) const
+{
     Q_UNUSED(parent);
     return d->sessions.length();
 }
 
-QVariant SessionModel::data(const QModelIndex &index, int role) const {
+QVariant SessionModel::data(const QModelIndex &index, int role) const
+{
     if (index.row() < 0 || index.row() >= d->sessions.count())
         return QVariant();
 
@@ -153,5 +162,3 @@ int SessionModel::indexOf(const QString &sessionId) const
     }
     return 0;
 }
-
-

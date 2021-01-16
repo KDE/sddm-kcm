@@ -46,7 +46,7 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
         QDir().mkpath(dir.path());
     }
     QFile file(filePath);
-    if(!file.exists()) {
+    if (!file.exists()) {
         // If we are creating the config file, ensure it is world-readable: if
         // we don't do that, KConfig will create a file which is only readable
         // by root
@@ -71,7 +71,7 @@ void SddmAuthHelper::copyFile(const QString &source, const QString &destination)
     }
 
     QFile::copy(source, destination);
-    const char* destinationConverted = destination.toLocal8Bit().data();
+    const char *destinationConverted = destination.toLocal8Bit().data();
     if (chown(destinationConverted, sddmUser.userId().nativeId(), sddmUser.groupId().nativeId())) {
         return;
     }
@@ -97,8 +97,8 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
     // copy fontconfig (font, font rendering)
     if (!args[QStringLiteral("fontconfig")].isNull()) {
         QDir fontconfigSource(args[QStringLiteral("fontconfig")].toString());
-        QStringList sourceFileEntries = fontconfigSource.entryList (QDir::Files);
-        QStringList sourceDirEntries = fontconfigSource.entryList (QDir::AllDirs);
+        QStringList sourceFileEntries = fontconfigSource.entryList(QDir::Files);
+        QStringList sourceDirEntries = fontconfigSource.entryList(QDir::AllDirs);
         QDir fontconfigDestination(sddmConfigLocation.path() + QStringLiteral("/fontconfig"));
 
         if (!fontconfigDestination.exists()) {
@@ -106,7 +106,7 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         }
 
         if (sourceDirEntries.count() != 0) {
-            for (int i = 0; i<sourceDirEntries.count(); i++) {
+            for (int i = 0; i < sourceDirEntries.count(); i++) {
                 QString directoriesSource = fontconfigSource.path() + QDir::separator() + sourceDirEntries[i];
                 QString directoriesDestination = fontconfigDestination.path() + QDir::separator() + sourceDirEntries[i];
                 fontconfigSource.mkpath(directoriesDestination);
@@ -115,7 +115,7 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         }
 
         if (sourceFileEntries.count() != 0) {
-            for (int i = 0; i<sourceFileEntries.count(); i++) {
+            for (int i = 0; i < sourceFileEntries.count(); i++) {
                 QString filesSource = fontconfigSource.path() + QDir::separator() + sourceFileEntries[i];
                 QString filesDestination = fontconfigDestination.path() + QDir::separator() + sourceFileEntries[i];
                 copyFile(filesSource, filesDestination);
@@ -144,7 +144,7 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
 
     QMap<QString, QVariant>::const_iterator iterator;
 
-    for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
+    for (iterator = args.constBegin(); iterator != args.constEnd(); ++iterator) {
         if (iterator.key() == QLatin1String("kde_settings.conf"))
             continue;
 
@@ -195,7 +195,7 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
 
     QMap<QString, QVariant>::const_iterator iterator;
 
-    for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
+    for (iterator = args.constBegin(); iterator != args.constEnd(); ++iterator) {
         if (iterator.key() == QLatin1String("kde_settings.conf"))
             continue;
 
@@ -224,7 +224,7 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
 ActionReply SddmAuthHelper::save(const QVariantMap &args)
 {
     ActionReply reply = ActionReply::HelperErrorReply();
-    QSharedPointer<KConfig> sddmConfig = openConfig(QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")});
+    QSharedPointer<KConfig> sddmConfig = openConfig(QString{QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")});
     QSharedPointer<KConfig> sddmOldConfig = openConfig(QStringLiteral(SDDM_CONFIG_FILE));
     QSharedPointer<KConfig> themeConfig;
     QString themeConfigFile = args[QStringLiteral("theme.conf.user")].toString();
@@ -235,7 +235,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 
     QMap<QString, QVariant>::const_iterator iterator;
 
-    for (iterator = args.constBegin() ; iterator != args.constEnd() ; ++iterator) {
+    for (iterator = args.constBegin(); iterator != args.constEnd(); ++iterator) {
         if (iterator.key() == QLatin1String("kde_settings.conf") || iterator.key() == QLatin1String("theme.conf.user"))
             continue;
 
@@ -274,7 +274,7 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 
                     if (newBackgroundFileInfo.exists()) {
                         QString newBackgroundPath = configRootDirectory.filePath(newBackgroundFileInfo.fileName());
-                        qDebug() << "Copying background from "  << newBackgroundFileInfo.absoluteFilePath() << " to " << newBackgroundPath;
+                        qDebug() << "Copying background from " << newBackgroundFileInfo.absoluteFilePath() << " to " << newBackgroundPath;
                         if (QFile::copy(newBackgroundFileInfo.absoluteFilePath(), newBackgroundPath)) {
                             QFile::setPermissions(newBackgroundPath, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadGroup | QFile::ReadOther);
                             themeConfig->group(groupName).writeEntry(keyName, newBackgroundFileInfo.fileName());
@@ -323,23 +323,21 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
 
     QScopedPointer<KArchive> archive;
 
-    //there must be a better way to do this? If not, make a static bool KZip::supportsMimeType(const QMimeType &type); ?
-    //or even a factory class in KArchive
+    // there must be a better way to do this? If not, make a static bool KZip::supportsMimeType(const QMimeType &type); ?
+    // or even a factory class in KArchive
 
     if (mimeType.inherits(QStringLiteral("application/zip"))) {
         archive.reset(new KZip(filePath));
-    } else if (mimeType.inherits(QStringLiteral("application/tar"))
-                || mimeType.inherits(QStringLiteral("application/x-gzip"))
-                || mimeType.inherits(QStringLiteral("application/x-bzip"))
-                || mimeType.inherits(QStringLiteral("application/x-lzma"))
-                || mimeType.inherits(QStringLiteral("application/x-xz"))
-                || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
-                || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
+    } else if (mimeType.inherits(QStringLiteral("application/tar")) || mimeType.inherits(QStringLiteral("application/x-gzip"))
+               || mimeType.inherits(QStringLiteral("application/x-bzip")) || mimeType.inherits(QStringLiteral("application/x-lzma"))
+               || mimeType.inherits(QStringLiteral("application/x-xz")) || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
+               || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
         archive.reset(new KTar(filePath));
     } else {
         auto e = ActionReply::HelperErrorReply();
         e.setErrorDescription(i18n("Invalid theme package"));
-        return e;    }
+        return e;
+    }
 
     if (!archive->open(QIODevice::ReadOnly)) {
         auto e = ActionReply::HelperErrorReply();
@@ -351,20 +349,20 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
 
     QStringList installedPaths;
 
-    //some basic validation
-    //the top level should only have folders, and those folders should contain a valid metadata.desktop file
-    //if we get anything else, abort everything before copying
+    // some basic validation
+    // the top level should only have folders, and those folders should contain a valid metadata.desktop file
+    // if we get anything else, abort everything before copying
     const auto entries = directory->entries();
-    for (const QString &name: entries) {
+    for (const QString &name : entries) {
         auto entry = directory->entry(name);
         if (!entry->isDirectory()) {
             auto e = ActionReply::HelperErrorReply();
             e.setErrorDescription(i18n("Invalid theme package"));
             return e;
         }
-        auto subDirectory = static_cast<const KArchiveDirectory*>(entry);
+        auto subDirectory = static_cast<const KArchiveDirectory *>(entry);
         auto metadataFile = subDirectory->file(QStringLiteral("metadata.desktop"));
-        if(!metadataFile || !metadataFile->data().contains("[SddmGreeterTheme]")) {
+        if (!metadataFile || !metadataFile->data().contains("[SddmGreeterTheme]")) {
             auto e = ActionReply::HelperErrorReply();
             e.setErrorDescription(i18n("Invalid theme package"));
             return e;
@@ -393,9 +391,9 @@ ActionReply SddmAuthHelper::uninstalltheme(const QVariantMap &args)
         return ActionReply::HelperErrorReply();
     }
 
-    //validate the themePath is directly inside the themesBaseDir
+    // validate the themePath is directly inside the themesBaseDir
     QDir baseDir(themesBaseDir);
-    if(baseDir.absoluteFilePath(dir.dirName()) != dir.absolutePath()) {
+    if (baseDir.absoluteFilePath(dir.dirName()) != dir.absolutePath()) {
         return ActionReply::HelperErrorReply();
     }
 

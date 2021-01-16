@@ -17,7 +17,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #include "sddmkcm.h"
 
 #include "config.h"
@@ -42,7 +41,7 @@ SddmKcm::SddmKcm(QObject *parent, const QVariantList &args)
     , m_data(new SddmData(this))
     , m_themesModel(new ThemesModel(this))
 {
-    KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_sddm"), i18n("Login Screen (SDDM)"), QStringLiteral(PROJECT_VERSION));
+    KAboutData *aboutData = new KAboutData(QStringLiteral("kcm_sddm"), i18n("Login Screen (SDDM)"), QStringLiteral(PROJECT_VERSION));
 
     aboutData->setShortDescription(i18n("Login screen using the SDDM"));
     aboutData->setLicense(KAboutLicense::GPL_V2);
@@ -69,17 +68,17 @@ SddmKcm::~SddmKcm()
 {
 }
 
-SddmSettings* SddmKcm::sddmSettings() const
+SddmSettings *SddmKcm::sddmSettings() const
 {
     return m_data->sddmSettings();
 }
 
-ThemesModel* SddmKcm::themesModel() const
+ThemesModel *SddmKcm::themesModel() const
 {
     return m_themesModel;
 }
 
-QString SddmKcm::toLocalFile(const QUrl& url)
+QString SddmKcm::toLocalFile(const QUrl &url)
 {
     return url.toLocalFile();
 }
@@ -131,7 +130,7 @@ void SddmKcm::save()
             args[QStringLiteral("theme.conf.user/General/background")] = backgroundPath;
             args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("image");
         } else {
-             args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("color");
+            args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("color");
         }
     }
     args[QStringLiteral("kde_settings.conf/Theme/Current")] = currentThemeIndex.data(ThemesModel::IdRole);
@@ -141,7 +140,7 @@ void SddmKcm::save()
     args[QStringLiteral("kde_settings.conf/Users/MinimumUid")] = m_data->sddmSettings()->minimumUid();
     args[QStringLiteral("kde_settings.conf/Users/MaximumUid")] = m_data->sddmSettings()->maximumUid();
     args[QStringLiteral("kde_settings.conf/General/HaltCommand")] = m_data->sddmSettings()->haltCommand();
-    args[QStringLiteral("kde_settings.conf/General/RebootCommand")] =  m_data->sddmSettings()->rebootCommand();
+    args[QStringLiteral("kde_settings.conf/General/RebootCommand")] = m_data->sddmSettings()->rebootCommand();
 
     KAuth::Action saveAction(authActionName());
     saveAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
@@ -160,7 +159,7 @@ void SddmKcm::save()
 
 void SddmKcm::synchronizeSettings()
 {
-     // initial check for sddm user; abort if user not present
+    // initial check for sddm user; abort if user not present
     // we have to check with QString and isEmpty() instead of QDir and exists() because
     // QDir returns "." and true for exists() in the case of a non-existent user;
     QString sddmHomeDirPath = KUser("sddm").homeDir();
@@ -191,57 +190,49 @@ void SddmKcm::synchronizeSettings()
     // send values and paths to helper, debug if it fails
     QVariantMap args;
 
-    args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
+    args[QStringLiteral("kde_settings.conf")] = QString{QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
 
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
 
     if (!cursorTheme.isNull()) {
         args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme;
-    }
-    else {
+    } else {
         qDebug() << "Cannot find cursor theme value.";
     }
 
     if (!dpiValue.isEmpty()) {
         args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = dpiArgument;
-    }
-    else {
+    } else {
         qDebug() << "Cannot find scaling DPI value.";
     }
 
     if (!numLock.isEmpty()) {
         if (numLock == QStringLiteral("0")) {
             args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("on");
-        }
-        else if (numLock == QStringLiteral("1")) {
+        } else if (numLock == QStringLiteral("1")) {
             args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("off");
-        }
-        else if (numLock == QStringLiteral("2")) {
+        } else if (numLock == QStringLiteral("2")) {
             args[QStringLiteral("kde_settings.conf/General/Numlock")] = QStringLiteral("none");
         }
-    }
-    else {
+    } else {
         qDebug() << "Cannot find NumLock value.";
     }
 
     if (!fontconfigPath.isEmpty()) {
         args[QStringLiteral("fontconfig")] = fontconfigPath;
-    }
-    else {
+    } else {
         qDebug() << "Cannot find fontconfig folder.";
     }
 
     if (!kdeglobalsPath.isEmpty()) {
         args[QStringLiteral("kdeglobals")] = kdeglobalsPath;
-    }
-    else {
+    } else {
         qDebug() << "Cannot find kdeglobals file.";
     }
 
     if (!plasmarcPath.isEmpty()) {
         args[QStringLiteral("plasmarc")] = plasmarcPath;
-    }
-    else {
+    } else {
         qDebug() << "Cannot find plasmarc file.";
     }
 
@@ -251,7 +242,7 @@ void SddmKcm::synchronizeSettings()
 
     auto job = syncAction.execute();
     connect(job, &KJob::result, this, [this, job] {
-        if (job->error()){
+        if (job->error()) {
             qDebug() << "Synchronization failed";
             qDebug() << job->errorString();
             qDebug() << job->errorText();
@@ -279,7 +270,7 @@ void SddmKcm::resetSyncronizedSettings()
     // send paths to helper
     QVariantMap args;
 
-    args[QStringLiteral("kde_settings.conf")] = QString {QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
+    args[QStringLiteral("kde_settings.conf")] = QString{QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
 
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
 
@@ -296,7 +287,7 @@ void SddmKcm::resetSyncronizedSettings()
     auto job = resetAction.execute();
 
     connect(job, &KJob::result, this, [this, job] {
-        if (job->error()){
+        if (job->error()) {
             qDebug() << "Reset failed";
             qDebug() << job->errorString();
             qDebug() << job->errorText();
@@ -309,6 +300,5 @@ void SddmKcm::resetSyncronizedSettings()
     });
     job->start();
 }
-
 
 #include "sddmkcm.moc"

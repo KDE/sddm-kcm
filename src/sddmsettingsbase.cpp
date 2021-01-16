@@ -19,16 +19,16 @@
 
 #include "config.h"
 
-#include <QDir>
 #include <QDebug>
+#include <QDir>
 
 #include <algorithm>
 
-SddmSettingsBase::SddmSettingsBase(KSharedConfigPtr config, QObject* parent)
+SddmSettingsBase::SddmSettingsBase(KSharedConfigPtr config, QObject *parent)
     : KConfigSkeleton(config, parent)
 {
     auto defaultFiles = QDir(QStringLiteral(SDDM_SYSTEM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);
-    std::transform(defaultFiles.begin(), defaultFiles.end(), defaultFiles.begin(), [] (const QString &filename) -> QString {
+    std::transform(defaultFiles.begin(), defaultFiles.end(), defaultFiles.begin(), [](const QString &filename) -> QString {
         return QStringLiteral(SDDM_SYSTEM_CONFIG_DIR "/") + filename;
     });
     // If no filename is set, KConfig will not parse any file
@@ -75,7 +75,7 @@ QString SddmSettingsBase::defaultHaltCommand() const
     return m_defaultConfig->group("General").readEntry("HaltCommand");
 }
 
- QString SddmSettingsBase::defaultRebootCommand() const
+QString SddmSettingsBase::defaultRebootCommand() const
 {
     return m_defaultConfig->group("General").readEntry("RebootCommand");
 }

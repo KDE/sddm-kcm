@@ -15,9 +15,9 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include "themesmodel.h"
 #include "config.h"
 #include "thememetadata.h"
-#include "themesmodel.h"
 
 #include <QDir>
 #include <QStandardPaths>
@@ -26,8 +26,8 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <QDebug>
 #include <KSharedConfig>
+#include <QDebug>
 
 ThemesModel::ThemesModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -74,37 +74,37 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
 
     const ThemeMetadata metadata = mThemeList[index.row()];
 
-    switch(role) {
-        case Qt::DisplayRole:
-            return metadata.name();
-        case ThemesModel::IdRole:
-            return metadata.themeid();
-        case ThemesModel::AuthorRole:
-            return metadata.author();
-        case ThemesModel::DescriptionRole:
-            return metadata.description();
-        case ThemesModel::LicenseRole:
-            return metadata.license();
-        case ThemesModel::EmailRole:
-            return metadata.email();
-        case ThemesModel::WebsiteRole:
-            return metadata.website();
-        case ThemesModel::CopyrightRole:
-            return metadata.copyright();
-        case ThemesModel::VersionRole:
-            return metadata.version();
-        case ThemesModel::ThemeApiRole:
-            return metadata.themeapi();
-        case ThemesModel::PreviewRole:
-            return metadata.screenshot();
-        case ThemesModel::PathRole:
-            return metadata.path();
-        case ThemesModel::ConfigFileRole:
-            return metadata.configfile();
-        case ThemesModel::CurrentBackgroundRole:
-            if (metadata.supportsBackground()) {
-                return m_currentWallpapers[metadata.themeid()];
-            }
+    switch (role) {
+    case Qt::DisplayRole:
+        return metadata.name();
+    case ThemesModel::IdRole:
+        return metadata.themeid();
+    case ThemesModel::AuthorRole:
+        return metadata.author();
+    case ThemesModel::DescriptionRole:
+        return metadata.description();
+    case ThemesModel::LicenseRole:
+        return metadata.license();
+    case ThemesModel::EmailRole:
+        return metadata.email();
+    case ThemesModel::WebsiteRole:
+        return metadata.website();
+    case ThemesModel::CopyrightRole:
+        return metadata.copyright();
+    case ThemesModel::VersionRole:
+        return metadata.version();
+    case ThemesModel::ThemeApiRole:
+        return metadata.themeapi();
+    case ThemesModel::PreviewRole:
+        return metadata.screenshot();
+    case ThemesModel::PathRole:
+        return metadata.path();
+    case ThemesModel::ConfigFileRole:
+        return metadata.configfile();
+    case ThemesModel::CurrentBackgroundRole:
+        if (metadata.supportsBackground()) {
+            return m_currentWallpapers[metadata.themeid()];
+        }
     }
 
     return QVariant();
@@ -139,8 +139,8 @@ void ThemesModel::populate()
         themesBaseDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sddm/themes"), QStandardPaths::LocateDirectory);
     }
 
-    auto alreadyHave = [this] (const QString &theme) {
-        return std::any_of(mThemeList.cbegin(), mThemeList.cend(), [&theme] (const ThemeMetadata &data) {
+    auto alreadyHave = [this](const QString &theme) {
+        return std::any_of(mThemeList.cbegin(), mThemeList.cend(), [&theme](const ThemeMetadata &data) {
             return data.themeid() == theme;
         });
     };
@@ -169,7 +169,7 @@ void ThemesModel::add(const QString &id, const QString &path)
         auto themeConfig = KSharedConfig::openConfig(themeConfigPath + QStringLiteral("user"), KConfig::CascadeConfig);
         themeConfig->addConfigSources({themeConfigPath});
         const QString backgroundPath = themeConfig->group("General").readEntry("background");
-        if(backgroundPath.startsWith(QStringLiteral("/"))) {
+        if (backgroundPath.startsWith(QStringLiteral("/"))) {
             m_currentWallpapers.insert(data.themeid(), backgroundPath);
         } else {
             m_currentWallpapers.insert(data.themeid(), data.path() + backgroundPath);
@@ -207,10 +207,10 @@ QString ThemesModel::currentTheme() const
 
 void ThemesModel::setCurrentTheme(const QString &theme)
 {
-    auto it = std::find_if(mThemeList.cbegin(), mThemeList.cend(), [&theme] (const ThemeMetadata &themeData) {
+    auto it = std::find_if(mThemeList.cbegin(), mThemeList.cend(), [&theme](const ThemeMetadata &themeData) {
         return themeData.themeid() == theme;
     });
-    const int index =  it - mThemeList.cbegin();
+    const int index = it - mThemeList.cbegin();
     if (it == mThemeList.cend() || index == m_currentIndex) {
         return;
     }

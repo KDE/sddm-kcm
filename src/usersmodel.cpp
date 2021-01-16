@@ -44,11 +44,11 @@ QVariant UsersModel::data(const QModelIndex &index, int role) const
     }
     const KUser &user = mUserList[row];
 
-    switch(role) {
-        case Qt::DisplayRole:
-            return user.loginName();
-        case UidRole:
-            return user.userId().nativeId();
+    switch (role) {
+    case Qt::DisplayRole:
+        return user.loginName();
+    case UidRole:
+        return user.userId().nativeId();
     }
 
     return QVariant();
@@ -58,23 +58,24 @@ void UsersModel::add(const KUser &user)
 {
     beginInsertRows(QModelIndex(), mUserList.count(), mUserList.count());
 
-    mUserList.append( KUser(user) );
+    mUserList.append(KUser(user));
 
     endInsertRows();
 }
 
-void UsersModel::populate() {
+void UsersModel::populate()
+{
     mUserList.clear();
 
-    QList< KUser > userList = KUser::allUsers();
+    QList<KUser> userList = KUser::allUsers();
 
     KUser user;
 
-    foreach( user, userList ) {
+    foreach (user, userList) {
         K_UID uuid = user.userId().nativeId();
 
         // invalid user
-        if (uuid == (uid_t) -1) {
+        if (uuid == (uid_t)-1) {
             continue;
         }
 
@@ -84,10 +85,10 @@ void UsersModel::populate() {
         qDebug() << " isSuperUser:" << user.isSuperUser() << ",isValid:" << user.isValid();
         qDebug() << " faceIconPath:" << user.faceIconPath();*/
     }
-
 }
 
-int UsersModel::indexOf(const QString &user) {
+int UsersModel::indexOf(const QString &user)
+{
     if (user.isEmpty())
         return 0;
     // find user index

@@ -30,11 +30,11 @@ public:
         RealNameRole,
         HomeDirRole,
         IconRole,
-        UidRole
+        UidRole,
     };
     Q_ENUM(Roles)
 
-    explicit UsersModel(QObject *parent=nullptr);
+    explicit UsersModel(QObject *parent = nullptr);
     ~UsersModel() Q_DECL_OVERRIDE;
 
     int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
@@ -46,6 +46,5 @@ private:
     void add(const KUser &user);
 
     QList<KUser> mUserList;
-
 };
-#endif //USERSMODEL_H
+#endif // USERSMODEL_H

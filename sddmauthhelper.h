@@ -22,7 +22,7 @@
 
 using namespace KAuth;
 
-class SddmAuthHelper: public QObject
+class SddmAuthHelper : public QObject
 {
     Q_OBJECT
 
@@ -34,7 +34,7 @@ public Q_SLOTS:
     ActionReply uninstalltheme(const QVariantMap &args);
 
 public:
-    void copyFile (const QString &source, const QString &destination);
+    void copyFile(const QString &source, const QString &destination);
 };
 
-#endif //SDDMAUTHHELPER_H
+#endif // SDDMAUTHHELPER_H

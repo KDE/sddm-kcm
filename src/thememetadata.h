@@ -28,7 +28,7 @@ class ThemeMetadata
 public:
     explicit ThemeMetadata(const QString &id, const QString &path = QString());
     ThemeMetadata(const ThemeMetadata &other);
-    ThemeMetadata& operator=(const ThemeMetadata& other);
+    ThemeMetadata &operator=(const ThemeMetadata &other);
 
     ~ThemeMetadata();
 
@@ -54,4 +54,4 @@ private:
 private:
     QSharedDataPointer<ThemeMetadataPrivate> d;
 };
-#endif //THEMEMETADATA_H
+#endif // THEMEMETADATA_H

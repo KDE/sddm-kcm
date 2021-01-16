@@ -44,6 +44,7 @@ protected:
     bool defaultRelogin() const;
     QString defaultHaltCommand() const;
     QString defaultRebootCommand() const;
+
 private:
     KSharedConfigPtr m_defaultConfig;
 };
