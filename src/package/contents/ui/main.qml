@@ -139,10 +139,9 @@ KCM.GridViewKCM {
             visible: true
             type: Kirigami.MessageType.Information
             font: Kirigami.Theme.smallFont
-            text: i18n("Settings synchronization allows you to transfer the following Plasma settings to SDDM:" +
-                "<ul><li>color scheme,</li><li>cursor theme,</li><li>font,</li><li>font rendering,</li>"+
-                "<li>NumLock preference,</li><li>Plasma theme,</li><li>and scaling DPI</li></ul>" +
-                "Please note that theme files must be installed globally for settings synchronization to work.")
+            text: i18n("Settings synchronization allows you to transfer the following Plasma settings to SDDM:") +
+                i18n("<ul><li>color scheme,</li><li>cursor theme,</li><li>font,</li><li>font rendering,</li><li>NumLock preference,</li><li>Plasma theme,</li><li>and scaling DPI</li></ul>") +
+                i18n("Please note that theme files must be installed globally for settings synchronization to work.")
         }
         footer: RowLayout {
             Item {
