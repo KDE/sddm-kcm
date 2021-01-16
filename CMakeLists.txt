@@ -13,6 +13,9 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDEClangFormat)
 include(FeatureSummary)
+if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
+    include(KDEGitCommitHooks)
+endif()
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Quick QuickWidgets)
 
@@ -69,3 +72,6 @@ file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
+    kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
+endif()
