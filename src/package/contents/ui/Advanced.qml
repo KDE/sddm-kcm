@@ -67,11 +67,11 @@ Kirigami.Page {
             }
             QQC2.ComboBox{
                 model: SessionModel {}
-                currentIndex: Math.max(indexOfValue(kcm.sddmSettings.session), 0)
                 textRole: "name"
                 valueRole: "file"
                 onActivated: kcm.sddmSettings.session = currentValue
                 onEnabledChanged: enabled ? kcm.sddmSettings.session = currentValue : kcm.sddmSettings.session = ""
+                Component.onCompleted: currentIndex = Math.max(indexOfValue(kcm.sddmSettings.session), 0)
                 KCM.SettingStateBinding {
                     visible: autologinBox.checked
                     configObject: kcm.sddmSettings
