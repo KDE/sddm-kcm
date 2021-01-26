@@ -62,6 +62,10 @@ SddmKcm::SddmKcm(QObject *parent, const QVariantList &args)
         m_themesModel->setCurrentTheme(m_data->sddmSettings()->current());
     });
     m_themesModel->setCurrentTheme(m_data->sddmSettings()->current());
+    // Currently only emmited when background changes
+    connect(m_themesModel, &QAbstractItemModel::dataChanged, this, [this] {
+        this->setNeedsSave(true);
+    });
 }
 
 SddmKcm::~SddmKcm()
