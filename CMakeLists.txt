@@ -41,7 +41,7 @@ endif()
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_sddm\")
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 
-install(FILES kcm_sddm.desktop DESTINATION ${CMAKE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_sddm.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 

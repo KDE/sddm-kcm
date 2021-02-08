@@ -38,4 +38,4 @@ kcoreaddons_desktop_to_json(kcm_sddm "../kcm_sddm.desktop")
 kpackage_install_package(package kcm_sddm kcms)
 
 
-install(TARGETS kcm_sddm DESTINATION ${CMAKE_INSTALL_PLUGINDIR}/kcms)
+install(TARGETS kcm_sddm DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
