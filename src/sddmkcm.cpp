@@ -186,6 +186,11 @@ void SddmKcm::synchronizeSettings()
     KConfigGroup numLockConfigGroup(&numLockConfig, "Keyboard");
     QString numLock = numLockConfigGroup.readEntry("NumLock");
 
+    // Syncing the font only works with SDDM >= 0.19, but will not have a negative effect with older versions
+    KConfig plasmaFontConfig(QStringLiteral("kdeglobals"));
+    KConfigGroup plasmaFontGroup(&plasmaFontConfig, "General");
+    QString plasmaFont = plasmaFontGroup.readEntry("font");
+
     // define paths
     const QString fontconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("fontconfig"), QStandardPaths::LocateDirectory);
     const QString kdeglobalsPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kdeglobals"));
@@ -220,6 +225,13 @@ void SddmKcm::synchronizeSettings()
         }
     } else {
         qDebug() << "Cannot find NumLock value.";
+    }
+
+    if (!plasmaFont.isEmpty()) {
+        args[QStringLiteral("kde_settings.conf/Theme/Font")] = plasmaFont;
+    }
+    else {
+        qDebug() << "Cannot find Plasma font value.";
     }
 
     if (!fontconfigPath.isEmpty()) {
@@ -283,6 +295,8 @@ void SddmKcm::resetSyncronizedSettings()
     args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = QVariant();
 
     args[QStringLiteral("kde_settings.conf/General/Numlock")] = QVariant();
+
+    args[QStringLiteral("kde_settings.conf/Theme/Font")] = QVariant();
 
     KAuth::Action resetAction(QStringLiteral("org.kde.kcontrol.kcmsddm.reset"));
     resetAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
