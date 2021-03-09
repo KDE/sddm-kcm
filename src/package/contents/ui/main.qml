@@ -26,7 +26,7 @@ import QtGraphicalEffects 1.0
 
 import org.kde.kcm 1.4 as KCM
 import org.kde.kirigami 2.14 as Kirigami
-import org.kde.newstuff 1.1 as NewStuff
+import org.kde.newstuff 1.81 as NewStuff
 import org.kde.private.kcms.sddm 1.0
 
 KCM.GridViewKCM {
@@ -114,43 +114,14 @@ KCM.GridViewKCM {
                 icon.name: "document-import"
                 onTriggered: themeDialog.open()
             },
-            Kirigami.Action {
+            NewStuff.Action {
                 text: i18nc("@action:button", "Get New SDDM Themes...")
-                icon.name: "get-hot-new-stuff"
-                onTriggered: newStuffPage.open()
-            }
-        ]
-    }
-    Loader {
-        id: newStuffPage
-
-        // Use this function to open the dialog. It seems roundabout, but this ensures
-        // that the dialog is not constructed until we want it to be shown the first time,
-        // since it will initialise itself on the first load (which causes it to phone
-        // home) and we don't want that until the user explicitly asks for it.
-        function open() {
-            if (item) {
-                item.open();
-            } else {
-                active = true;
-            }
-        }
-        onLoaded: {
-            item.open();
-        }
-
-        active: false
-        asynchronous: true
-
-        sourceComponent: NewStuff.Dialog {
-            configFile: "sddmtheme.knsrc"
-            Connections {
-                target: newStuffPage.item.engine.engine
-                function onSignalEntryEvent(entry, event) {
+                configFile: "sddmtheme.knsrc"
+                function onEntryEvent(entry, event) {
                     kcm.themesModel.populate();
                 }
             }
-        }
+        ]
     }
     FileDialog {
         id: themeDialog
