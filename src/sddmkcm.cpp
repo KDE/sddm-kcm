@@ -189,7 +189,7 @@ void SddmKcm::synchronizeSettings()
     // Syncing the font only works with SDDM >= 0.19, but will not have a negative effect with older versions
     KConfig plasmaFontConfig(QStringLiteral("kdeglobals"));
     KConfigGroup plasmaFontGroup(&plasmaFontConfig, "General");
-    QString plasmaFont = plasmaFontGroup.readEntry("font");
+    QString plasmaFont = plasmaFontGroup.readEntry("font", QApplication::font()toString());
 
     // define paths
     const QString fontconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("fontconfig"), QStandardPaths::LocateDirectory);
