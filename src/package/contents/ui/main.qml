@@ -167,7 +167,7 @@ KCM.GridViewKCM {
             level: 2
         }
         contentItem: Kirigami.InlineMessage {
-            implicitWidth: 0.75 * root.width
+            implicitWidth: Kirigami.Units.gridUnit * 14
             visible: true
             type: Kirigami.MessageType.Information
             font: Kirigami.Theme.smallFont
