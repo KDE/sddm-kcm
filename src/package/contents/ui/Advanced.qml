@@ -109,7 +109,7 @@ Kirigami.Page {
             Kirigami.FormData.label: i18nc("@label:spinbox", "Maximum user UID:")
             id: maxSpinBox
             from: minSpinBox.value
-            to: 60000
+            to: 60513
             value: kcm.sddmSettings.maximumUid
             onValueModified: kcm.sddmSettings.maximumUid = value
             KCM.SettingStateBinding {
