@@ -1,5 +1,5 @@
 /*
-    Copyright 2020 David Redondo <kde@david-redondo.de>
+    SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License as
