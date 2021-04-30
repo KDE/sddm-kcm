@@ -94,6 +94,10 @@ KCM.GridViewKCM {
             }
         ]
         onClicked: kcm.sddmSettings.current = model.id
+
+        onDoubleClicked: {
+            kcm.save();
+        }
     }
     footer: Kirigami.ActionToolBar {
         flat: false
