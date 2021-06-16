@@ -257,6 +257,7 @@ void SddmKcm::synchronizeSettings()
             }
         } else {
             qDebug() << "Synchronization successful";
+            Q_EMIT syncSuccessful();
         }
     });
     job->start();
@@ -304,6 +305,7 @@ void SddmKcm::resetSyncronizedSettings()
             }
         } else {
             qDebug() << "Reset successful";
+            Q_EMIT resetSyncedDataSuccessful();
         }
     });
     job->start();

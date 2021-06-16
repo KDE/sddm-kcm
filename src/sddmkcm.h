@@ -35,6 +35,8 @@ public Q_SLOTS:
     void save() override;
 Q_SIGNALS:
     void errorOccured(const QString &message);
+    void syncSuccessful();
+    void resetSyncedDataSuccessful();
 
 private:
     SddmData *m_data;

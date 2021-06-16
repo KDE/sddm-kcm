@@ -25,9 +25,18 @@ KCM.GridViewKCM {
         showCloseButton: true
         Connections {
             target: kcm
+
             function onErrorOccured(message) {
                 errorMessage.text = message;
                 errorMessage.visible = true
+            }
+
+            function onSyncSuccessful() {
+                syncSheet.close()
+            }
+
+            function onResetSyncedDataSuccessful() {
+                syncSheet.close()
             }
         }
     }
@@ -193,12 +202,18 @@ KCM.GridViewKCM {
             QQC2.Button {
                 icon.name: "edit-clear"
                 text: i18nc("@action:button", "Clear Image")
-                onClicked: view.model.setData(backgroundSheet.modelIndex, "", ThemesModel.CurrentBackgroundRole)
+                onClicked: {
+                    view.model.setData(backgroundSheet.modelIndex, "", ThemesModel.CurrentBackgroundRole)
+                    backgroundSheet.close()
+                }
             }
             FileDialog {
                 id: imageDialog
                 selectExisting: true
-                onAccepted: view.model.setData(backgroundSheet.modelIndex, kcm.toLocalFile(fileUrl), ThemesModel.CurrentBackgroundRole)
+                onAccepted: {
+                    view.model.setData(backgroundSheet.modelIndex, kcm.toLocalFile(fileUrl), ThemesModel.CurrentBackgroundRole)
+                    backgroundSheet.close()
+                }
             }
         }
     }
