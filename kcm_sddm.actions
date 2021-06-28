@@ -326,6 +326,7 @@ Policy=auth_admin
 
 [org.kde.kcontrol.kcmsddm.sync]
 Name=Synchronize Settings
+Name[ar]=زامن اﻹعدادات
 Name[ast]=Sincronización d'axustes
 Name[az]=Eyniləşdirmə Ayarları
 Name[ca]=Paràmetres de sincronització
@@ -362,6 +363,7 @@ Name[x-test]=xxSynchronize Settingsxx
 Name[zh_CN]=同步设置
 Name[zh_TW]=同步設定
 Description=Synchronizes user settings with SDDM settings
+Description[ar]=يزامن إعدادات المستخدم مع إعدادات SDDM
 Description[ast]=Sincronización de los axustes del usuariu colos de SDDM
 Description[az]=İstifadəçi ayarlarını SDDM ayarları ilə eyniləşdirmək
 Description[ca]=Sincronitza els paràmetres de l'usuari amb els paràmetres de l'SDDM
@@ -401,6 +403,7 @@ Policy=auth_admin
 
 [org.kde.kcontrol.kcmsddm.reset]
 Name=Reset Settings
+Name[ar]=صفّر اﻹعدادات
 Name[ast]=Reafitamientu d'axustes
 Name[az]=Ayarları Sıfırlamaq
 Name[ca]=Reinicia la configuració
@@ -437,6 +440,7 @@ Name[x-test]=xxReset Settingsxx
 Name[zh_CN]=重置设置
 Name[zh_TW]=重設設定
 Description=Resets SDDM settings so there are not user settings
+Description[ar]=يعيد ضبط إعدادات SDDM حتى لا تكون هناك إعدادات للمستخدم
 Description[ast]=Reafitamientu de los axustes de SDDM
 Description[az]=İstifadəçi ayarları olmadığı üçün SDDM ayarları sıfırlanır
 Description[ca]=Reinicia els paràmetres de l'SDDM de manera que no hi hagi paràmetres d'usuari

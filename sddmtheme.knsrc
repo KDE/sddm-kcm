@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: CC0-1.0
 [KNewStuff3]
 Name=Login Screen
+Name[ar]=شاشة الولوج
 Name[ast]=Pantalla d'aniciu de sesión
 Name[az]=Giriş EKranı
 Name[ca]=Pantalla d'inici de sessió
