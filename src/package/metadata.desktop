@@ -12,7 +12,7 @@ X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
 
 Name=Login Screen (SDDM)
-Name[ar]=مدير الولوج (SDDM)
+Name[ar]=شاشة ولوج (SDDM)
 Name[ast]=Pantalla d'aniciu de sesión (SSDM)
 Name[az]=Giriş EKranı (SDDM)
 Name[bs]=Prijavni ekran (SDDM)
