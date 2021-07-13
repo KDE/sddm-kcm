@@ -242,6 +242,11 @@ void SddmKcm::synchronizeSettings()
         qDebug() << "Cannot find plasmarc file.";
     }
 
+    auto path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kscreen/", QStandardPaths::LocateDirectory);
+    if (!path.isEmpty()) {
+        args[QStringLiteral("kscreen-config")] = path;
+    }
+
     KAuth::Action syncAction(QStringLiteral("org.kde.kcontrol.kcmsddm.sync"));
     syncAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
     syncAction.setArguments(args);
@@ -277,7 +282,7 @@ void SddmKcm::resetSyncronizedSettings()
     // send paths to helper
     QVariantMap args;
 
-    args[QStringLiteral("kde_settings.conf")] = QString{QLatin1String(SDDM_CONFIG_DIR "/") + QStringLiteral("kde_settings.conf")};
+    args[QStringLiteral("kde_settings.conf")] = QStringLiteral(SDDM_CONFIG_DIR "/kde_settings.conf");
 
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
 

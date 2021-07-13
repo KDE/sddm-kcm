@@ -23,7 +23,8 @@ public Q_SLOTS:
     ActionReply uninstalltheme(const QVariantMap &args);
 
 public:
-    void copyFile(const QString &source, const QString &destination);
+    static void copyFile(const QString &source, const QString &destination);
+    static void copyDirectoryRecursively(const QString &source, const QString &destination, QSet<QString> &done);
 };
 
 #endif // SDDMAUTHHELPER_H

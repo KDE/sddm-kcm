@@ -51,6 +51,26 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
     return QSharedPointer<KConfig>(new KConfig(file.fileName(), KConfig::SimpleConfig));
 }
 
+void SddmAuthHelper::copyDirectoryRecursively(const QString &source, const QString &destination, QSet<QString> &done)
+{
+    if (done.contains(source)) {
+        return;
+    }
+    done.insert(source);
+
+    const QDir sourceDir(source);
+    const auto entries = sourceDir.entryInfoList(QDir::NoDotAndDotDot | QDir::Dirs | QDir::Files);
+    for (const auto &entry : entries) {
+        const auto destinationPath = destination + '/' + entry.fileName();
+        if (entry.isFile()) {
+            copyFile(entry.absoluteFilePath(), destinationPath);
+        } else {
+            QDir().mkpath(destinationPath);
+            copyDirectoryRecursively(entry.absoluteFilePath(), destinationPath, done);
+        }
+    }
+}
+
 void SddmAuthHelper::copyFile(const QString &source, const QString &destination)
 {
     KUser sddmUser(QStringLiteral("sddm"));
@@ -128,6 +148,13 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         copyFile(plasmarcSource.path(), plasmarcDestination.path());
     }
 
+    // copy kscreen config
+    if (!args[QStringLiteral("kscreen-config")].isNull()) {
+        const QString destinationDir = sddmHomeDirPath + "/.local/share/kscreen/";
+        QSet<QString> done;
+        copyDirectoryRecursively(args[QStringLiteral("kscreen-config")].toString(), destinationDir, done);
+    }
+
     // write cursor theme, NumLock preference, and scaling DPI to config file
     ActionReply reply = ActionReply::HelperErrorReply();
     QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());
@@ -179,6 +206,8 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
     fontconfigDir.removeRecursively();
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kdeglobals"));
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/plasmarc"));
+
+    QDir(sddmHomeDirPath + "/.local/share/kscreen/").removeRecursively();
 
     // remove cursor theme, NumLock preference, and scaling DPI from config file
     ActionReply reply = ActionReply::HelperErrorReply();
@@ -238,7 +267,6 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
             continue;
         }
 
-        QSharedPointer<KConfig> config;
         QString fileName = configFields[0];
         QString groupName = configFields[1];
         QString keyName = configFields[2];
