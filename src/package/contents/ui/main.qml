@@ -106,8 +106,8 @@ KCM.GridViewKCM {
                 onTriggered: { kcm.push("Advanced.qml") }
             },
             Kirigami.Action {
-                text: i18nc("@action:button", "Synchronize Settings...")
-                icon.name: "view-refresh"
+                text: i18nc("@action:button", "Apply Plasma Settings...")
+                icon.name: "plasma"
                 onTriggered: syncSheet.open()
             },
             Kirigami.Action {
@@ -134,27 +134,27 @@ KCM.GridViewKCM {
     }
     Kirigami.OverlaySheet {
         id: syncSheet
-        title: i18nc("@title:window", "Settings Synchronization")
+        title: i18nc("@title:window", "Apply Plasma Settings")
         contentItem: Kirigami.InlineMessage {
-            implicitWidth: Kirigami.Units.gridUnit * 14
+            implicitWidth: Kirigami.Units.gridUnit * 22
             visible: true
             type: Kirigami.MessageType.Information
             font: Kirigami.Theme.smallFont
-            text: i18n("Settings synchronization allows you to transfer the following Plasma settings to SDDM:") +
-                xi18nc("@info", "<para><list><item>color scheme,</item><item>cursor theme,</item><item>font,</item><item>font rendering,</item><item>NumLock preference,</item><item>Plasma theme,</item><item>scaling DPI,</item><item>Screen configuration (Wayland only)</item></list></para>") +
-                i18n("Please note that theme files must be installed globally for settings synchronization to work.")
+            text: i18n("This will make the SDDM login screen reflect your customizations to the following Plasma settings:") +
+                xi18nc("@info", "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Font,</item><item>Font rendering,</item><item>NumLock preference,</item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</item></list></para>") +
+                i18n("Please note that theme files must be installed globally to be reflected on the SDDM login screen.")
         }
         footer: RowLayout {
             Item {
                 Layout.fillWidth: true
             }
             QQC2.Button {
-                text: i18nc("@action:button", "Synchronize")
-                icon.name: "view-refresh"
+                text: i18nc("@action:button", "Apply")
+                icon.name: "dialog-ok-apply"
                 onClicked: kcm.synchronizeSettings()
             }
             QQC2.Button {
-                text: i18nc("@action:button", "Reset")
+                text: i18nc("@action:button", "Reset to Default Settings")
                 icon.name: "edit-undo"
                 onClicked: kcm.resetSyncronizedSettings()
             }
