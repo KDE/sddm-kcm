@@ -23,10 +23,7 @@ Kirigami.OverlaySheet {
     property string email: ""
     property string website: ""
     property string version: ""
-    header: Kirigami.Heading {
-        level: 2
-        text: i18nc("@title:window, %1 is the theme name, %2 the version", "%1 (%2)", themeName, version)
-    }
+    title: i18nc("@title:window, %1 is the theme name, %2 the version", "%1 (%2)", themeName, version)
     contentItem: ColumnLayout {
         Layout.preferredWidth: 0.75 * root.width
         Item {

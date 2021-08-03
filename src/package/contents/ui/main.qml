@@ -134,10 +134,7 @@ KCM.GridViewKCM {
     }
     Kirigami.OverlaySheet {
         id: syncSheet
-        header: Kirigami.Heading {
-            text: i18nc("@title:window", "Settings Synchronization")
-            level: 2
-        }
+        title: i18nc("@title:window", "Settings Synchronization")
         contentItem: Kirigami.InlineMessage {
             implicitWidth: Kirigami.Units.gridUnit * 14
             visible: true
@@ -167,10 +164,7 @@ KCM.GridViewKCM {
         id: backgroundSheet
         property var modelIndex
         property string imagePath
-        header: Kirigami.Heading {
-            text: i18nc("@title:window", "Change Background")
-            level: 2
-        }
+        title: i18nc("@title:window", "Change Background")
         contentItem: Item {
             implicitWidth: 0.75 * root.width
             implicitHeight: backgroundImage.hasImage ? backgroundImage.implicitHeight : placeHolder.implicitHeight
