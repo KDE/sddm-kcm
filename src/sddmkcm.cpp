@@ -26,6 +26,7 @@
 #include <KAuthExecuteJob>
 #endif
 #include <KIO/ApplicationLauncherJob>
+#include <KLazyLocalizedString>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KService>
@@ -166,7 +167,7 @@ void SddmKcm::synchronizeSettings()
     // QDir returns "." and true for exists() in the case of a non-existent user;
     QString sddmHomeDirPath = KUser("sddm").homeDir();
     if (sddmHomeDirPath.isEmpty()) {
-        Q_EMIT errorOccured(QStringLiteral("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."));
+        Q_EMIT errorOccured(kli18n("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.").untranslatedText());
         return;
     }
 
@@ -283,7 +284,7 @@ void SddmKcm::resetSyncronizedSettings()
     // QDir returns "." and true for exists() in the case of a non-existent user
     QString sddmHomeDirPath = KUser("sddm").homeDir();
     if (sddmHomeDirPath.isEmpty()) {
-        Q_EMIT errorOccured(QStringLiteral("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."));
+        Q_EMIT errorOccured(kli18n("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.").untranslatedText());
         return;
     }
 
