@@ -21,6 +21,7 @@
 #include <KArchive>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KLazyLocalizedString>
 #include <KLocalizedString>
 #include <KTar>
 #include <KUser>
@@ -367,13 +368,13 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
         archive.reset(new KTar(filePath));
     } else {
         auto e = ActionReply::HelperErrorReply();
-        e.setErrorDescription(i18n("Invalid theme package"));
+        e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
         return e;
     }
 
     if (!archive->open(QIODevice::ReadOnly)) {
         auto e = ActionReply::HelperErrorReply();
-        e.setErrorDescription(i18n("Could not open file"));
+        e.setErrorDescription(kli18n("Could not open file").untranslatedText());
         return e;
     }
 
@@ -389,14 +390,14 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
         auto entry = directory->entry(name);
         if (!entry->isDirectory()) {
             auto e = ActionReply::HelperErrorReply();
-            e.setErrorDescription(i18n("Invalid theme package"));
+            e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
             return e;
         }
         auto subDirectory = static_cast<const KArchiveDirectory *>(entry);
         auto metadataFile = subDirectory->file(QStringLiteral("metadata.desktop"));
         if (!metadataFile || !metadataFile->data().contains("[SddmGreeterTheme]")) {
             auto e = ActionReply::HelperErrorReply();
-            e.setErrorDescription(i18n("Invalid theme package"));
+            e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
             return e;
         }
         installedPaths.append(themesBaseDir + QLatin1Char('/') + name);
@@ -404,7 +405,7 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
 
     if (!directory->copyTo(themesBaseDir)) {
         auto e = ActionReply::HelperErrorReply();
-        e.setErrorDescription(i18n("Could not decompress archive"));
+        e.setErrorDescription(kli18n("Could not decompress archive").untranslatedText());
         return e;
     }
 

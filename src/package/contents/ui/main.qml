@@ -26,8 +26,8 @@ KCM.GridViewKCM {
         Connections {
             target: kcm
 
-            function onErrorOccured(message) {
-                errorMessage.text = message;
+            function onErrorOccured(untranslatedMessage) {
+                errorMessage.text = i18n(untranslatedMessage);
                 errorMessage.visible = message.length > 0
             }
 

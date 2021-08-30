@@ -35,7 +35,7 @@ public:
 public Q_SLOTS:
     void save() override;
 Q_SIGNALS:
-    void errorOccured(const QString &message);
+    void errorOccured(const QString &untranslatedMessage);
     void syncSuccessful();
     void resetSyncedDataSuccessful();
 
