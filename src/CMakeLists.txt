@@ -6,8 +6,6 @@ set(WAYLAND_SESSIONS_DIR             "${CMAKE_INSTALL_PREFIX}/share/wayland-sess
 
 configure_file(config.h.in config.h IMMEDIATE @ONLY)
 
-include_directories(configwidgets)
-
 set(SDDM_KCM_SRCS
     sddmkcm.cpp
     themesmodel.cpp
