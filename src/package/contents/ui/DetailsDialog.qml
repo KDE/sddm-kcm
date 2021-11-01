@@ -66,7 +66,7 @@ Kirigami.OverlaySheet {
             visible: website !== ""
             text:("<a href='"+website+"'>"+website+"</a>")
             onLinkActivated: Qt.openUrlExternally(link)
-            font.pointSize: theme.smallestFont.pointSize
+            font: Kirigami.Theme.smallFont
             Layout.fillWidth: true
             wrapMode: Text.Wrap
         }
@@ -75,9 +75,9 @@ Kirigami.OverlaySheet {
             visible: email !== ""
             text: ("<a href='"+email+"'>"+email+"</a>")
             onLinkActivated: Qt.openUrlExternally("mailto:"+email+"")
-            font.pointSize: theme.smallestFont.pointSize
+            font: Kirigami.Theme.smallFont
             Layout.fillWidth: true
-            Layout.bottomMargin: Math.round(units.smallSpacing * 1.5)
+            Layout.bottomMargin: Math.round(Kirigami.Units.smallSpacing * 1.5)
             wrapMode: Text.Wrap
         }
     }
