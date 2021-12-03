@@ -24,7 +24,7 @@
 #include <KPluginFactory>
 #include <KUser>
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMSddmFactory, "kcm_sddm.json", registerPlugin<SddmKcm>(); registerPlugin<SddmData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMSddmFactory, "../kcm_sddm.json", registerPlugin<SddmKcm>(); registerPlugin<SddmData>();)
 
 SddmKcm::SddmKcm(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
