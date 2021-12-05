@@ -2,6 +2,11 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Configure Login Manager",
+        "Description[ca]": "Configura el gestor d'accés",
+        "Description[nl]": "Aanmeldbeheerder configureren",
+        "Description[sv]": "Anpassa inloggningshanterare",
+        "Description[uk]": "Налаштування керування входом до системи",
+        "Description[x-test]": "xxConfigure Login Managerxx",
         "Icon": "preferences-system-login",
         "Name": "Login Screen (SDDM)",
         "Name[ar]": "شاشة ولوج (SDDM)",
