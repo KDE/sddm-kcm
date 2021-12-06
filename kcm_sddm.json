@@ -3,7 +3,10 @@
     "KPlugin": {
         "Description": "Configure Login Manager",
         "Description[ca]": "Configura el gestor d'accés",
+        "Description[fr]": "Configurer le gestionnaire de connexion",
         "Description[nl]": "Aanmeldbeheerder configureren",
+        "Description[pl]": "Ustawienia zarządzania logowaniem",
+        "Description[sl]": "Nastavi upravljalnika prijav",
         "Description[sv]": "Anpassa inloggningshanterare",
         "Description[uk]": "Налаштування керування входом до системи",
         "Description[x-test]": "xxConfigure Login Managerxx",
