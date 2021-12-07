@@ -2,8 +2,11 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Configure Login Manager",
+        "Description[ar]": "اضبط مدير الولوج",
         "Description[ca]": "Configura el gestor d'accés",
+        "Description[es]": "Configurar el gestor de inicio de sesión",
         "Description[fr]": "Configurer le gestionnaire de connexion",
+        "Description[hu]": "A bejelentkezéskezelő beállításai",
         "Description[nl]": "Aanmeldbeheerder configureren",
         "Description[pl]": "Ustawienia zarządzania logowaniem",
         "Description[sl]": "Nastavi upravljalnika prijav",
