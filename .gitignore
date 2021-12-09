@@ -7,7 +7,6 @@
 .clang-format
 CMakeLists.txt.user*
 /build*/
-cmake-build-debug*
 .idea
 .clang-format
 /compile_commands.json
