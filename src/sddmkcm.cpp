@@ -20,8 +20,10 @@
 
 #include <KAboutData>
 #include <KAuthExecuteJob>
+#include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KService>
 #include <KUser>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMSddmFactory, "../kcm_sddm.json", registerPlugin<SddmKcm>(); registerPlugin<SddmData>();)
@@ -313,6 +315,18 @@ void SddmKcm::resetSyncronizedSettings()
             Q_EMIT resetSyncedDataSuccessful();
         }
     });
+    job->start();
+}
+
+bool SddmKcm::KDEWalletAvailable()
+{
+    return !QStandardPaths::findExecutable(QLatin1String("kwalletmanager5")).isEmpty();
+}
+
+void SddmKcm::openKDEWallet()
+{
+    KService::Ptr kwalletmanagerService = KService::serviceByDesktopName(QStringLiteral("org.kde.kwalletmanager5"));
+    auto *job = new KIO::ApplicationLauncherJob(kwalletmanagerService);
     job->start();
 }
 

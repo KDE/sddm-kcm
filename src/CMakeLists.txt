@@ -27,6 +27,7 @@ target_link_libraries(kcm_sddm
     KF5::I18n
     KF5::AuthCore
     KF5::KCMUtils
+    KF5::KIOGui
     KF5::NewStuff
     KF5::QuickAddons
 )

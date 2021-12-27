@@ -28,6 +28,8 @@ public:
     Q_INVOKABLE void installTheme(const QUrl &url);
     Q_INVOKABLE void synchronizeSettings();
     Q_INVOKABLE void resetSyncronizedSettings();
+    Q_INVOKABLE bool KDEWalletAvailable();
+    Q_INVOKABLE void openKDEWallet();
 
     SddmSettings *sddmSettings() const;
     ThemesModel *themesModel() const;

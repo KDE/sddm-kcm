@@ -27,6 +27,14 @@ Kirigami.Page {
                     highlight: (kcm.sddmSettings.user != "" && kcm.sddmSettings.defaultUser == "") ||
                                 (kcm.sddmSettings.user == "" && kcm.sddmSettings.defaultUser != "")
                 }
+                onToggled: {
+                    // Deliberately imperative because we only want the message
+                    // to appear when the user checks the checkbox, not all the
+                    // time when the checkbox is checked.
+                    if (checked && kcm.KDEWalletAvailable()) {
+                        autologinMessage.visible = true;
+                    }
+                }
             }
             QQC2.ComboBox {
                 model: ItemModels.KSortFilterProxyModel {
@@ -66,6 +74,23 @@ Kirigami.Page {
                     settingName: "Session"
                     extraEnabledConditions: autologinBox.checked
                 }
+            }
+        }
+        Kirigami.InlineMessage {
+            id: autologinMessage
+
+            Layout.fillWidth: true
+
+            type: Kirigami.MessageType.Warning
+
+            text: xi18nc("@info", "Auto-login does not support unlocking your KDE Wallet automatically, so it will ask you to unlock it every time you log in.
+            <nl/><nl/>
+            To avoid this, you can change the wallet to have a blank password. Note that this is insecure and should only be done in a trusted environment.")
+
+            actions: Kirigami.Action {
+                text: i18n("Open KDE Wallet Settings")
+                icon.name: "kwalletmanager"
+                onTriggered: kcm.openKDEWallet();
             }
         }
         QQC2.CheckBox {
