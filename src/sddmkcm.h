@@ -6,13 +6,12 @@
 #ifndef SDDMKCM_H
 #define SDDMKCM_H
 
+#include "sddmsettings.h"
+#include "themesmodel.h"
 #include <KQuickAddons/ManagedConfigModule>
-
 class ThemeConfig;
 class AdvancedConfig;
 class SddmData;
-class SddmSettings;
-class ThemesModel;
 
 class SddmKcm : public KQuickAddons::ManagedConfigModule
 {

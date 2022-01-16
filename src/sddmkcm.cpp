@@ -10,9 +10,9 @@
 
 #include "config.h"
 #include "sddmdata.h"
-#include "sddmsettings.h"
+
 #include "sessionmodel.h"
-#include "themesmodel.h"
+
 #include "usersmodel.h"
 
 #include <QApplication>
