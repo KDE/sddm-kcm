@@ -13,8 +13,15 @@
 #include <QFile>
 #include <QProcess>
 
+#include <kauth_version.h>
+#if KAUTH_VERSION >= QT_VERSION_CHECK(5, 92, 0)
+#include <KAuth/Action>
+#include <KAuth/ExecuteJob>
+#else
 #include <KAuthAction>
 #include <KAuthExecuteJob>
+#endif
+
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>

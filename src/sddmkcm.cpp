@@ -19,7 +19,12 @@
 #include <QDir>
 
 #include <KAboutData>
+#include <kauth_version.h>
+#if KAUTH_VERSION >= QT_VERSION_CHECK(5, 92, 0)
+#include <KAuth/ExecuteJob>
+#else
 #include <KAuthExecuteJob>
+#endif
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KPluginFactory>
