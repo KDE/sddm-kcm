@@ -140,15 +140,13 @@ Kirigami.Page {
                 id: haltField
                 Layout.fillWidth: true
                 text: kcm.sddmSettings.haltCommand
-                readOnly: true
-                onReleased: haltButton.selectFile()
+                readOnly: false
+                onTextChanged: kcm.sddmSettings.haltCommand = text
                 rightActions: [ Kirigami.Action {
                     iconName: haltField.LayoutMirroring.enabled ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
                     visible: haltField.text.length > 0
                     onTriggered: kcm.sddmSettings.haltCommand = ""
                 }]
-                QQC2.ToolTip.text: text
-                QQC2.ToolTip.visible: hovered && haltField.text.length > 0
                 KCM.SettingStateBinding {
                     configObject: kcm.sddmSettings
                     settingName: "HaltCommand"
@@ -172,15 +170,13 @@ Kirigami.Page {
                 id: rebootField
                 Layout.fillWidth: true
                 text: kcm.sddmSettings.rebootCommand
-                readOnly: true
-                onReleased: rebootButton.selectFile()
+                readOnly: false
+                onTextChanged: kcm.sddmSettings.rebootCommand = text
                 rightActions: [ Kirigami.Action {
                     iconName: rebootField.LayoutMirroring.enabled ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
                     visible: rebootField.text.length > 0
                     onTriggered: kcm.sddmSettings.rebootCommand = ""
                 }]
-                QQC2.ToolTip.text: text
-                QQC2.ToolTip.visible: hovered && haltField.text.length > 0
                 KCM.SettingStateBinding {
                     configObject: kcm.sddmSettings
                     settingName: "RebootCommand"
