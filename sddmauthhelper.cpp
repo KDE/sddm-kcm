@@ -99,6 +99,15 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         return ActionReply::HelperErrorReply();
     }
 
+    // In plasma-framework, ThemePrivate::useCache documents the requirement to
+    // clear the cache when colors change while the app that uses them isn't running;
+    // that condition applies to the SDDM greeter here, so clear the cache if it
+    // exists to make sure SDDM has a fresh state
+    QDir sddmCacheLocation(sddmHomeDirPath + QStringLiteral("/.cache"));
+    if (sddmCacheLocation.exists()) {
+        sddmCacheLocation.removeRecursively();
+    }
+
     // create SDDM config directory if it does not exist
     QDir sddmConfigLocation(sddmHomeDirPath + QStringLiteral("/.config"));
     if (!sddmConfigLocation.exists()) {
