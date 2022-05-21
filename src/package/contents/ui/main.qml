@@ -28,7 +28,7 @@ KCM.GridViewKCM {
 
             function onErrorOccured(message) {
                 errorMessage.text = message;
-                errorMessage.visible = true
+                errorMessage.visible = message.length > 0
             }
 
             function onSyncSuccessful() {
