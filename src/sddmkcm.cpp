@@ -151,6 +151,7 @@ void SddmKcm::save()
     connect(job, &KJob::result, this, [this, job] {
         if (job->error()) {
             Q_EMIT errorOccured(job->errorString());
+            settingsChanged(); // Re-enable the Apply button
         } else {
             m_data->sddmSettings()->load();
         }
