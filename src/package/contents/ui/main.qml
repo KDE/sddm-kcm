@@ -118,7 +118,7 @@ KCM.GridViewKCM {
             NewStuff.Action {
                 text: i18nc("@action:button", "Get New SDDM Themes...")
                 configFile: "sddmtheme.knsrc"
-                function onEntryEvent(entry, event) {
+                onEntryEvent: function(entry, event) {
                     kcm.themesModel.populate();
                 }
             }
