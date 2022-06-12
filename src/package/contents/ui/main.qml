@@ -88,6 +88,7 @@ KCM.GridViewKCM {
                 iconName: "edit-delete"
                 tooltip: i18nc("@info:tooltip", "Delete")
                 onTriggered: kcm.removeTheme(view.model.index(index, 0))
+                enabled: model.deletable
             }
         ]
         onClicked: kcm.sddmSettings.current = model.id
