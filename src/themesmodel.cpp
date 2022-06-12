@@ -22,6 +22,7 @@ ThemesModel::ThemesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     populate();
+    m_customInstalledThemes = KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"))->group("DownloadedThemes").entryMap().values();
 }
 
 ThemesModel::~ThemesModel()
@@ -52,6 +53,7 @@ QHash<int, QByteArray> ThemesModel::roleNames() const
         {PathRole, QByteArrayLiteral("path")},
         {ConfigFileRole, QByteArrayLiteral("configFile")},
         {CurrentBackgroundRole, QByteArrayLiteral("currentBackground")},
+        {DeletableRole, QByteArrayLiteral("deletable")},
     };
 }
 
@@ -94,6 +96,8 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
         if (metadata.supportsBackground()) {
             return m_currentWallpapers[metadata.themeid()];
         }
+    case DeletableRole:
+        return m_customInstalledThemes.contains(metadata.path().chopped(1)); // Chop the trailing /
     }
 
     return QVariant();

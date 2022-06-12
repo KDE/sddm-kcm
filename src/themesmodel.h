@@ -31,6 +31,7 @@ public:
         ThemeApiRole,
         ConfigFileRole,
         CurrentBackgroundRole,
+        DeletableRole,
     };
     Q_ENUM(Roles)
 
@@ -58,6 +59,7 @@ private:
     int m_currentIndex;
     QList<ThemeMetadata> mThemeList;
     QHash<QString, QString> m_currentWallpapers;
+    QList<QString> m_customInstalledThemes;
 };
 
 #endif // THEMESMODEL_H
