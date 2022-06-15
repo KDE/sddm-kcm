@@ -15,3 +15,5 @@ Dependencies:
     'frameworks/knewstuff': '@stable'
     'frameworks/kdeclarative': '@stable'
     'frameworks/kcmutils': '@stable'
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD']
