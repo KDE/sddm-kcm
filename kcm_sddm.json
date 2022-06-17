@@ -31,6 +31,7 @@
         "Description[uk]": "Налаштування керування входом до системи",
         "Description[x-test]": "xxConfigure Login Managerxx",
         "Description[zh_CN]": "配置登录管理器",
+        "Description[zh_TW]": "設定登入管理器",
         "Icon": "preferences-system-login",
         "Name": "Login Screen (SDDM)",
         "Name[ar]": "شاشة ولوج (SDDM)",
