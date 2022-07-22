@@ -19,6 +19,7 @@ set(SDDM_KCM_SRCS
 
 add_library(kcm_sddm MODULE ${SDDM_KCM_SRCS})
 
+kcmutils_generate_desktop_file(kcm_sddm)
 kconfig_add_kcfg_files(kcm_sddm sddmsettings.kcfgc GENERATE_MOC)
 
 target_compile_definitions(kcm_sddm PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")

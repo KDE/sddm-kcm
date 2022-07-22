@@ -37,8 +37,6 @@ add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054200)
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_sddm\")
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 
-install(FILES kcm_sddm.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 
 add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
