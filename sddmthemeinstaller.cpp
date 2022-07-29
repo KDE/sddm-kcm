@@ -68,7 +68,7 @@ int main(int argc, char **argv)
         if (!rc) {
             QString errorString = job->errorString();
             if (!errorString.isEmpty()) {
-                KMessageBox::sorry(nullptr, errorString, i18n("Unable to install theme"));
+                KMessageBox::error(nullptr, errorString, i18n("Unable to install theme"));
             }
             return -1;
         }
