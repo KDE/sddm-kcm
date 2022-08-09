@@ -15,6 +15,7 @@ import org.kde.private.kcms.sddm 1.0
 
 Kirigami.Page {
     title: i18nc("@title", "Behavior")
+
     Kirigami.FormLayout {
         width: parent.width
         RowLayout {
@@ -37,6 +38,7 @@ Kirigami.Page {
                 }
             }
             QQC2.ComboBox {
+                id: autologinUser
                 model: ItemModels.KSortFilterProxyModel {
                     sourceModel: UsersModel {
                         id: userModel
@@ -47,7 +49,6 @@ Kirigami.Page {
                     }
                 }
                 textRole: "display"
-                currentIndex: Math.max(find(kcm.sddmSettings.user), 0)
                 onActivated: kcm.sddmSettings.user = currentText
                 onEnabledChanged:  enabled ? kcm.sddmSettings.user = currentText : kcm.sddmSettings.user = ""
                 KCM.SettingStateBinding {
@@ -56,23 +57,39 @@ Kirigami.Page {
                     settingName: "User"
                     extraEnabledConditions: autologinBox.checked
                 }
+                Component.onCompleted: updateCurrentIndex()
+                function updateCurrentIndex() {
+                    currentIndex = Math.max(find(kcm.sddmSettings.user), 0);
+                }
+                Connections { // Needed for "Reset" and "Default" buttons to work
+                    target: kcm.sddmSettings
+                    function onUserChanged() { autologinUser.updateCurrentIndex(); }
+                }
             }
             QQC2.Label {
                 enabled: autologinBox.checked
                 text: i18nc("@label:listbox, the following combobox selects the session that is started automatically", "with session")
             }
-            QQC2.ComboBox{
+            QQC2.ComboBox {
+                id: autologinSession
                 model: SessionModel {}
                 textRole: "name"
                 valueRole: "file"
                 onActivated: kcm.sddmSettings.session = currentValue
                 onEnabledChanged: enabled ? kcm.sddmSettings.session = currentValue : kcm.sddmSettings.session = ""
-                Component.onCompleted: currentIndex = Math.max(indexOfValue(kcm.sddmSettings.session), 0)
                 KCM.SettingStateBinding {
                     visible: autologinBox.checked
                     configObject: kcm.sddmSettings
                     settingName: "Session"
                     extraEnabledConditions: autologinBox.checked
+                }
+                Component.onCompleted: updateCurrentIndex()
+                function updateCurrentIndex() {
+                    currentIndex = Math.max(indexOfValue(kcm.sddmSettings.session), 0);
+                }
+                Connections { // Needed for "Reset" and "Default" buttons to work
+                    target: kcm.sddmSettings
+                    function onSessionChanged() { autologinSession.updateCurrentIndex(); }
                 }
             }
         }
