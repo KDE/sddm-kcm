@@ -18,7 +18,6 @@
 #include <QApplication>
 #include <QDir>
 
-#include <KAboutData>
 #include <kauth_version.h>
 #if KAUTH_VERSION >= QT_VERSION_CHECK(5, 92, 0)
 #include <KAuth/ExecuteJob>
@@ -34,21 +33,11 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMSddmFactory, "kcm_sddm.json", registerPlugin<SddmKcm>(); registerPlugin<SddmData>();)
 
-SddmKcm::SddmKcm(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+SddmKcm::SddmKcm(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_data(new SddmData(this))
     , m_themesModel(new ThemesModel(this))
 {
-    KAboutData *aboutData = new KAboutData(QStringLiteral("kcm_sddm"), i18n("Login Screen (SDDM)"), QStringLiteral(PROJECT_VERSION));
-
-    aboutData->setShortDescription(i18n("Login screen using the SDDM"));
-    aboutData->setLicense(KAboutLicense::GPL_V2);
-    aboutData->setHomepage(QStringLiteral("https://projects.kde.org/projects/kde/workspace/sddm-kcm"));
-    aboutData->addAuthor(QStringLiteral("Reza Fatahilah Shah"), i18n("Author"), QStringLiteral("rshah0385@kireihana.com"));
-    aboutData->addAuthor(QStringLiteral("David Edmundson"), i18n("Author"), QStringLiteral("davidedmundson@kde.org"));
-    aboutData->addAuthor(QStringLiteral("David Redondo"), i18n("Author"), QStringLiteral("kde@david-redondo.de"));
-
-    setAboutData(aboutData);
     setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmsddm.save"));
 
     qmlRegisterUncreatableType<ThemesModel>("org.kde.private.kcms.sddm", 1, 0, "ThemesModel", QStringLiteral("Cannot create ThemesModel"));
