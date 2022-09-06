@@ -34,7 +34,6 @@ Kirigami.OverlaySheet {
             implicitHeight: previewImage.implicitHeight
             Image {
                 id: previewImage
-                readonly property bool available: status === Image.Ready || status === Image.Loading
                 source: previewPath
                 width: layout.width
                 sourceSize.width: width
@@ -51,7 +50,7 @@ Kirigami.OverlaySheet {
             }
         }
         Kirigami.PlaceholderMessage {
-            visible: !previewImage.available
+            visible: previewImage.status !== Image.Ready && previewImage.status !== Image.Loading
             icon.name: "view-preview"
             text: i18n("No preview available")
         }
