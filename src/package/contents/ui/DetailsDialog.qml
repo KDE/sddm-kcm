@@ -25,6 +25,7 @@ Kirigami.OverlaySheet {
     property string version: ""
     title: i18nc("@title:window, %1 is the theme name, %2 the version", "%1 (%2)", themeName, version)
     contentItem: ColumnLayout {
+        id: layout
         Layout.preferredWidth: 0.75 * root.width
         Item {
             // we need this wrapper because of a limitation of Image where the implicitHeight is not adjusted when
@@ -35,8 +36,8 @@ Kirigami.OverlaySheet {
                 id: previewImage
                 readonly property bool available: status === Image.Ready || status === Image.Loading
                 source: previewPath
-                width: parent.width
-                sourceSize.width: parent.width * Screen.devicePixelRatio
+                width: layout.width
+                sourceSize.width: width
                 fillMode: Image.PreserveAspectFit
                 smooth: true
                 DropShadow {
