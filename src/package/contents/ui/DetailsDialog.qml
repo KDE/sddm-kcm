@@ -40,14 +40,11 @@ Kirigami.OverlaySheet {
                 sourceSize.width: width
                 fillMode: Image.PreserveAspectFit
                 smooth: true
-                DropShadow {
-                    source: previewImage
-                    anchors.fill: previewImage
-                    visible: previewImage.available
+                layer.enabled: true
+                layer.effect: DropShadow {
                     verticalOffset: 2
                     radius: 10
                     samples: 32
-                    z: -1
                     color: Qt.rgba(0, 0, 0, 0.3)
                 }
             }
