@@ -45,6 +45,7 @@ Kirigami.OverlaySheet {
                     verticalOffset: 2
                     radius: 10
                     samples: 32
+                    cached: true
                     color: Qt.rgba(0, 0, 0, 0.3)
                 }
             }
