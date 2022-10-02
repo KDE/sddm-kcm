@@ -1,0 +1,257 @@
+# Translation of kcm_sddm.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_sddm\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-03-10 03:50+0100\n"
+"PO-Revision-Date: 2017-10-30 23:08+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Časlav Ilić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: sddmauthhelper.cpp:341 sddmauthhelper.cpp:361 sddmauthhelper.cpp:368
+#, kde-format
+msgid "Invalid theme package"
+msgstr "Loš paket teme"
+
+#: sddmauthhelper.cpp:346
+#, fuzzy, kde-format
+#| msgid "Could not decompress archive"
+msgid "Could not open file"
+msgstr "Ne mogu da raspakujem arhivu"
+
+#: sddmauthhelper.cpp:376
+#, kde-format
+msgid "Could not decompress archive"
+msgstr "Ne mogu da raspakujem arhivu"
+
+#: sddmthemeinstaller.cpp:40
+#, kde-format
+msgid "SDDM theme installer"
+msgstr "Instalator tema za SDDM"
+
+#: sddmthemeinstaller.cpp:47
+#, kde-format
+msgid "Install a theme."
+msgstr "Instaliraj temu."
+
+#: sddmthemeinstaller.cpp:48
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "Deinstaliraj temu."
+
+#: sddmthemeinstaller.cpp:50
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "Tema za instaliranje, mora da bude postojeći fajl arhive."
+
+#: sddmthemeinstaller.cpp:76
+#, kde-format
+msgid "Unable to install theme"
+msgstr "Ne mogu da instaliram temu"
+
+#: src/configwidgets/selectimagebutton.cpp:41
+#, kde-format
+msgid "Load from file..."
+msgstr "Učitaj iz fajla..."
+
+#: src/configwidgets/selectimagebutton.cpp:42
+#, kde-format
+msgid "Clear Image"
+msgstr "Očisti sliku"
+
+#: src/configwidgets/selectimagebutton.cpp:75
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Image"
+msgstr "Izbor slike"
+
+#: src/qml/main.qml:91 src/themesdelegate.cpp:67
+#, kde-format
+msgid "No preview available"
+msgstr "Pregled nije dostupan."
+
+#: src/qml/main.qml:116
+#, kde-format
+msgid ", by "
+msgstr ""
+
+#: src/sddmkcm.cpp:43
+#, kde-format
+msgid "SDDM KDE Config"
+msgstr "KDE podešavanje SDDM‑a"
+
+#: src/sddmkcm.cpp:45
+#, kde-format
+msgid "Login screen using the SDDM"
+msgstr "Prijavni ekran preko SDDM‑a"
+
+#: src/sddmkcm.cpp:49 src/sddmkcm.cpp:50
+#, kde-format
+msgid "Author"
+msgstr "Autor"
+
+# >> @title:tab
+#: src/sddmkcm.cpp:116
+#, kde-format
+msgid "Theme"
+msgstr "Tema"
+
+# >> @title:tab
+#: src/sddmkcm.cpp:121
+#, kde-format
+msgid "Advanced"
+msgstr "Napredno"
+
+#: src/sessionmodel.cpp:89
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+# >> @title:window
+#: src/themeconfig.cpp:188
+#, kde-format
+msgid "Download New SDDM Themes"
+msgstr "Preuzimanje novih tema za SDDM"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/ui/advancedconfig.ui:25
+#, kde-format
+msgid "Automatically log in:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoLogin)
+#: src/ui/advancedconfig.ui:34
+#, fuzzy, kde-format
+#| msgid "User:"
+msgid "as user:"
+msgstr "Korisnik:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: src/ui/advancedconfig.ui:51
+#, fuzzy, kde-format
+#| msgid "Session:"
+msgid "with session:"
+msgstr "Sesija:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, reloginAfterQuit)
+#: src/ui/advancedconfig.ui:76
+#, kde-format
+msgid "Log in again immediately after logging off"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/advancedconfig.ui:99
+#, fuzzy, kde-format
+#| msgid "Minimum UID:"
+msgid "Minimum user UID:"
+msgstr "Najmanji UID:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/advancedconfig.ui:119
+#, fuzzy, kde-format
+#| msgid "Maximum UID:"
+msgid "Maximum user UID:"
+msgstr "Najveći UID:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/ui/advancedconfig.ui:155
+#, fuzzy, kde-format
+#| msgid "Halt Command:"
+msgid "Halt command:"
+msgstr "Naredba gašenja:"
+
+# rewrite-msgid: /Reboot/Reset/
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/ui/advancedconfig.ui:172
+#, fuzzy, kde-format
+#| msgid "Reboot Command:"
+msgid "Reboot command:"
+msgstr "Naredba resetovanja:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/advancedconfig.ui:205
+#, kde-format
+msgid "Settings synchronization:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, syncSettings)
+#: src/ui/advancedconfig.ui:214
+#, kde-format
+msgid "Sync"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, resetSettings)
+#: src/ui/advancedconfig.ui:224
+#, kde-format
+msgid "Reset"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, syncExplanation)
+#: src/ui/advancedconfig.ui:242
+#, kde-format
+msgid ""
+"Settings synchronization allows you to transfer the following Plasma "
+"settings to SDDM: color scheme, cursor theme, font, font rendering, NumLock "
+"preference, Plasma theme, and scaling DPI."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, syncWarning)
+#: src/ui/advancedconfig.ui:255
+#, kde-format
+msgid ""
+"Please note that theme files must be installed globally for settings "
+"synchronization to work."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (SelectImageButton, selectBackgroundButton)
+#: src/ui/themeconfig.ui:127
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/ui/themeconfig.ui:134
+#, kde-format
+msgid "Background:"
+msgstr "Pozadina:"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeThemeButton)
+#: src/ui/themeconfig.ui:156
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove"
+msgstr "Ukloni temu"
+
+#. i18n: ectx: property (text), widget (QPushButton, installFromFileButton)
+#: src/ui/themeconfig.ui:180
+#, fuzzy, kde-format
+#| msgid "Install From File"
+msgid "Install From File..."
+msgstr "Instaliraj iz fajla"
+
+#. i18n: ectx: property (text), widget (QPushButton, getNewButton)
+#: src/ui/themeconfig.ui:191
+#, kde-format
+msgid "Get New Login Screens..."
+msgstr ""

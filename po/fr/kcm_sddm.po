@@ -1,0 +1,397 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Maxence Le Doré <maxence.ledore@gmail.com>, 2014, 2015.
+# Vincent Pinon <vpinon@kde.org>, 2017.
+# Simon Depiets <sdepiets@gmail.com>, 2019.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"PO-Revision-Date: 2022-08-11 21:05+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
+msgid "Invalid theme package"
+msgstr "Paquet de thème non valable"
+
+#: sddmauthhelper.cpp:377
+msgid "Could not open file"
+msgstr "Impossible d'ouvrir le fichier"
+
+#: sddmauthhelper.cpp:408
+msgid "Could not decompress archive"
+msgstr "Impossible d'extraire l'archive"
+
+#: sddmthemeinstaller.cpp:29
+#, kde-format
+msgid "SDDM theme installer"
+msgstr "Installateur de thèmes SDDM"
+
+#: sddmthemeinstaller.cpp:36
+#, kde-format
+msgid "Install a theme."
+msgstr "Installer un thème."
+
+#: sddmthemeinstaller.cpp:37
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "Désinstaller un thème."
+
+#: sddmthemeinstaller.cpp:39
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "Le thème à installer, doit être un fichier d'archive existant."
+
+#: sddmthemeinstaller.cpp:65
+#, kde-format
+msgid "Unable to install theme"
+msgstr "Impossible d'installer le thème"
+
+#: src/package/contents/ui/Advanced.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Behavior"
+msgstr "Comportement"
+
+#: src/package/contents/ui/Advanced.qml:22
+#, kde-format
+msgctxt "option:check"
+msgid "Automatically log in:"
+msgstr "Se connecter automatiquement :"
+
+#: src/package/contents/ui/Advanced.qml:25
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the user to log in "
+"automatically"
+msgid "as user:"
+msgstr "en tant qu'utilisateur :"
+
+#: src/package/contents/ui/Advanced.qml:71
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the session that is started "
+"automatically"
+msgid "with session"
+msgstr "avec la session"
+
+#: src/package/contents/ui/Advanced.qml:103
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Auto-login does not support unlocking your KDE Wallet automatically, so it "
+"will ask you to unlock it every time you log in."
+msgstr ""
+"La connexion automatique ne prend pas en charge le déverrouillage "
+"automatique de votre portefeuille KDE. Ainsi, une demande vous sera faite de "
+"le déverrouiller à chaque fois que vous vous connectez."
+
+#: src/package/contents/ui/Advanced.qml:108
+#, kde-format
+msgid "Open KDE Wallet Settings"
+msgstr "Ouvrir la configuration du portefeuille de KDE"
+
+#: src/package/contents/ui/Advanced.qml:114
+#, kde-format
+msgctxt "@option:check"
+msgid "Log in again immediately after logging off"
+msgstr "Se re-connecter immédiatement après la déconnexion"
+
+#: src/package/contents/ui/Advanced.qml:127
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Minimum user UID:"
+msgstr "UID utilisateur minimum :"
+
+#: src/package/contents/ui/Advanced.qml:139
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Maximum user UID:"
+msgstr "UID utilisateur maximum :"
+
+#: src/package/contents/ui/Advanced.qml:154
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Halt Command:"
+msgstr "Commande d'arrêt :"
+
+#: src/package/contents/ui/Advanced.qml:185
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Reboot Command:"
+msgstr "Commande de redémarrage :"
+
+#: src/package/contents/ui/DetailsDialog.qml:26
+#, kde-format
+msgctxt "@title:window, %1 is the theme name, %2 the version"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: src/package/contents/ui/DetailsDialog.qml:55
+#, kde-format
+msgid "No preview available"
+msgstr "Pas d'aperçu disponible"
+
+#: src/package/contents/ui/DetailsDialog.qml:58
+#, kde-format
+msgctxt ""
+"%1 is a description of the theme, %2 are the authors, %3 is the license"
+msgid "%1, by %2 (%3)"
+msgstr "%1, par %2 (%3)"
+
+#: src/package/contents/ui/main.qml:65
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "View details"
+msgstr "Afficher les détails"
+
+#: src/package/contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Change Background"
+msgstr "Changer d'arrière-plan :"
+
+#: src/package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Behavior..."
+msgstr "Comportement..."
+
+#: src/package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Plasma Settings..."
+msgstr "Appliquer la configuration de Plasma..."
+
+#: src/package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Install From File..."
+msgstr "Installer à partir d'un fichier..."
+
+#: src/package/contents/ui/main.qml:120
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New SDDM Themes..."
+msgstr "Obtenir de nouveaux thèmes « SDDM »..."
+
+#: src/package/contents/ui/main.qml:138
+#, kde-format
+msgctxt "@title:window"
+msgid "Apply Plasma Settings"
+msgstr "Appliquer la configuration de Plasma"
+
+#: src/package/contents/ui/main.qml:144
+#, kde-format
+msgid ""
+"This will make the SDDM login screen reflect your customizations to the "
+"following Plasma settings:"
+msgstr ""
+"Cette action permettra à l'écran de connexion « SDDM » d'afficher vos "
+"personnalisations pour les paramètres suivants de Plasma :"
+
+#: src/package/contents/ui/main.qml:145
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Font,</"
+"item><item>Font rendering,</item><item>NumLock preference,</"
+"item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen "
+"configuration (Wayland only)</item></list></para>"
+msgstr ""
+"<para> <list><item>Thème de couleurs,</item><item>Thème de curseur,</"
+"item><item>Police,</item><item>Rendu de police,</item><item>Préférence de "
+"verrouillage de pavé numérique,</item><item>Thème de Plasma,</"
+"item><item>Dimensionnement de la résolution « DPI » et</"
+"item><item>Configuration de l'écran (Uniquement pour Wayland).</item></"
+"list></para>"
+
+#: src/package/contents/ui/main.qml:146
+#, kde-format
+msgid ""
+"Please note that theme files must be installed globally to be reflected on "
+"the SDDM login screen."
+msgstr ""
+"Veuillez noter que les fichiers de thème doivent être installés globalement "
+"pour être pris en compte dans l'écran de connexion « SDDM »."
+
+#: src/package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply"
+msgstr "Appliquer"
+
+#: src/package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset to Default Settings"
+msgstr "Réinitialiser avec les paramètres par défaut"
+
+#: src/package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Background"
+msgstr "Changer d'arrière-plan"
+
+#: src/package/contents/ui/main.qml:177
+#, kde-format
+msgid "No image selected"
+msgstr "Aucune image sélectionnée"
+
+#: src/package/contents/ui/main.qml:194
+#, kde-format
+msgctxt "@action:button"
+msgid "Load From File..."
+msgstr "Charger à partir d'un fichier..."
+
+#: src/package/contents/ui/main.qml:199
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Image"
+msgstr "Effacer l'image"
+
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:272
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+"Impossible d'exécuter l'action. L'utilisateur « sddm » n'existe pas. "
+"Veuillez vérifier votre installation de « sddm »."
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Maxence Le Doré, Simon Depiets"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "maxence.ledore@gmail.com, sdepiets@gmail.com"
+
+#~ msgid "Login Screen (SDDM)"
+#~ msgstr "Écran de connexion (SDDM)"
+
+#~ msgid "Login screen using the SDDM"
+#~ msgstr "Écran de connexion utilisant SDDM"
+
+#~ msgid "Author"
+#~ msgstr "Auteur"
+
+#~ msgctxt "@action:button"
+#~ msgid "Synchronize Settings..."
+#~ msgstr "Synchroniser les paramètres..."
+
+#~ msgctxt "@title:window"
+#~ msgid "Settings Synchronization"
+#~ msgstr "Synchronisation des paramètres"
+
+#~ msgid ""
+#~ "Settings synchronization allows you to transfer the following Plasma "
+#~ "settings to SDDM:"
+#~ msgstr ""
+#~ "La synchronisation des paramètres vous permet de transférer les "
+#~ "paramètres Plasma suivants vers « SDDM » :"
+
+#~ msgctxt "@action:button"
+#~ msgid "Synchronize"
+#~ msgstr "Synchroniser"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset"
+#~ msgstr "Réinitialiser"
+
+#~ msgid "SDDM Themes"
+#~ msgstr "Thèmes pour SDDM"
+
+#~ msgid "SDDM KDE Config"
+#~ msgstr "SDDM KDE Config"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Image"
+#~ msgstr "Sélectionner une image"
+
+#~ msgid ", by "
+#~ msgstr ", par "
+
+#~ msgid "Theme"
+#~ msgstr "Thème"
+
+#~ msgid "Advanced"
+#~ msgstr "Avancé"
+
+#~ msgid "Sync"
+#~ msgstr "Sync"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Remove"
+#~ msgstr "Supprimer"
+
+#~ msgid "Get New Login Screens..."
+#~ msgstr "Obtenir de nouveaux écrans de connexion..."
+
+#~ msgid "Default"
+#~ msgstr "Défaut"
+
+#~ msgid "The default cursor theme in SDDM"
+#~ msgstr "Le thème par défaut du curseur dans SDDM"
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "Description"
+#~ msgstr "Description"
+
+#~ msgctxt ""
+#~ "@info The argument is the list of available sizes (in pixel). Example: "
+#~ "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+#~ msgid "(Available sizes: %1)"
+#~ msgstr "(Tailles disponibles : %1)"
+
+#~ msgid "Cursor theme:"
+#~ msgstr "Thème de curseur : "
+
+#~ msgid "General"
+#~ msgstr "Général"
+
+#~ msgid "Auto &Login"
+#~ msgstr "&Connexion Automatique"
+
+#~ msgid "Relogin after quit"
+#~ msgstr "Se reconnecter après déconnexion"
+
+#~ msgid "User"
+#~ msgstr "Utilisateur"
+
+#~ msgid "Commands"
+#~ msgstr "Commandes"
+
+#~ msgid "Customize theme"
+#~ msgstr "Personnaliser le thème"
+
+#~ msgctxt "Caption to theme preview, %1 author name"
+#~ msgid "by %1"
+#~ msgstr "par %1"

@@ -1,0 +1,387 @@
+# translation of kcm_sddm.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2014, 2016, 2017.
+# Mthw <jari_45@hotmail.com>, 2018.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2021, 2022.
+# Dusan Kazik <prescott66@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_sddm\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"PO-Revision-Date: 2022-01-07 15:29+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
+msgid "Invalid theme package"
+msgstr "Neplatný balík témy"
+
+#: sddmauthhelper.cpp:377
+msgid "Could not open file"
+msgstr "Nepodarilo sa otvoriť súbor"
+
+#: sddmauthhelper.cpp:408
+msgid "Could not decompress archive"
+msgstr "Nepodarilo sa rozbaliť archív"
+
+#: sddmthemeinstaller.cpp:29
+#, kde-format
+msgid "SDDM theme installer"
+msgstr "Inštalátor tém SDDM"
+
+#: sddmthemeinstaller.cpp:36
+#, kde-format
+msgid "Install a theme."
+msgstr "Nainštalovať tému."
+
+#: sddmthemeinstaller.cpp:37
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "Odinštalovať tému."
+
+#: sddmthemeinstaller.cpp:39
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "Téma na nainštalovanie musí byť existujúci súbor archívu."
+
+#: sddmthemeinstaller.cpp:65
+#, kde-format
+msgid "Unable to install theme"
+msgstr "Nemôžem nainštalovať tému"
+
+#: src/package/contents/ui/Advanced.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Behavior"
+msgstr "Správanie"
+
+#: src/package/contents/ui/Advanced.qml:22
+#, kde-format
+msgctxt "option:check"
+msgid "Automatically log in:"
+msgstr "Automaticky prihlásiť:"
+
+#: src/package/contents/ui/Advanced.qml:25
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the user to log in "
+"automatically"
+msgid "as user:"
+msgstr "ako používateľ:"
+
+#: src/package/contents/ui/Advanced.qml:71
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the session that is started "
+"automatically"
+msgid "with session"
+msgstr "do sedenia"
+
+#: src/package/contents/ui/Advanced.qml:103
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Auto-login does not support unlocking your KDE Wallet automatically, so it "
+"will ask you to unlock it every time you log in."
+msgstr ""
+"Automatické prihlásenie nepodporuje automatické odomykanie vašej peňaženky "
+"KDE, takže vás požiada o jej odomknutie pri každom prihlásení."
+
+#: src/package/contents/ui/Advanced.qml:108
+#, kde-format
+msgid "Open KDE Wallet Settings"
+msgstr "Otvoriť nastavenia peňaženky KDE"
+
+#: src/package/contents/ui/Advanced.qml:114
+#, kde-format
+msgctxt "@option:check"
+msgid "Log in again immediately after logging off"
+msgstr "Prihlásiť sa znova hneď po odhlásení"
+
+#: src/package/contents/ui/Advanced.qml:127
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Minimum user UID:"
+msgstr "Minimálne používateľské UID:"
+
+#: src/package/contents/ui/Advanced.qml:139
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Maximum user UID:"
+msgstr "Maximálne používateľské UID:"
+
+#: src/package/contents/ui/Advanced.qml:154
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Halt Command:"
+msgstr "Príkaz na zastavenie:"
+
+#: src/package/contents/ui/Advanced.qml:185
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Reboot Command:"
+msgstr "Príkaz na reštartovanie:"
+
+#: src/package/contents/ui/DetailsDialog.qml:26
+#, kde-format
+msgctxt "@title:window, %1 is the theme name, %2 the version"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: src/package/contents/ui/DetailsDialog.qml:55
+#, kde-format
+msgid "No preview available"
+msgstr "Náhľad nie je k dispozícii"
+
+#: src/package/contents/ui/DetailsDialog.qml:58
+#, kde-format
+msgctxt ""
+"%1 is a description of the theme, %2 are the authors, %3 is the license"
+msgid "%1, by %2 (%3)"
+msgstr "%1, od %2 (%3)"
+
+#: src/package/contents/ui/main.qml:65
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "View details"
+msgstr "Zobraziť podrobnosti"
+
+#: src/package/contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Change Background"
+msgstr "Zmeniť Pozadie"
+
+#: src/package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete"
+msgstr "Vymazať"
+
+#: src/package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Behavior..."
+msgstr "Správanie..."
+
+#: src/package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Plasma Settings..."
+msgstr "Použiť Plasma nastavenia..."
+
+#: src/package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Install From File..."
+msgstr "Nainštalovať zo súboru..."
+
+#: src/package/contents/ui/main.qml:120
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New SDDM Themes..."
+msgstr "Prevziať nové SDDM témy..."
+
+#: src/package/contents/ui/main.qml:138
+#, kde-format
+msgctxt "@title:window"
+msgid "Apply Plasma Settings"
+msgstr "Použiť Plasma nastavenia"
+
+#: src/package/contents/ui/main.qml:144
+#, kde-format
+msgid ""
+"This will make the SDDM login screen reflect your customizations to the "
+"following Plasma settings:"
+msgstr ""
+"Vďaka tomuto bude prihlasovacia obrazovka SDDM odrážať vaše zmeny Plasma "
+"nastavení:"
+
+#: src/package/contents/ui/main.qml:145
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Font,</"
+"item><item>Font rendering,</item><item>NumLock preference,</"
+"item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen "
+"configuration (Wayland only)</item></list></para>"
+msgstr ""
+"<para><list><item>Farebná schéma,</item><item>Téma kurzora,</"
+"item><item>Písmo,</item><item>Vykresľovanie písma,</item><item>NumLock "
+"nastavenia,</item><item>Plasma téma,</item><item>Mierka DPI,</"
+"item><item>Nastavenie  obrazovky (iba Wayland)</item></list></para>"
+
+#: src/package/contents/ui/main.qml:146
+#, kde-format
+msgid ""
+"Please note that theme files must be installed globally to be reflected on "
+"the SDDM login screen."
+msgstr ""
+"Súbory s témami musia byť nainštalované globálne, aby sa prejavili na "
+"prihlasovacej obrazovke SDDM."
+
+#: src/package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply"
+msgstr "Použiť"
+
+#: src/package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset to Default Settings"
+msgstr "Obnoviť na predvolené nastavenia"
+
+#: src/package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Background"
+msgstr "Zmeniť pozadie"
+
+#: src/package/contents/ui/main.qml:177
+#, kde-format
+msgid "No image selected"
+msgstr "Nie je vybratý žiadny obrázok"
+
+#: src/package/contents/ui/main.qml:194
+#, kde-format
+msgctxt "@action:button"
+msgid "Load From File..."
+msgstr "Načítať zo súboru..."
+
+#: src/package/contents/ui/main.qml:199
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Image"
+msgstr "Vymazať obrázok"
+
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:272
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Roman Paholík,Dušan Kazik"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wizzardsk@gmail.com,prescott66@gmail.com"
+
+#~ msgid "Login Screen (SDDM)"
+#~ msgstr "Prihlasovacia obrazovka (SDDM)"
+
+#~ msgid "Login screen using the SDDM"
+#~ msgstr "Prihlasovacia obrazovka s použitím SDDM"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgctxt "@action:button"
+#~ msgid "Synchronize Settings..."
+#~ msgstr "Synchronizovať nastavenia..."
+
+#~ msgctxt "@title:window"
+#~ msgid "Settings Synchronization"
+#~ msgstr "Synchronizácia nastavení"
+
+#~ msgid ""
+#~ "Settings synchronization allows you to transfer the following Plasma "
+#~ "settings to SDDM:"
+#~ msgstr ""
+#~ "Synchronizácia nastavení vám umožňuje preniesť nasledujúce Plasma "
+#~ "nastavenia do SDDM:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Synchronize"
+#~ msgstr "Synchronizovať"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset"
+#~ msgstr "Obnoviť"
+
+#~ msgid "SDDM Themes"
+#~ msgstr "Témy SDDM"
+
+#~ msgid "SDDM KDE Config"
+#~ msgstr "KDE nastavenie SDDM"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Image"
+#~ msgstr "Vybrať obrázok"
+
+#~ msgid ", by "
+#~ msgstr ", od"
+
+#~ msgid "Theme"
+#~ msgstr "Téma"
+
+#~ msgid "Advanced"
+#~ msgstr "Pokročilé"
+
+#~ msgid "Sync"
+#~ msgstr "Synchronizovať"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Remove"
+#~ msgstr "Odstrániť"
+
+#~ msgid "Get New Login Screens..."
+#~ msgstr "Získať nové zamykacie obrazovky..."
+
+#~ msgid "Default"
+#~ msgstr "Predvolené"
+
+#~ msgid "The default cursor theme in SDDM"
+#~ msgstr "Predvolená téma kurzora v SDDM"
+
+#~ msgid "Name"
+#~ msgstr "Názov"
+
+#~ msgid "Description"
+#~ msgstr "Popis"
+
+#~ msgctxt ""
+#~ "@info The argument is the list of available sizes (in pixel). Example: "
+#~ "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+#~ msgid "(Available sizes: %1)"
+#~ msgstr "(Dostupné veľkosti: %1)"
+
+#~ msgid "Cursor theme:"
+#~ msgstr "Téma kurzora:"
+
+#~ msgid "General"
+#~ msgstr "Všeobecné"
+
+#~ msgid "Auto &Login"
+#~ msgstr "Automatické prihlásenie"
+
+#~ msgid "Relogin after quit"
+#~ msgstr "Znovu prihlásiť po ukončení"
+
+#~ msgid "User"
+#~ msgstr "Používateľ"
+
+#~ msgid "Commands"
+#~ msgstr "Príkazy"
+
+#~ msgid "Customize theme"
+#~ msgstr "Prispôsobiť tému"
+
+#~ msgctxt "Caption to theme preview, %1 author name"
+#~ msgid "by %1"
+#~ msgstr "od %1"

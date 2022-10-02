@@ -1,0 +1,373 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"PO-Revision-Date: 2022-08-10 22:22+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
+msgid "Invalid theme package"
+msgstr "حزمة سمة غير صالحة"
+
+#: sddmauthhelper.cpp:377
+msgid "Could not open file"
+msgstr "تعذّر فتح الملفّ"
+
+#: sddmauthhelper.cpp:408
+msgid "Could not decompress archive"
+msgstr "تعذر فك الأرشيف"
+
+#: sddmthemeinstaller.cpp:29
+#, kde-format
+msgid "SDDM theme installer"
+msgstr "مثبت سمة SDDM"
+
+#: sddmthemeinstaller.cpp:36
+#, kde-format
+msgid "Install a theme."
+msgstr "ثبّت سمة"
+
+#: sddmthemeinstaller.cpp:37
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "أزل تثبيت سمة"
+
+#: sddmthemeinstaller.cpp:39
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "يجب أن تكون سمة المراد تثبيتها ملف أرشيف."
+
+#: sddmthemeinstaller.cpp:65
+#, kde-format
+msgid "Unable to install theme"
+msgstr "غير قادر على تثبيت السمة"
+
+#: src/package/contents/ui/Advanced.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Behavior"
+msgstr "السّلوك"
+
+#: src/package/contents/ui/Advanced.qml:22
+#, kde-format
+msgctxt "option:check"
+msgid "Automatically log in:"
+msgstr "لولوج آلي:"
+
+#: src/package/contents/ui/Advanced.qml:25
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the user to log in "
+"automatically"
+msgid "as user:"
+msgstr "كمستخدم:"
+
+#: src/package/contents/ui/Advanced.qml:71
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the session that is started "
+"automatically"
+msgid "with session"
+msgstr "بجلسة"
+
+#: src/package/contents/ui/Advanced.qml:103
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Auto-login does not support unlocking your KDE Wallet automatically, so it "
+"will ask you to unlock it every time you log in."
+msgstr ""
+"لا يدعم الولوج التلقائي فتح محفظة كدي آليا، لذلك سيطلب منك إلغاء قفلها في كل "
+"مرة تقوم فيها بالولوج."
+
+#: src/package/contents/ui/Advanced.qml:108
+#, kde-format
+msgid "Open KDE Wallet Settings"
+msgstr "افتح إعدادات محفظة كدي"
+
+#: src/package/contents/ui/Advanced.qml:114
+#, kde-format
+msgctxt "@option:check"
+msgid "Log in again immediately after logging off"
+msgstr "لج مباشرة بعد الخروج"
+
+#: src/package/contents/ui/Advanced.qml:127
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Minimum user UID:"
+msgstr "معرف المستخدم UID الأدنى:"
+
+#: src/package/contents/ui/Advanced.qml:139
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Maximum user UID:"
+msgstr "معرف المستخدم UID الأعلى:"
+
+#: src/package/contents/ui/Advanced.qml:154
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Halt Command:"
+msgstr "أمر الوقف:"
+
+#: src/package/contents/ui/Advanced.qml:185
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Reboot Command:"
+msgstr "أمر إعادة الإقلاع:"
+
+#: src/package/contents/ui/DetailsDialog.qml:26
+#, kde-format
+msgctxt "@title:window, %1 is the theme name, %2 the version"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: src/package/contents/ui/DetailsDialog.qml:55
+#, kde-format
+msgid "No preview available"
+msgstr "لا معاينة متوفّرة"
+
+#: src/package/contents/ui/DetailsDialog.qml:58
+#, kde-format
+msgctxt ""
+"%1 is a description of the theme, %2 are the authors, %3 is the license"
+msgid "%1, by %2 (%3)"
+msgstr "%1 بواسطة %2 (%3)"
+
+#: src/package/contents/ui/main.qml:65
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "View details"
+msgstr "تفاصيل العرض"
+
+#: src/package/contents/ui/main.qml:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Change Background"
+msgstr "غير الخلفيّة"
+
+#: src/package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete"
+msgstr "احذف"
+
+#: src/package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Behavior..."
+msgstr "السّلوك..."
+
+#: src/package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Plasma Settings..."
+msgstr "طبّق إعدادات بلازما..."
+
+#: src/package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Install From File..."
+msgstr "ثبت من ملف..."
+
+#: src/package/contents/ui/main.qml:120
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New SDDM Themes..."
+msgstr "احصل على سمات SDDM جديدة..."
+
+#: src/package/contents/ui/main.qml:138
+#, kde-format
+msgctxt "@title:window"
+msgid "Apply Plasma Settings"
+msgstr "طبّق إعدادات بلازما"
+
+#: src/package/contents/ui/main.qml:144
+#, kde-format
+msgid ""
+"This will make the SDDM login screen reflect your customizations to the "
+"following Plasma settings:"
+msgstr ""
+"سيؤدي هذا إلى جعل شاشة ولوج SDDM تعكس تخصيصاتك لإعدادات البلازما التالية:"
+
+#: src/package/contents/ui/main.qml:145
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Font,</"
+"item><item>Font rendering,</item><item>NumLock preference,</"
+"item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen "
+"configuration (Wayland only)</item></list></para>"
+msgstr ""
+"<para><list><item>تشكيلة الألوان</item><item>سمة المؤشر</item><item>الخط </"
+"item><item>تصيير الخط</item><item>تفضيلات قفل الأرقام</item><item>سمة "
+"بلازما</item><item>تحجيم الخطوط لكل بوصة</item><item>ضبط الشاشة (ويلاند "
+"فقط)</item></list></para>"
+
+#: src/package/contents/ui/main.qml:146
+#, kde-format
+msgid ""
+"Please note that theme files must be installed globally to be reflected on "
+"the SDDM login screen."
+msgstr ""
+"يرجى ملاحظة أنه يجب تثبيت ملفات السمات بشكل عام حتى يظهر ذلك على شاشة ولوج "
+"SDDM."
+
+#: src/package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply"
+msgstr "طبّق"
+
+#: src/package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset to Default Settings"
+msgstr "أعد ضبط الإعدادات المبدئية"
+
+#: src/package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Background"
+msgstr "غير الخلفيّة"
+
+#: src/package/contents/ui/main.qml:177
+#, kde-format
+msgid "No image selected"
+msgstr "لم تختر صورة"
+
+#: src/package/contents/ui/main.qml:194
+#, kde-format
+msgctxt "@action:button"
+msgid "Load From File..."
+msgstr "حمّل من ملفّ..."
+
+#: src/package/contents/ui/main.qml:199
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Image"
+msgstr "امحُ الصّورة"
+
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:272
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+"لا يمكن المتابعة، المستخدم 'sddm' غير موجود. يرجى التحقق من تثبيت SDDM الخاص "
+"بك."
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (ويلاند)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "زايد السعيدي,صفا الفليج"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "safa1996alfulaij@gmail.com,zayed.alsaidi@gmail.com"
+
+#~ msgid "Login Screen (SDDM)"
+#~ msgstr "شاشة ولوج (SDDM)"
+
+#~ msgid "Login screen using the SDDM"
+#~ msgstr "شاشة ولوج باستخدام SDDM"
+
+#~ msgid "Author"
+#~ msgstr "المؤلّف"
+
+#~ msgctxt "@action:button"
+#~ msgid "Synchronize Settings..."
+#~ msgstr "زامن اﻹعدادات..."
+
+#~ msgctxt "@title:window"
+#~ msgid "Settings Synchronization"
+#~ msgstr "إعدادات المزامنة"
+
+#~ msgid ""
+#~ "Settings synchronization allows you to transfer the following Plasma "
+#~ "settings to SDDM:"
+#~ msgstr "تتيح لك مزامنة الإعدادات نقل إعدادات البلازما التالية إلى SDDM:"
+
+#~ msgctxt "@action:button"
+#~ msgid "Synchronize"
+#~ msgstr "زامِن"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset"
+#~ msgstr "صفّر"
+
+#~ msgid "SDDM KDE Config"
+#~ msgstr "ضبط كدي لِـ SDDM"
+
+#, fuzzy
+#~| msgid "Select image"
+#~ msgctxt "@title:window"
+#~ msgid "Select Image"
+#~ msgstr "اختر صورةً"
+
+#~ msgid "Advanced"
+#~ msgstr "متقدّم"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Default"
+#~ msgstr "الافتراضيّ"
+
+#~ msgid "The default cursor theme in SDDM"
+#~ msgstr "سمة المؤشّر الافتراضيّة في SDDM"
+
+#~ msgid "Name"
+#~ msgstr "الاسم"
+
+#~ msgid "Description"
+#~ msgstr "الوصف"
+
+#~ msgctxt ""
+#~ "@info The argument is the list of available sizes (in pixel). Example: "
+#~ "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+#~ msgid "(Available sizes: %1)"
+#~ msgstr "(الأحجام المتوفّرة: %1)"
+
+#, fuzzy
+#~| msgid "Cursor Theme:"
+#~ msgid "Cursor theme:"
+#~ msgstr "سمة المؤشّر:"
+
+#~ msgid "General"
+#~ msgstr "عامّ"
+
+#~ msgid "Auto &Login"
+#~ msgstr "&ولوج آليّ"
+
+#~ msgid "Relogin after quit"
+#~ msgstr "أعد الولوج بعد الإنهاء"
+
+#~ msgid "User"
+#~ msgstr "المستخدم"
+
+#~ msgid "Commands"
+#~ msgstr "الأوامر"
+
+#~ msgid "Customize theme"
+#~ msgstr "خصّص السّمة"
+
+#~ msgctxt "Caption to theme preview, %1 author name"
+#~ msgid "by %1"
+#~ msgstr "لِـ %1"

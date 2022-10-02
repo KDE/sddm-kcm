@@ -1,0 +1,325 @@
+# Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015.
+# Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_sddm\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"PO-Revision-Date: 2020-01-17 19:39+0900\n"
+"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 19.12.1\n"
+
+#: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
+msgid "Invalid theme package"
+msgstr ""
+
+#: sddmauthhelper.cpp:377
+msgid "Could not open file"
+msgstr ""
+
+#: sddmauthhelper.cpp:408
+msgid "Could not decompress archive"
+msgstr ""
+
+#: sddmthemeinstaller.cpp:29
+#, kde-format
+msgid "SDDM theme installer"
+msgstr ""
+
+#: sddmthemeinstaller.cpp:36
+#, kde-format
+msgid "Install a theme."
+msgstr ""
+
+#: sddmthemeinstaller.cpp:37
+#, kde-format
+msgid "Uninstall a theme."
+msgstr ""
+
+#: sddmthemeinstaller.cpp:39
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr ""
+
+#: sddmthemeinstaller.cpp:65
+#, kde-format
+msgid "Unable to install theme"
+msgstr ""
+
+#: src/package/contents/ui/Advanced.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Behavior"
+msgstr ""
+
+#: src/package/contents/ui/Advanced.qml:22
+#, fuzzy, kde-format
+#| msgid "Automatically log in:"
+msgctxt "option:check"
+msgid "Automatically log in:"
+msgstr "自動的にログイン:"
+
+#: src/package/contents/ui/Advanced.qml:25
+#, fuzzy, kde-format
+#| msgid "as user:"
+msgctxt ""
+"@label:listbox, the following combobox selects the user to log in "
+"automatically"
+msgid "as user:"
+msgstr "使用するユーザ:"
+
+#: src/package/contents/ui/Advanced.qml:71
+#, fuzzy, kde-format
+#| msgid "with session:"
+msgctxt ""
+"@label:listbox, the following combobox selects the session that is started "
+"automatically"
+msgid "with session"
+msgstr "起動するセッション:"
+
+#: src/package/contents/ui/Advanced.qml:103
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Auto-login does not support unlocking your KDE Wallet automatically, so it "
+"will ask you to unlock it every time you log in."
+msgstr ""
+
+#: src/package/contents/ui/Advanced.qml:108
+#, kde-format
+msgid "Open KDE Wallet Settings"
+msgstr ""
+
+#: src/package/contents/ui/Advanced.qml:114
+#, fuzzy, kde-format
+#| msgid "Log in again immediately after logging off"
+msgctxt "@option:check"
+msgid "Log in again immediately after logging off"
+msgstr "ログオフ後に自動的に再度ログインする"
+
+#: src/package/contents/ui/Advanced.qml:127
+#, fuzzy, kde-format
+#| msgid "Minimum user UID:"
+msgctxt "@label:spinbox"
+msgid "Minimum user UID:"
+msgstr "最小 ユーザ UID:"
+
+#: src/package/contents/ui/Advanced.qml:139
+#, fuzzy, kde-format
+#| msgid "Maximum user UID:"
+msgctxt "@label:spinbox"
+msgid "Maximum user UID:"
+msgstr "最大 ユーザ UID:"
+
+#: src/package/contents/ui/Advanced.qml:154
+#, fuzzy, kde-format
+#| msgid "Halt command:"
+msgctxt "@label:textbox"
+msgid "Halt Command:"
+msgstr "終了コマンド:"
+
+#: src/package/contents/ui/Advanced.qml:185
+#, fuzzy, kde-format
+#| msgid "Reboot command:"
+msgctxt "@label:textbox"
+msgid "Reboot Command:"
+msgstr "再起動コマンド:"
+
+#: src/package/contents/ui/DetailsDialog.qml:26
+#, kde-format
+msgctxt "@title:window, %1 is the theme name, %2 the version"
+msgid "%1 (%2)"
+msgstr ""
+
+#: src/package/contents/ui/DetailsDialog.qml:55
+#, kde-format
+msgid "No preview available"
+msgstr "プレビューは利用できません"
+
+#: src/package/contents/ui/DetailsDialog.qml:58
+#, kde-format
+msgctxt ""
+"%1 is a description of the theme, %2 are the authors, %3 is the license"
+msgid "%1, by %2 (%3)"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:65
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "View details"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:80
+#, fuzzy, kde-format
+#| msgid "Background:"
+msgctxt "@info:tooltip"
+msgid "Change Background"
+msgstr "背景:"
+
+#: src/package/contents/ui/main.qml:89
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Behavior..."
+msgstr ""
+
+#: src/package/contents/ui/main.qml:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Plasma Settings..."
+msgstr ""
+
+#: src/package/contents/ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Load from file..."
+msgctxt "@action:button"
+msgid "Install From File..."
+msgstr "ファイルから読み込み..."
+
+#: src/package/contents/ui/main.qml:120
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgctxt "@action:button"
+msgid "Get New SDDM Themes..."
+msgstr "テーマ"
+
+#: src/package/contents/ui/main.qml:138
+#, kde-format
+msgctxt "@title:window"
+msgid "Apply Plasma Settings"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:144
+#, kde-format
+msgid ""
+"This will make the SDDM login screen reflect your customizations to the "
+"following Plasma settings:"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:145
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Font,</"
+"item><item>Font rendering,</item><item>NumLock preference,</"
+"item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen "
+"configuration (Wayland only)</item></list></para>"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:146
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please note that theme files must be installed globally for settings "
+#| "synchronization to work."
+msgid ""
+"Please note that theme files must be installed globally to be reflected on "
+"the SDDM login screen."
+msgstr ""
+"設定の同期が機能するにはテーマがグローバルにインストールされている必要がある"
+"ことにご注意ください。"
+
+#: src/package/contents/ui/main.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:158
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset to Default Settings"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:168
+#, fuzzy, kde-format
+#| msgid "Background:"
+msgctxt "@title:window"
+msgid "Change Background"
+msgstr "背景:"
+
+#: src/package/contents/ui/main.qml:177
+#, kde-format
+msgid "No image selected"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:194
+#, fuzzy, kde-format
+#| msgid "Load from file..."
+msgctxt "@action:button"
+msgid "Load From File..."
+msgstr "ファイルから読み込み..."
+
+#: src/package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgid "Clear Image"
+msgctxt "@action:button"
+msgid "Clear Image"
+msgstr "画像をクリア"
+
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:272
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Fuminobu Takeyama"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ftake@geeko.jp"
+
+#, fuzzy
+#~| msgid "Login screen using the SDDM"
+#~ msgid "Login Screen (SDDM)"
+#~ msgstr "SDDM を利用したログインスクリーン"
+
+#~ msgid "Login screen using the SDDM"
+#~ msgstr "SDDM を利用したログインスクリーン"
+
+#~ msgid "Author"
+#~ msgstr "作者"
+
+#, fuzzy
+#~| msgid "Settings synchronization:"
+#~ msgctxt "@title:window"
+#~ msgid "Settings Synchronization"
+#~ msgstr "設定の同期:"
+
+#, fuzzy
+#~| msgid ""
+#~| "Settings synchronization allows you to transfer the following Plasma "
+#~| "settings to SDDM: color scheme, cursor theme, font, font rendering, "
+#~| "NumLock preference, Plasma theme, and scaling DPI."
+#~ msgid ""
+#~ "Settings synchronization allows you to transfer the following Plasma "
+#~ "settings to SDDM:"
+#~ msgstr ""
+#~ "設定の同期は次の Plasma 設定を SDDM に同期します: カラースキーム、カーソル"
+#~ "テーマ、フォント、フォント描画、NumLock 設定、Plasma テーマ、DPI の倍率"
+
+#, fuzzy
+#~| msgid "Reset"
+#~ msgctxt "@action:button"
+#~ msgid "Reset"
+#~ msgstr "リセット"
