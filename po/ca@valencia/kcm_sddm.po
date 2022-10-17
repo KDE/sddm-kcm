@@ -52,7 +52,7 @@ msgstr "Desinstal·la un tema."
 #: sddmthemeinstaller.cpp:39
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
-msgstr "El tema a instal·lar, cal que siga un fitxer d'arxiu existent."
+msgstr "El tema que s'instal·larà, cal que siga un fitxer d'arxiu existent."
 
 #: sddmthemeinstaller.cpp:65
 #, kde-format
