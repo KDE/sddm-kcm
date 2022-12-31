@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-07 00:50+0000\n"
-"PO-Revision-Date: 2022-06-29 12:42+0900\n"
+"PO-Revision-Date: 2022-12-30 18:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -262,7 +262,7 @@ msgstr "清除圖片"
 #: src/sddmkcm.cpp:155 src/sddmkcm.cpp:272
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr ""
+msgstr "無法繼續，'sddm' 使用者不存在。請確定您的 SDDM 安裝。"
 
 #: src/sessionmodel.cpp:84
 #, kde-format
