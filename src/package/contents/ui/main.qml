@@ -181,7 +181,7 @@ KCM.GridViewKCM {
                 readonly property bool hasImage: status == Image.Ready || status == Image.Loading
                 width: parent.width
                 source: backgroundSheet.imagePath
-                sourceSize.width: width * Screen.devicePixelRatio
+                sourceSize.width: width
                 fillMode: Image.PreserveAspectFit
             }
         }
