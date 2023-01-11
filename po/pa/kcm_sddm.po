@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2019-12-28 15:53-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -250,14 +250,14 @@ msgstr "ਬੈਕਗਰਾਊਂਡ:"
 msgid "No image selected"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:194
+#: src/package/contents/ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
 msgid "Load From File..."
 msgstr "...ਫਾਇਲ ਤੋਂ ਲੋਡ ਕਰੋ"
 
-#: src/package/contents/ui/main.qml:199
+#: src/package/contents/ui/main.qml:208
 #, fuzzy, kde-format
 #| msgid "Clear Image"
 msgctxt "@action:button"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2019-11-17 09:49+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -256,14 +256,14 @@ msgstr "Fondo:"
 msgid "No image selected"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:194
+#: src/package/contents/ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
 msgid "Load From File..."
 msgstr "Cargar dun ficheiro…"
 
-#: src/package/contents/ui/main.qml:199
+#: src/package/contents/ui/main.qml:208
 #, fuzzy, kde-format
 #| msgid "Clear Image"
 msgctxt "@action:button"

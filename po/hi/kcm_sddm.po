@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2020-09-19 10:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -250,14 +250,14 @@ msgstr "पृष्ठभूमि :"
 msgid "No image selected"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:194
+#: src/package/contents/ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
 msgid "Load From File..."
 msgstr "फ़ाइल से लोड करें..."
 
-#: src/package/contents/ui/main.qml:199
+#: src/package/contents/ui/main.qml:208
 #, fuzzy, kde-format
 #| msgid "Clear Image"
 msgctxt "@action:button"

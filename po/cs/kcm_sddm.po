@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2022-10-10 16:57+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -239,13 +239,13 @@ msgstr "Změnit pozadí"
 msgid "No image selected"
 msgstr "Nebyl vybrán žádný obrázek"
 
-#: src/package/contents/ui/main.qml:194
+#: src/package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File..."
 msgstr "Načíst ze souboru..."
 
-#: src/package/contents/ui/main.qml:199
+#: src/package/contents/ui/main.qml:208
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

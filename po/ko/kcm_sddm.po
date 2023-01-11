@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-07 00:50+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2022-10-03 15:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -244,13 +244,13 @@ msgstr "배경 바꾸기"
 msgid "No image selected"
 msgstr "선택한 그림 없음"
 
-#: src/package/contents/ui/main.qml:194
+#: src/package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File..."
 msgstr "파일에서 불러오기..."
 
-#: src/package/contents/ui/main.qml:199
+#: src/package/contents/ui/main.qml:208
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
