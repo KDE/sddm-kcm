@@ -183,6 +183,14 @@ KCM.GridViewKCM {
                 source: backgroundSheet.imagePath
                 sourceSize.width: width
                 fillMode: Image.PreserveAspectFit
+                layer.enabled: true
+                layer.effect: DropShadow {
+                    verticalOffset: 2
+                    radius: 10
+                    samples: 32
+                    cached: true
+                    color: Qt.rgba(0, 0, 0, 0.3)
+                }
             }
         }
         footer: RowLayout {
