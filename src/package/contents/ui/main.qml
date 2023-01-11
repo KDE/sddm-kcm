@@ -183,6 +183,7 @@ KCM.GridViewKCM {
                 source: backgroundSheet.imagePath
                 sourceSize.width: width
                 fillMode: Image.PreserveAspectFit
+                smooth: true
                 layer.enabled: true
                 layer.effect: DropShadow {
                     verticalOffset: 2
