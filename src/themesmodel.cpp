@@ -96,6 +96,7 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
         if (metadata.supportsBackground()) {
             return m_currentWallpapers[metadata.themeid()];
         }
+        break;
     case DeletableRole:
         return m_customInstalledThemes.contains(metadata.path().chopped(1)); // Chop the trailing /
     }
