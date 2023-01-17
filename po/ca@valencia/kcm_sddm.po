@@ -221,7 +221,7 @@ msgstr ""
 "item><item>Tipus de lletra,</item><item>Renderització del tipus de lletra,</"
 "item><item>Preferència de la tecla de fixació de teclat numèric,</"
 "item><item>Tema de Plasma,</item><item>Escalat dels PPP,</"
-"item><item>Configuració de la pantalla (només Wayland)</item></list></para>"
+"item><item>Configureu la pantalla (només Wayland)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:146
 #, kde-format
