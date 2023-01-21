@@ -41,7 +41,7 @@ add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 
-add_executable(kcmsddm_authhelper sddmauthhelper.cpp)
+add_executable(kcmsddm_authhelper sddmauthhelper.cpp sddmauthhelper.h)
 target_link_libraries(kcmsddm_authhelper KF5::AuthCore KF5::ConfigCore KF5::Archive KF5::I18n)
 
 kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)

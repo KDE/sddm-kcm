@@ -7,13 +7,13 @@ set(WAYLAND_SESSIONS_DIR             "${CMAKE_INSTALL_PREFIX}/share/wayland-sess
 configure_file(config.h.in config.h IMMEDIATE @ONLY)
 
 set(SDDM_KCM_SRCS
-    sddmkcm.cpp
-    themesmodel.cpp
-    thememetadata.cpp
-    usersmodel.cpp
-    sessionmodel.cpp
-    sddmdata.cpp
-    sddmsettingsbase.cpp
+    sddmkcm.cpp sddmkcm.h
+    themesmodel.cpp themesmodel.h
+    thememetadata.cpp thememetadata.h
+    usersmodel.cpp usersmodel.h
+    sessionmodel.cpp sessionmodel.h
+    sddmdata.cpp sddmdata.h
+    sddmsettingsbase.cpp sddmsettingsbase.h
 )
 
 
