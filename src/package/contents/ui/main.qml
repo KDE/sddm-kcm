@@ -102,22 +102,22 @@ KCM.GridViewKCM {
         alignment: Qt.AlignRight
         actions: [
             Kirigami.Action {
-                text: i18nc("@action:button", "Behavior...")
+                text: i18nc("@action:button", "Behavior…")
                 icon.name: "settings-configure"
                 onTriggered: { kcm.push("Advanced.qml") }
             },
             Kirigami.Action {
-                text: i18nc("@action:button", "Apply Plasma Settings...")
+                text: i18nc("@action:button", "Apply Plasma Settings…")
                 icon.name: "plasma"
                 onTriggered: syncSheet.open()
             },
             Kirigami.Action {
-                text: i18nc("@action:button", "Install From File...")
+                text: i18nc("@action:button", "Install From File…")
                 icon.name: "document-import"
                 onTriggered: themeDialog.open()
             },
             NewStuff.Action {
-                text: i18nc("@action:button", "Get New SDDM Themes...")
+                text: i18nc("@action:button", "Get New SDDM Themes…")
                 configFile: "sddmtheme.knsrc"
                 onEntryEvent: function(entry, event) {
                     kcm.themesModel.populate();
@@ -200,7 +200,7 @@ KCM.GridViewKCM {
             }
             QQC2.Button {
                 icon.name: "document-open"
-                text: i18nc("@action:button", "Load From File...")
+                text: i18nc("@action:button", "Load From File…")
                 onClicked: imageDialog.open()
             }
             QQC2.Button {
