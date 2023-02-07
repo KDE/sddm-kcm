@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2022-09-13 08:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -147,55 +147,61 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr "%1, oleh %2 (%3)"
 
-#: src/package/contents/ui/main.qml:65
+#: src/package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Behavior"
+msgctxt "@action:button"
+msgid "Behavior…"
+msgstr "Perilaku"
+
+#: src/package/contents/ui/main.qml:30
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Apply Plasma Settings"
+msgctxt "@action:button"
+msgid "Apply Plasma Settings…"
+msgstr "Terapkan Pengaturan Plasma"
+
+#: src/package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Install From File..."
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr "Instal Dari File..."
+
+#: src/package/contents/ui/main.qml:40
+#, kde-format
+msgctxt "@action:button as in, \"get new SDDM themes\""
+msgid "Get New…"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Detail tampilan"
 
-#: src/package/contents/ui/main.qml:80
+#: src/package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Ubah Latar Belakang"
 
-#: src/package/contents/ui/main.qml:89
+#: src/package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Hapus"
 
-#: src/package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Behavior..."
-msgstr "Perilaku..."
-
-#: src/package/contents/ui/main.qml:110
-#, kde-format
-msgctxt "@action:button"
-msgid "Apply Plasma Settings..."
-msgstr "Terapkan Pengaturan Plasma..."
-
-#: src/package/contents/ui/main.qml:115
-#, kde-format
-msgctxt "@action:button"
-msgid "Install From File..."
-msgstr "Instal Dari File..."
-
-#: src/package/contents/ui/main.qml:120
-#, kde-format
-msgctxt "@action:button"
-msgid "Get New SDDM Themes..."
-msgstr "Dapatkan Tema SDDM Baru"
-
-#: src/package/contents/ui/main.qml:138
+#: src/package/contents/ui/main.qml:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Terapkan Pengaturan Plasma"
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:142
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -204,7 +210,7 @@ msgstr ""
 "Ini akan membuat layar masuk SDDM mencerminkan penyesuaian Anda ke "
 "pengaturan Plasma berikut:"
 
-#: src/package/contents/ui/main.qml:145
+#: src/package/contents/ui/main.qml:143
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -218,7 +224,7 @@ msgstr ""
 "Plasma,</item><item>Penskalaan DPI,</item><item>Konfigurasi layar (Hanya "
 "Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:146
+#: src/package/contents/ui/main.qml:144
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -227,36 +233,38 @@ msgstr ""
 "Harap dicatat bahwa file tema harus diinstal secara global untuk ditampilkan "
 "di layar masuk SDDM."
 
-#: src/package/contents/ui/main.qml:153
+#: src/package/contents/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Terapkan"
 
-#: src/package/contents/ui/main.qml:158
+#: src/package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Set ulang ke Pengaturan Default"
 
-#: src/package/contents/ui/main.qml:168
+#: src/package/contents/ui/main.qml:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Ubah Latar Belakang"
 
-#: src/package/contents/ui/main.qml:177
+#: src/package/contents/ui/main.qml:175
 #, kde-format
 msgid "No image selected"
 msgstr "Tidak ada citra yang dipilih"
 
-#: src/package/contents/ui/main.qml:203
-#, kde-format
+#: src/package/contents/ui/main.qml:201
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Load From File..."
 msgctxt "@action:button"
-msgid "Load From File..."
+msgid "Load From File…"
 msgstr "Muat Dari File..."
 
-#: src/package/contents/ui/main.qml:208
+#: src/package/contents/ui/main.qml:206
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
@@ -272,6 +280,18 @@ msgstr ""
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
 msgstr "%1 (Wayland)"
+
+#~ msgctxt "@action:button"
+#~ msgid "Behavior..."
+#~ msgstr "Perilaku..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply Plasma Settings..."
+#~ msgstr "Terapkan Pengaturan Plasma..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Get New SDDM Themes..."
+#~ msgstr "Dapatkan Tema SDDM Baru"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

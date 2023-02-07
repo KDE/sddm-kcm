@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2022-12-30 18:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -146,62 +146,68 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr "%1 (作者：%2；%3)"
 
-#: src/package/contents/ui/main.qml:65
+#: src/package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Behavior"
+msgctxt "@action:button"
+msgid "Behavior…"
+msgstr "行為"
+
+#: src/package/contents/ui/main.qml:30
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Apply Plasma Settings"
+msgctxt "@action:button"
+msgid "Apply Plasma Settings…"
+msgstr "套用 Plasma 設定"
+
+#: src/package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Install From File..."
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr "從檔案安裝…"
+
+#: src/package/contents/ui/main.qml:40
+#, kde-format
+msgctxt "@action:button as in, \"get new SDDM themes\""
+msgid "Get New…"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "檢視詳細資訊"
 
-#: src/package/contents/ui/main.qml:80
+#: src/package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "變更背景"
 
-#: src/package/contents/ui/main.qml:89
+#: src/package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "刪除"
 
-#: src/package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Behavior..."
-msgstr "行為…"
-
-#: src/package/contents/ui/main.qml:110
-#, kde-format
-msgctxt "@action:button"
-msgid "Apply Plasma Settings..."
-msgstr "套用 Plasma 設定…"
-
-#: src/package/contents/ui/main.qml:115
-#, kde-format
-msgctxt "@action:button"
-msgid "Install From File..."
-msgstr "從檔案安裝…"
-
-#: src/package/contents/ui/main.qml:120
-#, kde-format
-msgctxt "@action:button"
-msgid "Get New SDDM Themes..."
-msgstr "取得新 SDDM 主題…"
-
-#: src/package/contents/ui/main.qml:138
+#: src/package/contents/ui/main.qml:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "套用 Plasma 設定"
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:142
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr "這將會使 SDDM 登入畫面反映您對以下 Plasma 設定的自訂："
 
-#: src/package/contents/ui/main.qml:145
+#: src/package/contents/ui/main.qml:143
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -215,7 +221,7 @@ msgstr ""
 "item><item>縮放 DPI、</item><item>螢幕配置 (只支援 Wayland)</item></list></"
 "para>"
 
-#: src/package/contents/ui/main.qml:146
+#: src/package/contents/ui/main.qml:144
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -224,36 +230,38 @@ msgstr ""
 "請注意，主題必須要以全域安裝（不能只安裝在目前使用者）才能套用在 SDDM 登入畫"
 "面上。"
 
-#: src/package/contents/ui/main.qml:153
+#: src/package/contents/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "套用"
 
-#: src/package/contents/ui/main.qml:158
+#: src/package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "重置為預設設定"
 
-#: src/package/contents/ui/main.qml:168
+#: src/package/contents/ui/main.qml:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "變更背景"
 
-#: src/package/contents/ui/main.qml:177
+#: src/package/contents/ui/main.qml:175
 #, kde-format
 msgid "No image selected"
 msgstr "未選取圖片"
 
-#: src/package/contents/ui/main.qml:203
-#, kde-format
+#: src/package/contents/ui/main.qml:201
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Load From File..."
 msgctxt "@action:button"
-msgid "Load From File..."
+msgid "Load From File…"
 msgstr "從檔案載入…"
 
-#: src/package/contents/ui/main.qml:208
+#: src/package/contents/ui/main.qml:206
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
@@ -269,6 +277,18 @@ msgstr "無法繼續，'sddm' 使用者不存在。請確定您的 SDDM 安裝�
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
 msgstr "%1 (Wayland)"
+
+#~ msgctxt "@action:button"
+#~ msgid "Behavior..."
+#~ msgstr "行為…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply Plasma Settings..."
+#~ msgstr "套用 Plasma 設定…"
+
+#~ msgctxt "@action:button"
+#~ msgid "Get New SDDM Themes..."
+#~ msgstr "取得新 SDDM 主題…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

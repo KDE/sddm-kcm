@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2022-08-10 18:55+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -151,55 +151,61 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr "%1, per %2 (%3)"
 
-#: src/package/contents/ui/main.qml:65
+#: src/package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Behavior"
+msgctxt "@action:button"
+msgid "Behavior…"
+msgstr "Comportament"
+
+#: src/package/contents/ui/main.qml:30
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Apply Plasma Settings"
+msgctxt "@action:button"
+msgid "Apply Plasma Settings…"
+msgstr "Aplica la configuració de Plasma"
+
+#: src/package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Install From File..."
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr "Instal·la des d'un fitxer..."
+
+#: src/package/contents/ui/main.qml:40
+#, kde-format
+msgctxt "@action:button as in, \"get new SDDM themes\""
+msgid "Get New…"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Visualitza els detalls"
 
-#: src/package/contents/ui/main.qml:80
+#: src/package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Canvia el fons"
 
-#: src/package/contents/ui/main.qml:89
+#: src/package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Suprimix"
 
-#: src/package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Behavior..."
-msgstr "Comportament..."
-
-#: src/package/contents/ui/main.qml:110
-#, kde-format
-msgctxt "@action:button"
-msgid "Apply Plasma Settings..."
-msgstr "Aplica la configuració de Plasma..."
-
-#: src/package/contents/ui/main.qml:115
-#, kde-format
-msgctxt "@action:button"
-msgid "Install From File..."
-msgstr "Instal·la des d'un fitxer..."
-
-#: src/package/contents/ui/main.qml:120
-#, kde-format
-msgctxt "@action:button"
-msgid "Get New SDDM Themes..."
-msgstr "Obtín temes nous de SDDM..."
-
-#: src/package/contents/ui/main.qml:138
+#: src/package/contents/ui/main.qml:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Aplica la configuració de Plasma"
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:142
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -208,7 +214,7 @@ msgstr ""
 "Farà que la pantalla SDDM d'inici de sessió assumisca la personalització de "
 "la configuració següent de Plasma:"
 
-#: src/package/contents/ui/main.qml:145
+#: src/package/contents/ui/main.qml:143
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -223,7 +229,7 @@ msgstr ""
 "item><item>Tema de Plasma,</item><item>Escalat dels PPP,</"
 "item><item>Configureu la pantalla (només Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:146
+#: src/package/contents/ui/main.qml:144
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -232,36 +238,38 @@ msgstr ""
 "Cal tindre en compte que els fitxers de tema s'han d'instal·lar globalment "
 "perquè els assumisca la pantalla SDDM d'inici de sessió."
 
-#: src/package/contents/ui/main.qml:153
+#: src/package/contents/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Aplica"
 
-#: src/package/contents/ui/main.qml:158
+#: src/package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Restaura la configuració predeterminada"
 
-#: src/package/contents/ui/main.qml:168
+#: src/package/contents/ui/main.qml:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Canvia el fons"
 
-#: src/package/contents/ui/main.qml:177
+#: src/package/contents/ui/main.qml:175
 #, kde-format
 msgid "No image selected"
 msgstr "No s'ha seleccionat cap imatge"
 
-#: src/package/contents/ui/main.qml:203
-#, kde-format
+#: src/package/contents/ui/main.qml:201
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Load From File..."
 msgctxt "@action:button"
-msgid "Load From File..."
+msgid "Load From File…"
 msgstr "Carrega des d'un fitxer..."
 
-#: src/package/contents/ui/main.qml:208
+#: src/package/contents/ui/main.qml:206
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
@@ -279,3 +287,15 @@ msgstr ""
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
 msgstr "%1 (Wayland)"
+
+#~ msgctxt "@action:button"
+#~ msgid "Behavior..."
+#~ msgstr "Comportament..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Apply Plasma Settings..."
+#~ msgstr "Aplica la configuració de Plasma..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Get New SDDM Themes..."
+#~ msgstr "Obtín temes nous de SDDM..."

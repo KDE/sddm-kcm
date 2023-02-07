@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2017-05-16 11:58-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -152,65 +152,64 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:65
+#: src/package/contents/ui/main.qml:24
+#, kde-format
+msgctxt "@action:button"
+msgid "Behavior…"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:30
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Plasma Settings…"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgid "Install From File"
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr "התקן מקובץ"
+
+#: src/package/contents/ui/main.qml:40
+#, kde-format
+msgctxt "@action:button as in, \"get new SDDM themes\""
+msgid "Get New…"
+msgstr ""
+
+#: src/package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:80
+#: src/package/contents/ui/main.qml:106
 #, fuzzy, kde-format
 #| msgid "Background:"
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "רקע:"
 
-#: src/package/contents/ui/main.qml:89
+#: src/package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Behavior..."
-msgstr ""
-
-#: src/package/contents/ui/main.qml:110
-#, kde-format
-msgctxt "@action:button"
-msgid "Apply Plasma Settings..."
-msgstr ""
-
-#: src/package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Install From File"
-msgctxt "@action:button"
-msgid "Install From File..."
-msgstr "התקן מקובץ"
-
-#: src/package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "Download New SDDM Themes"
-msgctxt "@action:button"
-msgid "Get New SDDM Themes..."
-msgstr "הורד ערכת נושא חדשה ל־SDDM"
-
-#: src/package/contents/ui/main.qml:138
+#: src/package/contents/ui/main.qml:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:142
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:145
+#: src/package/contents/ui/main.qml:143
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -220,45 +219,45 @@ msgid ""
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:146
+#: src/package/contents/ui/main.qml:144
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
 
-#: src/package/contents/ui/main.qml:153
+#: src/package/contents/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:158
+#: src/package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:168
+#: src/package/contents/ui/main.qml:166
 #, fuzzy, kde-format
 #| msgid "Background:"
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "רקע:"
 
-#: src/package/contents/ui/main.qml:177
+#: src/package/contents/ui/main.qml:175
 #, kde-format
 msgid "No image selected"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:203
+#: src/package/contents/ui/main.qml:201
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
-msgid "Load From File..."
+msgid "Load From File…"
 msgstr "טען מקובץ..."
 
-#: src/package/contents/ui/main.qml:208
+#: src/package/contents/ui/main.qml:206
 #, fuzzy, kde-format
 #| msgid "Clear Image"
 msgctxt "@action:button"
@@ -275,6 +274,12 @@ msgstr ""
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
 msgstr "%1 (Wayland)"
+
+#, fuzzy
+#~| msgid "Download New SDDM Themes"
+#~ msgctxt "@action:button"
+#~ msgid "Get New SDDM Themes..."
+#~ msgstr "הורד ערכת נושא חדשה ל־SDDM"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
