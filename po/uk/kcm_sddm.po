@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2016, 2017, 2018, 2019, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:01+0000\n"
-"PO-Revision-Date: 2022-08-10 08:26+0300\n"
+"PO-Revision-Date: 2023-02-07 15:02+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -150,25 +150,19 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, автор — %2 (%3)"
 
 #: src/package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Поведінка"
+msgstr "Поведінка…"
 
 #: src/package/contents/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Застосування параметрів Плазми"
+msgstr "Застосувати параметри Плазми…"
 
 #: src/package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Встановити з файла…"
@@ -177,7 +171,7 @@ msgstr "Встановити з файла…"
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Отримати ще…"
 
 #: src/package/contents/ui/main.qml:91
 #, kde-format
@@ -259,9 +253,7 @@ msgid "No image selected"
 msgstr "Не позначено жодного зображення"
 
 #: src/package/contents/ui/main.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Завантажити з файла…"

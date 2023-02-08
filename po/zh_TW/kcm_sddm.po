@@ -4,13 +4,13 @@
 # Franklin, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:01+0000\n"
-"PO-Revision-Date: 2022-12-30 18:53+0900\n"
+"PO-Revision-Date: 2023-02-07 23:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -147,25 +147,19 @@ msgid "%1, by %2 (%3)"
 msgstr "%1 (作者：%2；%3)"
 
 #: src/package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "行為"
+msgstr "行為…"
 
 #: src/package/contents/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "套用 Plasma 設定"
+msgstr "套用 Plasma 設定…"
 
 #: src/package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "從檔案安裝…"
@@ -174,7 +168,7 @@ msgstr "從檔案安裝…"
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "取得新的…"
 
 #: src/package/contents/ui/main.qml:91
 #, kde-format
@@ -254,9 +248,7 @@ msgid "No image selected"
 msgstr "未選取圖片"
 
 #: src/package/contents/ui/main.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "從檔案載入…"
