@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2015, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-12-10 18:17+0300\n"
+"PO-Revision-Date: 2023-02-08 20:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -90,8 +90,9 @@ msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
 "will ask you to unlock it every time you log in."
 msgstr ""
-"Otomatik giriş, KDE Cüzdan kilidinizi otomatik olarak açmayı desteklemez, bu "
-"nedenden dolayı her giriş yaptığınızda size kilidi açmanızı söyler."
+"Otomatik oturum açma, KDE Cüzdan kilidinizi otomatik olarak açmayı "
+"desteklemez, bu nedenden dolayı her oturum açtığınızda size kilidi açmanızı "
+"söyler."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
@@ -200,8 +201,8 @@ msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
-"Bu, SDDM giriş ekranınıza, aşağıda yaptığınız Plasma değişikliklerini "
-"yansıtacak:"
+"Bu, SDDM oturum açma ekranının özelleştirmelerinizi aşağıdaki Plasma "
+"ayarlarına yansıtmasını sağlayacaktır:"
 
 #: src/package/contents/ui/main.qml:145
 #, kde-kuit-format
@@ -223,8 +224,8 @@ msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
-"Tema dosyalarının SDDM giriş ekranında yansıtılabilmesi için global olarak "
-"kurulması gerektiğini not edin."
+"SDDM oturum açma ekranına yansıtılması için tema dosyalarının global olarak "
+"kurulması gerektiğini lütfen unutmayın."
 
 #: src/package/contents/ui/main.qml:153
 #, kde-format
