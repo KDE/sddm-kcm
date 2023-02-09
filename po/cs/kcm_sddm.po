@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2014, 2017.
-# Vit Pelcak <vit@pelcak.org>, 2017, 2019, 2020, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2017, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:01+0000\n"
-"PO-Revision-Date: 2022-10-10 16:57+0200\n"
+"PO-Revision-Date: 2023-02-08 12:35+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -145,34 +145,28 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, od %2 (%3)"
 
 #: src/package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Chování"
+msgstr "Chování…"
 
 #: src/package/contents/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Provést nastavení Plasma"
+msgstr "Provést nastavení Plasma…"
 
 #: src/package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Instalovat ze souboru..."
+msgstr "Instalovat ze souboru…"
 
 #: src/package/contents/ui/main.qml:40
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Získat nové…"
 
 #: src/package/contents/ui/main.qml:91
 #, kde-format
@@ -246,12 +240,10 @@ msgid "No image selected"
 msgstr "Nebyl vybrán žádný obrázek"
 
 #: src/package/contents/ui/main.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Načíst ze souboru..."
+msgstr "Načíst ze souboru…"
 
 #: src/package/contents/ui/main.qml:206
 #, kde-format
@@ -271,15 +263,3 @@ msgstr ""
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
 msgstr "%1 (Wayland)"
-
-#~ msgctxt "@action:button"
-#~ msgid "Behavior..."
-#~ msgstr "Chování..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Apply Plasma Settings..."
-#~ msgstr "Provést nastavení Plasma..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Get New SDDM Themes..."
-#~ msgstr "Získat nové motivy SDDM..."

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:01+0000\n"
-"PO-Revision-Date: 2023-01-25 23:02+0100\n"
+"PO-Revision-Date: 2023-02-08 12:32+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -147,34 +147,28 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, per %2 (%3)"
 
 #: src/package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Comportamento"
+msgstr "Comportamento…"
 
 #: src/package/contents/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Applica preferentias de Plasma"
+msgstr "Applica preferentias de Plasma…"
 
 #: src/package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Installa ex file ..."
+msgstr "Installa ex file …"
 
 #: src/package/contents/ui/main.qml:40
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Obtene Nove…"
 
 #: src/package/contents/ui/main.qml:91
 #, kde-format
@@ -257,12 +251,10 @@ msgid "No image selected"
 msgstr "Necun image selectionate"
 
 #: src/package/contents/ui/main.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Carga ex file ..."
+msgstr "Carga ex file …"
 
 #: src/package/contents/ui/main.qml:206
 #, kde-format
