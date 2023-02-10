@@ -1,13 +1,13 @@
 # Translation of kcm_sddm to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2017, 2018, 2019, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2017, 2018, 2019, 2021, 2022, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-08-20 11:04+0200\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
+"PO-Revision-Date: 2023-02-09 21:35+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -149,55 +149,55 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr "%1, frå %2 (%3)"
 
-#: src/package/contents/ui/main.qml:65
+#: src/package/contents/ui/main.qml:24
+#, kde-format
+msgctxt "@action:button"
+msgid "Behavior…"
+msgstr "Åtferd …"
+
+#: src/package/contents/ui/main.qml:30
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Plasma Settings…"
+msgstr "Bruk innstillingar frå Plasma …"
+
+#: src/package/contents/ui/main.qml:35
+#, kde-format
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr "Installer frå fil …"
+
+#: src/package/contents/ui/main.qml:40
+#, kde-format
+msgctxt "@action:button as in, \"get new SDDM themes\""
+msgid "Get New…"
+msgstr "Hent nye …"
+
+#: src/package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Vis detaljar"
 
-#: src/package/contents/ui/main.qml:80
+#: src/package/contents/ui/main.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Byt bakgrunn"
 
-#: src/package/contents/ui/main.qml:89
+#: src/package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Slett"
 
-#: src/package/contents/ui/main.qml:105
-#, kde-format
-msgctxt "@action:button"
-msgid "Behavior..."
-msgstr "Åtferd …"
-
-#: src/package/contents/ui/main.qml:110
-#, kde-format
-msgctxt "@action:button"
-msgid "Apply Plasma Settings..."
-msgstr "Bruk innstillingar frå Plasma …"
-
-#: src/package/contents/ui/main.qml:115
-#, kde-format
-msgctxt "@action:button"
-msgid "Install From File..."
-msgstr "Installer frå fil …"
-
-#: src/package/contents/ui/main.qml:120
-#, kde-format
-msgctxt "@action:button"
-msgid "Get New SDDM Themes..."
-msgstr "Hent nye SDDM-tema …"
-
-#: src/package/contents/ui/main.qml:138
+#: src/package/contents/ui/main.qml:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Bruk innstillingar frå Plasma"
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:142
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -206,7 +206,7 @@ msgstr ""
 "Dette vil få innloggingsbiletet (SDDM) til å følgja endringane du har gjort "
 "i desse Plasma-innstillingane:"
 
-#: src/package/contents/ui/main.qml:145
+#: src/package/contents/ui/main.qml:143
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -220,7 +220,7 @@ msgstr ""
 "tema</item><item>PPT-skalering</item><item>Skjermoppsett (berre for "
 "Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:146
+#: src/package/contents/ui/main.qml:144
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -229,36 +229,36 @@ msgstr ""
 "Merk at temafilene må vera globalt installerte for at dei skal visast på "
 "innloggingsbiletet (SDDM)."
 
-#: src/package/contents/ui/main.qml:153
+#: src/package/contents/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Bruk"
 
-#: src/package/contents/ui/main.qml:158
+#: src/package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Tilbakestill til standardinnstillingar"
 
-#: src/package/contents/ui/main.qml:168
+#: src/package/contents/ui/main.qml:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Byt bakgrunn"
 
-#: src/package/contents/ui/main.qml:177
+#: src/package/contents/ui/main.qml:175
 #, kde-format
 msgid "No image selected"
 msgstr "Inkje bilete valt"
 
-#: src/package/contents/ui/main.qml:203
+#: src/package/contents/ui/main.qml:201
 #, kde-format
 msgctxt "@action:button"
-msgid "Load From File..."
+msgid "Load From File…"
 msgstr "Hent frå fil …"
 
-#: src/package/contents/ui/main.qml:208
+#: src/package/contents/ui/main.qml:206
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
