@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:01+0000\n"
-"PO-Revision-Date: 2023-02-07 11:02\n"
+"PO-Revision-Date: 2023-02-15 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -145,34 +145,28 @@ msgid "%1, by %2 (%3)"
 msgstr "%1，由 %2 设计制作，(%3 许可证)"
 
 #: src/package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "行为设置"
+msgstr "行为…"
 
 #: src/package/contents/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "应用 Plasma 设置"
+msgstr "应用 Plasma 设置…"
 
 #: src/package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "从文件安装..."
+msgstr "安装文件…"
 
 #: src/package/contents/ui/main.qml:40
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "获取新主题…"
 
 #: src/package/contents/ui/main.qml:91
 #, kde-format
@@ -250,12 +244,10 @@ msgid "No image selected"
 msgstr "未选择图像"
 
 #: src/package/contents/ui/main.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "加载图像文件..."
+msgstr "加载文件…"
 
 #: src/package/contents/ui/main.qml:206
 #, kde-format
@@ -273,15 +265,3 @@ msgstr "无法继续，用户“sddm”不存在。请检查本系统的 SDDM �
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
 msgstr "%1 (Wayland)"
-
-#~ msgctxt "@action:button"
-#~ msgid "Behavior..."
-#~ msgstr "行为设置..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Apply Plasma Settings..."
-#~ msgstr "应用 Plasma 设置..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Get New SDDM Themes..."
-#~ msgstr "获取新 SDDM 主题..."

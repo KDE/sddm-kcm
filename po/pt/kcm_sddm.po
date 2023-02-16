@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:01+0000\n"
-"PO-Revision-Date: 2022-08-13 17:16+0100\n"
+"PO-Revision-Date: 2023-02-15 12:55+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -144,34 +144,28 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, de %2 (%3)"
 
 #: src/package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Comportamento"
+msgstr "Comportamento…"
 
 #: src/package/contents/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Aplicar a Configuração do Plasma"
+msgstr "Aplicar a Configuração do Plasma…"
 
 #: src/package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Instalar de um Ficheiro..."
+msgstr "Instalar de um Ficheiro…"
 
 #: src/package/contents/ui/main.qml:40
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Obter Novos…"
 
 #: src/package/contents/ui/main.qml:91
 #, kde-format
@@ -254,9 +248,7 @@ msgid "No image selected"
 msgstr "Não foi seleccionada nenhuma imagem"
 
 #: src/package/contents/ui/main.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Carregar de um Ficheiro..."
@@ -279,15 +271,3 @@ msgstr ""
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
 msgstr "%1 (Wayland)"
-
-#~ msgctxt "@action:button"
-#~ msgid "Behavior..."
-#~ msgstr "Comportamento..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Apply Plasma Settings..."
-#~ msgstr "Aplicar a Configuração do Plasma..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Get New SDDM Themes..."
-#~ msgstr "Obter Novos Temas do SDDM..."
