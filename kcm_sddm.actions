@@ -234,7 +234,7 @@ Description[sv]=Packar upp en zip-fil som innehåller ett SDDM-tema på platsen 
 Description[tr]=SDDM temasını içeren bir zip dosyasını SDDM tema konumuna çıkarır.
 Description[uk]=Видобуває дані з архіву zip, що містить тему SDDM, до каталогу тем SDDM
 Description[x-test]=xxExtracts a zip file containing an SDDM theme to the SDDM theme locationxx
-Description[zh_CN]=解压缩包含 SDDM 主题的 ZIP 文件到 SDDM 主题路径
+Description[zh_CN]=解压包含 SDDM 主题的 ZIP 文件到 SDDM 主题路径
 Description[zh_TW]=解壓縮包含 SDDM 主題的 zip 檔案到 SDDM 主題位置
 Policy=auth_admin
 
