@@ -25,12 +25,12 @@ kconfig_add_kcfg_files(kcm_sddm sddmsettings.kcfgc GENERATE_MOC)
 target_compile_definitions(kcm_sddm PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
 target_link_libraries(kcm_sddm
-    KF5::I18n
-    KF5::AuthCore
-    KF5::KCMUtils
-    KF5::KIOGui
-    KF5::NewStuff
-    KF5::QuickAddons
+    KF6::I18n
+    KF6::AuthCore
+    KF6::KCMUtils
+    KF6::KIOGui
+    KF6::NewStuff
+    KF6::QuickAddons
 )
 
 kpackage_install_package(package kcm_sddm kcms)

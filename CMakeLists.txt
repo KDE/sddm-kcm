@@ -3,10 +3,10 @@ cmake_minimum_required(VERSION 3.16)
 set(PROJECT_VERSION "5.27.80")
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.102.0")
+set(KF6_MIN_VERSION "5.102.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH}  ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(ECMInstallIcons)
 include(KDEInstallDirs)
@@ -19,7 +19,7 @@ include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Quick QuickWidgets)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
     I18n
     XmlGui
@@ -30,6 +30,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     NewStuff
     Declarative
     KCMUtils
+    Package
 )
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
@@ -42,7 +43,7 @@ add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 
 add_executable(kcmsddm_authhelper sddmauthhelper.cpp sddmauthhelper.h)
-target_link_libraries(kcmsddm_authhelper KF5::AuthCore KF5::ConfigCore KF5::Archive KF5::I18n)
+target_link_libraries(kcmsddm_authhelper KF6::AuthCore KF6::ConfigCore KF6::Archive KF6::I18n)
 
 kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
 install(TARGETS kcmsddm_authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
@@ -53,11 +54,11 @@ add_executable(sddmthemeinstaller
 )
 
 target_link_libraries(sddmthemeinstaller
-    KF5::I18n
-    KF5::AuthCore
-    KF5::CoreAddons
-    KF5::ConfigCore
-    KF5::WidgetsAddons)
+    KF6::I18n
+    KF6::AuthCore
+    KF6::CoreAddons
+    KF6::ConfigCore
+    KF6::WidgetsAddons)
 install(TARGETS sddmthemeinstaller ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(src)
