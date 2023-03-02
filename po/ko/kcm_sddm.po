@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2015, 2017, 2018, 2019, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2015, 2017, 2018, 2019, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-10-03 15:22+0200\n"
+"PO-Revision-Date: 2023-02-28 22:44+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-i18n-doc@kde.org>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -209,7 +209,7 @@ msgid ""
 "item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>색 배열,</item><item>커서 테마,</item><item>글꼴,</"
+"<para><list><item>색 구성표,</item><item>커서 테마,</item><item>글꼴,</"
 "item><item>글꼴 렌더링,</item><item>NumLock 설정,</item><item>Plasma 테마,</"
 "item><item>DPI 크기 조정,</item><item>화면 설정(Wayland만).</item></list></"
 "para>"
