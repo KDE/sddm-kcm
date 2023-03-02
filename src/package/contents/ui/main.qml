@@ -6,10 +6,10 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 
 
 import org.kde.kcm 1.4 as KCM
@@ -125,8 +125,7 @@ KCM.GridViewKCM {
     }
     FileDialog {
         id: themeDialog
-        selectExisting: true
-        onAccepted: kcm.installTheme(fileUrl) 
+        onAccepted: kcm.installTheme(selectedFile)
     }
     DetailsDialog {
         id: detailsDialog
@@ -211,9 +210,8 @@ KCM.GridViewKCM {
             }
             FileDialog {
                 id: imageDialog
-                selectExisting: true
                 onAccepted: {
-                    view.model.setData(backgroundSheet.modelIndex, kcm.toLocalFile(fileUrl), ThemesModel.CurrentBackgroundRole)
+                    view.model.setData(backgroundSheet.modelIndex, kcm.toLocalFile(selectedFile), ThemesModel.CurrentBackgroundRole)
                     backgroundSheet.close()
                 }
             }
