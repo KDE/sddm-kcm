@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:01+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2022-08-24 17:56+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -193,13 +193,13 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Silmək"
 
-#: src/package/contents/ui/main.qml:136
+#: src/package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Plasma ayarlarını tətbiq edin"
 
-#: src/package/contents/ui/main.qml:142
+#: src/package/contents/ui/main.qml:141
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -208,7 +208,7 @@ msgstr ""
 "Bu, SDDM giriş ekranını aşağıdakı Plasma parametrləri ayarlarınız ilə "
 "uyğunlaşdıracaq."
 
-#: src/package/contents/ui/main.qml:143
+#: src/package/contents/ui/main.qml:142
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,7 +222,7 @@ msgstr ""
 "item><item>Plasma mövzusu</item><item>DPİ miqyası,</item><item>Ekran "
 "tənzimləmələri (yalnız Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -231,30 +231,30 @@ msgstr ""
 "Nəzərə alın ki, SDDM giriş ekranı görüntüsünün mövzuya uyğun dəyişməsi üçün, "
 "bu mövzu faylları ümumi (qlobal) olaraq quraşdırılmalıdır."
 
-#: src/package/contents/ui/main.qml:151
+#: src/package/contents/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Tətbiq edin"
 
-#: src/package/contents/ui/main.qml:156
+#: src/package/contents/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "İlkin ayarlara sıfırlamaq"
 
-#: src/package/contents/ui/main.qml:166
+#: src/package/contents/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Arxa fonu dəyişmək"
 
-#: src/package/contents/ui/main.qml:175
+#: src/package/contents/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "Şəkil seçilməyib"
 
-#: src/package/contents/ui/main.qml:201
+#: src/package/contents/ui/main.qml:200
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Load From File..."
@@ -262,7 +262,7 @@ msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Fayldan yükləmək..."
 
-#: src/package/contents/ui/main.qml:206
+#: src/package/contents/ui/main.qml:205
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:01+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-02-28 22:44+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -187,20 +187,20 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "삭제"
 
-#: src/package/contents/ui/main.qml:136
+#: src/package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Plasma 설정 적용"
 
-#: src/package/contents/ui/main.qml:142
+#: src/package/contents/ui/main.qml:141
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr "다음 Plasma 설정을 SDDM 로그인 화면에도 적용합니다:"
 
-#: src/package/contents/ui/main.qml:143
+#: src/package/contents/ui/main.qml:142
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -214,43 +214,43 @@ msgstr ""
 "item><item>DPI 크기 조정,</item><item>화면 설정(Wayland만).</item></list></"
 "para>"
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr "SDDM 로그인 화면에 적용하려면 테마를 전역적으로 설치해야 합니다."
 
-#: src/package/contents/ui/main.qml:151
+#: src/package/contents/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "적용"
 
-#: src/package/contents/ui/main.qml:156
+#: src/package/contents/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "기본 설정으로 복원"
 
-#: src/package/contents/ui/main.qml:166
+#: src/package/contents/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "배경 바꾸기"
 
-#: src/package/contents/ui/main.qml:175
+#: src/package/contents/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "선택한 그림 없음"
 
-#: src/package/contents/ui/main.qml:201
+#: src/package/contents/ui/main.qml:200
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "파일에서 불러오기…"
 
-#: src/package/contents/ui/main.qml:206
+#: src/package/contents/ui/main.qml:205
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

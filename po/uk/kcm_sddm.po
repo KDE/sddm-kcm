@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:01+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-02-07 15:02+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -191,13 +191,13 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Вилучити"
 
-#: src/package/contents/ui/main.qml:136
+#: src/package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Застосування параметрів Плазми"
 
-#: src/package/contents/ui/main.qml:142
+#: src/package/contents/ui/main.qml:141
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -206,7 +206,7 @@ msgstr ""
 "Позначення цього пункту призведе до показу на екрані входу до системи SDDM "
 "таких вказаних вами параметрів Плазми:"
 
-#: src/package/contents/ui/main.qml:143
+#: src/package/contents/ui/main.qml:142
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -220,7 +220,7 @@ msgstr ""
 "NumLock,</item><item>тему Плазми,</item><item>масштабування роздільності,</"
 "item><item>налаштування екрана (лише Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -229,36 +229,36 @@ msgstr ""
 "Будь ласка, зауважте, що файли теми має бути встановлено на "
 "загальносистемному рівні для відтворення на сторінці входу до системи SDDM."
 
-#: src/package/contents/ui/main.qml:151
+#: src/package/contents/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Застосувати"
 
-#: src/package/contents/ui/main.qml:156
+#: src/package/contents/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Відновити типові параметри"
 
-#: src/package/contents/ui/main.qml:166
+#: src/package/contents/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Змінити тло"
 
-#: src/package/contents/ui/main.qml:175
+#: src/package/contents/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "Не позначено жодного зображення"
 
-#: src/package/contents/ui/main.qml:201
+#: src/package/contents/ui/main.qml:200
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Завантажити з файла…"
 
-#: src/package/contents/ui/main.qml:206
+#: src/package/contents/ui/main.qml:205
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

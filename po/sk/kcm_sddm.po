@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:01+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-01-22 17:02+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -194,13 +194,13 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Vymazať"
 
-#: src/package/contents/ui/main.qml:136
+#: src/package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Použiť Plasma nastavenia"
 
-#: src/package/contents/ui/main.qml:142
+#: src/package/contents/ui/main.qml:141
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -209,7 +209,7 @@ msgstr ""
 "Vďaka tomuto bude prihlasovacia obrazovka SDDM odrážať vaše zmeny Plasma "
 "nastavení:"
 
-#: src/package/contents/ui/main.qml:143
+#: src/package/contents/ui/main.qml:142
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -223,7 +223,7 @@ msgstr ""
 "nastavenia,</item><item>Plasma téma,</item><item>Mierka DPI,</"
 "item><item>Nastavenie  obrazovky (iba Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:144
+#: src/package/contents/ui/main.qml:143
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -232,30 +232,30 @@ msgstr ""
 "Súbory s témami musia byť nainštalované globálne, aby sa prejavili na "
 "prihlasovacej obrazovke SDDM."
 
-#: src/package/contents/ui/main.qml:151
+#: src/package/contents/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Použiť"
 
-#: src/package/contents/ui/main.qml:156
+#: src/package/contents/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Obnoviť na predvolené nastavenia"
 
-#: src/package/contents/ui/main.qml:166
+#: src/package/contents/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Zmeniť pozadie"
 
-#: src/package/contents/ui/main.qml:175
+#: src/package/contents/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "Nie je vybratý žiadny obrázok"
 
-#: src/package/contents/ui/main.qml:201
+#: src/package/contents/ui/main.qml:200
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Load From File..."
@@ -263,7 +263,7 @@ msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Načítať zo súboru..."
 
-#: src/package/contents/ui/main.qml:206
+#: src/package/contents/ui/main.qml:205
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
