@@ -91,13 +91,13 @@ msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
 "will ask you to unlock it every time you log in."
 msgstr ""
-"لا يدعم الولوج التلقائي فتح محفظة كدي آليا، لذلك سيطلب منك إلغاء قفلها في كل "
-"مرة تقوم فيها بالولوج."
+"لا يدعم الولوج التلقائي فتح محفظة كِيدِي آليا، لذلك سيطلب منك إلغاء قفلها في "
+"كل مرة تقوم فيها بالولوج."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr "افتح إعدادات محفظة كدي"
+msgstr "افتح إعدادات محفظة كِيدِي"
 
 #: src/package/contents/ui/Advanced.qml:114
 #, kde-format
@@ -325,7 +325,7 @@ msgstr "%1 (ويلاند)"
 #~ msgstr "صفّر"
 
 #~ msgid "SDDM KDE Config"
-#~ msgstr "ضبط كدي لِـ SDDM"
+#~ msgstr "ضبط كِيدِي لِـ SDDM"
 
 #, fuzzy
 #~| msgid "Select image"
