@@ -29,7 +29,6 @@ target_link_libraries(kcm_sddm
     KF6::AuthCore
     KF6::KCMUtils
     KF6::KIOGui
-    KF6::NewStuff
     KF6::QuickAddons
 )
 
