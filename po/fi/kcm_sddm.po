@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2017.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 #
 # Larso, 2014.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-03 02:18+0000\n"
-"PO-Revision-Date: 2022-08-17 22:43+0300\n"
+"PO-Revision-Date: 2023-03-06 20:06+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -149,25 +149,19 @@ msgid "%1, by %2 (%3)"
 msgstr "%1 tekijältä %2 (%3)"
 
 #: src/package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Toiminta"
+msgstr "Toiminta…"
 
 #: src/package/contents/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Käytä Plasma-asetuksia"
+msgstr "Käytä Plasma-asetuksia…"
 
 #: src/package/contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Asenna tiedostosta…"
@@ -176,7 +170,7 @@ msgstr "Asenna tiedostosta…"
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Hae uusia…"
 
 #: src/package/contents/ui/main.qml:91
 #, kde-format
@@ -256,9 +250,7 @@ msgid "No image selected"
 msgstr "Kuvaa ei ole valittu"
 
 #: src/package/contents/ui/main.qml:200
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Lataa tiedostosta…"
