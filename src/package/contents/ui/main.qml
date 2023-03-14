@@ -139,7 +139,7 @@ KCM.GridViewKCM {
             type: Kirigami.MessageType.Information
             font: Kirigami.Theme.smallFont
             text: i18n("This will make the SDDM login screen reflect your customizations to the following Plasma settings:") +
-                xi18nc("@info", "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Font,</item><item>Font rendering,</item><item>NumLock preference,</item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</item></list></para>") +
+                xi18nc("@info", "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</item><item>NumLock preference,</item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</item></list></para>") +
                 i18n("Please note that theme files must be installed globally to be reflected on the SDDM login screen.")
         }
         footer: RowLayout {
