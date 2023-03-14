@@ -160,6 +160,7 @@ void SddmKcm::synchronizeSettings()
     KConfig cursorConfig(QStringLiteral("kcminputrc"));
     KConfigGroup cursorConfigGroup(&cursorConfig, "Mouse");
     QVariant cursorTheme = cursorConfigGroup.readEntry("cursorTheme", QString());
+    QVariant cursorSize = cursorConfigGroup.readEntry("cursorSize", QString());
 
     KConfig dpiConfig(QStringLiteral("kcmfonts"));
     KConfigGroup dpiConfigGroup(&dpiConfig, "General");
@@ -191,6 +192,11 @@ void SddmKcm::synchronizeSettings()
         args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme;
     } else {
         qDebug() << "Cannot find cursor theme value.";
+    }
+    if (!cursorSize.isNull()) {
+        args[QStringLiteral("kde_settings.conf/Theme/CursorSize")] = cursorSize;
+    } else {
+        qDebug() << "Cannot find cursor size value.";
     }
 
     if (!dpiValue.isEmpty()) {
@@ -281,6 +287,8 @@ void SddmKcm::resetSyncronizedSettings()
     args[QStringLiteral("sddm.conf")] = QLatin1String(SDDM_CONFIG_FILE);
 
     args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = QVariant();
+
+    args[QStringLiteral("kde_settings.conf/Theme/CursorSize")] = QVariant();
 
     args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = QVariant();
 
