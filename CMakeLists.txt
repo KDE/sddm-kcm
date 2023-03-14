@@ -58,7 +58,7 @@ target_link_libraries(sddmthemeinstaller
     KF6::CoreAddons
     KF6::ConfigCore
     KF6::WidgetsAddons)
-install(TARGETS sddmthemeinstaller ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS sddmthemeinstaller ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(src)
 install(FILES sddmtheme.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
