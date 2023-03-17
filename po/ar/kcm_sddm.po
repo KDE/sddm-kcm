@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-16 02:20+0000\n"
-"PO-Revision-Date: 2023-02-16 12:41+0400\n"
+"PO-Revision-Date: 2023-03-16 11:33+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -204,13 +204,7 @@ msgstr ""
 "سيؤدي هذا إلى جعل شاشة ولوج SDDM تعكس تخصيصاتك لإعدادات البلازما التالية:"
 
 #: src/package/contents/ui/main.qml:142
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -218,10 +212,10 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>تشكيلة الألوان</item><item>سمة المؤشر</item><item>الخط </"
-"item><item>تصيير الخط</item><item>تفضيلات قفل الأرقام</item><item>سمة "
-"بلازما</item><item>تحجيم الخطوط لكل بوصة</item><item>ضبط الشاشة (ويلاند "
-"فقط)</item></list></para>"
+"<para><list><item>تشكيلة الألوان</item><item>سمة المؤشر</item><item>حجم "
+"المؤشر</tem><item>الخط </item><item>تصيير الخط</item><item>تفضيلات قفل "
+"الأرقام</item><item>سمة بلازما</item><item>تحجيم الخطوط لكل بوصة</"
+"item><item>ضبط الشاشة (ويلاند فقط)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:143
 #, kde-format
