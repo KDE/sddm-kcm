@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-16 02:20+0000\n"
-"PO-Revision-Date: 2023-02-07 15:02+0200\n"
+"PO-Revision-Date: 2023-03-17 14:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -207,13 +207,7 @@ msgstr ""
 "таких вказаних вами параметрів Плазми:"
 
 #: src/package/contents/ui/main.qml:142
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -222,9 +216,10 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>схему кольорів,</item><item>тему курсорів,</"
-"item><item>шрифт,</item><item>обробку шрифтів,</item><item>налаштування "
-"NumLock,</item><item>тему Плазми,</item><item>масштабування роздільності,</"
-"item><item>налаштування екрана (лише Wayland)</item></list></para>"
+"item><item>розмір курсора,</item><item>шрифт,</item><item>обробку шрифтів,</"
+"item><item>налаштування NumLock,</item><item>тему Плазми,</"
+"item><item>масштабування роздільності,</item><item>налаштування екрана (лише "
+"Wayland)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:143
 #, kde-format
