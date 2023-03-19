@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-16 02:20+0000\n"
-"PO-Revision-Date: 2023-02-07 23:21+0900\n"
+"PO-Revision-Date: 2023-03-19 09:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -202,13 +202,7 @@ msgid ""
 msgstr "這將會使 SDDM 登入畫面反映您對以下 Plasma 設定的自訂："
 
 #: src/package/contents/ui/main.qml:142
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -216,10 +210,10 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>配色方案、</item><item>游標主題、</item><item>字型、</"
-"item><item>字型繪製、</item><item>NumLock 偏好、</item><item>Plasma 主題、</"
-"item><item>縮放 DPI、</item><item>螢幕配置 (只支援 Wayland)</item></list></"
-"para>"
+"<para><list><item>配色方案、</item><item>游標主題、</item><item>游標大小、</"
+"item><item>字型、</item><item>字型繪製、</item><item>NumLock 偏好、</"
+"item><item>Plasma 主題、</item><item>縮放 DPI、</item><item>螢幕配置 (只支援 "
+"Wayland)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:143
 #, kde-format
