@@ -8,12 +8,12 @@
 
 #include "sddmsettings.h"
 #include "themesmodel.h"
-#include <KQuickAddons/ManagedConfigModule>
+#include <KQuickManagedConfigModule>
 class ThemeConfig;
 class AdvancedConfig;
 class SddmData;
 
-class SddmKcm : public KQuickAddons::ManagedConfigModule
+class SddmKcm : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(SddmSettings *sddmSettings READ sddmSettings CONSTANT)

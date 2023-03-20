@@ -29,7 +29,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(KCMSddmFactory, "kcm_sddm.json", registerPlugin<SddmKcm>(); registerPlugin<SddmData>();)
 
 SddmKcm::SddmKcm(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
+    : KQuickManagedConfigModule(parent, metaData, args)
     , m_data(new SddmData(this))
     , m_themesModel(new ThemesModel(this))
 {
@@ -219,8 +219,7 @@ void SddmKcm::synchronizeSettings()
 
     if (!plasmaFont.isEmpty()) {
         args[QStringLiteral("kde_settings.conf/Theme/Font")] = plasmaFont;
-    }
-    else {
+    } else {
         qDebug() << "Cannot find Plasma font value.";
     }
 

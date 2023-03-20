@@ -13,7 +13,6 @@ Dependencies:
     'frameworks/kio': '@latest-kf6'
     'frameworks/karchive': '@latest-kf6'
     'frameworks/knewstuff': '@latest-kf6'
-    'frameworks/kdeclarative': '@latest-kf6'
     'frameworks/kcmutils': '@latest-kf6'
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD']
