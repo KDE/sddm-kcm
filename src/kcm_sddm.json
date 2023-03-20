@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_sddm",
         "Description": "Configure Login Manager",
@@ -85,10 +84,7 @@
         "Name[uk]": "Вікно входу (SDDM)",
         "Name[x-test]": "xxLogin Screen (SDDM)xx",
         "Name[zh_CN]": "登录屏幕 (SDDM)",
-        "Name[zh_TW]": "登入畫面（SDDM）",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_TW]": "登入畫面（SDDM）"
     },
     "X-KDE-Keywords": "sddm,display manager,themes,login theme,login screen,login skin,login visual,login look,logout,enter,authentication screen,sync settings,synchronize settings,session,default session,default user,user uid,login as,authenticate as,command to shutdown,command to restart",
     "X-KDE-Keywords[az]": "sddm,display manager,themes,login theme,login screen,login skin,login visual,login look,logout,enter,authentication screen,sync settings,synchronize settings,session,default session,default user,user uid,login as,authenticate as,command to shutdown,command to restart,ekran,mövzular,giriş mövzusu,giriş ekranı,giriş örtüyü,giriş görünüşü,giriş kilidi,çıxış,kimlikdoğrulaması ekranı,eyniləşdirmə ayarları,oturumlar,ilkin oturum,ilkin istifadəçi,istifadəçi kimliyi,belə daxil ol,bu kimlikldaxil ol,söndürmə əmri,yenidən başlatma əmri",
@@ -114,7 +110,6 @@
     "X-KDE-Keywords[uk]": "sddm,display manager,themes,login theme,login screen,login skin,login visual,login look,logout,enter,authentication screen,sync settings,synchronize settings,session,default session,default user,user uid,login as,authenticate as,command to shutdown,command to restart,есдедеем,керування дисплеєм,теми,тема входу,екран входу,оболонка входу,шкірка входу,візуальний вхід,вигляд входу,вихід,вхід,вікно розпізнавання,вікно автентифікації,параметри синхронізації,сеанс,типовий сеанс,типовий користувач,ідентифікатор користувача,вхід від імені,розпізнавання від імені,автентифікація від імені,команда для вимикання,команда для перезапуску",
     "X-KDE-Keywords[x-test]": "xxsddmxx,xxdisplay managerxx,xxthemesxx,xxlogin themexx,xxlogin screenxx,xxlogin skinxx,xxlogin visualxx,xxlogin lookxx,xxlogoutxx,xxenterxx,xxauthentication screenxx,xxsync settingsxx,xxsynchronize settingsxx,xxsessionxx,xxdefault sessionxx,xxdefault userxx,xxuser uidxx,xxlogin asxx,xxauthenticate asxx,xxcommand to shutdownxx,xxcommand to restartxx",
     "X-KDE-Keywords[zh_CN]": "sddm,display manager,themes,login theme,login screen,login skin,login visual,login look,logout,enter,authentication screen,sync settings,synchronize settings,session,default session,default user,user uid,login as,authenticate as,command to shutdown,command to restart,显示管理器,主题,登录,登录主题,登录屏幕,登录画面,登录界面,登录皮肤,登录视觉效果,登录外观,注销,进入,身份验证屏幕,同步设置,会话,会话类型,默认会话,默认用户,用户 uid,登录身份,认证身份,关机命令,重启命令",
-    "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "session",
     "X-KDE-Weight": 10
 }
