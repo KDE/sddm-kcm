@@ -19,32 +19,30 @@ import org.kde.private.kcms.sddm 1.0
 
 KCM.GridViewKCM {
     id: root
-    actions {
-        main: Kirigami.Action {
+    actions: [
+        Kirigami.Action {
             text: i18nc("@action:button", "Behavior…")
             icon.name: "settings-configure"
             onTriggered: { kcm.push("Advanced.qml") }
-        }
-        contextualActions: [
-            Kirigami.Action {
-                text: i18nc("@action:button", "Apply Plasma Settings…")
-                icon.name: "plasma"
-                onTriggered: syncSheet.open()
-            },
-            Kirigami.Action {
-                text: i18nc("@action:button", "Install From File…")
-                icon.name: "document-import"
-                onTriggered: themeDialog.open()
-            },
-            NewStuff.Action {
-                text: i18nc("@action:button as in, \"get new SDDM themes\"", "Get New…")
-                configFile: "sddmtheme.knsrc"
-                onEntryEvent: function(entry, event) {
-                    kcm.themesModel.populate();
-                }
+        },
+        Kirigami.Action {
+            text: i18nc("@action:button", "Apply Plasma Settings…")
+            icon.name: "plasma"
+            onTriggered: syncSheet.open()
+        },
+        Kirigami.Action {
+            text: i18nc("@action:button", "Install From File…")
+            icon.name: "document-import"
+            onTriggered: themeDialog.open()
+        },
+        NewStuff.Action {
+            text: i18nc("@action:button as in, \"get new SDDM themes\"", "Get New…")
+            configFile: "sddmtheme.knsrc"
+            onEntryEvent: function(entry, event) {
+                kcm.themesModel.populate();
             }
-        ]
-    }
+        }
+    ]
     header: Kirigami.InlineMessage {
         id: errorMessage
         type: Kirigami.MessageType.Error
