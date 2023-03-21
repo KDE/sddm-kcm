@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-16 02:20+0000\n"
+"POT-Creation-Date: 2023-03-21 02:30+0000\n"
 "PO-Revision-Date: 2023-01-22 17:02+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -154,7 +154,7 @@ msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Správanie"
 
-#: src/package/contents/ui/main.qml:30
+#: src/package/contents/ui/main.qml:29
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Apply Plasma Settings"
@@ -162,7 +162,7 @@ msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Použiť Plasma nastavenia"
 
-#: src/package/contents/ui/main.qml:35
+#: src/package/contents/ui/main.qml:34
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Install From File..."
@@ -170,37 +170,37 @@ msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Nainštalovať zo súboru..."
 
-#: src/package/contents/ui/main.qml:40
+#: src/package/contents/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:91
+#: src/package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Zobraziť podrobnosti"
 
-#: src/package/contents/ui/main.qml:106
+#: src/package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Zmeniť Pozadie"
 
-#: src/package/contents/ui/main.qml:115
+#: src/package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Vymazať"
 
-#: src/package/contents/ui/main.qml:135
+#: src/package/contents/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Použiť Plasma nastavenia"
 
-#: src/package/contents/ui/main.qml:141
+#: src/package/contents/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -209,7 +209,7 @@ msgstr ""
 "Vďaka tomuto bude prihlasovacia obrazovka SDDM odrážať vaše zmeny Plasma "
 "nastavení:"
 
-#: src/package/contents/ui/main.qml:142
+#: src/package/contents/ui/main.qml:140
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -229,7 +229,7 @@ msgstr ""
 "nastavenia,</item><item>Plasma téma,</item><item>Mierka DPI,</"
 "item><item>Nastavenie  obrazovky (iba Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:143
+#: src/package/contents/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -238,30 +238,30 @@ msgstr ""
 "Súbory s témami musia byť nainštalované globálne, aby sa prejavili na "
 "prihlasovacej obrazovke SDDM."
 
-#: src/package/contents/ui/main.qml:150
+#: src/package/contents/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Použiť"
 
-#: src/package/contents/ui/main.qml:155
+#: src/package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Obnoviť na predvolené nastavenia"
 
-#: src/package/contents/ui/main.qml:165
+#: src/package/contents/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Zmeniť pozadie"
 
-#: src/package/contents/ui/main.qml:174
+#: src/package/contents/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr "Nie je vybratý žiadny obrázok"
 
-#: src/package/contents/ui/main.qml:200
+#: src/package/contents/ui/main.qml:198
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Load From File..."
@@ -269,13 +269,13 @@ msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Načítať zo súboru..."
 
-#: src/package/contents/ui/main.qml:205
+#: src/package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Vymazať obrázok"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:278
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

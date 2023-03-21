@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-16 02:20+0000\n"
+"POT-Creation-Date: 2023-03-21 02:30+0000\n"
 "PO-Revision-Date: 2015-01-08 21:37+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -151,56 +151,56 @@ msgctxt "@action:button"
 msgid "Behavior…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:30
+#: src/package/contents/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:35
+#: src/package/contents/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:40
+#: src/package/contents/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:91
+#: src/package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:106
+#: src/package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:115
+#: src/package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:135
+#: src/package/contents/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:141
+#: src/package/contents/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:142
+#: src/package/contents/ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -210,49 +210,49 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:143
+#: src/package/contents/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
 
-#: src/package/contents/ui/main.qml:150
+#: src/package/contents/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:155
+#: src/package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:165
+#: src/package/contents/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:174
+#: src/package/contents/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:200
+#: src/package/contents/ui/main.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:205
+#: src/package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr ""
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:278
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

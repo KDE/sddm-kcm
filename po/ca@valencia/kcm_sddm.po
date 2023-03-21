@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-16 02:20+0000\n"
+"POT-Creation-Date: 2023-03-21 02:30+0000\n"
 "PO-Revision-Date: 2023-03-16 10:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -157,49 +157,49 @@ msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Comportament…"
 
-#: src/package/contents/ui/main.qml:30
+#: src/package/contents/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Aplica la configuració de Plasma…"
 
-#: src/package/contents/ui/main.qml:35
+#: src/package/contents/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Instal·la des d'un fitxer…"
 
-#: src/package/contents/ui/main.qml:40
+#: src/package/contents/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Obtín nous…"
 
-#: src/package/contents/ui/main.qml:91
+#: src/package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Visualitza els detalls"
 
-#: src/package/contents/ui/main.qml:106
+#: src/package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Canvia el fons"
 
-#: src/package/contents/ui/main.qml:115
+#: src/package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Suprimix"
 
-#: src/package/contents/ui/main.qml:135
+#: src/package/contents/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Aplica la configuració de Plasma"
 
-#: src/package/contents/ui/main.qml:141
+#: src/package/contents/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -208,7 +208,7 @@ msgstr ""
 "Farà que la pantalla SDDM d'inici de sessió assumisca la personalització de "
 "la configuració següent de Plasma:"
 
-#: src/package/contents/ui/main.qml:142
+#: src/package/contents/ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -224,7 +224,7 @@ msgstr ""
 "item><item>Escalat dels PPP,</item><item>Configureu la pantalla (només "
 "Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:143
+#: src/package/contents/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -233,42 +233,42 @@ msgstr ""
 "Cal tindre en compte que els fitxers de tema s'han d'instal·lar globalment "
 "perquè els assumisca la pantalla SDDM d'inici de sessió."
 
-#: src/package/contents/ui/main.qml:150
+#: src/package/contents/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Aplica"
 
-#: src/package/contents/ui/main.qml:155
+#: src/package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Restaura la configuració predeterminada"
 
-#: src/package/contents/ui/main.qml:165
+#: src/package/contents/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Canvia el fons"
 
-#: src/package/contents/ui/main.qml:174
+#: src/package/contents/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr "No s'ha seleccionat cap imatge"
 
-#: src/package/contents/ui/main.qml:200
+#: src/package/contents/ui/main.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Carrega des d'un fitxer…"
 
-#: src/package/contents/ui/main.qml:205
+#: src/package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Neteja la imatge"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:278
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

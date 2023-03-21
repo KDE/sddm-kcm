@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-16 02:20+0000\n"
+"POT-Creation-Date: 2023-03-21 02:30+0000\n"
 "PO-Revision-Date: 2023-03-16 11:33+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -153,49 +153,49 @@ msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "السّلوك…"
 
-#: src/package/contents/ui/main.qml:30
+#: src/package/contents/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "طبّق إعدادات بلازما…"
 
-#: src/package/contents/ui/main.qml:35
+#: src/package/contents/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "ثبت من ملف…"
 
-#: src/package/contents/ui/main.qml:40
+#: src/package/contents/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "احصل على جديدة…"
 
-#: src/package/contents/ui/main.qml:91
+#: src/package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "تفاصيل العرض"
 
-#: src/package/contents/ui/main.qml:106
+#: src/package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "غير الخلفيّة"
 
-#: src/package/contents/ui/main.qml:115
+#: src/package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "احذف"
 
-#: src/package/contents/ui/main.qml:135
+#: src/package/contents/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "طبّق إعدادات بلازما"
 
-#: src/package/contents/ui/main.qml:141
+#: src/package/contents/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -203,7 +203,7 @@ msgid ""
 msgstr ""
 "سيؤدي هذا إلى جعل شاشة ولوج SDDM تعكس تخصيصاتك لإعدادات البلازما التالية:"
 
-#: src/package/contents/ui/main.qml:142
+#: src/package/contents/ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -217,7 +217,7 @@ msgstr ""
 "الأرقام</item><item>سمة بلازما</item><item>تحجيم الخطوط لكل بوصة</"
 "item><item>ضبط الشاشة (ويلاند فقط)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:143
+#: src/package/contents/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -226,42 +226,42 @@ msgstr ""
 "يرجى ملاحظة أنه يجب تثبيت ملفات السمات بشكل عام حتى يظهر ذلك على شاشة ولوج "
 "SDDM."
 
-#: src/package/contents/ui/main.qml:150
+#: src/package/contents/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "طبّق"
 
-#: src/package/contents/ui/main.qml:155
+#: src/package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "أعد ضبط الإعدادات المبدئية"
 
-#: src/package/contents/ui/main.qml:165
+#: src/package/contents/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "غير الخلفيّة"
 
-#: src/package/contents/ui/main.qml:174
+#: src/package/contents/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr "لم تختر صورة"
 
-#: src/package/contents/ui/main.qml:200
+#: src/package/contents/ui/main.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "حمّل من ملفّ…"
 
-#: src/package/contents/ui/main.qml:205
+#: src/package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "امحُ الصّورة"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:278
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
