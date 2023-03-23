@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-21 02:30+0000\n"
-"PO-Revision-Date: 2023-02-08 12:32+0100\n"
+"PO-Revision-Date: 2023-03-22 17:03+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -204,13 +204,7 @@ msgstr ""
 "sequente preferentias de Plasma:"
 
 #: src/package/contents/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -219,10 +213,10 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>Schema de color,</item><item>Thema de cursor,</"
-"item><item>Font,</item><item>Rendition de font,</item><item>Preferentia de "
-"NumLock,</item><item>Thema de Plasma,</item><item>Scalar DPI</"
-"item><item>Configuration de schermo (solmente de Wayland)</item></list></"
-"para>"
+"item><item>Grandor de cursor,</item><item>Font,</item><item>Rendition de "
+"font,</item><item>Preferentia de NumLock,</item><item>Thema de Plasma,</"
+"item><item>Scalar DPI</item><item>Configuration de schermo (solmente de "
+"Wayland)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:141
 #, kde-format
