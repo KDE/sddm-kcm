@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-21 02:30+0000\n"
-"PO-Revision-Date: 2023-02-27 19:34+0000\n"
+"PO-Revision-Date: 2023-03-26 14:24+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -203,13 +203,7 @@ msgstr ""
 "following Plasma settings:"
 
 #: src/package/contents/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -217,10 +211,10 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Colour scheme,</item><item>Cursor theme,</item><item>Font,"
-"</item><item>Font rendering,</item><item>NumLock preference,</"
-"item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen "
-"configuration (Wayland only)</item></list></para>"
+"<para><list><item>Colour scheme,</item><item>Cursor theme,</"
+"item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
+"item><item>NumLock preference,</item><item>Plasma theme,</item><item>Scaling "
+"DPI,</item><item>Screen configuration (Wayland only)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:141
 #, kde-format
