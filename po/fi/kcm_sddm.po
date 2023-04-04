@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-21 02:30+0000\n"
-"PO-Revision-Date: 2023-03-06 20:06+0200\n"
+"PO-Revision-Date: 2023-04-02 17:12+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -205,13 +205,7 @@ msgstr ""
 "Tämä saa SDDM-kirjautumisruudun seuraamaan seuraavien Plasma-asetusten tilaa:"
 
 #: src/package/contents/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -219,9 +213,10 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><li>väriteema</li><li>osoitinteema</li><li>fontti</li><li>fontin "
-"hahmonnus</li><li>numerolukkoasetus</li><li>Plasma-teema</li> <li>näytön "
-"skaalaus</li><li>näyttöasetukset (vain Wayland)</li></list></para>"
+"<para><list><li>väriteema</li><li>osoitinteema</li><li>osoittimen koko</"
+"li><li>fontti</li><li>fontin hahmonnus</li><li>numerolukkoasetus</"
+"li><li>Plasma-teema</li><li>näytön mittakaava (DPI)</li><li>näyttöasetukset "
+"(vain Wayland)</li></list></para>"
 
 #: src/package/contents/ui/main.qml:141
 #, kde-format
