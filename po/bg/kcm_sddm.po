@@ -272,15 +272,3 @@ msgstr ""
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
 msgstr "%1 (Wayland)"
-
-#~ msgctxt "@action:button"
-#~ msgid "Behavior..."
-#~ msgstr "Поведение…"
-
-#~ msgctxt "@action:button"
-#~ msgid "Apply Plasma Settings..."
-#~ msgstr "Прилагане на настройките на Plasma…"
-
-#~ msgctxt "@action:button"
-#~ msgid "Get New SDDM Themes..."
-#~ msgstr "Изтегляне на нови теми за SDDM..."
