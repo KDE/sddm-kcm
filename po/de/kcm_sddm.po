@@ -1,11 +1,11 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2017, 2018, 2019, 2020, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-21 02:30+0000\n"
-"PO-Revision-Date: 2022-03-13 09:39+0100\n"
+"PO-Revision-Date: 2023-04-03 17:06+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -142,34 +142,28 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, von %2 (%3)"
 
 #: src/package/contents/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Verhalten"
+msgstr "Verhalten …"
 
 #: src/package/contents/ui/main.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Plasma-Einstellungen anwenden"
+msgstr "Plasma-Einstellungen anwenden …"
 
 #: src/package/contents/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Aus Datei installieren ..."
+msgstr "Aus Datei installieren …"
 
 #: src/package/contents/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Neue holen ..."
 
 #: src/package/contents/ui/main.qml:89
 #, kde-format
@@ -203,13 +197,7 @@ msgid ""
 msgstr ""
 
 #: src/package/contents/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -218,9 +206,10 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>Farbschema,</item><item>Zeigerdesign,</"
-"item><item>Schriftarten,</item><item>Schrift-Rendering,</item><item>Zahlen-"
-"Feststelltaste,</item><item>Plasma-Design</item><item>und DPI-Skalierung</"
-"item> <item>Anzeige-Einstellungen (nur Wayland)</item></list></para>"
+"item><item>Zeigergröße,</item><item>Schriftarten,</item><item>Schrift-"
+"Rendering,</item><item>Zahlen-Feststelltaste,</item><item>Plasma-Design</"
+"item><item>und DPI-Skalierung</item> <item>Anzeige-Einstellungen (nur "
+"Wayland)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:141
 #, fuzzy, kde-format
@@ -258,12 +247,10 @@ msgid "No image selected"
 msgstr "Es ist kein Bild ausgewählt"
 
 #: src/package/contents/ui/main.qml:198
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Aus Datei laden ..."
+msgstr "Aus Datei laden …"
 
 #: src/package/contents/ui/main.qml:203
 #, kde-format
