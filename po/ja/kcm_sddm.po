@@ -1,13 +1,14 @@
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
-# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
+# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2020-01-17 19:39+0900\n"
-"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"PO-Revision-Date: 2023-04-07 23:34-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -16,61 +17,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 19.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
-msgstr ""
+msgstr "無効なテーマパッケージ"
 
 #: sddmauthhelper.cpp:377
 msgid "Could not open file"
-msgstr ""
+msgstr "ファイルを開けませんでした"
 
 #: sddmauthhelper.cpp:408
 msgid "Could not decompress archive"
-msgstr ""
+msgstr "アーカイブを展開できませんでした"
 
 #: sddmthemeinstaller.cpp:29
 #, kde-format
 msgid "SDDM theme installer"
-msgstr ""
+msgstr "SDDM テーマインストーラ"
 
 #: sddmthemeinstaller.cpp:36
 #, kde-format
 msgid "Install a theme."
-msgstr ""
+msgstr "テーマをインストールします。"
 
 #: sddmthemeinstaller.cpp:37
 #, kde-format
 msgid "Uninstall a theme."
-msgstr ""
+msgstr "テーマをアンインストールします。"
 
 #: sddmthemeinstaller.cpp:39
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
 msgstr ""
+"インストールするテーマです。存在するアーカイブファイルでなければなりません。"
 
 #: sddmthemeinstaller.cpp:65
 #, kde-format
 msgid "Unable to install theme"
-msgstr ""
+msgstr "テーマをインストールできません"
 
 #: src/package/contents/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
-msgstr ""
+msgstr "挙動"
 
 #: src/package/contents/ui/Advanced.qml:22
-#, fuzzy, kde-format
-#| msgid "Automatically log in:"
+#, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "自動的にログイン:"
 
 #: src/package/contents/ui/Advanced.qml:25
-#, fuzzy, kde-format
-#| msgid "as user:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
@@ -78,13 +78,12 @@ msgid "as user:"
 msgstr "使用するユーザ:"
 
 #: src/package/contents/ui/Advanced.qml:71
-#, fuzzy, kde-format
-#| msgid "with session:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr "起動するセッション:"
+msgstr "起動するセッション"
 
 #: src/package/contents/ui/Advanced.qml:103
 #, kde-kuit-format
@@ -93,43 +92,40 @@ msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
 "will ask you to unlock it every time you log in."
 msgstr ""
+"自動ログインを使用する場合、KDE ウォレットは自動的にアンロックされません。し"
+"たがって、ログインするたびに手動でのアンロックを要求されます。"
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr ""
+msgstr "KDE ウォレット設定を開く"
 
 #: src/package/contents/ui/Advanced.qml:114
-#, fuzzy, kde-format
-#| msgid "Log in again immediately after logging off"
+#, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "ログオフ後に自動的に再度ログインする"
 
 #: src/package/contents/ui/Advanced.qml:127
-#, fuzzy, kde-format
-#| msgid "Minimum user UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "最小 ユーザ UID:"
 
 #: src/package/contents/ui/Advanced.qml:139
-#, fuzzy, kde-format
-#| msgid "Maximum user UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "最大 ユーザ UID:"
 
 #: src/package/contents/ui/Advanced.qml:154
-#, fuzzy, kde-format
-#| msgid "Halt command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "終了コマンド:"
 
 #: src/package/contents/ui/Advanced.qml:185
-#, fuzzy, kde-format
-#| msgid "Reboot command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "再起動コマンド:"
@@ -138,7 +134,7 @@ msgstr "再起動コマンド:"
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: src/package/contents/ui/DetailsDialog.qml:55
 #, kde-format
@@ -150,65 +146,62 @@ msgstr "プレビューは利用できません"
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
-msgstr ""
+msgstr "%1, 作者: %2 (%3)"
 
 #: src/package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr ""
+msgstr "詳細を表示"
 
 #: src/package/contents/ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
-msgstr "背景:"
+msgstr "背景を変更する"
 
 #: src/package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: src/package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior..."
-msgstr ""
+msgstr "挙動..."
 
 #: src/package/contents/ui/main.qml:110
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings..."
-msgstr ""
+msgstr "Plasma 設定を適用..."
 
 #: src/package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Load from file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File..."
-msgstr "ファイルから読み込み..."
+msgstr "ファイルからインストール..."
 
 #: src/package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New SDDM Themes..."
-msgstr "テーマ"
+msgstr "新しい SDDM テーマを取得..."
 
 #: src/package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
-msgstr ""
+msgstr "Plasma 設定を適用"
 
 #: src/package/contents/ui/main.qml:144
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
-msgstr ""
+msgstr "SDDM のログイン画面に以下の Plasma 設定への変更を反映します:"
 
 #: src/package/contents/ui/main.qml:145
 #, kde-kuit-format
@@ -219,53 +212,51 @@ msgid ""
 "item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
+"<para><list><item>カラースキーム</item><item>カーソルテーマ</item><item>フォ"
+"ント</item><item>フォントのレンダリング</item><item>NumLock 設定</"
+"item><item>Plasma テーマ</item><item>DPI スケーリング</item><item>スクリーン"
+"の設定 (Wayland のみ)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please note that theme files must be installed globally for settings "
-#| "synchronization to work."
+#, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
-"設定の同期が機能するにはテーマがグローバルにインストールされている必要がある"
-"ことにご注意ください。"
+"設定の同期を機能させるには、テーマがグローバルにインストールされている必要が"
+"あることにご注意ください。"
 
 #: src/package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "適用"
 
 #: src/package/contents/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr ""
+msgstr "標準設定に戻す"
 
 #: src/package/contents/ui/main.qml:168
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
-msgstr "背景:"
+msgstr "背景を変更"
 
 #: src/package/contents/ui/main.qml:177
 #, kde-format
 msgid "No image selected"
-msgstr ""
+msgstr "画像が選択されていません"
 
 #: src/package/contents/ui/main.qml:203
-#, fuzzy, kde-format
-#| msgid "Load from file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File..."
 msgstr "ファイルから読み込み..."
 
 #: src/package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Clear Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "画像をクリア"
@@ -274,9 +265,11 @@ msgstr "画像をクリア"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"ユーザ 'sddm' が存在しないため、続行できません。SDDM のインストール状態を確認"
+"してください。"
 
 #: src/sessionmodel.cpp:84
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
-msgstr ""
+msgstr "%1 (Wayland)"
