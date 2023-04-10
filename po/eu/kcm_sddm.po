@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-21 02:30+0000\n"
-"PO-Revision-Date: 2023-02-07 20:16+0100\n"
+"PO-Revision-Date: 2023-04-09 20:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -208,13 +208,7 @@ msgstr ""
 "islatzea eragingo du:"
 
 #: src/package/contents/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -223,10 +217,10 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>Kolore-antolaera,</item><item>kurtsore-gaia,</"
-"item><item>letra-tipoa,</item><item>letra-tipo errendatzea,</"
-"item><item>ZkGiltz hobespenak,</item><item>Plasma gaia,</item> <item>DPI "
-"eskalatzea,</item><item>Pantaila konfiguratzea (Wayland bakarrik)</item></"
-"list></para>"
+"item><item>Kurtsore neurria,</item><item>letra-tipoa,</item><item>letra-"
+"tipoa errendatzea,</item><item>ZkGiltz hobespenak,</item><item>Plasma gaia,</"
+"item><item>DPI eskalatzea,</item><item>Pantaila konfiguratzea (Wayland "
+"bakarrik)</item></list></para>"
 
 #: src/package/contents/ui/main.qml:141
 #, kde-format
