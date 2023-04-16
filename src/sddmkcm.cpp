@@ -287,6 +287,8 @@ void SddmKcm::resetSyncronizedSettings()
 
     args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = QVariant();
 
+    args[QStringLiteral("kde_settings.conf/Theme/CursorSize")] = QVariant();
+
     args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = QVariant();
 
     args[QStringLiteral("kde_settings.conf/General/Numlock")] = QVariant();
