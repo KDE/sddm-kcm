@@ -137,7 +137,7 @@ msgstr "%1 (%2)"
 #: src/package/contents/ui/DetailsDialog.qml:55
 #, kde-format
 msgid "No preview available"
-msgstr "Nulle vista preliminari disponibile"
+msgstr "Nulle vista preliminar disponibile"
 
 #: src/package/contents/ui/DetailsDialog.qml:58
 #, kde-format
