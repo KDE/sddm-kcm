@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-04-21 02:52+0000\n"
 "PO-Revision-Date: 2022-08-10 22:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -261,7 +261,7 @@ msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "امحُ الصّورة"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:272
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:278
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

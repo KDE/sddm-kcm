@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-04-21 02:52+0000\n"
 "PO-Revision-Date: 2023-04-16 12:34\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -255,7 +255,7 @@ msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "清除图片"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:272
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:278
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "无法继续，用户“sddm”不存在。请检查本系统的 SDDM 安装状态是否正确。"
