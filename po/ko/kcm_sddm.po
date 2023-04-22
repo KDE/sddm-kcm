@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-21 02:30+0000\n"
-"PO-Revision-Date: 2023-02-28 22:44+0100\n"
+"PO-Revision-Date: 2023-04-22 00:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -201,13 +201,7 @@ msgid ""
 msgstr "다음 Plasma 설정을 SDDM 로그인 화면에도 적용합니다:"
 
 #: src/package/contents/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -215,10 +209,10 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>색 구성표,</item><item>커서 테마,</item><item>글꼴,</"
-"item><item>글꼴 렌더링,</item><item>NumLock 설정,</item><item>Plasma 테마,</"
-"item><item>DPI 크기 조정,</item><item>화면 설정(Wayland만).</item></list></"
-"para>"
+"<para><list><item>색 구성표,</item><item>커서 테마,</item><item>커서 크기,</"
+"item><item>글꼴,</item><item>글꼴 렌더링,</item><item>NumLock 설정,</"
+"item><item>Plasma 테마,</item><item>DPI 크기 조정,</item><item>화면 설정"
+"(Wayland만).</item></list></para>"
 
 #: src/package/contents/ui/main.qml:141
 #, kde-format
