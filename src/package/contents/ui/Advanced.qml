@@ -160,7 +160,7 @@ Kirigami.Page {
                 readOnly: false
                 onTextChanged: kcm.sddmSettings.haltCommand = text
                 rightActions: [ Kirigami.Action {
-                    iconName: haltField.LayoutMirroring.enabled ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
+                    icon.name: haltField.LayoutMirroring.enabled ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
                     visible: haltField.text.length > 0
                     onTriggered: kcm.sddmSettings.haltCommand = ""
                 }]
@@ -190,7 +190,7 @@ Kirigami.Page {
                 readOnly: false
                 onTextChanged: kcm.sddmSettings.rebootCommand = text
                 rightActions: [ Kirigami.Action {
-                    iconName: rebootField.LayoutMirroring.enabled ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
+                    icon.name: rebootField.LayoutMirroring.enabled ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
                     visible: rebootField.text.length > 0
                     onTriggered: kcm.sddmSettings.rebootCommand = ""
                 }]

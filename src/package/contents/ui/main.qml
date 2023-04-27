@@ -85,7 +85,7 @@ KCM.GridViewKCM {
         }
         actions: [
             Kirigami.Action {
-                iconName: "documentinfo"
+                icon.name: "documentinfo"
                 tooltip: i18nc("@info:tooltip", "View details")
                 onTriggered: {
                     detailsDialog.themeName = model.display
@@ -100,7 +100,7 @@ KCM.GridViewKCM {
                 }
             },
             Kirigami.Action {
-                iconName: "games-config-background"
+                icon.name: "games-config-background"
                 tooltip: i18nc("@info:tooltip", "Change Background")
                 onTriggered: {
                     backgroundSheet.modelIndex = view.model.index(index, 0)
@@ -109,7 +109,7 @@ KCM.GridViewKCM {
                 }
             },
             Kirigami.Action {
-                iconName: "edit-delete"
+                icon.name: "edit-delete"
                 tooltip: i18nc("@info:tooltip", "Delete")
                 onTriggered: kcm.removeTheme(view.model.index(index, 0))
                 enabled: model.deletable
