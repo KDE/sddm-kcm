@@ -5,7 +5,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Dialogs 1.3
+import QtQuick.Dialogs 6.3
 import QtQuick.Layouts 1.15
 
 import org.kde.kcm 1.5 as KCM
