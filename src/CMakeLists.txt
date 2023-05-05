@@ -17,9 +17,8 @@ set(SDDM_KCM_SRCS
 )
 
 
-add_library(kcm_sddm MODULE ${SDDM_KCM_SRCS})
+kcmutils_add_qml_kcm(kcm_sddm SOURCES ${SDDM_KCM_SRCS})
 
-kcmutils_generate_desktop_file(kcm_sddm)
 kconfig_add_kcfg_files(kcm_sddm sddmsettings.kcfgc GENERATE_MOC)
 
 target_compile_definitions(kcm_sddm PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
@@ -30,8 +29,3 @@ target_link_libraries(kcm_sddm
     KF6::KCMUtils
     KF6::KIOGui
 )
-
-kpackage_install_package(package kcm_sddm kcms)
-
-
-install(TARGETS kcm_sddm DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)

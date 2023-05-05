@@ -77,7 +77,7 @@ KCM.GridViewKCM {
         thumbnailAvailable: true
         thumbnail: Image {
             anchors.fill: parent
-            source: model.path + model.preview
+            source: model.preview
             sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio,
                                 delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
             fillMode: Image.PreserveAspectFit
@@ -89,7 +89,7 @@ KCM.GridViewKCM {
                 tooltip: i18nc("@info:tooltip", "View details")
                 onTriggered: {
                     detailsDialog.themeName = model.display
-                    detailsDialog.previewPath = model.path + model.preview
+                    detailsDialog.previewPath = model.preview
                     detailsDialog.authorName = model.author
                     detailsDialog.description = model.description
                     detailsDialog.license = model.license

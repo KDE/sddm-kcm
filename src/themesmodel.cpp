@@ -87,7 +87,7 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
     case ThemesModel::ThemeApiRole:
         return metadata.themeapi();
     case ThemesModel::PreviewRole:
-        return metadata.screenshot();
+        return QUrl::fromLocalFile(metadata.path() + metadata.screenshot());
     case ThemesModel::PathRole:
         return metadata.path();
     case ThemesModel::ConfigFileRole:
