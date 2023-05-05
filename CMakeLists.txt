@@ -25,14 +25,11 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
     I18n
-    XmlGui
     Auth
-    ConfigWidgets
     KIO
     Archive
     NewStuff
     KCMUtils
-    Package
 )
 
 ecm_set_disabled_deprecation_versions(QT 6.4.0
@@ -60,7 +57,8 @@ target_link_libraries(sddmthemeinstaller
     KF6::AuthCore
     KF6::CoreAddons
     KF6::ConfigCore
-    KF6::WidgetsAddons)
+    KF6::WidgetsAddons
+)
 install(TARGETS sddmthemeinstaller ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(src)

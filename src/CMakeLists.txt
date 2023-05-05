@@ -6,7 +6,9 @@ set(WAYLAND_SESSIONS_DIR             "${CMAKE_INSTALL_PREFIX}/share/wayland-sess
 
 configure_file(config.h.in config.h IMMEDIATE @ONLY)
 
-set(SDDM_KCM_SRCS
+kcmutils_add_qml_kcm(kcm_sddm)
+
+target_sources(kcm_sddm PRIVATE
     sddmkcm.cpp sddmkcm.h
     themesmodel.cpp themesmodel.h
     thememetadata.cpp thememetadata.h
@@ -15,14 +17,9 @@ set(SDDM_KCM_SRCS
     sddmdata.cpp sddmdata.h
     sddmsettingsbase.cpp sddmsettingsbase.h
 )
-
-
-kcmutils_add_qml_kcm(kcm_sddm SOURCES ${SDDM_KCM_SRCS})
-
 kconfig_add_kcfg_files(kcm_sddm sddmsettings.kcfgc GENERATE_MOC)
 
 target_compile_definitions(kcm_sddm PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
-
 target_link_libraries(kcm_sddm
     KF6::I18n
     KF6::AuthCore
