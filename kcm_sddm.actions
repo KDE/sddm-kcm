@@ -1,6 +1,7 @@
 [Domain]
 Name=SDDM
 Name[ar]=/SDDM
+Name[ast]=SDDM
 Name[az]=SDDM
 Name[bg]=SDDM
 Name[bs]=SDDM
