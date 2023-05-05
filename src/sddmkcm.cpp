@@ -28,8 +28,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMSddmFactory, "kcm_sddm.json", registerPlugin<SddmKcm>(); registerPlugin<SddmData>();)
 
-SddmKcm::SddmKcm(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickManagedConfigModule(parent, metaData, args)
+SddmKcm::SddmKcm(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickManagedConfigModule(parent, metaData)
     , m_data(new SddmData(this))
     , m_themesModel(new ThemesModel(this))
 {

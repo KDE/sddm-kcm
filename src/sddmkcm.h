@@ -19,7 +19,7 @@ class SddmKcm : public KQuickManagedConfigModule
     Q_PROPERTY(SddmSettings *sddmSettings READ sddmSettings CONSTANT)
     Q_PROPERTY(ThemesModel *themesModel READ themesModel CONSTANT)
 public:
-    explicit SddmKcm(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    explicit SddmKcm(QObject *parent, const KPluginMetaData &metaData);
     ~SddmKcm() override;
 
     Q_INVOKABLE static QString toLocalFile(const QUrl &url);
