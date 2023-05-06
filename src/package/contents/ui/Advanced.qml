@@ -213,7 +213,6 @@ Kirigami.Page {
         FileDialog {
             id: fileDialog
             property var handler
-            selectExisting: true
             onAccepted: {
                 handler(fileUrl)
             }
