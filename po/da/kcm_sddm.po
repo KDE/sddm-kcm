@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 02:30+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2019-11-22 20:47+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -54,20 +54,31 @@ msgstr "Temaet som skal installeres, skal være en eksisterende arkivfil."
 msgid "Unable to install theme"
 msgstr "Kan ikke installere temaet"
 
-#: src/package/contents/ui/Advanced.qml:17
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#: src/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
 msgstr ""
 
-#: src/package/contents/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:22
 #, fuzzy, kde-format
 #| msgid "Automatically log in:"
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Log ind automatisk:"
 
-#: src/package/contents/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:25
 #, fuzzy, kde-format
 #| msgid "as user:"
 msgctxt ""
@@ -76,7 +87,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "Som bruger:"
 
-#: src/package/contents/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:71
 #, fuzzy, kde-format
 #| msgid "with session:"
 msgctxt ""
@@ -85,7 +96,7 @@ msgctxt ""
 msgid "with session"
 msgstr "med session:"
 
-#: src/package/contents/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -93,122 +104,122 @@ msgid ""
 "will ask you to unlock it every time you log in."
 msgstr ""
 
-#: src/package/contents/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr ""
 
-#: src/package/contents/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:114
 #, fuzzy, kde-format
 #| msgid "Log in again immediately after logging off"
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Log direkte ind igen efter at logge ud"
 
-#: src/package/contents/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:127
 #, fuzzy, kde-format
 #| msgid "Minimum user UID:"
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Minimum bruger-UID:"
 
-#: src/package/contents/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:139
 #, fuzzy, kde-format
 #| msgid "Maximum user UID:"
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Maksimum bruger-UID:"
 
-#: src/package/contents/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:154
 #, fuzzy, kde-format
 #| msgid "Halt command:"
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Sluk-kommando:"
 
-#: src/package/contents/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:185
 #, fuzzy, kde-format
 #| msgid "Reboot command:"
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Genstart-kommando:"
 
-#: src/package/contents/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr ""
 
-#: src/package/contents/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:55
 #, kde-format
 msgid "No preview available"
 msgstr "Ingen forhåndsvisning tilgængelig"
 
-#: src/package/contents/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:58
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:24
+#: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:29
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:34
+#: src/ui/main.qml:34
 #, fuzzy, kde-format
 #| msgid "Install From File..."
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Installér fra fil..."
 
-#: src/package/contents/ui/main.qml:39
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:89
+#: src/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:104
+#: src/ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Background:"
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Baggrund:"
 
-#: src/package/contents/ui/main.qml:113
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:133
+#: src/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:139
+#: src/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:140
+#: src/ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -218,7 +229,7 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:141
+#: src/ui/main.qml:141
 #, fuzzy, kde-format
 #| msgid ""
 #| "Please note that theme files must be installed globally for settings "
@@ -230,54 +241,43 @@ msgstr ""
 "Bemærk at temafiler skal installeres globalt for at synkronisering af "
 "indstillinger virker."
 
-#: src/package/contents/ui/main.qml:148
+#: src/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:153
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:163
+#: src/ui/main.qml:163
 #, fuzzy, kde-format
 #| msgid "Background:"
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Baggrund:"
 
-#: src/package/contents/ui/main.qml:172
+#: src/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:198
+#: src/ui/main.qml:198
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Indlæs fra fil..."
 
-#: src/package/contents/ui/main.qml:203
+#: src/ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "Clear Image"
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Ryd billede"
-
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
-msgid ""
-"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr ""
-
-#: src/sessionmodel.cpp:84
-#, kde-format
-msgctxt "%1 is the name of a session"
-msgid "%1 (Wayland)"
-msgstr "%1 (Wayland)"
 
 #, fuzzy
 #~| msgid "Download New SDDM Themes"

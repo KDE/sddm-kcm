@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 02:30+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2023-03-17 14:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -57,19 +57,32 @@ msgstr "Пакунок теми для встановлення має бути 
 msgid "Unable to install theme"
 msgstr "Не вдалося встановити тему"
 
-#: src/package/contents/ui/Advanced.qml:17
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+"Продовження роботи неможливе. Не існує користувача «sddm». Будь ласка, "
+"перевірте, чи належним чином встановлено SDDM."
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#: src/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
 msgstr "Поведінка"
 
-#: src/package/contents/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:22
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Автоматично увійти:"
 
-#: src/package/contents/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:25
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -77,7 +90,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "як користувач:"
 
-#: src/package/contents/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:71
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -85,7 +98,7 @@ msgctxt ""
 msgid "with session"
 msgstr "із сеансом"
 
-#: src/package/contents/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -96,108 +109,108 @@ msgstr ""
 "автоматичного розблокування вашої Торбинки KDE, тому він проситиме вас "
 "розблокувати Торбинку кожного разу, коли ви входите до системи."
 
-#: src/package/contents/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Відкрити параметри Торбинки KDE"
 
-#: src/package/contents/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:114
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Знову увійти одразу після виходу"
 
-#: src/package/contents/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:127
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Мінімальний UUID:"
 
-#: src/package/contents/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Максимальний UUID:"
 
-#: src/package/contents/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:154
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Команда зупинення роботи:"
 
-#: src/package/contents/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:185
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Команда перезавантаження:"
 
-#: src/package/contents/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/package/contents/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:55
 #, kde-format
 msgid "No preview available"
 msgstr "Попередній перегляд недоступний"
 
-#: src/package/contents/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:58
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
 msgstr "%1, автор — %2 (%3)"
 
-#: src/package/contents/ui/main.qml:24
+#: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Поведінка…"
 
-#: src/package/contents/ui/main.qml:29
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Застосувати параметри Плазми…"
 
-#: src/package/contents/ui/main.qml:34
+#: src/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Встановити з файла…"
 
-#: src/package/contents/ui/main.qml:39
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Отримати ще…"
 
-#: src/package/contents/ui/main.qml:89
+#: src/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Докладніше"
 
-#: src/package/contents/ui/main.qml:104
+#: src/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Змінити тло"
 
-#: src/package/contents/ui/main.qml:113
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Вилучити"
 
-#: src/package/contents/ui/main.qml:133
+#: src/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Застосування параметрів Плазми"
 
-#: src/package/contents/ui/main.qml:139
+#: src/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -206,7 +219,7 @@ msgstr ""
 "Позначення цього пункту призведе до показу на екрані входу до системи SDDM "
 "таких вказаних вами параметрів Плазми:"
 
-#: src/package/contents/ui/main.qml:140
+#: src/ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -221,7 +234,7 @@ msgstr ""
 "item><item>масштабування роздільності,</item><item>налаштування екрана (лише "
 "Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:141
+#: src/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -230,53 +243,40 @@ msgstr ""
 "Будь ласка, зауважте, що файли теми має бути встановлено на "
 "загальносистемному рівні для відтворення на сторінці входу до системи SDDM."
 
-#: src/package/contents/ui/main.qml:148
+#: src/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Застосувати"
 
-#: src/package/contents/ui/main.qml:153
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Відновити типові параметри"
 
-#: src/package/contents/ui/main.qml:163
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Змінити тло"
 
-#: src/package/contents/ui/main.qml:172
+#: src/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr "Не позначено жодного зображення"
 
-#: src/package/contents/ui/main.qml:198
+#: src/ui/main.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Завантажити з файла…"
 
-#: src/package/contents/ui/main.qml:203
+#: src/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Вилучити зображення"
-
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
-msgid ""
-"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr ""
-"Продовження роботи неможливе. Не існує користувача «sddm». Будь ласка, "
-"перевірте, чи належним чином встановлено SDDM."
-
-#: src/sessionmodel.cpp:84
-#, kde-format
-msgctxt "%1 is the name of a session"
-msgid "%1 (Wayland)"
-msgstr "%1 (Wayland)"
 
 #~ msgctxt "@action:button"
 #~ msgid "Behavior..."

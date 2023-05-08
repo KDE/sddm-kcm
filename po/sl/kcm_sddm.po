@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 02:30+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2023-03-16 11:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -57,19 +57,32 @@ msgstr "Tema za namestitev, ki mora biti na datoteki z arhivom."
 msgid "Unable to install theme"
 msgstr "Ni mogoče namestiti teme"
 
-#: src/package/contents/ui/Advanced.qml:17
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+"Ni mogoče nadaljevati, uporabnik  'sddm' ne obstaja. Preverite vašo "
+"namestitev paketa SDDM."
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#: src/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
 msgstr "Obnašanje"
 
-#: src/package/contents/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:22
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Avtomatska prijava:"
 
-#: src/package/contents/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:25
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -77,7 +90,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kot uporabnik:"
 
-#: src/package/contents/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:71
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -85,7 +98,7 @@ msgctxt ""
 msgid "with session"
 msgstr "s sejo"
 
-#: src/package/contents/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -95,108 +108,108 @@ msgstr ""
 "Samodejna prijava ne podpira samodejnega odklepa listnice KDE Wallet, tako "
 "bo prosila za odklepanje ob vsaki prijavi."
 
-#: src/package/contents/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Odpri nastavitve listnice KDE Wallet"
 
-#: src/package/contents/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:114
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Prijavi se takoj po odjavi"
 
-#: src/package/contents/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:127
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Najmanjši UID uporabnika:"
 
-#: src/package/contents/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Največji UID uporabnika:"
 
-#: src/package/contents/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:154
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Ukaz za zaustavitev:"
 
-#: src/package/contents/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:185
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Ukaz za ponovni zagon:"
 
-#: src/package/contents/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/package/contents/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:55
 #, kde-format
 msgid "No preview available"
 msgstr "Predogled ni na voljo"
 
-#: src/package/contents/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:58
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
 msgstr "%1, z %2 (%3)"
 
-#: src/package/contents/ui/main.qml:24
+#: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Obnašanje…"
 
-#: src/package/contents/ui/main.qml:29
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Uveljavi nastavitve Plasme…"
 
-#: src/package/contents/ui/main.qml:34
+#: src/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Namesti iz datoteke..."
 
-#: src/package/contents/ui/main.qml:39
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Dobi nove…"
 
-#: src/package/contents/ui/main.qml:89
+#: src/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Pogled podrobnosti"
 
-#: src/package/contents/ui/main.qml:104
+#: src/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Spremeni ozadje"
 
-#: src/package/contents/ui/main.qml:113
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Zbriši"
 
-#: src/package/contents/ui/main.qml:133
+#: src/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Uveljavi nastavitve Plasme"
 
-#: src/package/contents/ui/main.qml:139
+#: src/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -205,7 +218,7 @@ msgstr ""
 "To bo povzročilo, da bo prijavni zaslon SDDM odražal vaše prilagoditve "
 "naslednjih nastavite Plasme:"
 
-#: src/package/contents/ui/main.qml:140
+#: src/ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -220,7 +233,7 @@ msgstr ""
 "item><item>Lestvičenje DPI,</item><item>Nastavitev zaslona (samo Wayland)</"
 "item></list></para>"
 
-#: src/package/contents/ui/main.qml:141
+#: src/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -229,53 +242,40 @@ msgstr ""
 "Upoštevajte, da morajo biti teme nameščene globalno, da bi se odražale na "
 "prijavnem zaslonu SDDM."
 
-#: src/package/contents/ui/main.qml:148
+#: src/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Uveljavi"
 
-#: src/package/contents/ui/main.qml:153
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Ponovno nastavi na privzete nastavitve"
 
-#: src/package/contents/ui/main.qml:163
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Spremeni ozadje"
 
-#: src/package/contents/ui/main.qml:172
+#: src/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr "Ni izbrane slike"
 
-#: src/package/contents/ui/main.qml:198
+#: src/ui/main.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Naloži iz datoteke…"
 
-#: src/package/contents/ui/main.qml:203
+#: src/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Počisti sliko"
-
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
-msgid ""
-"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr ""
-"Ni mogoče nadaljevati, uporabnik  'sddm' ne obstaja. Preverite vašo "
-"namestitev paketa SDDM."
-
-#: src/sessionmodel.cpp:84
-#, kde-format
-msgctxt "%1 is the name of a session"
-msgid "%1 (Wayland)"
-msgstr "%1 (Wayland)"
 
 #~ msgctxt "@action:button"
 #~ msgid "Behavior..."

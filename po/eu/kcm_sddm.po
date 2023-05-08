@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 02:30+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2023-04-09 20:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -58,19 +58,32 @@ msgstr "Instalatu beharreko gaia, dagoen fitxategi artxibo bat izan behar da."
 msgid "Unable to install theme"
 msgstr "Ezin da gaia instalatu"
 
-#: src/package/contents/ui/Advanced.qml:17
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+"Ezin du jarraitu, 'sddm' erabiltzailea ez da existitzen. Mesedez, ikuskatu "
+"zure SDDMren instalazioa."
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#: src/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
 msgstr "Jokabidea"
 
-#: src/package/contents/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:22
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Saio-haste automatikoa:"
 
-#: src/package/contents/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:25
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -78,7 +91,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "erabiltzaile hau gisa:"
 
-#: src/package/contents/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:71
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -86,7 +99,7 @@ msgctxt ""
 msgid "with session"
 msgstr "saio honekin,"
 
-#: src/package/contents/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -97,108 +110,108 @@ msgstr ""
 "irekitzeko euskarririk, hori dela eta saio-hasten duzun guztietan hori "
 "egiteko eskatuko dizu."
 
-#: src/package/contents/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Ireki KDE Zorroaren ezarpenak"
 
-#: src/package/contents/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:114
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Saio-hasi saioa itxi eta berehala"
 
-#: src/package/contents/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:127
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Erabiltzaile UID minimoa:"
 
-#: src/package/contents/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Erabiltzaile UID maximoa:"
 
-#: src/package/contents/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:154
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Gelditzeko komandoa:"
 
-#: src/package/contents/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:185
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Berrabiarazteko komandoa:"
 
-#: src/package/contents/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/package/contents/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:55
 #, kde-format
 msgid "No preview available"
 msgstr "Aurreikuspegi erabilgarririk ez"
 
-#: src/package/contents/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:58
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
 msgstr "%1, %2(e)k egina (%3)"
 
-#: src/package/contents/ui/main.qml:24
+#: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Jokabidea..."
 
-#: src/package/contents/ui/main.qml:29
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Aplikatu Plasmaren ezarpenak..."
 
-#: src/package/contents/ui/main.qml:34
+#: src/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Instalatu fitxategitik..."
 
-#: src/package/contents/ui/main.qml:39
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Lortu ... berria"
 
-#: src/package/contents/ui/main.qml:89
+#: src/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Ikusi zehaztasunak"
 
-#: src/package/contents/ui/main.qml:104
+#: src/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Aldatu atzeko planoa"
 
-#: src/package/contents/ui/main.qml:113
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Ezabatu"
 
-#: src/package/contents/ui/main.qml:133
+#: src/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Aplikatu Plasma ezarpenak"
 
-#: src/package/contents/ui/main.qml:139
+#: src/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -207,7 +220,7 @@ msgstr ""
 "Honek, SDDM saio-hasierak Plasma ezarpenetan egin dituzun ondoko doikuntzak "
 "islatzea eragingo du:"
 
-#: src/package/contents/ui/main.qml:140
+#: src/ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,7 +235,7 @@ msgstr ""
 "item><item>DPI eskalatzea,</item><item>Pantaila konfiguratzea (Wayland "
 "bakarrik)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:141
+#: src/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -231,53 +244,40 @@ msgstr ""
 "Kontuan izan gai fitxategiak globalki instalatu behar direla SDDMren saio-"
 "hasteko pantailan islatzeko."
 
-#: src/package/contents/ui/main.qml:148
+#: src/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Aplikatu"
 
-#: src/package/contents/ui/main.qml:153
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Berrezarri lehenetsitako ezarpenekin"
 
-#: src/package/contents/ui/main.qml:163
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Aldatu atzeko planoa"
 
-#: src/package/contents/ui/main.qml:172
+#: src/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr "Ez da irudirik hautatu"
 
-#: src/package/contents/ui/main.qml:198
+#: src/ui/main.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Zamatu fitxategitik..."
 
-#: src/package/contents/ui/main.qml:203
+#: src/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Garbitu irudia"
-
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
-msgid ""
-"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr ""
-"Ezin du jarraitu, 'sddm' erabiltzailea ez da existitzen. Mesedez, ikuskatu "
-"zure SDDMren instalazioa."
-
-#: src/sessionmodel.cpp:84
-#, kde-format
-msgctxt "%1 is the name of a session"
-msgid "%1 (Wayland)"
-msgstr "%1 (Wayland)"
 
 #~ msgctxt "@action:button"
 #~ msgid "Behavior..."

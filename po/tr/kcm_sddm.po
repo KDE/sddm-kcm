@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 02:30+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2023-03-24 16:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -55,19 +55,30 @@ msgstr "Kurulacak temanın var olan bir arşiv dosyası olması gerekir."
 msgid "Unable to install theme"
 msgstr "Tema kurulamıyor"
 
-#: src/package/contents/ui/Advanced.qml:17
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr "Sürdürülemiyor; 'sddm' kullanıcısı yok. SDDM kurulumunuzu denetleyin."
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#: src/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
 msgstr "Davranış"
 
-#: src/package/contents/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:22
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Otomatik olarak oturum aç:"
 
-#: src/package/contents/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:25
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -75,7 +86,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kullanıcı olarak:"
 
-#: src/package/contents/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:71
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -83,7 +94,7 @@ msgctxt ""
 msgid "with session"
 msgstr "oturum ile"
 
-#: src/package/contents/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -94,108 +105,108 @@ msgstr ""
 "desteklemez, bu nedenden dolayı her oturum açtığınızda size kilidi açmanızı "
 "söyler."
 
-#: src/package/contents/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "KDE Cüzdan Ayarlarını Aç"
 
-#: src/package/contents/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:114
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Oturumu kapattıktan hemen sonra yeniden oturum açın"
 
-#: src/package/contents/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:127
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "En küçük kullanıcı UID'si:"
 
-#: src/package/contents/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "En büyük kullanıcı UID'si:"
 
-#: src/package/contents/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:154
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Dur Komutu:"
 
-#: src/package/contents/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:185
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Yeniden Başlatma Komutu:"
 
-#: src/package/contents/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/package/contents/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:55
 #, kde-format
 msgid "No preview available"
 msgstr "Kullanılabilir önizleme yok"
 
-#: src/package/contents/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:58
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
 msgstr "%1, %2 (%3) tarafından"
 
-#: src/package/contents/ui/main.qml:24
+#: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Davranış…"
 
-#: src/package/contents/ui/main.qml:29
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Plasma Ayarlarını Uygula…"
 
-#: src/package/contents/ui/main.qml:34
+#: src/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Dosyadan Kur…"
 
-#: src/package/contents/ui/main.qml:39
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Yeni Al…"
 
-#: src/package/contents/ui/main.qml:89
+#: src/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Ayrıntıları göster"
 
-#: src/package/contents/ui/main.qml:104
+#: src/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Arka planı değiştir"
 
-#: src/package/contents/ui/main.qml:113
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Sil"
 
-#: src/package/contents/ui/main.qml:133
+#: src/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Plasma Ayarlarını Uygula"
 
-#: src/package/contents/ui/main.qml:139
+#: src/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -204,7 +215,7 @@ msgstr ""
 "Bu, SDDM oturum açma ekranının özelleştirmelerinizi aşağıdaki Plasma "
 "ayarlarına yansıtmasını sağlayacaktır:"
 
-#: src/package/contents/ui/main.qml:140
+#: src/ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -218,7 +229,7 @@ msgstr ""
 "Kilidi tercihi,</item><item>Plasma teması,</item><item>DPI ölçekleme,</"
 "item><item>Ekran yapılandırması (yalnızca Wayland)</item></list></para>"
 
-#: src/package/contents/ui/main.qml:141
+#: src/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -227,48 +238,37 @@ msgstr ""
 "SDDM oturum açma ekranına yansıtılması için tema dosyalarının global olarak "
 "kurulması gerektiğini lütfen unutmayın."
 
-#: src/package/contents/ui/main.qml:148
+#: src/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Uygula"
 
-#: src/package/contents/ui/main.qml:153
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Öntanımlı Ayarlara Sıfırla"
 
-#: src/package/contents/ui/main.qml:163
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Arka Planı Değiştir"
 
-#: src/package/contents/ui/main.qml:172
+#: src/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr "Seçili görsel yok"
 
-#: src/package/contents/ui/main.qml:198
+#: src/ui/main.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Dosyadan Yükle…"
 
-#: src/package/contents/ui/main.qml:203
+#: src/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Görseli Temizle"
-
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
-msgid ""
-"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr "Sürdürülemiyor; 'sddm' kullanıcısı yok. SDDM kurulumunuzu denetleyin."
-
-#: src/sessionmodel.cpp:84
-#, kde-format
-msgctxt "%1 is the name of a session"
-msgid "%1 (Wayland)"
-msgstr "%1 (Wayland)"

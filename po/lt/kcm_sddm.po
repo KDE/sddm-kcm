@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 02:30+0000\n"
+"POT-Creation-Date: 2023-05-08 02:08+0000\n"
 "PO-Revision-Date: 2022-11-18 01:02+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -58,19 +58,30 @@ msgstr "Norimas įdiegti apipavidalinimas privalo būti archyvo failas."
 msgid "Unable to install theme"
 msgstr "Nepavyko įdiegti apipavidalinimo"
 
-#: src/package/contents/ui/Advanced.qml:17
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr "Negalima tęsti, naudotojo „sddm“ nėra. Patikrinkite savo SDDM diegimą."
+
+#: src/sessionmodel.cpp:84
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#: src/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
 msgstr "Elgsena"
 
-#: src/package/contents/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:22
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Automatiškai prisijungti:"
 
-#: src/package/contents/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:25
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -78,7 +89,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kaip naudotojas:"
 
-#: src/package/contents/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:71
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -86,7 +97,7 @@ msgctxt ""
 msgid "with session"
 msgstr "naudojant seansą"
 
-#: src/package/contents/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -96,60 +107,60 @@ msgstr ""
 "Automatinis prisijungimas nepalaiko automatinio jūsų KDE slaptažodinės "
 "atrakinimo, todėl kas kartą jums prisijungus, jūsų bus prašoma ją atrakinti."
 
-#: src/package/contents/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Atverti KDE slaptažodinės nuostatas"
 
-#: src/package/contents/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:114
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Atsijungus, nedelsiant vėl prisijungti"
 
-#: src/package/contents/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:127
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Mažiausias naudotojo UID:"
 
-#: src/package/contents/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Didžiausias naudotojo UID:"
 
-#: src/package/contents/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:154
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Sustabdymo komanda:"
 
-#: src/package/contents/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:185
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Paleidimo iš naujo komanda:"
 
-#: src/package/contents/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/package/contents/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:55
 #, kde-format
 msgid "No preview available"
 msgstr "Peržiūra neprieinama"
 
-#: src/package/contents/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:58
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
 msgstr "%1, pagal %2 (%3)"
 
-#: src/package/contents/ui/main.qml:24
+#: src/ui/main.qml:24
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Behavior"
@@ -157,7 +168,7 @@ msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Elgsena"
 
-#: src/package/contents/ui/main.qml:29
+#: src/ui/main.qml:29
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Apply Plasma Settings"
@@ -165,7 +176,7 @@ msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Taikyti Plasma nuostatas"
 
-#: src/package/contents/ui/main.qml:34
+#: src/ui/main.qml:34
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Install From File..."
@@ -173,37 +184,37 @@ msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Įdiegti iš failo..."
 
-#: src/package/contents/ui/main.qml:39
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr ""
 
-#: src/package/contents/ui/main.qml:89
+#: src/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Rodyti išsamesnę informaciją"
 
-#: src/package/contents/ui/main.qml:104
+#: src/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Keisti foną"
 
-#: src/package/contents/ui/main.qml:113
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Ištrinti"
 
-#: src/package/contents/ui/main.qml:133
+#: src/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Taikyti Plasma nuostatas"
 
-#: src/package/contents/ui/main.qml:139
+#: src/ui/main.qml:139
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -212,7 +223,7 @@ msgstr ""
 "Šis veiksmas padarys taip, kad SDDM prisijungimo langas atvaizduotų "
 "tinkinimus, kuriuos atlikote šioms Plasma nuostatoms:"
 
-#: src/package/contents/ui/main.qml:140
+#: src/ui/main.qml:140
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -233,7 +244,7 @@ msgstr ""
 "item><item>mastelio DPI,</item><item>Ekrano konfigūracija (tik Wayland)</"
 "item></list></para>"
 
-#: src/package/contents/ui/main.qml:141
+#: src/ui/main.qml:141
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -243,30 +254,30 @@ msgstr ""
 "prisijungimo lange, apipavidalinimo failai privalo būti įdiegti visuotiniu "
 "lygmeniu."
 
-#: src/package/contents/ui/main.qml:148
+#: src/ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Taikyti"
 
-#: src/package/contents/ui/main.qml:153
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Atstatyti į numatytąsias nuostatas"
 
-#: src/package/contents/ui/main.qml:163
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Fono keitimas"
 
-#: src/package/contents/ui/main.qml:172
+#: src/ui/main.qml:172
 #, kde-format
 msgid "No image selected"
 msgstr "Nepasirinktas joks paveikslas"
 
-#: src/package/contents/ui/main.qml:198
+#: src/ui/main.qml:198
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Load From File..."
@@ -274,22 +285,11 @@ msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Įkelti iš failo..."
 
-#: src/package/contents/ui/main.qml:203
+#: src/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Išvalyti paveikslą"
-
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
-msgid ""
-"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr "Negalima tęsti, naudotojo „sddm“ nėra. Patikrinkite savo SDDM diegimą."
-
-#: src/sessionmodel.cpp:84
-#, kde-format
-msgctxt "%1 is the name of a session"
-msgid "%1 (Wayland)"
-msgstr "%1 (Wayland)"
 
 #~ msgctxt "@action:button"
 #~ msgid "Behavior..."
