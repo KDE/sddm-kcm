@@ -489,4 +489,5 @@ Description[sl]=Ponovno nastavi SDDM na privzete tovarniške vrednosti
 Description[tr]=SDDM ayarlarını fabrika ayarlarına sıfırlar
 Description[uk]=Скидання параметрів SDDM до типових для системи
 Description[x-test]=xxResets SDDM settings to factory default statexx
+Description[zh_CN]=重置 SDDM 设置为出厂默认值
 Policy=auth_admin
