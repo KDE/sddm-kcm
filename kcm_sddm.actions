@@ -488,6 +488,7 @@ Description[ka]=SDDM-ის პარამეტრების საწყი
 Description[nl]=SDDM instellingen worden gereset naar de standaard bedrijfsstatus
 Description[nn]=Nullstill SDDM-innstillingane
 Description[pl]=Wyzeruj ustawienia SDDM do domyślnych
+Description[pt_BR]=Redefine as configurações do SDDM para o estado padrão de fábrica
 Description[sl]=Ponovno nastavi SDDM na privzete tovarniške vrednosti
 Description[tr]=SDDM ayarlarını fabrika ayarlarına sıfırlar
 Description[uk]=Скидання параметрів SDDM до типових для системи
