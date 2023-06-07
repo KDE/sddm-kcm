@@ -476,6 +476,7 @@ Description[ar]=يعيد ضبط إعدادات SDDM إلى الإعدادات ا
 Description[bg]=Връща стандартните настройки на SDDM до заводските настройки
 Description[ca]=Reinicia els paràmetres de l'SDDM a l'estat predeterminat inicial
 Description[ca@valencia]=Reinicia els paràmetres de SDDM a l'estat predeterminat inicial
+Description[cs]=Obnoví výchozí hodnoty veškerého nastavení SDDM
 Description[de]=SDDM-Einstellungen auf Voreinstellungen zurücksetzen
 Description[en_GB]=Resets SDDM settings to factory default state
 Description[eo]=Restarigas SDDM-agordojn al fabrikaj defaŭltoj
