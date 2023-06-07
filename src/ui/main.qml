@@ -12,7 +12,7 @@ import QtQuick.Window 2.15
 import Qt5Compat.GraphicalEffects
 
 
-import org.kde.kcm 1.4 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.kirigami 2.14 as Kirigami
 import org.kde.newstuff 1.81 as NewStuff
 import org.kde.private.kcms.sddm 1.0
