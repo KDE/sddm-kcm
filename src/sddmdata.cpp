@@ -11,8 +11,8 @@
 
 #include <QDir>
 
-SddmData::SddmData(QObject *parent, const QVariantList &args)
-    : KCModuleData(parent, args)
+SddmData::SddmData(QObject *parent)
+    : KCModuleData(parent)
 {
     auto config = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::CascadeConfig);
     QStringList configFiles = QDir(QStringLiteral(SDDM_CONFIG_DIR)).entryList(QDir::Files | QDir::NoDotAndDotDot, QDir::LocaleAware);

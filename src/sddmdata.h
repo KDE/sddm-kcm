@@ -13,7 +13,7 @@ class SddmData : public KCModuleData
 {
     Q_OBJECT
 public:
-    SddmData(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    SddmData(QObject *parent);
     SddmSettings *sddmSettings() const;
 
 private:
