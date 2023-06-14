@@ -28,7 +28,7 @@ KCM.GridViewKCM {
 
             function onErrorOccured(untranslatedMessage) {
                 errorMessage.text = i18n(untranslatedMessage);
-                errorMessage.visible = message.length > 0
+                errorMessage.visible = untranslatedMessage.length > 0
             }
 
             function onSyncSuccessful() {
