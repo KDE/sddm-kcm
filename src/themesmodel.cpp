@@ -165,7 +165,7 @@ void ThemesModel::add(const QString &id, const QString &path)
         const QString backgroundPath = themeConfig->group("General").readEntry("background");
         if (backgroundPath.startsWith(QStringLiteral("/"))) {
             m_currentWallpapers.insert(data.themeid(), backgroundPath);
-        } else {
+        } else if (!backgroundPath.isEmpty()) {
             m_currentWallpapers.insert(data.themeid(), data.path() + backgroundPath);
         }
     }
