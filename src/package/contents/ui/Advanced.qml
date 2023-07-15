@@ -100,9 +100,9 @@ Kirigami.Page {
 
             type: Kirigami.MessageType.Warning
 
-            text: xi18nc("@info", "Auto-login does not support unlocking your KDE Wallet automatically, so it will ask you to unlock it every time you log in.
-            <nl/><nl/>
-            To avoid this, you can change the wallet to have a blank password. Note that this is insecure and should only be done in a trusted environment.")
+            text: xi18nc("@info", "Auto-login does not support unlocking your KDE Wallet automatically, so it will ask you to unlock it every time you log in.\
+<nl/><nl/>\
+To avoid this, you can change the wallet to have a blank password. Note that this is insecure and should only be done in a trusted environment.")
 
             actions: Kirigami.Action {
                 text: i18n("Open KDE Wallet Settings")
