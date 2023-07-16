@@ -27,6 +27,8 @@ Kirigami.OverlaySheet {
     ColumnLayout {
         id: layout
         Layout.preferredWidth: 0.75 * root.width
+        spacing: Kirigami.Units.smallSpacing
+
         Item {
             // we need this wrapper because of a limitation of Image where the implicitHeight is not adjusted when
             // the height has been set as the layout does

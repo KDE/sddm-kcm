@@ -141,6 +141,8 @@ KCM.GridViewKCM {
                 i18n("Please note that theme files must be installed globally to be reflected on the SDDM login screen.")
         }
         footer: RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+
             Item {
                 Layout.fillWidth: true
             }
@@ -190,6 +192,8 @@ KCM.GridViewKCM {
             }
         }
         footer: RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+
             Item {
                 Layout.fillWidth: true
             }

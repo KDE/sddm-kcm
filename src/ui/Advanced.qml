@@ -18,8 +18,12 @@ Kirigami.Page {
 
     Kirigami.FormLayout {
         width: parent.width
+        spacing: Kirigami.Units.smallSpacing
+
         RowLayout {
             Kirigami.FormData.label: i18nc("option:check", "Automatically log in:")
+            spacing: Kirigami.Units.smallSpacing
+
             QQC2.CheckBox {
                 id: autologinBox
                 text: i18nc("@label:listbox, the following combobox selects the user to log in automatically", "as user:")
@@ -153,6 +157,8 @@ To avoid this, you can change the wallet to have a blank password. Note that thi
         RowLayout {
             Kirigami.FormData.label: i18nc("@label:textbox", "Halt Command:")
             Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
+
             Kirigami.ActionTextField {
                 id: haltField
                 Layout.fillWidth: true
@@ -183,6 +189,8 @@ To avoid this, you can change the wallet to have a blank password. Note that thi
         RowLayout {
             Layout.fillWidth: true
             Kirigami.FormData.label: i18nc("@label:textbox", "Reboot Command:")
+            spacing: Kirigami.Units.smallSpacing
+
             Kirigami.ActionTextField {
                 id: rebootField
                 Layout.fillWidth: true
