@@ -131,7 +131,7 @@ KCM.GridViewKCM {
     Kirigami.OverlaySheet {
         id: syncSheet
         title: i18nc("@title:window", "Apply Plasma Settings")
-        contentItem: Kirigami.InlineMessage {
+        Kirigami.InlineMessage {
             implicitWidth: Kirigami.Units.gridUnit * 22
             visible: true
             type: Kirigami.MessageType.Information
@@ -161,7 +161,7 @@ KCM.GridViewKCM {
         property var modelIndex
         property string imagePath
         title: i18nc("@title:window", "Change Background")
-        contentItem: Item {
+        Item {
             implicitWidth: 0.75 * root.width
             implicitHeight: backgroundImage.hasImage ? backgroundImage.implicitHeight : placeHolder.implicitHeight
             Kirigami.PlaceholderMessage  {
