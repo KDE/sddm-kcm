@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2023-02-08 12:35+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -74,13 +74,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "Chování"
 
-#: src/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:24
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Automaticky přihlásit:"
 
-#: src/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:29
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -88,7 +88,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "jako uživatel:"
 
-#: src/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:75
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -96,7 +96,7 @@ msgctxt ""
 msgid "with session"
 msgstr "se sezením"
 
-#: src/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -106,36 +106,36 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 
-#: src/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:112
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Otevřít nastavení KDE Wallet"
 
-#: src/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Přihlásit okamžitě po odhlášení"
 
-#: src/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:131
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Minimální UID:"
 
-#: src/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:143
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Maximální UID:"
 
-#: src/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:158
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Příkaz pro vypnutí:"
 
-#: src/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:191
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
@@ -147,12 +147,12 @@ msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
 msgstr "Náhled není dostupný"
 
-#: src/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:60
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -231,36 +231,36 @@ msgid ""
 "the SDDM login screen."
 msgstr ""
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Použít"
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Vrátit na výchozí nastavení"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Změnit pozadí"
 
-#: src/ui/main.qml:172
+#: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "Nebyl vybrán žádný obrázek"
 
-#: src/ui/main.qml:198
+#: src/ui/main.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Načíst ze souboru…"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:207
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

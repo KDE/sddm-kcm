@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
-"PO-Revision-Date: 2023-04-02 17:39+0530\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
+"PO-Revision-Date: 2023-07-16 13:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.90\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -73,13 +73,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "நடத்தை"
 
-#: src/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:24
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "தானாக நுழை:"
 
-#: src/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:29
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -87,7 +87,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "பயனராக:"
 
-#: src/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:75
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -95,12 +95,8 @@ msgctxt ""
 msgid "with session"
 msgstr "பின்வரும் அமர்வில்"
 
-#: src/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#: src/ui/Advanced.qml:107
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -109,38 +105,40 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "தானியக்க நுழைவு, கே.டீ.யீ. வாலட்டை தானாக திறக்காது. அதனால், தானாக நுழைந்தபின்னும் அதை "
-"கைமுறையாக திறக்கும் தேவை இருக்கும்."
+"கைமுறையாக திறக்கும் தேவை இருக்கும்.<nl/><nl/>அதைத் தவிர்க்க, கே.டீ.யீ. வாலட்டின் "
+"கடவுச்சொல்லாக காலி சரத்தை அமைக்கலாம். இது உங்கள் பாதுகாப்பைக் குறைப்பதால் நம்பகமான "
+"சூழல்களில் மட்டுமே இவ்வாறு செய்ய வேண்டும்."
 
-#: src/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:112
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "கே.டீ.யீ. வாலட் அமைப்புகளைத் திற"
 
-#: src/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "வெளியேறிய பின் உடனடியாக திரும்ப நுழை"
 
-#: src/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:131
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "குறைந்தபட்ச பயனர் எண்:"
 
-#: src/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:143
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "அதிகபட்ச பயனர் எண்:"
 
-#: src/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:158
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "நிறுத்த கட்டளை:"
 
-#: src/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:191
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
@@ -152,12 +150,12 @@ msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
 msgstr "முன்னோட்டம் இல்லை"
 
-#: src/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:60
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -243,36 +241,36 @@ msgstr ""
 "SDDM நுழைவுத்திரையில் செயல்பட, தோற்றத்திட்டங்கள் கணினி முழுவதற்குமான இடத்தில் "
 "நிறுவப்பட்டிருக்க வேண்டும்."
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "இயல்பிருப்பை மீட்டமை"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "பின்புலத்தை மாற்றுவது"
 
-#: src/ui/main.qml:172
+#: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "எப்படமும் தேர்ந்தெடுக்கப்படவில்லை"
 
-#: src/ui/main.qml:198
+#: src/ui/main.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "கோப்பிலிருந்து ஏற்று…"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:207
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

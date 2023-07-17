@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
-"PO-Revision-Date: 2023-03-24 16:39+0300\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
+"PO-Revision-Date: 2023-07-16 13:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -72,13 +72,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "Davranış"
 
-#: src/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:24
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Otomatik olarak oturum aç:"
 
-#: src/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:29
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -86,7 +86,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kullanıcı olarak:"
 
-#: src/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:75
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -94,12 +94,8 @@ msgctxt ""
 msgid "with session"
 msgstr "oturum ile"
 
-#: src/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#: src/ui/Advanced.qml:107
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -109,38 +105,40 @@ msgid ""
 msgstr ""
 "Otomatik oturum açma, KDE Cüzdan kilidinizi otomatik olarak açmayı "
 "desteklemez, bu nedenden dolayı her oturum açtığınızda size kilidi açmanızı "
-"söyler."
+"söyler.<nl/><nl/>Bundan kaçınmak için cüzdanınızın parolasını boş bir parola "
+"olarak ayarlayın. Bunun hiç de güvenli olmadığını ve yalnızca güvenilir bir "
+"ortamda yapılması gerektiğini not edin."
 
-#: src/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:112
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "KDE Cüzdan Ayarlarını Aç"
 
-#: src/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Oturumu kapattıktan hemen sonra yeniden oturum açın"
 
-#: src/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:131
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "En küçük kullanıcı UID'si:"
 
-#: src/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:143
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "En büyük kullanıcı UID'si:"
 
-#: src/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:158
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Dur Komutu:"
 
-#: src/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:191
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
@@ -152,12 +150,12 @@ msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
 msgstr "Kullanılabilir önizleme yok"
 
-#: src/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:60
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -244,36 +242,36 @@ msgstr ""
 "SDDM oturum açma ekranına yansıtılması için tema dosyalarının global olarak "
 "kurulması gerektiğini lütfen unutmayın."
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Uygula"
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Öntanımlı Ayarlara Sıfırla"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Arka Planı Değiştir"
 
-#: src/ui/main.qml:172
+#: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "Seçili görsel yok"
 
-#: src/ui/main.qml:198
+#: src/ui/main.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Dosyadan Yükle…"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:207
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

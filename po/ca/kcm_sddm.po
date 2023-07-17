@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
-"PO-Revision-Date: 2023-03-16 10:54+0100\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
+"PO-Revision-Date: 2023-07-16 10:56+0300\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -78,13 +78,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "Comportament"
 
-#: src/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:24
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Inicia la sessió automàticament:"
 
-#: src/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:29
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -92,7 +92,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "com a usuari:"
 
-#: src/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:75
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -100,12 +100,8 @@ msgctxt ""
 msgid "with session"
 msgstr "amb la sessió"
 
-#: src/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#: src/ui/Advanced.qml:107
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -115,38 +111,40 @@ msgid ""
 msgstr ""
 "L'inici automàtic de la sessió no permet desbloquejar automàticament la "
 "vostra cartera KDE, per tant, se us demanarà desbloquejar-la cada vegada que "
-"inicieu la sessió."
+"inicieu la sessió.<nl/><nl/>Per a evitar-ho, podeu canviar la cartera per a "
+"que tingui una contrasenya en blanc. Tingueu en compte que això és insegur i "
+"només s'hauria de fer en un entorn de confiança."
 
-#: src/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:112
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Obre la configuració de la cartera KDE"
 
-#: src/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Torna a connectar immediatament després de desconnectar"
 
-#: src/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:131
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "UID mínim d'usuari:"
 
-#: src/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:143
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "UID màxim d'usuari:"
 
-#: src/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:158
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Ordre d'aturada:"
 
-#: src/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:191
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
@@ -158,12 +156,12 @@ msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
 msgstr "Sense vista prèvia disponible"
 
-#: src/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:60
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -252,36 +250,36 @@ msgstr ""
 "Cal tenir en compte que els fitxers de temes s'han d'instal·lar globalment "
 "perquè els assumeixi la pantalla SDDM d'inici de sessió."
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Aplica"
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Restaura la configuració predeterminada"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Canvia el fons"
 
-#: src/ui/main.qml:172
+#: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "No s'ha seleccionat cap imatge"
 
-#: src/ui/main.qml:198
+#: src/ui/main.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Carrega des d'un fitxer…"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:207
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

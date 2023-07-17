@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2023-03-16 20:00+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -75,13 +75,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "Comportamiento"
 
-#: src/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:24
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Iniciar sesión automáticamente:"
 
-#: src/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:29
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -89,7 +89,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "como usuario:"
 
-#: src/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:75
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -97,7 +97,7 @@ msgctxt ""
 msgid "with session"
 msgstr "con la sesión"
 
-#: src/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:107
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -114,36 +114,36 @@ msgstr ""
 "forma automática, por lo que se le solicitará que la desbloquee cada vez que "
 "inicie sesión."
 
-#: src/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:112
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Abrir las preferencias de la cartera de KDE"
 
-#: src/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Iniciar sesión de nuevo inmediatamente tras cerrar una sesión"
 
-#: src/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:131
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "UID de usuario mínimo:"
 
-#: src/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:143
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "UID de usuario máximo:"
 
-#: src/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:158
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Orden de detención:"
 
-#: src/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:191
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
@@ -155,12 +155,12 @@ msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
 msgstr "No hay vista previa disponible"
 
-#: src/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:60
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -248,36 +248,36 @@ msgstr ""
 "Tenga en cuenta que los archivos de temas se deben instalar de forma global "
 "para que se reflejen en la pantalla de inicio de sesión de SDDM."
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Aplicar"
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Volver a las preferencias predeterminadas"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Cambiar el fondo"
 
-#: src/ui/main.qml:172
+#: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "Ninguna imagen seleccionada"
 
-#: src/ui/main.qml:198
+#: src/ui/main.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Cargar de archivo..."
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:207
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

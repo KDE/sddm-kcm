@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
-"PO-Revision-Date: 2023-03-16 11:11+0100\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
+"PO-Revision-Date: 2023-07-16 09:14+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -76,13 +76,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "Obnašanje"
 
-#: src/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:24
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Avtomatska prijava:"
 
-#: src/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:29
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -90,7 +90,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kot uporabnik:"
 
-#: src/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:75
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -98,12 +98,8 @@ msgctxt ""
 msgid "with session"
 msgstr "s sejo"
 
-#: src/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#: src/ui/Advanced.qml:107
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -111,39 +107,42 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
-"Samodejna prijava ne podpira samodejnega odklepa listnice KDE Wallet, tako "
-"bo prosila za odklepanje ob vsaki prijavi."
+"Samodejna prijava ne podpira samodejnega odklepanja vaše listnice KDE "
+"Wallet, zato vas bo ob vsaki prijavi pozvala, da jo odklenete.<nl/><nl/>Da "
+"bi se temu izognili, lahko listnico spremenite tako, da bo imela prazno "
+"geslo. Upoštevajte, da to ni varno in se to sme izvajati le v zaupanja "
+"vrednem okolju."
 
-#: src/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:112
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Odpri nastavitve listnice KDE Wallet"
 
-#: src/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Prijavi se takoj po odjavi"
 
-#: src/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:131
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Najmanjši UID uporabnika:"
 
-#: src/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:143
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Največji UID uporabnika:"
 
-#: src/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:158
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Ukaz za zaustavitev:"
 
-#: src/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:191
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
@@ -155,12 +154,12 @@ msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
 msgstr "Predogled ni na voljo"
 
-#: src/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:60
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -183,7 +182,7 @@ msgstr "Uveljavi nastavitve Plasme…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Namesti iz datoteke..."
+msgstr "Namesti iz datoteke…"
 
 #: src/ui/main.qml:39
 #, kde-format
@@ -248,36 +247,36 @@ msgstr ""
 "Upoštevajte, da morajo biti teme nameščene globalno, da bi se odražale na "
 "prijavnem zaslonu SDDM."
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Uveljavi"
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Ponovno nastavi na privzete nastavitve"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Spremeni ozadje"
 
-#: src/ui/main.qml:172
+#: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "Ni izbrane slike"
 
-#: src/ui/main.qml:198
+#: src/ui/main.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Naloži iz datoteke…"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:207
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

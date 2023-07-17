@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2021-09-04 09:58+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -72,13 +72,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "Συμπεριφορά"
 
-#: src/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:24
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Αυτόματη είσοδος:"
 
-#: src/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:29
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -86,7 +86,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "ως χρήστης:"
 
-#: src/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:75
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -94,7 +94,7 @@ msgctxt ""
 msgid "with session"
 msgstr "με συνεδρία"
 
-#: src/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -104,38 +104,38 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 
-#: src/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:112
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Reset to Default Settings"
 msgid "Open KDE Wallet Settings"
 msgstr "Επαναφορά στις προκαθορισμένες ρυθμίσεις"
 
-#: src/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Συνδεθείτε ξανά αμέσως μετά την αποσύνδεση"
 
-#: src/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:131
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Ελάχιστο UID χρήστη:"
 
-#: src/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:143
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Μέγιστο χρήστη UID:"
 
-#: src/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:158
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Εντολή τερματισμού:"
 
-#: src/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:191
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
@@ -147,12 +147,12 @@ msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
 msgstr "Μη διαθέσιμη προεπισκόπηση"
 
-#: src/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:60
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -251,30 +251,30 @@ msgstr ""
 "Σημειώστε ότι τα αρχεία θεμάτων πρέπει να εγκατασταθούν σε όλο το σύστημα "
 "για να τα χρησιμοποιήσει η οθόνη σύνδεσης SDDM."
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Εφαρμογή"
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Επαναφορά στις προκαθορισμένες ρυθμίσεις"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Αλλαγή φόντου"
 
-#: src/ui/main.qml:172
+#: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr "Δεν επιλέχθηκε εικόνα"
 
-#: src/ui/main.qml:198
+#: src/ui/main.qml:202
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Load From File..."
@@ -282,7 +282,7 @@ msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Φόρτωση από αρχείο..."
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:207
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:12+0000\n"
+"POT-Creation-Date: 2023-07-17 02:11+0000\n"
 "PO-Revision-Date: 2019-12-28 15:53-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -71,14 +71,14 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr ""
 
-#: src/ui/Advanced.qml:22
+#: src/ui/Advanced.qml:24
 #, fuzzy, kde-format
 #| msgid "Automatically log in:"
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "ਆਪਣੇ-ਆਪ ਲਾਗਇਨ ਕਰੋ:"
 
-#: src/ui/Advanced.qml:25
+#: src/ui/Advanced.qml:29
 #, fuzzy, kde-format
 #| msgid "as user:"
 msgctxt ""
@@ -87,7 +87,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "ਇਹ ਵਰਤੋਂਕਾਰ:"
 
-#: src/ui/Advanced.qml:71
+#: src/ui/Advanced.qml:75
 #, fuzzy, kde-format
 #| msgid "with session:"
 msgctxt ""
@@ -96,7 +96,7 @@ msgctxt ""
 msgid "with session"
 msgstr "ਸ਼ੈਸ਼ਨ ਨਾਲ:"
 
-#: src/ui/Advanced.qml:103
+#: src/ui/Advanced.qml:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -106,40 +106,40 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 
-#: src/ui/Advanced.qml:108
+#: src/ui/Advanced.qml:112
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr ""
 
-#: src/ui/Advanced.qml:114
+#: src/ui/Advanced.qml:118
 #, fuzzy, kde-format
 #| msgid "Log in again immediately after logging off"
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "ਲਾਗ ਆਫ਼ ਕਰਨ ਦੇ ਤੁਰੰਤ ਬਾਅਦ ਮੁੜ ਲਾਗ ਇਨ ਕਰੋ"
 
-#: src/ui/Advanced.qml:127
+#: src/ui/Advanced.qml:131
 #, fuzzy, kde-format
 #| msgid "Minimum user UID:"
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "ਘੱਟੋ-ਘੱਟ ਵਰਤੋਂਕਾਰ UID:"
 
-#: src/ui/Advanced.qml:139
+#: src/ui/Advanced.qml:143
 #, fuzzy, kde-format
 #| msgid "Maximum user UID:"
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "ਵੱਧੋ-ਵੱਧ ਵਰਤੋਂਕਾਰ UID:"
 
-#: src/ui/Advanced.qml:154
+#: src/ui/Advanced.qml:158
 #, fuzzy, kde-format
 #| msgid "Halt command:"
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "ਬੰਦ ਕਰਨ ਲਈ ਕਮਾਂਡ:"
 
-#: src/ui/Advanced.qml:185
+#: src/ui/Advanced.qml:191
 #, fuzzy, kde-format
 #| msgid "Reboot command:"
 msgctxt "@label:textbox"
@@ -152,12 +152,12 @@ msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr ""
 
-#: src/ui/DetailsDialog.qml:55
+#: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
 msgstr "ਕੋਈ ਝਲਕ ਮੌਜੂਦ ਨਹੀਂ"
 
-#: src/ui/DetailsDialog.qml:58
+#: src/ui/DetailsDialog.qml:60
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -238,38 +238,38 @@ msgid ""
 "the SDDM login screen."
 msgstr ""
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr ""
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr ""
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Background:"
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "ਬੈਕਗਰਾਊਂਡ:"
 
-#: src/ui/main.qml:172
+#: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
 msgstr ""
 
-#: src/ui/main.qml:198
+#: src/ui/main.qml:202
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "...ਫਾਇਲ ਤੋਂ ਲੋਡ ਕਰੋ"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:207
 #, fuzzy, kde-format
 #| msgid "Clear Image"
 msgctxt "@action:button"
