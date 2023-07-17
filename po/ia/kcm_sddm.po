@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2023-01-25 21:32+0100\n"
+"PO-Revision-Date: 2023-07-16 16:58+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -83,11 +83,7 @@ msgid "with session"
 msgstr "con session"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -95,9 +91,11 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
-"Auto-login (accesso automatic) nonsupporta que tu Portafoio de KDE (Wallet) "
-"disbloca automaticamente, assi illo te demandera que tu disbloca lo cata "
-"vice que tu accede."
+"Auto-login (accesso automatic) non supporta que tu Portafolio de KDE "
+"(Wallet) disbloca automaticamente, assi illo te demandera que tu disbloca lo "
+"cata vice que tu accede.<nl/><nl/>Per evitar isto, tu pote cambiar le "
+"portafolio con haber un contrasigno vacue.Tu Nota que isto es insecure e "
+"deberea solmente es facite in un ambiente de confidentia."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
