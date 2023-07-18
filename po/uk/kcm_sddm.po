@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2016, 2017, 2018, 2019, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2022-08-10 08:26+0300\n"
+"PO-Revision-Date: 2023-07-17 23:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -86,11 +86,7 @@ msgid "with session"
 msgstr "із сеансом"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -100,7 +96,9 @@ msgid ""
 msgstr ""
 "У засобі автоматичного входу до системи не передбачено підтримки "
 "автоматичного розблокування вашої Торбинки KDE, тому він проситиме вас "
-"розблокувати Торбинку кожного разу, коли ви входите до системи."
+"розблокувати Торбинку кожного разу, коли ви входите до системи.<nl/><nl/>Щоб "
+"уникнути цього, ви можете змінити пароль до торбинки на порожній. Зауважте, "
+"що це погіршить умови захисту. Так слід робити лише у надійному середовищі."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format

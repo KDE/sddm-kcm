@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2022-08-11 07:26+0200\n"
+"PO-Revision-Date: 2023-07-16 09:19+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -86,11 +86,7 @@ msgid "with session"
 msgstr "s sejo"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -98,8 +94,11 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
-"Samodejna prijava ne podpira samodejnega odklepa listnice KDE Wallet, tako "
-"bo prosila za odklepanje ob vsaki prijavi."
+"Samodejna prijava ne podpira samodejnega odklepanja vaše listnice KDE "
+"Wallet, zato vas bo ob vsaki prijavi pozvala, da jo odklenete.<nl/><nl/>Da "
+"bi se temu izognili, lahko listnico  spremenite tako, da bo imela prazno "
+"geslo. Upoštevajte, da to ni varno se ga sme izvajati le v zaupanja vrednem "
+"okolju."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2022-09-15 08:22+0200\n"
+"PO-Revision-Date: 2023-07-17 05:12+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -84,11 +84,7 @@ msgid "with session"
 msgstr "სესიით"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -97,7 +93,9 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "ავტომატურ შესვლას KDE-ის საფულის ავტომატური განბლოკვის მხარდაჭერა არ "
-"გააჩნია. ამიტომ პაროლს ყოველ შესვლაზე გკითხავთ."
+"გააჩნია. ამიტომ პაროლს ყოველ შესვლაზე გკითხავთ.<nl/><nl/>ამის თავიდან "
+"ასაცილებლად შეგიძლიათ საფულეზე ცარიელი პაროლი დააყენოთ. დაიმახსოვრეთ, რომ ეს "
+"უსაფრთხო არაა და მხოლოდ სანდო გარემოში უნდა ქნათ."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
