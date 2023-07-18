@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-17 02:11+0000\n"
-"PO-Revision-Date: 2023-07-16 16:41+0200\n"
+"PO-Revision-Date: 2023-07-17 10:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -108,7 +108,7 @@ msgstr ""
 "Wallet, dus zal het u vragen om ontgrendeling elke keer dat u zich aanmeldt."
 "<nl/><nl/>Om dit te vermijden kunt u het wachtwoord van de portefeuille "
 "wijzigen in een leeg wachtwoord. Merk op dat dit onveilig is en alleen "
-"gedaan worden in een vertrouwde omgeving."
+"gedaan moet worden in een vertrouwde omgeving."
 
 #: src/ui/Advanced.qml:112
 #, kde-format
