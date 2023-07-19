@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2023-07-03 11:41\n"
+"PO-Revision-Date: 2023-07-18 11:15\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -83,11 +83,7 @@ msgid "with session"
 msgstr "使用会话"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -95,7 +91,9 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
-"自动登录不支持自动解锁 KDE 密码库，所以每次登录时都将提示您解锁密码库。"
+"自动登录不支持自动解锁 KDE 密码库，您必须在每次登录之后手动解锁它。<nl/><nl/>"
+"要想避免这种情况，可将密码库的密码设为空白。请注意：空白密码是不安全的，请只"
+"在可以信任的环境中如此设置。"
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format

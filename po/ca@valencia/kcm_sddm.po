@@ -1,9 +1,9 @@
 # Translation of kcm_sddm.po to Catalan (Valencian)
-# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# Copyright (C) 2014-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2022-08-10 18:55+0200\n"
+"PO-Revision-Date: 2023-07-16 11:02+0300\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -88,11 +88,7 @@ msgid "with session"
 msgstr "amb la sessió"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -102,7 +98,9 @@ msgid ""
 msgstr ""
 "L'inici automàtic de la sessió no permet desbloquejar automàticament la "
 "vostra cartera KDE, per tant, se us demanarà desbloquejar-la cada vegada que "
-"inicieu la sessió."
+"inicieu la sessió.<nl/><nl/>Per a evitar-ho, podeu canviar la cartera per a "
+"que tinga una contrasenya en blanc. Cal tindre en compte que açò és insegur "
+"i només s'hauria de fer en un entorn de confiança."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
