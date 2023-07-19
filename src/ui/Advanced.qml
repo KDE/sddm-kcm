@@ -18,7 +18,6 @@ Kirigami.Page {
 
     Kirigami.FormLayout {
         width: parent.width
-        spacing: Kirigami.Units.smallSpacing
 
         RowLayout {
             Kirigami.FormData.label: i18nc("option:check", "Automatically log in:")
