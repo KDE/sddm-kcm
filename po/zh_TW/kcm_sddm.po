@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-17 02:11+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2023-03-19 09:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -74,13 +74,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "行為"
 
-#: src/ui/Advanced.qml:24
+#: src/ui/Advanced.qml:23
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "自動登入："
 
-#: src/ui/Advanced.qml:29
+#: src/ui/Advanced.qml:28
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -88,7 +88,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "登入使用者："
 
-#: src/ui/Advanced.qml:75
+#: src/ui/Advanced.qml:74
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -96,7 +96,7 @@ msgctxt ""
 msgid "with session"
 msgstr "，使用工作階段："
 
-#: src/ui/Advanced.qml:107
+#: src/ui/Advanced.qml:106
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -110,36 +110,36 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr "自動登入不支援自動解鎖 KWallet 錢包，因此每次登入後它都會要求解鎖。"
 
-#: src/ui/Advanced.qml:112
+#: src/ui/Advanced.qml:111
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "開啟 KDE 錢包設定"
 
-#: src/ui/Advanced.qml:118
+#: src/ui/Advanced.qml:117
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "登出後馬上重新登入"
 
-#: src/ui/Advanced.qml:131
+#: src/ui/Advanced.qml:130
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "最小使用者 UID："
 
-#: src/ui/Advanced.qml:143
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "最大使用者 UID："
 
-#: src/ui/Advanced.qml:158
+#: src/ui/Advanced.qml:157
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "關機指令："
 
-#: src/ui/Advanced.qml:191
+#: src/ui/Advanced.qml:190
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

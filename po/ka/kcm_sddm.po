@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-17 02:11+0000\n"
+"POT-Creation-Date: 2023-07-20 02:12+0000\n"
 "PO-Revision-Date: 2023-07-17 05:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -74,13 +74,13 @@ msgctxt "@title"
 msgid "Behavior"
 msgstr "ქცევა"
 
-#: src/ui/Advanced.qml:24
+#: src/ui/Advanced.qml:23
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "ავტომატურად შესვლა:"
 
-#: src/ui/Advanced.qml:29
+#: src/ui/Advanced.qml:28
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
@@ -88,7 +88,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "როგორც მომხმარებელი:"
 
-#: src/ui/Advanced.qml:75
+#: src/ui/Advanced.qml:74
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -96,7 +96,7 @@ msgctxt ""
 msgid "with session"
 msgstr "სესიით"
 
-#: src/ui/Advanced.qml:107
+#: src/ui/Advanced.qml:106
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -110,36 +110,36 @@ msgstr ""
 "ასაცილებლად შეგიძლიათ საფულის პაროლი ცარიელ სტრიქონზე დააყენოთ. "
 "დაიმახსოვრეთ, რომ ეს უსაფრთხო არაა და მხოლოდ სანდო გარემოში უნდა გააკეთოთ."
 
-#: src/ui/Advanced.qml:112
+#: src/ui/Advanced.qml:111
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "KDE-ის საფულის პარამეტრების გახსნა"
 
-#: src/ui/Advanced.qml:118
+#: src/ui/Advanced.qml:117
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "გასვლის შემდეგ ავტომატურად ისევ შესვლა"
 
-#: src/ui/Advanced.qml:131
+#: src/ui/Advanced.qml:130
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "მომხმარებლის მინიმალური UID:"
 
-#: src/ui/Advanced.qml:143
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "მომხმარებლის მაქსიმალური UID:"
 
-#: src/ui/Advanced.qml:158
+#: src/ui/Advanced.qml:157
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "გამორთვის ბრძანება:"
 
-#: src/ui/Advanced.qml:191
+#: src/ui/Advanced.qml:190
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
