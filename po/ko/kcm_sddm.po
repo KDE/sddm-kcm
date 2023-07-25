@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2023-02-28 22:44+0100\n"
+"PO-Revision-Date: 2023-07-25 01:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -83,11 +83,7 @@ msgid "with session"
 msgstr "다음 세션 사용"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -96,7 +92,9 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "자동 로그인 시에는 KDE 지갑이 자동으로 열리지 않습니다. 로그인할 때마다 잠금 "
-"해제 여부를 물어 볼 것입니다."
+"해제 여부를 물어 볼 것입니다.<nl/><nl/>문제를 해결하려면 지갑 암호를 빈 암호"
+"로 지정하십시오. 보안상 안전하지 않은 선택이며 신뢰할 수 있는 환경에서만 사용"
+"하십시오."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
