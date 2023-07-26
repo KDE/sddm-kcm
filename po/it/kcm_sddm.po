@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2023-03-25 00:56+0100\n"
+"PO-Revision-Date: 2023-07-17 10:39+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -83,11 +83,7 @@ msgid "with session"
 msgstr "con sessione"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -96,7 +92,10 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "L'accesso automatico non supporta lo sblocco automatico di KDE Wallet, "
-"perciò ti sarà richiesto di sbloccarlo ogni volta che esegui l'accesso."
+"perciò ti sarà richiesto di sbloccarlo ogni volta che esegui l'accesso.<nl/"
+"><nl/>Per evitare ciò, puoi cambiare il portafoglio in modo che abbia una "
+"password vuota. Tieni presente che questo non è sicuro e dovrebbe essere "
+"eseguito solo in un ambiente affidabile."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
