@@ -160,7 +160,7 @@ void ThemesModel::add(const QString &id, const QString &path)
     mThemeList.append(data);
     if (data.supportsBackground()) {
         const QString themeConfigPath = data.path() + data.configfile();
-        auto themeConfig = KSharedConfig::openConfig(themeConfigPath + QStringLiteral("user"), KConfig::CascadeConfig);
+        auto themeConfig = KSharedConfig::openConfig(themeConfigPath + QStringLiteral(".user"), KConfig::CascadeConfig);
         themeConfig->addConfigSources({themeConfigPath});
         const QString backgroundPath = themeConfig->group("General").readEntry("background");
         if (backgroundPath.startsWith(QStringLiteral("/"))) {
