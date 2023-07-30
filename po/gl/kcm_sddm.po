@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 02:12+0000\n"
-"PO-Revision-Date: 2023-05-11 17:18+0200\n"
+"PO-Revision-Date: 2023-07-29 09:28+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -59,8 +59,8 @@ msgstr "Non foi posíbel instalar o tema."
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
-"Non se pode continuar, o usuario «sddm» non existe. Revise a súa instalación "
-"de SDDM."
+"Non se pode continuar, a conta usuaria «sddm» non existe. Revise a súa "
+"instalación de SDDM."
 
 #: src/sessionmodel.cpp:84
 #, kde-format
@@ -86,7 +86,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr "como usuario:"
+msgstr "como persoa usuaria:"
 
 #: src/ui/Advanced.qml:74
 #, kde-format
@@ -97,11 +97,7 @@ msgid "with session"
 msgstr "con sesión"
 
 #: src/ui/Advanced.qml:106
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -110,7 +106,9 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "O acceso automático non permite desbloquear a carteira de KDE "
-"automaticamente, pediralle desbloqueala cada vez que acceda."
+"automaticamente, pediralle desbloqueala cada vez que acceda.<nl/><nl/>Para "
+"evitalo, cambie a carteira para que o contrasinal estea baleiro. Teña en "
+"conta que isto non é seguro e só debería facerse nun contorno de confianza."
 
 #: src/ui/Advanced.qml:111
 #, kde-format
@@ -121,19 +119,19 @@ msgstr "Abrir a configuración da carteira de KDE"
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr "Acceder de novo inmediatamente tras saír"
+msgstr "Acceder de novo inmediatamente tras saír."
 
 #: src/ui/Advanced.qml:130
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
-msgstr "UID mínimo de usuario:"
+msgstr "UID mínimo de persoa usuaria:"
 
 #: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
-msgstr "UID máximo de usuario:"
+msgstr "UID máximo de persoa usuaria:"
 
 #: src/ui/Advanced.qml:157
 #, kde-format
@@ -193,19 +191,19 @@ msgstr "Obter novos…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr "Ver os detalles"
+msgstr "Ver os detalles."
 
 #: src/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
-msgstr "Cambiar o fondo"
+msgstr "Cambiar o fondo."
 
 #: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
-msgstr "Eliminar"
+msgstr "Eliminar."
 
 #: src/ui/main.qml:133
 #, kde-format
