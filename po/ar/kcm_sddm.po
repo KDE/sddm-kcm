@@ -223,7 +223,7 @@ msgstr ""
 "سيؤدي هذا إلى جعل شاشة ولوج SDDM تعكس تخصيصاتك لإعدادات البلازما التالية:"
 
 #: src/ui/main.qml:140
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
