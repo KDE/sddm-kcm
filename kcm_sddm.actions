@@ -504,4 +504,5 @@ Description[tr]=SDDM ayarlarını fabrika ayarlarına sıfırlar
 Description[uk]=Скидання параметрів SDDM до типових для системи
 Description[x-test]=xxResets SDDM settings to factory default statexx
 Description[zh_CN]=重置 SDDM 设置为出厂默认值
+Description[zh_TW]=重設 SDDM 設定至原廠預設設定
 Policy=auth_admin
