@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2022-08-17 22:43+0300\n"
+"PO-Revision-Date: 2023-07-27 16:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -86,11 +86,7 @@ msgid "with session"
 msgstr "istuntoon"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -99,7 +95,9 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "Automaattikirjautuminen ei tue KDE:n lompakon automaattista avaamista, joten "
-"sen salasanaa kysytään aina kirjauduttaessa."
+"sen salasanaa kysytään aina kirjauduttaessa.<nl/><nl/>Tämän välttämiseksi "
+"lompakolle voi asettaa tyhjän salasanan. Huomaa kuitenkin, että tämä on "
+"turvatonta ja tulisi tehdä vain luotetussa ympäristössä."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
