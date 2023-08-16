@@ -65,7 +65,7 @@ Kirigami.OverlaySheet {
         QQC2.Label {
             visible: website !== ""
             text:("<a href='"+website+"'>"+website+"</a>")
-            onLinkActivated: Qt.openUrlExternally(link)
+            onLinkActivated: link => Qt.openUrlExternally(link)
             font: Kirigami.Theme.smallFont
             Layout.fillWidth: true
             wrapMode: Text.Wrap
