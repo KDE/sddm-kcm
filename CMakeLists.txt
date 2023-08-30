@@ -1,5 +1,5 @@
-project(sddm-kcm)
 cmake_minimum_required(VERSION 3.16)
+project(sddm-kcm)
 set(PROJECT_VERSION "5.27.80")
 
 set(QT_MIN_VERSION "6.4.0")
