@@ -30,6 +30,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Archive
     NewStuff
     KCMUtils
+    Service
 )
 
 ecm_set_disabled_deprecation_versions(QT 6.4.0
