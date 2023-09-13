@@ -30,6 +30,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     NewStuff
     Declarative
     KCMUtils
+    Service
 )
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2

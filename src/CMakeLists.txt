@@ -31,6 +31,7 @@ target_link_libraries(kcm_sddm
     KF5::KIOGui
     KF5::NewStuff
     KF5::QuickAddons
+    KF5::Service
 )
 
 kpackage_install_package(package kcm_sddm kcms)
