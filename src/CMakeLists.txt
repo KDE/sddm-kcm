@@ -20,7 +20,7 @@ target_sources(kcm_sddm PRIVATE
 kconfig_add_kcfg_files(kcm_sddm sddmsettings.kcfgc GENERATE_MOC)
 
 target_compile_definitions(kcm_sddm PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
-target_link_libraries(kcm_sddm
+target_link_libraries(kcm_sddm PRIVATE
     KF6::I18n
     KF6::AuthCore
     KF6::KCMUtils
