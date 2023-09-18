@@ -223,7 +223,7 @@ msgid ""
 msgstr ""
 "<para><list><item>Esquema de color,</item><item>Tema del cursor,</"
 "item><item>Tipus de lletra,</item><item>Renderització del tipus de lletra,</"
-"item><item>Preferència de la tecla de fixació de teclat numèric,</"
+"item><item>Preferència de la tecla de fixació del teclat numèric,</"
 "item><item>Tema de Plasma,</item><item>Escalat dels PPP,</"
 "item><item>Configureu la pantalla (només Wayland)</item></list></para>"
 
