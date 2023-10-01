@@ -24,11 +24,11 @@ msgstr "Paquete de tema incorrecto"
 
 #: sddmauthhelper.cpp:377
 msgid "Could not open file"
-msgstr "Non se puido abrir o ficheiro"
+msgstr "Non foi posíbel abrir o ficheiro"
 
 #: sddmauthhelper.cpp:408
 msgid "Could not decompress archive"
-msgstr "Non se puido descomprimir o arquivo."
+msgstr "Non foi posíbel descomprimir o arquivo."
 
 #: sddmthemeinstaller.cpp:29
 #, kde-format
@@ -269,7 +269,7 @@ msgstr "Deseleccionar a imaxe"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
-"Non se pode continuar, a conta usuaria «sddm» non existe. Revise a súa "
+"Non é posíbel continuar, a conta usuaria «sddm» non existe. Revise a súa "
 "instalación de SDDM."
 
 #: src/sessionmodel.cpp:84
