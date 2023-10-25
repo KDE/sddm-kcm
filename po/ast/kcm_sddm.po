@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the sddm-kcm package.
 #
-# Enol P. <enolp@softastur.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 02:12+0000\n"
-"PO-Revision-Date: 2023-05-01 23:36+0200\n"
+"PO-Revision-Date: 2023-10-24 21:41+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -52,12 +52,14 @@ msgstr ""
 #: sddmthemeinstaller.cpp:65
 #, kde-format
 msgid "Unable to install theme"
-msgstr ""
+msgstr "Nun ye posible instalar l'estilu"
 
 #: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Nun se pue siguir, l'usuariu «sddm» nun esiste. Comprueba la instalación de "
+"SDDM."
 
 #: src/sessionmodel.cpp:84
 #, kde-format
@@ -69,13 +71,13 @@ msgstr "%1 (Wayland)"
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
-msgstr ""
+msgstr "Comportamientu"
 
 #: src/ui/Advanced.qml:23
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
-msgstr ""
+msgstr "Aniciar la sesión automáticamente:"
 
 #: src/ui/Advanced.qml:28
 #, kde-format
@@ -83,7 +85,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr ""
+msgstr "como:"
 
 #: src/ui/Advanced.qml:74
 #, kde-format
@@ -91,7 +93,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr ""
+msgstr "cola sesión"
 
 #: src/ui/Advanced.qml:106
 #, kde-kuit-format
@@ -102,47 +104,52 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
+"L'aniciu automáticu de la sesión nun ye compatible col desbloquéu automáticu "
+"de la cartera de KDE, polo tanto, el sistema va pidite que la desbloquies "
+"cada vegada qu'anicies la sesión.<nl/><nl/>Pa evitar esto, pues camudar la "
+"contraseña de la cartera pa que tea balera. Decátate qu'esta aición namás "
+"s'habría facer nun entornu d'enfotu."
 
 #: src/ui/Advanced.qml:111
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr ""
+msgstr "Abrir la configuración de KDE Wallet"
 
 #: src/ui/Advanced.qml:117
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr ""
+msgstr "Volver aniciar la sesión inmediatamente dempués de zarrar la sesión"
 
 #: src/ui/Advanced.qml:130
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
-msgstr ""
+msgstr "UID d'usuariu mínima:"
 
 #: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
-msgstr ""
+msgstr "UID d'usuariu máxima:"
 
 #: src/ui/Advanced.qml:157
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
-msgstr ""
+msgstr "Comandu de parada:"
 
 #: src/ui/Advanced.qml:190
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
-msgstr ""
+msgstr "Comandu de reaniciu:"
 
 #: src/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: src/ui/DetailsDialog.qml:57
 #, kde-format
@@ -154,13 +161,13 @@ msgstr ""
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
-msgstr ""
+msgstr "«%1» por %2 (%3)"
 
 #: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr ""
+msgstr "Comportamientu…"
 
 #: src/ui/main.qml:29
 #, kde-format
@@ -178,25 +185,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Consiguir…"
 
 #: src/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr ""
+msgstr "Ver los detalles"
 
 #: src/ui/main.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
-msgstr ""
+msgstr "Camudar el fondu"
 
 #: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
-msgstr ""
+msgstr "Desaniciar"
 
 #: src/ui/main.qml:133
 #, kde-format
@@ -220,6 +227,12 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
+"<para><list><item>L'esquema de colores</item><item>L'estilu del cursor</"
+"item><item>El tamañu del cursor </item><item>La fonte,</item><item>La "
+"rederización de fontes</item><item>La configuración del BloqNum </"
+"item><item>L'estilu de Plasma,</item><item>El DPI del escaláu,</"
+"item><item>La configuración de les pantalles (namás Wayland)</item></list></"
+"para>"
 
 #: src/ui/main.qml:141
 #, kde-format
@@ -227,12 +240,14 @@ msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
+"Decátate que los ficheros d'estilu han instalase globalmente pa qu'apaezan "
+"na pantalla d'aniciu de sesión de SDDM."
 
 #: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 #: src/ui/main.qml:155
 #, kde-format
@@ -244,21 +259,21 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
-msgstr ""
+msgstr "Cambéu del fondu"
 
 #: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
-msgstr ""
+msgstr "Nun se seleicionó nenguna imaxe"
 
 #: src/ui/main.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr ""
+msgstr "Cargar d'un ficheru…"
 
 #: src/ui/main.qml:207
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
-msgstr ""
+msgstr "Borrar la imaxe"
