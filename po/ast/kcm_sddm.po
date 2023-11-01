@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 02:12+0000\n"
-"PO-Revision-Date: 2023-10-24 21:41+0200\n"
+"PO-Revision-Date: 2023-10-31 14:12+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -19,20 +19,20 @@ msgstr ""
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
-msgstr ""
+msgstr "El paquete d'estilu ye inválidu"
 
 #: sddmauthhelper.cpp:377
 msgid "Could not open file"
-msgstr ""
+msgstr "Nun se pudo abrir el ficheru"
 
 #: sddmauthhelper.cpp:408
 msgid "Could not decompress archive"
-msgstr ""
+msgstr "Nun se pudo descomprimir l'archivu"
 
 #: sddmthemeinstaller.cpp:29
 #, kde-format
 msgid "SDDM theme installer"
-msgstr ""
+msgstr "Instalador d'estilos de SDDM"
 
 #: sddmthemeinstaller.cpp:36
 #, kde-format
@@ -154,7 +154,7 @@ msgstr "%1 (%2)"
 #: src/ui/DetailsDialog.qml:57
 #, kde-format
 msgid "No preview available"
-msgstr ""
+msgstr "La previsualización nun ta disponible"
 
 #: src/ui/DetailsDialog.qml:60
 #, kde-format
@@ -173,13 +173,13 @@ msgstr "Comportamientu…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr ""
+msgstr "Aplicar la configuración de Plasma…"
 
 #: src/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr ""
+msgstr "Instalar dende un ficheru…"
 
 #: src/ui/main.qml:39
 #, kde-format
