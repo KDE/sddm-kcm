@@ -158,6 +158,13 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         copyFile(plasmarcSource.path(), plasmarcDestination.path());
     }
 
+    // If SDDM is set up to use Wayland with KWin, NumLock is controlled by this
+    if (!args[QStringLiteral("kcminputrc")].isNull()) {
+        QDir kcminputrcSource(args[QStringLiteral("kcminputrc")].toString());
+        QDir kcminputrcDestination(sddmConfigLocation.path() + QStringLiteral("/kcminputrc"));
+        copyFile(kcminputrcSource.path(), kcminputrcDestination.path());
+    }
+
     // copy kscreen config
     if (!args[QStringLiteral("kscreen-config")].isNull()) {
         const QString destinationDir = sddmHomeDirPath + "/.local/share/kscreen/";

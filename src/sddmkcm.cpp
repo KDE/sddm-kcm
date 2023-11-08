@@ -180,6 +180,7 @@ void SddmKcm::synchronizeSettings()
     const QString fontconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("fontconfig"), QStandardPaths::LocateDirectory);
     const QString kdeglobalsPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kdeglobals"));
     const QString plasmarcPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("plasmarc"));
+    const QString kcminputrcPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kcminputrc"));
 
     // send values and paths to helper, debug if it fails
     QVariantMap args;
@@ -239,6 +240,12 @@ void SddmKcm::synchronizeSettings()
         args[QStringLiteral("plasmarc")] = plasmarcPath;
     } else {
         qDebug() << "Cannot find plasmarc file.";
+    }
+
+    if (!kcminputrcPath.isEmpty()) {
+        args[QStringLiteral("kcminputrc")] = kcminputrcPath;
+    } else {
+        qDebug() << "Cannot find kcminputrc file.";
     }
 
     auto path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kscreen/", QStandardPaths::LocateDirectory);
