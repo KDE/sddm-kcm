@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-09-25 12:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,15 +22,15 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
+#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
 msgid "Invalid theme package"
 msgstr "El paquet de tema no és vàlid"
 
-#: sddmauthhelper.cpp:377
+#: sddmauthhelper.cpp:384
 msgid "Could not open file"
 msgstr "No s'ha pogut obrir el fitxer"
 
-#: sddmauthhelper.cpp:408
+#: sddmauthhelper.cpp:415
 msgid "Could not decompress archive"
 msgstr "No s'ha pogut descomprimir l'arxiu"
 
@@ -59,7 +59,7 @@ msgstr "El tema a instal·lar, cal que sigui un fitxer d'arxiu existent."
 msgid "Unable to install theme"
 msgstr "No s'ha pogut desinstal·lar el tema"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

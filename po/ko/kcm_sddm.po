@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 02:12+0000\n"
+"POT-Creation-Date: 2023-11-09 01:39+0000\n"
 "PO-Revision-Date: 2023-07-25 01:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
+#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
 msgid "Invalid theme package"
 msgstr "잘못된 테마 패키지"
 
-#: sddmauthhelper.cpp:377
+#: sddmauthhelper.cpp:384
 msgid "Could not open file"
 msgstr "파일을 열 수 없음"
 
-#: sddmauthhelper.cpp:408
+#: sddmauthhelper.cpp:415
 msgid "Could not decompress archive"
 msgstr "압축을 풀 수 없음"
 
@@ -54,7 +54,7 @@ msgstr "설치할 테마, 존재하는 압축 파일이어야 합니다."
 msgid "Unable to install theme"
 msgstr "테마를 설치할 수 없음"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:277
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
