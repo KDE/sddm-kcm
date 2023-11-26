@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2023-02-08 20:21+0300\n"
+"PO-Revision-Date: 2023-11-25 20:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -109,7 +109,7 @@ msgstr "KDE Cüzdan Ayarlarını Aç"
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr "Oturumu kapattıktan hemen sonra yeniden oturum açın"
+msgstr "Oturumu kapattıktan hemen sonra yeniden oturum aç"
 
 #: src/package/contents/ui/Advanced.qml:127
 #, kde-format
@@ -127,13 +127,13 @@ msgstr "En büyük kullanıcı UID'si:"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
-msgstr "Dur Komutu:"
+msgstr "Dur komutu:"
 
 #: src/package/contents/ui/Advanced.qml:185
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
-msgstr "Yeniden Başlatma Komutu:"
+msgstr "Yeniden başlat komutu:"
 
 #: src/package/contents/ui/DetailsDialog.qml:26
 #, kde-format
