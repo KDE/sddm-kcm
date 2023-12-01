@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-07-16 06:48+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -88,7 +88,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kiel uzanto:"
 
-#: src/ui/Advanced.qml:74
+#: src/ui/Advanced.qml:92
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -96,7 +96,7 @@ msgctxt ""
 msgid "with session"
 msgstr "kun seanco"
 
-#: src/ui/Advanced.qml:106
+#: src/ui/Advanced.qml:124
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -110,36 +110,36 @@ msgstr ""
 "tion, vi povas ŝanĝi la monujon por havi malplenan pasvorton. Notu, ke ĉi "
 "tio estas nesekura kaj devus esti farita nur en fidinda medio."
 
-#: src/ui/Advanced.qml:111
+#: src/ui/Advanced.qml:129
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Malfermi KDE-Wallet-Agordojn"
 
-#: src/ui/Advanced.qml:117
+#: src/ui/Advanced.qml:135
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Ensaluti denove tuj post malsaluti"
 
-#: src/ui/Advanced.qml:130
+#: src/ui/Advanced.qml:148
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Minimuma uzanta UID:"
 
-#: src/ui/Advanced.qml:142
+#: src/ui/Advanced.qml:160
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Maksimuma uzanta UID:"
 
-#: src/ui/Advanced.qml:157
+#: src/ui/Advanced.qml:175
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Halti Komando:"
 
-#: src/ui/Advanced.qml:190
+#: src/ui/Advanced.qml:208
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

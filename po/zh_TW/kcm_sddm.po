@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-07 23:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -88,7 +88,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "登入使用者："
 
-#: src/ui/Advanced.qml:74
+#: src/ui/Advanced.qml:92
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -96,7 +96,7 @@ msgctxt ""
 msgid "with session"
 msgstr "，使用工作階段："
 
-#: src/ui/Advanced.qml:106
+#: src/ui/Advanced.qml:124
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -109,36 +109,36 @@ msgstr ""
 "將錢包密碼改為空白可以防止它每次登入都要求解鎖。但請注意這是不安全的，並請只"
 "在可信任的環境中這樣做。"
 
-#: src/ui/Advanced.qml:111
+#: src/ui/Advanced.qml:129
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "開啟 KDE 錢包設定"
 
-#: src/ui/Advanced.qml:117
+#: src/ui/Advanced.qml:135
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "登出後馬上重新登入"
 
-#: src/ui/Advanced.qml:130
+#: src/ui/Advanced.qml:148
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "最小使用者 UID："
 
-#: src/ui/Advanced.qml:142
+#: src/ui/Advanced.qml:160
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "最大使用者 UID："
 
-#: src/ui/Advanced.qml:157
+#: src/ui/Advanced.qml:175
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "關機指令："
 
-#: src/ui/Advanced.qml:190
+#: src/ui/Advanced.qml:208
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

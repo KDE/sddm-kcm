@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-11-25 20:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -86,7 +86,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kullanıcı olarak:"
 
-#: src/ui/Advanced.qml:74
+#: src/ui/Advanced.qml:92
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -94,7 +94,7 @@ msgctxt ""
 msgid "with session"
 msgstr "oturum ile"
 
-#: src/ui/Advanced.qml:106
+#: src/ui/Advanced.qml:124
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -109,36 +109,36 @@ msgstr ""
 "olarak ayarlayın. Bunun hiç de güvenli olmadığını ve yalnızca güvenilir bir "
 "ortamda yapılması gerektiğini not edin."
 
-#: src/ui/Advanced.qml:111
+#: src/ui/Advanced.qml:129
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "KDE Cüzdan Ayarlarını Aç"
 
-#: src/ui/Advanced.qml:117
+#: src/ui/Advanced.qml:135
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Oturumu kapattıktan hemen sonra yeniden oturum aç"
 
-#: src/ui/Advanced.qml:130
+#: src/ui/Advanced.qml:148
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "En küçük kullanıcı UID'si:"
 
-#: src/ui/Advanced.qml:142
+#: src/ui/Advanced.qml:160
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "En büyük kullanıcı UID'si:"
 
-#: src/ui/Advanced.qml:157
+#: src/ui/Advanced.qml:175
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Dur komutu:"
 
-#: src/ui/Advanced.qml:190
+#: src/ui/Advanced.qml:208
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

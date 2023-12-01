@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2022-11-18 01:02+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -89,7 +89,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kaip naudotojas:"
 
-#: src/ui/Advanced.qml:74
+#: src/ui/Advanced.qml:92
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -97,7 +97,7 @@ msgctxt ""
 msgid "with session"
 msgstr "naudojant seansą"
 
-#: src/ui/Advanced.qml:106
+#: src/ui/Advanced.qml:124
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -113,36 +113,36 @@ msgstr ""
 "Automatinis prisijungimas nepalaiko automatinio jūsų KDE slaptažodinės "
 "atrakinimo, todėl kas kartą jums prisijungus, jūsų bus prašoma ją atrakinti."
 
-#: src/ui/Advanced.qml:111
+#: src/ui/Advanced.qml:129
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Atverti KDE slaptažodinės nuostatas"
 
-#: src/ui/Advanced.qml:117
+#: src/ui/Advanced.qml:135
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Atsijungus, nedelsiant vėl prisijungti"
 
-#: src/ui/Advanced.qml:130
+#: src/ui/Advanced.qml:148
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Mažiausias naudotojo UID:"
 
-#: src/ui/Advanced.qml:142
+#: src/ui/Advanced.qml:160
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Didžiausias naudotojo UID:"
 
-#: src/ui/Advanced.qml:157
+#: src/ui/Advanced.qml:175
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Sustabdymo komanda:"
 
-#: src/ui/Advanced.qml:190
+#: src/ui/Advanced.qml:208
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

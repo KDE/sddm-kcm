@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
 "PO-Revision-Date: 2023-08-02 00:31-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -90,7 +90,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "como usuário:"
 
-#: src/ui/Advanced.qml:74
+#: src/ui/Advanced.qml:92
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -98,7 +98,7 @@ msgctxt ""
 msgid "with session"
 msgstr "na sessão"
 
-#: src/ui/Advanced.qml:106
+#: src/ui/Advanced.qml:124
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,36 +113,36 @@ msgstr ""
 "branco. Observe que isso não é seguro e só deve ser feito em um ambiente "
 "confiável."
 
-#: src/ui/Advanced.qml:111
+#: src/ui/Advanced.qml:129
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Abrir configurações da carteira do KDE"
 
-#: src/ui/Advanced.qml:117
+#: src/ui/Advanced.qml:135
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Autenticar novamente logo após encerrar a sessão"
 
-#: src/ui/Advanced.qml:130
+#: src/ui/Advanced.qml:148
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "UID mínimo do usuário:"
 
-#: src/ui/Advanced.qml:142
+#: src/ui/Advanced.qml:160
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "UID máximo do usuário:"
 
-#: src/ui/Advanced.qml:157
+#: src/ui/Advanced.qml:175
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Comando para desligar:"
 
-#: src/ui/Advanced.qml:190
+#: src/ui/Advanced.qml:208
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
