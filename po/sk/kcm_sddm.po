@@ -1,5 +1,5 @@
 # translation of kcm_sddm.po to Slovak
-# Roman Paholik <wizzardsk@gmail.com>, 2014, 2016, 2017.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2023 Roman Paholik <wizzardsk@gmail.com>
 # Mthw <jari_45@hotmail.com>, 2018.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2021, 2022, 2023.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2023-01-22 16:50+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-12-04 17:27+0100\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
@@ -84,11 +84,7 @@ msgid "with session"
 msgstr "do sedenia"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -97,7 +93,10 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "Automatické prihlásenie nepodporuje automatické odomykanie vašej peňaženky "
-"KDE, takže vás požiada o jej odomknutie pri každom prihlásení."
+"KDE, takže vás požiada o jej odomknutie pri každom prihlásení.<nl/><nl/>Ak "
+"sa tomu chcete vyhnúť, môžete zmeniť peňaženku tak, aby mala prázdne heslo. "
+"Všimnite si, že to nie je bezpečnéa malo by sa to robiť iba v dôveryhodnom "
+"prostredí."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
