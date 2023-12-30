@@ -1,12 +1,12 @@
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-12-18 19:27+0100\n"
+"PO-Revision-Date: 2023-12-22 00:30+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -102,10 +102,10 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "Das automatische Anmelden unterstützt nicht das automatische Entsperren des "
-"KDE-Passwortspeichers wodurch Sie bei jeder Anmeldung zum Entsperren "
-"aufgefordert werden.<nl/><nl/>Zur Vermeidung können Sie den Passwortspeicher "
-"mit einem leeren Passwort versehen. Bitte beachten Sie, dass dies unsicher "
-"ist und nur mit vertrauten Umgebungen erfolgen soll."
+"KDE-Passwortspeichers. Sie werden deshalb bei jeder Anmeldung zum Entsperren "
+"aufgefordert.<nl/><nl/>Zur Vermeidung können Sie den Passwortspeicher mit "
+"einem leeren Passwort versehen. Bitte beachten Sie, dass dies unsicher ist "
+"und nur in vertrauten Umgebungen erfolgen soll."
 
 #: src/ui/Advanced.qml:129
 #, kde-format
