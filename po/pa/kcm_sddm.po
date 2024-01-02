@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2015, 2019.
+# SPDX-FileCopyrightText: 2015, 2019, 2024 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2019-12-28 15:53-0800\n"
-"Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
-"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2024-01-01 08:25-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
 msgid "Invalid theme package"
@@ -23,7 +23,7 @@ msgstr "ਗ਼ਲਤ ਥੀਮ ਪੈਕੇਜ"
 
 #: sddmauthhelper.cpp:384
 msgid "Could not open file"
-msgstr "ਫ਼ਾਇਲ ਖੋਲ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕੀ"
+msgstr "ਫਾਇਲ ਖੋਲ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕੀ"
 
 #: sddmauthhelper.cpp:415
 msgid "Could not decompress archive"
@@ -52,7 +52,7 @@ msgstr ""
 #: sddmthemeinstaller.cpp:65
 #, kde-format
 msgid "Unable to install theme"
-msgstr ""
+msgstr "ਥੀਮ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
 
 #: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
 msgid ""
@@ -69,32 +69,29 @@ msgstr "%1 (ਵੇਅਲੈਂਡ)"
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
-msgstr ""
+msgstr "ਰਵੱਈਆ"
 
 #: src/ui/Advanced.qml:23
-#, fuzzy, kde-format
-#| msgid "Automatically log in:"
+#, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "ਆਪਣੇ-ਆਪ ਲਾਗਇਨ ਕਰੋ:"
 
 #: src/ui/Advanced.qml:28
-#, fuzzy, kde-format
-#| msgid "as user:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr "ਇਹ ਵਰਤੋਂਕਾਰ:"
+msgstr "ਇਹ ਵਰਤੋਂਕਾਰ ਵਜੋਂ:"
 
 #: src/ui/Advanced.qml:92
-#, fuzzy, kde-format
-#| msgid "with session:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr "ਸ਼ੈਸ਼ਨ ਨਾਲ:"
+msgstr "ਸ਼ੈਸ਼ਨ ਨਾਲ"
 
 #: src/ui/Advanced.qml:124
 #, kde-kuit-format
@@ -109,39 +106,34 @@ msgstr ""
 #: src/ui/Advanced.qml:129
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr ""
+msgstr "KDE ਵਾਲੇਟ ਸੈਟਿੰਗਾਂ ਨੂੰ ਖੋਲ੍ਹੋ"
 
 #: src/ui/Advanced.qml:135
-#, fuzzy, kde-format
-#| msgid "Log in again immediately after logging off"
+#, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "ਲਾਗ ਆਫ਼ ਕਰਨ ਦੇ ਤੁਰੰਤ ਬਾਅਦ ਮੁੜ ਲਾਗ ਇਨ ਕਰੋ"
 
 #: src/ui/Advanced.qml:148
-#, fuzzy, kde-format
-#| msgid "Minimum user UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "ਘੱਟੋ-ਘੱਟ ਵਰਤੋਂਕਾਰ UID:"
 
 #: src/ui/Advanced.qml:160
-#, fuzzy, kde-format
-#| msgid "Maximum user UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "ਵੱਧੋ-ਵੱਧ ਵਰਤੋਂਕਾਰ UID:"
 
 #: src/ui/Advanced.qml:175
-#, fuzzy, kde-format
-#| msgid "Halt command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "ਬੰਦ ਕਰਨ ਲਈ ਕਮਾਂਡ:"
 
 #: src/ui/Advanced.qml:208
-#, fuzzy, kde-format
-#| msgid "Reboot command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "ਮੁੜ-ਚਾਲੂ ਕਰਨ ਕਮਾਂਡ:"
@@ -150,7 +142,7 @@ msgstr "ਮੁੜ-ਚਾਲੂ ਕਰਨ ਕਮਾਂਡ:"
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: src/ui/DetailsDialog.qml:57
 #, kde-format
@@ -162,57 +154,55 @@ msgstr "ਕੋਈ ਝਲਕ ਮੌਜੂਦ ਨਹੀਂ"
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
-msgstr ""
+msgstr "%1, %2 ਵਲੋਂ (%3)"
 
 #: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr ""
+msgstr "ਰਵੱਈਆ…"
 
 #: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr ""
+msgstr "ਪਲਾਜ਼ਮਾ ਸੈਟਿੰਗਾਂ ਨੂੰ ਲਾਗੂ ਕਰੋ…"
 
 #: src/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "...ਫਾਇਲ ਤੋਂ ਲੋਡ ਕਰੋ"
+msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
 
 #: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ…"
 
 #: src/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr ""
+msgstr "ਵੇਰਵੇ ਵੇਖੋ"
 
 #: src/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
-msgstr "ਬੈਕਗਰਾਊਂਡ:"
+msgstr "ਬੈਕਗਰਾਊਂਡ ਨੂੰ ਬਦਲੋ"
 
 #: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
-msgstr ""
+msgstr "ਹਟਾਓ"
 
 #: src/ui/main.qml:133
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
-msgstr ""
+msgstr "ਪਲਾਜ਼ਮਾ ਸੈਟਿੰਗਾਂ ਨੂੰ ਲਾਗੂ ਕਰੋ"
 
 #: src/ui/main.qml:139
 #, kde-format
@@ -242,36 +232,33 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "ਲਾਗੂ ਕਰੋ"
 
 #: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr ""
+msgstr "ਮੂਲ ਸੈਟਿੰਗਾਂ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
 
 #: src/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
-msgstr "ਬੈਕਗਰਾਊਂਡ:"
+msgstr "ਬੈਕਗਰਾਊਂਡ ਨੂੰ ਬਦਲੋ"
 
 #: src/ui/main.qml:174
 #, kde-format
 msgid "No image selected"
-msgstr ""
+msgstr "ਕੋਈ ਚਿੱਤਰ ਨਹੀਂ ਚੁਣਿਆ"
 
 #: src/ui/main.qml:202
-#, fuzzy, kde-format
-#| msgid "Load from file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "...ਫਾਇਲ ਤੋਂ ਲੋਡ ਕਰੋ"
+msgstr "…ਫਾਇਲ ਤੋਂ ਲੋਡ ਕਰੋ"
 
 #: src/ui/main.qml:207
-#, fuzzy, kde-format
-#| msgid "Clear Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "ਚਿੱਤਰ ਸਾਫ਼ ਕਰੋ"
