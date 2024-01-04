@@ -495,6 +495,7 @@ Description[fi]=Palauttaa SDDM-asetukset tehdasoletuksikseen
 Description[fr]=Réinitialise la configuration de SDDM vers sa configuration par défaut
 Description[gl]=Restabelece a configuración de SDDM aos valores de fábrica.
 Description[he]=מאפס את הגדרות SDDM למצב ההתחלתי
+Description[hu]=Visszaállítja az SDDM alapbeállításait
 Description[ia]=Restabili preferentias de SDDM al stato predefinite de fabrica
 Description[it]=Ripristina le impostazioni di SDDM allo stato iniziale predefinito
 Description[ka]=SDDM-ის პარამეტრების საწყის მნიშვნელობებზე დაბრუნება
