@@ -3,20 +3,21 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2022.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2018, 2021.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2022-01-14 10:55+0100\n"
-"Last-Translator: Kristóf Kiszel <ulysses@fsf.hu>\n"
+"PO-Revision-Date: 2024-01-03 14:14+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
 msgid "Invalid theme package"
@@ -59,6 +60,8 @@ msgstr "Nem lehet telepíteni a témát"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Nem lehet folytatni, az „sddm” felhasználó nem létezik. Ellenőrizze az SDDM "
+"telepítést."
 
 #: src/sessionmodel.cpp:84
 #, kde-format
@@ -95,11 +98,7 @@ msgid "with session"
 msgstr "munkamenet"
 
 #: src/ui/Advanced.qml:124
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -108,7 +107,10 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "Az automatikus bejelentkezés nem támogatja a KDE Wallet automatikus "
-"feloldását, ezért minden egyes bejelentkezéskor fel kell oldania."
+"feloldását, ezért minden egyes bejelentkezéskor fel kell oldania.<nl/><nl/"
+">Ennek elkerülésére módosíthatja a jelszótárolót, hogy üres legyen a "
+"jelszava. Vegye figyelembe, hogy ez nem biztonságos és csak megbízható "
+"környezetben szabad megtenni."
 
 #: src/ui/Advanced.qml:129
 #, kde-format
@@ -164,25 +166,19 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, szerző: %2 (licenc: %3)"
 
 #: src/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Működés"
+msgstr "Működés…"
 
 #: src/ui/main.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Plasma beállítások alkalmazása"
+msgstr "Plasma beállítások alkalmazása…"
 
 #: src/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Telepítés fájlból…"
@@ -191,7 +187,7 @@ msgstr "Telepítés fájlból…"
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Új letöltése…"
 
 #: src/ui/main.qml:89
 #, kde-format
@@ -227,13 +223,7 @@ msgstr ""
 "módosításai tükröződnek:"
 
 #: src/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -241,9 +231,9 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Színséma,</item><item>Kurzortéma,</item><item>Betűkészlet,"
-"</item><item>Betűrenderelés,</item><item>NumLock beállítások,</"
-"item><item>Plasma téma,</item><item>DPI skálázás,</"
+"<para><list><item>Színséma,</item><item>Kurzortéma,</item><item>Kurzorméret,"
+"</item><item>Betűkészlet,</item><item>Betűrenderelés,</item><item>NumLock "
+"beállítások,</item><item>Plasma téma,</item><item>DPI skálázás,</"
 "item><item>Képernyőbeállítás (csak Wayland)</item></list></para>"
 
 #: src/ui/main.qml:141
@@ -279,9 +269,7 @@ msgid "No image selected"
 msgstr "Nincs kijelölve kép"
 
 #: src/ui/main.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Betöltés fájlból…"
