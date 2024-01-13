@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2022-11-18 01:02+0200\n"
+"PO-Revision-Date: 2024-01-11 16:13+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
 msgid "Invalid theme package"
@@ -98,11 +98,7 @@ msgid "with session"
 msgstr "naudojant seansą"
 
 #: src/ui/Advanced.qml:124
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -112,6 +108,9 @@ msgid ""
 msgstr ""
 "Automatinis prisijungimas nepalaiko automatinio jūsų KDE slaptažodinės "
 "atrakinimo, todėl kas kartą jums prisijungus, jūsų bus prašoma ją atrakinti."
+"<nl/><nl/>Norėdami to išvengti, galite pakeisti slaptažodinės slaptažodį į "
+"tuščią. Turėkite omenyje, jog tai yra nesaugu ir turėtų būti atliekama tik "
+"saugioje aplinkoje."
 
 #: src/ui/Advanced.qml:129
 #, kde-format
@@ -167,34 +166,28 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, pagal %2 (%3)"
 
 #: src/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Elgsena"
+msgstr "Elgsena…"
 
 #: src/ui/main.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Taikyti Plasma nuostatas"
+msgstr "Taikyti Plasma nuostatas…"
 
 #: src/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Įdiegti iš failo..."
+msgstr "Įdiegti iš failo…"
 
 #: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Gauti naują…"
 
 #: src/ui/main.qml:89
 #, kde-format
@@ -230,13 +223,7 @@ msgstr ""
 "tinkinimus, kuriuos atlikote šioms Plasma nuostatoms:"
 
 #: src/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -245,10 +232,10 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>Spalvų rinkinys,</item><item>Žymeklio apipavidalinimas,</"
-"item><item>Šriftas,</item><item>Šrifto atvaizdavimas,</item><item>Skaitmenų "
-"klaviatūros (NumLock) nuostata,</item><item>Plasma apipavidalinimas,</"
-"item><item>mastelio DPI,</item><item>Ekrano konfigūracija (tik Wayland)</"
-"item></list></para>"
+"item><item>Žymeklio dydis,</item><item>Šriftas,</item><item>Šrifto "
+"atvaizdavimas,</item><item>Skaitmenų klaviatūros (NumLock) nuostata,</"
+"item><item>Plasma apipavidalinimas,</item><item>Mastelio DPI,</"
+"item><item>Ekrano konfigūracija (tik Wayland)</item></list></para>"
 
 #: src/ui/main.qml:141
 #, kde-format
@@ -284,12 +271,10 @@ msgid "No image selected"
 msgstr "Nepasirinktas joks paveikslas"
 
 #: src/ui/main.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Įkelti iš failo..."
+msgstr "Įkelti iš failo…"
 
 #: src/ui/main.qml:207
 #, kde-format
