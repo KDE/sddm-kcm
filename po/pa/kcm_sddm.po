@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2024-01-01 08:25-0600\n"
+"PO-Revision-Date: 2024-01-28 18:24-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -47,7 +47,7 @@ msgstr "ਥੀਮ ਅਣ-ਇੰਸਟਾਲ ਕਰੋ।"
 #: sddmthemeinstaller.cpp:39
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
-msgstr ""
+msgstr "ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਥੀਮ, ਮੌਜੂਦਾ ਅਕਾਇਵ ਫਾਇਲ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।"
 
 #: sddmthemeinstaller.cpp:65
 #, kde-format
