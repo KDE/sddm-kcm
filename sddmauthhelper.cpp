@@ -172,6 +172,13 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         copyDirectoryRecursively(args[QStringLiteral("kscreen-config")].toString(), destinationDir, done);
     }
 
+    // copy KWin config
+    if (!args[QStringLiteral("kwinoutputconfig")].isNull()) {
+        QDir source(args[QStringLiteral("kwinoutputconfig")].toString());
+        QDir destination(sddmConfigLocation.path() + QStringLiteral("/kwinoutputconfig.json"));
+        copyFile(source.path(), destination.path());
+    }
+
     // write cursor theme, NumLock preference, and scaling DPI to config file
     ActionReply reply = ActionReply::HelperErrorReply();
     QSharedPointer<KConfig> sddmConfig = openConfig(args[QStringLiteral("kde_settings.conf")].toString());

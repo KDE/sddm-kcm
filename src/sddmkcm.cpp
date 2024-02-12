@@ -181,6 +181,7 @@ void SddmKcm::synchronizeSettings()
     const QString kdeglobalsPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kdeglobals"));
     const QString plasmarcPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("plasmarc"));
     const QString kcminputrcPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kcminputrc"));
+    const QString kwinoutputconfigPath = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("kwinoutputconfig.json"));
 
     // send values and paths to helper, debug if it fails
     QVariantMap args;
@@ -248,6 +249,12 @@ void SddmKcm::synchronizeSettings()
         args[QStringLiteral("kcminputrc")] = kcminputrcPath;
     } else {
         qDebug() << "Cannot find kcminputrc file.";
+    }
+
+    if (!kwinoutputconfigPath.isEmpty()) {
+        args[QStringLiteral("kwinoutputconfig")] = kwinoutputconfigPath;
+    } else {
+        qDebug() << "Cannot find kwinoutputconfiguration.json file";
     }
 
     auto path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kscreen/", QStandardPaths::LocateDirectory);
