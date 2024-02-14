@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-02-14 00:39+0000\n"
 "PO-Revision-Date: 2023-08-07 23:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -20,15 +20,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
+#: sddmauthhelper.cpp:385 sddmauthhelper.cpp:407 sddmauthhelper.cpp:414
 msgid "Invalid theme package"
 msgstr "無效的主題包"
 
-#: sddmauthhelper.cpp:384
+#: sddmauthhelper.cpp:391
 msgid "Could not open file"
 msgstr "無法開啟檔案"
 
-#: sddmauthhelper.cpp:415
+#: sddmauthhelper.cpp:422
 msgid "Could not decompress archive"
 msgstr "無法解壓縮封存檔"
 
@@ -57,7 +57,7 @@ msgstr "要安裝的主題，必須為既有的壓縮檔。"
 msgid "Unable to install theme"
 msgstr "無法安裝主題"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:291
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "無法繼續，'sddm' 使用者不存在。請確定您的 SDDM 安裝。"

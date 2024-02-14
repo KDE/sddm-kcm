@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-02-14 00:39+0000\n"
 "PO-Revision-Date: 2021-09-04 09:58+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
+#: sddmauthhelper.cpp:385 sddmauthhelper.cpp:407 sddmauthhelper.cpp:414
 msgid "Invalid theme package"
 msgstr "Μη έγκυρο πακέτο θέματος"
 
-#: sddmauthhelper.cpp:384
+#: sddmauthhelper.cpp:391
 msgid "Could not open file"
 msgstr "Αδυναμία ανοίγματος αρχείου"
 
-#: sddmauthhelper.cpp:415
+#: sddmauthhelper.cpp:422
 msgid "Could not decompress archive"
 msgstr "Αδυναμία αποσυμπίεσης αρχειοθήκης"
 
@@ -55,7 +55,7 @@ msgstr "Για εγκατάσταση θέματος, απαιτείται η ύ
 msgid "Unable to install theme"
 msgstr "Αδυναμία εγκατάστασης θέματος"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:291
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

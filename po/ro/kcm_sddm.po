@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-02-14 00:39+0000\n"
 "PO-Revision-Date: 2022-04-30 12:01+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
+#: sddmauthhelper.cpp:385 sddmauthhelper.cpp:407 sddmauthhelper.cpp:414
 msgid "Invalid theme package"
 msgstr "Pachet de tematică nevalid"
 
-#: sddmauthhelper.cpp:384
+#: sddmauthhelper.cpp:391
 msgid "Could not open file"
 msgstr "Fișierul nu poate fi deschis"
 
-#: sddmauthhelper.cpp:415
+#: sddmauthhelper.cpp:422
 msgid "Could not decompress archive"
 msgstr "Arhiva nu poate fi decomprimată"
 
@@ -55,7 +55,7 @@ msgstr "Tematica de instalat, trebuie să fie un fișier de arhivă existent."
 msgid "Unable to install theme"
 msgstr "Tematica nu poate fi instalată"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:291
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
