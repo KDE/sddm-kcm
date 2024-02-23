@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-03-16 11:33+0400\n"
+"PO-Revision-Date: 2024-02-22 13:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
 msgid "Invalid theme package"
@@ -98,11 +98,7 @@ msgid "with session"
 msgstr "بجلسة"
 
 #: src/ui/Advanced.qml:124
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -111,7 +107,8 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "لا يدعم الولوج التلقائي فتح محفظة كِيدِي آليا، لذلك سيطلب منك إلغاء قفلها في "
-"كل مرة تقوم فيها بالولوج."
+"كل مرة تقوم فيها بالولوج. <nl/><nl/> لتتفادى هذا يمكنك تغيير المحفظة لتكون "
+"دون كلمة سر. لاحظ أن هذا غير آمن ويجب أن يكون في بيئة آمنة."
 
 #: src/ui/Advanced.qml:129
 #, kde-format
@@ -223,7 +220,7 @@ msgstr ""
 "سيؤدي هذا إلى جعل شاشة ولوج SDDM تعكس تخصيصاتك لإعدادات البلازما التالية:"
 
 #: src/ui/main.qml:140
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -231,10 +228,10 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>تشكيلة الألوان</item><item>سمة المؤشر</item><item>حجم "
-"المؤشر</tem><item>الخط </item><item>تصيير الخط</item><item>تفضيلات قفل "
-"الأرقام</item><item>سمة بلازما</item><item>تحجيم الخطوط لكل بوصة</"
-"item><item>ضبط الشاشة (ويلاند فقط)</item></list></para>"
+"<para><list> <item>تشكيلة الألوان</item> <item>سمة المؤشر</item> <item>حجم "
+"المؤشر</item> <item>الخط </item> <item>تصيير الخط</item> <item>تفضيلات قفل "
+"الأرقام</item> <item>سمة بلازما</item> <item>تحجيم الخطوط لكل بوصة</item> "
+"<item>ضبط الشاشة (ويلاند فقط)</item> </list></para>"
 
 #: src/ui/main.qml:141
 #, kde-format
