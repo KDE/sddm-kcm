@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2022-04-30 12:01+0100\n"
+"PO-Revision-Date: 2024-02-24 15:51+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -59,6 +59,8 @@ msgstr "Tematica nu poate fi instalată"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Nu se poate continua. Utilizatorul „sddm” nu există. Verificați instalarea "
+"SDDM."
 
 #: src/sessionmodel.cpp:84
 #, kde-format
@@ -95,11 +97,7 @@ msgid "with session"
 msgstr "cu sesiune"
 
 #: src/ui/Advanced.qml:124
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -109,7 +107,9 @@ msgid ""
 msgstr ""
 "Autentificarea automată nu susține deblocarea automată a portofelului KDE, "
 "așa că acesta vă va cere să-l deblocați de fiecare dată când vă "
-"autentificați."
+"autentificați.<nl/><nl/>Pentru a evita aceasta, puteți configura portofelul "
+"să nu aibă parolă. Rețineți că acest lucru e nesigur și trebuie făcut doar "
+"în medii de încredere."
 
 #: src/ui/Advanced.qml:129
 #, kde-format
@@ -165,34 +165,28 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, de %2 (%3)"
 
 #: src/ui/main.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Comportament"
+msgstr "Comportament…"
 
 #: src/ui/main.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Aplică configurările Plasma"
+msgstr "Aplică configurările Plasma…"
 
 #: src/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Instalează din fișier..."
+msgstr "Instalează din fișier…"
 
 #: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Obține noi…"
 
 #: src/ui/main.qml:89
 #, kde-format
@@ -228,13 +222,7 @@ msgstr ""
 "aduse următoarelor configurări Plasma:"
 
 #: src/ui/main.qml:140
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-#| "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-#| "item><item>Screen configuration (Wayland only)</item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
@@ -243,9 +231,10 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>Schemă de culori,</item><item>Tematică de cursor,</"
-"item><item>Font,</item><item>Randare fonturi,</item><item>Preferință NumLock,"
-"</item><item>Tematică Plasma,</item><item>Scalare DPI,</"
-"item><item>Configurare ecran (doar Wayland)</item></list></para>"
+"item><item>Dimensiunea cursorului,</item><item>Font,</item><item>Randare "
+"fonturi,</item><item>Preferință NumLock,</item><item>Tematică Plasma,</"
+"item><item>Scalare DPI,</item><item>Configurare ecran (doar Wayland)</item></"
+"list></para>"
 
 #: src/ui/main.qml:141
 #, kde-format
@@ -280,12 +269,10 @@ msgid "No image selected"
 msgstr "Nicio imagine aleasă"
 
 #: src/ui/main.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Încarcă din fișier..."
+msgstr "Încarcă din fișier…"
 
 #: src/ui/main.qml:207
 #, kde-format
