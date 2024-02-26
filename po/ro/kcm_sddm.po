@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2022-04-30 12:01+0100\n"
+"PO-Revision-Date: 2024-02-24 15:51+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -84,11 +84,7 @@ msgid "with session"
 msgstr "cu sesiune"
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -98,7 +94,9 @@ msgid ""
 msgstr ""
 "Autentificarea automată nu susține deblocarea automată a portofelului KDE, "
 "așa că acesta vă va cere să-l deblocați de fiecare dată când vă "
-"autentificați."
+"autentificați.<nl/><nl/>Pentru a evita aceasta, puteți configura portofelul "
+"să nu aibă parolă. Rețineți că acest lucru e nesigur și trebuie făcut doar "
+"în medii de încredere."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
@@ -272,6 +270,8 @@ msgstr "Curăță imaginea"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Nu se poate continua. Utilizatorul „sddm” nu există. Verificați instalarea "
+"SDDM."
 
 #: src/sessionmodel.cpp:84
 #, kde-format
