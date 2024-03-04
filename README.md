@@ -47,7 +47,7 @@ Developers are appreciative of potential contributions and will gladly help out 
 
 * https://community.kde.org/Get_Involved/development
 
-If there is something you would like to discuss, you can either use [the main KDE developer mailing list](plasma-devel@kde.org) or contact the community via instant messaging. The most appropriate groups would be #plasma or #kde-vdg.
+If there is something you would like to discuss, you can either use [the main KDE developer mailing list](https://mail.kde.org/mailman/listinfo/kde-devel) or contact the community via instant messaging. The most appropriate groups would be #plasma or #kde-vdg.
 
 ## End user
 Some distributions use their own SDDM themes. If it's evident that a particular issue with the login screen stems from the theme please contact the support channels of your Linux distribution for user support.
