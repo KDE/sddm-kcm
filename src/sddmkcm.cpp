@@ -159,8 +159,8 @@ void SddmKcm::synchronizeSettings()
     // read Plasma values
     KConfig cursorConfig(QStringLiteral("kcminputrc"));
     KConfigGroup cursorConfigGroup(&cursorConfig, "Mouse");
-    QVariant cursorTheme = cursorConfigGroup.readEntry("cursorTheme", QString());
-    QVariant cursorSize = cursorConfigGroup.readEntry("cursorSize", QString());
+    QString cursorTheme = cursorConfigGroup.readEntry("cursorTheme", QString());
+    QString cursorSize = cursorConfigGroup.readEntry("cursorSize", QString());
 
     KConfig dpiConfig(QStringLiteral("kcmfonts"));
     KConfigGroup dpiConfigGroup(&dpiConfig, "General");
