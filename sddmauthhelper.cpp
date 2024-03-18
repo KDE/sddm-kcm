@@ -194,8 +194,12 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
         QString groupName = configFields[1];
         QString keyName = configFields[2];
 
-        if (fileName == QLatin1String("kde_settings.conf") && iterator.value().isValid()) {
-            sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
+        if (fileName == QLatin1String("kde_settings.conf")) {
+            if (iterator.value().isValid()) {
+                sddmConfig->group(groupName).writeEntry(keyName, iterator.value());
+            } else {
+                sddmConfig->group(groupName).deleteEntry(keyName);
+            }
             sddmOldConfig->group(groupName).deleteEntry(keyName);
         }
     }
