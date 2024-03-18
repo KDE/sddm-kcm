@@ -193,12 +193,14 @@ void SddmKcm::synchronizeSettings()
     if (!cursorTheme.isNull()) {
         args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = cursorTheme;
     } else {
-        qDebug() << "Cannot find cursor theme value.";
+        qDebug() << "Cannot find cursor theme value; unsetting it";
+        args[QStringLiteral("kde_settings.conf/Theme/CursorTheme")] = QVariant();
     }
     if (!cursorSize.isNull()) {
         args[QStringLiteral("kde_settings.conf/Theme/CursorSize")] = cursorSize;
     } else {
-        qDebug() << "Cannot find cursor size value.";
+        qDebug() << "Cannot find cursor size value; unsetting it";
+        args[QStringLiteral("kde_settings.conf/Theme/CursorSize")] = QVariant();
     }
 
     if (!dpiValue.isEmpty()) {
