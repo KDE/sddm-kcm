@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-21 02:29+0000\n"
 "PO-Revision-Date: 2023-11-01 14:52+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -24,15 +24,15 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
+#: sddmauthhelper.cpp:382 sddmauthhelper.cpp:404 sddmauthhelper.cpp:411
 msgid "Invalid theme package"
 msgstr "Paquet de thème non valable"
 
-#: sddmauthhelper.cpp:384
+#: sddmauthhelper.cpp:388
 msgid "Could not open file"
 msgstr "Impossible d'ouvrir le fichier"
 
-#: sddmauthhelper.cpp:415
+#: sddmauthhelper.cpp:419
 msgid "Could not decompress archive"
 msgstr "Impossible d'extraire l'archive"
 
@@ -61,7 +61,7 @@ msgstr "Le thème à installer, doit être un fichier d'archive existant."
 msgid "Unable to install theme"
 msgstr "Impossible d'installer le thème"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:286
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-21 02:29+0000\n"
 "PO-Revision-Date: 2023-02-15 12:55+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -14,15 +14,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-IgnoreConsistency: Name\n"
 
-#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
+#: sddmauthhelper.cpp:382 sddmauthhelper.cpp:404 sddmauthhelper.cpp:411
 msgid "Invalid theme package"
 msgstr "Pacote de tema inválido"
 
-#: sddmauthhelper.cpp:384
+#: sddmauthhelper.cpp:388
 msgid "Could not open file"
 msgstr "Não foi possível aceder ao ficheiro"
 
-#: sddmauthhelper.cpp:415
+#: sddmauthhelper.cpp:419
 msgid "Could not decompress archive"
 msgstr "Não foi possível descomprimir o pacote"
 
@@ -51,7 +51,7 @@ msgstr "O tema a instalar - deverá ser um ficheiro de pacote existente."
 msgid "Unable to install theme"
 msgstr "Impossível instalar o tema"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:286
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

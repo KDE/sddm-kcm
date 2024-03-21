@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-21 02:29+0000\n"
 "PO-Revision-Date: 2024-01-03 14:14+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
+#: sddmauthhelper.cpp:382 sddmauthhelper.cpp:404 sddmauthhelper.cpp:411
 msgid "Invalid theme package"
 msgstr "Érvénytelen témacsomag"
 
-#: sddmauthhelper.cpp:384
+#: sddmauthhelper.cpp:388
 msgid "Could not open file"
 msgstr "Nem sikerült megnyitni a fájlt"
 
-#: sddmauthhelper.cpp:415
+#: sddmauthhelper.cpp:419
 msgid "Could not decompress archive"
 msgstr "Nem sikerült kibontani az archívumot"
 
@@ -56,7 +56,7 @@ msgstr "A telepítendő témának egy létező archívumfájlnak kell lennie."
 msgid "Unable to install theme"
 msgstr "Nem lehet telepíteni a témát"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:286
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-03-21 02:29+0000\n"
 "PO-Revision-Date: 2023-07-16 06:48+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: sddmauthhelper.cpp:378 sddmauthhelper.cpp:400 sddmauthhelper.cpp:407
+#: sddmauthhelper.cpp:382 sddmauthhelper.cpp:404 sddmauthhelper.cpp:411
 msgid "Invalid theme package"
 msgstr "Nevalida etosopakaĵo"
 
-#: sddmauthhelper.cpp:384
+#: sddmauthhelper.cpp:388
 msgid "Could not open file"
 msgstr "Ne eblis malfermi dosieron"
 
-#: sddmauthhelper.cpp:415
+#: sddmauthhelper.cpp:419
 msgid "Could not decompress archive"
 msgstr "Ne eblis malkunpremi la arkivon"
 
@@ -55,7 +55,7 @@ msgstr "La instalenda etoso devas esti ekzistanta arkiva dosiero."
 msgid "Unable to install theme"
 msgstr "Ne eblas instali etoson"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:284
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:286
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
