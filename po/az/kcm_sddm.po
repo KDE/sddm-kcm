@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:39+0000\n"
+"POT-Creation-Date: 2024-03-21 00:39+0000\n"
 "PO-Revision-Date: 2022-08-24 17:56+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.0\n"
 
-#: sddmauthhelper.cpp:385 sddmauthhelper.cpp:407 sddmauthhelper.cpp:414
+#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
 msgid "Invalid theme package"
 msgstr "Səhv Mövzu Paketi"
 
-#: sddmauthhelper.cpp:391
+#: sddmauthhelper.cpp:395
 msgid "Could not open file"
 msgstr "Fayl açıla bilmir"
 
-#: sddmauthhelper.cpp:422
+#: sddmauthhelper.cpp:426
 msgid "Could not decompress archive"
 msgstr "Arxivi çıxartmaq mümkün deyil"
 
@@ -54,7 +54,7 @@ msgstr "Quraşdırılacaq mövzu, mövcud arxiv faylı olmalıdır."
 msgid "Unable to install theme"
 msgstr "Mövzunun quraşdırılması baş tutmadı"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:291
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

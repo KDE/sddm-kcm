@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:39+0000\n"
+"POT-Creation-Date: 2024-03-21 00:39+0000\n"
 "PO-Revision-Date: 2023-07-27 16:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -20,15 +20,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: sddmauthhelper.cpp:385 sddmauthhelper.cpp:407 sddmauthhelper.cpp:414
+#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
 msgid "Invalid theme package"
 msgstr "Virheellinen teemapaketti"
 
-#: sddmauthhelper.cpp:391
+#: sddmauthhelper.cpp:395
 msgid "Could not open file"
 msgstr "Tiedostoa ei voi avata"
 
-#: sddmauthhelper.cpp:422
+#: sddmauthhelper.cpp:426
 msgid "Could not decompress archive"
 msgstr "Arkiston purkaminen epäonnistui"
 
@@ -57,7 +57,7 @@ msgstr "Asennettava teema. Täytyy olla arkistotiedosto."
 msgid "Unable to install theme"
 msgstr "Teeman asennus epäonnistui"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:291
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:39+0000\n"
+"POT-Creation-Date: 2024-03-21 00:39+0000\n"
 "PO-Revision-Date: 2022-09-13 08:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: sddmauthhelper.cpp:385 sddmauthhelper.cpp:407 sddmauthhelper.cpp:414
+#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
 msgid "Invalid theme package"
 msgstr "Paket tema tak absah"
 
-#: sddmauthhelper.cpp:391
+#: sddmauthhelper.cpp:395
 msgid "Could not open file"
 msgstr "Tidak dapat membuka file"
 
-#: sddmauthhelper.cpp:422
+#: sddmauthhelper.cpp:426
 msgid "Could not decompress archive"
 msgstr "Tidak dapat mendekompres arsip"
 
@@ -55,7 +55,7 @@ msgstr "Tema yang akan diinstal, harus adanya sebuah file arsip."
 msgid "Unable to install theme"
 msgstr "Tak bisa menginstal tema"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:291
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
