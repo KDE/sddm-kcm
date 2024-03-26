@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 02:29+0000\n"
+"POT-Creation-Date: 2024-03-26 02:53+0000\n"
 "PO-Revision-Date: 2023-07-16 09:14+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,15 +20,15 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: sddmauthhelper.cpp:382 sddmauthhelper.cpp:404 sddmauthhelper.cpp:411
+#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
 msgid "Invalid theme package"
 msgstr "Neveljaven paket teme"
 
-#: sddmauthhelper.cpp:388
+#: sddmauthhelper.cpp:395
 msgid "Could not open file"
 msgstr "Ni bilo mogoče odpreti datoteke"
 
-#: sddmauthhelper.cpp:419
+#: sddmauthhelper.cpp:426
 msgid "Could not decompress archive"
 msgstr "Ni bilo mogoče razširiti arhiva"
 
@@ -57,7 +57,7 @@ msgstr "Tema za namestitev, ki mora biti na datoteki z arhivom."
 msgid "Unable to install theme"
 msgstr "Ni mogoče namestiti teme"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:286
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 02:29+0000\n"
+"POT-Creation-Date: 2024-03-26 02:53+0000\n"
 "PO-Revision-Date: 2019-11-22 20:47+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 18.12.3\n"
 
-#: sddmauthhelper.cpp:382 sddmauthhelper.cpp:404 sddmauthhelper.cpp:411
+#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
 msgid "Invalid theme package"
 msgstr "Ugyldig temapakke"
 
-#: sddmauthhelper.cpp:388
+#: sddmauthhelper.cpp:395
 msgid "Could not open file"
 msgstr "Kunne ikke åbne filen"
 
-#: sddmauthhelper.cpp:419
+#: sddmauthhelper.cpp:426
 msgid "Could not decompress archive"
 msgstr "Kunne ikke dekomprimere arkivet"
 
@@ -54,7 +54,7 @@ msgstr "Temaet som skal installeres, skal være en eksisterende arkivfil."
 msgid "Unable to install theme"
 msgstr "Kan ikke installere temaet"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:286
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

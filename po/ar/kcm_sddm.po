@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 02:29+0000\n"
+"POT-Creation-Date: 2024-03-26 02:53+0000\n"
 "PO-Revision-Date: 2024-02-22 13:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.1\n"
 
-#: sddmauthhelper.cpp:382 sddmauthhelper.cpp:404 sddmauthhelper.cpp:411
+#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
 msgid "Invalid theme package"
 msgstr "حزمة سمة غير صالحة"
 
-#: sddmauthhelper.cpp:388
+#: sddmauthhelper.cpp:395
 msgid "Could not open file"
 msgstr "تعذّر فتح الملفّ"
 
-#: sddmauthhelper.cpp:419
+#: sddmauthhelper.cpp:426
 msgid "Could not decompress archive"
 msgstr "تعذر فك الأرشيف"
 
@@ -56,7 +56,7 @@ msgstr "يجب أن تكون سمة المراد تثبيتها ملف أرشي�
 msgid "Unable to install theme"
 msgstr "غير قادر على تثبيت السمة"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:286
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

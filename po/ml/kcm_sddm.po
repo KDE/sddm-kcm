@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 02:29+0000\n"
+"POT-Creation-Date: 2024-03-26 02:53+0000\n"
 "PO-Revision-Date: 2019-12-12 22:32+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: sddmauthhelper.cpp:382 sddmauthhelper.cpp:404 sddmauthhelper.cpp:411
+#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
 msgid "Invalid theme package"
 msgstr ""
 
-#: sddmauthhelper.cpp:388
+#: sddmauthhelper.cpp:395
 msgid "Could not open file"
 msgstr ""
 
-#: sddmauthhelper.cpp:419
+#: sddmauthhelper.cpp:426
 msgid "Could not decompress archive"
 msgstr ""
 
@@ -55,7 +55,7 @@ msgstr ""
 msgid "Unable to install theme"
 msgstr ""
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:286
+#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
