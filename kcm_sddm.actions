@@ -241,6 +241,7 @@ Description[sr@ijekavian]=Распакује ЗИП фајл са темом з�
 Description[sr@ijekavianlatin]=Raspakuje ZIP fajl sa temom za SDDM na odgovarajuću lokaciju
 Description[sr@latin]=Raspakuje ZIP fajl sa temom za SDDM na odgovarajuću lokaciju
 Description[sv]=Packar upp en zip-fil som innehåller ett SDDM-tema på platsen för SDDM-teman
+Description[ta]=SDDM தோற்றத்திட்டங்களுக்கான இருப்பிடத்திற்கு ஓர் காப்பகக்கோப்பைப் பிரித்தெடுக்கும்
 Description[tr]=SDDM temasını içeren bir zip dosyasını SDDM tema konumuna çıkarır.
 Description[uk]=Видобуває дані з архіву zip, що містить тему SDDM, до каталогу тем SDDM
 Description[x-test]=xxExtracts a zip file containing an SDDM theme to the SDDM theme locationxx
