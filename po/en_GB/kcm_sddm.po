@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-21 00:39+0000\n"
-"PO-Revision-Date: 2023-03-26 14:24+0100\n"
+"PO-Revision-Date: 2024-05-17 19:42+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
 msgid "Invalid theme package"
@@ -95,11 +95,7 @@ msgid "with session"
 msgstr "with session"
 
 #: src/ui/Advanced.qml:124
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -108,7 +104,9 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
-"will ask you to unlock it every time you log in."
+"will ask you to unlock it every time you log in.<nl/><nl/>To avoid this, you "
+"can change the wallet to have a blank password. Note that this is insecure "
+"and should only be done in a trusted environment."
 
 #: src/ui/Advanced.qml:129
 #, kde-format
