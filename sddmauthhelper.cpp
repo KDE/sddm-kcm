@@ -52,6 +52,20 @@ static QSharedPointer<KConfig> openConfig(const QString &filePath)
     return QSharedPointer<KConfig>(new KConfig(file.fileName(), KConfig::SimpleConfig));
 }
 
+static QString SddmUserCheck()
+{
+    // check for sddm user; return empty string if user not present
+    // we have to check with QString and isEmpty() instead of QDir and exists() because
+    // QDir returns "." and true for exists() in the case of a non-existent user;
+    const QString sddmHomeDirPath = KUser("sddm").homeDir();
+    if (sddmHomeDirPath.isEmpty()) {
+        qDebug() << "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.";
+        return QString();
+    } else {
+        return sddmHomeDirPath;
+    }
+}
+
 void SddmAuthHelper::copyDirectoryRecursively(const QString &source, const QString &destination, QSet<QString> &done)
 {
     if (done.contains(source)) {
@@ -91,12 +105,9 @@ void SddmAuthHelper::copyFile(const QString &source, const QString &destination)
 
 ActionReply SddmAuthHelper::sync(const QVariantMap &args)
 {
-    // initial check for sddm user; abort if user not present
-    // we have to check with QString and isEmpty() instead of QDir and exists() because
-    // QDir returns "." and true for exists() in the case of a non-existent user;
-    QString sddmHomeDirPath = KUser("sddm").homeDir();
+    // abort if user not present
+    const QString sddmHomeDirPath = SddmUserCheck();
     if (sddmHomeDirPath.isEmpty()) {
-        qDebug() << "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.";
         return ActionReply::HelperErrorReply();
     }
 
@@ -219,12 +230,9 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
 
 ActionReply SddmAuthHelper::reset(const QVariantMap &args)
 {
-    // initial check for sddm user; abort if user not present
-    // we have to check with QString and isEmpty() instead of QDir and exists() because
-    // QDir returns "." and true for exists() in the case of a non-existent user;
-    QString sddmHomeDirPath = KUser("sddm").homeDir();
+    // abort if user not present
+    const QString sddmHomeDirPath = SddmUserCheck();
     if (sddmHomeDirPath.isEmpty()) {
-        qDebug() << "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.";
         return ActionReply::HelperErrorReply();
     }
 
