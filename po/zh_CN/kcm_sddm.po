@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,15 +17,15 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/sddm-kcm/kcm_sddm.pot\n"
 "X-Crowdin-File-ID: 43053\n"
 
-#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
+#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
 msgid "Invalid theme package"
 msgstr "无效的主题包"
 
-#: sddmauthhelper.cpp:395
+#: sddmauthhelper.cpp:403
 msgid "Could not open file"
 msgstr "无法打开文件"
 
-#: sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:434
 msgid "Could not decompress archive"
 msgstr "无法解压主题包"
 

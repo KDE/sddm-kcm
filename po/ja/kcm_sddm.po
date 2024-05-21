@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2023-04-07 23:34-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
+#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
 msgid "Invalid theme package"
 msgstr "無効なテーマパッケージ"
 
-#: sddmauthhelper.cpp:395
+#: sddmauthhelper.cpp:403
 msgid "Could not open file"
 msgstr "ファイルを開けませんでした"
 
-#: sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:434
 msgid "Could not decompress archive"
 msgstr "アーカイブを展開できませんでした"
 

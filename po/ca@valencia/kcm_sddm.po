@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2023-09-25 12:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,15 +22,15 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
+#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
 msgid "Invalid theme package"
 msgstr "El paquet de tema no és vàlid"
 
-#: sddmauthhelper.cpp:395
+#: sddmauthhelper.cpp:403
 msgid "Could not open file"
 msgstr "No s'ha pogut obrir el fitxer"
 
-#: sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:434
 msgid "Could not decompress archive"
 msgstr "No s'ha pogut descomprimir l'arxiu"
 

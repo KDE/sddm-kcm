@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-05-17 19:42+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
+#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
 msgid "Invalid theme package"
 msgstr "Invalid theme package"
 
-#: sddmauthhelper.cpp:395
+#: sddmauthhelper.cpp:403
 msgid "Could not open file"
 msgstr "Could not open file"
 
-#: sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:434
 msgid "Could not decompress archive"
 msgstr "Could not decompress archive"
 

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-21 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2015-01-08 21:37+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: sddmauthhelper.cpp:389 sddmauthhelper.cpp:411 sddmauthhelper.cpp:418
+#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
 msgid "Invalid theme package"
 msgstr ""
 
-#: sddmauthhelper.cpp:395
+#: sddmauthhelper.cpp:403
 msgid "Could not open file"
 msgstr "Klarte ikke åpne fil"
 
-#: sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:434
 msgid "Could not decompress archive"
 msgstr ""
 
