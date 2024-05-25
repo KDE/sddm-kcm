@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-24 15:51+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -188,31 +188,31 @@ msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Obține noi…"
 
-#: src/ui/main.qml:89
+#: src/ui/main.qml:92
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Vezi detalii"
 
-#: src/ui/main.qml:104
+#: src/ui/main.qml:107
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Schimbă fundalul"
 
-#: src/ui/main.qml:113
+#: src/ui/main.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Șterge"
 
-#: src/ui/main.qml:133
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Aplică configurările Plasma"
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:142
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -221,7 +221,7 @@ msgstr ""
 "Aceasta va face ca ecranul de autentificare SDDM să reflecte modificările "
 "aduse următoarelor configurări Plasma:"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:143
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -236,7 +236,7 @@ msgstr ""
 "item><item>Scalare DPI,</item><item>Configurare ecran (doar Wayland)</item></"
 "list></para>"
 
-#: src/ui/main.qml:141
+#: src/ui/main.qml:144
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -245,36 +245,36 @@ msgstr ""
 "Rețineți că fișierele de tematică trebuiesc instalate global pentru a fi "
 "reflectate pe ecranul de autentificare SDDM."
 
-#: src/ui/main.qml:150
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Aplică"
 
-#: src/ui/main.qml:155
+#: src/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Restabilește la configurări implicite"
 
-#: src/ui/main.qml:165
+#: src/ui/main.qml:168
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Schimbă fundalul"
 
-#: src/ui/main.qml:174
+#: src/ui/main.qml:177
 #, kde-format
 msgid "No image selected"
 msgstr "Nicio imagine aleasă"
 
-#: src/ui/main.qml:202
+#: src/ui/main.qml:205
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Încarcă din fișier…"
 
-#: src/ui/main.qml:207
+#: src/ui/main.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-07-16 09:14+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -190,31 +190,31 @@ msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Dobi nove…"
 
-#: src/ui/main.qml:89
+#: src/ui/main.qml:92
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Pogled podrobnosti"
 
-#: src/ui/main.qml:104
+#: src/ui/main.qml:107
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Spremeni ozadje"
 
-#: src/ui/main.qml:113
+#: src/ui/main.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Zbriši"
 
-#: src/ui/main.qml:133
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Uveljavi nastavitve Plasme"
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:142
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -223,7 +223,7 @@ msgstr ""
 "To bo povzročilo, da bo prijavni zaslon SDDM odražal vaše prilagoditve "
 "naslednjih nastavite Plasme:"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:143
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -238,7 +238,7 @@ msgstr ""
 "item><item>Lestvičenje DPI,</item><item>Nastavitev zaslona (samo Wayland)</"
 "item></list></para>"
 
-#: src/ui/main.qml:141
+#: src/ui/main.qml:144
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -247,36 +247,36 @@ msgstr ""
 "Upoštevajte, da morajo biti teme nameščene globalno, da bi se odražale na "
 "prijavnem zaslonu SDDM."
 
-#: src/ui/main.qml:150
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Uveljavi"
 
-#: src/ui/main.qml:155
+#: src/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Ponovno nastavi na privzete nastavitve"
 
-#: src/ui/main.qml:165
+#: src/ui/main.qml:168
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Spremeni ozadje"
 
-#: src/ui/main.qml:174
+#: src/ui/main.qml:177
 #, kde-format
 msgid "No image selected"
 msgstr "Ni izbrane slike"
 
-#: src/ui/main.qml:202
+#: src/ui/main.qml:205
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Naloži iz datoteke…"
 
-#: src/ui/main.qml:207
+#: src/ui/main.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

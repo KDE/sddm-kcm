@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-07-16 16:32+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -187,31 +187,31 @@ msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Obtene Nove…"
 
-#: src/ui/main.qml:89
+#: src/ui/main.qml:92
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Vide detalios"
 
-#: src/ui/main.qml:104
+#: src/ui/main.qml:107
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Modifica fundo"
 
-#: src/ui/main.qml:113
+#: src/ui/main.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Dele"
 
-#: src/ui/main.qml:133
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Applica preferentias de Plasma"
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:142
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -220,7 +220,7 @@ msgstr ""
 "Isto facera que le schermo de accesso de SDDM reflecte tu personalisation al "
 "sequente preferentias de Plasma:"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:143
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -235,7 +235,7 @@ msgstr ""
 "item><item>Scalar DPI</item><item>Configuration de schermo (solmente de "
 "Wayland)</item></list></para>"
 
-#: src/ui/main.qml:141
+#: src/ui/main.qml:144
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -244,36 +244,36 @@ msgstr ""
 "Pro favor, tu nota que files de thema debe esser installate globalmente per "
 "esser reflectite sur le schermo de accesso de SDDM."
 
-#: src/ui/main.qml:150
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Applica"
 
-#: src/ui/main.qml:155
+#: src/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Refixa a Preferentias Predefinite"
 
-#: src/ui/main.qml:165
+#: src/ui/main.qml:168
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Modifica fundo"
 
-#: src/ui/main.qml:174
+#: src/ui/main.qml:177
 #, kde-format
 msgid "No image selected"
 msgstr "Necun image selectionate"
 
-#: src/ui/main.qml:202
+#: src/ui/main.qml:205
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Carga ex file …"
 
-#: src/ui/main.qml:207
+#: src/ui/main.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
