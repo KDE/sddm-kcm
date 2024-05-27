@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/sddm-kcm/kcm_sddm.pot\n"
-"X-Crowdin-File-ID: 43053\n"
+"X-Crowdin-File: /kf6-stable/messages/sddm-kcm/kcm_sddm.pot\n"
+"X-Crowdin-File-ID: 52936\n"
 
 #: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
 msgid "Invalid theme package"
