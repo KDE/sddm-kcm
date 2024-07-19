@@ -132,7 +132,7 @@ KCM.GridViewKCM {
         id: syncSheet
         title: i18nc("@title:window", "Apply Plasma Settings")
         Kirigami.InlineMessage {
-            implicitWidth: Kirigami.Units.gridUnit * 22
+            implicitWidth: Math.max(footer.implicitWidth, Kirigami.Units.gridUnit * 22)
             visible: true
             type: Kirigami.MessageType.Information
             font: Kirigami.Theme.smallFont
