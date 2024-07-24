@@ -56,11 +56,9 @@ void UsersModel::populate()
 {
     mUserList.clear();
 
-    QList<KUser> userList = KUser::allUsers();
+    const QList<KUser> userList = KUser::allUsers();
 
-    KUser user;
-
-    foreach (user, userList) {
+    for (const KUser &user : userList) {
         K_UID uuid = user.userId().nativeId();
 
         // invalid user

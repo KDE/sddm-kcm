@@ -79,7 +79,7 @@ void SddmAuthHelper::copyDirectoryRecursively(const QString &source, const QStri
     const QDir sourceDir(source);
     const auto entries = sourceDir.entryInfoList(QDir::NoDotAndDotDot | QDir::Dirs | QDir::Files);
     for (const auto &entry : entries) {
-        const auto destinationPath = destination + '/' + entry.fileName();
+        const QString destinationPath = destination + QLatin1Char('/') + entry.fileName();
         if (entry.isFile()) {
             copyFile(entry.absoluteFilePath(), destinationPath);
         } else {
@@ -181,7 +181,7 @@ ActionReply SddmAuthHelper::sync(const QVariantMap &args)
 
     // copy kscreen config
     if (!args[QStringLiteral("kscreen-config")].isNull()) {
-        const QString destinationDir = sddmHomeDirPath + "/.local/share/kscreen/";
+        const QString destinationDir = sddmHomeDirPath + QStringLiteral("/.local/share/kscreen/");
         QSet<QString> done;
         copyDirectoryRecursively(args[QStringLiteral("kscreen-config")].toString(), destinationDir, done);
     }
@@ -246,7 +246,7 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kdeglobals"));
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/plasmarc"));
 
-    QDir(sddmHomeDirPath + "/.local/share/kscreen/").removeRecursively();
+    QDir(sddmHomeDirPath + QStringLiteral("/.local/share/kscreen/")).removeRecursively();
 
     // remove cursor theme, NumLock preference, and scaling DPI from config file
     ActionReply reply = ActionReply::HelperErrorReply();
@@ -412,13 +412,13 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
             archive.reset(new KTar(filterDev.data()));
         } else {
             auto e = ActionReply::HelperErrorReply();
-            e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
+            e.setErrorDescription(QString::fromUtf8(kli18n("Invalid theme package").untranslatedText()));
             return e;
         }
 
         if (!archive->open(QIODevice::ReadOnly)) {
             auto e = ActionReply::HelperErrorReply();
-            e.setErrorDescription(kli18n("Could not open file").untranslatedText());
+            e.setErrorDescription(QString::fromUtf8(kli18n("Could not open file").untranslatedText()));
             return e;
         }
 
@@ -432,14 +432,14 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
             auto entry = directory->entry(name);
             if (!entry->isDirectory()) {
                 auto e = ActionReply::HelperErrorReply();
-                e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
+                e.setErrorDescription(QString::fromUtf8(kli18n("Invalid theme package").untranslatedText()));
                 return e;
             }
             auto subDirectory = static_cast<const KArchiveDirectory *>(entry);
             auto metadataFile = subDirectory->file(QStringLiteral("metadata.desktop"));
             if (!metadataFile || !metadataFile->data().contains("[SddmGreeterTheme]")) {
                 auto e = ActionReply::HelperErrorReply();
-                e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
+                e.setErrorDescription(QString::fromUtf8(kli18n("Invalid theme package").untranslatedText()));
                 return e;
             }
             installedPaths.append(themesBaseDir + QLatin1Char('/') + name);
@@ -447,7 +447,7 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
 
         if (!directory->copyTo(themesBaseDir)) {
             auto e = ActionReply::HelperErrorReply();
-            e.setErrorDescription(kli18n("Could not decompress archive").untranslatedText());
+            e.setErrorDescription(QString::fromUtf8(kli18n("Could not decompress archive").untranslatedText()));
             return e;
         }
     }

@@ -77,12 +77,12 @@ int main(int argc, char **argv)
             return -1;
         }
 
-        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"), KConfig::SimpleConfig), "DownloadedThemes");
+        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"), KConfig::SimpleConfig), QStringLiteral("DownloadedThemes"));
         cg.writeEntry(themefile.absoluteFilePath(), job->data().value(QStringLiteral("installedPaths")).toStringList());
         return 0;
     }
     if (parser.isSet(QStringLiteral("uninstall"))) {
-        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"), KConfig::SimpleConfig), "DownloadedThemes");
+        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"), KConfig::SimpleConfig), QStringLiteral("DownloadedThemes"));
         const QStringList installed = cg.readEntry(args.first(), QStringList());
         for (const QString &installedTheme : installed) {
             KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmsddm.uninstalltheme"));

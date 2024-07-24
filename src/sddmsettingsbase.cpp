@@ -30,40 +30,40 @@ SddmSettingsBase::SddmSettingsBase(KSharedConfigPtr config, QObject *parent)
 
 QString SddmSettingsBase::defaultCurrent() const
 {
-    return m_defaultConfig->group("Theme").readEntry("Current");
+    return m_defaultConfig->group(QStringLiteral("Theme")).readEntry("Current");
 }
 
 unsigned int SddmSettingsBase::defaultMinimumUid() const
 {
-    return m_defaultConfig->group("Users").readEntry("MinimumUid", 1000);
+    return m_defaultConfig->group(QStringLiteral("Users")).readEntry("MinimumUid", 1000);
 }
 
 unsigned int SddmSettingsBase::defaultMaximumUid() const
 {
-    return m_defaultConfig->group("Users").readEntry("MaximumUid", 60000);
+    return m_defaultConfig->group(QStringLiteral("Users")).readEntry("MaximumUid", 60000);
 }
 
 QString SddmSettingsBase::defaultUser() const
 {
-    return m_defaultConfig->group("AutoLogin").readEntry("User");
+    return m_defaultConfig->group(QStringLiteral("AutoLogin")).readEntry("User");
 }
 
 QString SddmSettingsBase::defaultSession() const
 {
-    return m_defaultConfig->group("AutoLogin").readEntry("Session");
+    return m_defaultConfig->group(QStringLiteral("AutoLogin")).readEntry("Session");
 }
 
 bool SddmSettingsBase::defaultRelogin() const
 {
-    return m_defaultConfig->group("AutoLogin").readEntry("Relogin", false);
+    return m_defaultConfig->group(QStringLiteral("AutoLogin")).readEntry("Relogin", false);
 }
 
 QString SddmSettingsBase::defaultHaltCommand() const
 {
-    return m_defaultConfig->group("General").readEntry("HaltCommand");
+    return m_defaultConfig->group(QStringLiteral("General")).readEntry("HaltCommand");
 }
 
 QString SddmSettingsBase::defaultRebootCommand() const
 {
-    return m_defaultConfig->group("General").readEntry("RebootCommand");
+    return m_defaultConfig->group(QStringLiteral("General")).readEntry("RebootCommand");
 }

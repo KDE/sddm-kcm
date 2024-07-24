@@ -67,7 +67,7 @@ void ThemeMetadata::read(const QString &filename)
 
     QSharedPointer<KConfig> configFile = QSharedPointer<KConfig>(new KConfig(filename, KConfig::SimpleConfig));
 
-    KConfigGroup config = configFile->group("SddmGreeterTheme");
+    KConfigGroup config = configFile->group(QStringLiteral("SddmGreeterTheme"));
 
     // d->themeid = config.readEntry("Theme-Id");
     d->name = config.readEntry("Name");

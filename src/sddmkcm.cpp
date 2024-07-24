@@ -161,28 +161,28 @@ void SddmKcm::synchronizeSettings()
     // QDir returns "." and true for exists() in the case of a non-existent user;
     QString sddmHomeDirPath = KUser("sddm").homeDir();
     if (sddmHomeDirPath.isEmpty()) {
-        Q_EMIT errorOccured(kli18n("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.").untranslatedText());
+        Q_EMIT errorOccured(QString::fromUtf8(kli18n("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.").untranslatedText()));
         return;
     }
 
     // read Plasma values
     KConfig cursorConfig(QStringLiteral("kcminputrc"));
-    KConfigGroup cursorConfigGroup(&cursorConfig, "Mouse");
+    KConfigGroup cursorConfigGroup(&cursorConfig, QStringLiteral("Mouse"));
     QString cursorTheme = cursorConfigGroup.readEntry("cursorTheme", QString());
     QString cursorSize = cursorConfigGroup.readEntry("cursorSize", QString());
 
     KConfig dpiConfig(QStringLiteral("kcmfonts"));
-    KConfigGroup dpiConfigGroup(&dpiConfig, "General");
+    KConfigGroup dpiConfigGroup(&dpiConfig, QStringLiteral("General"));
     QString dpiValue = dpiConfigGroup.readEntry("forceFontDPI");
     QString dpiArgument = QStringLiteral("-dpi ") + dpiValue;
 
     KConfig numLockConfig(QStringLiteral("kcminputrc"));
-    KConfigGroup numLockConfigGroup(&numLockConfig, "Keyboard");
+    KConfigGroup numLockConfigGroup(&numLockConfig, QStringLiteral("Keyboard"));
     QString numLock = numLockConfigGroup.readEntry("NumLock");
 
     // Syncing the font only works with SDDM >= 0.19, but will not have a negative effect with older versions
     KConfig plasmaFontConfig(QStringLiteral("kdeglobals"));
-    KConfigGroup plasmaFontGroup(&plasmaFontConfig, "General");
+    KConfigGroup plasmaFontGroup(&plasmaFontConfig, QStringLiteral("General"));
     QString plasmaFont = plasmaFontGroup.readEntry("font", QApplication::font().toString());
 
     // define paths
@@ -266,7 +266,7 @@ void SddmKcm::synchronizeSettings()
         qDebug() << "Cannot find kwinoutputconfiguration.json file";
     }
 
-    auto path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kscreen/", QStandardPaths::LocateDirectory);
+    auto path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kscreen/"), QStandardPaths::LocateDirectory);
     if (!path.isEmpty()) {
         args[QStringLiteral("kscreen-config")] = path;
     }
@@ -299,7 +299,7 @@ void SddmKcm::resetSyncronizedSettings()
     // QDir returns "." and true for exists() in the case of a non-existent user
     QString sddmHomeDirPath = KUser("sddm").homeDir();
     if (sddmHomeDirPath.isEmpty()) {
-        Q_EMIT errorOccured(kli18n("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.").untranslatedText());
+        Q_EMIT errorOccured(QString::fromUtf8(kli18n("Cannot proceed, user 'sddm' does not exist. Please check your SDDM install.").untranslatedText()));
         return;
     }
 

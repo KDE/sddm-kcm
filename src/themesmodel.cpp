@@ -22,7 +22,7 @@ ThemesModel::ThemesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     populate();
-    m_customInstalledThemes = KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"))->group("DownloadedThemes").entryMap().values();
+    m_customInstalledThemes = KSharedConfig::openConfig(QStringLiteral("sddmthemeinstallerrc"))->group(QStringLiteral("DownloadedThemes")).entryMap().values();
 }
 
 ThemesModel::~ThemesModel()
@@ -125,7 +125,8 @@ void ThemesModel::populate()
         endResetModel();
     }
 
-    const QString themesBaseDir = KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::SimpleConfig)->group("Theme").readEntry("ThemeDir");
+    const QString themesBaseDir =
+        KSharedConfig::openConfig(QStringLiteral(SDDM_CONFIG_FILE), KConfig::SimpleConfig)->group(QStringLiteral("Theme")).readEntry("ThemeDir");
     QStringList themesBaseDirs;
     if (!themesBaseDir.isEmpty()) {
         themesBaseDirs.append(themesBaseDir);
@@ -162,7 +163,7 @@ void ThemesModel::add(const QString &id, const QString &path)
         const QString themeConfigPath = data.path() + data.configfile();
         auto themeConfig = KSharedConfig::openConfig(themeConfigPath + QStringLiteral(".user"), KConfig::CascadeConfig);
         themeConfig->addConfigSources({themeConfigPath});
-        const QString backgroundPath = themeConfig->group("General").readEntry("background");
+        const QString backgroundPath = themeConfig->group(QStringLiteral("General")).readEntry("background");
         if (backgroundPath.startsWith(QStringLiteral("/"))) {
             m_currentWallpapers.insert(data.themeid(), backgroundPath);
         } else {

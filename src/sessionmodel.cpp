@@ -51,7 +51,8 @@ void SessionModel::loadDir(const QString &path, SessionType type)
     dir.setNameFilters(QStringList() << QStringLiteral("*.desktop"));
     dir.setFilter(QDir::Files);
     // read session
-    foreach (const QString &session, dir.entryList()) {
+    const QStringList sessionList = dir.entryList();
+    for (const QString &session : sessionList) {
         QFile inputFile(dir.absoluteFilePath(session));
         if (!inputFile.open(QIODevice::ReadOnly)) {
             continue;
