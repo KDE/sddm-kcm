@@ -16,6 +16,7 @@
 #include "usersmodel.h"
 
 #include <QApplication>
+#include <QDBusUnixFileDescriptor>
 #include <QDir>
 
 #include <KAuth/ExecuteJob>
@@ -90,16 +91,24 @@ void SddmKcm::installTheme(const QUrl &url)
 {
     KAuth::Action saveAction(QStringLiteral("org.kde.kcontrol.kcmsddm.installtheme"));
     saveAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
-    saveAction.addArgument(QStringLiteral("filePath"), url.toLocalFile());
-    auto job = saveAction.execute();
-    connect(job, &KJob::result, this, [this, job] {
-        if (job->error()) {
-            Q_EMIT errorOccured(job->errorString());
-        } else {
-            m_themesModel->populate();
-        }
-    });
-    job->start();
+
+    QFile theme(url.toLocalFile());
+    if (theme.open(QIODevice::ReadOnly)) {
+        const QDBusUnixFileDescriptor themefileFd(theme.handle());
+
+        saveAction.addArgument(QStringLiteral("filedescriptor"), QVariant::fromValue(themefileFd));
+        auto job = saveAction.execute();
+        connect(job, &KJob::result, this, [this, job] {
+            if (job->error()) {
+                Q_EMIT errorOccured(job->errorString());
+            } else {
+                m_themesModel->populate();
+            }
+        });
+        job->start();
+    } else {
+        Q_EMIT errorOccured(QStringLiteral("Unable to open theme package"));
+    }
 }
 
 void SddmKcm::save()

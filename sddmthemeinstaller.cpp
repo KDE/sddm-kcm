@@ -8,6 +8,7 @@
 #include <QApplication>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
+#include <QDBusUnixFileDescriptor>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -55,7 +56,16 @@ int main(int argc, char **argv)
 
         KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmsddm.installtheme"));
         action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
-        action.addArgument(QStringLiteral("filePath"), themefile.absoluteFilePath());
+
+        QFile theme(themefile.absoluteFilePath());
+        if (!theme.open(QIODevice::ReadOnly)) {
+            qWarning() << "Unable to open file";
+            return 0;
+        }
+
+        const QDBusUnixFileDescriptor themefileFd(theme.handle());
+
+        action.addArgument(QStringLiteral("filedescriptor"), QVariant::fromValue(themefileFd));
 
         KAuth::ExecuteJob *job = action.execute();
         bool rc = job->exec();

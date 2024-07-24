@@ -10,6 +10,8 @@
 
 #include <unistd.h>
 
+#include <QBuffer>
+#include <QDBusUnixFileDescriptor>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -19,6 +21,7 @@
 #include <QSharedPointer>
 
 #include <KArchive>
+#include <KCompressionDevice>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLazyLocalizedString>
@@ -359,8 +362,14 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
 
 ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
 {
-    const QString filePath = args[QStringLiteral("filePath")].toString();
-    if (filePath.isEmpty()) {
+    const QDBusUnixFileDescriptor themefileFd = args[QStringLiteral("filedescriptor")].value<QDBusUnixFileDescriptor>();
+    QFile theme;
+
+    if (!themefileFd.isValid()) {
+        return ActionReply::HelperErrorReply();
+    }
+
+    if (!theme.open(themefileFd.fileDescriptor(), QIODevice::ReadOnly)) {
         return ActionReply::HelperErrorReply();
     }
 
@@ -370,69 +379,77 @@ ActionReply SddmAuthHelper::installtheme(const QVariantMap &args)
         return ActionReply::HelperErrorReply();
     }
 
-    qDebug() << "Installing " << filePath << " into " << themesBaseDir;
-
-    if (!QFile::exists(filePath)) {
-        return ActionReply::HelperErrorReply();
-    }
+    QByteArray themeData = theme.readAll();
+    QBuffer themeBuffer(&themeData);
 
     QMimeDatabase db;
-    QMimeType mimeType = db.mimeTypeForFile(filePath);
+    QMimeType mimeType = db.mimeTypeForData(themeData);
     qWarning() << "Postinstallation: uncompress the file";
 
-    QScopedPointer<KArchive> archive;
+    QScopedPointer<QIODevice> filterDev;
+    KCompressionDevice::CompressionType compressionType = KCompressionDevice::compressionTypeForMimeType(mimeType.name());
 
-    // there must be a better way to do this? If not, make a static bool KZip::supportsMimeType(const QMimeType &type); ?
-    // or even a factory class in KArchive
-
-    if (mimeType.inherits(QStringLiteral("application/zip"))) {
-        archive.reset(new KZip(filePath));
-    } else if (mimeType.inherits(QStringLiteral("application/tar")) || mimeType.inherits(QStringLiteral("application/x-gzip"))
-               || mimeType.inherits(QStringLiteral("application/x-bzip")) || mimeType.inherits(QStringLiteral("application/x-lzma"))
-               || mimeType.inherits(QStringLiteral("application/x-xz")) || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
-               || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
-        archive.reset(new KTar(filePath));
+    if (compressionType == KCompressionDevice::None) {
+        // KCompressionDevice::None may indicate an uncompressed Tar or any other archive format
+        filterDev.reset(new QBuffer(&themeBuffer.buffer()));
     } else {
-        auto e = ActionReply::HelperErrorReply();
-        e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
-        return e;
+        filterDev.reset(new KCompressionDevice(&themeBuffer, false, compressionType));
     }
-
-    if (!archive->open(QIODevice::ReadOnly)) {
-        auto e = ActionReply::HelperErrorReply();
-        e.setErrorDescription(kli18n("Could not open file").untranslatedText());
-        return e;
-    }
-
-    auto directory = archive->directory();
 
     QStringList installedPaths;
 
-    // some basic validation
-    // the top level should only have folders, and those folders should contain a valid metadata.desktop file
-    // if we get anything else, abort everything before copying
-    const auto entries = directory->entries();
-    for (const QString &name : entries) {
-        auto entry = directory->entry(name);
-        if (!entry->isDirectory()) {
-            auto e = ActionReply::HelperErrorReply();
-            e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
-            return e;
-        }
-        auto subDirectory = static_cast<const KArchiveDirectory *>(entry);
-        auto metadataFile = subDirectory->file(QStringLiteral("metadata.desktop"));
-        if (!metadataFile || !metadataFile->data().contains("[SddmGreeterTheme]")) {
-            auto e = ActionReply::HelperErrorReply();
-            e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
-            return e;
-        }
-        installedPaths.append(themesBaseDir + QLatin1Char('/') + name);
-    }
+    {
+        QScopedPointer<KArchive> archive;
 
-    if (!directory->copyTo(themesBaseDir)) {
-        auto e = ActionReply::HelperErrorReply();
-        e.setErrorDescription(kli18n("Could not decompress archive").untranslatedText());
-        return e;
+        // there must be a better way to do this? If not, make a static bool KZip::supportsMimeType(const QMimeType &type);?
+        // or even a factory class in KArchive
+        if (mimeType.inherits(QStringLiteral("application/zip"))) {
+            archive.reset(new KZip(filterDev.data()));
+        } else if (mimeType.inherits(QStringLiteral("application/tar")) || mimeType.inherits(QStringLiteral("application/x-gzip"))
+                   || mimeType.inherits(QStringLiteral("application/x-bzip")) || mimeType.inherits(QStringLiteral("application/x-lzma"))
+                   || mimeType.inherits(QStringLiteral("application/x-xz")) || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
+                   || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
+            archive.reset(new KTar(filterDev.data()));
+        } else {
+            auto e = ActionReply::HelperErrorReply();
+            e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
+            return e;
+        }
+
+        if (!archive->open(QIODevice::ReadOnly)) {
+            auto e = ActionReply::HelperErrorReply();
+            e.setErrorDescription(kli18n("Could not open file").untranslatedText());
+            return e;
+        }
+
+        auto directory = archive->directory();
+
+        // some basic validation
+        // the top level should only have folders, and those folders should contain a valid metadata.desktop file
+        // if we get anything else, abort everything before copying
+        const auto entries = directory->entries();
+        for (const QString &name : entries) {
+            auto entry = directory->entry(name);
+            if (!entry->isDirectory()) {
+                auto e = ActionReply::HelperErrorReply();
+                e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
+                return e;
+            }
+            auto subDirectory = static_cast<const KArchiveDirectory *>(entry);
+            auto metadataFile = subDirectory->file(QStringLiteral("metadata.desktop"));
+            if (!metadataFile || !metadataFile->data().contains("[SddmGreeterTheme]")) {
+                auto e = ActionReply::HelperErrorReply();
+                e.setErrorDescription(kli18n("Invalid theme package").untranslatedText());
+                return e;
+            }
+            installedPaths.append(themesBaseDir + QLatin1Char('/') + name);
+        }
+
+        if (!directory->copyTo(themesBaseDir)) {
+            auto e = ActionReply::HelperErrorReply();
+            e.setErrorDescription(kli18n("Could not decompress archive").untranslatedText());
+            return e;
+        }
     }
 
     auto rc = ActionReply::SuccessReply();

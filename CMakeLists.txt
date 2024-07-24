@@ -3,7 +3,7 @@ project(sddm-kcm)
 set(PROJECT_VERSION "6.1.80")
 
 set(QT_MIN_VERSION "6.6.0")
-set(KF6_MIN_VERSION "6.2.0")
+set(KF6_MIN_VERSION "6.5.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
 set(CMAKE_CXX_STANDARD 20)
@@ -20,7 +20,7 @@ include(FeatureSummary)
 include(KDEGitCommitHooks)
 include(ECMDeprecationSettings)
 
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Quick QuickWidgets)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets Quick QuickWidgets DBus)
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
@@ -43,7 +43,7 @@ add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 kauth_install_actions(org.kde.kcontrol.kcmsddm kcm_sddm.actions)
 
 add_executable(kcmsddm_authhelper sddmauthhelper.cpp sddmauthhelper.h)
-target_link_libraries(kcmsddm_authhelper KF6::AuthCore KF6::ConfigCore KF6::Archive KF6::I18n)
+target_link_libraries(kcmsddm_authhelper KF6::AuthCore KF6::ConfigCore KF6::Archive KF6::I18n Qt6::DBus)
 
 kauth_install_helper_files(kcmsddm_authhelper org.kde.kcontrol.kcmsddm root)
 install(TARGETS kcmsddm_authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
@@ -59,6 +59,7 @@ target_link_libraries(sddmthemeinstaller
     KF6::CoreAddons
     KF6::ConfigCore
     KF6::WidgetsAddons
+    Qt6::DBus
 )
 install(TARGETS sddmthemeinstaller ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
