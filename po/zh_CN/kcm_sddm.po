@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-25 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,44 +17,44 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/sddm-kcm/kcm_sddm.pot\n"
 "X-Crowdin-File-ID: 43053\n"
 
-#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
 msgstr "无效的主题包"
 
-#: sddmauthhelper.cpp:403
+#: sddmauthhelper.cpp:421
 msgid "Could not open file"
 msgstr "无法打开文件"
 
-#: sddmauthhelper.cpp:434
+#: sddmauthhelper.cpp:450
 msgid "Could not decompress archive"
 msgstr "无法解压主题包"
 
-#: sddmthemeinstaller.cpp:29
+#: sddmthemeinstaller.cpp:30
 #, kde-format
 msgid "SDDM theme installer"
 msgstr "SDDM 主题安装程序"
 
-#: sddmthemeinstaller.cpp:36
+#: sddmthemeinstaller.cpp:37
 #, kde-format
 msgid "Install a theme."
 msgstr "安装主题。"
 
-#: sddmthemeinstaller.cpp:37
+#: sddmthemeinstaller.cpp:38
 #, kde-format
 msgid "Uninstall a theme."
 msgstr "卸载主题。"
 
-#: sddmthemeinstaller.cpp:39
+#: sddmthemeinstaller.cpp:40
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
 msgstr "要安装的主题包，必须是一个保存在本机中的压缩文件。"
 
-#: sddmthemeinstaller.cpp:65
+#: sddmthemeinstaller.cpp:75
 #, kde-format
 msgid "Unable to install theme"
 msgstr "无法安装主题"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
+#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "无法继续，用户“sddm”不存在。请检查本系统的 SDDM 安装状态是否正确。"

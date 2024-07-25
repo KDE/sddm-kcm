@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-25 00:40+0000\n"
 "PO-Revision-Date: 2020-09-19 10:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -18,44 +18,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
 msgstr "अमान्य स्वरूपण पैकेज"
 
-#: sddmauthhelper.cpp:403
+#: sddmauthhelper.cpp:421
 msgid "Could not open file"
 msgstr "फ़ाइल को खोला नहीं जा सका"
 
-#: sddmauthhelper.cpp:434
+#: sddmauthhelper.cpp:450
 msgid "Could not decompress archive"
 msgstr ""
 
-#: sddmthemeinstaller.cpp:29
+#: sddmthemeinstaller.cpp:30
 #, kde-format
 msgid "SDDM theme installer"
 msgstr "एसडिडिएम प्रसंग संस्थापक"
 
-#: sddmthemeinstaller.cpp:36
+#: sddmthemeinstaller.cpp:37
 #, kde-format
 msgid "Install a theme."
 msgstr "स्वरूपण स्थापित करें।"
 
-#: sddmthemeinstaller.cpp:37
+#: sddmthemeinstaller.cpp:38
 #, kde-format
 msgid "Uninstall a theme."
 msgstr "प्रसंग की स्थापना रद्द करें"
 
-#: sddmthemeinstaller.cpp:39
+#: sddmthemeinstaller.cpp:40
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
 msgstr ""
 
-#: sddmthemeinstaller.cpp:65
+#: sddmthemeinstaller.cpp:75
 #, kde-format
 msgid "Unable to install theme"
 msgstr "प्रसंग स्थापित करने में असमर्थ"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
+#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

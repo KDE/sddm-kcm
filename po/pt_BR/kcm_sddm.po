@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-25 00:40+0000\n"
 "PO-Revision-Date: 2023-08-02 00:31-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -20,44 +20,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
 msgstr "Pacote de tema inválido"
 
-#: sddmauthhelper.cpp:403
+#: sddmauthhelper.cpp:421
 msgid "Could not open file"
 msgstr "Não foi possível abrir o arquivo"
 
-#: sddmauthhelper.cpp:434
+#: sddmauthhelper.cpp:450
 msgid "Could not decompress archive"
 msgstr "Não foi possível descomprimir o arquivo"
 
-#: sddmthemeinstaller.cpp:29
+#: sddmthemeinstaller.cpp:30
 #, kde-format
 msgid "SDDM theme installer"
 msgstr "Instalador de temas SDDM"
 
-#: sddmthemeinstaller.cpp:36
+#: sddmthemeinstaller.cpp:37
 #, kde-format
 msgid "Install a theme."
 msgstr "Instala um tema."
 
-#: sddmthemeinstaller.cpp:37
+#: sddmthemeinstaller.cpp:38
 #, kde-format
 msgid "Uninstall a theme."
 msgstr "Desinstala um tema."
 
-#: sddmthemeinstaller.cpp:39
+#: sddmthemeinstaller.cpp:40
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
 msgstr "O tema a instalar deve ser um arquivo comprimido existente."
 
-#: sddmthemeinstaller.cpp:65
+#: sddmthemeinstaller.cpp:75
 #, kde-format
 msgid "Unable to install theme"
 msgstr "Não foi possível instalar o tema."
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
+#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

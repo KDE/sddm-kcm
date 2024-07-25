@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-25 00:40+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,46 +18,46 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
+#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
 msgstr "Лош пакет теме"
 
-#: sddmauthhelper.cpp:403
+#: sddmauthhelper.cpp:421
 #, fuzzy
 #| msgid "Could not decompress archive"
 msgid "Could not open file"
 msgstr "Не могу да распакујем архиву"
 
-#: sddmauthhelper.cpp:434
+#: sddmauthhelper.cpp:450
 msgid "Could not decompress archive"
 msgstr "Не могу да распакујем архиву"
 
-#: sddmthemeinstaller.cpp:29
+#: sddmthemeinstaller.cpp:30
 #, kde-format
 msgid "SDDM theme installer"
 msgstr "Инсталатор тема за СДДМ"
 
-#: sddmthemeinstaller.cpp:36
+#: sddmthemeinstaller.cpp:37
 #, kde-format
 msgid "Install a theme."
 msgstr "Инсталирај тему."
 
-#: sddmthemeinstaller.cpp:37
+#: sddmthemeinstaller.cpp:38
 #, kde-format
 msgid "Uninstall a theme."
 msgstr "Деинсталирај тему."
 
-#: sddmthemeinstaller.cpp:39
+#: sddmthemeinstaller.cpp:40
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
 msgstr "Тема за инсталирање, мора да буде постојећи фајл архиве."
 
-#: sddmthemeinstaller.cpp:65
+#: sddmthemeinstaller.cpp:75
 #, kde-format
 msgid "Unable to install theme"
 msgstr "Не могу да инсталирам тему"
 
-#: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
+#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
