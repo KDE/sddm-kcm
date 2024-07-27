@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-27 00:43+0000\n"
 "PO-Revision-Date: 2024-01-03 14:14+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -63,7 +63,7 @@ msgstr ""
 "Nem lehet folytatni, az „sddm” felhasználó nem létezik. Ellenőrizze az SDDM "
 "telepítést."
 
-#: src/sessionmodel.cpp:84
+#: src/sessionmodel.cpp:85
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"

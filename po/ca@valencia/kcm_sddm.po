@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-27 00:43+0000\n"
 "PO-Revision-Date: 2023-09-25 12:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 "No es pot continuar, l'usuari «sddm» no existix. Comproveu la instal·lació "
 "de SDDM."
 
-#: src/sessionmodel.cpp:84
+#: src/sessionmodel.cpp:85
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
