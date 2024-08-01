@@ -32,8 +32,8 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Service
 )
 
-ecm_set_disabled_deprecation_versions(QT 6.4.0
-    KF 5.240
+ecm_set_disabled_deprecation_versions(QT 6.7.0
+    KF 6.4.0
 )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_sddm\")
