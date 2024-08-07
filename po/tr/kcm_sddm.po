@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2015, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:40+0000\n"
-"PO-Revision-Date: 2023-11-25 20:10+0300\n"
+"PO-Revision-Date: 2024-08-06 11:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: sddmauthhelper.cpp:397 sddmauthhelper.cpp:419 sddmauthhelper.cpp:426
 msgid "Invalid theme package"
@@ -58,7 +58,7 @@ msgstr "Tema kurulamıyor"
 #: src/sddmkcm.cpp:155 src/sddmkcm.cpp:293
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr "Sürdürülemiyor; 'sddm' kullanıcısı yok. SDDM kurulumunuzu denetleyin."
+msgstr "Sürdürülemiyor, “sddm” kullanıcısı yok. SDDM kurulumunuzu denetleyin."
 
 #: src/sessionmodel.cpp:84
 #, kde-format
@@ -103,7 +103,7 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
-"Otomatik oturum açma, KDE Cüzdan kilidinizi kendiliğinden açmayı "
+"Kendiliğinden oturum açma, KDE Cüzdan kilidinizi kendiliğinden açmayı "
 "desteklemez, bu nedenden dolayı her oturum açtığınızda size kilidi açmanızı "
 "söyler.<nl/><nl/>Bundan kaçınmak için cüzdanınızın parolasını boş bir parola "
 "olarak ayarlayın. Bunun hiç de güvenli olmadığını ve yalnızca güvenilir bir "
@@ -124,13 +124,13 @@ msgstr "Oturumu kapattıktan hemen sonra yeniden oturum aç"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
-msgstr "En küçük kullanıcı UID'si:"
+msgstr "En küçük kullanıcı UID’si:"
 
 #: src/ui/Advanced.qml:160
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
-msgstr "En büyük kullanıcı UID'si:"
+msgstr "En büyük kullanıcı UID’si:"
 
 #: src/ui/Advanced.qml:175
 #, kde-format
