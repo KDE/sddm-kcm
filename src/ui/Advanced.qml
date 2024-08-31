@@ -32,6 +32,15 @@ Kirigami.Page {
                                 (kcm.sddmSettings.user == "" && kcm.sddmSettings.defaultUser != "")
                 }
                 onToggled: {
+
+                    if (checked) {
+                        kcm.sddmSettings.user = autologinUser.currentText
+                        kcm.sddmSettings.session = autologinSession.currentText
+                    } else {
+                        kcm.sddmSettings.user = ""
+                        kcm.sddmSettings.session = ""
+                    }
+
                     // Deliberately imperative because we only want the message
                     // to appear when the user checks the checkbox, not all the
                     // time when the checkbox is checked.
@@ -54,7 +63,6 @@ Kirigami.Page {
                 textRole: "display"
                 editable: true
                 onActivated: kcm.sddmSettings.user = currentText
-                onEnabledChanged:  enabled ? kcm.sddmSettings.user = currentText : kcm.sddmSettings.user = ""
                 KCM.SettingStateBinding {
                     visible: autologinBox.checked
                     configObject: kcm.sddmSettings
@@ -97,7 +105,6 @@ Kirigami.Page {
                 textRole: "name"
                 valueRole: "file"
                 onActivated: kcm.sddmSettings.session = currentValue
-                onEnabledChanged: enabled ? kcm.sddmSettings.session = currentValue : kcm.sddmSettings.session = ""
                 KCM.SettingStateBinding {
                     visible: autologinBox.checked
                     configObject: kcm.sddmSettings
