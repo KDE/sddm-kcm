@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-09-03 02:30+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -89,7 +89,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "Korisnik:"
 
-#: src/ui/Advanced.qml:92
+#: src/ui/Advanced.qml:100
 #, fuzzy, kde-format
 #| msgid "Session:"
 msgctxt ""
@@ -98,7 +98,7 @@ msgctxt ""
 msgid "with session"
 msgstr "Sesija:"
 
-#: src/ui/Advanced.qml:124
+#: src/ui/Advanced.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -108,32 +108,32 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 
-#: src/ui/Advanced.qml:129
+#: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr ""
 
-#: src/ui/Advanced.qml:135
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr ""
 
-#: src/ui/Advanced.qml:148
+#: src/ui/Advanced.qml:155
 #, fuzzy, kde-format
 #| msgid "Minimum UID:"
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Najmanji UID:"
 
-#: src/ui/Advanced.qml:160
+#: src/ui/Advanced.qml:167
 #, fuzzy, kde-format
 #| msgid "Maximum UID:"
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Najveći UID:"
 
-#: src/ui/Advanced.qml:175
+#: src/ui/Advanced.qml:182
 #, fuzzy, kde-format
 #| msgid "Halt Command:"
 msgctxt "@label:textbox"
@@ -141,7 +141,7 @@ msgid "Halt Command:"
 msgstr "Naredba gašenja:"
 
 # rewrite-msgid: /Reboot/Reset/
-#: src/ui/Advanced.qml:208
+#: src/ui/Advanced.qml:215
 #, fuzzy, kde-format
 #| msgid "Reboot Command:"
 msgctxt "@label:textbox"

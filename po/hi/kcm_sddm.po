@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-09-03 02:30+0000\n"
 "PO-Revision-Date: 2020-09-19 10:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -88,7 +88,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "उपयोक्ता के रूप में:"
 
-#: src/ui/Advanced.qml:92
+#: src/ui/Advanced.qml:100
 #, fuzzy, kde-format
 #| msgid "with session:"
 msgctxt ""
@@ -97,7 +97,7 @@ msgctxt ""
 msgid "with session"
 msgstr "सत्र के साथ :"
 
-#: src/ui/Advanced.qml:124
+#: src/ui/Advanced.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -107,39 +107,39 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 
-#: src/ui/Advanced.qml:129
+#: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr ""
 
-#: src/ui/Advanced.qml:135
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr ""
 
-#: src/ui/Advanced.qml:148
+#: src/ui/Advanced.qml:155
 #, fuzzy, kde-format
 #| msgid "Minimum user UID:"
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "न्यूनतम उपयोक्ता यूआइडी :"
 
-#: src/ui/Advanced.qml:160
+#: src/ui/Advanced.qml:167
 #, fuzzy, kde-format
 #| msgid "Maximum user UID:"
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "अधिकतम उपयोक्ता यूआइडी :"
 
-#: src/ui/Advanced.qml:175
+#: src/ui/Advanced.qml:182
 #, fuzzy, kde-format
 #| msgid "Halt command:"
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "आदेश रोकें :"
 
-#: src/ui/Advanced.qml:208
+#: src/ui/Advanced.qml:215
 #, fuzzy, kde-format
 #| msgid "Reboot command:"
 msgctxt "@label:textbox"
