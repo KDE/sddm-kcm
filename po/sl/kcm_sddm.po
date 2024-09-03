@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:43+0000\n"
+"POT-Creation-Date: 2024-09-03 00:40+0000\n"
 "PO-Revision-Date: 2023-07-16 09:14+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -90,7 +90,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "kot uporabnik:"
 
-#: src/ui/Advanced.qml:92
+#: src/ui/Advanced.qml:100
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -98,7 +98,7 @@ msgctxt ""
 msgid "with session"
 msgstr "s sejo"
 
-#: src/ui/Advanced.qml:124
+#: src/ui/Advanced.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,36 +113,36 @@ msgstr ""
 "geslo. Upoštevajte, da to ni varno in se to sme izvajati le v zaupanja "
 "vrednem okolju."
 
-#: src/ui/Advanced.qml:129
+#: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Odpri nastavitve listnice KDE Wallet"
 
-#: src/ui/Advanced.qml:135
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Prijavi se takoj po odjavi"
 
-#: src/ui/Advanced.qml:148
+#: src/ui/Advanced.qml:155
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Najmanjši UID uporabnika:"
 
-#: src/ui/Advanced.qml:160
+#: src/ui/Advanced.qml:167
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Največji UID uporabnika:"
 
-#: src/ui/Advanced.qml:175
+#: src/ui/Advanced.qml:182
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Ukaz za zaustavitev:"
 
-#: src/ui/Advanced.qml:208
+#: src/ui/Advanced.qml:215
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

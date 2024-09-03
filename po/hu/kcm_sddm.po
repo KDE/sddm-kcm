@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:43+0000\n"
+"POT-Creation-Date: 2024-09-03 00:40+0000\n"
 "PO-Revision-Date: 2024-01-03 14:14+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -89,7 +89,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "felhasználó:"
 
-#: src/ui/Advanced.qml:92
+#: src/ui/Advanced.qml:100
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -97,7 +97,7 @@ msgctxt ""
 msgid "with session"
 msgstr "munkamenet"
 
-#: src/ui/Advanced.qml:124
+#: src/ui/Advanced.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -112,36 +112,36 @@ msgstr ""
 "jelszava. Vegye figyelembe, hogy ez nem biztonságos és csak megbízható "
 "környezetben szabad megtenni."
 
-#: src/ui/Advanced.qml:129
+#: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "A KDE Wallet beállításainak megnyitása"
 
-#: src/ui/Advanced.qml:135
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Bejelentkezés rögtön kijelentkezés után"
 
-#: src/ui/Advanced.qml:148
+#: src/ui/Advanced.qml:155
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Minimális felhasználó UID:"
 
-#: src/ui/Advanced.qml:160
+#: src/ui/Advanced.qml:167
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Maximális felhasználó UID:"
 
-#: src/ui/Advanced.qml:175
+#: src/ui/Advanced.qml:182
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Leállítás parancs:"
 
-#: src/ui/Advanced.qml:208
+#: src/ui/Advanced.qml:215
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

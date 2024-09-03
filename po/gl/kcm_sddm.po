@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:43+0000\n"
+"POT-Creation-Date: 2024-09-03 00:40+0000\n"
 "PO-Revision-Date: 2023-07-29 09:28+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -88,7 +88,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "como persoa usuaria:"
 
-#: src/ui/Advanced.qml:92
+#: src/ui/Advanced.qml:100
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -96,7 +96,7 @@ msgctxt ""
 msgid "with session"
 msgstr "con sesión"
 
-#: src/ui/Advanced.qml:124
+#: src/ui/Advanced.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -110,36 +110,36 @@ msgstr ""
 "evitalo, cambie a carteira para que o contrasinal estea baleiro. Teña en "
 "conta que isto non é seguro e só debería facerse nun contorno de confianza."
 
-#: src/ui/Advanced.qml:129
+#: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "Abrir a configuración da carteira de KDE"
 
-#: src/ui/Advanced.qml:135
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Acceder de novo inmediatamente tras saír."
 
-#: src/ui/Advanced.qml:148
+#: src/ui/Advanced.qml:155
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "UID mínimo de persoa usuaria:"
 
-#: src/ui/Advanced.qml:160
+#: src/ui/Advanced.qml:167
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "UID máximo de persoa usuaria:"
 
-#: src/ui/Advanced.qml:175
+#: src/ui/Advanced.qml:182
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Orde de apagar:"
 
-#: src/ui/Advanced.qml:208
+#: src/ui/Advanced.qml:215
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

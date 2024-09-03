@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:43+0000\n"
+"POT-Creation-Date: 2024-09-03 00:40+0000\n"
 "PO-Revision-Date: 2023-04-07 23:34-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -90,7 +90,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "使用するユーザ:"
 
-#: src/ui/Advanced.qml:92
+#: src/ui/Advanced.qml:100
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -98,7 +98,7 @@ msgctxt ""
 msgid "with session"
 msgstr "起動するセッション"
 
-#: src/ui/Advanced.qml:124
+#: src/ui/Advanced.qml:131
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -114,36 +114,36 @@ msgstr ""
 "自動ログインを使用する場合、KDE ウォレットは自動的にアンロックされません。し"
 "たがって、ログインするたびに手動でのアンロックを要求されます。"
 
-#: src/ui/Advanced.qml:129
+#: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "KDE ウォレット設定を開く"
 
-#: src/ui/Advanced.qml:135
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "ログオフ後に自動的に再度ログインする"
 
-#: src/ui/Advanced.qml:148
+#: src/ui/Advanced.qml:155
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "最小 ユーザ UID:"
 
-#: src/ui/Advanced.qml:160
+#: src/ui/Advanced.qml:167
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "最大 ユーザ UID:"
 
-#: src/ui/Advanced.qml:175
+#: src/ui/Advanced.qml:182
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "終了コマンド:"
 
-#: src/ui/Advanced.qml:208
+#: src/ui/Advanced.qml:215
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"

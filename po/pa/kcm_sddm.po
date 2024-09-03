@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:43+0000\n"
+"POT-Creation-Date: 2024-09-03 00:40+0000\n"
 "PO-Revision-Date: 2024-01-28 18:24-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -85,7 +85,7 @@ msgctxt ""
 msgid "as user:"
 msgstr "ਇਹ ਵਰਤੋਂਕਾਰ ਵਜੋਂ:"
 
-#: src/ui/Advanced.qml:92
+#: src/ui/Advanced.qml:100
 #, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
@@ -93,7 +93,7 @@ msgctxt ""
 msgid "with session"
 msgstr "ਸ਼ੈਸ਼ਨ ਨਾਲ"
 
-#: src/ui/Advanced.qml:124
+#: src/ui/Advanced.qml:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -103,36 +103,36 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 
-#: src/ui/Advanced.qml:129
+#: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
 msgstr "KDE ਵਾਲੇਟ ਸੈਟਿੰਗਾਂ ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: src/ui/Advanced.qml:135
+#: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "ਲਾਗ ਆਫ਼ ਕਰਨ ਦੇ ਤੁਰੰਤ ਬਾਅਦ ਮੁੜ ਲਾਗ ਇਨ ਕਰੋ"
 
-#: src/ui/Advanced.qml:148
+#: src/ui/Advanced.qml:155
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "ਘੱਟੋ-ਘੱਟ ਵਰਤੋਂਕਾਰ UID:"
 
-#: src/ui/Advanced.qml:160
+#: src/ui/Advanced.qml:167
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "ਵੱਧੋ-ਵੱਧ ਵਰਤੋਂਕਾਰ UID:"
 
-#: src/ui/Advanced.qml:175
+#: src/ui/Advanced.qml:182
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "ਬੰਦ ਕਰਨ ਲਈ ਕਮਾਂਡ:"
 
-#: src/ui/Advanced.qml:208
+#: src/ui/Advanced.qml:215
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
