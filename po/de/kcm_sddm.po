@@ -1,12 +1,12 @@
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 00:40+0000\n"
-"PO-Revision-Date: 2023-12-22 00:30+0100\n"
+"PO-Revision-Date: 2024-09-03 22:22+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -57,6 +57,8 @@ msgstr "Das Design kann nicht installiert werden"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Das weitere Ausführen ist nicht möglich, da der Benutzer „sddm“ nicht "
+"vorhanden ist. Die Installation von SDDM sollte überprüft werden."
 
 #: src/sessionmodel.cpp:85
 #, kde-format
@@ -214,6 +216,8 @@ msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
+"Hiermit wird der SDDM-Anmeldebildschirm für die Berücksichtigung folgender "
+"Plasma-Einstellungen eingerichtet:"
 
 #: src/ui/main.qml:143
 #, kde-kuit-format
@@ -225,22 +229,19 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>Farbschema,</item><item>Zeigerdesign,</"
-"item><item>Zeigergröße,</item><item>Schriftarten,</item><item>Schrift-"
-"Rendering,</item><item>Zahlen-Feststelltaste,</item><item>Plasma-Design</"
-"item><item>und DPI-Skalierung</item> <item>Anzeige-Einstellungen (nur "
+"item><item>Zeigergröße,</item><item>Schriftart,</item><item>Schrift-"
+"Rendering,</item><item>Zahlen-Feststelltaste,</item><item>Plasma-Design,</"
+"item><item>DPI-Skalierung und</item> <item>Anzeige-Einstellungen (nur "
 "Wayland)</item></list></para>"
 
 #: src/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please note that theme files must be installed globally for settings "
-#| "synchronization to work."
+#, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
-"Beachten Sie, dass die Designdatei global installiert sein muss, damit das "
-"Abgleichen der Einstellungen funktioniert."
+"Beachten Sie, dass Designdateien global installiert sein müssen, damit diese "
+"auf dem SDDM-Anmeldebildschirm angezeigt werden."
 
 #: src/ui/main.qml:153
 #, kde-format
