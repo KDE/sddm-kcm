@@ -166,34 +166,43 @@ KCM.GridViewKCM {
         property var modelIndex
         property string imagePath
         title: i18nc("@title:window", "Change Background")
-        Item {
+
+        Kirigami.AbstractCard {
+            id: card
+
             implicitWidth: 0.75 * root.width
-            implicitHeight: backgroundImage.hasImage ? backgroundImage.implicitHeight : placeHolder.implicitHeight
+            implicitHeight: backgroundImage.hasImage
+                            ? backgroundImage.implicitHeight + (backgroundImage.anchors.margins * 2)
+                            : placeHolder.implicitHeight + (placeHolder.anchors.margins * 2)
+
+            Image {
+                id: backgroundImage
+
+                readonly property bool hasImage: status == Image.Ready || status == Image.Loading
+
+                anchors {
+                    top: parent.top
+                    left: parent.left
+                    right: parent.right
+                    margins: Kirigami.Units.smallSpacing + card.background.borderWidth
+                }
+
+                source: "file:" + backgroundSheet.imagePath
+
+                fillMode: Image.PreserveAspectFit
+                smooth: true
+            }
+
             Kirigami.PlaceholderMessage  {
                 id: placeHolder
                 anchors.fill: parent
+                anchors.margins: Kirigami.Units.largeSpacing * 4
                 visible: !backgroundImage.hasImage
                 icon.name: "view-preview"
                 text: i18n("No image selected")
             }
-            Image {
-                id: backgroundImage
-                readonly property bool hasImage: status == Image.Ready || status == Image.Loading
-                width: parent.width
-                source: "file:" + backgroundSheet.imagePath
-                sourceSize.width: width
-                fillMode: Image.PreserveAspectFit
-                smooth: true
-                layer.enabled: true
-                layer.effect: DropShadow {
-                    verticalOffset: 2
-                    radius: 10
-                    samples: 32
-                    cached: true
-                    color: Qt.rgba(0, 0, 0, 0.3)
-                }
-            }
         }
+
         footer: RowLayout {
             spacing: Kirigami.Units.smallSpacing
 
