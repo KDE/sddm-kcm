@@ -13,7 +13,7 @@ import Qt5Compat.GraphicalEffects
 
 
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.newstuff 1.81 as NewStuff
 import org.kde.private.kcms.sddm 1.0
 
@@ -130,10 +130,16 @@ KCM.GridViewKCM {
     }
     DetailsDialog {
         id: detailsDialog
+
+        implicitWidth: 0.75 * root.width
     }
-    Kirigami.OverlaySheet {
+    Kirigami.Dialog {
         id: syncSheet
+
         title: i18nc("@title:window", "Apply Plasma Settings")
+
+        padding: Kirigami.Units.largeSpacing
+
         Kirigami.InlineMessage {
             implicitWidth: Math.max(footer.implicitWidth, Kirigami.Units.gridUnit * 22)
             visible: true
@@ -143,29 +149,28 @@ KCM.GridViewKCM {
                 xi18nc("@info", "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</item><item>NumLock preference,</item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</item></list></para>") +
                 i18n("Please note that theme files must be installed globally to be reflected on the SDDM login screen.")
         }
-        footer: RowLayout {
-            spacing: Kirigami.Units.smallSpacing
 
-            Item {
-                Layout.fillWidth: true
-            }
-            QQC2.Button {
+        customFooterActions: [
+            Kirigami.Action {
                 text: i18nc("@action:button", "Apply")
                 icon.name: "dialog-ok-apply"
-                onClicked: kcm.synchronizeSettings()
-            }
-            QQC2.Button {
+                onTriggered: kcm.synchronizeSettings()
+            },
+            Kirigami.Action {
                 text: i18nc("@action:button", "Reset to Default Settings")
                 icon.name: "edit-undo"
-                onClicked: kcm.resetSyncronizedSettings()
+                onTriggered: kcm.resetSyncronizedSettings()
             }
-        }
+        ]
     }
-    Kirigami.OverlaySheet {
+    Kirigami.Dialog {
         id: backgroundSheet
         property var modelIndex
         property string imagePath
+
         title: i18nc("@title:window", "Change Background")
+
+        padding: Kirigami.Units.largeSpacing
 
         Kirigami.AbstractCard {
             id: card
@@ -203,31 +208,27 @@ KCM.GridViewKCM {
             }
         }
 
-        footer: RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-
-            Item {
-                Layout.fillWidth: true
-            }
-            QQC2.Button {
+        customFooterActions: [
+            Kirigami.Action {
                 icon.name: "document-open"
                 text: i18nc("@action:button", "Load From File…")
-                onClicked: imageDialog.open()
-            }
-            QQC2.Button {
+                onTriggered: imageDialog.open()
+            },
+            Kirigami.Action {
                 icon.name: "edit-clear"
                 text: i18nc("@action:button", "Clear Image")
-                onClicked: {
+                onTriggered: {
                     view.model.setData(backgroundSheet.modelIndex, "", ThemesModel.CurrentBackgroundRole)
                     backgroundSheet.close()
                 }
             }
-            FileDialog {
-                id: imageDialog
-                onAccepted: {
-                    view.model.setData(backgroundSheet.modelIndex, kcm.toLocalFile(selectedFile), ThemesModel.CurrentBackgroundRole)
-                    backgroundSheet.close()
-                }
+        ]
+
+        FileDialog {
+            id: imageDialog
+            onAccepted: {
+                view.model.setData(backgroundSheet.modelIndex, kcm.toLocalFile(selectedFile), ThemesModel.CurrentBackgroundRole)
+                backgroundSheet.close()
             }
         }
     }

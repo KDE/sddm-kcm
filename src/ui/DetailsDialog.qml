@@ -13,7 +13,7 @@ import QtQuick.Window
 
 import org.kde.kirigami as Kirigami
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: dialog
 
     property string themeName: ""
@@ -27,10 +27,11 @@ Kirigami.OverlaySheet {
 
     title: i18nc("@title:window, %1 is the theme name, %2 the version", "%1 (%2)", themeName, version)
 
+    padding: Kirigami.Units.largeSpacing
+
     ColumnLayout {
         id: layout
 
-        Layout.preferredWidth: 0.75 * root.width
         spacing: Kirigami.Units.smallSpacing
 
         Kirigami.AbstractCard {
