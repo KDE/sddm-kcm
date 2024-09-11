@@ -38,7 +38,6 @@ Kirigami.OverlaySheet {
                 id: previewImage
                 source: previewPath
                 width: layout.width
-                sourceSize.width: width
                 fillMode: Image.PreserveAspectFit
                 smooth: true
                 layer.enabled: true
