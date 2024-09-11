@@ -10,9 +10,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
-import Qt5Compat.GraphicalEffects
 
-import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Kirigami.OverlaySheet {
     property string themeName: ""
@@ -29,25 +28,22 @@ Kirigami.OverlaySheet {
         Layout.preferredWidth: 0.75 * root.width
         spacing: Kirigami.Units.smallSpacing
 
-        Item {
-            // we need this wrapper because of a limitation of Image where the implicitHeight is not adjusted when
-            // the height has been set as the layout does
+        Kirigami.AbstractCard {
+            id: card
+
             Layout.fillWidth: true
-            implicitHeight: previewImage.implicitHeight
+            implicitHeight: previewImage.implicitHeight + (previewImage.anchors.margins * 2)
+
             Image {
                 id: previewImage
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.margins: Kirigami.Units.smallSpacing + card.background.borderWidth
                 source: previewPath
-                width: layout.width
                 fillMode: Image.PreserveAspectFit
                 smooth: true
-                layer.enabled: true
-                layer.effect: DropShadow {
-                    verticalOffset: 2
-                    radius: 10
-                    samples: 32
-                    cached: true
-                    color: Qt.rgba(0, 0, 0, 0.3)
-                }
+                clip: true
             }
         }
         Kirigami.PlaceholderMessage {
