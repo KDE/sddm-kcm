@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2023-10-03 10:42+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -144,18 +144,18 @@ msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "פקודת הפעלה מחדש:"
 
-#: src/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:28
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:57
+#: src/ui/DetailsDialog.qml:62
 #, kde-format
 msgid "No preview available"
 msgstr "אין תצוגה מקדימה זמינה"
 
-#: src/ui/DetailsDialog.qml:60
+#: src/ui/DetailsDialog.qml:68
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -204,13 +204,13 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "מחיקה"
 
-#: src/ui/main.qml:136
+#: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "החלת הגדרות פלזמה"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -218,7 +218,7 @@ msgid ""
 msgstr ""
 "הגדרה זו תגרום למסך הכניסה של SDDM לשקף את ההתאמות שלך להגדרות הפלזמה הבאות:"
 
-#: src/ui/main.qml:143
+#: src/ui/main.qml:149
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -232,7 +232,7 @@ msgstr ""
 "NumLock,</item><item>ערכת עיצוב של פלזמה,</item><item>נק׳ לאינטש להתאמת גודל,"
 "</item><item>הגדרות מסך (Wayland בלבד)</item></list></para>"
 
-#: src/ui/main.qml:144
+#: src/ui/main.qml:150
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -241,36 +241,36 @@ msgstr ""
 "נא לשים לב שיש להתקין את קובצי ערכת העיצוב באופן כללי כדי שישפיע על מסך "
 "הכניסה של SDDM."
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "החלה"
 
-#: src/ui/main.qml:158
+#: src/ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "איפוס להגדרות ברירת המחדל"
 
-#: src/ui/main.qml:168
+#: src/ui/main.qml:171
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "החלפת תמונת רקע"
 
-#: src/ui/main.qml:177
+#: src/ui/main.qml:207
 #, kde-format
 msgid "No image selected"
 msgstr "לא נבחרה תמונה"
 
-#: src/ui/main.qml:205
+#: src/ui/main.qml:214
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "טעינה מקובץ…"
 
-#: src/ui/main.qml:210
+#: src/ui/main.qml:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2024-08-28 11:28+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -141,18 +141,18 @@ msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Příkaz pro restart:"
 
-#: src/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:28
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:57
+#: src/ui/DetailsDialog.qml:62
 #, kde-format
 msgid "No preview available"
 msgstr "Náhled není dostupný"
 
-#: src/ui/DetailsDialog.qml:60
+#: src/ui/DetailsDialog.qml:68
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -201,20 +201,20 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Smazat"
 
-#: src/ui/main.qml:136
+#: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Provést nastavení Plasma"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
 
-#: src/ui/main.qml:143
+#: src/ui/main.qml:149
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -229,43 +229,43 @@ msgstr ""
 "item><item>Motiv Plasma,</item><item>Škálování DPI,</item><item>Nastavení "
 "obrazovek (pouze Wayland)</item></list></para>"
 
-#: src/ui/main.qml:144
+#: src/ui/main.qml:150
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Použít"
 
-#: src/ui/main.qml:158
+#: src/ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Vrátit na výchozí nastavení"
 
-#: src/ui/main.qml:168
+#: src/ui/main.qml:171
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Změnit pozadí"
 
-#: src/ui/main.qml:177
+#: src/ui/main.qml:207
 #, kde-format
 msgid "No image selected"
 msgstr "Nebyl vybrán žádný obrázek"
 
-#: src/ui/main.qml:205
+#: src/ui/main.qml:214
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Načíst ze souboru…"
 
-#: src/ui/main.qml:210
+#: src/ui/main.qml:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

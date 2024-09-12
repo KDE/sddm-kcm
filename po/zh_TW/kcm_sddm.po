@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2024-06-04 06:05+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -144,18 +144,18 @@ msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "重新啟動指令："
 
-#: src/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:28
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:57
+#: src/ui/DetailsDialog.qml:62
 #, kde-format
 msgid "No preview available"
 msgstr "無法預覽"
 
-#: src/ui/DetailsDialog.qml:60
+#: src/ui/DetailsDialog.qml:68
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -204,20 +204,20 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "刪除"
 
-#: src/ui/main.qml:136
+#: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "套用 Plasma 設定"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr "這將會使 SDDM 登入畫面反映您對以下 Plasma 設定的自訂："
 
-#: src/ui/main.qml:143
+#: src/ui/main.qml:149
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,7 +231,7 @@ msgstr ""
 "item><item>Plasma 主題、</item><item>縮放 DPI、</item><item>螢幕配置 (只支援 "
 "Wayland)</item></list></para>"
 
-#: src/ui/main.qml:144
+#: src/ui/main.qml:150
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -240,36 +240,36 @@ msgstr ""
 "請注意，主題必須要以全域安裝（不能只安裝在目前使用者）才能套用在 SDDM 登入畫"
 "面上。"
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "套用"
 
-#: src/ui/main.qml:158
+#: src/ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "重設為預設設定"
 
-#: src/ui/main.qml:168
+#: src/ui/main.qml:171
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "變更背景"
 
-#: src/ui/main.qml:177
+#: src/ui/main.qml:207
 #, kde-format
 msgid "No image selected"
 msgstr "未選取圖片"
 
-#: src/ui/main.qml:205
+#: src/ui/main.qml:214
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "從檔案載入…"
 
-#: src/ui/main.qml:210
+#: src/ui/main.qml:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

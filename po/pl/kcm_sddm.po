@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2023-09-24 08:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -145,18 +145,18 @@ msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Polecenie ponownego uruchomienia:"
 
-#: src/ui/DetailsDialog.qml:26
+#: src/ui/DetailsDialog.qml:28
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/ui/DetailsDialog.qml:57
+#: src/ui/DetailsDialog.qml:62
 #, kde-format
 msgid "No preview available"
 msgstr "Podgląd niedostępny"
 
-#: src/ui/DetailsDialog.qml:60
+#: src/ui/DetailsDialog.qml:68
 #, kde-format
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
@@ -205,13 +205,13 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Usuń"
 
-#: src/ui/main.qml:136
+#: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Zastosuj ustawienia Plazmy"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -220,7 +220,7 @@ msgstr ""
 "Sprawi to, że twój ekran logowania SDDM odzwierciedli to, co dostosowałeś w "
 "ustawieniach Plazmy:"
 
-#: src/ui/main.qml:143
+#: src/ui/main.qml:149
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -235,7 +235,7 @@ msgstr ""
 "</item>oraz <item>Skalowanie DPI</item><item>Ustawienia ekranu (tylko "
 "Wayland)</item></list></para>"
 
-#: src/ui/main.qml:144
+#: src/ui/main.qml:150
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -244,36 +244,36 @@ msgstr ""
 "Pamiętaj, że pliki wyglądu muszą być wgrane globalnie, aby mogły być "
 "zastosowane na ekranie logowania SDDM."
 
-#: src/ui/main.qml:153
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Zastosuj"
 
-#: src/ui/main.qml:158
+#: src/ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Wyzeruj do ustawień domyślnych"
 
-#: src/ui/main.qml:168
+#: src/ui/main.qml:171
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Zmień tło"
 
-#: src/ui/main.qml:177
+#: src/ui/main.qml:207
 #, kde-format
 msgid "No image selected"
 msgstr "Nie wybrano żadnego obrazu"
 
-#: src/ui/main.qml:205
+#: src/ui/main.qml:214
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Wczytaj z pliku..."
 
-#: src/ui/main.qml:210
+#: src/ui/main.qml:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
