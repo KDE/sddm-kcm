@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-12 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2023-07-16 06:48+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -163,55 +163,55 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr "%1, de %2 (%3)"
 
-#: src/ui/main.qml:24
+#: src/ui/main.qml:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Konduto…"
 
-#: src/ui/main.qml:29
+#: src/ui/main.qml:28
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Apliki Plasmajn Agordojn…"
 
-#: src/ui/main.qml:34
+#: src/ui/main.qml:33
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Instali De Dosiero…"
 
-#: src/ui/main.qml:39
+#: src/ui/main.qml:38
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Akiri Novan…"
 
-#: src/ui/main.qml:92
+#: src/ui/main.qml:91
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Rigardi detalojn"
 
-#: src/ui/main.qml:107
+#: src/ui/main.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Ŝanĝi Fonon"
 
-#: src/ui/main.qml:116
+#: src/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Apliki Plasmajn Agordojn"
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:147
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -220,7 +220,7 @@ msgstr ""
 "Ĉi tio faros la SDDM-ensalutan ekranon reflektos viajn personigojn al la "
 "sekvaj Plasmaj agordoj:"
 
-#: src/ui/main.qml:149
+#: src/ui/main.qml:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -234,7 +234,7 @@ msgstr ""
 "NumLock,</item><item>Plasma etoso,</item><item>Skalanta DPI,</"
 "item><item>Ekranagordo (nur Wayland)</item></list></para>"
 
-#: src/ui/main.qml:150
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -243,36 +243,36 @@ msgstr ""
 "Bonvolu noti, ke etosodosieroj devas esti instalitaj tutmonde por esti "
 "reflektitaj sur la SDDM-ensaluta ekrano."
 
-#: src/ui/main.qml:155
+#: src/ui/main.qml:154
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Apliki"
 
-#: src/ui/main.qml:160
+#: src/ui/main.qml:159
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Restarigi al defaŭltaj agordoj"
 
-#: src/ui/main.qml:171
+#: src/ui/main.qml:170
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Ŝanĝi Fonon"
 
-#: src/ui/main.qml:207
+#: src/ui/main.qml:206
 #, kde-format
 msgid "No image selected"
 msgstr "Neniu bildo elektita"
 
-#: src/ui/main.qml:214
+#: src/ui/main.qml:213
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Ŝargi el dosiero…"
 
-#: src/ui/main.qml:219
+#: src/ui/main.qml:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
