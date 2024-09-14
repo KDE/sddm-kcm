@@ -59,6 +59,8 @@ msgstr "Αδυναμία εγκατάστασης θέματος"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Δεν μπορεί να προχωρήσει, ο χρήστης 'sddm' δεν υπάρχει. Ελέγξτε την "
+"εγκατάσταση του SDDM."
 
 #: src/sessionmodel.cpp:85
 #, kde-format
@@ -103,13 +105,16 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
+"Η αυτόματη σύνδεση δεν υποστηρίζει το αυτόματο ξεκλείδωμα του πορτοφολιού "
+"KDE, οπότε θα σας ζητάει να το ξεκλειδώσετε κάθε φορά που συνδέεστε.<nl/><nl/"
+">Για να το αποφύγετε αυτό, μπορείτε να αλλάξετε το πορτοφόλι ώστε να έχει "
+"κενό κωδικό πρόσβασης. Σημειώστε ότι αυτό δεν είναι ασφαλές και θα πρέπει να "
+"γίνεται μόνο σε ένα αξιόπιστο περιβάλλον."
 
 #: src/ui/Advanced.qml:136
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Reset to Default Settings"
+#, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr "Επαναφορά στις προκαθορισμένες ρυθμίσεις"
+msgstr "Άνοιγμα ρυθμίσεων πορτοφολιού KDE"
 
 #: src/ui/Advanced.qml:142
 #, kde-format
@@ -237,10 +242,11 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Σχήμα χρώματος,</item><item>Θέμα δρομέα,</"
-"item><item>Γραμματοσειρά,</item><item>Αποτύπωση γραμματοσειράς,</"
-"item><item>Προτίμηση NumLock,</item><item>Θέμα Plasma,</item><item>Κλιμάκωση "
-"DPI</item>i<item>Διαμόρφωση οθόνης (μόνο για Wayland)</item></list></para>"
+"<para><list><item>Θέμα χρωμάτων,</item><item>Θέμα δρομέα,</"
+"item><item>Μέγεθος δρομέα,</item><item>Γραμματοσειρά,</item><item>Αποτύπωση "
+"γραμματοσειράς, </item><item>Προτίμηση NumLock,</item><item>Θέμα Plasma,</"
+"item><item>Κλιμάκωση DPI,</item><item>Διαμόρφωση οθόνης (μόνο Wayland)</"
+"item></list></para>"
 
 #: src/ui/main.qml:149
 #, kde-format
@@ -261,7 +267,7 @@ msgstr "Εφαρμογή"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr "Επαναφορά στις προκαθορισμένες ρυθμίσεις"
+msgstr "Επαναφορά προεπιλεγμένων ρυθμίσεων"
 
 #: src/ui/main.qml:170
 #, kde-format
@@ -286,7 +292,7 @@ msgstr "Φόρτωση από αρχείο..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
-msgstr "Καθαρισμός εικόνας"
+msgstr "Εκκαθάριση εικόνας"
 
 #~ msgctxt "@action:button"
 #~ msgid "Behavior..."
