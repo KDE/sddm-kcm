@@ -54,6 +54,7 @@ QHash<int, QByteArray> ThemesModel::roleNames() const
         {ConfigFileRole, QByteArrayLiteral("configFile")},
         {CurrentBackgroundRole, QByteArrayLiteral("currentBackground")},
         {DeletableRole, QByteArrayLiteral("deletable")},
+        {ShowClockRole, QByteArrayLiteral("showClock")},
     };
 }
 
@@ -99,6 +100,9 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
         break;
     case DeletableRole:
         return m_customInstalledThemes.contains(metadata.path().chopped(1)); // Chop the trailing /
+        break;
+    case ThemesModel::ShowClockRole:
+        return m_showClock[metadata.themeid()];
     }
 
     return QVariant();
@@ -109,12 +113,17 @@ bool ThemesModel::setData(const QModelIndex &index, const QVariant &value, int r
     if (!checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid)) {
         return false;
     }
-    if (role != ThemesModel::CurrentBackgroundRole) {
-        return false;
+    if (role == ThemesModel::CurrentBackgroundRole) {
+        m_currentWallpapers[mThemeList[index.row()].themeid()] = value.toString();
+        Q_EMIT dataChanged(index, index, {ThemesModel::CurrentBackgroundRole});
+        return true;
     }
-    m_currentWallpapers[mThemeList[index.row()].themeid()] = value.toString();
-    Q_EMIT dataChanged(index, index, {ThemesModel::CurrentBackgroundRole});
-    return true;
+    if (role == ThemesModel::ShowClockRole) {
+        m_showClock[mThemeList[index.row()].themeid()] = value.toBool();
+        Q_EMIT dataChanged(index, index, {ThemesModel::ShowClockRole});
+        return true;
+    }
+    return false;
 }
 
 void ThemesModel::populate()
@@ -169,6 +178,8 @@ void ThemesModel::add(const QString &id, const QString &path)
         } else {
             m_currentWallpapers.insert(data.themeid(), data.path() + backgroundPath);
         }
+        const bool showClock = themeConfig->group(QStringLiteral("General")).readEntry("showClock", true);
+        m_showClock.insert(data.themeid(), showClock);
     }
     endInsertRows();
 }

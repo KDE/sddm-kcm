@@ -105,7 +105,9 @@ KCM.GridViewKCM {
                 icon.name: "games-config-background"
                 tooltip: i18nc("@info:tooltip", "Change Background")
                 onTriggered: {
-                    backgroundSheet.modelIndex = view.model.index(index, 0)
+                    const index = view.model.index(view.currentIndex, 0)
+                    backgroundSheet.modelIndex = index
+                    backgroundSheet.showClock = view.model.data(index, ThemesModel.ShowClockRole)
                     backgroundSheet.imagePath = Qt.binding(() => model.currentBackground)
                     backgroundSheet.open()
                 }
@@ -166,6 +168,7 @@ KCM.GridViewKCM {
         id: backgroundSheet
         property var modelIndex
         property string imagePath
+        property bool showClock
 
         title: i18nc("@title:window", "Change Background")
 
@@ -205,6 +208,12 @@ KCM.GridViewKCM {
                 icon.name: "view-preview"
                 text: i18n("No image selected")
             }
+        }
+
+        footerLeadingComponent: QQC2.CheckBox {
+            text: i18nc("@option:check", "Show clock")
+            checked: backgroundSheet.showClock
+            onToggled: view.model.setData(backgroundSheet.modelIndex, checked, ThemesModel.ShowClockRole)
         }
 
         customFooterActions: [

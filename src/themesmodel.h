@@ -32,6 +32,7 @@ public:
         ConfigFileRole,
         CurrentBackgroundRole,
         DeletableRole,
+        ShowClockRole,
     };
     Q_ENUM(Roles)
 
@@ -59,6 +60,7 @@ private:
     int m_currentIndex;
     QList<ThemeMetadata> mThemeList;
     QHash<QString, QString> m_currentWallpapers;
+    QHash<QString, bool> m_showClock;
     QList<QString> m_customInstalledThemes;
 };
 

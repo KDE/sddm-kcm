@@ -127,6 +127,7 @@ void SddmKcm::save()
         } else {
             args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("color");
         }
+        args[QStringLiteral("theme.conf.user/General/showClock")] = m_themesModel->data(currentThemeIndex, ThemesModel::ShowClockRole).toBool();
     }
     args[QStringLiteral("kde_settings.conf/Theme/Current")] = currentThemeIndex.data(ThemesModel::IdRole);
     args[QStringLiteral("kde_settings.conf/Autologin/User")] = m_data->sddmSettings()->user();
@@ -319,6 +320,8 @@ void SddmKcm::resetSyncronizedSettings()
     args[QStringLiteral("kde_settings.conf/General/Numlock")] = QVariant();
 
     args[QStringLiteral("kde_settings.conf/Theme/Font")] = QVariant();
+
+    args[QStringLiteral("theme.conf.user/General/showClock")] = true;
 
     KAuth::Action resetAction(QStringLiteral("org.kde.kcontrol.kcmsddm.reset"));
     resetAction.setHelperId(QStringLiteral("org.kde.kcontrol.kcmsddm"));
