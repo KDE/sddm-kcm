@@ -165,28 +165,22 @@ msgid "%1, by %2 (%3)"
 msgstr "%1, από %2 (%3)"
 
 #: src/ui/main.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Συμπεριφορά"
+msgstr "Συμπεριφορά…"
 
 #: src/ui/main.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Plasma Settings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Εφαρμογή ρυθμίσεων Plasma"
+msgstr "Εφαρμογή ρυθμίσεων Plasma…"
 
 #: src/ui/main.qml:33
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Εγκατάσταση από αρχείο,,,"
+msgstr "Εγκατάσταση από αρχείο,,,…"
 
 #: src/ui/main.qml:38
 #, kde-format
@@ -281,12 +275,10 @@ msgid "No image selected"
 msgstr "Δεν επιλέχθηκε εικόνα"
 
 #: src/ui/main.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Load From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Φόρτωση από αρχείο..."
+msgstr "Φόρτωση από αρχείο…"
 
 #: src/ui/main.qml:218
 #, kde-format
