@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 00:41+0000\n"
+"POT-Creation-Date: 2024-09-17 00:41+0000\n"
 "PO-Revision-Date: 2019-11-01 16:54+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -54,7 +54,7 @@ msgstr "Paigaldatav teema, peab olema tegelik arhiivifail."
 msgid "Unable to install theme"
 msgstr "Teema paigaldamine nurjus"
 
-#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
@@ -202,26 +202,26 @@ msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Taust:"
 
-#: src/ui/main.qml:115
+#: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr ""
 
-#: src/ui/main.qml:138
+#: src/ui/main.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr ""
 
-#: src/ui/main.qml:147
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,7 +231,7 @@ msgid ""
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
 
-#: src/ui/main.qml:149
+#: src/ui/main.qml:151
 #, fuzzy, kde-format
 #| msgid ""
 #| "Please note that theme files must be installed globally for settings "
@@ -243,38 +243,44 @@ msgstr ""
 "Palun arvesta, et seadistuste sünkroonimiseks peavad teemafailid olema "
 "paigaldatud globaalselt."
 
-#: src/ui/main.qml:154
+#: src/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr ""
 
-#: src/ui/main.qml:159
+#: src/ui/main.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr ""
 
-#: src/ui/main.qml:170
+#: src/ui/main.qml:173
 #, fuzzy, kde-format
 #| msgid "Background:"
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Taust:"
 
-#: src/ui/main.qml:206
+#: src/ui/main.qml:209
 #, kde-format
 msgid "No image selected"
 msgstr ""
 
-#: src/ui/main.qml:213
+#: src/ui/main.qml:214
+#, kde-format
+msgctxt "@option:check"
+msgid "Show clock"
+msgstr ""
+
+#: src/ui/main.qml:222
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Laadi failist..."
 
-#: src/ui/main.qml:218
+#: src/ui/main.qml:227
 #, fuzzy, kde-format
 #| msgid "Clear Image"
 msgctxt "@action:button"

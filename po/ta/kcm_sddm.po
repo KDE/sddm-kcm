@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 00:41+0000\n"
+"POT-Creation-Date: 2024-09-17 00:41+0000\n"
 "PO-Revision-Date: 2023-07-16 13:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -54,7 +54,7 @@ msgstr "நிறுவ வேண்டிய தோற்றத்திட்�
 msgid "Unable to install theme"
 msgstr "தோற்றத்திட்டத்தை நிறுவ முடியவில்லை"
 
-#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
@@ -198,26 +198,26 @@ msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "பின்புலத்தை மாற்றும்"
 
-#: src/ui/main.qml:115
+#: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "நீக்கும்"
 
-#: src/ui/main.qml:138
+#: src/ui/main.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "பிளாஸ்மா அமைப்புகளை செயல்படுத்துவது"
 
-#: src/ui/main.qml:147
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr "பின்வரும் உங்கள் பிளாஸ்மா அமைப்புகளை SDDM நுழைவுத்திரைக்கும் இது செயல்படுத்தும்:"
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -232,7 +232,7 @@ msgstr ""
 "<item>திரையின் DPI,</item> <item>திரையின் அமைப்பு (Wayland மட்டும்)</item> </"
 "list></para>"
 
-#: src/ui/main.qml:149
+#: src/ui/main.qml:151
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -241,36 +241,42 @@ msgstr ""
 "SDDM நுழைவுத்திரையில் செயல்பட, தோற்றத்திட்டங்கள் கணினி முழுவதற்குமான இடத்தில் "
 "நிறுவப்பட்டிருக்க வேண்டும்."
 
-#: src/ui/main.qml:154
+#: src/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
-#: src/ui/main.qml:159
+#: src/ui/main.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "இயல்பிருப்பை மீட்டமை"
 
-#: src/ui/main.qml:170
+#: src/ui/main.qml:173
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "பின்புலத்தை மாற்றுவது"
 
-#: src/ui/main.qml:206
+#: src/ui/main.qml:209
 #, kde-format
 msgid "No image selected"
 msgstr "எப்படமும் தேர்ந்தெடுக்கப்படவில்லை"
 
-#: src/ui/main.qml:213
+#: src/ui/main.qml:214
+#, kde-format
+msgctxt "@option:check"
+msgid "Show clock"
+msgstr ""
+
+#: src/ui/main.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "கோப்பிலிருந்து ஏற்று…"
 
-#: src/ui/main.qml:218
+#: src/ui/main.qml:227
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

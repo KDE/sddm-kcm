@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 00:41+0000\n"
+"POT-Creation-Date: 2024-09-17 00:41+0000\n"
 "PO-Revision-Date: 2023-07-27 16:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr "Asennettava teema. Täytyy olla arkistotiedosto."
 msgid "Unable to install theme"
 msgstr "Teeman asennus epäonnistui"
 
-#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
@@ -200,19 +200,19 @@ msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Muuta taustaa:"
 
-#: src/ui/main.qml:115
+#: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Poista"
 
-#: src/ui/main.qml:138
+#: src/ui/main.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Käytä Plasma-asetuksia"
 
-#: src/ui/main.qml:147
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -220,7 +220,7 @@ msgid ""
 msgstr ""
 "Tämä saa SDDM-kirjautumisruudun seuraamaan seuraavien Plasma-asetusten tilaa:"
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -234,7 +234,7 @@ msgstr ""
 "li><li>Plasma-teema</li><li>näytön mittakaava (DPI)</li><li>näyttöasetukset "
 "(vain Wayland)</li></list></para>"
 
-#: src/ui/main.qml:149
+#: src/ui/main.qml:151
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -243,36 +243,42 @@ msgstr ""
 "Huomaa, että teematiedostot on asennettava järjestelmänlaajuisesti, jotta "
 "SDDM-kirjautumisruudun asetukset voivat seurata niitä."
 
-#: src/ui/main.qml:154
+#: src/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Käytä"
 
-#: src/ui/main.qml:159
+#: src/ui/main.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Palauta oletusasetuksiksi"
 
-#: src/ui/main.qml:170
+#: src/ui/main.qml:173
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Muuta taustaa"
 
-#: src/ui/main.qml:206
+#: src/ui/main.qml:209
 #, kde-format
 msgid "No image selected"
 msgstr "Kuvaa ei ole valittu"
 
-#: src/ui/main.qml:213
+#: src/ui/main.qml:214
+#, kde-format
+msgctxt "@option:check"
+msgid "Show clock"
+msgstr ""
+
+#: src/ui/main.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Lataa tiedostosta…"
 
-#: src/ui/main.qml:218
+#: src/ui/main.qml:227
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

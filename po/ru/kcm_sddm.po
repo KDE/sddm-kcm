@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 00:41+0000\n"
+"POT-Creation-Date: 2024-09-17 00:41+0000\n"
 "PO-Revision-Date: 2024-01-04 21:27+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -59,7 +59,7 @@ msgstr "Оформление для установки, должно являт�
 msgid "Unable to install theme"
 msgstr "Не удалось установить оформление."
 
-#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
@@ -205,19 +205,19 @@ msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Изменить фон"
 
-#: src/ui/main.qml:115
+#: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Удалить"
 
-#: src/ui/main.qml:138
+#: src/ui/main.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Применить параметры Plasma"
 
-#: src/ui/main.qml:147
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -226,7 +226,7 @@ msgstr ""
 "Это действие приведёт к использованию экраном входа SDDM следующих "
 "параметров оформления Plasma:"
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -241,7 +241,7 @@ msgstr ""
 "<item>Значение DPI;</item><item>Параметры конфигурации экрана (только для "
 "Wayland).</item></list></para>"
 
-#: src/ui/main.qml:149
+#: src/ui/main.qml:151
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -250,36 +250,42 @@ msgstr ""
 "Синхронизация параметров поддерживается только для общесистемно "
 "установленных файлов оформления."
 
-#: src/ui/main.qml:154
+#: src/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Применить"
 
-#: src/ui/main.qml:159
+#: src/ui/main.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Восстановить параметры по умолчанию"
 
-#: src/ui/main.qml:170
+#: src/ui/main.qml:173
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Изменить фон"
 
-#: src/ui/main.qml:206
+#: src/ui/main.qml:209
 #, kde-format
 msgid "No image selected"
 msgstr "Изображение не выбрано"
 
-#: src/ui/main.qml:213
+#: src/ui/main.qml:214
+#, kde-format
+msgctxt "@option:check"
+msgid "Show clock"
+msgstr ""
+
+#: src/ui/main.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Загрузить из файла"
 
-#: src/ui/main.qml:218
+#: src/ui/main.qml:227
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 00:41+0000\n"
+"POT-Creation-Date: 2024-09-17 00:41+0000\n"
 "PO-Revision-Date: 2024-06-04 06:05+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -57,7 +57,7 @@ msgstr "要安裝的主題，必須為既有的壓縮檔。"
 msgid "Unable to install theme"
 msgstr "無法安裝主題"
 
-#: src/sddmkcm.cpp:164 src/sddmkcm.cpp:302
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "無法繼續，'sddm' 使用者不存在。請確定您的 SDDM 安裝。"
@@ -198,26 +198,26 @@ msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "變更背景"
 
-#: src/ui/main.qml:115
+#: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "刪除"
 
-#: src/ui/main.qml:138
+#: src/ui/main.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "套用 Plasma 設定"
 
-#: src/ui/main.qml:147
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr "這將會使 SDDM 登入畫面反映您對以下 Plasma 設定的自訂："
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:150
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,7 +231,7 @@ msgstr ""
 "item><item>Plasma 主題、</item><item>縮放 DPI、</item><item>螢幕配置 (只支援 "
 "Wayland)</item></list></para>"
 
-#: src/ui/main.qml:149
+#: src/ui/main.qml:151
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -240,36 +240,42 @@ msgstr ""
 "請注意，主題必須要以全域安裝（不能只安裝在目前使用者）才能套用在 SDDM 登入畫"
 "面上。"
 
-#: src/ui/main.qml:154
+#: src/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "套用"
 
-#: src/ui/main.qml:159
+#: src/ui/main.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "重設為預設設定"
 
-#: src/ui/main.qml:170
+#: src/ui/main.qml:173
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "變更背景"
 
-#: src/ui/main.qml:206
+#: src/ui/main.qml:209
 #, kde-format
 msgid "No image selected"
 msgstr "未選取圖片"
 
-#: src/ui/main.qml:213
+#: src/ui/main.qml:214
+#, kde-format
+msgctxt "@option:check"
+msgid "Show clock"
+msgstr ""
+
+#: src/ui/main.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "從檔案載入…"
 
-#: src/ui/main.qml:218
+#: src/ui/main.qml:227
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
