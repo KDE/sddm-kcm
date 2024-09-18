@@ -180,7 +180,7 @@ msgstr "Εφαρμογή ρυθμίσεων Plasma…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Εγκατάσταση από αρχείο,,,…"
+msgstr "Εγκατάσταση από αρχείο…"
 
 #: src/ui/main.qml:38
 #, kde-format
