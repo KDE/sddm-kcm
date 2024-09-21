@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-17 00:41+0000\n"
-"PO-Revision-Date: 2024-01-04 21:27+0300\n"
+"PO-Revision-Date: 2024-09-20 07:38+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -277,7 +277,7 @@ msgstr "Изображение не выбрано"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Показывать часы"
 
 #: src/ui/main.qml:222
 #, kde-format
