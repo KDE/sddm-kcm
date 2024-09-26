@@ -1,17 +1,17 @@
 # Translation for kcm_sddm.po to Euskara/Basque (eu).
-# Copyright (C) 2017-2023 This file is copyright:
+# Copyright (C) 2017-2024 This file is copyright:
 # This file is distributed under the same license as the sddm-kcm package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Ander Elortondo <ander.elor@gmail.com>, 2017.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-17 00:41+0000\n"
-"PO-Revision-Date: 2023-07-16 09:55+0200\n"
+"PO-Revision-Date: 2024-09-25 22:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -275,7 +275,7 @@ msgstr "Ez da irudirik hautatu"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Erakutsi erlojua"
 
 #: src/ui/main.qml:222
 #, kde-format
