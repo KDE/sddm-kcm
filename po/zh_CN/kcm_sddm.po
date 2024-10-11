@@ -262,7 +262,7 @@ msgstr "未选择图像"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "显示时钟"
 
 #: src/ui/main.qml:222
 #, kde-format
