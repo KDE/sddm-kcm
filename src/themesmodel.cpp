@@ -148,12 +148,24 @@ void ThemesModel::populate()
             return data.themeid() == theme;
         });
     };
+
     for (const auto &folder : themesBaseDirs) {
         QDir dir(folder);
         if (!dir.exists()) {
             return;
         }
-        for (const QString &theme : dir.entryList(QDir::AllDirs | QDir::Readable | QDir::NoDotAndDotDot)) {
+
+        QStringList unresolvedDirEntries = dir.entryList(QDir::AllDirs | QDir::Readable | QDir::NoDotAndDotDot);
+        QStringList dirEntries;
+        for (const QString &unresolvedDirEntry : unresolvedDirEntries) {
+            QString canonicalPath = QFileInfo(dir.filePath(unresolvedDirEntry)).canonicalFilePath();
+            if (!canonicalPath.isEmpty()) {
+                dirEntries << QFileInfo(canonicalPath).fileName();
+            }
+        }
+        dirEntries.removeDuplicates();
+
+        for (const QString &theme : dirEntries) {
             QString path = folder + QLatin1Char('/') + theme;
             if (!alreadyHave(theme) && QFile::exists(path + QStringLiteral("/metadata.desktop"))) {
                 add(theme, path);
