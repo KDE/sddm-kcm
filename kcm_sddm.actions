@@ -497,6 +497,7 @@ Description[bg]=Връща стандартните настройки на SDDM
 Description[ca]=Reinicia els paràmetres de l'SDDM a l'estat predeterminat inicial
 Description[ca@valencia]=Reinicia els paràmetres de SDDM a l'estat predeterminat inicial
 Description[cs]=Obnoví výchozí hodnoty veškerého nastavení SDDM
+Description[da]=Nulstiller SDDM-indstillinger til fabriksindstillinger
 Description[de]=SDDM-Einstellungen auf Voreinstellungen zurücksetzen
 Description[el]=Επαναφέρει τις ρυθμίσεις SDDM στην εργοστασιακή τους κατάσταση
 Description[en_GB]=Resets SDDM settings to factory default state
