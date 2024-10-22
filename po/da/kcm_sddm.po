@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2017, 2018, 2019.
 # scootergrisen, 2017.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-17 00:41+0000\n"
-"PO-Revision-Date: 2019-11-22 20:47+0100\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-10-21 12:09+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -58,6 +59,8 @@ msgstr "Kan ikke installere temaet"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Kan ikke fortsætte, bruger 'sddm' eksisterer ikke. Tjek venligst din SDDM-"
+"installation."
 
 #: src/sessionmodel.cpp:85
 #, kde-format
@@ -69,32 +72,29 @@ msgstr "%1 (Wayland)"
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
-msgstr ""
+msgstr "Opførsel"
 
 #: src/ui/Advanced.qml:23
-#, fuzzy, kde-format
-#| msgid "Automatically log in:"
+#, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
 msgstr "Log ind automatisk:"
 
 #: src/ui/Advanced.qml:28
-#, fuzzy, kde-format
-#| msgid "as user:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr "Som bruger:"
+msgstr "som bruger:"
 
 #: src/ui/Advanced.qml:100
-#, fuzzy, kde-format
-#| msgid "with session:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr "med session:"
+msgstr "med session"
 
 #: src/ui/Advanced.qml:131
 #, kde-kuit-format
@@ -105,43 +105,42 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
+"Log ind automatisk understøtter ikke automatisk oplåsning af KDE's tegnebog, "
+"så du vil blive spurgt om at låse den op, hver gang du logger ind.<nl/><nl/"
+">For at undgå dette, kan du ændre tegnebogen til at have en tom adgangskode. "
+"Bemærk, at dette er usikkert og burde kun blive gjort i et betroet miljø."
 
 #: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr ""
+msgstr "Åbn indstillinger for KDE's tegnebog"
 
 #: src/ui/Advanced.qml:142
-#, fuzzy, kde-format
-#| msgid "Log in again immediately after logging off"
+#, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
 msgstr "Log direkte ind igen efter at logge ud"
 
 #: src/ui/Advanced.qml:155
-#, fuzzy, kde-format
-#| msgid "Minimum user UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
 msgstr "Minimum bruger-UID:"
 
 #: src/ui/Advanced.qml:167
-#, fuzzy, kde-format
-#| msgid "Maximum user UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
 msgstr "Maksimum bruger-UID:"
 
 #: src/ui/Advanced.qml:182
-#, fuzzy, kde-format
-#| msgid "Halt command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Sluk-kommando:"
 
 #: src/ui/Advanced.qml:215
-#, fuzzy, kde-format
-#| msgid "Reboot command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Genstart-kommando:"
@@ -150,7 +149,7 @@ msgstr "Genstart-kommando:"
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: src/ui/DetailsDialog.qml:62
 #, kde-format
@@ -162,57 +161,55 @@ msgstr "Ingen forhåndsvisning tilgængelig"
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
-msgstr ""
+msgstr "%1, af %2 (%3)"
 
 #: src/ui/main.qml:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr ""
+msgstr "Opførsel…"
 
 #: src/ui/main.qml:28
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr ""
+msgstr "Anvend indstillinger fra Plasma…"
 
 #: src/ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "Install From File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Installér fra fil..."
+msgstr "Installér fra fil…"
 
 #: src/ui/main.qml:38
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Få nye…"
 
 #: src/ui/main.qml:91
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr ""
+msgstr "Vis detaljer"
 
 #: src/ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
-msgstr "Baggrund:"
+msgstr "Skift baggrund"
 
 #: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
-msgstr ""
+msgstr "Slet"
 
 #: src/ui/main.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
-msgstr ""
+msgstr "Anvend indstillinger fra Plasma"
 
 #: src/ui/main.qml:149
 #, kde-format
@@ -220,6 +217,8 @@ msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
+"Dette vil få SDDM-loginskærmen til at afspejle dine tilpasninger til "
+"følgende Plasma-indstillinger:"
 
 #: src/ui/main.qml:150
 #, kde-kuit-format
@@ -230,59 +229,58 @@ msgid ""
 "preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
 "item><item>Screen configuration (Wayland only)</item></list></para>"
 msgstr ""
+"<para><list><item>Farveskema,</item><item>Markørtema,</"
+"item><item>Markørstørrelse,</item><item>Font,</"
+"item><item>Skrifttyperendering,</item><item>NumLock-præferencer,</"
+"item><item>Plasma-tema,</item><item>DPI-skalering,</"
+"item><item>Skærmkonfiguration (kun på Wayland)</item></list></para>"
 
 #: src/ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please note that theme files must be installed globally for settings "
-#| "synchronization to work."
+#, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
-"Bemærk at temafiler skal installeres globalt for at synkronisering af "
-"indstillinger virker."
+"Bemærk at temafiler skal installeres globalt for at blive afspejlet i SDDM "
+"login-skærmen."
 
 #: src/ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "Anvend"
 
 #: src/ui/main.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr ""
+msgstr "Nulstil til standardindstillingerne"
 
 #: src/ui/main.qml:173
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
-msgstr "Baggrund:"
+msgstr "Skift baggrund:"
 
 #: src/ui/main.qml:209
 #, kde-format
 msgid "No image selected"
-msgstr ""
+msgstr "Intet billede valgt"
 
 #: src/ui/main.qml:214
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Vis ur"
 
 #: src/ui/main.qml:222
-#, fuzzy, kde-format
-#| msgid "Load from file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Indlæs fra fil..."
+msgstr "Indlæs fra fil…"
 
 #: src/ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Clear Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Ryd billede"
