@@ -35,7 +35,7 @@ Kirigami.Page {
 
                     if (checked) {
                         kcm.sddmSettings.user = autologinUser.currentText
-                        kcm.sddmSettings.session = autologinSession.currentText
+                        kcm.sddmSettings.session = autologinSession.currentValue
                     } else {
                         kcm.sddmSettings.user = ""
                         kcm.sddmSettings.session = ""
