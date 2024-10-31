@@ -1,0 +1,286 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the sddm-kcm package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: sddm-kcm\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-09-17 00:41+0000\n"
+"PO-Revision-Date: 2024-10-29 19:54+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.08.2\n"
+
+#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
+msgid "Invalid theme package"
+msgstr "Nederīga motīva pakotne"
+
+#: sddmauthhelper.cpp:421
+msgid "Could not open file"
+msgstr "Nevarēja atvērt datni"
+
+#: sddmauthhelper.cpp:450
+msgid "Could not decompress archive"
+msgstr "Nevarēja atspiest arhīvu"
+
+#: sddmthemeinstaller.cpp:30
+#, kde-format
+msgid "SDDM theme installer"
+msgstr "SDDM motīva instalētājs"
+
+#: sddmthemeinstaller.cpp:37
+#, kde-format
+msgid "Install a theme."
+msgstr "Instalēt motīvu."
+
+#: sddmthemeinstaller.cpp:38
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "Atinstalēt motīvu."
+
+#: sddmthemeinstaller.cpp:40
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "Instalējamajam motīvam jābūt pastāvošai arhīva datnei."
+
+#: sddmthemeinstaller.cpp:75
+#, kde-format
+msgid "Unable to install theme"
+msgstr "Motīva ieinstalēšana neizdodas"
+
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr ""
+"Neizdodas turpināt, lietotājs „sddm“ nepastāv. Pārbaudiet SDDM instalāciju."
+
+#: src/sessionmodel.cpp:85
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr "%1 (Wayland)"
+
+#: src/ui/Advanced.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Behavior"
+msgstr "Uzvedība"
+
+#: src/ui/Advanced.qml:23
+#, kde-format
+msgctxt "option:check"
+msgid "Automatically log in:"
+msgstr "Ierakstīties automātiski:"
+
+#: src/ui/Advanced.qml:28
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the user to log in "
+"automatically"
+msgid "as user:"
+msgstr "kā lietotājam:"
+
+#: src/ui/Advanced.qml:100
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the session that is started "
+"automatically"
+msgid "with session"
+msgstr "ar sesiju"
+
+#: src/ui/Advanced.qml:131
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Auto-login does not support unlocking your KDE Wallet automatically, so it "
+"will ask you to unlock it every time you log in.<nl/><nl/>To avoid this, you "
+"can change the wallet to have a blank password. Note that this is insecure "
+"and should only be done in a trusted environment."
+msgstr ""
+"Automātiskā ierakstīšanās neatbalsta automātisku KDE maciņa atslēgšanu, "
+"tāpēc pēc ierakstīšanās katru reizi saņemsiet lūgumu to atslēgt.<nl/><nl/"
+">Lai no tā izvairītos varat nomainīt maciņa paroli uz tukšu paroli, tomēr "
+"ņemiet vērā, ka šāda rīcība nav droša, tāpēc tā drīkst darīt tikai drošā "
+"vidē."
+
+#: src/ui/Advanced.qml:136
+#, kde-format
+msgid "Open KDE Wallet Settings"
+msgstr "Atvērt KDE maciņa iestatījumus"
+
+#: src/ui/Advanced.qml:142
+#, kde-format
+msgctxt "@option:check"
+msgid "Log in again immediately after logging off"
+msgstr "Nekavējoties atkal ierakstīties pēc izrakstīšanās"
+
+#: src/ui/Advanced.qml:155
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Minimum user UID:"
+msgstr "Minimālais lietotāja UID:"
+
+#: src/ui/Advanced.qml:167
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Maximum user UID:"
+msgstr "Maksimālais lietotāja UID:"
+
+#: src/ui/Advanced.qml:182
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Halt Command:"
+msgstr "Apturēšanas komanda:"
+
+#: src/ui/Advanced.qml:215
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Reboot Command:"
+msgstr "Pārstartēšanas komanda:"
+
+#: src/ui/DetailsDialog.qml:28
+#, kde-format
+msgctxt "@title:window, %1 is the theme name, %2 the version"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: src/ui/DetailsDialog.qml:62
+#, kde-format
+msgid "No preview available"
+msgstr "Priekšskatījums nav pieejams"
+
+#: src/ui/DetailsDialog.qml:68
+#, kde-format
+msgctxt ""
+"%1 is a description of the theme, %2 are the authors, %3 is the license"
+msgid "%1, by %2 (%3)"
+msgstr "%1, autors: %2 (%3)"
+
+#: src/ui/main.qml:23
+#, kde-format
+msgctxt "@action:button"
+msgid "Behavior…"
+msgstr "Uzvedība…"
+
+#: src/ui/main.qml:28
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Plasma Settings…"
+msgstr "Pielietot „Plasma“ iestatījumus…"
+
+#: src/ui/main.qml:33
+#, kde-format
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr "Instalēt no datnes…"
+
+#: src/ui/main.qml:38
+#, kde-format
+msgctxt "@action:button as in, \"get new SDDM themes\""
+msgid "Get New…"
+msgstr "Iegūt jaunus…"
+
+#: src/ui/main.qml:91
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "View details"
+msgstr "Skatīt informāciju"
+
+#: src/ui/main.qml:106
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Change Background"
+msgstr "Mainīt fonu"
+
+#: src/ui/main.qml:117
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete"
+msgstr "Dzēst"
+
+#: src/ui/main.qml:140
+#, kde-format
+msgctxt "@title:window"
+msgid "Apply Plasma Settings"
+msgstr "Pielietot „Plasma“ iestatījumus"
+
+#: src/ui/main.qml:149
+#, kde-format
+msgid ""
+"This will make the SDDM login screen reflect your customizations to the "
+"following Plasma settings:"
+msgstr ""
+"Šis iestatījums liks SDDM ierakstīšanās ekrānam atspoguļot šos „Plasma“ "
+"pielāgošanas iestatījumus:"
+
+#: src/ui/main.qml:150
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
+"size,</item><item>Font,</item><item>Font rendering,</item><item>NumLock "
+"preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
+"item><item>Screen configuration (Wayland only)</item></list></para>"
+msgstr ""
+"<para><list><item>Krāsu shēma,</item><item>Kursora motīvs,</"
+"item><item>Kursora izmērs,</item><item>Fonts,</item><item>Fonta atveidošana,"
+"</item><item>„NumLock“ taustiņa iestatījums,</item><item>„Plasma“ motīvs,</"
+"item><item>Mērogošanas DPI,</item><item>Ekrāna konfigurācija (tikai "
+"„Wayland“)</item></list></para>"
+
+#: src/ui/main.qml:151
+#, kde-format
+msgid ""
+"Please note that theme files must be installed globally to be reflected on "
+"the SDDM login screen."
+msgstr ""
+"Ievērojiet, ka, lai motīvi būtu atspoguļoti SDDM ierakstīšanās ekrānā, to "
+"datnes ir jāinstalē globāli."
+
+#: src/ui/main.qml:156
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply"
+msgstr "Pielietot"
+
+#: src/ui/main.qml:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset to Default Settings"
+msgstr "Atiestatīt uz noklusējuma iestatījumiem"
+
+#: src/ui/main.qml:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Background"
+msgstr "Mainīt fonu"
+
+#: src/ui/main.qml:209
+#, kde-format
+msgid "No image selected"
+msgstr "Attēls nav norādīts"
+
+#: src/ui/main.qml:214
+#, kde-format
+msgctxt "@option:check"
+msgid "Show clock"
+msgstr "Rādīt pulksteni"
+
+#: src/ui/main.qml:222
+#, kde-format
+msgctxt "@action:button"
+msgid "Load From File…"
+msgstr "Ielādēt no datnes…"
+
+#: src/ui/main.qml:227
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Image"
+msgstr "Notīrīt attēlu"
