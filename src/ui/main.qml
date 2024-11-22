@@ -57,11 +57,7 @@ KCM.GridViewKCM {
                 errorMessage.visible = untranslatedMessage.length > 0
             }
 
-            function onSyncSuccessful() {
-                syncSheet.close()
-            }
-
-            function onResetSyncedDataSuccessful() {
+            function onSyncAttempted() {
                 syncSheet.close()
             }
         }
