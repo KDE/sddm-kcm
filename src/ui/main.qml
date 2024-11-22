@@ -134,22 +134,16 @@ KCM.GridViewKCM {
 
         implicitWidth: 0.75 * root.width
     }
-    Kirigami.Dialog {
+    Kirigami.PromptDialog {
         id: syncSheet
 
-        title: i18nc("@title:window", "Apply Plasma Settings")
-
         padding: Kirigami.Units.largeSpacing
+        standardButtons: Kirigami.Dialog.Cancel
 
-        Kirigami.InlineMessage {
-            implicitWidth: Math.max(footer.implicitWidth, Kirigami.Units.gridUnit * 22)
-            visible: true
-            type: Kirigami.MessageType.Information
-            font: Kirigami.Theme.smallFont
-            text: i18n("This will make the SDDM login screen reflect your customizations to the following Plasma settings:") +
-                xi18nc("@info", "<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</item><item>NumLock preference,</item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</item></list></para>") +
+        title: i18nc("@title:window", "Apply Plasma Settings")
+        subtitle: i18n("This will make the SDDM login screen reflect your customizations to the following Plasma settings:") +
+                xi18nc("@info", "<para><list><item>Color scheme</item><item>Cursor theme and size</item><item>Font and font rendering</item><item>NumLock preference</item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen configuration (Wayland only)</item></list></para>") +
                 i18n("Please note that theme files must be installed globally to be reflected on the SDDM login screen.")
-        }
 
         customFooterActions: [
             Kirigami.Action {
