@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-17 00:41+0000\n"
+"POT-Creation-Date: 2024-11-23 00:42+0000\n"
 "PO-Revision-Date: 2023-07-25 01:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -203,76 +203,83 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "삭제"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Plasma 설정 적용"
 
-#: src/ui/main.qml:149
+#: src/ui/main.qml:144
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr "다음 Plasma 설정을 SDDM 로그인 화면에도 적용합니다:"
 
-#: src/ui/main.qml:150
-#, kde-kuit-format
+#: src/ui/main.qml:145
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
+#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
+#| "item><item>NumLock preference,</item><item>Plasma theme,</"
+#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
+#| "item></list></para>"
 msgctxt "@info"
 msgid ""
-"<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
-"size,</item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-"preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-"item><item>Screen configuration (Wayland only)</item></list></para>"
+"<para><list><item>Color scheme</item><item>Cursor theme and size</"
+"item><item>Font and font rendering</item><item>NumLock preference</"
+"item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
+"configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>색 구성표,</item><item>커서 테마,</item><item>커서 크기,</"
 "item><item>글꼴,</item><item>글꼴 렌더링,</item><item>NumLock 설정,</"
 "item><item>Plasma 테마,</item><item>DPI 크기 조정,</item><item>화면 설정"
 "(Wayland만).</item></list></para>"
 
-#: src/ui/main.qml:151
+#: src/ui/main.qml:146
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr "SDDM 로그인 화면에 적용하려면 테마를 전역적으로 설치해야 합니다."
 
-#: src/ui/main.qml:156
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "적용"
 
-#: src/ui/main.qml:161
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "기본 설정으로 복원"
 
-#: src/ui/main.qml:173
+#: src/ui/main.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "배경 바꾸기"
 
-#: src/ui/main.qml:209
+#: src/ui/main.qml:203
 #, kde-format
 msgid "No image selected"
 msgstr "선택한 그림 없음"
 
-#: src/ui/main.qml:214
+#: src/ui/main.qml:208
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr ""
 
-#: src/ui/main.qml:222
+#: src/ui/main.qml:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "파일에서 불러오기…"
 
-#: src/ui/main.qml:227
+#: src/ui/main.qml:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-17 00:41+0000\n"
+"POT-Creation-Date: 2024-11-23 00:42+0000\n"
 "PO-Revision-Date: 2024-10-29 19:54+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -205,13 +205,13 @@ msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Dzēst"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Pielietot „Plasma“ iestatījumus"
 
-#: src/ui/main.qml:149
+#: src/ui/main.qml:144
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -220,14 +220,21 @@ msgstr ""
 "Šis iestatījums liks SDDM ierakstīšanās ekrānam atspoguļot šos „Plasma“ "
 "pielāgošanas iestatījumus:"
 
-#: src/ui/main.qml:150
-#, kde-kuit-format
+#: src/ui/main.qml:145
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
+#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
+#| "item><item>NumLock preference,</item><item>Plasma theme,</"
+#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
+#| "item></list></para>"
 msgctxt "@info"
 msgid ""
-"<para><list><item>Color scheme,</item><item>Cursor theme,</item><item>Cursor "
-"size,</item><item>Font,</item><item>Font rendering,</item><item>NumLock "
-"preference,</item><item>Plasma theme,</item><item>Scaling DPI,</"
-"item><item>Screen configuration (Wayland only)</item></list></para>"
+"<para><list><item>Color scheme</item><item>Cursor theme and size</"
+"item><item>Font and font rendering</item><item>NumLock preference</"
+"item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
+"configuration (Wayland only)</item></list></para>"
 msgstr ""
 "<para><list><item>Krāsu shēma,</item><item>Kursora motīvs,</"
 "item><item>Kursora izmērs,</item><item>Fonts,</item><item>Fonta atveidošana,"
@@ -235,7 +242,7 @@ msgstr ""
 "item><item>Mērogošanas DPI,</item><item>Ekrāna konfigurācija (tikai "
 "„Wayland“)</item></list></para>"
 
-#: src/ui/main.qml:151
+#: src/ui/main.qml:146
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -244,42 +251,42 @@ msgstr ""
 "Ievērojiet, ka, lai motīvi būtu atspoguļoti SDDM ierakstīšanās ekrānā, to "
 "datnes ir jāinstalē globāli."
 
-#: src/ui/main.qml:156
+#: src/ui/main.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Pielietot"
 
-#: src/ui/main.qml:161
+#: src/ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Atiestatīt uz noklusējuma iestatījumiem"
 
-#: src/ui/main.qml:173
+#: src/ui/main.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Mainīt fonu"
 
-#: src/ui/main.qml:209
+#: src/ui/main.qml:203
 #, kde-format
 msgid "No image selected"
 msgstr "Attēls nav norādīts"
 
-#: src/ui/main.qml:214
+#: src/ui/main.qml:208
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "Rādīt pulksteni"
 
-#: src/ui/main.qml:222
+#: src/ui/main.qml:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Ielādēt no datnes…"
 
-#: src/ui/main.qml:227
+#: src/ui/main.qml:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
