@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-23 00:42+0000\n"
-"PO-Revision-Date: 2024-09-17 10:23+0300\n"
+"PO-Revision-Date: 2024-11-23 14:28+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -220,14 +220,7 @@ msgstr ""
 "הגדרה זו תגרום למסך הכניסה של SDDM לשקף את ההתאמות שלך להגדרות הפלזמה הבאות:"
 
 #: src/ui/main.qml:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -235,10 +228,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>סכמת צבעים,</item><item>ערכת סמני עכבר,</item><item>גודל "
-"סמן עכבר,</item><item>גופן,</item><item>עיבוד גופנים,</item><item>העדפת "
-"NumLock,</item><item>ערכת עיצוב של פלזמה,</item><item>נק׳ לאינטש להתאמת גודל,"
-"</item><item>הגדרות מסך (Wayland בלבד)</item></list></para>"
+"<para><list><item>סכמת צבעים</item><item>ערכת סמני עכבר</item><item>גודל סמן "
+"עכבר</item><item>גופן</item><item>עיבוד גופנים</item><item>העדפת NumLock</"
+"item><item>ערכת עיצוב של פלזמה</item><item>נק׳ לאינטש להתאמת גודל</"
+"item><item>הגדרות מסך (Wayland בלבד)</item></list></para>"
 
 #: src/ui/main.qml:146
 #, kde-format

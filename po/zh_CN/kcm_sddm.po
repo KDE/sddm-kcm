@@ -215,14 +215,7 @@ msgid ""
 msgstr "这将使 SDDM 登录屏幕使用下列用户定义的 Plasma 设置："
 
 #: src/ui/main.qml:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -230,10 +223,6 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>配色方案、</item><item>光标主题、</item><item>光标大小、</"
-"item><item>字体、</item><item>字体渲染方式、</item><item>数字键锁定首选项、</"
-"item><item>Plasma 主题、</item><item>缩放 DPI、</item><item>屏幕配置 (仅适用"
-"于 Wayland)</item></list></para>"
 
 #: src/ui/main.qml:146
 #, kde-format
