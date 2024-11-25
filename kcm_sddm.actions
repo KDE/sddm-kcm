@@ -442,7 +442,7 @@ Description[ta]=பயனரின் அமைப்புகளை SDDM அம
 Description[tr]=Kullanıcı ayarlarını SDDM ayarları ile eşzamanlar
 Description[uk]=Синхронізація параметрів користувача із параметрами SDDM
 Description[x-test]=xxSynchronizes user settings with SDDM settingsxx
-Description[zh_CN]=同步包括 SDDM 设置在内的用户设置
+Description[zh_CN]=同步用户设置和 SDDM 设置
 Description[zh_TW]=將使用者設定與 SDDM 設定同步
 Policy=auth_admin
 
