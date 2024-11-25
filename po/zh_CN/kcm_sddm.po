@@ -223,6 +223,9 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
+"<para><list><item>配色方案</item><item>光标方案和大小</item><item>字体和字体"
+"渲染方式</item><item>数字键锁定设置</item><item>Plasma 主题</item><item>缩放 "
+"DPI</item><item>屏幕配置 (仅适用于 Wayland)</item></list></para>"
 
 #: src/ui/main.qml:146
 #, kde-format

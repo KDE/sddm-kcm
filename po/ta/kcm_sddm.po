@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the sddm-kcm package.
 #
-# Kishore G <kishore96@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-23 00:42+0000\n"
-"PO-Revision-Date: 2023-07-16 13:00+0530\n"
+"PO-Revision-Date: 2024-11-24 17:14+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -218,14 +218,7 @@ msgid ""
 msgstr "பின்வரும் உங்கள் பிளாஸ்மா அமைப்புகளை SDDM நுழைவுத்திரைக்கும் இது செயல்படுத்தும்:"
 
 #: src/ui/main.qml:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -233,11 +226,11 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list> <item>நிறத்திட்டம்,</item> <item>சுட்டிக்குறி திட்டம்,</item> "
-"<item>சுட்டிக்குறியின் அளவு,</item> <item>எழுத்துரு,</item> <item>எழுத்துரு வரைவு,"
-"</item> <item>NumLock அமைப்பு,</item> <item>பிளாஸ்மா தோற்றத்திட்டம்,</item> "
-"<item>திரையின் DPI,</item> <item>திரையின் அமைப்பு (Wayland மட்டும்)</item> </"
-"list></para>"
+"<para><list><item>நிறத்திட்டம்</item><item>சுட்டிக்குறி திட்டம்</item> "
+"<item>சுட்டிக்குறியின் அளவு</item><item>எழுத்துரு</item><item>எழுத்துரு வரைவு</"
+"item><item>NumLock அமைப்பு</item><item>பிளாஸ்மா தோற்றத்திட்டம்,</item> "
+"<item>திரையின் DPI,</item><item>திரையின் அமைப்பு (Wayland மட்டும்)</item></list></"
+"para>"
 
 #: src/ui/main.qml:146
 #, kde-format
@@ -275,7 +268,7 @@ msgstr "எப்படமும் தேர்ந்தெடுக்கப�
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "கடிகாரத்தைக் காட்டு"
 
 #: src/ui/main.qml:216
 #, kde-format
