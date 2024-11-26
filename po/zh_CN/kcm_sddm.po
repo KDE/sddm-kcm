@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:42+0000\n"
+"POT-Creation-Date: 2024-11-26 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -54,7 +54,7 @@ msgstr "要安装的主题包，必须是一个保存在本机中的压缩文件
 msgid "Unable to install theme"
 msgstr "无法安装主题"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "无法继续，用户“sddm”不存在。请检查本系统的 SDDM 安装状态是否正确。"
@@ -183,38 +183,38 @@ msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "获取新主题…"
 
-#: src/ui/main.qml:91
+#: src/ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "查看详细信息"
 
-#: src/ui/main.qml:106
+#: src/ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "更改背景"
 
-#: src/ui/main.qml:117
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "删除"
 
-#: src/ui/main.qml:143
+#: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "应用 Plasma 设置"
 
-#: src/ui/main.qml:144
+#: src/ui/main.qml:140
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr "这将使 SDDM 登录屏幕使用下列用户定义的 Plasma 设置："
 
-#: src/ui/main.qml:145
+#: src/ui/main.qml:141
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -227,49 +227,49 @@ msgstr ""
 "渲染方式</item><item>数字键锁定设置</item><item>Plasma 主题</item><item>缩放 "
 "DPI</item><item>屏幕配置 (仅适用于 Wayland)</item></list></para>"
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:142
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr "提示：主题文件必须安装到系统全局才能被 SDDM 登录屏幕使用。"
 
-#: src/ui/main.qml:150
+#: src/ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "应用"
 
-#: src/ui/main.qml:155
+#: src/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "重置为默认设置"
 
-#: src/ui/main.qml:167
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "更改背景"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:199
 #, kde-format
 msgid "No image selected"
 msgstr "未选择图像"
 
-#: src/ui/main.qml:208
+#: src/ui/main.qml:204
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "显示时钟"
 
-#: src/ui/main.qml:216
+#: src/ui/main.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "加载文件…"
 
-#: src/ui/main.qml:221
+#: src/ui/main.qml:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

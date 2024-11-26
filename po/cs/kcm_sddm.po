@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:42+0000\n"
+"POT-Creation-Date: 2024-11-26 00:42+0000\n"
 "PO-Revision-Date: 2024-09-18 09:43+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -55,7 +55,7 @@ msgstr "Motiv pro instalací musí být existující archivovaný soubor."
 msgid "Unable to install theme"
 msgstr "Motiv nelze nainstalovat"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
@@ -183,38 +183,38 @@ msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Získat nové…"
 
-#: src/ui/main.qml:91
+#: src/ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Zobrazit podrobnosti"
 
-#: src/ui/main.qml:106
+#: src/ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Změnit pozadí"
 
-#: src/ui/main.qml:117
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Smazat"
 
-#: src/ui/main.qml:143
+#: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Provést nastavení Plasma"
 
-#: src/ui/main.qml:144
+#: src/ui/main.qml:140
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
 
-#: src/ui/main.qml:145
+#: src/ui/main.qml:141
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -236,49 +236,49 @@ msgstr ""
 "item><item>Motiv Plasma,</item><item>Škálování DPI,</item><item>Nastavení "
 "obrazovek (pouze Wayland)</item></list></para>"
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:142
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
 
-#: src/ui/main.qml:150
+#: src/ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Použít"
 
-#: src/ui/main.qml:155
+#: src/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Vrátit na výchozí nastavení"
 
-#: src/ui/main.qml:167
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Změnit pozadí"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:199
 #, kde-format
 msgid "No image selected"
 msgstr "Nebyl vybrán žádný obrázek"
 
-#: src/ui/main.qml:208
+#: src/ui/main.qml:204
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "Ukázat hodiny"
 
-#: src/ui/main.qml:216
+#: src/ui/main.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Načíst ze souboru…"
 
-#: src/ui/main.qml:221
+#: src/ui/main.qml:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

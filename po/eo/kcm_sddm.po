@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:42+0000\n"
+"POT-Creation-Date: 2024-11-26 00:42+0000\n"
 "PO-Revision-Date: 2023-07-16 06:48+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -55,7 +55,7 @@ msgstr "La instalenda etoso devas esti ekzistanta arkiva dosiero."
 msgid "Unable to install theme"
 msgstr "Ne eblas instali etoson"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
@@ -187,31 +187,31 @@ msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Akiri Novan…"
 
-#: src/ui/main.qml:91
+#: src/ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Rigardi detalojn"
 
-#: src/ui/main.qml:106
+#: src/ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Ŝanĝi Fonon"
 
-#: src/ui/main.qml:117
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/ui/main.qml:143
+#: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Apliki Plasmajn Agordojn"
 
-#: src/ui/main.qml:144
+#: src/ui/main.qml:140
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -220,7 +220,7 @@ msgstr ""
 "Ĉi tio faros la SDDM-ensalutan ekranon reflektos viajn personigojn al la "
 "sekvaj Plasmaj agordoj:"
 
-#: src/ui/main.qml:145
+#: src/ui/main.qml:141
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -241,7 +241,7 @@ msgstr ""
 "NumLock,</item><item>Plasma etoso,</item><item>Skalanta DPI,</"
 "item><item>Ekranagordo (nur Wayland)</item></list></para>"
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:142
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -250,42 +250,42 @@ msgstr ""
 "Bonvolu noti, ke etosodosieroj devas esti instalitaj tutmonde por esti "
 "reflektitaj sur la SDDM-ensaluta ekrano."
 
-#: src/ui/main.qml:150
+#: src/ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Apliki"
 
-#: src/ui/main.qml:155
+#: src/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Restarigi al defaŭltaj agordoj"
 
-#: src/ui/main.qml:167
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Ŝanĝi Fonon"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:199
 #, kde-format
 msgid "No image selected"
 msgstr "Neniu bildo elektita"
 
-#: src/ui/main.qml:208
+#: src/ui/main.qml:204
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr ""
 
-#: src/ui/main.qml:216
+#: src/ui/main.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Ŝargi el dosiero…"
 
-#: src/ui/main.qml:221
+#: src/ui/main.qml:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

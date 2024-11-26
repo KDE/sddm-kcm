@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:42+0000\n"
+"POT-Creation-Date: 2024-11-26 00:42+0000\n"
 "PO-Revision-Date: 2024-02-14 10:26+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -54,7 +54,7 @@ msgstr "Þemað sem á að setja upp verður að vera safnskrá sem er til."
 msgid "Unable to install theme"
 msgstr "Gat ekki sett upp þema"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:303
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
@@ -187,31 +187,31 @@ msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Sækja nýtt..."
 
-#: src/ui/main.qml:91
+#: src/ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Skoða upplýsingar"
 
-#: src/ui/main.qml:106
+#: src/ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
 msgstr "Breyta bakgrunni"
 
-#: src/ui/main.qml:117
+#: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr "Eyða"
 
-#: src/ui/main.qml:143
+#: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Nota stillingar Plasma..."
 
-#: src/ui/main.qml:144
+#: src/ui/main.qml:140
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -220,7 +220,7 @@ msgstr ""
 "Þetta lætur SDDM-innskráningarskjáinn endurspegla útlitsstillingarnar þínar "
 "á eftirfarandi stillingum Plasma:"
 
-#: src/ui/main.qml:145
+#: src/ui/main.qml:141
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -242,7 +242,7 @@ msgstr ""
 "item><item>DPI-kvörðun,</item><item>Skjágrunnstillingum (aðeins Wayland)</"
 "item></list></para>"
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:142
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -251,42 +251,42 @@ msgstr ""
 "Athugaðu að það þarf að setja þemaskrárnar upp altækt til að þær birtist á "
 "SDDM-innskráningarskjánum."
 
-#: src/ui/main.qml:150
+#: src/ui/main.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Virkja"
 
-#: src/ui/main.qml:155
+#: src/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Stilla aftur á sjálfgefnar stillingar"
 
-#: src/ui/main.qml:167
+#: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Breyta bakgrunni"
 
-#: src/ui/main.qml:203
+#: src/ui/main.qml:199
 #, kde-format
 msgid "No image selected"
 msgstr "Engin mynd valin"
 
-#: src/ui/main.qml:208
+#: src/ui/main.qml:204
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr ""
 
-#: src/ui/main.qml:216
+#: src/ui/main.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Hlaða úr skrá..."
 
-#: src/ui/main.qml:221
+#: src/ui/main.qml:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
