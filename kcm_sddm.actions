@@ -229,6 +229,7 @@ Description[tr]=SDDM temasını içeren bir zip dosyasını SDDM tema konumuna �
 Description[uk]=Видобути дані з архіву zip, що містить тему SDDM, до каталогу тем SDDM
 Description[x-test]=xxExtract a zip file containing an SDDM theme to the SDDM theme locationxx
 Description[zh_CN]=解压包含 SDDM 主题的 ZIP 文件到 SDDM 主题路径
+Description[zh_TW]=解壓縮包含 SDDM 主題的 zip 檔案到 SDDM 主題位置
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmsddm.uninstalltheme]
@@ -301,6 +302,7 @@ Description[tr]=Daha önce kurulmuş bir SDDM temasını kaldırın
 Description[uk]=Вилучити раніше встановлену тему SDDM
 Description[x-test]=xxRemove a previously installed SDDM themexx
 Description[zh_CN]=移除已经安装的 SDDM 主题
+Description[zh_TW]=移除先前安裝的 SDDM 主題
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmsddm.sync]
@@ -369,6 +371,7 @@ Description[tr]=Kullanıcı ayarlarını SDDM ayarları ile eşzamanlayın
 Description[uk]=Синхронізація параметрів користувача із параметрами SDDM
 Description[x-test]=xxSynchronize user settings with SDDM settingsxx
 Description[zh_CN]=同步用户设置和 SDDM 设置
+Description[zh_TW]=將使用者設定與 SDDM 設定同步
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmsddm.reset]
@@ -437,4 +440,5 @@ Description[tr]=SDDM ayarlarını fabrika ayarlarına sıfırlayın
 Description[uk]=Скинути параметри SDDM до типових для системи
 Description[x-test]=xxReset SDDM settings to factory default statexx
 Description[zh_CN]=重置 SDDM 设置为默认值
+Description[zh_TW]=重設 SDDM 設定至原廠預設設定
 Policy=auth_admin
