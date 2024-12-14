@@ -1,0 +1,272 @@
+# Sanskrit translations for sddm-kcm package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the sddm-kcm package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sddm-kcm\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-26 00:42+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
+msgid "Invalid theme package"
+msgstr "अमान्य विषयसङ्कुलम्"
+
+#: sddmauthhelper.cpp:421
+msgid "Could not open file"
+msgstr "सञ्चिकां उद्घाटयितुं न शक्तवान्"
+
+#: sddmauthhelper.cpp:450
+msgid "Could not decompress archive"
+msgstr "संग्रहणं विसंपीडयितुं न शक्तवान्"
+
+#: sddmthemeinstaller.cpp:30
+#, kde-format
+msgid "SDDM theme installer"
+msgstr "SDDM विषय संस्थापक"
+
+#: sddmthemeinstaller.cpp:37
+#, kde-format
+msgid "Install a theme."
+msgstr "एकं विषयं संस्थापयन्तु।"
+
+#: sddmthemeinstaller.cpp:38
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "एकं विषयं विस्थापयन्तु।"
+
+#: sddmthemeinstaller.cpp:40
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "संस्थापनार्थं विषयः, विद्यमानः संग्रहसञ्चिका भवितुमर्हति ।"
+
+#: sddmthemeinstaller.cpp:75
+#, kde-format
+msgid "Unable to install theme"
+msgstr "विषयवस्तु संस्थापयितुं असमर्थः"
+
+#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
+msgid ""
+"Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
+msgstr "अग्रे गन्तुं न शक्नोति, उपयोक्ता 'sddm' नास्ति । कृपया स्वस्य SDDM संस्थापनं पश्यन्तु।"
+
+#: src/sessionmodel.cpp:85
+#, kde-format
+msgctxt "%1 is the name of a session"
+msgid "%1 (Wayland)"
+msgstr ""
+
+#: src/ui/Advanced.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Behavior"
+msgstr ""
+
+#: src/ui/Advanced.qml:23
+#, kde-format
+msgctxt "option:check"
+msgid "Automatically log in:"
+msgstr ""
+
+#: src/ui/Advanced.qml:28
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the user to log in "
+"automatically"
+msgid "as user:"
+msgstr ""
+
+#: src/ui/Advanced.qml:100
+#, kde-format
+msgctxt ""
+"@label:listbox, the following combobox selects the session that is started "
+"automatically"
+msgid "with session"
+msgstr ""
+
+#: src/ui/Advanced.qml:131
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Auto-login does not support unlocking your KDE Wallet automatically, so it "
+"will ask you to unlock it every time you log in.<nl/><nl/>To avoid this, you "
+"can change the wallet to have a blank password. Note that this is insecure "
+"and should only be done in a trusted environment."
+msgstr ""
+
+#: src/ui/Advanced.qml:136
+#, kde-format
+msgid "Open KDE Wallet Settings"
+msgstr "KDE Wallet सेटिंग्स् उद्घाटयन्तु"
+
+#: src/ui/Advanced.qml:142
+#, kde-format
+msgctxt "@option:check"
+msgid "Log in again immediately after logging off"
+msgstr ""
+
+#: src/ui/Advanced.qml:155
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Minimum user UID:"
+msgstr ""
+
+#: src/ui/Advanced.qml:167
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Maximum user UID:"
+msgstr ""
+
+#: src/ui/Advanced.qml:182
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Halt Command:"
+msgstr ""
+
+#: src/ui/Advanced.qml:215
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Reboot Command:"
+msgstr ""
+
+#: src/ui/DetailsDialog.qml:28
+#, kde-format
+msgctxt "@title:window, %1 is the theme name, %2 the version"
+msgid "%1 (%2)"
+msgstr ""
+
+#: src/ui/DetailsDialog.qml:62
+#, kde-format
+msgid "No preview available"
+msgstr "पूर्वावलोकनं उपलब्धं नास्ति"
+
+#: src/ui/DetailsDialog.qml:68
+#, kde-format
+msgctxt ""
+"%1 is a description of the theme, %2 are the authors, %3 is the license"
+msgid "%1, by %2 (%3)"
+msgstr ""
+
+#: src/ui/main.qml:23
+#, kde-format
+msgctxt "@action:button"
+msgid "Behavior…"
+msgstr ""
+
+#: src/ui/main.qml:28
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Plasma Settings…"
+msgstr ""
+
+#: src/ui/main.qml:33
+#, kde-format
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr ""
+
+#: src/ui/main.qml:38
+#, kde-format
+msgctxt "@action:button as in, \"get new SDDM themes\""
+msgid "Get New…"
+msgstr ""
+
+#: src/ui/main.qml:87
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "View details"
+msgstr ""
+
+#: src/ui/main.qml:102
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Change Background"
+msgstr ""
+
+#: src/ui/main.qml:113
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete"
+msgstr ""
+
+#: src/ui/main.qml:139
+#, kde-format
+msgctxt "@title:window"
+msgid "Apply Plasma Settings"
+msgstr ""
+
+#: src/ui/main.qml:140
+#, kde-format
+msgid ""
+"This will make the SDDM login screen reflect your customizations to the "
+"following Plasma settings:"
+msgstr ""
+"एतेन SDDM प्रवेशपर्दे निम्नलिखितप्लाज्मासेटिंग्स् प्रति भवतः अनुकूलनानि प्रतिबिम्बितानि "
+"भविष्यन्ति:"
+
+#: src/ui/main.qml:141
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para><list><item>Color scheme</item><item>Cursor theme and size</"
+"item><item>Font and font rendering</item><item>NumLock preference</"
+"item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
+"configuration (Wayland only)</item></list></para>"
+msgstr ""
+
+#: src/ui/main.qml:142
+#, kde-format
+msgid ""
+"Please note that theme files must be installed globally to be reflected on "
+"the SDDM login screen."
+msgstr ""
+"कृपया ज्ञातव्यं यत् SDDM प्रवेशपट्टे प्रतिबिम्बितुं विषयसञ्चिकाः वैश्विकरूपेण संस्थापिताः भवेयुः ।"
+
+#: src/ui/main.qml:146
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply"
+msgstr ""
+
+#: src/ui/main.qml:151
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset to Default Settings"
+msgstr ""
+
+#: src/ui/main.qml:163
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Background"
+msgstr ""
+
+#: src/ui/main.qml:199
+#, kde-format
+msgid "No image selected"
+msgstr "कोऽपि चित्रः चयनितः नास्ति"
+
+#: src/ui/main.qml:204
+#, kde-format
+msgctxt "@option:check"
+msgid "Show clock"
+msgstr ""
+
+#: src/ui/main.qml:212
+#, kde-format
+msgctxt "@action:button"
+msgid "Load From File…"
+msgstr ""
+
+#: src/ui/main.qml:217
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Image"
+msgstr ""
