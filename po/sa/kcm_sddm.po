@@ -3,18 +3,21 @@
 # This file is distributed under the same license as the sddm-kcm package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -62,19 +65,19 @@ msgstr "अग्रे गन्तुं न शक्नोति, उपय�
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
-msgstr ""
+msgstr "%1 (वेलैण्ड्) २."
 
 #: src/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
-msgstr ""
+msgstr "व्यवहार"
 
 #: src/ui/Advanced.qml:23
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
-msgstr ""
+msgstr "स्वयमेव प्रवेशं कुर्वन्तु:"
 
 #: src/ui/Advanced.qml:28
 #, kde-format
@@ -82,7 +85,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr ""
+msgstr "उपयोक्तृरूपेण : १."
 
 #: src/ui/Advanced.qml:100
 #, kde-format
@@ -90,7 +93,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr ""
+msgstr "सत्रेण सह"
 
 #: src/ui/Advanced.qml:131
 #, kde-kuit-format
@@ -101,6 +104,9 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
+"स्वतः-प्रवेशः स्वयमेव भवतः KDE बटुकं अनलॉक् कर्तुं समर्थं न करोति, अतः प्रत्येकं प्रवेशसमये तत् "
+"अनलॉक् कर्तुं वक्ष्यति ।<nl/><nl/>एतत् परिहरितुं भवान् बटुकं रिक्तगुप्तशब्दं भवितुं परिवर्तयितुं "
+"शक्नोति ध्यानं कुर्वन्तु यत् एतत् असुरक्षितम् अस्ति, केवलं विश्वसनीयवातावरणे एव कर्तव्यम् ।"
 
 #: src/ui/Advanced.qml:136
 #, kde-format
@@ -111,37 +117,37 @@ msgstr "KDE Wallet सेटिंग्स् उद्घाटयन्तु
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr ""
+msgstr "प्रवेशं कृत्वा तत्क्षणमेव पुनः प्रवेशं कुर्वन्तु"
 
 #: src/ui/Advanced.qml:155
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
-msgstr ""
+msgstr "न्यूनतमं उपयोक्तृ UID: ."
 
 #: src/ui/Advanced.qml:167
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
-msgstr ""
+msgstr "अधिकतमं उपयोक्तृ UID: ."
 
 #: src/ui/Advanced.qml:182
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
-msgstr ""
+msgstr "स्थगित आदेशः : १."
 
 #: src/ui/Advanced.qml:215
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
-msgstr ""
+msgstr "पुनः आरम्भः आदेशः : १."
 
 #: src/ui/DetailsDialog.qml:28
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2) २."
 
 #: src/ui/DetailsDialog.qml:62
 #, kde-format
@@ -153,55 +159,55 @@ msgstr "पूर्वावलोकनं उपलब्धं नास्�
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
-msgstr ""
+msgstr "%1, %2 (%3) द्वारा"
 
 #: src/ui/main.qml:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr ""
+msgstr "व्यवहारः…"
 
 #: src/ui/main.qml:28
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr ""
+msgstr "प्लाज्मा सेटिंग्स् प्रयोजयन्तु..."
 
 #: src/ui/main.qml:33
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr ""
+msgstr "सञ्चिकातः संस्थापनं कुर्वन्तु..."
 
 #: src/ui/main.qml:38
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "नवीनं प्राप्तुम्..."
 
 #: src/ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr ""
+msgstr "विवरणं पश्यन्तु"
 
 #: src/ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
-msgstr ""
+msgstr "पृष्ठभूमि परिवर्तन करें"
 
 #: src/ui/main.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
-msgstr ""
+msgstr "लुप्"
 
 #: src/ui/main.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
-msgstr ""
+msgstr "प्लाज्मा सेटिंग्स् प्रयोजयन्तु"
 
 #: src/ui/main.qml:140
 #, kde-format
@@ -221,6 +227,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
+"<para><list><item>रङ्गयोजना</item><item>कर्सरस्य विषयः आकारः च</item><item>फॉन्ट् "
+"तथा फॉन्ट् रेण्डरिंग्</item><item>NumLock preference</item><item>प्लाज्मा theme</"
+"item><item>DPI स्केलिंग्</item><item>स्क्रीन् विन्यासः (केवलं वेलैण्ड्)</item></list></"
+"para>"
 
 #: src/ui/main.qml:142
 #, kde-format
@@ -234,19 +244,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "आचरतु"
 
 #: src/ui/main.qml:151
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr ""
+msgstr "पूर्वनिर्धारितसेटिंग्स् इत्यत्र पुनः सेट् कुर्वन्तु"
 
 #: src/ui/main.qml:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
-msgstr ""
+msgstr "पृष्ठभूमि परिवर्तन करें"
 
 #: src/ui/main.qml:199
 #, kde-format
@@ -257,16 +267,16 @@ msgstr "कोऽपि चित्रः चयनितः नास्ति
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "घड़ीं दर्शयतु"
 
 #: src/ui/main.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr ""
+msgstr "सञ्चिकातः लोड् कुर्वन्तु..."
 
 #: src/ui/main.qml:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
-msgstr ""
+msgstr "चित्रं स्पष्टं कुरुत"
