@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -65,7 +65,7 @@ msgstr "अग्रे गन्तुं न शक्नोति, उपय�
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
-msgstr "%1 (वेलैण्ड्) २."
+msgstr "%1 (वेलैण्ड्)"
 
 #: src/ui/Advanced.qml:17
 #, kde-format
@@ -85,7 +85,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr "उपयोक्तृरूपेण : १."
+msgstr "उपयोक्तृरूपेण :"
 
 #: src/ui/Advanced.qml:100
 #, kde-format
@@ -135,19 +135,19 @@ msgstr "अधिकतमं उपयोक्तृ UID: ."
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
-msgstr "स्थगित आदेशः : १."
+msgstr "स्थगित आदेशः :"
 
 #: src/ui/Advanced.qml:215
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
-msgstr "पुनः आरम्भः आदेशः : १."
+msgstr "पुनः आरम्भः आदेशः :"
 
 #: src/ui/DetailsDialog.qml:28
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr "%1 (%2) २."
+msgstr "%1 (%2)"
 
 #: src/ui/DetailsDialog.qml:62
 #, kde-format
