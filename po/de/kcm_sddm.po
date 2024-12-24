@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-09-03 22:22+0200\n"
+"PO-Revision-Date: 2024-12-23 17:12+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -220,14 +220,7 @@ msgstr ""
 "Plasma-Einstellungen eingerichtet:"
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -235,11 +228,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Farbschema,</item><item>Zeigerdesign,</"
-"item><item>Zeigergröße,</item><item>Schriftart,</item><item>Schrift-"
-"Rendering,</item><item>Zahlen-Feststelltaste,</item><item>Plasma-Design,</"
-"item><item>DPI-Skalierung und</item> <item>Anzeige-Einstellungen (nur "
-"Wayland)</item></list></para>"
+"<para><list><item>Farbschema</item><item>Zeigerdesign</"
+"item><item>Schriftart</item><item>Schrift und -rendering</item><item>Zahlen-"
+"Feststelltaste</item><item>Plasma-Design</item><item>DPI-Skalierung</"
+"item><item>Anzeige-Einstellungen (nur Wayland)</item></list></para>"
 
 #: src/ui/main.qml:142
 #, kde-format
@@ -277,7 +269,7 @@ msgstr "Es ist kein Bild ausgewählt"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Uhr anzeigen"
 
 #: src/ui/main.qml:212
 #, kde-format
