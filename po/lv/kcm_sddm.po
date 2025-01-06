@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the sddm-kcm package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-10-29 19:54+0200\n"
+"PO-Revision-Date: 2025-01-04 16:17+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -221,14 +221,7 @@ msgstr ""
 "pielāgošanas iestatījumus:"
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -236,11 +229,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Krāsu shēma,</item><item>Kursora motīvs,</"
-"item><item>Kursora izmērs,</item><item>Fonts,</item><item>Fonta atveidošana,"
-"</item><item>„NumLock“ taustiņa iestatījums,</item><item>„Plasma“ motīvs,</"
-"item><item>Mērogošanas DPI,</item><item>Ekrāna konfigurācija (tikai "
-"„Wayland“)</item></list></para>"
+"<para><list><item>Krāsu shēma</item><item>Kursora motīvs un izmērs</"
+"item><item>Fonts un fonta atveidošana</item><item>„NumLock“ taustiņa "
+"iestatījums</item><item>„Plasma“ motīvs,</item><item>Mērogošanas DPI,</"
+"item><item>Ekrāna konfigurācija (tikai „Wayland“)</item></list></para>"
 
 #: src/ui/main.qml:142
 #, kde-format
