@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2022.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2018, 2021.
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 14:43+0200\n"
+"PO-Revision-Date: 2025-01-20 21:02+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -223,14 +223,7 @@ msgstr ""
 "módosításai tükröződnek:"
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -238,9 +231,9 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Színséma,</item><item>Kurzortéma,</item><item>Kurzorméret,"
-"</item><item>Betűkészlet,</item><item>Betűrenderelés,</item><item>NumLock "
-"beállítások,</item><item>Plasma téma,</item><item>DPI skálázás,</"
+"<para><list><item>Színséma</item><item>Kurzortéma és -méret</"
+"item><item>Betűkészlet és -renderelés</item><item>NumLock beállítások</"
+"item><item>Plasma téma</item><item>DPI skálázás</"
 "item><item>Képernyőbeállítás (csak Wayland)</item></list></para>"
 
 #: src/ui/main.qml:142
