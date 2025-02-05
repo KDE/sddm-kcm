@@ -4,13 +4,13 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2014, 2017, 2018, 2019, 2021, 2022, 2023.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2015, 2018, 2019, 2020.
-# Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
+# SPDX-FileCopyrightText: 2023, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2023-08-02 00:31-0300\n"
+"PO-Revision-Date: 2025-02-04 14:44-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -224,14 +224,7 @@ msgstr ""
 "seguintes configurações do Plasma:"
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -239,11 +232,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Esquema de cores,</item><item>Tema de cursores,</"
-"item><item>Tamanho do cursor,</item><item>Fonte,</item><item>Renderização de "
-"fonte,</item><item>Preferência do NumLock,</item><item>Tema do Plasma,</"
-"item><item>Escala de DPI,</item><item>Configuração da tela (somente "
-"Wayland)</item></list></para>"
+"<para><list><item>Esquema de cores</item><item>Tema de cursores e tamanho do "
+"cursor</item><item>Fonte e renderização de fonte</item><item>Preferência do "
+"NumLock</item><item>Tema do Plasma</item><item>Escala de DPI</"
+"item><item>Configuração da tela (somente Wayland)</item></list></para>"
 
 #: src/ui/main.qml:142
 #, kde-format
@@ -281,7 +273,7 @@ msgstr "Nenhuma imagem selecionada"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Mostrar relógio"
 
 #: src/ui/main.qml:212
 #, kde-format
