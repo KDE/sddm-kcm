@@ -215,14 +215,7 @@ msgid ""
 msgstr ""
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -230,11 +223,6 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Barevný motiv,</item><item>Cursor size,</item><item>Motiv "
-"kurozrů,</item><item>Velikost kurzoru,</item><item>Písmo,</"
-"item><item>Vykreslování písma,</item><item>Předvolby pro NumLock,</"
-"item><item>Motiv Plasma,</item><item>Škálování DPI,</item><item>Nastavení "
-"obrazovek (pouze Wayland)</item></list></para>"
 
 #: src/ui/main.qml:142
 #, kde-format
