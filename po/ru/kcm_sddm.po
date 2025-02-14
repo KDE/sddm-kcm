@@ -2,13 +2,13 @@
 #
 # Victor Ryzhykh <victorr2007@yandex.ru>, 2015.
 # Alexander Potashev <aspotashev@gmail.com>, 2015, 2017, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2021, 2022, 2023, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-09-20 07:38+0300\n"
+"PO-Revision-Date: 2025-02-13 11:53+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -227,14 +227,7 @@ msgstr ""
 "параметров оформления Plasma:"
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -242,11 +235,11 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Цветовая схема;</item><item>Набор курсоров;</"
-"item><item>Размер курсора;</item><item>Шрифт и его отображение;</"
-"item><item>Режим NumLock;</item><item>Оформление рабочей среды;</item> "
-"<item>Значение DPI;</item><item>Параметры конфигурации экрана (только для "
-"Wayland).</item></list></para>"
+"<para><list> <item>Цветовая схема;</item> <item>Набор курсоров;</item> "
+"<item>Шрифт и его отображение;</item> <item>Режим NumLock;</item> "
+"<item>Оформление рабочей среды;</item> <item>Значение DPI;</item> "
+"<item>Параметры конфигурации экрана (только для Wayland).</item> </list></"
+"para>"
 
 #: src/ui/main.qml:142
 #, kde-format
