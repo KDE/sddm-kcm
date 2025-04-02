@@ -1,14 +1,14 @@
+# SPDX-FileCopyrightText: 2023, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2023-04-07 23:34-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2025-03-15 19:52+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -99,11 +99,7 @@ msgid "with session"
 msgstr "起動するセッション"
 
 #: src/ui/Advanced.qml:131
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
@@ -112,7 +108,9 @@ msgid ""
 "and should only be done in a trusted environment."
 msgstr ""
 "自動ログインを使用する場合、KDE ウォレットは自動的にアンロックされません。し"
-"たがって、ログインするたびに手動でのアンロックを要求されます。"
+"たがって、ログインするたびに手動でのアンロックを要求されます。<nl/><nl/>ウォ"
+"レットに空のパスワードを設定すると、これを回避することができます。この設定は"
+"安全ではないため、信頼できる環境でのみ使用してください。"
 
 #: src/ui/Advanced.qml:136
 #, kde-format
@@ -171,7 +169,7 @@ msgstr "%1, 作者: %2 (%3)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "挙動..."
+msgstr "挙動…"
 
 #: src/ui/main.qml:28
 #, kde-format
@@ -183,13 +181,13 @@ msgstr "Plasma 設定を適用…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "ファイルからインストール..."
+msgstr "ファイルからインストール…"
 
 #: src/ui/main.qml:38
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr "新しいテーマを取得..."
+msgstr "新規入手…"
 
 #: src/ui/main.qml:87
 #, kde-format
@@ -223,14 +221,7 @@ msgid ""
 msgstr "SDDM のログイン画面に以下の Plasma 設定への変更を反映します:"
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -238,8 +229,8 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>カラースキーム</item><item>カーソルテーマ</item><item>フォ"
-"ント</item><item>フォントのレンダリング</item><item>NumLock 設定</"
+"<para><list><item>カラースキーム</item><item>カーソルのテーマと大きさ</"
+"item><item>フォントとフォントのレンダリング</item><item>NumLock 設定</"
 "item><item>Plasma テーマ</item><item>DPI スケーリング</item><item>スクリーン"
 "の設定 (Wayland のみ)</item></list></para>"
 
@@ -279,7 +270,7 @@ msgstr "画像が選択されていません"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "時計を表示"
 
 #: src/ui/main.qml:212
 #, kde-format
