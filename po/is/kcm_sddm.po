@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the sddm-kcm package.
 #
-# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-02-14 10:26+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2025-05-28 20:20+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
 msgid "Invalid theme package"
@@ -221,14 +221,7 @@ msgstr ""
 "á eftirfarandi stillingum Plasma:"
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -236,11 +229,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Litastefi,</item><item>Bendilsþema,</"
-"item><item>Bendilstærð,</item><item>Leturgerð,</item><item>Leturbirtingu,</"
-"item><item>Stillingum fyrir NumLock,</item><item>Plasma-þema,</"
-"item><item>DPI-kvörðun,</item><item>Skjágrunnstillingum (aðeins Wayland)</"
-"item></list></para>"
+"<para><list><item>litastefi</item><item>þema og stærð bendils</"
+"item><item>gerð og birtingu leturs</item><item>stillingum fyrir NumLock,</"
+"item><item>Plasma-þema,</item><item>DPI-kvörðun,</item><item>grunnstillingum "
+"fyrir skjá (bara í Wayland)</item></list></para>"
 
 #: src/ui/main.qml:142
 #, kde-format
@@ -278,7 +270,7 @@ msgstr "Engin mynd valin"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Sýna klukku"
 
 #: src/ui/main.qml:212
 #, kde-format
