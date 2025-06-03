@@ -6,67 +6,67 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2015-01-08 21:37+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-05-31 19:24+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 25.04.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
-msgstr ""
+msgstr "Ugyldig temapakke"
 
 #: sddmauthhelper.cpp:377
 msgid "Could not open file"
-msgstr "Klarte ikke åpne fil"
+msgstr "Klarte ikke åpne fila"
 
 #: sddmauthhelper.cpp:408
 msgid "Could not decompress archive"
-msgstr ""
+msgstr "Klarte ikke pakke ut arkivfil"
 
 #: sddmthemeinstaller.cpp:29
 #, kde-format
 msgid "SDDM theme installer"
-msgstr ""
+msgstr "SDDM-temainstallering"
 
 #: sddmthemeinstaller.cpp:36
 #, kde-format
 msgid "Install a theme."
-msgstr ""
+msgstr "Installer et tema."
 
 #: sddmthemeinstaller.cpp:37
 #, kde-format
 msgid "Uninstall a theme."
-msgstr ""
+msgstr "Avinstaller et tema."
 
 #: sddmthemeinstaller.cpp:39
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
-msgstr ""
+msgstr "Temaet som skal installeres. Må være en arkivfil."
 
 #: sddmthemeinstaller.cpp:65
 #, kde-format
 msgid "Unable to install theme"
-msgstr ""
+msgstr "Klarte ikke installere temaet"
 
 #: src/package/contents/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
-msgstr ""
+msgstr "Atferd"
 
 #: src/package/contents/ui/Advanced.qml:22
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
-msgstr ""
+msgstr "Logg automatisk inn:"
 
 #: src/package/contents/ui/Advanced.qml:25
 #, kde-format
@@ -74,7 +74,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr ""
+msgstr "som bruker:"
 
 #: src/package/contents/ui/Advanced.qml:71
 #, kde-format
@@ -82,7 +82,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr ""
+msgstr "med økta"
 
 #: src/package/contents/ui/Advanced.qml:103
 #, kde-kuit-format
@@ -93,47 +93,51 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
+"Den automatiske innlogginga støtter ikke automatisk opplåsing av KDE-"
+"lommeboka, så du blir spurt om å låse den opp for hver innlogging.<nl/><nl/"
+">For å unngå dette kan du la lommeboka ha tomt passord. Men merk at dette "
+"ikke er trygt, og du bør bare bruke det i miljø du stoler helt på."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr ""
+msgstr "Åpne lommebokinnstillinger"
 
 #: src/package/contents/ui/Advanced.qml:114
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr ""
+msgstr "Logg inn igjen rett etter utlogging"
 
 #: src/package/contents/ui/Advanced.qml:127
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
-msgstr ""
+msgstr "Lavest mulige bruker-UID:"
 
 #: src/package/contents/ui/Advanced.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
-msgstr ""
+msgstr "Høyest mulige bruker-UID:"
 
 #: src/package/contents/ui/Advanced.qml:154
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
-msgstr ""
+msgstr "Stoppkommando:"
 
 #: src/package/contents/ui/Advanced.qml:185
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
-msgstr ""
+msgstr "Omstartskommando:"
 
 #: src/package/contents/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: src/package/contents/ui/DetailsDialog.qml:55
 #, kde-format
@@ -145,55 +149,55 @@ msgstr "Ingen forhåndsvisning tilgjengelig"
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
-msgstr ""
+msgstr "%1, fra %2 (%3)"
 
 #: src/package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr ""
+msgstr "Vis detaljer"
 
 #: src/package/contents/ui/main.qml:80
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
-msgstr ""
+msgstr "Bytt bakgrunn"
 
 #: src/package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: src/package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior..."
-msgstr ""
+msgstr "Atferd ..."
 
 #: src/package/contents/ui/main.qml:110
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings..."
-msgstr ""
+msgstr "Bruk innstillinger fra Plasma ..."
 
 #: src/package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File..."
-msgstr ""
+msgstr "Installer fra fil ..."
 
 #: src/package/contents/ui/main.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New SDDM Themes..."
-msgstr ""
+msgstr "Hent nye SDDM-temaer …"
 
 #: src/package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
-msgstr ""
+msgstr "Bruk innstillinger fra Plasma"
 
 #: src/package/contents/ui/main.qml:144
 #, kde-format
@@ -201,6 +205,8 @@ msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
+"Dette vil få innloggingsbildet (SDDM) til å følge endringene du har gjort i "
+"disse Plasma-innstillingene:"
 
 #: src/package/contents/ui/main.qml:145
 #, kde-kuit-format
@@ -211,6 +217,10 @@ msgid ""
 "item><item>Plasma theme,</item><item>Scaling DPI,</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
+"<para><list><item>Fargeoppsett</item><item>Pekertema</item><item>Skrifter</"
+"item><item>Skriftvising</item><item>NumLock-innstillinger</item><item>Plasma-"
+"tema</item><item>PPT-skalering</item><item>Skjermoppsett (bare for Wayland)</"
+"item></list></para>"
 
 #: src/package/contents/ui/main.qml:146
 #, kde-format
@@ -218,49 +228,53 @@ msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
+"Merk at temafilene må være globalt installerte for at de skal vises på "
+"innloggingsbildet (SDDM)."
 
 #: src/package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "Bruk"
 
 #: src/package/contents/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr ""
+msgstr "Tilbakestill til standardinnstillinger"
 
 #: src/package/contents/ui/main.qml:168
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
-msgstr ""
+msgstr "Bytt bakgrunn"
 
 #: src/package/contents/ui/main.qml:177
 #, kde-format
 msgid "No image selected"
-msgstr ""
+msgstr "Ingen bilde valgt"
 
 #: src/package/contents/ui/main.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File..."
-msgstr ""
+msgstr "Hent fra fil …"
 
 #: src/package/contents/ui/main.qml:208
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
-msgstr ""
+msgstr "Fjern bildet"
 
 #: src/sddmkcm.cpp:155 src/sddmkcm.cpp:278
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Kan ikke fortsette, da brukeren «sddm» ikke finnes. Se til at SDDM er "
+"installert riktig."
 
 #: src/sessionmodel.cpp:84
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
-msgstr ""
+msgstr "%1 (Wayland)"
