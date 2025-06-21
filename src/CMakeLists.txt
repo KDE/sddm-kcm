@@ -1,8 +1,10 @@
-set(SDDM_CONFIG_FILE                 "/etc/sddm.conf"                                    CACHE PATH      "Path of the sddm config file")
-set(SDDM_CONFIG_DIR                  "/etc/sddm.conf.d"                                  CACHE PATH      "Path of the sddm config directory")
-set(SDDM_SYSTEM_CONFIG_DIR           "${CMAKE_INSTALL_PREFIX}/lib/sddm/sddm.conf.d"      CACHE PATH      "Path of the system sddm config directory")
-set(XSESSIONS_DIR                    "${CMAKE_INSTALL_PREFIX}/share/xsessions"           CACHE PATH      "Path of the xsessions")
-set(WAYLAND_SESSIONS_DIR             "${CMAKE_INSTALL_PREFIX}/share/wayland-sessions"    CACHE PATH      "Path of the wayland sessions")
+set(SDDM_CONFIG_FILE              "/etc/sddm.conf"                                       CACHE PATH      "Path of the sddm config file")
+set(SDDM_CONFIG_DIR               "/etc/sddm.conf.d"                                     CACHE PATH      "Path of the sddm config directory")
+set(SDDM_SYSTEM_CONFIG_DIR        "${CMAKE_INSTALL_PREFIX}/lib/sddm/sddm.conf.d"         CACHE PATH      "Path of the system sddm config directory")
+set(XSESSIONS_DIR                 "${CMAKE_INSTALL_PREFIX}/share/xsessions"              CACHE PATH      "Primary path of the xsessions")
+set(XSESSIONS_ALT_DIR             "${CMAKE_INSTALL_PREFIX}/local/share/xsessions"        CACHE PATH      "Alternate path of the xsessions")
+set(WAYLAND_SESSIONS_DIR          "${CMAKE_INSTALL_PREFIX}/share/wayland-sessions"       CACHE PATH      "Primary path of the wayland sessions")
+set(WAYLAND_SESSIONS_ALT_DIR      "${CMAKE_INSTALL_PREFIX}/local/share/wayland-sessions" CACHE PATH      "Alternate path of the wayland sessions")
 
 configure_file(config.h.in config.h IMMEDIATE @ONLY)
 

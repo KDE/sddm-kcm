@@ -5,6 +5,8 @@
 #define SDDM_CONFIG_DIR                  "@SDDM_CONFIG_DIR@"
 #define SDDM_SYSTEM_CONFIG_DIR           "@SDDM_SYSTEM_CONFIG_DIR@"
 #define XSESSIONS_DIR                    "@XSESSIONS_DIR@"
+#define XSESSIONS_ALT_DIR                "@XSESSIONS_ALT_DIR@"
 #define WAYLAND_SESSIONS_DIR             "@WAYLAND_SESSIONS_DIR@"
+#define WAYLAND_SESSIONS_ALT_DIR         "@WAYLAND_SESSIONS_ALT_DIR@"
 
 #endif //CONFIG_H

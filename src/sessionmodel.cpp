@@ -37,7 +37,9 @@ SessionModel::SessionModel(QObject *parent)
     , d(new SessionModelPrivate())
 {
     loadDir(QStringLiteral(XSESSIONS_DIR), SessionTypeX);
+    loadDir(QStringLiteral(XSESSIONS_ALT_DIR), SessionTypeX);
     loadDir(QStringLiteral(WAYLAND_SESSIONS_DIR), SessionTypeWayland);
+    loadDir(QStringLiteral(WAYLAND_SESSIONS_ALT_DIR), SessionTypeWayland);
 }
 
 SessionModel::~SessionModel()
