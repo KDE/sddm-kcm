@@ -3,30 +3,29 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2017-05-16 11:58-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-06-22 21:50+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
-msgstr "ערכת נושא שאינה תקינה"
+msgstr "חבילת ערכת עיצוב שגויה"
 
 #: sddmauthhelper.cpp:377
-#, fuzzy
-#| msgid "Could not decompress archive"
 msgid "Could not open file"
-msgstr "לא ניתן לחלץ את הארכיון"
+msgstr "לא ניתן לפתוח קובץ"
 
 #: sddmauthhelper.cpp:408
 msgid "Could not decompress archive"
@@ -35,57 +34,55 @@ msgstr "לא ניתן לחלץ את הארכיון"
 #: sddmthemeinstaller.cpp:29
 #, kde-format
 msgid "SDDM theme installer"
-msgstr "מתקין ערכות נושא של SDDM"
+msgstr "מתקין ערכות עיצוב של SDDM"
 
 #: sddmthemeinstaller.cpp:36
 #, kde-format
 msgid "Install a theme."
-msgstr "התקן ערכת נושא"
+msgstr "התקנת ערכת עיצוב."
 
 #: sddmthemeinstaller.cpp:37
 #, kde-format
 msgid "Uninstall a theme."
-msgstr "הסר ערכת נושא"
+msgstr "הסרת ערכת עיצוב."
 
 #: sddmthemeinstaller.cpp:39
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
-msgstr "ערכת הנושא להתקנה חייבת להיות קובץ ארכיון קיים."
+msgstr "ערכת העיצוב להתקנה חייבת להיות קובץ ארכיון קיים."
 
 #: sddmthemeinstaller.cpp:65
 #, kde-format
 msgid "Unable to install theme"
-msgstr "לא ניתן להתקין את הערכת נושא"
+msgstr "לא ניתן להתקין את הערכת העיצוב"
 
 #: src/package/contents/ui/Advanced.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
-msgstr ""
+msgstr "התנהגות"
 
 #: src/package/contents/ui/Advanced.qml:22
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
-msgstr ""
+msgstr "כניסה אוטומטית:"
 
 #: src/package/contents/ui/Advanced.qml:25
-#, fuzzy, kde-format
-#| msgid "User:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr "משתמש:"
+msgstr "בתור המשתמש:"
 
 #: src/package/contents/ui/Advanced.qml:71
-#, fuzzy, kde-format
-#| msgid "Session:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr "הפעלה:"
+msgstr "עם הפעלה"
 
 #: src/package/contents/ui/Advanced.qml:103
 #, kde-kuit-format
@@ -96,51 +93,51 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
+"כניסה אוטומטית לא תומכת בשחרור הארנקים של KDE אוטומטית, לכן הוא יבקש ממך "
+"לשחרר אותו עם כל כניסה מההתחלה.<nl/><nl/>כדי להימנע מזה, אפשר לשנות שלארנק "
+"תהיה סיסמה ריקה. ראוי לשים לב שאבטחת הארנק תיפגע ושמומלץ לבצע את זה בסביבות "
+"מהימנות בלבד."
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr ""
+msgstr "פתיחת הגדרות הארנקים של KDE"
 
 #: src/package/contents/ui/Advanced.qml:114
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr ""
+msgstr "להיכנס שוב אוטומטית מיידית לאחר היציאה מהמערכת"
 
 #: src/package/contents/ui/Advanced.qml:127
-#, fuzzy, kde-format
-#| msgid "Minimum UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
-msgstr "‏UID מינימלי:"
+msgstr "מזהה משתמש מזערי:"
 
 #: src/package/contents/ui/Advanced.qml:139
-#, fuzzy, kde-format
-#| msgid "Maximum UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
-msgstr "‏UID מקסימלי:"
+msgstr "מזהה משתמש מרבי:"
 
 #: src/package/contents/ui/Advanced.qml:154
-#, fuzzy, kde-format
-#| msgid "Halt Command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
-msgstr "פקודת שינה"
+msgstr "פקודת עצירה:"
 
 #: src/package/contents/ui/Advanced.qml:185
-#, fuzzy, kde-format
-#| msgid "Reboot Command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
-msgstr "פקודת הפעלה מחדש"
+msgstr "פקודת הפעלה מחדש:"
 
 #: src/package/contents/ui/DetailsDialog.qml:26
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: src/package/contents/ui/DetailsDialog.qml:55
 #, kde-format
@@ -152,58 +149,55 @@ msgstr "אין תצוגה מקדימה זמינה"
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
-msgstr ""
+msgstr "%1, על ידי %2 (%3)"
 
 #: src/package/contents/ui/main.qml:65
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr ""
+msgstr "הצגת פרטים"
 
 #: src/package/contents/ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Background"
-msgstr "רקע:"
+msgstr "החלפת תמונת רקע"
 
 #: src/package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
-msgstr ""
+msgstr "מחיקה"
 
 #: src/package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior..."
-msgstr ""
+msgstr "התנהגות…"
 
 #: src/package/contents/ui/main.qml:110
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings..."
-msgstr ""
+msgstr "החלת הגדרות פלזמה…"
 
 #: src/package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Install From File"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File..."
-msgstr "התקן מקובץ"
+msgstr "התקנה מקובץ…"
 
 #: src/package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "Download New SDDM Themes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New SDDM Themes..."
-msgstr "הורד ערכת נושא חדשה ל־SDDM"
+msgstr "הורדת ערכות עיצוב חדשות ל־SDDM…"
 
 #: src/package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
-msgstr ""
+msgstr "החלת הגדרות פלזמה"
 
 #: src/package/contents/ui/main.qml:144
 #, kde-format
@@ -211,6 +205,7 @@ msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
+"הגדרה זו תגרום למסך הכניסה של SDDM לשקף את ההתאמות שלך להגדרות הפלזמה הבאות:"
 
 #: src/package/contents/ui/main.qml:145
 #, kde-kuit-format
@@ -228,49 +223,48 @@ msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
+"נא לשים לב שיש להתקין את קובצי ערכת העיצוב באופן כללי כדי שישפיע על מסך "
+"הכניסה של SDDM."
 
 #: src/package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "החלה"
 
 #: src/package/contents/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr ""
+msgstr "איפוס להגדרות ברירת מחדל"
 
 #: src/package/contents/ui/main.qml:168
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
-msgstr "רקע:"
+msgstr "החלפת תמונת רקע"
 
 #: src/package/contents/ui/main.qml:177
 #, kde-format
 msgid "No image selected"
-msgstr ""
+msgstr "לא נבחרה תמונה"
 
 #: src/package/contents/ui/main.qml:203
-#, fuzzy, kde-format
-#| msgid "Load from file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File..."
-msgstr "טען מקובץ..."
+msgstr "טעינה מקובץ…"
 
 #: src/package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Clear Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
-msgstr "נקה תמונה"
+msgstr "פינוי תמונה"
 
 #: src/sddmkcm.cpp:155 src/sddmkcm.cpp:278
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
-msgstr ""
+msgstr "לא ניתן להמשיך, המשתמש ‚sddm’ לא קיים. נא לבדוק את התקנת ה־SDDM שלך."
 
 #: src/sessionmodel.cpp:84
 #, kde-format
