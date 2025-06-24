@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:42+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-11-23 14:28+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -62,7 +62,7 @@ msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "לא ניתן להמשיך, המשתמש ‚sddm’ לא קיים. נא לבדוק את התקנת ה־SDDM שלך."
 
-#: src/sessionmodel.cpp:85
+#: src/sessionmodel.cpp:87
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:42+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2025-02-04 14:44-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr ""
 "Não foi possível proceder, o usuário 'sddm' não existe. Verifique sua "
 "instalação do SDDM."
 
-#: src/sessionmodel.cpp:85
+#: src/sessionmodel.cpp:87
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:42+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-11-25 17:53+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -61,7 +61,7 @@ msgstr ""
 "Non pote proceder, usator 'sddm' non existe. Pro favor verifica tu "
 "installation de SDDM."
 
-#: src/sessionmodel.cpp:85
+#: src/sessionmodel.cpp:87
 #, kde-format
 msgctxt "%1 is the name of a session"
 msgid "%1 (Wayland)"
