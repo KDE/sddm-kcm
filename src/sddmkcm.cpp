@@ -122,7 +122,8 @@ void SddmKcm::save()
         args[QStringLiteral("theme.conf.user")] = QVariant(themeConfigPath + QStringLiteral(".user"));
         const QString backgroundPath = m_themesModel->data(currentThemeIndex, ThemesModel::CurrentBackgroundRole).toString();
         if (!backgroundPath.isEmpty()) {
-            args[QStringLiteral("theme.conf.user/General/background")] = backgroundPath;
+            const QString backgroundDirty = m_themesModel->data(currentThemeIndex, ThemesModel::BackgroundDirtyRole).toString();
+            args[QStringLiteral("theme.conf.user/General/background")] = QStringList{backgroundPath, backgroundDirty};
             args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("image");
         } else {
             args[QStringLiteral("theme.conf.user/General/type")] = QStringLiteral("color");
@@ -143,11 +144,12 @@ void SddmKcm::save()
     saveAction.setArguments(args);
 
     auto job = saveAction.execute();
-    connect(job, &KJob::result, this, [this, job] {
+    connect(job, &KJob::result, this, [this, job, currentThemeIndex] {
         if (job->error()) {
             Q_EMIT errorOccured(job->errorString());
         } else {
             m_data->sddmSettings()->load();
+            m_themesModel->setData(currentThemeIndex, false, ThemesModel::BackgroundDirtyRole);
         }
         // Clarify enable or disable the Apply button.
         this->setNeedsSave(job->error());

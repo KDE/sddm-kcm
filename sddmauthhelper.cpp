@@ -321,11 +321,13 @@ ActionReply SddmAuthHelper::save(const QVariantMap &args)
             QDir configRootDirectory = themeConfigFileInfo.absoluteDir();
 
             if (keyName == QLatin1String("background")) {
-                QFileInfo newBackgroundFileInfo(iterator.value().toString());
-                QString previousBackground = themeConfig->group(groupName).readEntry(keyName);
+                QStringList newBackgroundInfo = iterator.value().toStringList();
+                QFileInfo newBackgroundFileInfo(newBackgroundInfo[0]);
+                bool backgroundDirty = QVariant(newBackgroundInfo[1]).toBool();
 
-                bool backgroundChanged = newBackgroundFileInfo.fileName() != previousBackground;
-                if (backgroundChanged) {
+                if (backgroundDirty) {
+                    qDebug() << "Background image changed";
+                    QString previousBackground = themeConfig->group(groupName).readEntry(keyName);
                     if (!previousBackground.isEmpty()) {
                         QString previousBackgroundPath = configRootDirectory.filePath(previousBackground);
                         if (QFile::remove(previousBackgroundPath)) {

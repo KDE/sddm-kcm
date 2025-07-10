@@ -53,6 +53,7 @@ QHash<int, QByteArray> ThemesModel::roleNames() const
         {PathRole, QByteArrayLiteral("path")},
         {ConfigFileRole, QByteArrayLiteral("configFile")},
         {CurrentBackgroundRole, QByteArrayLiteral("currentBackground")},
+        {BackgroundDirtyRole, QByteArrayLiteral("backgroundDirty")},
         {DeletableRole, QByteArrayLiteral("deletable")},
         {ShowClockRole, QByteArrayLiteral("showClock")},
     };
@@ -98,6 +99,11 @@ QVariant ThemesModel::data(const QModelIndex &index, int role) const
             return m_currentWallpapers[metadata.themeid()];
         }
         break;
+    case ThemesModel::BackgroundDirtyRole:
+        if (metadata.supportsBackground()) {
+            return m_wallpaperDirty[metadata.themeid()];
+        }
+        break;
     case DeletableRole:
         return m_customInstalledThemes.contains(metadata.path().chopped(1)); // Chop the trailing /
         break;
@@ -114,8 +120,15 @@ bool ThemesModel::setData(const QModelIndex &index, const QVariant &value, int r
         return false;
     }
     if (role == ThemesModel::CurrentBackgroundRole) {
-        m_currentWallpapers[mThemeList[index.row()].themeid()] = value.toString();
+        auto themeid = mThemeList[index.row()].themeid();
+        m_currentWallpapers[themeid] = value.toString();
+        m_wallpaperDirty[themeid] = true;
         Q_EMIT dataChanged(index, index, {ThemesModel::CurrentBackgroundRole});
+        return true;
+    }
+    if (role == ThemesModel::BackgroundDirtyRole) {
+        m_wallpaperDirty[mThemeList[index.row()].themeid()] = value.toBool();
+        Q_EMIT dataChanged(index, index, {ThemesModel::BackgroundDirtyRole});
         return true;
     }
     if (role == ThemesModel::ShowClockRole) {
@@ -190,6 +203,7 @@ void ThemesModel::add(const QString &id, const QString &path)
         } else {
             m_currentWallpapers.insert(data.themeid(), data.path() + backgroundPath);
         }
+        m_wallpaperDirty.insert(data.themeid(), false);
         const bool showClock = themeConfig->group(QStringLiteral("General")).readEntry("showClock", true);
         m_showClock.insert(data.themeid(), showClock);
     }

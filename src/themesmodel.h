@@ -31,6 +31,7 @@ public:
         ThemeApiRole,
         ConfigFileRole,
         CurrentBackgroundRole,
+        BackgroundDirtyRole,
         DeletableRole,
         ShowClockRole,
     };
@@ -60,6 +61,7 @@ private:
     int m_currentIndex;
     QList<ThemeMetadata> mThemeList;
     QHash<QString, QString> m_currentWallpapers;
+    QHash<QString, bool> m_wallpaperDirty;
     QHash<QString, bool> m_showClock;
     QList<QString> m_customInstalledThemes;
 };
