@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
 "PO-Revision-Date: 2025-01-28 21:10+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -21,15 +21,15 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.5\n"
 
-#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
+#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
 msgstr "Netinkamas apipavidalinimo paketas"
 
-#: sddmauthhelper.cpp:421
+#: sddmauthhelper.cpp:423
 msgid "Could not open file"
 msgstr "Nepavyko atverti failo"
 
-#: sddmauthhelper.cpp:450
+#: sddmauthhelper.cpp:452
 msgid "Could not decompress archive"
 msgstr "Nepavyksta išglaudinti archyvo"
 
@@ -58,7 +58,7 @@ msgstr "Norimas įdiegti apipavidalinimas privalo būti archyvo failas."
 msgid "Unable to install theme"
 msgstr "Nepavyko įdiegti apipavidalinimo"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
+#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "Negalima tęsti, naudotojo „sddm“ nėra. Patikrinkite savo SDDM diegimą."

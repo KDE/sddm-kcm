@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
 "PO-Revision-Date: 2025-03-15 19:52+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
+#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
 msgstr "無効なテーマパッケージ"
 
-#: sddmauthhelper.cpp:421
+#: sddmauthhelper.cpp:423
 msgid "Could not open file"
 msgstr "ファイルを開けませんでした"
 
-#: sddmauthhelper.cpp:450
+#: sddmauthhelper.cpp:452
 msgid "Could not decompress archive"
 msgstr "アーカイブを展開できませんでした"
 
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Unable to install theme"
 msgstr "テーマをインストールできません"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
+#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

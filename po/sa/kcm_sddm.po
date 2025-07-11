@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
+#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
 msgstr "अमान्य विषयसङ्कुलम्"
 
-#: sddmauthhelper.cpp:421
+#: sddmauthhelper.cpp:423
 msgid "Could not open file"
 msgstr "सञ्चिकां उद्घाटयितुं न शक्तवान्"
 
-#: sddmauthhelper.cpp:450
+#: sddmauthhelper.cpp:452
 msgid "Could not decompress archive"
 msgstr "संग्रहणं विसंपीडयितुं न शक्तवान्"
 
@@ -56,7 +56,7 @@ msgstr "संस्थापनार्थं विषयः, विद्य
 msgid "Unable to install theme"
 msgstr "विषयवस्तु संस्थापयितुं असमर्थः"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
+#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "अग्रे गन्तुं न शक्नोति, उपयोक्ता 'sddm' नास्ति । कृपया स्वस्य SDDM संस्थापनं पश्यन्तु।"

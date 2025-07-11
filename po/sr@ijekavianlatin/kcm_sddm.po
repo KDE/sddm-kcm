@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
+#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
 msgstr "Loš paket teme"
 
-#: sddmauthhelper.cpp:421
+#: sddmauthhelper.cpp:423
 #, fuzzy
 #| msgid "Could not decompress archive"
 msgid "Could not open file"
 msgstr "Ne mogu da raspakujem arhivu"
 
-#: sddmauthhelper.cpp:450
+#: sddmauthhelper.cpp:452
 msgid "Could not decompress archive"
 msgstr "Ne mogu da raspakujem arhivu"
 
@@ -57,7 +57,7 @@ msgstr "Tema za instaliranje, mora da bude postojeći fajl arhive."
 msgid "Unable to install theme"
 msgstr "Ne mogu da instaliram temu"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
+#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

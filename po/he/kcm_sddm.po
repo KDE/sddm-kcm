@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
 "PO-Revision-Date: 2024-11-23 14:28+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -20,15 +20,15 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.08.3\n"
 
-#: sddmauthhelper.cpp:415 sddmauthhelper.cpp:435 sddmauthhelper.cpp:442
+#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
 msgstr "חבילת ערכת עיצוב שגויה"
 
-#: sddmauthhelper.cpp:421
+#: sddmauthhelper.cpp:423
 msgid "Could not open file"
 msgstr "לא ניתן לפתוח קובץ"
 
-#: sddmauthhelper.cpp:450
+#: sddmauthhelper.cpp:452
 msgid "Could not decompress archive"
 msgstr "לא ניתן לחלץ את הארכיון"
 
@@ -57,7 +57,7 @@ msgstr "ערכת העיצוב להתקנה חייבת להיות קובץ ארכ
 msgid "Unable to install theme"
 msgstr "לא ניתן להתקין את הערכת העיצוב"
 
-#: src/sddmkcm.cpp:165 src/sddmkcm.cpp:304
+#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr "לא ניתן להמשיך, המשתמש ‚sddm’ לא קיים. נא לבדוק את התקנת ה־SDDM שלך."
