@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-11 00:45+0000\n"
-"PO-Revision-Date: 2024-11-28 12:18+0400\n"
+"PO-Revision-Date: 2025-08-04 14:10+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -79,7 +79,7 @@ msgstr "السّلوك"
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
-msgstr "لولوج آلي:"
+msgstr "لولوج آليّ:"
 
 #: src/ui/Advanced.qml:28
 #, kde-format
@@ -106,9 +106,9 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
-"لا يدعم الولوج التلقائي فتح محفظة كِيدِي آليا، لذلك سيطلب منك إلغاء قفلها في "
-"كل مرة تقوم فيها بالولوج. <nl/><nl/> لتتفادى هذا يمكنك تغيير المحفظة لتكون "
-"دون كلمة سر. لاحظ أن هذا غير آمن ويجب أن يكون في بيئة آمنة."
+"لا يدعم الولوج الآليّ فتح محفظة كِيدِي آليّا، لذلك سيطلب منك إلغاء قفلها في كل "
+"مرة تقوم فيها بالولوج. <nl/><nl/> لتتفادى هذا يمكنك تغيير المحفظة لتكون دون "
+"كلمة سر. لاحظ أن هذا غير آمن ويجب أن يكون في بيئة آمنة."
 
 #: src/ui/Advanced.qml:136
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "طبّق"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr "أعد ضبط الإعدادات المبدئية"
+msgstr "صفّر إلى الإعدادات المبدئية"
 
 #: src/ui/main.qml:163
 #, kde-format
