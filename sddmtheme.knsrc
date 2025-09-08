@@ -41,7 +41,6 @@ Name[sl]=Prijavni zaslon
 Name[sv]=Inloggningsfönster
 Name[tr]=Oturum Açma Ekranı
 Name[uk]=Вікно входу
-Name[x-test]=xxLogin Screenxx
 Name[zh_CN]=登录屏幕
 Name[zh_TW]=登入畫面
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
