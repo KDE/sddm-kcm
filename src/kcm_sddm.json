@@ -45,7 +45,6 @@
         "Description[ta]": "நுழைவுத் திரையை அமைக்கும்",
         "Description[tr]": "Oturum Açma Yöneticisini Yapılandır",
         "Description[uk]": "Налаштування керування входом до системи",
-        "Description[x-test]": "xxConfigure Login Managerxx",
         "Description[zh_CN]": "配置登录管理器",
         "Description[zh_TW]": "設定登入管理器",
         "Icon": "preferences-system-login",
@@ -100,7 +99,6 @@
         "Name[ta]": "நுழைவுத் திரை (SDDM)",
         "Name[tr]": "Oturum Açma Ekranı (SDDM)",
         "Name[uk]": "Вікно входу (SDDM)",
-        "Name[x-test]": "xxLogin Screen (SDDM)xx",
         "Name[zh_CN]": "登录屏幕 (SDDM)",
         "Name[zh_TW]": "登入畫面 (SDDM)"
     },
@@ -138,7 +136,6 @@
     "X-KDE-Keywords[sv]": "sddm,skärmhanterare,teman,inloggningstema,inloggningsskärm,inloggningsskal,visuell inloggning,inloggningsutseende,utloggning,komma in,behörighetskontrollskärm,synkronisera inställningar,session,förvald session,förvald användare,användarens uid,logga in som,kontrollera behörighet som,kommando för avstängning,kommando för omstart",
     "X-KDE-Keywords[tr]": "sddm,ekran yöneticisi,görüntü yöneticisi,temalar,oturum açma teması,giriş yapma teması,oturum açma görseli,oturum açma resmi,oturumu kapat,çıkış yap,kimlik doğrula,yetkilendirme ekranı,ayarları eşzamanla,ayarları senkronize et,öntanımlı oturum,varsayılan oturum,öntanımlı kullanıcı,varsayılan kullanıcı,kullanıcı uid,kapatma komutu,yeniden başlatma komutu",
     "X-KDE-Keywords[uk]": "sddm,display manager,themes,login theme,login screen,login skin,login visual,login look,logout,enter,authentication screen,sync settings,synchronize settings,session,default session,default user,user uid,login as,authenticate as,command to shutdown,command to restart,есдедеем,керування дисплеєм,теми,тема входу,екран входу,оболонка входу,шкірка входу,візуальний вхід,вигляд входу,вихід,вхід,вікно розпізнавання,вікно автентифікації,параметри синхронізації,сеанс,типовий сеанс,типовий користувач,ідентифікатор користувача,вхід від імені,розпізнавання від імені,автентифікація від імені,команда для вимикання,команда для перезапуску",
-    "X-KDE-Keywords[x-test]": "xxsddmxx,xxdisplay managerxx,xxthemesxx,xxlogin themexx,xxlogin screenxx,xxlogin skinxx,xxlogin visualxx,xxlogin lookxx,xxlogoutxx,xxenterxx,xxauthentication screenxx,xxsync settingsxx,xxsynchronize settingsxx,xxsessionxx,xxdefault sessionxx,xxdefault userxx,xxuser uidxx,xxlogin asxx,xxauthenticate asxx,xxcommand to shutdownxx,xxcommand to restartxx",
     "X-KDE-Keywords[zh_CN]": "sddm,display manager,themes,login theme,login screen,login skin,login visual,login look,logout,enter,authentication screen,sync settings,synchronize settings,session,default session,default user,user uid,login as,authenticate as,command to shutdown,command to restart,xianshiguanliqi,zhuti,denglu,dengluzhuti,denglupingmu,dengluhuamian,denglujiemian,denglupifu,denglushijuexiaoguo,dengluwaiguan,zhuxiao,jinru,shenfenyanzhengpingmu,tongbushezhi,huihua,huihualeixing,morenhuihua,morenyonghu,yonghu UID,denglushenfen,renzhengshenfen,guanjimingling,chongqimingling,显示管理器,主题,登录,登录主题,登录屏幕,登录画面,登录界面,登录皮肤,登录视觉效果,登录外观,注销,进入,身份验证屏幕,同步设置,会话,会话类型,默认会话,默认用户,用户 UID,登录身份,认证身份,关机命令,重启命令",
     "X-KDE-Keywords[zh_TW]": "登入畫面,登入主題,登入管理器,主題,等處,預設使用者,關機,重新開機,重新啟動,工作階段,作業階段,同步設定,驗證畫面",
     "X-KDE-System-Settings-Parent-Category": "themes",
