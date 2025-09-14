@@ -11,7 +11,7 @@
 // The configuration of SDDM works as follows:
 // - The system configuration comes from files in /usr/lib/sddm.conf.d/
 // - User supplied config files are in /etc/sddm/conf.d/
-// - And the most specific file is /etc/sdddm/conf
+// - And the most specific file is /etc/sddm.conf
 // Overwrite order is in the opposite order of mention.
 // Because KConfig can't model this we use two KConfig objects, one to read the defaults from
 // /usr/lib/sddm.conf.d/* supplied here, and another one passed via the constructor to the KConfigSkeleton
