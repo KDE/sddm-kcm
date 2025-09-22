@@ -4,21 +4,21 @@
 # Franklin, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:46+0000\n"
-"PO-Revision-Date: 2022-12-30 18:53+0900\n"
+"PO-Revision-Date: 2025-09-22 06:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: sddmauthhelper.cpp:371 sddmauthhelper.cpp:393 sddmauthhelper.cpp:400
 msgid "Invalid theme package"
@@ -86,18 +86,17 @@ msgid "with session"
 msgstr "，使用工作階段："
 
 #: src/package/contents/ui/Advanced.qml:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Auto-login does not support unlocking your KDE Wallet automatically, so "
-#| "it will ask you to unlock it every time you log in."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Auto-login does not support unlocking your KDE Wallet automatically, so it "
 "will ask you to unlock it every time you log in.<nl/><nl/>To avoid this, you "
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
-msgstr "自動登入不支援自動解鎖 KWallet 錢包，因此每次登入後它都會要求解鎖。"
+msgstr ""
+"自動登入不支援自動解鎖 KWallet 錢包，因此每次登入後它都會要求解鎖。<nl/><nl/>"
+"將錢包密碼改為空白可以防止它每次登入都要求解鎖。但請注意這是不安全的，並請只"
+"在可信任的環境中這樣做。"
 
 #: src/package/contents/ui/Advanced.qml:108
 #, kde-format
