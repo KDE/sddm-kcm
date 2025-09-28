@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2024.
+# SPDX-FileCopyrightText: 2015, 2020, 2021, 2022, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-11 00:45+0000\n"
-"PO-Revision-Date: 2024-02-24 15:51+0000\n"
+"PO-Revision-Date: 2025-09-27 13:57+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
@@ -222,14 +222,7 @@ msgstr ""
 "aduse următoarelor configurări Plasma:"
 
 #: src/ui/main.qml:141
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para><list><item>Color scheme,</item><item>Cursor theme,</"
-#| "item><item>Cursor size,</item><item>Font,</item><item>Font rendering,</"
-#| "item><item>NumLock preference,</item><item>Plasma theme,</"
-#| "item><item>Scaling DPI,</item><item>Screen configuration (Wayland only)</"
-#| "item></list></para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para><list><item>Color scheme</item><item>Cursor theme and size</"
@@ -237,11 +230,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Schemă de culori,</item><item>Tematică de cursor,</"
-"item><item>Dimensiunea cursorului,</item><item>Font,</item><item>Randare "
-"fonturi,</item><item>Preferință NumLock,</item><item>Tematică Plasma,</"
-"item><item>Scalare DPI,</item><item>Configurare ecran (doar Wayland)</item></"
-"list></para>"
+"<para><list><item>Schemă de culori</item><item>Tematică de cursor și "
+"dimensiune</item><item>Font și randarea fonturilor</item><item>Preferință "
+"NumLock</item><item>Tematică Plasma</item><item>Scalare DPI</"
+"item><item>Configurare ecran (doar Wayland)</item></list></para>"
 
 #: src/ui/main.qml:142
 #, kde-format
@@ -279,7 +271,7 @@ msgstr "Nicio imagine aleasă"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Arată ceasul"
 
 #: src/ui/main.qml:212
 #, kde-format
