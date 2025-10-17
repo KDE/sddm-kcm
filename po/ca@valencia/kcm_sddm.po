@@ -3,9 +3,9 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
-# Alfredo Vicente <alviboi@gmail.com>, 2019.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2019 Alfredo Vicente <alviboi@gmail.com>
+# SPDX-FileCopyrightText: 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
@@ -177,25 +177,25 @@ msgstr "Suprimix"
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior..."
-msgstr "Comportament..."
+msgstr "Comportament…"
 
 #: src/package/contents/ui/main.qml:110
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings..."
-msgstr "Aplica la configuració de Plasma..."
+msgstr "Aplica la configuració de Plasma…"
 
 #: src/package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File..."
-msgstr "Instal·la des d'un fitxer..."
+msgstr "Instal·la des d'un fitxer…"
 
 #: src/package/contents/ui/main.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New SDDM Themes..."
-msgstr "Obtín temes nous de SDDM..."
+msgstr "Obtín temes nous de SDDM…"
 
 #: src/package/contents/ui/main.qml:138
 #, kde-format
@@ -263,7 +263,7 @@ msgstr "No s'ha seleccionat cap imatge"
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File..."
-msgstr "Carrega des d'un fitxer..."
+msgstr "Carrega des d'un fitxer…"
 
 #: src/package/contents/ui/main.qml:208
 #, kde-format
