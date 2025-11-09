@@ -5,20 +5,21 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2014, 2017, 2018, 2019, 2021, 2022, 2023.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2015, 2018, 2019, 2020.
 # SPDX-FileCopyrightText: 2023, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-11 00:45+0000\n"
-"PO-Revision-Date: 2025-02-04 14:44-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-11-08 21:17-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
@@ -170,19 +171,19 @@ msgstr "%1, por %2 (%3)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Comportamento..."
+msgstr "Comportamento…"
 
 #: src/ui/main.qml:28
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Aplicar configurações do Plasma..."
+msgstr "Aplicar configurações do Plasma…"
 
 #: src/ui/main.qml:33
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Instalar a partir do arquivo..."
+msgstr "Instalar a partir do arquivo…"
 
 #: src/ui/main.qml:38
 #, kde-format
@@ -279,7 +280,7 @@ msgstr "Mostrar relógio"
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Carregar do arquivo..."
+msgstr "Carregar do arquivo…"
 
 #: src/ui/main.qml:217
 #, kde-format
