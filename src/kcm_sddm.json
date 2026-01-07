@@ -142,5 +142,6 @@
     "X-KDE-Keywords[zh_CN]": "sddm,display manager,themes,login theme,login screen,login skin,login visual,login look,logout,enter,authentication screen,sync settings,synchronize settings,session,default session,default user,user uid,login as,authenticate as,command to shutdown,command to restart,xianshiguanliqi,zhuti,denglu,dengluzhuti,denglupingmu,dengluhuamian,denglujiemian,denglupifu,denglushijuexiaoguo,dengluwaiguan,zhuxiao,jinru,shenfenyanzhengpingmu,tongbushezhi,huihua,huihualeixing,morenhuihua,morenyonghu,yonghu UID,denglushenfen,renzhengshenfen,guanjimingling,chongqimingling,显示管理器,主题,登录,登录主题,登录屏幕,登录画面,登录界面,登录皮肤,登录视觉效果,登录外观,注销,进入,身份验证屏幕,同步设置,会话,会话类型,默认会话,默认用户,用户 UID,登录身份,认证身份,关机命令,重启命令",
     "X-KDE-Keywords[zh_TW]": "登入畫面,登入主題,登入管理器,主題,等處,預設使用者,關機,重新開機,重新啟動,工作階段,作業階段,同步設定,驗證畫面",
     "X-KDE-System-Settings-Parent-Category": "themes",
+    "X-KDE-System-Settings-Uses-ModuleData": true,
     "X-KDE-Weight": 110
 }
