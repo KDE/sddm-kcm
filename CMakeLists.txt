@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(sddm-kcm)
 set(PROJECT_VERSION "6.5.80")
 
-set(QT_MIN_VERSION "6.9.0")
+set(QT_MIN_VERSION "6.10.0")
 set(KF6_MIN_VERSION "6.22.0")
 
 set(CMAKE_CXX_STANDARD 20)
