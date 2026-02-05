@@ -99,7 +99,7 @@ KCM.GridViewKCM {
             },
             Kirigami.Action {
                 icon.name: "games-config-background"
-                tooltip: i18nc("@info:tooltip", "Change Background")
+                tooltip: i18nc("@info:tooltip", "Change background")
                 onTriggered: {
                     const index = view.model.index(view.currentIndex, 0)
                     backgroundSheet.modelIndex = index
@@ -110,9 +110,15 @@ KCM.GridViewKCM {
             },
             Kirigami.Action {
                 icon.name: "edit-delete"
-                tooltip: i18nc("@info:tooltip", "Delete")
+                tooltip: if (enabled) {
+                    return i18nc("@info:tooltip", "Remove login screen theme");
+                } else if (model.deletable) {
+                    return i18nc("@info:tooltip", "Cannot delete the active login screen theme");
+                } else {
+                    return i18nc("@info:tooltip", "Cannot delete system-installed login screen themes");
+                }
                 onTriggered: kcm.removeTheme(view.model.index(index, 0))
-                enabled: model.deletable
+                enabled: model.deletable && !delegate.GridView.isCurrentItem
             }
         ]
         onClicked: kcm.sddmSettings.current = model.id
