@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2024-11-23 07:13+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -197,24 +197,38 @@ msgid "View details"
 msgstr "Pogled podrobnosti"
 
 #: src/ui/main.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Change Background"
 msgctxt "@info:tooltip"
-msgid "Change Background"
+msgid "Change background"
 msgstr "Spremeni ozadje"
 
-#: src/ui/main.qml:113
+#: src/ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Delete"
-msgstr "Zbriši"
+msgid "Remove login screen theme"
+msgstr ""
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:116
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active login screen theme"
+msgstr ""
+
+#: src/ui/main.qml:118
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed login screen themes"
+msgstr ""
+
+#: src/ui/main.qml:145
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Uveljavi nastavitve Plasme"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:146
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -223,7 +237,7 @@ msgstr ""
 "To bo povzročilo, da bo prijavni zaslon SDDM odražal vaše prilagoditve "
 "naslednjih nastavite Plasme:"
 
-#: src/ui/main.qml:141
+#: src/ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -237,7 +251,7 @@ msgstr ""
 "item><item>Tema Plasme</item><item>Lestvičenje DPI</item><item>Nastavitev "
 "zaslona (samo Wayland)</item></list></para>"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -246,46 +260,50 @@ msgstr ""
 "Upoštevajte, da morajo biti teme nameščene globalno, da bi se odražale na "
 "prijavnem zaslonu SDDM."
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Uveljavi"
 
-#: src/ui/main.qml:151
+#: src/ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Ponovno nastavi na privzete nastavitve"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:169
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Spremeni ozadje"
 
-#: src/ui/main.qml:199
+#: src/ui/main.qml:205
 #, kde-format
 msgid "No image selected"
 msgstr "Ni izbrane slike"
 
-#: src/ui/main.qml:204
+#: src/ui/main.qml:210
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "Prikazuj uro"
 
-#: src/ui/main.qml:212
+#: src/ui/main.qml:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Naloži iz datoteke…"
 
-#: src/ui/main.qml:217
+#: src/ui/main.qml:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Počisti sliko"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete"
+#~ msgstr "Zbriši"
 
 #~ msgctxt "@action:button"
 #~ msgid "Behavior..."

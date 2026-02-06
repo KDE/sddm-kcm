@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2025-01-04 16:17+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -194,24 +194,38 @@ msgid "View details"
 msgstr "Skatīt informāciju"
 
 #: src/ui/main.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Change Background"
 msgctxt "@info:tooltip"
-msgid "Change Background"
+msgid "Change background"
 msgstr "Mainīt fonu"
 
-#: src/ui/main.qml:113
+#: src/ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Delete"
-msgstr "Dzēst"
+msgid "Remove login screen theme"
+msgstr ""
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:116
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active login screen theme"
+msgstr ""
+
+#: src/ui/main.qml:118
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed login screen themes"
+msgstr ""
+
+#: src/ui/main.qml:145
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Pielietot „Plasma“ iestatījumus"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:146
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -220,7 +234,7 @@ msgstr ""
 "Šis iestatījums liks SDDM ierakstīšanās ekrānam atspoguļot šos „Plasma“ "
 "pielāgošanas iestatījumus:"
 
-#: src/ui/main.qml:141
+#: src/ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -234,7 +248,7 @@ msgstr ""
 "iestatījums</item><item>„Plasma“ motīvs,</item><item>Mērogošanas DPI,</"
 "item><item>Ekrāna konfigurācija (tikai „Wayland“)</item></list></para>"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -243,43 +257,47 @@ msgstr ""
 "Ievērojiet, ka, lai motīvi būtu atspoguļoti SDDM ierakstīšanās ekrānā, to "
 "datnes ir jāinstalē globāli."
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Pielietot"
 
-#: src/ui/main.qml:151
+#: src/ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Atiestatīt uz noklusējuma iestatījumiem"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:169
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Mainīt fonu"
 
-#: src/ui/main.qml:199
+#: src/ui/main.qml:205
 #, kde-format
 msgid "No image selected"
 msgstr "Attēls nav norādīts"
 
-#: src/ui/main.qml:204
+#: src/ui/main.qml:210
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "Rādīt pulksteni"
 
-#: src/ui/main.qml:212
+#: src/ui/main.qml:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Ielādēt no datnes…"
 
-#: src/ui/main.qml:217
+#: src/ui/main.qml:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Notīrīt attēlu"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete"
+#~ msgstr "Dzēst"

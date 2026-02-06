@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2025-05-31 19:24+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -195,24 +195,38 @@ msgid "View details"
 msgstr "Vis detaljer"
 
 #: src/ui/main.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Change Background"
 msgctxt "@info:tooltip"
-msgid "Change Background"
+msgid "Change background"
 msgstr "Bytt bakgrunn"
 
-#: src/ui/main.qml:113
+#: src/ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Delete"
-msgstr "Slett"
+msgid "Remove login screen theme"
+msgstr ""
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:116
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active login screen theme"
+msgstr ""
+
+#: src/ui/main.qml:118
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed login screen themes"
+msgstr ""
+
+#: src/ui/main.qml:145
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Bruk innstillinger fra Plasma"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:146
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -221,7 +235,7 @@ msgstr ""
 "Dette vil få innloggingsbildet (SDDM) til å følge endringene du har gjort i "
 "disse Plasma-innstillingene:"
 
-#: src/ui/main.qml:141
+#: src/ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -235,7 +249,7 @@ msgstr ""
 "item><item>Plasma-tema</item><item>PPT-skalering</item><item>Skjermoppsett "
 "(bare for Wayland)</item></list></para>"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -244,43 +258,47 @@ msgstr ""
 "Merk at temafilene må være globalt installerte for at de skal vises på "
 "innloggingsbildet (SDDM)."
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Bruk"
 
-#: src/ui/main.qml:151
+#: src/ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Tilbakestill til standardinnstillinger"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:169
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Bytt bakgrunn"
 
-#: src/ui/main.qml:199
+#: src/ui/main.qml:205
 #, kde-format
 msgid "No image selected"
 msgstr "Ingen bilde valgt"
 
-#: src/ui/main.qml:204
+#: src/ui/main.qml:210
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "Vis klokke"
 
-#: src/ui/main.qml:212
+#: src/ui/main.qml:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Hent fra fil …"
 
-#: src/ui/main.qml:217
+#: src/ui/main.qml:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Fjern bildet"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete"
+#~ msgstr "Slett"

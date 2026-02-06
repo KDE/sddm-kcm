@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -198,24 +198,38 @@ msgid "View details"
 msgstr "Exibir detalhes"
 
 #: src/ui/main.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Change Background"
 msgctxt "@info:tooltip"
-msgid "Change Background"
+msgid "Change background"
 msgstr "Alterar plano de fundo"
 
-#: src/ui/main.qml:113
+#: src/ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Delete"
-msgstr "Excluir"
+msgid "Remove login screen theme"
+msgstr ""
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:116
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active login screen theme"
+msgstr ""
+
+#: src/ui/main.qml:118
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed login screen themes"
+msgstr ""
+
+#: src/ui/main.qml:145
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Aplicar configurações do Plasma"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:146
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -224,7 +238,7 @@ msgstr ""
 "Isto irá fazer a tela de login do SDDM refletir suas personalizações das "
 "seguintes configurações do Plasma:"
 
-#: src/ui/main.qml:141
+#: src/ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -238,7 +252,7 @@ msgstr ""
 "NumLock</item><item>Tema do Plasma</item><item>Escala de DPI</"
 "item><item>Configuração da tela (somente Wayland)</item></list></para>"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -247,46 +261,50 @@ msgstr ""
 "Lembre-se de que os arquivos do tema devem ser instalados globalmente para "
 "serem refletidos na tela de login do SDDM."
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Aplicar"
 
-#: src/ui/main.qml:151
+#: src/ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Redefinir para as configurações padrão"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:169
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Alterar plano de fundo"
 
-#: src/ui/main.qml:199
+#: src/ui/main.qml:205
 #, kde-format
 msgid "No image selected"
 msgstr "Nenhuma imagem selecionada"
 
-#: src/ui/main.qml:204
+#: src/ui/main.qml:210
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "Mostrar relógio"
 
-#: src/ui/main.qml:212
+#: src/ui/main.qml:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Carregar do arquivo…"
 
-#: src/ui/main.qml:217
+#: src/ui/main.qml:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Limpar imagem"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete"
+#~ msgstr "Excluir"
 
 #~ msgctxt "@action:button"
 #~ msgid "Behavior..."

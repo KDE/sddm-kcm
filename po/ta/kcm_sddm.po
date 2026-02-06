@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2024-11-24 17:14+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -193,31 +193,45 @@ msgid "View details"
 msgstr "விவரங்களைக் காட்டும்"
 
 #: src/ui/main.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Change Background"
 msgctxt "@info:tooltip"
-msgid "Change Background"
+msgid "Change background"
 msgstr "பின்புலத்தை மாற்றும்"
 
-#: src/ui/main.qml:113
+#: src/ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Delete"
-msgstr "நீக்கும்"
+msgid "Remove login screen theme"
+msgstr ""
 
-#: src/ui/main.qml:139
+#: src/ui/main.qml:116
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active login screen theme"
+msgstr ""
+
+#: src/ui/main.qml:118
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed login screen themes"
+msgstr ""
+
+#: src/ui/main.qml:145
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "பிளாஸ்மா அமைப்புகளை செயல்படுத்துவது"
 
-#: src/ui/main.qml:140
+#: src/ui/main.qml:146
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr "பின்வரும் உங்கள் பிளாஸ்மா அமைப்புகளை SDDM நுழைவுத்திரைக்கும் இது செயல்படுத்தும்:"
 
-#: src/ui/main.qml:141
+#: src/ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -232,7 +246,7 @@ msgstr ""
 "<item>திரையின் DPI,</item><item>திரையின் அமைப்பு (Wayland மட்டும்)</item></list></"
 "para>"
 
-#: src/ui/main.qml:142
+#: src/ui/main.qml:148
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -241,43 +255,47 @@ msgstr ""
 "SDDM நுழைவுத்திரையில் செயல்பட, தோற்றத்திட்டங்கள் கணினி முழுவதற்குமான இடத்தில் "
 "நிறுவப்பட்டிருக்க வேண்டும்."
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
-#: src/ui/main.qml:151
+#: src/ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "இயல்பிருப்பை மீட்டமை"
 
-#: src/ui/main.qml:163
+#: src/ui/main.qml:169
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "பின்புலத்தை மாற்றுவது"
 
-#: src/ui/main.qml:199
+#: src/ui/main.qml:205
 #, kde-format
 msgid "No image selected"
 msgstr "எப்படமும் தேர்ந்தெடுக்கப்படவில்லை"
 
-#: src/ui/main.qml:204
+#: src/ui/main.qml:210
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "கடிகாரத்தைக் காட்டு"
 
-#: src/ui/main.qml:212
+#: src/ui/main.qml:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "கோப்பிலிருந்து ஏற்று…"
 
-#: src/ui/main.qml:217
+#: src/ui/main.qml:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "படத்தை அகற்று"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete"
+#~ msgstr "நீக்கும்"
