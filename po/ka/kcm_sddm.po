@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 00:47+0000\n"
-"PO-Revision-Date: 2024-11-23 04:41+0100\n"
+"PO-Revision-Date: 2026-02-06 06:21+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
@@ -194,9 +194,7 @@ msgid "View details"
 msgstr "დეტალების ნახვა"
 
 #: src/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "ფონის შეცვლა"
@@ -205,19 +203,19 @@ msgstr "ფონის შეცვლა"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "შესვლის ეკრანის თემის წაშლა"
 
 #: src/ui/main.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "აქტიური შესვლის ეკრანის თემის წაშლა შეუძლებელია"
 
 #: src/ui/main.qml:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "სისტემასთან ერთად დაყენებული შესვლის ეკრანის თემების წაშლა შეუძლებელია"
 
 #: src/ui/main.qml:145
 #, kde-format

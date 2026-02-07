@@ -1,15 +1,15 @@
 # Spanish translations for kcm_sddm.po package.
-# Copyright (C) 2014-2025 This file is copyright:
+# Copyright (C) 2014-2026 This file is copyright:
 # This file is distributed under the same license as the sddm-kcm package.
 # Automatically generated, 2014.
 #
-# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 00:47+0000\n"
-"PO-Revision-Date: 2025-06-04 20:07+0100\n"
+"PO-Revision-Date: 2026-02-06 11:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
@@ -196,9 +196,7 @@ msgid "View details"
 msgstr "Ver detalles"
 
 #: src/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "Cambiar el fondo"
@@ -207,19 +205,21 @@ msgstr "Cambiar el fondo"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Eliminar el tema de la pantalla de inicio de sesión"
 
 #: src/ui/main.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "No se puede borrar el tema de la pantalla de inicio de sesión activa"
 
 #: src/ui/main.qml:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
 msgstr ""
+"No se pueden borrar temas de pantalla de inicio de sesión instalados en el "
+"sistema"
 
 #: src/ui/main.qml:145
 #, kde-format
@@ -299,7 +299,3 @@ msgstr "Cargar de archivo…"
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Borrar imagen"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Delete"
-#~ msgstr "Borrar"
