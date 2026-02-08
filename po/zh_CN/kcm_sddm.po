@@ -190,12 +190,10 @@ msgid "View details"
 msgstr "查看详细信息"
 
 #: src/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
-msgstr "更改背景"
+msgstr ""
 
 #: src/ui/main.qml:114
 #, kde-format
@@ -288,7 +286,3 @@ msgstr "加载文件…"
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "清除图片"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Delete"
-#~ msgstr "删除"

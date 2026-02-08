@@ -3,13 +3,13 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 00:47+0000\n"
-"PO-Revision-Date: 2025-08-02 21:04+0300\n"
+"PO-Revision-Date: 2026-02-06 10:40+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
@@ -194,30 +194,28 @@ msgid "View details"
 msgstr "הצגת פרטים"
 
 #: src/ui/main.qml:102
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
-msgstr "החלפת תמונת רקע"
+msgstr "החלפת רקע"
 
 #: src/ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "הסרת ערכת העיצוב של מסך הכניסה"
 
 #: src/ui/main.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "לא ניתן למחוק את ערכת העיצוב הפעילה של מסך הכניסה"
 
 #: src/ui/main.qml:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "לא ניתן למחוק ערכות עיצוב מערכתיות של מסך כניסה"
 
 #: src/ui/main.qml:145
 #, kde-format

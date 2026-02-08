@@ -299,7 +299,3 @@ msgstr "Hent frå fil …"
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Fjern biletet"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Delete"
-#~ msgstr "Slett"

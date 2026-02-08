@@ -298,7 +298,3 @@ msgstr "Hent fra fil …"
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Fjern bildet"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Delete"
-#~ msgstr "Slett"
