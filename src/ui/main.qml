@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Dialogs
+import QtMultimedia 6.9
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 
@@ -174,14 +175,36 @@ KCM.GridViewKCM {
             id: card
 
             implicitWidth: 0.75 * root.width
-            implicitHeight: backgroundImage.hasImage
-                            ? backgroundImage.implicitHeight + (backgroundImage.anchors.margins * 2)
-                            : placeHolder.implicitHeight + (placeHolder.anchors.margins * 2)
+            implicitHeight: contentHeight
+
+            readonly property bool isVideo: backgroundSheet.imagePath.toLowerCase().endsWith(".mp4")
+                                            || backgroundSheet.imagePath.toLowerCase().endsWith(".mov")
+                                            || backgroundSheet.imagePath.toLowerCase().endsWith(".webm")
+                                            || backgroundSheet.imagePath.toLowerCase().endsWith(".avi")
+                                            || backgroundSheet.imagePath.toLowerCase().endsWith(".mkv")
+
+            readonly property real contentHeight: {
+
+                if (backgroundImage.hasLoadedImage || backgroundVideo.hasLoadedVideo) {
+                    if (isVideo) {
+                        var resolution = backgroundVideo.metaData.value(MediaMetaData.Resolution)
+
+                        if (resolution) {
+                            return ((resolution.height / resolution.width) * card.implicitWidth) + backgroundVideo.anchors.margins
+                        }
+                    }
+                    else {
+                        return backgroundImage.implicitHeight + (backgroundImage.anchors.margins * 2)
+                    }
+                }
+
+                return placeHolder.implicitHeight + (placeHolder.anchors.margins * 2)
+            }
 
             Image {
                 id: backgroundImage
 
-                readonly property bool hasImage: status == Image.Ready || status == Image.Loading
+                readonly property bool hasLoadedImage: status == Image.Ready || status == Image.Loading
 
                 anchors {
                     top: parent.top
@@ -190,17 +213,45 @@ KCM.GridViewKCM {
                     margins: Kirigami.Units.smallSpacing + card.background.borderWidth
                 }
 
-                source: "file:" + backgroundSheet.imagePath
+                source: !card.isVideo ? "file:" + backgroundSheet.imagePath : ""
 
                 fillMode: Image.PreserveAspectFit
                 smooth: true
+                visible: !card.isVideo
+            }
+
+            Video {
+                id: backgroundVideo
+
+                readonly property bool hasLoadedVideo: backgroundVideo.hasVideo && backgroundVideo.error == MediaPlayer.NoError
+
+                anchors {
+                    top: parent.top
+                    left: parent.left
+                    right: parent.right
+                    bottom: parent.bottom
+                    margins: Kirigami.Units.smallSpacing + card.background.borderWidth
+                }
+
+                onSourceChanged: {
+                    if (source && source.toString().length != 0) {
+
+                        backgroundVideo.play()
+                    }
+                }
+
+                source: card.isVideo ? "file:" + backgroundSheet.imagePath : ""
+                fillMode: VideoOutput.PreserveAspectFit
+                loops: MediaPlayer.Infinite
+                muted: true
+                visible: card.isVideo
             }
 
             Kirigami.PlaceholderMessage  {
                 id: placeHolder
                 anchors.fill: parent
                 anchors.margins: Kirigami.Units.largeSpacing * 4
-                visible: !backgroundImage.hasImage
+                visible: !backgroundImage.hasLoadedImage && !backgroundVideo.hasLoadedVideo
                 icon.name: "view-preview"
                 text: i18n("No image selected")
             }
