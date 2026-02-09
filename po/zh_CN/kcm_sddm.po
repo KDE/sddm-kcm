@@ -193,25 +193,25 @@ msgstr "查看详细信息"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
-msgstr ""
+msgstr "更改背景"
 
 #: src/ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "移除登录屏幕主题"
 
 #: src/ui/main.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "无法删除已激活的登录屏幕主题"
 
 #: src/ui/main.qml:118
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "无法删除系统安装的登录屏幕主题"
 
 #: src/ui/main.qml:145
 #, kde-format
