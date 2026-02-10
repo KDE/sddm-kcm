@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:47+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2025-05-28 20:20+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -163,37 +163,37 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr "%1, eftir %2 (%3)"
 
-#: src/ui/main.qml:23
+#: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Hegðun…"
 
-#: src/ui/main.qml:28
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Nota stillingar Plasma..."
 
-#: src/ui/main.qml:33
+#: src/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Setja upp úr skrá…"
 
-#: src/ui/main.qml:38
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr "Sækja nýtt..."
 
-#: src/ui/main.qml:87
+#: src/ui/main.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Skoða upplýsingar"
 
-#: src/ui/main.qml:102
+#: src/ui/main.qml:103
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Change Background"
@@ -201,31 +201,31 @@ msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "Breyta bakgrunni"
 
-#: src/ui/main.qml:114
+#: src/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
 msgstr ""
 
-#: src/ui/main.qml:116
+#: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
 msgstr ""
 
-#: src/ui/main.qml:118
+#: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
 msgstr ""
 
-#: src/ui/main.qml:145
+#: src/ui/main.qml:146
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Nota stillingar Plasma..."
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:147
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -234,7 +234,7 @@ msgstr ""
 "Þetta lætur SDDM-innskráningarskjáinn endurspegla útlitsstillingarnar þínar "
 "á eftirfarandi stillingum Plasma:"
 
-#: src/ui/main.qml:147
+#: src/ui/main.qml:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -248,7 +248,7 @@ msgstr ""
 "item><item>Plasma-þema,</item><item>DPI-kvörðun,</item><item>grunnstillingum "
 "fyrir skjá (bara í Wayland)</item></list></para>"
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -257,42 +257,42 @@ msgstr ""
 "Athugaðu að það þarf að setja þemaskrárnar upp altækt til að þær birtist á "
 "SDDM-innskráningarskjánum."
 
-#: src/ui/main.qml:152
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Virkja"
 
-#: src/ui/main.qml:157
+#: src/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Stilla aftur á sjálfgefnar stillingar"
 
-#: src/ui/main.qml:169
+#: src/ui/main.qml:170
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Breyta bakgrunni"
 
-#: src/ui/main.qml:205
+#: src/ui/main.qml:256
 #, kde-format
 msgid "No image selected"
 msgstr "Engin mynd valin"
 
-#: src/ui/main.qml:210
+#: src/ui/main.qml:261
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr "Sýna klukku"
 
-#: src/ui/main.qml:218
+#: src/ui/main.qml:269
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Hlaða úr skrá..."
 
-#: src/ui/main.qml:223
+#: src/ui/main.qml:274
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

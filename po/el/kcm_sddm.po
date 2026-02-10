@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:47+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2021-09-04 09:58+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -164,37 +164,37 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr "%1, από %2 (%3)"
 
-#: src/ui/main.qml:23
+#: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr "Συμπεριφορά…"
 
-#: src/ui/main.qml:28
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr "Εφαρμογή ρυθμίσεων Plasma…"
 
-#: src/ui/main.qml:33
+#: src/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Εγκατάσταση από αρχείο…"
 
-#: src/ui/main.qml:38
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr ""
 
-#: src/ui/main.qml:87
+#: src/ui/main.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr "Προβολή λεπτομερειών"
 
-#: src/ui/main.qml:102
+#: src/ui/main.qml:103
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Change Background"
@@ -202,31 +202,31 @@ msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "Αλλαγή φόντου"
 
-#: src/ui/main.qml:114
+#: src/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
 msgstr ""
 
-#: src/ui/main.qml:116
+#: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
 msgstr ""
 
-#: src/ui/main.qml:118
+#: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
 msgstr ""
 
-#: src/ui/main.qml:145
+#: src/ui/main.qml:146
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr "Εφαρμογή ρυθμίσεων Plasma"
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:147
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
@@ -235,7 +235,7 @@ msgstr ""
 "Με αυτό η οθόνη εισόδου SDDM θα ανταποκριθεί στις προσαρμογές σας για τις "
 "ακόλουθες ρυθμίσεις του Plasma:"
 
-#: src/ui/main.qml:147
+#: src/ui/main.qml:148
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -256,7 +256,7 @@ msgstr ""
 "item><item>Κλιμάκωση DPI,</item><item>Διαμόρφωση οθόνης (μόνο Wayland)</"
 "item></list></para>"
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
@@ -265,42 +265,42 @@ msgstr ""
 "Σημειώστε ότι τα αρχεία θεμάτων πρέπει να εγκατασταθούν σε όλο το σύστημα "
 "για να τα χρησιμοποιήσει η οθόνη σύνδεσης SDDM."
 
-#: src/ui/main.qml:152
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Εφαρμογή"
 
-#: src/ui/main.qml:157
+#: src/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr "Επαναφορά προεπιλεγμένων ρυθμίσεων"
 
-#: src/ui/main.qml:169
+#: src/ui/main.qml:170
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Αλλαγή φόντου"
 
-#: src/ui/main.qml:205
+#: src/ui/main.qml:256
 #, kde-format
 msgid "No image selected"
 msgstr "Δεν επιλέχθηκε εικόνα"
 
-#: src/ui/main.qml:210
+#: src/ui/main.qml:261
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr ""
 
-#: src/ui/main.qml:218
+#: src/ui/main.qml:269
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Φόρτωση από αρχείο…"
 
-#: src/ui/main.qml:223
+#: src/ui/main.qml:274
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"

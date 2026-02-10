@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:47+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2015-02-24 20:33+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -164,76 +164,76 @@ msgctxt ""
 msgid "%1, by %2 (%3)"
 msgstr ""
 
-#: src/ui/main.qml:23
+#: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
 msgstr ""
 
-#: src/ui/main.qml:28
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
 msgstr ""
 
-#: src/ui/main.qml:33
+#: src/ui/main.qml:34
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Učitaj iz datoteke..."
 
-#: src/ui/main.qml:38
+#: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
 msgstr ""
 
-#: src/ui/main.qml:87
+#: src/ui/main.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
 msgstr ""
 
-#: src/ui/main.qml:102
+#: src/ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Background:"
 msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "Pozadina:"
 
-#: src/ui/main.qml:114
+#: src/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
 msgstr ""
 
-#: src/ui/main.qml:116
+#: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
 msgstr ""
 
-#: src/ui/main.qml:118
+#: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
 msgstr ""
 
-#: src/ui/main.qml:145
+#: src/ui/main.qml:146
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
 msgstr ""
 
-#: src/ui/main.qml:146
+#: src/ui/main.qml:147
 #, kde-format
 msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
 
-#: src/ui/main.qml:147
+#: src/ui/main.qml:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -243,51 +243,51 @@ msgid ""
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
 
-#: src/ui/main.qml:148
+#: src/ui/main.qml:149
 #, kde-format
 msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
 
-#: src/ui/main.qml:152
+#: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr ""
 
-#: src/ui/main.qml:157
+#: src/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
 msgstr ""
 
-#: src/ui/main.qml:169
+#: src/ui/main.qml:170
 #, fuzzy, kde-format
 #| msgid "Background:"
 msgctxt "@title:window"
 msgid "Change Background"
 msgstr "Pozadina:"
 
-#: src/ui/main.qml:205
+#: src/ui/main.qml:256
 #, kde-format
 msgid "No image selected"
 msgstr ""
 
-#: src/ui/main.qml:210
+#: src/ui/main.qml:261
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
 msgstr ""
 
-#: src/ui/main.qml:218
+#: src/ui/main.qml:269
 #, fuzzy, kde-format
 #| msgid "Load from file..."
 msgctxt "@action:button"
 msgid "Load From File…"
 msgstr "Učitaj iz datoteke..."
 
-#: src/ui/main.qml:223
+#: src/ui/main.qml:274
 #, fuzzy, kde-format
 #| msgid "Clear Image"
 msgctxt "@action:button"
