@@ -2,20 +2,20 @@
 #
 # Victor Ryzhykh <victorr2007@yandex.ru>, 2015.
 # Alexander Potashev <aspotashev@gmail.com>, 2015, 2017, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2021, 2022, 2023, 2024, 2025.
+# SPDX-FileCopyrightText: 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-10 00:46+0000\n"
-"PO-Revision-Date: 2025-02-13 11:53+0300\n"
+"PO-Revision-Date: 2026-02-10 19:50+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -200,9 +200,7 @@ msgid "View details"
 msgstr "Просмотр подробных сведений"
 
 #: src/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "Изменить фон"
@@ -211,19 +209,19 @@ msgstr "Изменить фон"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Удалить оформление экрана входа в систему"
 
 #: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "Активное оформление не может быть удалено"
 
 #: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "Оформления, встроенные в систему, не могут быть удалены"
 
 #: src/ui/main.qml:146
 #, kde-format
