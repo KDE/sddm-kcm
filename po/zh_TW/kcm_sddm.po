@@ -4,13 +4,13 @@
 # Franklin, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-10 00:46+0000\n"
-"PO-Revision-Date: 2024-11-26 21:41+0900\n"
+"PO-Revision-Date: 2026-02-12 15:52+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
@@ -193,9 +193,7 @@ msgid "View details"
 msgstr "檢視詳細資訊"
 
 #: src/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "變更背景"
@@ -204,19 +202,19 @@ msgstr "變更背景"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "移除登入畫面主題"
 
 #: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "無法刪除作用中的登入畫面主題"
 
 #: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "無法刪除系統安裝的登入畫面主題"
 
 #: src/ui/main.qml:146
 #, kde-format
