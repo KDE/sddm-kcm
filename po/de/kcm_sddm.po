@@ -1,20 +1,21 @@
-# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
-# SPDX-FileCopyrightText: 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2014, 2017-2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2022-2023 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2023-2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-10 00:46+0000\n"
-"PO-Revision-Date: 2024-12-23 17:12+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2026-03-01 16:44+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
 msgid "Invalid theme package"
@@ -36,12 +37,12 @@ msgstr "Installationsprogramm für SDDM-Designs"
 #: sddmthemeinstaller.cpp:37
 #, kde-format
 msgid "Install a theme."
-msgstr "Installiert ein Design."
+msgstr "Ein Design installieren."
 
 #: sddmthemeinstaller.cpp:38
 #, kde-format
 msgid "Uninstall a theme."
-msgstr "Deinstalliert ein Design"
+msgstr "Ein Design deinstallieren."
 
 #: sddmthemeinstaller.cpp:40
 #, kde-format
@@ -166,25 +167,25 @@ msgstr "%1, von %2 (%3)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr "Verhalten …"
+msgstr "Verhalten …"
 
 #: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr "Plasma-Einstellungen anwenden …"
+msgstr "Plasma-Einstellungen anwenden …"
 
 #: src/ui/main.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Aus Datei installieren …"
+msgstr "Aus Datei installieren …"
 
 #: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr "Neue holen ..."
+msgstr "Neue holen …"
 
 #: src/ui/main.qml:88
 #, kde-format
@@ -193,9 +194,7 @@ msgid "View details"
 msgstr "Details anzeigen"
 
 #: src/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "Hintergrund ändern"
@@ -204,19 +203,21 @@ msgstr "Hintergrund ändern"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Anmeldebildschirmdesign entfernen"
 
 #: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "Löschen des aktiven Anmeldebildschirmdesigns nicht möglich"
 
 #: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
 msgstr ""
+"Löschen von durch das System installierten Anmeldebildschirmdesigns nicht "
+"möglich"
 
 #: src/ui/main.qml:146
 #, kde-format
@@ -289,7 +290,7 @@ msgstr "Uhr anzeigen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Aus Datei laden …"
+msgstr "Aus Datei laden …"
 
 #: src/ui/main.qml:274
 #, kde-format
