@@ -245,8 +245,9 @@ ActionReply SddmAuthHelper::reset(const QVariantMap &args)
     fontconfigDir.removeRecursively();
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kdeglobals"));
     QFile::remove(sddmConfigLocation.path() + QStringLiteral("/plasmarc"));
-
+    QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kcminputrc"));
     QDir(sddmHomeDirPath + QStringLiteral("/.local/share/kscreen/")).removeRecursively();
+    QFile::remove(sddmConfigLocation.path() + QStringLiteral("/kwinoutputconfig.json"));
 
     // remove cursor theme, NumLock preference, and scaling DPI from config file
     ActionReply reply = ActionReply::HelperErrorReply();
