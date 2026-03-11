@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-11 00:49+0000\n"
 "PO-Revision-Date: 2025-01-04 16:17+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "2);\n"
 "X-Generator: Lokalize 24.12.0\n"
 
-#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
+#: sddmauthhelper.cpp:418 sddmauthhelper.cpp:438 sddmauthhelper.cpp:445
 msgid "Invalid theme package"
 msgstr "Nederīga motīva pakotne"
 
-#: sddmauthhelper.cpp:423
+#: sddmauthhelper.cpp:424
 msgid "Could not open file"
 msgstr "Nevarēja atvērt datni"
 
-#: sddmauthhelper.cpp:452
+#: sddmauthhelper.cpp:453
 msgid "Could not decompress archive"
 msgstr "Nevarēja atspiest arhīvu"
 

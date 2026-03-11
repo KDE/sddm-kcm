@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-11 00:49+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
+#: sddmauthhelper.cpp:418 sddmauthhelper.cpp:438 sddmauthhelper.cpp:445
 msgid "Invalid theme package"
 msgstr "अमान्य विषयसङ्कुलम्"
 
-#: sddmauthhelper.cpp:423
+#: sddmauthhelper.cpp:424
 msgid "Could not open file"
 msgstr "सञ्चिकां उद्घाटयितुं न शक्तवान्"
 
-#: sddmauthhelper.cpp:452
+#: sddmauthhelper.cpp:453
 msgid "Could not decompress archive"
 msgstr "संग्रहणं विसंपीडयितुं न शक्तवान्"
 

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-11 00:49+0000\n"
 "PO-Revision-Date: 2026-02-12 21:30+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -24,15 +24,15 @@ msgstr ""
 "X-Generator: Lokalize 25.12.2\n"
 "X-Text-Markup: kde4\n"
 
-#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
+#: sddmauthhelper.cpp:418 sddmauthhelper.cpp:438 sddmauthhelper.cpp:445
 msgid "Invalid theme package"
 msgstr "Paquet de thème non valable"
 
-#: sddmauthhelper.cpp:423
+#: sddmauthhelper.cpp:424
 msgid "Could not open file"
 msgstr "Impossible d'ouvrir le fichier"
 
-#: sddmauthhelper.cpp:452
+#: sddmauthhelper.cpp:453
 msgid "Could not decompress archive"
 msgstr "Impossible d'extraire l'archive"
 
