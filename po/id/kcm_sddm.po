@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-03-11 02:47+0000\n"
 "PO-Revision-Date: 2022-09-13 08:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
+#: sddmauthhelper.cpp:418 sddmauthhelper.cpp:438 sddmauthhelper.cpp:445
 msgid "Invalid theme package"
 msgstr "Paket tema tak absah"
 
-#: sddmauthhelper.cpp:423
+#: sddmauthhelper.cpp:424
 msgid "Could not open file"
 msgstr "Tidak dapat membuka file"
 
-#: sddmauthhelper.cpp:452
+#: sddmauthhelper.cpp:453
 msgid "Could not decompress archive"
 msgstr "Tidak dapat mendekompres arsip"
 

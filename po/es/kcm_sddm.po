@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-03-11 02:47+0000\n"
 "PO-Revision-Date: 2025-06-04 20:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.3\n"
 
-#: sddmauthhelper.cpp:417 sddmauthhelper.cpp:437 sddmauthhelper.cpp:444
+#: sddmauthhelper.cpp:418 sddmauthhelper.cpp:438 sddmauthhelper.cpp:445
 msgid "Invalid theme package"
 msgstr "Paquete de tema no válido"
 
-#: sddmauthhelper.cpp:423
+#: sddmauthhelper.cpp:424
 msgid "Could not open file"
 msgstr "No se ha podido abrir el archivo"
 
-#: sddmauthhelper.cpp:452
+#: sddmauthhelper.cpp:453
 msgid "Could not decompress archive"
 msgstr "No se puede descomprimir el archivo"
 
