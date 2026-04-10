@@ -204,7 +204,7 @@ msgstr "Zmeniť Pozadie"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Odstrániť tému prihlasovacej obrazovky"
 
 #: src/ui/main.qml:117
 #, kde-format
