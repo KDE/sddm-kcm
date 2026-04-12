@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-03-14 06:49+0100\n"
+"PO-Revision-Date: 2026-04-11 08:23+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -65,7 +65,7 @@ msgstr "Zachowanie"
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
-msgstr "Zaloguj się sam na:"
+msgstr "Zaloguj mnie samemu:"
 
 #: src/package/contents/ui/Advanced.qml:25
 #, kde-format
@@ -81,7 +81,7 @@ msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr "w sesji"
+msgstr "na pulpicie"
 
 #: src/package/contents/ui/Advanced.qml:103
 #, kde-kuit-format
@@ -107,7 +107,7 @@ msgstr "Otwórz ustawienia Portfela KDE"
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr "Natychmiast zaloguj się ponownie po wylogowaniu"
+msgstr "Zaloguj mnie ponownie natychmiast po wylogowaniu"
 
 #: src/package/contents/ui/Advanced.qml:127
 #, kde-format
