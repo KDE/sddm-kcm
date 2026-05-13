@@ -61,6 +61,8 @@ Kirigami.Page {
                     }
                 }
                 textRole: "display"
+                Accessible.name: currentText
+                Accessible.description: i18nc("@info:usagetip", "Select automatic login user")
                 editable: true
                 onActivated: kcm.sddmSettings.user = currentText
                 KCM.SettingStateBinding {
