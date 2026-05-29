@@ -294,7 +294,3 @@ msgstr "Зареждане от файл…"
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Изчистване на изображението"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Delete"
-#~ msgstr "Изтриване"
