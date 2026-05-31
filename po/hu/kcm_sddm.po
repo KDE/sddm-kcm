@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2022.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2018, 2021.
-# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-11 00:49+0000\n"
-"PO-Revision-Date: 2025-01-20 21:02+0100\n"
+"PO-Revision-Date: 2026-05-30 21:36+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: sddmauthhelper.cpp:418 sddmauthhelper.cpp:438 sddmauthhelper.cpp:445
 msgid "Invalid theme package"
@@ -196,30 +196,28 @@ msgid "View details"
 msgstr "Részletek megjelenítése"
 
 #: src/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
-msgstr "Háttér megváltoztatása"
+msgstr "Háttér módosítása"
 
 #: src/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Bejelentkező-képernyő téma eltávolítása"
 
 #: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "Az aktív bejelentkező-képernyő témát nem lehet törölni"
 
 #: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "A rendszer bejelentkező-képernyő témáit nem lehet törölni"
 
 #: src/ui/main.qml:146
 #, kde-format
