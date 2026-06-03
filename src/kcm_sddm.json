@@ -44,6 +44,7 @@
         "Description[sv]": "Anpassa inloggningshanterare",
         "Description[ta]": "நுழைவுத் திரையை அமைக்கும்",
         "Description[tr]": "Oturum Açma Yöneticisini Yapılandır",
+        "Description[ug]": "تىزىمغا كىرىشنى باشقۇرغۇچنى سەپلەيدۇ",
         "Description[uk]": "Налаштування керування входом до системи",
         "Description[zh_CN]": "配置登录管理器",
         "Description[zh_TW]": "設定登入管理器",
@@ -98,6 +99,7 @@
         "Name[sv]": "Inloggningsfönster (SDDM)",
         "Name[ta]": "நுழைவுத் திரை (SDDM)",
         "Name[tr]": "Oturum Açma Ekranı (SDDM)",
+        "Name[ug]": "تىزىمغا كىرىش ئېكرانى (SDDM)",
         "Name[uk]": "Вікно входу (SDDM)",
         "Name[zh_CN]": "登录屏幕 (SDDM)",
         "Name[zh_TW]": "登入畫面 (SDDM)"
