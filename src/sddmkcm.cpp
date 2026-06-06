@@ -15,6 +15,8 @@
 
 #include "usersmodel.h"
 
+#include <qqml.h>
+
 #include <QApplication>
 #include <QDBusUnixFileDescriptor>
 #include <QDir>
