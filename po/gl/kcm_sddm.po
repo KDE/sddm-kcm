@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2024-12-04 09:59+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -56,7 +56,7 @@ msgstr "O tema para instalar, debe ser un ficheiro de arquivo existente."
 msgid "Unable to install theme"
 msgstr "Non foi posíbel instalar o tema."
 
-#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
+#: src/sddmkcm.cpp:169 src/sddmkcm.cpp:308
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

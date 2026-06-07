@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2026-02-09 12:11+0200\n"
 "Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
 "Language-Team: bg\n"
@@ -55,7 +55,7 @@ msgstr "Темата за инсталиране трябва да е същес
 msgid "Unable to install theme"
 msgstr "Темата не може да се инсталира"
 
-#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
+#: src/sddmkcm.cpp:169 src/sddmkcm.cpp:308
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

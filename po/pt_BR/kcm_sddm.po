@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2026-02-06 08:21-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -59,7 +59,7 @@ msgstr "O tema a instalar deve ser um arquivo comprimido existente."
 msgid "Unable to install theme"
 msgstr "Não foi possível instalar o tema."
 
-#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
+#: src/sddmkcm.cpp:169 src/sddmkcm.cpp:308
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

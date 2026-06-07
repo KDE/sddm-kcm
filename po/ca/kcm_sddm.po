@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2026-02-06 08:44+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -59,7 +59,7 @@ msgstr "El tema a instal·lar, cal que sigui un fitxer d'arxiu existent."
 msgid "Unable to install theme"
 msgstr "No s'ha pogut desinstal·lar el tema"
 
-#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
+#: src/sddmkcm.cpp:169 src/sddmkcm.cpp:308
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

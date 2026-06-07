@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2023-08-06 11:16+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -55,7 +55,7 @@ msgstr "Téma na nainštalovanie musí byť existujúci súbor archívu."
 msgid "Unable to install theme"
 msgstr "Nemôžem nainštalovať tému"
 
-#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
+#: src/sddmkcm.cpp:169 src/sddmkcm.cpp:308
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
