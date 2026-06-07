@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-06-07 00:47+0000\n"
 "PO-Revision-Date: 2024-01-28 18:24-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -54,7 +54,7 @@ msgstr "ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਥੀਮ, ਮੌਜੂਦਾ ਅਕ
 msgid "Unable to install theme"
 msgstr "ਥੀਮ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
 
-#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
+#: src/sddmkcm.cpp:169 src/sddmkcm.cpp:308
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""

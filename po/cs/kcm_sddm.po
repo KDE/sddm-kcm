@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-06-07 00:47+0000\n"
 "PO-Revision-Date: 2026-04-18 11:14+0200\n"
 "Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
 "Language-Team: \n"
@@ -56,7 +56,7 @@ msgstr "Motiv pro instalací musí být existující archivovaný soubor."
 msgid "Unable to install theme"
 msgstr "Motiv nelze nainstalovat"
 
-#: src/sddmkcm.cpp:167 src/sddmkcm.cpp:306
+#: src/sddmkcm.cpp:169 src/sddmkcm.cpp:308
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
