@@ -176,11 +176,6 @@ void SddmKcm::synchronizeSettings()
     QString cursorTheme = cursorConfigGroup.readEntry("cursorTheme", QString());
     QString cursorSize = cursorConfigGroup.readEntry("cursorSize", QString());
 
-    KConfig dpiConfig(QStringLiteral("kcmfonts"));
-    KConfigGroup dpiConfigGroup(&dpiConfig, QStringLiteral("General"));
-    QString dpiValue = dpiConfigGroup.readEntry("forceFontDPI");
-    QString dpiArgument = QStringLiteral("-dpi ") + dpiValue;
-
     KConfig numLockConfig(QStringLiteral("kcminputrc"));
     KConfigGroup numLockConfigGroup(&numLockConfig, QStringLiteral("Keyboard"));
     QString numLock = numLockConfigGroup.readEntry("NumLock");
@@ -215,12 +210,6 @@ void SddmKcm::synchronizeSettings()
     } else {
         qDebug() << "Cannot find cursor size value; unsetting it";
         args[QStringLiteral("kde_settings.conf/Theme/CursorSize")] = QVariant();
-    }
-
-    if (!dpiValue.isEmpty()) {
-        args[QStringLiteral("kde_settings.conf/X11/ServerArguments")] = dpiArgument;
-    } else {
-        qDebug() << "Cannot find scaling DPI value.";
     }
 
     if (!numLock.isEmpty()) {
