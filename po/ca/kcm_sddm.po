@@ -303,7 +303,3 @@ msgstr "Carrega des d'un fitxer…"
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Neteja la imatge"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Delete"
-#~ msgstr "Suprimeix"
