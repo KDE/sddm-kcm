@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2019, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2016-2019, 2021-2022, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2024-11-24 18:11+0100\n"
+"PO-Revision-Date: 2026-07-05 17:26+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: sddmauthhelper.cpp:418 sddmauthhelper.cpp:438 sddmauthhelper.cpp:445
 msgid "Invalid theme package"
@@ -193,9 +193,7 @@ msgid "View details"
 msgstr "Visa detaljinformation"
 
 #: src/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Change Background"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
 msgstr "Ändra bakgrund"
@@ -204,19 +202,19 @@ msgstr "Ändra bakgrund"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Ta bort inloggningstema"
 
 #: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "Kan inte ta bort det aktiva inloggningstemat"
 
 #: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "Kan inte ta bort systeminstallerade inloggningsteman"
 
 #: src/ui/main.qml:146
 #, kde-format
