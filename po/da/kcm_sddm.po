@@ -3,13 +3,14 @@
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2017, 2018, 2019.
 # scootergrisen, 2017.
 # SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2024-10-21 12:09+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"PO-Revision-Date: 2026-08-12 09:36+0200\n"
+"Last-Translator: Øjvind Fritjof Arnfred <fritjofarnfred@protonmail.com>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -205,19 +206,19 @@ msgstr "Skift baggrund"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Fjern loginskærmens tema"
 
 #: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "Kan ikke slette den aktive loginskærms tema"
 
 #: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "Kan ikke slette systeminstallerede loginskærm-temaer"
 
 #: src/ui/main.qml:146
 #, kde-format
