@@ -3,7 +3,6 @@
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2017, 2018, 2019.
 # scootergrisen, 2017.
 # SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
