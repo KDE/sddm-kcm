@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sddm-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 18:41-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -107,13 +107,13 @@ msgstr ""
 #: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr ""
+msgstr "KDE ھەميان تەڭشىكىنى ئاچ"
 
 #: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr ""
+msgstr "تىزىمدىن چىققاندىن كېيىن دەرھال قايتا تىزىمغا كىر"
 
 #: src/ui/Advanced.qml:155
 #, kde-format
@@ -143,7 +143,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: src/ui/DetailsDialog.qml:62
 #, kde-format
@@ -167,7 +167,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr ""
+msgstr "Plasma تەڭشەكنى قوللان…"
 
 #: src/ui/main.qml:34
 #, kde-format
@@ -215,7 +215,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
-msgstr ""
+msgstr "Plasma تەڭشەكنى قوللان"
 
 #: src/ui/main.qml:147
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "قوللان"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr ""
+msgstr "كۆڭۈلدىكى تەڭشەككە ئەسلىگە قايتۇر"
 
 #: src/ui/main.qml:170
 #, kde-format
@@ -268,7 +268,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "سائەتنى كۆرسەت"
 
 #: src/ui/main.qml:269
 #, kde-format
