@@ -100,8 +100,8 @@ void SddmAuthHelper::copyFile(const QString &source, const QString &destination)
     if (!QFile::copy(source, destination)) {
         qWarning() << "Could not copy" << source << "to" << destination;
     }
-    const char *destinationConverted = destination.toLocal8Bit().data();
-    if (chown(destinationConverted, sddmUser.userId().nativeId(), sddmUser.groupId().nativeId())) {
+    const QByteArray destinationConverted = destination.toLocal8Bit();
+    if (lchown(destinationConverted.constData(), sddmUser.userId().nativeId(), sddmUser.groupId().nativeId())) {
         return;
     }
 }
