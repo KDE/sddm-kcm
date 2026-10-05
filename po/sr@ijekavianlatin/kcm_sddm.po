@@ -1,12 +1,13 @@
 # Translation of kcm_sddm.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_sddm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2017-10-30 23:08+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 22:09+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -23,10 +24,8 @@ msgid "Invalid theme package"
 msgstr "Loš paket teme"
 
 #: sddmauthhelper.cpp:424
-#, fuzzy
-#| msgid "Could not decompress archive"
 msgid "Could not open file"
-msgstr "Ne mogu da raspakujem arhivu"
+msgstr "Ne mogu da otvorim fajl"
 
 #: sddmauthhelper.cpp:453
 msgid "Could not decompress archive"
@@ -61,6 +60,8 @@ msgstr "Ne mogu da instaliram temu"
 msgid ""
 "Cannot proceed, user 'sddm' does not exist. Please check your SDDM install."
 msgstr ""
+"Ne mogu da nastavim, korisnik „sddm“ ne postoji. Provjerite instalaciju "
+"SDDM‑a."
 
 #: src/sessionmodel.cpp:87
 #, kde-format
@@ -72,31 +73,29 @@ msgstr "%1 (Wayland)"
 #, kde-format
 msgctxt "@title"
 msgid "Behavior"
-msgstr ""
+msgstr "Ponašanje"
 
 #: src/ui/Advanced.qml:23
 #, kde-format
 msgctxt "option:check"
 msgid "Automatically log in:"
-msgstr ""
+msgstr "Automatsko prijavljivanje:"
 
 #: src/ui/Advanced.qml:28
-#, fuzzy, kde-format
-#| msgid "User:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the user to log in "
 "automatically"
 msgid "as user:"
-msgstr "Korisnik:"
+msgstr "kao korisnik:"
 
 #: src/ui/Advanced.qml:100
-#, fuzzy, kde-format
-#| msgid "Session:"
+#, kde-format
 msgctxt ""
 "@label:listbox, the following combobox selects the session that is started "
 "automatically"
 msgid "with session"
-msgstr "Sesija:"
+msgstr "sa sesijom"
 
 #: src/ui/Advanced.qml:131
 #, kde-kuit-format
@@ -107,43 +106,43 @@ msgid ""
 "can change the wallet to have a blank password. Note that this is insecure "
 "and should only be done in a trusted environment."
 msgstr ""
+"Automatsko prijavljivanje ne podržava automatsko otključavanje K‑novčanika, "
+"pa će tražiti da ga otključate pri svakom prijavljivanju.<nl/><nl/>Da biste "
+"to izbjegli, možete novčaniku postaviti praznu lozinku. Imajte na umu da to "
+"nije bezbjedno i da treba da se radi samo u pouzdanom okruženju."
 
 #: src/ui/Advanced.qml:136
 #, kde-format
 msgid "Open KDE Wallet Settings"
-msgstr ""
+msgstr "Otvori postavke K‑novčanika"
 
 #: src/ui/Advanced.qml:142
 #, kde-format
 msgctxt "@option:check"
 msgid "Log in again immediately after logging off"
-msgstr ""
+msgstr "Ponovo se prijavi odmah poslije odjavljivanja"
 
 #: src/ui/Advanced.qml:155
-#, fuzzy, kde-format
-#| msgid "Minimum UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Minimum user UID:"
-msgstr "Najmanji UID:"
+msgstr "Najmanji korisnički UID:"
 
 #: src/ui/Advanced.qml:167
-#, fuzzy, kde-format
-#| msgid "Maximum UID:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum user UID:"
-msgstr "Najveći UID:"
+msgstr "Najveći korisnički UID:"
 
 #: src/ui/Advanced.qml:182
-#, fuzzy, kde-format
-#| msgid "Halt Command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Halt Command:"
 msgstr "Naredba gašenja:"
 
 # rewrite-msgid: /Reboot/Reset/
 #: src/ui/Advanced.qml:215
-#, fuzzy, kde-format
-#| msgid "Reboot Command:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Reboot Command:"
 msgstr "Naredba resetovanja:"
@@ -152,7 +151,7 @@ msgstr "Naredba resetovanja:"
 #, kde-format
 msgctxt "@title:window, %1 is the theme name, %2 the version"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: src/ui/DetailsDialog.qml:62
 #, kde-format
@@ -164,69 +163,67 @@ msgstr "Pregled nije dostupan."
 msgctxt ""
 "%1 is a description of the theme, %2 are the authors, %3 is the license"
 msgid "%1, by %2 (%3)"
-msgstr ""
+msgstr "%1, autori: %2 (%3)"
 
 #: src/ui/main.qml:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Behavior…"
-msgstr ""
+msgstr "Ponašanje…"
 
 #: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Plasma Settings…"
-msgstr ""
+msgstr "Primijeni postavke Plasme…"
 
 #: src/ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "Install From File"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr "Instaliraj iz fajla"
+msgstr "Instaliraj iz fajla…"
 
 #: src/ui/main.qml:39
 #, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Dobavi nove…"
 
 #: src/ui/main.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "View details"
-msgstr ""
+msgstr "Prikaži detalje"
 
 #: src/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change background"
-msgstr "Pozadina:"
+msgstr "Promijeni pozadinu"
 
 #: src/ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Ukloni temu prijavnog ekrana"
 
 #: src/ui/main.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "Ne mogu da obrišem aktivnu temu prijavnog ekrana"
 
 #: src/ui/main.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
-msgstr ""
+msgstr "Ne mogu da obrišem sistemski instalirane teme prijavnog ekrana"
 
 #: src/ui/main.qml:146
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Plasma Settings"
-msgstr ""
+msgstr "Primjena postavki Plasme"
 
 #: src/ui/main.qml:147
 #, kde-format
@@ -234,6 +231,8 @@ msgid ""
 "This will make the SDDM login screen reflect your customizations to the "
 "following Plasma settings:"
 msgstr ""
+"Prijavni ekran SDDM‑a će time odražavati vaše izmjene sljedećih postavki "
+"Plasme:"
 
 #: src/ui/main.qml:148
 #, kde-kuit-format
@@ -244,6 +243,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
+"<para><list><item>Šema boja</item><item>Tema i veličina pokazivača</"
+"item><item>Font i renderovanje fontova</item><item>Postavka tastera NumLock</"
+"item><item>Tema Plasme</item><item>Tpi za skaliranje</item><item>Postava "
+"ekrana (samo Wayland)</item></list></para>"
 
 #: src/ui/main.qml:149
 #, kde-format
@@ -251,88 +254,46 @@ msgid ""
 "Please note that theme files must be installed globally to be reflected on "
 "the SDDM login screen."
 msgstr ""
+"Imajte na umu da fajlovi tema moraju biti instalirani globalno da bi se "
+"vidjeli na prijavnom ekranu SDDM‑a."
 
 #: src/ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "Primijeni"
 
 #: src/ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to Default Settings"
-msgstr ""
+msgstr "Resetuj na podrazumijevane postavke"
 
 #: src/ui/main.qml:170
-#, fuzzy, kde-format
-#| msgid "Background:"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Background"
-msgstr "Pozadina:"
+msgstr "Promjena pozadine"
 
 #: src/ui/main.qml:256
 #, kde-format
 msgid "No image selected"
-msgstr ""
+msgstr "Nije izabrana nijedna slika"
 
 #: src/ui/main.qml:261
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Prikaži sat"
 
 #: src/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgid "Load from file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Load From File…"
-msgstr "Učitaj iz fajla..."
+msgstr "Učitaj iz fajla…"
 
 #: src/ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Clear Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Image"
 msgstr "Očisti sliku"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Časlav Ilić"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Image"
-#~ msgstr "Izbor slike"
-
-#~ msgid "SDDM KDE Config"
-#~ msgstr "KDE podešavanje SDDM‑a"
-
-#~ msgid "Login screen using the SDDM"
-#~ msgstr "Prijavni ekran preko SDDM‑a"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-# >> @title:tab
-#~ msgid "Theme"
-#~ msgstr "Tema"
-
-# >> @title:tab
-#~ msgid "Advanced"
-#~ msgstr "Napredno"
-
-# >> @title:window
-#~ msgid "Download New SDDM Themes"
-#~ msgstr "Preuzimanje novih tema za SDDM"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#, fuzzy
-#~| msgid "Remove Theme"
-#~ msgid "Remove"
-#~ msgstr "Ukloni temu"
