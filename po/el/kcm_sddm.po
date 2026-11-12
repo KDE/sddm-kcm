@@ -183,10 +183,10 @@ msgid "Install From File…"
 msgstr "Εγκατάσταση από αρχείο…"
 
 #: src/ui/main.qml:39
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button as in, \"get new SDDM themes\""
 msgid "Get New…"
-msgstr ""
+msgstr "Λήψη νέων…"
 
 #: src/ui/main.qml:88
 #, kde-format
@@ -203,22 +203,23 @@ msgid "Change background"
 msgstr "Αλλαγή φόντου"
 
 #: src/ui/main.qml:115
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove login screen theme"
-msgstr ""
+msgstr "Αφαίρεση θέματος οθόνης εισόδου"
 
 #: src/ui/main.qml:117
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active login screen theme"
-msgstr ""
+msgstr "Δεν είναι δυνατή η διαγραφή του ενεργού θέματος οθόνης εισόδου"
 
 #: src/ui/main.qml:119
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed login screen themes"
 msgstr ""
+"Δεν είναι δυνατή η διαγραφή θεμάτων οθόνης εισόδου εγκατεστημένων στο σύστημα"
 
 #: src/ui/main.qml:146
 #, kde-format
@@ -250,11 +251,10 @@ msgid ""
 "item><item>Plasma theme</item><item>Scaling DPI</item><item>Screen "
 "configuration (Wayland only)</item></list></para>"
 msgstr ""
-"<para><list><item>Θέμα χρωμάτων,</item><item>Θέμα δρομέα,</"
-"item><item>Μέγεθος δρομέα,</item><item>Γραμματοσειρά,</item><item>Αποτύπωση "
-"γραμματοσειράς, </item><item>Προτίμηση NumLock,</item><item>Θέμα Plasma,</"
-"item><item>Κλιμάκωση DPI,</item><item>Διαμόρφωση οθόνης (μόνο Wayland)</"
-"item></list></para>"
+"<para><list><item>Σχήμα χρωμάτων</item><item>Θέμα και μέγεθος δείκτη</"
+"item><item>Γραμματοσειρά και απόδοση γραμματοσειρών</item><item>Προτίμηση "
+"NumLock</item><item>Θέμα Plasma</item><item>Κλιμάκωση DPI</"
+"item><item>Ρυθμίσεις οθόνης (μόνο Wayland)</item></list></para>"
 
 #: src/ui/main.qml:149
 #, kde-format
@@ -289,10 +289,10 @@ msgid "No image selected"
 msgstr "Δεν επιλέχθηκε εικόνα"
 
 #: src/ui/main.qml:261
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Εμφάνιση ρολογιού"
 
 #: src/ui/main.qml:269
 #, kde-format
